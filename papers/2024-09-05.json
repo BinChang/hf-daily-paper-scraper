@@ -1,0 +1,91 @@
+{
+  "date": "2024-09-05",
+  "papers": [
+    {
+      "title": "Loopy: Taming Audio-Driven Portrait Avatar with Long-Term Motion Dependency",
+      "url": "https://huggingface.co/papers/2409.02634",
+      "authors": [
+        "Gaojie Lin",
+        "Yanbo Zheng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.02634.pdf",
+      "abstract": "With the introduction of diffusion-based video generation techniques,\naudio-conditioned human video generation has recently achieved significant\nbreakthroughs in both the naturalness of motion and the synthesis of portrait\ndetails. Due to the limited control of audio signals in driving human motion,\nexisting methods often add auxiliary spatial signals to stabilize movements,\nwhich may compromise the naturalness and freedom of motion. In this paper, we\npropose an end-to-end audio-only conditioned video diffusion model named Loopy.\nSpecifically, we designed an inter- and intra-clip temporal module and an\naudio-to-latents module, enabling the model to leverage long-term motion\ninformation from the data to learn natural motion patterns and improving\naudio-portrait movement correlation. This method removes the need for manually\nspecified spatial motion templates used in existing methods to constrain motion\nduring inference. Extensive experiments show that Loopy outperforms recent\naudio-driven portrait diffusion models, delivering more lifelike and\nhigh-quality results across various scenarios.",
+      "upvotes": 89
+    },
+    {
+      "title": "LongLLaVA: Scaling Multi-modal LLMs to 1000 Images Efficiently via Hybrid Architecture",
+      "url": "https://huggingface.co/papers/2409.02889",
+      "authors": [
+        "Chen Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.02889.pdf",
+      "abstract": "Expanding the long-context capabilities of Multi-modal Large Language\nModels~(MLLMs) is crucial for video understanding, high-resolution image\nunderstanding, and multi-modal agents. This involves a series of systematic\noptimizations, including model architecture, data construction and training\nstrategy, particularly addressing challenges such as degraded\nperformance with more images and high computational costs. In this\npaper, we adapt the model architecture to a hybrid of Mamba and Transformer\nblocks, approach data construction with both temporal and spatial dependencies\namong multiple images and employ a progressive training strategy. The released\nmodel LongLLaVA~(Long-Context Large\nLanguage and Vision Assistant) is the first\nhybrid MLLM, which achieved a better balance between efficiency and\neffectiveness. LongLLaVA not only achieves competitive results across various\nbenchmarks, but also maintains high throughput and low memory consumption.\nEspecially, it could process nearly a thousand images on a single A100 80GB\nGPU, showing promising application prospects for a wide range of tasks.",
+      "upvotes": 54
+    },
+    {
+      "title": "LongCite: Enabling LLMs to Generate Fine-grained Citations in Long-context QA",
+      "url": "https://huggingface.co/papers/2409.02897",
+      "authors": [
+        "Lei Hou",
+        "Ling Feng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.02897.pdf",
+      "abstract": "Though current long-context large language models (LLMs) have demonstrated\nimpressive capacities in answering user questions based on extensive text, the\nlack of citations in their responses makes user verification difficult, leading\nto concerns about their trustworthiness due to their potential hallucinations.\nIn this work, we aim to enable long-context LLMs to generate responses with\nfine-grained sentence-level citations, improving their faithfulness and\nverifiability. We first introduce LongBench-Cite, an automated benchmark for\nassessing current LLMs' performance in Long-Context Question Answering with\nCitations (LQAC), revealing considerable room for improvement. To this end, we\npropose CoF (Coarse to Fine), a novel pipeline that utilizes off-the-shelf LLMs\nto automatically generate long-context QA instances with precise sentence-level\ncitations, and leverage this pipeline to construct LongCite-45k, a large-scale\nSFT dataset for LQAC. Finally, we train LongCite-8B and LongCite-9B using the\nLongCite-45k dataset, successfully enabling their generation of accurate\nresponses and fine-grained sentence-level citations in a single output. The\nevaluation results on LongBench-Cite show that our trained models achieve\nstate-of-the-art citation quality, surpassing advanced proprietary models\nincluding GPT-4o.",
+      "upvotes": 44
+    },
+    {
+      "title": "MMMU-Pro: A More Robust Multi-discipline Multimodal Understanding Benchmark",
+      "url": "https://huggingface.co/papers/2409.02813",
+      "authors": [
+        "Yubo Wang",
+        "Shengbang Tong",
+        "Ming Yin"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.02813.pdf",
+      "abstract": "This paper introduces MMMU-Pro, a robust version of the Massive\nMulti-discipline Multimodal Understanding and Reasoning (MMMU) benchmark.\nMMMU-Pro rigorously assesses multimodal models' true understanding and\nreasoning capabilities through a three-step process based on MMMU: (1)\nfiltering out questions answerable by text-only models, (2) augmenting\ncandidate options, and (3) introducing a vision-only input setting where\nquestions are embedded within images. This setting challenges AI to truly \"see\"\nand \"read\" simultaneously, testing a fundamental human cognitive skill of\nseamlessly integrating visual and textual information. Results show that model\nperformance is substantially lower on MMMU-Pro than on MMMU, ranging from 16.8%\nto 26.9% across models. We explore the impact of OCR prompts and Chain of\nThought (CoT) reasoning, finding that OCR prompts have minimal effect while CoT\ngenerally improves performance. MMMU-Pro provides a more rigorous evaluation\ntool, closely mimicking real-world scenarios and offering valuable directions\nfor future research in multimodal AI.",
+      "upvotes": 28
+    },
+    {
+      "title": "Affordance-based Robot Manipulation with Flow Matching",
+      "url": "https://huggingface.co/papers/2409.01083",
+      "authors": [
+        "Michael Gienger"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.01083.pdf",
+      "abstract": "We present a framework for assistive robot manipulation, which focuses on two\nfundamental challenges: first, efficiently adapting large-scale models to\ndownstream scene affordance understanding tasks, especially in daily living\nscenarios where gathering multi-task data involving humans requires strenuous\neffort; second, effectively learning robot trajectories by grounding the visual\naffordance model. We tackle the first challenge by employing a\nparameter-efficient prompt tuning method that prepends learnable text prompts\nto the frozen vision model to predict manipulation affordances in multi-task\nscenarios. Then we propose to learn robot trajectories guided by affordances in\na supervised Flow Matching method. Flow matching represents a robot visuomotor\npolicy as a conditional process of flowing random waypoints to desired robot\ntrajectories. Finally, we introduce a real-world dataset with 10 tasks across\nActivities of Daily Living to test our framework. Our extensive evaluation\nhighlights that the proposed prompt tuning method for learning manipulation\naffordance with language prompter achieves competitive performance and even\noutperforms other finetuning protocols across data scales, while satisfying\nparameter efficiency. Learning multi-task robot trajectories with a single flow\nmatching policy also leads to consistently better performance than alternative\nbehavior cloning methods, especially given multimodal robot action\ndistributions. Our framework seamlessly unifies affordance model learning and\ntrajectory generation with flow matching for robot manipulation.",
+      "upvotes": 18
+    },
+    {
+      "title": "Arctic-SnowCoder: Demystifying High-Quality Data in Code Pretraining",
+      "url": "https://huggingface.co/papers/2409.02326",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2409.02326.pdf",
+      "abstract": "Recent studies have been increasingly demonstrating that high-quality data is\ncrucial for effective pretraining of language models. However, the precise\ndefinition of \"high-quality\" remains underexplored. Focusing on the code\ndomain, we introduce Arctic-SnowCoder-1.3B, a data-efficient base code model\npretrained on 555B tokens through three phases of progressively refined data:\n(1) general pretraining with 500B standard-quality code tokens, preprocessed\nthrough basic filtering, deduplication, and decontamination, (2) continued\npretraining with 50B high-quality tokens, selected from phase one by a\nBERT-style quality annotator trained to distinguish good code from random data,\nusing positive examples drawn from high-quality code files, along with\ninstruction data from Magicoder and StarCoder2-Instruct, and (3) enhanced\npretraining with 5B synthetic data created by Llama-3.1-70B using phase two\ndata as seeds, adapting the Magicoder approach for pretraining. Despite being\ntrained on a limited dataset, Arctic-SnowCoder achieves state-of-the-art\nperformance on BigCodeBench, a coding benchmark focusing on practical and\nchallenging programming tasks, compared to similarly sized models trained on no\nmore than 1T tokens, outperforming Phi-1.5-1.3B by 36%. Across all evaluated\nbenchmarks, Arctic-SnowCoder-1.3B beats StarCoderBase-3B pretrained on 1T\ntokens. Additionally, it matches the performance of leading small base code\nmodels trained on trillions of tokens. For example, Arctic-SnowCoder-1.3B\nsurpasses StarCoder2-3B, pretrained on over 3.3T tokens, on HumanEval+, a\nbenchmark that evaluates function-level code generation, and remains\ncompetitive on BigCodeBench. Our evaluation presents a comprehensive analysis\njustifying various design choices for Arctic-SnowCoder. Most importantly, we\nfind that the key to high-quality data is its alignment with the distribution\nof downstream applications.",
+      "upvotes": 18
+    },
+    {
+      "title": "FastVoiceGrad: One-step Diffusion-Based Voice Conversion with Adversarial Conditional Diffusion Distillation",
+      "url": "https://huggingface.co/papers/2409.02245",
+      "authors": [
+        "Takuhiro Kaneko",
+        "Hirokazu Kameoka",
+        "Yuto Kondo"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.02245.pdf",
+      "abstract": "Diffusion-based voice conversion (VC) techniques such as VoiceGrad have\nattracted interest because of their high VC performance in terms of speech\nquality and speaker similarity. However, a notable limitation is the slow\ninference caused by the multi-step reverse diffusion. Therefore, we propose\nFastVoiceGrad, a novel one-step diffusion-based VC that reduces the number of\niterations from dozens to one while inheriting the high VC performance of the\nmulti-step diffusion-based VC. We obtain the model using adversarial\nconditional diffusion distillation (ACDD), leveraging the ability of generative\nadversarial networks and diffusion models while reconsidering the initial\nstates in sampling. Evaluations of one-shot any-to-any VC demonstrate that\nFastVoiceGrad achieves VC performance superior to or comparable to that of\nprevious multi-step diffusion-based VC while enhancing the inference speed.\nAudio samples are available at\nhttps://www.kecl.ntt.co.jp/people/kaneko.takuhiro/projects/fastvoicegrad/.",
+      "upvotes": 9
+    },
+    {
+      "title": "Political DEBATE: Efficient Zero-shot and Few-shot Classifiers for Political Text",
+      "url": "https://huggingface.co/papers/2409.02078",
+      "authors": [
+        "Michael Burnham",
+        "Ryan Yank Wang",
+        "Rachel X. Peng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.02078.pdf",
+      "abstract": "Social scientists quickly adopted large language models due to their ability\nto annotate documents without supervised training, an ability known as\nzero-shot learning. However, due to their compute demands, cost, and often\nproprietary nature, these models are often at odds with replication and open\nscience standards. This paper introduces the Political DEBATE (DeBERTa\nAlgorithm for Textual Entailment) language models for zero-shot and few-shot\nclassification of political documents. These models are not only as good, or\nbetter than, state-of-the art large language models at zero and few-shot\nclassification, but are orders of magnitude more efficient and completely open\nsource. By training the models on a simple random sample of 10-25 documents,\nthey can outperform supervised classifiers trained on hundreds or thousands of\ndocuments and state-of-the-art generative models with complex, engineered\nprompts. Additionally, we release the PolNLI dataset used to train these models\n-- a corpus of over 200,000 political documents with highly accurate labels\nacross over 800 classification tasks.",
+      "upvotes": 8
+    }
+  ]
+}

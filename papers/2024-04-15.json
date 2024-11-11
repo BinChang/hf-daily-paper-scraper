@@ -1,0 +1,86 @@
+{
+  "date": "2024-04-15",
+  "papers": [
+    {
+      "title": "Pre-training Small Base LMs with Fewer Tokens",
+      "url": "https://huggingface.co/papers/2404.08634",
+      "authors": [
+        "Sujay Sanghavi",
+        "Alexandros G. Dimakis"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.08634.pdf",
+      "abstract": "We study the effectiveness of a simple approach to develop a small base\nlanguage model (LM) starting from an existing large base LM: first inherit a\nfew transformer blocks from the larger LM, and then train this smaller model on\na very small subset (0.1\\%) of the raw pretraining data of the larger model. We\ncall our simple recipe Inheritune and first demonstrate it for building a small\nbase LM with 1.5B parameters using 1B tokens (and a starting few layers of\nlarger LM of 3B parameters); we do this using a single A6000 GPU for less than\nhalf a day. Across 9 diverse evaluation datasets as well as the MMLU benchmark,\nthe resulting model compares favorably to publicly available base models of\n1B-2B size, some of which have been trained using 50-1000 times more tokens.\n  We investigate Inheritune in a slightly different setting where we train\nsmall LMs utilizing larger LMs and their full pre-training dataset. Here we\nshow that smaller LMs trained utilizing some of the layers of GPT2-medium\n(355M) and GPT-2-large (770M) can effectively match the val loss of their\nbigger counterparts when trained from scratch for the same number of training\nsteps on OpenWebText dataset with 9B tokens. We analyze our recipe with\nextensive experiments and demonstrate it efficacy on diverse settings. Our code\nis available at https://github.com/sanyalsunny111/LLM-Inheritune.",
+      "upvotes": 34
+    },
+    {
+      "title": "Scaling (Down) CLIP: A Comprehensive Analysis of Data, Architecture, and Training Strategies",
+      "url": "https://huggingface.co/papers/2404.08197",
+      "authors": [
+        "Zichao Li",
+        "Ekin Dogus Cubuk"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.08197.pdf",
+      "abstract": "This paper investigates the performance of the Contrastive Language-Image\nPre-training (CLIP) when scaled down to limited computation budgets. We explore\nCLIP along three dimensions: data, architecture, and training strategies. With\nregards to data, we demonstrate the significance of high-quality training data\nand show that a smaller dataset of high-quality data can outperform a larger\ndataset with lower quality. We also examine how model performance varies with\ndifferent dataset sizes, suggesting that smaller ViT models are better suited\nfor smaller datasets, while larger models perform better on larger datasets\nwith fixed compute. Additionally, we provide guidance on when to choose a\nCNN-based architecture or a ViT-based architecture for CLIP training. We\ncompare four CLIP training strategies - SLIP, FLIP, CLIP, and CLIP+Data\nAugmentation - and show that the choice of training strategy depends on the\navailable compute resource. Our analysis reveals that CLIP+Data Augmentation\ncan achieve comparable performance to CLIP using only half of the training\ndata. This work provides practical insights into how to effectively train and\ndeploy CLIP models, making them more accessible and affordable for practical\nuse in various applications.",
+      "upvotes": 27
+    },
+    {
+      "title": "COCONut: Modernizing COCO Segmentation",
+      "url": "https://huggingface.co/papers/2404.08639",
+      "authors": [
+        "Liang-Chieh Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.08639.pdf",
+      "abstract": "In recent decades, the vision community has witnessed remarkable progress in\nvisual recognition, partially owing to advancements in dataset benchmarks.\nNotably, the established COCO benchmark has propelled the development of modern\ndetection and segmentation systems. However, the COCO segmentation benchmark\nhas seen comparatively slow improvement over the last decade. Originally\nequipped with coarse polygon annotations for thing instances, it gradually\nincorporated coarse superpixel annotations for stuff regions, which were\nsubsequently heuristically amalgamated to yield panoptic segmentation\nannotations. These annotations, executed by different groups of raters, have\nresulted not only in coarse segmentation masks but also in inconsistencies\nbetween segmentation types. In this study, we undertake a comprehensive\nreevaluation of the COCO segmentation annotations. By enhancing the annotation\nquality and expanding the dataset to encompass 383K images with more than 5.18M\npanoptic masks, we introduce COCONut, the COCO Next Universal segmenTation\ndataset. COCONut harmonizes segmentation annotations across semantic, instance,\nand panoptic segmentation with meticulously crafted high-quality masks, and\nestablishes a robust benchmark for all segmentation tasks. To our knowledge,\nCOCONut stands as the inaugural large-scale universal segmentation dataset,\nverified by human raters. We anticipate that the release of COCONut will\nsignificantly contribute to the community's ability to assess the progress of\nnovel neural networks.",
+      "upvotes": 27
+    },
+    {
+      "title": "Probing the 3D Awareness of Visual Foundation Models",
+      "url": "https://huggingface.co/papers/2404.08636",
+      "authors": [
+        "Mohamed El Banani",
+        "Amit Raj",
+        "Kevis-Kokitsi Maninis",
+        "Abhishek Kar",
+        "Michael Rubinstein",
+        "Deqing Sun",
+        "Leonidas Guibas",
+        "Justin Johnson"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.08636.pdf",
+      "abstract": "Recent advances in large-scale pretraining have yielded visual foundation\nmodels with strong capabilities. Not only can recent models generalize to\narbitrary images for their training task, their intermediate representations\nare useful for other visual tasks such as detection and segmentation. Given\nthat such models can classify, delineate, and localize objects in 2D, we ask\nwhether they also represent their 3D structure? In this work, we analyze the 3D\nawareness of visual foundation models. We posit that 3D awareness implies that\nrepresentations (1) encode the 3D structure of the scene and (2) consistently\nrepresent the surface across views. We conduct a series of experiments using\ntask-specific probes and zero-shot inference procedures on frozen features. Our\nexperiments reveal several limitations of the current models. Our code and\nanalysis can be found at https://github.com/mbanani/probe3d.",
+      "upvotes": 12
+    },
+    {
+      "title": "On the Robustness of Language Guidance for Low-Level Vision Tasks: Findings from Depth Estimation",
+      "url": "https://huggingface.co/papers/2404.08540",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2404.08540.pdf",
+      "abstract": "Recent advances in monocular depth estimation have been made by incorporating\nnatural language as additional guidance. Although yielding impressive results,\nthe impact of the language prior, particularly in terms of generalization and\nrobustness, remains unexplored. In this paper, we address this gap by\nquantifying the impact of this prior and introduce methods to benchmark its\neffectiveness across various settings. We generate \"low-level\" sentences that\nconvey object-centric, three-dimensional spatial relationships, incorporate\nthem as additional language priors and evaluate their downstream impact on\ndepth estimation. Our key finding is that current language-guided depth\nestimators perform optimally only with scene-level descriptions and\ncounter-intuitively fare worse with low level descriptions. Despite leveraging\nadditional data, these methods are not robust to directed adversarial attacks\nand decline in performance with an increase in distribution shift. Finally, to\nprovide a foundation for future research, we identify points of failures and\noffer insights to better understand these shortcomings. With an increasing\nnumber of methods using language for depth estimation, our findings highlight\nthe opportunities and pitfalls that require careful consideration for effective\ndeployment in real-world settings",
+      "upvotes": 10
+    },
+    {
+      "title": "Dataset Reset Policy Optimization for RLHF",
+      "url": "https://huggingface.co/papers/2404.08495",
+      "authors": [
+        "Jonathan D. Chang",
+        "Dipendra Misra",
+        "Wen Sun"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.08495.pdf",
+      "abstract": "Reinforcement Learning (RL) from Human Preference-based feedback is a popular\nparadigm for fine-tuning generative models, which has produced impressive\nmodels such as GPT-4 and Claude3 Opus. This framework often consists of two\nsteps: learning a reward model from an offline preference dataset followed by\nrunning online RL to optimize the learned reward model. In this work,\nleveraging the idea of reset, we propose a new RLHF algorithm with provable\nguarantees. Motivated by the fact that offline preference dataset provides\ninformative states (i.e., data that is preferred by the labelers), our new\nalgorithm, Dataset Reset Policy Optimization (DR-PO), integrates the existing\noffline preference dataset into the online policy training procedure via\ndataset reset: it directly resets the policy optimizer to the states in the\noffline dataset, instead of always starting from the initial state\ndistribution. In theory, we show that DR-PO learns to perform at least as good\nas any policy that is covered by the offline dataset under general function\napproximation with finite sample complexity. In experiments, we demonstrate\nthat on both the TL;DR summarization and the Anthropic Helpful Harmful (HH)\ndataset, the generation from DR-PO is better than that from Proximal Policy\nOptimization (PPO) and Direction Preference Optimization (DPO), under the\nmetric of GPT4 win-rate. Code for this work can be found at\nhttps://github.com/Cornell-RL/drpo.",
+      "upvotes": 8
+    },
+    {
+      "title": "MonoPatchNeRF: Improving Neural Radiance Fields with Patch-based Monocular Guidance",
+      "url": "https://huggingface.co/papers/2404.08252",
+      "authors": [
+        "Jae Yong Lee",
+        "Chuhang Zou",
+        "Derek Hoiem"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.08252.pdf",
+      "abstract": "The latest regularized Neural Radiance Field (NeRF) approaches produce poor\ngeometry and view extrapolation for multiview stereo (MVS) benchmarks such as\nETH3D. In this paper, we aim to create 3D models that provide accurate geometry\nand view synthesis, partially closing the large geometric performance gap\nbetween NeRF and traditional MVS methods. We propose a patch-based approach\nthat effectively leverages monocular surface normal and relative depth\npredictions. The patch-based ray sampling also enables the appearance\nregularization of normalized cross-correlation (NCC) and structural similarity\n(SSIM) between randomly sampled virtual and training views. We further show\nthat \"density restrictions\" based on sparse structure-from-motion points can\nhelp greatly improve geometric accuracy with a slight drop in novel view\nsynthesis metrics. Our experiments show 4x the performance of RegNeRF and 8x\nthat of FreeNeRF on average F1@2cm for ETH3D MVS benchmark, suggesting a\nfruitful research direction to improve the geometric accuracy of NeRF-based\nmodels, and sheds light on a potential future approach to enable NeRF-based\noptimization to eventually outperform traditional MVS.",
+      "upvotes": 5
+    }
+  ]
+}

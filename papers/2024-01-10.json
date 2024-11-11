@@ -1,0 +1,100 @@
+{
+  "date": "2024-01-10",
+  "papers": [
+    {
+      "title": "MagicVideo-V2: Multi-Stage High-Aesthetic Video Generation",
+      "url": "https://huggingface.co/papers/2401.04468",
+      "authors": [
+        "Jiawei Liu",
+        "Shuo Chen",
+        "Tuyen Hoang",
+        "Jie Wu",
+        "Jiashi Feng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.04468.pdf",
+      "abstract": "The growing demand for high-fidelity video generation from textual\ndescriptions has catalyzed significant research in this field. In this work, we\nintroduce MagicVideo-V2 that integrates the text-to-image model, video motion\ngenerator, reference image embedding module and frame interpolation module into\nan end-to-end video generation pipeline. Benefiting from these architecture\ndesigns, MagicVideo-V2 can generate an aesthetically pleasing, high-resolution\nvideo with remarkable fidelity and smoothness. It demonstrates superior\nperformance over leading Text-to-Video systems such as Runway, Pika 1.0, Morph,\nMoon Valley and Stable Video Diffusion model via user evaluation at large\nscale.",
+      "upvotes": 48
+    },
+    {
+      "title": "Masked Audio Generation using a Single Non-Autoregressive Transformer",
+      "url": "https://huggingface.co/papers/2401.04577",
+      "authors": [
+        "Gael Le Lan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.04577.pdf",
+      "abstract": "We introduce MAGNeT, a masked generative sequence modeling method that\noperates directly over several streams of audio tokens. Unlike prior work,\nMAGNeT is comprised of a single-stage, non-autoregressive transformer. During\ntraining, we predict spans of masked tokens obtained from a masking scheduler,\nwhile during inference we gradually construct the output sequence using several\ndecoding steps. To further enhance the quality of the generated audio, we\nintroduce a novel rescoring method in which, we leverage an external\npre-trained model to rescore and rank predictions from MAGNeT, which will be\nthen used for later decoding steps. Lastly, we explore a hybrid version of\nMAGNeT, in which we fuse between autoregressive and non-autoregressive models\nto generate the first few seconds in an autoregressive manner while the rest of\nthe sequence is being decoded in parallel. We demonstrate the efficiency of\nMAGNeT for the task of text-to-music and text-to-audio generation and conduct\nan extensive empirical evaluation, considering both objective metrics and human\nstudies. The proposed approach is comparable to the evaluated baselines, while\nbeing significantly faster (x7 faster than the autoregressive baseline).\nThrough ablation studies and analysis, we shed light on the importance of each\nof the components comprising MAGNeT, together with pointing to the trade-offs\nbetween autoregressive and non-autoregressive modeling, considering latency,\nthroughput, and generation quality. Samples are available on our demo page\nhttps://pages.cs.huji.ac.il/adiyoss-lab/MAGNeT.",
+      "upvotes": 42
+    },
+    {
+      "title": "Lightning Attention-2: A Free Lunch for Handling Unlimited Sequence Lengths in Large Language Models",
+      "url": "https://huggingface.co/papers/2401.04658",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2401.04658.pdf",
+      "abstract": "Linear attention is an efficient attention mechanism that has recently\nemerged as a promising alternative to conventional softmax attention. With its\nability to process tokens in linear computational complexities, linear\nattention, in theory, can handle sequences of unlimited length without\nsacrificing speed, i.e., maintaining a constant training speed for various\nsequence lengths with a fixed memory consumption. However, due to the issue\nwith cumulative summation (cumsum), current linear attention algorithms cannot\ndemonstrate their theoretical advantage in a causal setting. In this paper, we\npresent Lightning Attention-2, the first linear attention implementation that\nenables linear attention to realize its theoretical computational benefits. To\nachieve this, we leverage the thought of tiling, separately handling the\nintra-block and inter-block components in linear attention calculation.\nSpecifically, we utilize the conventional attention computation mechanism for\nthe intra-blocks and apply linear attention kernel tricks for the inter-blocks.\nA tiling technique is adopted through both forward and backward procedures to\ntake full advantage of the GPU hardware. We implement our algorithm in Triton\nto make it IO-aware and hardware-friendly. Various experiments are conducted on\ndifferent model sizes and sequence lengths. Lightning Attention-2 retains\nconsistent training and inference speed regardless of input sequence length and\nis significantly faster than other attention mechanisms. The source code is\navailable at https://github.com/OpenNLPLab/lightning-attention.",
+      "upvotes": 25
+    },
+    {
+      "title": "Chain-of-Table: Evolving Tables in the Reasoning Chain for Table Understanding",
+      "url": "https://huggingface.co/papers/2401.04398",
+      "authors": [
+        "Hao Zhang",
+        "Chun-Liang Li",
+        "Lesly Miculicich",
+        "Yasuhisa Fujii",
+        "Jingbo Shang",
+        "Tomas Pfister"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.04398.pdf",
+      "abstract": "Table-based reasoning with large language models (LLMs) is a promising\ndirection to tackle many table understanding tasks, such as table-based\nquestion answering and fact verification. Compared with generic reasoning,\ntable-based reasoning requires the extraction of underlying semantics from both\nfree-form questions and semi-structured tabular data. Chain-of-Thought and its\nsimilar approaches incorporate the reasoning chain in the form of textual\ncontext, but it is still an open question how to effectively leverage tabular\ndata in the reasoning chain. We propose the Chain-of-Table framework, where\ntabular data is explicitly used in the reasoning chain as a proxy for\nintermediate thoughts. Specifically, we guide LLMs using in-context learning to\niteratively generate operations and update the table to represent a tabular\nreasoning chain. LLMs can therefore dynamically plan the next operation based\non the results of the previous ones. This continuous evolution of the table\nforms a chain, showing the reasoning process for a given tabular problem. The\nchain carries structured information of the intermediate results, enabling more\naccurate and reliable predictions. Chain-of-Table achieves new state-of-the-art\nperformance on WikiTQ, FeTaQA, and TabFact benchmarks across multiple LLM\nchoices.",
+      "upvotes": 21
+    },
+    {
+      "title": "Jump Cut Smoothing for Talking Heads",
+      "url": "https://huggingface.co/papers/2401.04718",
+      "authors": [
+        "Yang Zhou",
+        "Eli Shechtman",
+        "Richard Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.04718.pdf",
+      "abstract": "A jump cut offers an abrupt, sometimes unwanted change in the viewing\nexperience. We present a novel framework for smoothing these jump cuts, in the\ncontext of talking head videos. We leverage the appearance of the subject from\nthe other source frames in the video, fusing it with a mid-level representation\ndriven by DensePose keypoints and face landmarks. To achieve motion, we\ninterpolate the keypoints and landmarks between the end frames around the cut.\nWe then use an image translation network from the keypoints and source frames,\nto synthesize pixels. Because keypoints can contain errors, we propose a\ncross-modal attention scheme to select and pick the most appropriate source\namongst multiple options for each key point. By leveraging this mid-level\nrepresentation, our method can achieve stronger results than a strong video\ninterpolation baseline. We demonstrate our method on various jump cuts in the\ntalking head videos, such as cutting filler words, pauses, and even random\ncuts. Our experiments show that we can achieve seamless transitions, even in\nthe challenging cases where the talking head rotates or moves drastically in\nthe jump cut.",
+      "upvotes": 18
+    },
+    {
+      "title": "Let's Go Shopping (LGS) -- Web-Scale Image-Text Dataset for Visual Concept Understanding",
+      "url": "https://huggingface.co/papers/2401.04575",
+      "authors": [
+        "Isidora Filipovic",
+        "Somayeh Sojoudi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.04575.pdf",
+      "abstract": "Vision and vision-language applications of neural networks, such as image\nclassification and captioning, rely on large-scale annotated datasets that\nrequire non-trivial data-collecting processes. This time-consuming endeavor\nhinders the emergence of large-scale datasets, limiting researchers and\npractitioners to a small number of choices. Therefore, we seek more efficient\nways to collect and annotate images. Previous initiatives have gathered\ncaptions from HTML alt-texts and crawled social media postings, but these data\nsources suffer from noise, sparsity, or subjectivity. For this reason, we turn\nto commercial shopping websites whose data meet three criteria: cleanliness,\ninformativeness, and fluency. We introduce the Let's Go Shopping (LGS) dataset,\na large-scale public dataset with 15 million image-caption pairs from publicly\navailable e-commerce websites. When compared with existing general-domain\ndatasets, the LGS images focus on the foreground object and have less complex\nbackgrounds. Our experiments on LGS show that the classifiers trained on\nexisting benchmark datasets do not readily generalize to e-commerce data, while\nspecific self-supervised visual feature extractors can better generalize.\nFurthermore, LGS's high-quality e-commerce-focused images and bimodal nature\nmake it advantageous for vision-language bi-modal tasks: LGS enables\nimage-captioning models to generate richer captions and helps text-to-image\ngeneration models achieve e-commerce style transfer.",
+      "upvotes": 14
+    },
+    {
+      "title": "Narrowing the Knowledge Evaluation Gap: Open-Domain Question Answering with Multi-Granularity Answers",
+      "url": "https://huggingface.co/papers/2401.04695",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2401.04695.pdf",
+      "abstract": "Factual questions typically can be answered correctly at different levels of\ngranularity. For example, both ``August 4, 1961'' and ``1961'' are correct\nanswers to the question ``When was Barack Obama born?''. Standard question\nanswering (QA) evaluation protocols, however, do not explicitly take this into\naccount and compare a predicted answer against answers of a single granularity\nlevel. In this work, we propose GRANOLA QA, a novel evaluation setting where a\npredicted answer is evaluated in terms of accuracy and informativeness against\na set of multi-granularity answers. We present a simple methodology for\nenriching existing datasets with multi-granularity answers, and create\nGRANOLA-EQ, a multi-granularity version of the EntityQuestions dataset. We\nevaluate a range of decoding methods on GRANOLA-EQ, including a new algorithm,\ncalled Decoding with Response Aggregation (DRAG), that is geared towards\naligning the response granularity with the model's uncertainty. Our experiments\nshow that large language models with standard decoding tend to generate\nspecific answers, which are often incorrect. In contrast, when evaluated on\nmulti-granularity answers, DRAG yields a nearly 20 point increase in accuracy\non average, which further increases for rare entities. Overall, this reveals\nthat standard evaluation and decoding schemes may significantly underestimate\nthe knowledge encapsulated in LMs.",
+      "upvotes": 11
+    },
+    {
+      "title": "FADI-AEC: Fast Score Based Diffusion Model Guided by Far-end Signal for Acoustic Echo Cancellation",
+      "url": "https://huggingface.co/papers/2401.04283",
+      "authors": [
+        "Yang Liu",
+        "Li Wan",
+        "Yun Li",
+        "Yiteng Huang",
+        "Ming Sun",
+        "James Luan",
+        "Yangyang Shi",
+        "Xin Lei"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.04283.pdf",
+      "abstract": "Despite the potential of diffusion models in speech enhancement, their\ndeployment in Acoustic Echo Cancellation (AEC) has been restricted. In this\npaper, we propose DI-AEC, pioneering a diffusion-based stochastic regeneration\napproach dedicated to AEC. Further, we propose FADI-AEC, fast score-based\ndiffusion AEC framework to save computational demands, making it favorable for\nedge devices. It stands out by running the score model once per frame,\nachieving a significant surge in processing efficiency. Apart from that, we\nintroduce a novel noise generation technique where far-end signals are\nutilized, incorporating both far-end and near-end signals to refine the score\nmodel's accuracy. We test our proposed method on the ICASSP2023 Microsoft deep\necho cancellation challenge evaluation dataset, where our method outperforms\nsome of the end-to-end methods and other diffusion based echo cancellation\nmethods.",
+      "upvotes": 5
+    }
+  ]
+}

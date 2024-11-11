@@ -1,0 +1,151 @@
+{
+  "date": "2024-04-16",
+  "papers": [
+    {
+      "title": "Learn Your Reference Model for Real Good Alignment",
+      "url": "https://huggingface.co/papers/2404.09656",
+      "authors": [
+        "Nikita Surnachev"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.09656.pdf",
+      "abstract": "The complexity of the alignment problem stems from the fact that existing\nmethods are unstable. Researchers continuously invent various tricks to address\nthis shortcoming. For instance, in the fundamental Reinforcement Learning From\nHuman Feedback (RLHF) technique of Language Model alignment, in addition to\nreward maximization, the Kullback-Leibler divergence between the trainable\npolicy and the SFT policy is minimized. This addition prevents the model from\nbeing overfitted to the Reward Model (RM) and generating texts that are\nout-of-domain for the RM. The Direct Preference Optimization (DPO) method\nreformulates the optimization task of RLHF and eliminates the Reward Model\nwhile tacitly maintaining the requirement for the policy to be close to the SFT\npolicy. In our paper, we argue that this implicit limitation in the DPO method\nleads to sub-optimal results. We propose a new method called Trust Region DPO\n(TR-DPO), which updates the reference policy during training. With such a\nstraightforward update, we demonstrate the effectiveness of TR-DPO against DPO\non the Anthropic HH and TLDR datasets. We show that TR-DPO outperforms DPO by\nup to 19%, measured by automatic evaluation with GPT-4. The new alignment\napproach that we propose allows us to improve the quality of models across\nseveral parameters at once, such as coherence, correctness, level of detail,\nhelpfulness, and harmlessness.",
+      "upvotes": 82
+    },
+    {
+      "title": "Megalodon: Efficient LLM Pretraining and Inference with Unlimited Context Length",
+      "url": "https://huggingface.co/papers/2404.08801",
+      "authors": [
+        "Xiaomeng Yang",
+        "Wenhan Xiong",
+        "Lili Yu",
+        "Hao Zhang",
+        "Jonathan May",
+        "Luke Zettlemoyer"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.08801.pdf",
+      "abstract": "The quadratic complexity and weak length extrapolation of Transformers limits\ntheir ability to scale to long sequences, and while sub-quadratic solutions\nlike linear attention and state space models exist, they empirically\nunderperform Transformers in pretraining efficiency and downstream task\naccuracy. We introduce Megalodon, a neural architecture for efficient sequence\nmodeling with unlimited context length. Megalodon inherits the architecture of\nMega (exponential moving average with gated attention), and further introduces\nmultiple technical components to improve its capability and stability,\nincluding complex exponential moving average (CEMA), timestep normalization\nlayer, normalized attention mechanism and pre-norm with two-hop residual\nconfiguration. In a controlled head-to-head comparison with Llama2, Megalodon\nachieves better efficiency than Transformer in the scale of 7 billion\nparameters and 2 trillion training tokens. Megalodon reaches a training loss of\n1.70, landing mid-way between Llama2-7B (1.75) and 13B (1.67). Code:\nhttps://github.com/XuezheMax/megalodon",
+      "upvotes": 63
+    },
+    {
+      "title": "TransformerFAM: Feedback attention is working memory",
+      "url": "https://huggingface.co/papers/2404.09173",
+      "authors": [
+        "Weiran Wang",
+        "Zhuoyuan Huo",
+        "Khe Chai Sim",
+        "Pedro Moreno Mengibar"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.09173.pdf",
+      "abstract": "While Transformers have revolutionized deep learning, their quadratic\nattention complexity hinders their ability to process infinitely long inputs.\nWe propose Feedback Attention Memory (FAM), a novel Transformer architecture\nthat leverages a feedback loop to enable the network to attend to its own\nlatent representations. This design fosters the emergence of working memory\nwithin the Transformer, allowing it to process indefinitely long sequences.\nTransformerFAM requires no additional weights, enabling seamless integration\nwith pre-trained models. Our experiments show that TransformerFAM significantly\nimproves Transformer performance on long-context tasks across various model\nsizes (1B, 8B, and 24B). These results showcase the potential to empower Large\nLanguage Models (LLMs) to process sequences of unlimited length.",
+      "upvotes": 43
+    },
+    {
+      "title": "Video2Game: Real-time, Interactive, Realistic and Browser-Compatible Environment from a Single Video",
+      "url": "https://huggingface.co/papers/2404.09833",
+      "authors": [
+        "Hongchi Xia"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.09833.pdf",
+      "abstract": "Creating high-quality and interactive virtual environments, such as games and\nsimulators, often involves complex and costly manual modeling processes. In\nthis paper, we present Video2Game, a novel approach that automatically converts\nvideos of real-world scenes into realistic and interactive game environments.\nAt the heart of our system are three core components:(i) a neural radiance\nfields (NeRF) module that effectively captures the geometry and visual\nappearance of the scene; (ii) a mesh module that distills the knowledge from\nNeRF for faster rendering; and (iii) a physics module that models the\ninteractions and physical dynamics among the objects. By following the\ncarefully designed pipeline, one can construct an interactable and actionable\ndigital replica of the real world. We benchmark our system on both indoor and\nlarge-scale outdoor scenes. We show that we can not only produce\nhighly-realistic renderings in real-time, but also build interactive games on\ntop.",
+      "upvotes": 29
+    },
+    {
+      "title": "Compression Represents Intelligence Linearly",
+      "url": "https://huggingface.co/papers/2404.09937",
+      "authors": [
+        "Zifei Shan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.09937.pdf",
+      "abstract": "There is a belief that learning to compress well will lead to intelligence.\nRecently, language modeling has been shown to be equivalent to compression,\nwhich offers a compelling rationale for the success of large language models\n(LLMs): the development of more advanced language models is essentially\nenhancing compression which facilitates intelligence. Despite such appealing\ndiscussions, little empirical evidence is present for the interplay between\ncompression and intelligence. In this work, we examine their relationship in\nthe context of LLMs, treating LLMs as data compressors. Given the abstract\nconcept of \"intelligence\", we adopt the average downstream benchmark scores as\na surrogate, specifically targeting intelligence related to knowledge and\ncommonsense, coding, and mathematical reasoning. Across 12 benchmarks, our\nstudy brings together 30 public LLMs that originate from diverse organizations.\nRemarkably, we find that LLMs' intelligence -- reflected by average benchmark\nscores -- almost linearly correlates with their ability to compress external\ntext corpora. These results provide concrete evidence supporting the belief\nthat superior compression indicates greater intelligence. Furthermore, our\nfindings suggest that compression efficiency, as an unsupervised metric derived\nfrom raw text corpora, serves as a reliable evaluation measure that is linearly\nassociated with the model capabilities. We open-source our compression datasets\nas well as our data collection pipelines to facilitate future researchers to\nassess compression properly.",
+      "upvotes": 27
+    },
+    {
+      "title": "Ctrl-Adapter: An Efficient and Versatile Framework for Adapting Diverse Controls to Any Diffusion Model",
+      "url": "https://huggingface.co/papers/2404.09967",
+      "authors": [
+        "Mohit Bansal"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.09967.pdf",
+      "abstract": "ControlNets are widely used for adding spatial control in image generation\nwith different conditions, such as depth maps, canny edges, and human poses.\nHowever, there are several challenges when leveraging the pretrained image\nControlNets for controlled video generation. First, pretrained ControlNet\ncannot be directly plugged into new backbone models due to the mismatch of\nfeature spaces, and the cost of training ControlNets for new backbones is a big\nburden. Second, ControlNet features for different frames might not effectively\nhandle the temporal consistency. To address these challenges, we introduce\nCtrl-Adapter, an efficient and versatile framework that adds diverse controls\nto any image/video diffusion models, by adapting pretrained ControlNets (and\nimproving temporal alignment for videos). Ctrl-Adapter provides diverse\ncapabilities including image control, video control, video control with sparse\nframes, multi-condition control, compatibility with different backbones,\nadaptation to unseen control conditions, and video editing. In Ctrl-Adapter, we\ntrain adapter layers that fuse pretrained ControlNet features to different\nimage/video diffusion models, while keeping the parameters of the ControlNets\nand the diffusion models frozen. Ctrl-Adapter consists of temporal and spatial\nmodules so that it can effectively handle the temporal consistency of videos.\nWe also propose latent skipping and inverse timestep sampling for robust\nadaptation and sparse control. Moreover, Ctrl-Adapter enables control from\nmultiple conditions by simply taking the (weighted) average of ControlNet\noutputs. With diverse image/video diffusion backbones (SDXL, Hotshot-XL,\nI2VGen-XL, and SVD), Ctrl-Adapter matches ControlNet for image control and\noutperforms all baselines for video control (achieving the SOTA accuracy on the\nDAVIS 2017 dataset) with significantly lower computational costs (less than 10\nGPU hours).",
+      "upvotes": 20
+    },
+    {
+      "title": "On Speculative Decoding for Multimodal Large Language Models",
+      "url": "https://huggingface.co/papers/2404.08856",
+      "authors": [
+        "Mukul Gagrani",
+        "Junyoung Park",
+        "Mingu Lee",
+        "Christopher Lott"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.08856.pdf",
+      "abstract": "Inference with Multimodal Large Language Models (MLLMs) is slow due to their\nlarge-language-model backbone which suffers from memory bandwidth bottleneck\nand generates tokens auto-regressively. In this paper, we explore the\napplication of speculative decoding to enhance the inference efficiency of\nMLLMs, specifically the LLaVA 7B model. We show that a language-only model can\nserve as a good draft model for speculative decoding with LLaVA 7B, bypassing\nthe need for image tokens and their associated processing components from the\ndraft model. Our experiments across three different tasks show that speculative\ndecoding can achieve a memory-bound speedup of up to 2.37times using a 115M\nparameter language model that we trained from scratch. Additionally, we\nintroduce a compact LLaVA draft model incorporating an image adapter, which\nshows marginal performance gains in image captioning while maintaining\ncomparable results in other tasks.",
+      "upvotes": 13
+    },
+    {
+      "title": "HQ-Edit: A High-Quality Dataset for Instruction-based Image Editing",
+      "url": "https://huggingface.co/papers/2404.09990",
+      "authors": [
+        "Siwei Yang",
+        "Heng Wang",
+        "Peng Wang",
+        "Yuyin Zhou"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.09990.pdf",
+      "abstract": "This study introduces HQ-Edit, a high-quality instruction-based image editing\ndataset with around 200,000 edits. Unlike prior approaches relying on attribute\nguidance or human feedback on building datasets, we devise a scalable data\ncollection pipeline leveraging advanced foundation models, namely GPT-4V and\nDALL-E 3. To ensure its high quality, diverse examples are first collected\nonline, expanded, and then used to create high-quality diptychs featuring input\nand output images with detailed text prompts, followed by precise alignment\nensured through post-processing. In addition, we propose two evaluation\nmetrics, Alignment and Coherence, to quantitatively assess the quality of image\nedit pairs using GPT-4V. HQ-Edits high-resolution images, rich in detail and\naccompanied by comprehensive editing prompts, substantially enhance the\ncapabilities of existing image editing models. For example, an HQ-Edit\nfinetuned InstructPix2Pix can attain state-of-the-art image editing\nperformance, even surpassing those models fine-tuned with human-annotated data.\nThe project page is https://thefllood.github.io/HQEdit_web.",
+      "upvotes": 12
+    },
+    {
+      "title": "Tango 2: Aligning Diffusion-based Text-to-Audio Generations through Direct Preference Optimization",
+      "url": "https://huggingface.co/papers/2404.09956",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2404.09956.pdf",
+      "abstract": "Generative multimodal content is increasingly prevalent in much of the\ncontent creation arena, as it has the potential to allow artists and media\npersonnel to create pre-production mockups by quickly bringing their ideas to\nlife. The generation of audio from text prompts is an important aspect of such\nprocesses in the music and film industry. Many of the recent diffusion-based\ntext-to-audio models focus on training increasingly sophisticated diffusion\nmodels on a large set of datasets of prompt-audio pairs. These models do not\nexplicitly focus on the presence of concepts or events and their temporal\nordering in the output audio with respect to the input prompt. Our hypothesis\nis focusing on how these aspects of audio generation could improve audio\ngeneration performance in the presence of limited data. As such, in this work,\nusing an existing text-to-audio model Tango, we synthetically create a\npreference dataset where each prompt has a winner audio output and some loser\naudio outputs for the diffusion model to learn from. The loser outputs, in\ntheory, have some concepts from the prompt missing or in an incorrect order. We\nfine-tune the publicly available Tango text-to-audio model using diffusion-DPO\n(direct preference optimization) loss on our preference dataset and show that\nit leads to improved audio output over Tango and AudioLDM2, in terms of both\nautomatic- and manual-evaluation metrics.",
+      "upvotes": 11
+    },
+    {
+      "title": "TextHawk: Exploring Efficient Fine-Grained Perception of Multimodal Large Language Models",
+      "url": "https://huggingface.co/papers/2404.09204",
+      "authors": [
+        "Ya-Qi Yu",
+        "Minghui Liao",
+        "Jihao Wu",
+        "Yongxin Liao",
+        "Xiaoyu Zheng",
+        "Wei Zeng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.09204.pdf",
+      "abstract": "Multimodal Large Language Models (MLLMs) have shown impressive results on\nvarious multimodal tasks. However, most existing MLLMs are not well suited for\ndocument-oriented tasks, which require fine-grained image perception and\ninformation compression. In this paper, we present TextHawk, a MLLM that is\nspecifically designed for document-oriented tasks, while preserving the general\ncapabilities of MLLMs. TextHawk is aimed to explore efficient fine-grained\nperception by designing four dedicated components. Firstly, a ReSampling and\nReArrangement (ReSA) module is proposed to reduce the redundancy in the\ndocument texts and lower the computational cost of the MLLM. We explore\nencoding the positions of each local feature by presenting Scalable Positional\nEmbeddings (SPEs), which can preserve the scalability of various image sizes. A\nQuery Proposal Network (QPN) is then adopted to initialize the queries\ndynamically among different sub-images. To further enhance the fine-grained\nvisual perceptual ability of the MLLM, we design a Multi-Level Cross-Attention\n(MLCA) mechanism that captures the hierarchical structure and semantic\nrelations of document images. Furthermore, we create a new instruction-tuning\ndataset for document-oriented tasks by enriching the multimodal document data\nwith Gemini Pro. We conduct extensive experiments on both general and\ndocument-oriented MLLM benchmarks, and show that TextHawk outperforms the\nstate-of-the-art methods, demonstrating its effectiveness and superiority in\nfine-grained document perception and general abilities.",
+      "upvotes": 10
+    },
+    {
+      "title": "CompGS: Efficient 3D Scene Representation via Compressed Gaussian Splatting",
+      "url": "https://huggingface.co/papers/2404.09458",
+      "authors": [
+        "Xiangrui Liu",
+        "Xinju Wu",
+        "Pingping Zhang",
+        "Shiqi Wang",
+        "Zhu Li",
+        "Sam Kwong"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.09458.pdf",
+      "abstract": "Gaussian splatting, renowned for its exceptional rendering quality and\nefficiency, has emerged as a prominent technique in 3D scene representation.\nHowever, the substantial data volume of Gaussian splatting impedes its\npractical utility in real-world applications. Herein, we propose an efficient\n3D scene representation, named Compressed Gaussian Splatting (CompGS), which\nharnesses compact Gaussian primitives for faithful 3D scene modeling with a\nremarkably reduced data size. To ensure the compactness of Gaussian primitives,\nwe devise a hybrid primitive structure that captures predictive relationships\nbetween each other. Then, we exploit a small set of anchor primitives for\nprediction, allowing the majority of primitives to be encapsulated into highly\ncompact residual forms. Moreover, we develop a rate-constrained optimization\nscheme to eliminate redundancies within such hybrid primitives, steering our\nCompGS towards an optimal trade-off between bitrate consumption and\nrepresentation efficacy. Experimental results show that the proposed CompGS\nsignificantly outperforms existing methods, achieving superior compactness in\n3D scene representation without compromising model accuracy and rendering\nquality. Our code will be released on GitHub for further research.",
+      "upvotes": 6
+    },
+    {
+      "title": "Taming Latent Diffusion Model for Neural Radiance Field Inpainting",
+      "url": "https://huggingface.co/papers/2404.09995",
+      "authors": [
+        "Changil Kim",
+        "Qinbo Li",
+        "Johannes Kopf",
+        "Ming-Hsuan Yang",
+        "Hung-Yu Tseng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.09995.pdf",
+      "abstract": "Neural Radiance Field (NeRF) is a representation for 3D reconstruction from\nmulti-view images. Despite some recent work showing preliminary success in\nediting a reconstructed NeRF with diffusion prior, they remain struggling to\nsynthesize reasonable geometry in completely uncovered regions. One major\nreason is the high diversity of synthetic contents from the diffusion model,\nwhich hinders the radiance field from converging to a crisp and deterministic\ngeometry. Moreover, applying latent diffusion models on real data often yields\na textural shift incoherent to the image condition due to auto-encoding errors.\nThese two problems are further reinforced with the use of pixel-distance\nlosses. To address these issues, we propose tempering the diffusion model's\nstochasticity with per-scene customization and mitigating the textural shift\nwith masked adversarial training. During the analyses, we also found the\ncommonly used pixel and perceptual losses are harmful in the NeRF inpainting\ntask. Through rigorous experiments, our framework yields state-of-the-art NeRF\ninpainting results on various real-world scenes. Project page:\nhttps://hubert0527.github.io/MALD-NeRF",
+      "upvotes": 6
+    }
+  ]
+}

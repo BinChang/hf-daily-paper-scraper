@@ -1,0 +1,160 @@
+{
+  "date": "2024-10-31",
+  "papers": [
+    {
+      "title": "CORAL: Benchmarking Multi-turn Conversational Retrieval-Augmentation Generation",
+      "url": "https://huggingface.co/papers/2410.23090",
+      "authors": [
+        "Kelong Mao",
+        "Ziliang Zhao",
+        "Hongjin Qian",
+        "Yongkang Wu",
+        "Tetsuya Sakai",
+        "Ji-Rong Wen",
+        "Zhicheng Dou"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.23090.pdf",
+      "abstract": "Retrieval-Augmented Generation (RAG) has become a powerful paradigm for\nenhancing large language models (LLMs) through external knowledge retrieval.\nDespite its widespread attention, existing academic research predominantly\nfocuses on single-turn RAG, leaving a significant gap in addressing the\ncomplexities of multi-turn conversations found in real-world applications. To\nbridge this gap, we introduce CORAL, a large-scale benchmark designed to assess\nRAG systems in realistic multi-turn conversational settings. CORAL includes\ndiverse information-seeking conversations automatically derived from Wikipedia\nand tackles key challenges such as open-domain coverage, knowledge intensity,\nfree-form responses, and topic shifts. It supports three core tasks of\nconversational RAG: passage retrieval, response generation, and citation\nlabeling. We propose a unified framework to standardize various conversational\nRAG methods and conduct a comprehensive evaluation of these methods on CORAL,\ndemonstrating substantial opportunities for improving existing approaches.",
+      "upvotes": 52
+    },
+    {
+      "title": "TokenFormer: Rethinking Transformer Scaling with Tokenized Model Parameters",
+      "url": "https://huggingface.co/papers/2410.23168",
+      "authors": [
+        "Yue Fan",
+        "Muhammad Ferjad Naeem",
+        "Yongqin Xian",
+        "Jan Eric Lenssen",
+        "Liwei Wang",
+        "Federico Tombari",
+        "Bernt Schiele"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.23168.pdf",
+      "abstract": "Transformers have become the predominant architecture in foundation models\ndue to their excellent performance across various domains. However, the\nsubstantial cost of scaling these models remains a significant concern. This\nproblem arises primarily from their dependence on a fixed number of parameters\nwithin linear projections. When architectural modifications (e.g., channel\ndimensions) are introduced, the entire model typically requires retraining from\nscratch. As model sizes continue growing, this strategy results in increasingly\nhigh computational costs and becomes unsustainable. To overcome this problem,\nwe introduce TokenFormer, a natively scalable architecture that leverages the\nattention mechanism not only for computations among input tokens but also for\ninteractions between tokens and model parameters, thereby enhancing\narchitectural flexibility. By treating model parameters as tokens, we replace\nall the linear projections in Transformers with our token-parameter attention\nlayer, where input tokens act as queries and model parameters as keys and\nvalues. This reformulation allows for progressive and efficient scaling without\nnecessitating retraining from scratch. Our model scales from 124M to 1.4B\nparameters by incrementally adding new key-value parameter pairs, achieving\nperformance comparable to Transformers trained from scratch while greatly\nreducing training costs. Code and models are available at\nhttps://github.com/Haiyang-W/TokenFormer.",
+      "upvotes": 21
+    },
+    {
+      "title": "A Large Recurrent Action Model: xLSTM enables Fast Inference for Robotics Tasks",
+      "url": "https://huggingface.co/papers/2410.22391",
+      "authors": [
+        "Thomas Schmied",
+        "Thomas Adler",
+        "Vihang Patil",
+        "Maximilian Beck",
+        "Korbinian Pöppel",
+        "Johannes Brandstetter",
+        "Günter Klambauer",
+        "Razvan Pascanu",
+        "Sepp Hochreiter"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.22391.pdf",
+      "abstract": "In recent years, there has been a trend in the field of Reinforcement\nLearning (RL) towards large action models trained offline on large-scale\ndatasets via sequence modeling. Existing models are primarily based on the\nTransformer architecture, which result in powerful agents. However, due to slow\ninference times, Transformer-based approaches are impractical for real-time\napplications, such as robotics. Recently, modern recurrent architectures, such\nas xLSTM and Mamba, have been proposed that exhibit parallelization benefits\nduring training similar to the Transformer architecture while offering fast\ninference. In this work, we study the aptitude of these modern recurrent\narchitectures for large action models. Consequently, we propose a Large\nRecurrent Action Model (LRAM) with an xLSTM at its core that comes with\nlinear-time inference complexity and natural sequence length extrapolation\nabilities. Experiments on 432 tasks from 6 domains show that LRAM compares\nfavorably to Transformers in terms of performance and speed.",
+      "upvotes": 21
+    },
+    {
+      "title": "ReferEverything: Towards Segmenting Everything We Can Speak of in Videos",
+      "url": "https://huggingface.co/papers/2410.23287",
+      "authors": [
+        "Yu-Xiong Wang",
+        "Martial Hebert"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.23287.pdf",
+      "abstract": "We present REM, a framework for segmenting a wide range of concepts in video\nthat can be described through natural language. Our method capitalizes on\nvisual-language representations learned by video diffusion models on\nInternet-scale datasets. A key insight of our approach is preserving as much of\nthe generative model's original representation as possible, while fine-tuning\nit on narrow-domain Referral Object Segmentation datasets. As a result, our\nframework can accurately segment and track rare and unseen objects, despite\nbeing trained on object masks from a limited set of categories. Additionally,\nit can generalize to non-object dynamic concepts, such as waves crashing in the\nocean, as demonstrated in our newly introduced benchmark for Referral Video\nProcess Segmentation (Ref-VPS). Our experiments show that REM performs on par\nwith state-of-the-art approaches on in-domain datasets, like Ref-DAVIS, while\noutperforming them by up to twelve points in terms of region similarity on\nout-of-domain data, leveraging the power of Internet-scale pre-training.",
+      "upvotes": 17
+    },
+    {
+      "title": "On Memorization of Large Language Models in Logical Reasoning",
+      "url": "https://huggingface.co/papers/2410.23123",
+      "authors": [
+        "Chulin Xie",
+        "Chiyuan Zhang",
+        "Da Yu",
+        "Xinyun Chen",
+        "Bo Li",
+        "Badih Ghazi",
+        "Ravi Kumar"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.23123.pdf",
+      "abstract": "Large language models (LLMs) achieve good performance on challenging\nreasoning benchmarks, yet could also make basic reasoning mistakes. This\ncontrasting behavior is puzzling when it comes to understanding the mechanisms\nbehind LLMs' reasoning capabilities. One hypothesis is that the increasingly\nhigh and nearly saturated performance on common reasoning benchmarks could be\ndue to the memorization of similar problems. In this paper, we systematically\ninvestigate this hypothesis with a quantitative measurement of memorization in\nreasoning tasks, using a dynamically generated logical reasoning benchmark\nbased on Knights and Knaves (K&K) puzzles. We found that LLMs could interpolate\nthe training puzzles (achieving near-perfect accuracy) after fine-tuning, yet\nfail when those puzzles are slightly perturbed, suggesting that the models\nheavily rely on memorization to solve those training puzzles. On the other\nhand, we show that while fine-tuning leads to heavy memorization, it also\nconsistently improves generalization performance. In-depth analyses with\nperturbation tests, cross difficulty-level transferability, probing model\ninternals, and fine-tuning with wrong answers suggest that the LLMs learn to\nreason on K&K puzzles despite training data memorization. This phenomenon\nindicates that LLMs exhibit a complex interplay between memorization and\ngenuine reasoning abilities. Finally, our analysis with per-sample memorization\nscore sheds light on how LLMs switch between reasoning and memorization in\nsolving logical puzzles. Our code and data are available at\nhttps://memkklogic.github.io.",
+      "upvotes": 15
+    },
+    {
+      "title": "Decoding Reading Goals from Eye Movements",
+      "url": "https://huggingface.co/papers/2410.20779",
+      "authors": [
+        "Cfir Avraham Hadar",
+        "Yevgeni Berzak"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.20779.pdf",
+      "abstract": "Readers can have different goals with respect to the text they are reading.\nCan these goals be decoded from the pattern of their eye movements over the\ntext? In this work, we examine for the first time whether it is possible to\ndecode two types of reading goals that are common in daily life: information\nseeking and ordinary reading. Using large scale eye-tracking data, we apply to\nthis task a wide range of state-of-the-art models for eye movements and text\nthat cover different architectural and data representation strategies, and\nfurther introduce a new model ensemble. We systematically evaluate these models\nat three levels of generalization: new textual item, new participant, and the\ncombination of both. We find that eye movements contain highly valuable signals\nfor this task. We further perform an error analysis which builds on prior\nempirical findings on differences between ordinary reading and information\nseeking and leverages rich textual annotations. This analysis reveals key\nproperties of textual items and participant eye movements that contribute to\nthe difficulty of the task.",
+      "upvotes": 15
+    },
+    {
+      "title": "Stealing User Prompts from Mixture of Experts",
+      "url": "https://huggingface.co/papers/2410.22884",
+      "authors": [
+        "Itay Yona",
+        "Ilia Shumailov",
+        "Jamie Hayes",
+        "Nicholas Carlini"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.22884.pdf",
+      "abstract": "Mixture-of-Experts (MoE) models improve the efficiency and scalability of\ndense language models by routing each token to a small number of experts in\neach layer. In this paper, we show how an adversary that can arrange for their\nqueries to appear in the same batch of examples as a victim's queries can\nexploit Expert-Choice-Routing to fully disclose a victim's prompt. We\nsuccessfully demonstrate the effectiveness of this attack on a two-layer\nMixtral model, exploiting the tie-handling behavior of the torch.topk CUDA\nimplementation. Our results show that we can extract the entire prompt using\nO({VM}^2) queries (with vocabulary size V and prompt length M) or 100\nqueries on average per token in the setting we consider. This is the first\nattack to exploit architectural flaws for the purpose of extracting user\nprompts, introducing a new class of LLM vulnerabilities.",
+      "upvotes": 13
+    },
+    {
+      "title": "Toxicity of the Commons: Curating Open-Source Pre-Training Data",
+      "url": "https://huggingface.co/papers/2410.22587",
+      "authors": [
+        "Pierre-Carl Langlais"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.22587.pdf",
+      "abstract": "Open-source large language models are becoming increasingly available and\npopular among researchers and practitioners. While significant progress has\nbeen made on open-weight models, open training data is a practice yet to be\nadopted by the leading open-weight models creators. At the same time, there\nresearchers are working to make language models safer. We propose a data\ncuration pipeline to reduce harmful outputs by models trained on public domain\ndata. There are unique challenges to working with public domain data, as these\nsources differ from web text in both form and content. Many sources are\nhistorical documents and are the result of Optical Character Recognition (OCR).\nConsequently, current state-of-the-art approaches to toxicity filtering are\noften infeasible or inappropriate for open data models. In this paper, we\nintroduce a new fully open-source pipeline for open-data toxicity filtering.\nOur contributions are threefold. We create a custom training dataset,\nToxicCommons, which is composed of texts which have been classified across five\ndifferent dimensions (racial/origin-based, gender/sex-based, religious,\nability-based discrimination, and violence). We use this dataset to train a\ncustom classifier, Celadon, that can be used to detect toxic content in open\ndata more efficiently at a larger scale. Finally, we describe the balanced\napproach to content filtration that optimizes safety filtering with respect to\nthe filtered data available for training.",
+      "upvotes": 8
+    },
+    {
+      "title": "SlowFast-VGen: Slow-Fast Learning for Action-Driven Long Video Generation",
+      "url": "https://huggingface.co/papers/2410.23277",
+      "authors": [
+        "Yining Hong",
+        "Beide Liu",
+        "Maxine Wu",
+        "Yuanhao Zhai",
+        "Kai-Wei Chang",
+        "Lingjie Li",
+        "Kevin Lin",
+        "Chung-Ching Lin",
+        "Jianfeng Wang",
+        "Yingnian Wu",
+        "Lijuan Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.23277.pdf",
+      "abstract": "Human beings are endowed with a complementary learning system, which bridges\nthe slow learning of general world dynamics with fast storage of episodic\nmemory from a new experience. Previous video generation models, however,\nprimarily focus on slow learning by pre-training on vast amounts of data,\noverlooking the fast learning phase crucial for episodic memory storage. This\noversight leads to inconsistencies across temporally distant frames when\ngenerating longer videos, as these frames fall beyond the model's context\nwindow. To this end, we introduce SlowFast-VGen, a novel dual-speed learning\nsystem for action-driven long video generation. Our approach incorporates a\nmasked conditional video diffusion model for the slow learning of world\ndynamics, alongside an inference-time fast learning strategy based on a\ntemporal LoRA module. Specifically, the fast learning process updates its\ntemporal LoRA parameters based on local inputs and outputs, thereby efficiently\nstoring episodic memory in its parameters. We further propose a slow-fast\nlearning loop algorithm that seamlessly integrates the inner fast learning loop\ninto the outer slow learning loop, enabling the recall of prior multi-episode\nexperiences for context-aware skill learning. To facilitate the slow learning\nof an approximate world model, we collect a large-scale dataset of 200k videos\nwith language action annotations, covering a wide range of scenarios. Extensive\nexperiments show that SlowFast-VGen outperforms baselines across various\nmetrics for action-driven video generation, achieving an FVD score of 514\ncompared to 782, and maintaining consistency in longer videos, with an average\nof 0.37 scene cuts versus 0.89. The slow-fast learning loop algorithm\nsignificantly enhances performances on long-horizon planning tasks as well.\nProject Website: https://slowfast-vgen.github.io",
+      "upvotes": 7
+    },
+    {
+      "title": "AutoMIR: Effective Zero-Shot Medical Information Retrieval without Relevance Labels",
+      "url": "https://huggingface.co/papers/2410.20050",
+      "authors": [
+        "Lei Li",
+        "Xiangxu Zhang",
+        "Xiao Zhou"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.20050.pdf",
+      "abstract": "Medical information retrieval (MIR) is essential for retrieving relevant\nmedical knowledge from diverse sources, including electronic health records,\nscientific literature, and medical databases. However, achieving effective\nzero-shot dense retrieval in the medical domain poses substantial challenges\ndue to the lack of relevance-labeled data. In this paper, we introduce a novel\napproach called Self-Learning Hypothetical Document Embeddings (SL-HyDE) to\ntackle this issue. SL-HyDE leverages large language models (LLMs) as generators\nto generate hypothetical documents based on a given query. These generated\ndocuments encapsulate key medical context, guiding a dense retriever in\nidentifying the most relevant documents. The self-learning framework\nprogressively refines both pseudo-document generation and retrieval, utilizing\nunlabeled medical corpora without requiring any relevance-labeled data.\nAdditionally, we present the Chinese Medical Information Retrieval Benchmark\n(CMIRB), a comprehensive evaluation framework grounded in real-world medical\nscenarios, encompassing five tasks and ten datasets. By benchmarking ten models\non CMIRB, we establish a rigorous standard for evaluating medical information\nretrieval systems. Experimental results demonstrate that SL-HyDE significantly\nsurpasses existing methods in retrieval accuracy while showcasing strong\ngeneralization and scalability across various LLM and retriever configurations.\nCMIRB data and evaluation code are publicly available at:\nhttps://github.com/CMIRB-benchmark/CMIRB.",
+      "upvotes": 7
+    },
+    {
+      "title": "Can Models Help Us Create Better Models? Evaluating LLMs as Data Scientists",
+      "url": "https://huggingface.co/papers/2410.23331",
+      "authors": [
+        "Michał Pietruszka",
+        "Aleksander Jędrosz",
+        "Paweł Morawiecki"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.23331.pdf",
+      "abstract": "We present a benchmark for large language models designed to tackle one of\nthe most knowledge-intensive tasks in data science: writing feature engineering\ncode, which requires domain knowledge in addition to a deep understanding of\nthe underlying problem and data structure. The model is provided with a dataset\ndescription in a prompt and asked to generate code transforming it. The\nevaluation score is derived from the improvement achieved by an XGBoost model\nfit on the modified dataset compared to the original data. By an extensive\nevaluation of state-of-the-art models and comparison to well-established\nbenchmarks, we demonstrate that the FeatEng of our proposal can cheaply and\nefficiently assess the broad capabilities of LLMs, in contrast to the existing\nmethods.",
+      "upvotes": 6
+    }
+  ]
+}

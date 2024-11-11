@@ -1,0 +1,129 @@
+{
+  "date": "2024-06-09",
+  "papers": [
+    {
+      "title": "ShareGPT4Video: Improving Video Understanding and Generation with Better Captions",
+      "url": "https://huggingface.co/papers/2406.04325",
+      "authors": [
+        "Xiaoyi Dong",
+        "Pan Zhang",
+        "Li Yuan",
+        "Yu Qiao",
+        "Feng Zhao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.04325.pdf",
+      "abstract": "We present the ShareGPT4Video series, aiming to facilitate the video\nunderstanding of large video-language models (LVLMs) and the video generation\nof text-to-video models (T2VMs) via dense and precise captions. The series\ncomprises: 1) ShareGPT4Video, 40K GPT4V annotated dense captions of videos with\nvarious lengths and sources, developed through carefully designed data\nfiltering and annotating strategy. 2) ShareCaptioner-Video, an efficient and\ncapable captioning model for arbitrary videos, with 4.8M high-quality aesthetic\nvideos annotated by it. 3) ShareGPT4Video-8B, a simple yet superb LVLM that\nreached SOTA performance on three advancing video benchmarks. To achieve this,\ntaking aside the non-scalable costly human annotators, we find using GPT4V to\ncaption video with a naive multi-frame or frame-concatenation input strategy\nleads to less detailed and sometimes temporal-confused results. We argue the\nchallenge of designing a high-quality video captioning strategy lies in three\naspects: 1) Inter-frame precise temporal change understanding. 2) Intra-frame\ndetailed content description. 3) Frame-number scalability for arbitrary-length\nvideos. To this end, we meticulously designed a differential video captioning\nstrategy, which is stable, scalable, and efficient for generating captions for\nvideos with arbitrary resolution, aspect ratios, and length. Based on it, we\nconstruct ShareGPT4Video, which contains 40K high-quality videos spanning a\nwide range of categories, and the resulting captions encompass rich world\nknowledge, object attributes, camera movements, and crucially, detailed and\nprecise temporal descriptions of events. Based on ShareGPT4Video, we further\ndevelop ShareCaptioner-Video, a superior captioner capable of efficiently\ngenerating high-quality captions for arbitrary videos...",
+      "upvotes": 71
+    },
+    {
+      "title": "BitsFusion: 1.99 bits Weight Quantization of Diffusion Model",
+      "url": "https://huggingface.co/papers/2406.04333",
+      "authors": [
+        "Yanyu Li",
+        "Anil Kag",
+        "Ju Hu",
+        "Dhritiman Sagar",
+        "Sergey Tulyakov"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.04333.pdf",
+      "abstract": "Diffusion-based image generation models have achieved great success in recent\nyears by showing the capability of synthesizing high-quality content. However,\nthese models contain a huge number of parameters, resulting in a significantly\nlarge model size. Saving and transferring them is a major bottleneck for\nvarious applications, especially those running on resource-constrained devices.\nIn this work, we develop a novel weight quantization method that quantizes the\nUNet from Stable Diffusion v1.5 to 1.99 bits, achieving a model with 7.9X\nsmaller size while exhibiting even better generation quality than the original\none. Our approach includes several novel techniques, such as assigning optimal\nbits to each layer, initializing the quantized model for better performance,\nand improving the training strategy to dramatically reduce quantization error.\nFurthermore, we extensively evaluate our quantized model across various\nbenchmark datasets and through human evaluation to demonstrate its superior\ngeneration quality.",
+      "upvotes": 36
+    },
+    {
+      "title": "Buffer of Thoughts: Thought-Augmented Reasoning with Large Language Models",
+      "url": "https://huggingface.co/papers/2406.04271",
+      "authors": [
+        "Zhaochen Yu",
+        "Wentao Zhang",
+        "Bin Cui"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.04271.pdf",
+      "abstract": "We introduce Buffer of Thoughts (BoT), a novel and versatile\nthought-augmented reasoning approach for enhancing accuracy, efficiency and\nrobustness of large language models (LLMs). Specifically, we propose\nmeta-buffer to store a series of informative high-level thoughts, namely\nthought-template, distilled from the problem-solving processes across various\ntasks. Then for each problem, we retrieve a relevant thought-template and\nadaptively instantiate it with specific reasoning structures to conduct\nefficient reasoning. To guarantee the scalability and stability, we further\npropose buffer-manager to dynamically update the meta-buffer, thus enhancing\nthe capacity of meta-buffer as more tasks are solved. We conduct extensive\nexperiments on 10 challenging reasoning-intensive tasks, and achieve\nsignificant performance improvements over previous SOTA methods: 11% on Game of\n24, 20% on Geometric Shapes and 51% on Checkmate-in-One. Further analysis\ndemonstrate the superior generalization ability and model robustness of our\nBoT, while requiring only 12% of the cost of multi-query prompting methods\n(e.g., tree/graph of thoughts) on average. Notably, we find that our\nLlama3-8B+BoT has the potential to surpass Llama3-70B model. Our project is\navailable at: https://github.com/YangLing0818/buffer-of-thought-llm",
+      "upvotes": 27
+    },
+    {
+      "title": "Step-aware Preference Optimization: Aligning Preference with Denoising Performance at Each Step",
+      "url": "https://huggingface.co/papers/2406.04314",
+      "authors": [
+        "Bohan Chen",
+        "Tiankai Hang",
+        "Liang Zheng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.04314.pdf",
+      "abstract": "Recently, Direct Preference Optimization (DPO) has extended its success from\naligning large language models (LLMs) to aligning text-to-image diffusion\nmodels with human preferences. Unlike most existing DPO methods that assume all\ndiffusion steps share a consistent preference order with the final generated\nimages, we argue that this assumption neglects step-specific denoising\nperformance and that preference labels should be tailored to each step's\ncontribution. To address this limitation, we propose Step-aware Preference\nOptimization (SPO), a novel post-training approach that independently evaluates\nand adjusts the denoising performance at each step, using a step-aware\npreference model and a step-wise resampler to ensure accurate step-aware\nsupervision. Specifically, at each denoising step, we sample a pool of images,\nfind a suitable win-lose pair, and, most importantly, randomly select a single\nimage from the pool to initialize the next denoising step. This step-wise\nresampler process ensures the next win-lose image pair comes from the same\nimage, making the win-lose comparison independent of the previous step. To\nassess the preferences at each step, we train a separate step-aware preference\nmodel that can be applied to both noisy and clean images. Our experiments with\nStable Diffusion v1.5 and SDXL demonstrate that SPO significantly outperforms\nthe latest Diffusion-DPO in aligning generated images with complex, detailed\nprompts and enhancing aesthetics, while also achieving more than 20x times\nfaster in training efficiency. Code and model:\nhttps://rockeycoss.github.io/spo.github.io/",
+      "upvotes": 26
+    },
+    {
+      "title": "SF-V: Single Forward Video Generation Model",
+      "url": "https://huggingface.co/papers/2406.04324",
+      "authors": [
+        "Yanyu Li",
+        "Yanwu Xu",
+        "Anil Kag",
+        "Dimitris Metaxas",
+        "Sergey Tulyakov"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.04324.pdf",
+      "abstract": "Diffusion-based video generation models have demonstrated remarkable success\nin obtaining high-fidelity videos through the iterative denoising process.\nHowever, these models require multiple denoising steps during sampling,\nresulting in high computational costs. In this work, we propose a novel\napproach to obtain single-step video generation models by leveraging\nadversarial training to fine-tune pre-trained video diffusion models. We show\nthat, through the adversarial training, the multi-steps video diffusion model,\ni.e., Stable Video Diffusion (SVD), can be trained to perform single forward\npass to synthesize high-quality videos, capturing both temporal and spatial\ndependencies in the video data. Extensive experiments demonstrate that our\nmethod achieves competitive generation quality of synthesized videos with\nsignificantly reduced computational overhead for the denoising process (i.e.,\naround 23times speedup compared with SVD and 6times speedup compared with\nexisting works, with even better generation quality), paving the way for\nreal-time video synthesis and editing. More visualization results are made\npublicly available at https://snap-research.github.io/SF-V.",
+      "upvotes": 23
+    },
+    {
+      "title": "VideoTetris: Towards Compositional Text-to-Video Generation",
+      "url": "https://huggingface.co/papers/2406.04277",
+      "authors": [
+        "Ye Tian",
+        "Yuan Gao",
+        "Yufan Deng",
+        "Zhaochen Yu",
+        "Xin Tao",
+        "Pengfei Wan",
+        "Bin Cui"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.04277.pdf",
+      "abstract": "Diffusion models have demonstrated great success in text-to-video (T2V)\ngeneration. However, existing methods may face challenges when handling complex\n(long) video generation scenarios that involve multiple objects or dynamic\nchanges in object numbers. To address these limitations, we propose\nVideoTetris, a novel framework that enables compositional T2V generation.\nSpecifically, we propose spatio-temporal compositional diffusion to precisely\nfollow complex textual semantics by manipulating and composing the attention\nmaps of denoising networks spatially and temporally. Moreover, we propose an\nenhanced video data preprocessing to enhance the training data regarding motion\ndynamics and prompt understanding, equipped with a new reference frame\nattention mechanism to improve the consistency of auto-regressive video\ngeneration. Extensive experiments demonstrate that our VideoTetris achieves\nimpressive qualitative and quantitative results in compositional T2V\ngeneration. Code is available at: https://github.com/YangLing0818/VideoTetris",
+      "upvotes": 22
+    },
+    {
+      "title": "AgentGym: Evolving Large Language Model-based Agents across Diverse Environments",
+      "url": "https://huggingface.co/papers/2406.04151",
+      "authors": [
+        "Dingwen Yang",
+        "Xin Guo",
+        "Songyang Gao",
+        "Lu Chen",
+        "Rui Zheng",
+        "Tao Gui",
+        "Qi Zhang",
+        "Xuanjing Huang",
+        "Zuxuan Wu",
+        "Yu-Gang Jiang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.04151.pdf",
+      "abstract": "Building generalist agents that can handle diverse tasks and evolve\nthemselves across different environments is a long-term goal in the AI\ncommunity. Large language models (LLMs) are considered a promising foundation\nto build such agents due to their generalized capabilities. Current approaches\neither have LLM-based agents imitate expert-provided trajectories step-by-step,\nrequiring human supervision, which is hard to scale and limits environmental\nexploration; or they let agents explore and learn in isolated environments,\nresulting in specialist agents with limited generalization. In this paper, we\ntake the first step towards building generally-capable LLM-based agents with\nself-evolution ability. We identify a trinity of ingredients: 1) diverse\nenvironments for agent exploration and learning, 2) a trajectory set to equip\nagents with basic capabilities and prior knowledge, and 3) an effective and\nscalable evolution method. We propose AgentGym, a new framework featuring a\nvariety of environments and tasks for broad, real-time, uni-format, and\nconcurrent agent exploration. AgentGym also includes a database with expanded\ninstructions, a benchmark suite, and high-quality trajectories across\nenvironments. Next, we propose a novel method, AgentEvol, to investigate the\npotential of agent self-evolution beyond previously seen data across tasks and\nenvironments. Experimental results show that the evolved agents can achieve\nresults comparable to SOTA models. We release the AgentGym suite, including the\nplatform, dataset, benchmark, checkpoints, and algorithm implementations. The\nAgentGym suite is available on https://github.com/WooooDyy/AgentGym.",
+      "upvotes": 17
+    },
+    {
+      "title": "pOps: Photo-Inspired Diffusion Operators",
+      "url": "https://huggingface.co/papers/2406.01300",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2406.01300.pdf",
+      "abstract": "Text-guided image generation enables the creation of visual content from\ntextual descriptions. However, certain visual concepts cannot be effectively\nconveyed through language alone. This has sparked a renewed interest in\nutilizing the CLIP image embedding space for more visually-oriented tasks\nthrough methods such as IP-Adapter. Interestingly, the CLIP image embedding\nspace has been shown to be semantically meaningful, where linear operations\nwithin this space yield semantically meaningful results. Yet, the specific\nmeaning of these operations can vary unpredictably across different images. To\nharness this potential, we introduce pOps, a framework that trains specific\nsemantic operators directly on CLIP image embeddings. Each pOps operator is\nbuilt upon a pretrained Diffusion Prior model. While the Diffusion Prior model\nwas originally trained to map between text embeddings and image embeddings, we\ndemonstrate that it can be tuned to accommodate new input conditions, resulting\nin a diffusion operator. Working directly over image embeddings not only\nimproves our ability to learn semantic operations but also allows us to\ndirectly use a textual CLIP loss as an additional supervision when needed. We\nshow that pOps can be used to learn a variety of photo-inspired operators with\ndistinct semantic meanings, highlighting the semantic diversity and potential\nof our proposed approach.",
+      "upvotes": 16
+    },
+    {
+      "title": "Open-Endedness is Essential for Artificial Superhuman Intelligence",
+      "url": "https://huggingface.co/papers/2406.04268",
+      "authors": [
+        "Michael Dennis",
+        "Jack Parker-Holder",
+        "Aditi Mavalankar",
+        "Yuge Shi",
+        "Tom Schaul",
+        "Tim Rocktaschel"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.04268.pdf",
+      "abstract": "In recent years there has been a tremendous surge in the general capabilities\nof AI systems, mainly fuelled by training foundation models on internetscale\ndata. Nevertheless, the creation of openended, ever self-improving AI remains\nelusive. In this position paper, we argue that the ingredients are now in place\nto achieve openendedness in AI systems with respect to a human observer.\nFurthermore, we claim that such open-endedness is an essential property of any\nartificial superhuman intelligence (ASI). We begin by providing a concrete\nformal definition of open-endedness through the lens of novelty and\nlearnability. We then illustrate a path towards ASI via open-ended systems\nbuilt on top of foundation models, capable of making novel, humanrelevant\ndiscoveries. We conclude by examining the safety implications of\ngenerally-capable openended AI. We expect that open-ended foundation models\nwill prove to be an increasingly fertile and safety-critical area of research\nin the near future.",
+      "upvotes": 11
+    }
+  ]
+}

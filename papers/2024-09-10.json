@@ -1,0 +1,147 @@
+{
+  "date": "2024-09-10",
+  "papers": [
+    {
+      "title": "Towards a Unified View of Preference Learning for Large Language Models: A Survey",
+      "url": "https://huggingface.co/papers/2409.02795",
+      "authors": [
+        "Zhe Yang",
+        "Liang Chen",
+        "Runxin Xu",
+        "Ce Zheng",
+        "Wen Xiao",
+        "Bowen Yu",
+        "Lei Sha",
+        "Houfeng Wang",
+        "Zhifang Sui"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.02795.pdf",
+      "abstract": "Large Language Models (LLMs) exhibit remarkably powerful capabilities. One of\nthe crucial factors to achieve success is aligning the LLM's output with human\npreferences. This alignment process often requires only a small amount of data\nto efficiently enhance the LLM's performance. While effective, research in this\narea spans multiple domains, and the methods involved are relatively complex to\nunderstand. The relationships between different methods have been\nunder-explored, limiting the development of the preference alignment. In light\nof this, we break down the existing popular alignment strategies into different\ncomponents and provide a unified framework to study the current alignment\nstrategies, thereby establishing connections among them. In this survey, we\ndecompose all the strategies in preference learning into four components:\nmodel, data, feedback, and algorithm. This unified view offers an in-depth\nunderstanding of existing alignment algorithms and also opens up possibilities\nto synergize the strengths of different strategies. Furthermore, we present\ndetailed working examples of prevalent existing algorithms to facilitate a\ncomprehensive understanding for the readers. Finally, based on our unified\nperspective, we explore the challenges and future research directions for\naligning large language models with human preferences.",
+      "upvotes": 72
+    },
+    {
+      "title": "MMEvol: Empowering Multimodal Large Language Models with Evol-Instruct",
+      "url": "https://huggingface.co/papers/2409.05840",
+      "authors": [
+        "Run Luo",
+        "Xiong Liu",
+        "Yuchuan Wu",
+        "Min Yang",
+        "Pengpeng Zeng",
+        "Lianli Gao",
+        "Heng Tao Shen",
+        "Xiaobo Xia",
+        "Fei Huang",
+        "Jingkuan Song"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.05840.pdf",
+      "abstract": "The development of Multimodal Large Language Models (MLLMs) has seen\nsignificant advancements. However, the quantity and quality of multimodal\ninstruction data have emerged as significant bottlenecks in their progress.\nManually creating multimodal instruction data is both time-consuming and\ninefficient, posing challenges in producing instructions of high complexity.\nMoreover, distilling instruction data from black-box commercial models (e.g.,\nGPT-4o, GPT-4V) often results in simplistic instruction data, which constrains\nperformance to that of these models. The challenge of curating diverse and\ncomplex instruction data remains substantial. We propose MMEvol, a novel\nmultimodal instruction data evolution framework that combines fine-grained\nperception evolution, cognitive reasoning evolution, and interaction evolution.\nThis iterative approach breaks through data quality bottlenecks to generate a\ncomplex and diverse image-text instruction dataset, thereby empowering MLLMs\nwith enhanced capabilities. Beginning with an initial set of instructions,\nSEED-163K, we utilize MMEvol to systematically broadens the diversity of\ninstruction types, integrates reasoning steps to enhance cognitive\ncapabilities, and extracts detailed information from images to improve visual\nunderstanding and robustness. To comprehensively evaluate the effectiveness of\nour data, we train LLaVA-NeXT using the evolved data and conduct experiments\nacross 13 vision-language tasks. Compared to the baseline trained with seed\ndata, our approach achieves an average accuracy improvement of 3.1 points and\nreaches state-of-the-art (SOTA) performance on 9 of these tasks.",
+      "upvotes": 45
+    },
+    {
+      "title": "OneGen: Efficient One-Pass Unified Generation and Retrieval for LLMs",
+      "url": "https://huggingface.co/papers/2409.05152",
+      "authors": [
+        "Cheng Peng",
+        "Zhiqiang Zhang",
+        "Jun Zhou"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.05152.pdf",
+      "abstract": "Despite the recent advancements in Large Language Models (LLMs), which have\nsignificantly enhanced the generative capabilities for various NLP tasks, LLMs\nstill face limitations in directly handling retrieval tasks. However, many\npractical applications demand the seamless integration of both retrieval and\ngeneration. This paper introduces a novel and efficient One-pass Generation and\nretrieval framework (OneGen), designed to improve LLMs' performance on tasks\nthat require both generation and retrieval. The proposed framework bridges the\ntraditionally separate training approaches for generation and retrieval by\nincorporating retrieval tokens generated autoregressively. This enables a\nsingle LLM to handle both tasks simultaneously in a unified forward pass. We\nconduct experiments on two distinct types of composite tasks, RAG and Entity\nLinking, to validate the pluggability, effectiveness, and efficiency of OneGen\nin training and inference. Furthermore, our results show that integrating\ngeneration and retrieval within the same context preserves the generative\ncapabilities of LLMs while improving retrieval performance. To the best of our\nknowledge, OneGen is the first to enable LLMs to conduct vector retrieval\nduring the generation.",
+      "upvotes": 29
+    },
+    {
+      "title": "MemoRAG: Moving towards Next-Gen RAG Via Memory-Inspired Knowledge Discovery",
+      "url": "https://huggingface.co/papers/2409.05591",
+      "authors": [
+        "Hongjin Qian",
+        "Kelong Mao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.05591.pdf",
+      "abstract": "Retrieval-Augmented Generation (RAG) leverages retrieval tools to access\nexternal databases, thereby enhancing the generation quality of large language\nmodels (LLMs) through optimized context. However, the existing retrieval\nmethods are constrained inherently, as they can only perform relevance matching\nbetween explicitly stated queries and well-formed knowledge, but unable to\nhandle tasks involving ambiguous information needs or unstructured knowledge.\nConsequently, existing RAG systems are primarily effective for straightforward\nquestion-answering tasks. In this work, we propose MemoRAG, a novel\nretrieval-augmented generation paradigm empowered by long-term memory. MemoRAG\nadopts a dual-system architecture. On the one hand, it employs a light\nbut long-range LLM to form the global memory of database. Once a task is\npresented, it generates draft answers, cluing the retrieval tools to locate\nuseful information within the database. On the other hand, it leverages an\nexpensive but expressive LLM, which generates the ultimate answer\nbased on the retrieved information. Building on this general framework, we\nfurther optimize MemoRAG's performance by enhancing its cluing mechanism and\nmemorization capacity. In our experiment, MemoRAG achieves superior performance\nacross a variety of evaluation tasks, including both complex ones where\nconventional RAG fails and straightforward ones where RAG is commonly applied.",
+      "upvotes": 28
+    },
+    {
+      "title": "POINTS: Improving Your Vision-language Model with Affordable Strategies",
+      "url": "https://huggingface.co/papers/2409.04828",
+      "authors": [
+        "Le Tian",
+        "Xiao Zhou",
+        "Jie Zhou"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.04828.pdf",
+      "abstract": "In recent years, vision-language models have made significant strides,\nexcelling in tasks like optical character recognition and geometric\nproblem-solving. However, several critical issues remain: 1) Proprietary models\noften lack transparency about their architectures, while open-source models\nneed more detailed ablations of their training strategies. 2) Pre-training data\nin open-source works is under-explored, with datasets added empirically, making\nthe process cumbersome. 3) Fine-tuning often focuses on adding datasets,\nleading to diminishing returns. To address these issues, we propose the\nfollowing contributions: 1) We trained a robust baseline model using the latest\nadvancements in vision-language models, introducing effective improvements and\nconducting comprehensive ablation and validation for each technique. 2)\nInspired by recent work on large language models, we filtered pre-training data\nusing perplexity, selecting the lowest perplexity data for training. This\napproach allowed us to train on a curated 1M dataset, achieving competitive\nperformance. 3) During visual instruction tuning, we used model soup on\ndifferent datasets when adding more datasets yielded marginal improvements.\nThese innovations resulted in a 9B parameter model that performs competitively\nwith state-of-the-art models. Our strategies are efficient and lightweight,\nmaking them easily adoptable by the community.",
+      "upvotes": 22
+    },
+    {
+      "title": "Paper Copilot: A Self-Evolving and Efficient LLM System for Personalized Academic Assistance",
+      "url": "https://huggingface.co/papers/2409.04593",
+      "authors": [
+        "Pengrui Han",
+        "Ge Liu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.04593.pdf",
+      "abstract": "As scientific research proliferates, researchers face the daunting task of\nnavigating and reading vast amounts of literature. Existing solutions, such as\ndocument QA, fail to provide personalized and up-to-date information\nefficiently. We present Paper Copilot, a self-evolving, efficient LLM system\ndesigned to assist researchers, based on thought-retrieval, user profile and\nhigh performance optimization. Specifically, Paper Copilot can offer\npersonalized research services, maintaining a real-time updated database.\nQuantitative evaluation demonstrates that Paper Copilot saves 69.92\\% of time\nafter efficient deployment. This paper details the design and implementation of\nPaper Copilot, highlighting its contributions to personalized academic support\nand its potential to streamline the research process.",
+      "upvotes": 22
+    },
+    {
+      "title": "Robot Utility Models: General Policies for Zero-Shot Deployment in New Environments",
+      "url": "https://huggingface.co/papers/2409.05865",
+      "authors": [
+        "Norihito Naka",
+        "Seungjae Lee",
+        "Julian Mehu",
+        "Aaron Edsinger"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.05865.pdf",
+      "abstract": "Robot models, particularly those trained with large amounts of data, have\nrecently shown a plethora of real-world manipulation and navigation\ncapabilities. Several independent efforts have shown that given sufficient\ntraining data in an environment, robot policies can generalize to demonstrated\nvariations in that environment. However, needing to finetune robot models to\nevery new environment stands in stark contrast to models in language or vision\nthat can be deployed zero-shot for open-world problems. In this work, we\npresent Robot Utility Models (RUMs), a framework for training and deploying\nzero-shot robot policies that can directly generalize to new environments\nwithout any finetuning. To create RUMs efficiently, we develop new tools to\nquickly collect data for mobile manipulation tasks, integrate such data into a\npolicy with multi-modal imitation learning, and deploy policies on-device on\nHello Robot Stretch, a cheap commodity robot, with an external mLLM verifier\nfor retrying. We train five such utility models for opening cabinet doors,\nopening drawers, picking up napkins, picking up paper bags, and reorienting\nfallen objects. Our system, on average, achieves 90% success rate in unseen,\nnovel environments interacting with unseen objects. Moreover, the utility\nmodels can also succeed in different robot and camera set-ups with no further\ndata, training, or fine-tuning. Primary among our lessons are the importance of\ntraining data over training algorithm and policy class, guidance about data\nscaling, necessity for diverse yet high-quality demonstrations, and a recipe\nfor robot introspection and retrying to improve performance on individual\nenvironments. Our code, data, models, hardware designs, as well as our\nexperiment and deployment videos are open sourced and can be found on our\nproject website: https://robotutilitymodels.com",
+      "upvotes": 14
+    },
+    {
+      "title": "Benchmarking Chinese Knowledge Rectification in Large Language Models",
+      "url": "https://huggingface.co/papers/2409.05806",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2409.05806.pdf",
+      "abstract": "While Large Language Models (LLMs) exhibit remarkable generative\ncapabilities, they are not without flaws, particularly in the form of\nhallucinations. This issue is even more pronounced when LLMs are applied to\nspecific languages and domains. For example, LLMs may generate nonsense\ninformation when handling Chinese ancient poetry, proverbs, or idioms, owing to\nthe lack of specific knowledge. To this end, this paper introduces a benchmark\nfor rectifying Chinese knowledge in LLMs via knowledge editing. Specifically,\nwe introduce a new Chinese dataset, CKnowEdit, by collecting seven type of\nknowledge from various sources, including classical texts, idioms, and content\nfrom Baidu Tieba Ruozhiba, thereby accounting for the unique polyphony,\nantithesis, and logical constructs inherent in the Chinese language. Through\nthe analysis of this dataset, we uncover the challenges faced by current LLMs\nin mastering Chinese. Furthermore, our evaluation of state-of-the-art knowledge\nediting techniques on this dataset unveil the substantial scope for advancement\nin the rectification of Chinese knowledge. Code and dataset are available at\nhttps://github.com/zjunlp/EasyEdit.",
+      "upvotes": 14
+    },
+    {
+      "title": "Open Language Data Initiative: Advancing Low-Resource Machine Translation for Karakalpak",
+      "url": "https://huggingface.co/papers/2409.04269",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2409.04269.pdf",
+      "abstract": "This study presents several contributions for the Karakalpak language: a\nFLORES+ devtest dataset translated to Karakalpak, parallel corpora for\nUzbek-Karakalpak, Russian-Karakalpak and English-Karakalpak of 100,000 pairs\neach and open-sourced fine-tuned neural models for translation across these\nlanguages. Our experiments compare different model variants and training\napproaches, demonstrating improvements over existing baselines. This work,\nconducted as part of the Open Language Data Initiative (OLDI) shared task, aims\nto advance machine translation capabilities for Karakalpak and contribute to\nexpanding linguistic diversity in NLP technologies.",
+      "upvotes": 9
+    },
+    {
+      "title": "Evaluating Multiview Object Consistency in Humans and Image Models",
+      "url": "https://huggingface.co/papers/2409.05862",
+      "authors": [
+        "Yoni Friedman",
+        "Joshua B. Tenenbaum",
+        "Alexei A. Efros"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.05862.pdf",
+      "abstract": "We introduce a benchmark to directly evaluate the alignment between human\nobservers and vision models on a 3D shape inference task. We leverage an\nexperimental design from the cognitive sciences which requires zero-shot visual\ninferences about object shape: given a set of images, participants identify\nwhich contain the same/different objects, despite considerable viewpoint\nvariation. We draw from a diverse range of images that include common objects\n(e.g., chairs) as well as abstract shapes (i.e., procedurally generated\n`nonsense' objects). After constructing over 2000 unique image sets, we\nadminister these tasks to human participants, collecting 35K trials of\nbehavioral data from over 500 participants. This includes explicit choice\nbehaviors as well as intermediate measures, such as reaction time and gaze\ndata. We then evaluate the performance of common vision models (e.g., DINOv2,\nMAE, CLIP). We find that humans outperform all models by a wide margin. Using a\nmulti-scale evaluation approach, we identify underlying similarities and\ndifferences between models and humans: while human-model performance is\ncorrelated, humans allocate more time/processing on challenging trials. All\nimages, data, and code can be accessed via our project page.",
+      "upvotes": 8
+    },
+    {
+      "title": "UniDet3D: Multi-dataset Indoor 3D Object Detection",
+      "url": "https://huggingface.co/papers/2409.04234",
+      "authors": [
+        "Anna Vorontsova"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.04234.pdf",
+      "abstract": "Growing customer demand for smart solutions in robotics and augmented reality\nhas attracted considerable attention to 3D object detection from point clouds.\nYet, existing indoor datasets taken individually are too small and\ninsufficiently diverse to train a powerful and general 3D object detection\nmodel. In the meantime, more general approaches utilizing foundation models are\nstill inferior in quality to those based on supervised training for a specific\ntask. In this work, we propose , a simple yet effective 3D object\ndetection model, which is trained on a mixture of indoor datasets and is\ncapable of working in various indoor environments. By unifying different label\nspaces,  enables learning a strong representation across multiple\ndatasets through a supervised joint training scheme. The proposed network\narchitecture is built upon a vanilla transformer encoder, making it easy to\nrun, customize and extend the prediction pipeline for practical use. Extensive\nexperiments demonstrate that  obtains significant gains over existing 3D\nobject detection methods in 6 indoor benchmarks: ScanNet (+1.1 mAP50),\nARKitScenes (+19.4 mAP25), S3DIS (+9.1 mAP50), MultiScan (+9.3 mAP50), 3RScan\n(+3.2 mAP50), and ScanNet++ (+2.7 mAP50). Code is available at\nhttps://github.com/filapro/unidet3d .",
+      "upvotes": 7
+    },
+    {
+      "title": "Insights from Benchmarking Frontier Language Models on Web App Code Generation",
+      "url": "https://huggingface.co/papers/2409.05177",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2409.05177.pdf",
+      "abstract": "This paper presents insights from evaluating 16 frontier large language\nmodels (LLMs) on the WebApp1K benchmark, a test suite designed to assess the\nability of LLMs to generate web application code. The results reveal that while\nall models possess similar underlying knowledge, their performance is\ndifferentiated by the frequency of mistakes they make. By analyzing lines of\ncode (LOC) and failure distributions, we find that writing correct code is more\ncomplex than generating incorrect code. Furthermore, prompt engineering shows\nlimited efficacy in reducing errors beyond specific cases. These findings\nsuggest that further advancements in coding LLM should emphasize on model\nreliability and mistake minimization.",
+      "upvotes": 5
+    }
+  ]
+}

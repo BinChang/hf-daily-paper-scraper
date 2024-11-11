@@ -1,0 +1,301 @@
+{
+  "date": "2024-06-17",
+  "papers": [
+    {
+      "title": "XLand-100B: A Large-Scale Multi-Task Dataset for In-Context Reinforcement Learning",
+      "url": "https://huggingface.co/papers/2406.08973",
+      "authors": [
+        "Viacheslav Sinii",
+        "Sergey Kolesnikov"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.08973.pdf",
+      "abstract": "Following the success of the in-context learning paradigm in large-scale\nlanguage and computer vision models, the recently emerging field of in-context\nreinforcement learning is experiencing a rapid growth. However, its development\nhas been held back by the lack of challenging benchmarks, as all the\nexperiments have been carried out in simple environments and on small-scale\ndatasets. We present XLand-100B, a large-scale dataset for in-context\nreinforcement learning based on the XLand-MiniGrid environment, as a first step\nto alleviate this problem. It contains complete learning histories for nearly\n30,000 different tasks, covering 100B transitions and 2.5B episodes. It\ntook 50,000 GPU hours to collect the dataset, which is beyond the reach of\nmost academic labs. Along with the dataset, we provide the utilities to\nreproduce or expand it even further. With this substantial effort, we aim to\ndemocratize research in the rapidly growing field of in-context reinforcement\nlearning and provide a solid foundation for further scaling. The code is\nopen-source and available under Apache 2.0 licence at\nhttps://github.com/dunno-lab/xland-minigrid-datasets.",
+      "upvotes": 85
+    },
+    {
+      "title": "Make It Count: Text-to-Image Generation with an Accurate Number of Objects",
+      "url": "https://huggingface.co/papers/2406.10210",
+      "authors": [
+        "Eran Hirsch"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.10210.pdf",
+      "abstract": "Despite the unprecedented success of text-to-image diffusion models,\ncontrolling the number of depicted objects using text is surprisingly hard.\nThis is important for various applications from technical documents, to\nchildren's books to illustrating cooking recipes. Generating object-correct\ncounts is fundamentally challenging because the generative model needs to keep\na sense of separate identity for every instance of the object, even if several\nobjects look identical or overlap, and then carry out a global computation\nimplicitly during generation. It is still unknown if such representations\nexist. To address count-correct generation, we first identify features within\nthe diffusion model that can carry the object identity information. We then use\nthem to separate and count instances of objects during the denoising process\nand detect over-generation and under-generation. We fix the latter by training\na model that predicts both the shape and location of a missing object, based on\nthe layout of existing ones, and show how it can be used to guide denoising\nwith correct object count. Our approach, CountGen, does not depend on external\nsource to determine object layout, but rather uses the prior from the diffusion\nmodel itself, creating prompt-dependent and seed-dependent layouts. Evaluated\non two benchmark datasets, we find that CountGen strongly outperforms the\ncount-accuracy of existing baselines.",
+      "upvotes": 76
+    },
+    {
+      "title": "ChartMimic: Evaluating LMM's Cross-Modal Reasoning Capability via Chart-to-Code Generation",
+      "url": "https://huggingface.co/papers/2406.09961",
+      "authors": [
+        "Yaxin Liu",
+        "Bo Shui",
+        "Mohan Jing",
+        "Linran Xu",
+        "Xiaomei Nie"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.09961.pdf",
+      "abstract": "We introduce a new benchmark, ChartMimic, aimed at assessing the\nvisually-grounded code generation capabilities of large multimodal models\n(LMMs). ChartMimic utilizes information-intensive visual charts and textual\ninstructions as inputs, requiring LMMs to generate the corresponding code for\nchart rendering. ChartMimic includes 1,000 human-curated (figure, instruction,\ncode) triplets, which represent the authentic chart use cases found in\nscientific papers across various domains(e.g., Physics, Computer Science,\nEconomics, etc). These charts span 18 regular types and 4 advanced types,\ndiversifying into 191 subcategories. Furthermore, we propose multi-level\nevaluation metrics to provide an automatic and thorough assessment of the\noutput code and the rendered charts. Unlike existing code generation\nbenchmarks, ChartMimic places emphasis on evaluating LMMs' capacity to\nharmonize a blend of cognitive capabilities, encompassing visual understanding,\ncode generation, and cross-modal reasoning. The evaluation of 3 proprietary\nmodels and 11 open-weight models highlights the substantial challenges posed by\nChartMimic. Even the advanced GPT-4V, Claude-3-opus only achieve an average\nscore of 73.2 and 53.7, respectively, indicating significant room for\nimprovement. We anticipate that ChartMimic will inspire the development of\nLMMs, advancing the pursuit of artificial general intelligence.",
+      "upvotes": 54
+    },
+    {
+      "title": "Needle In A Multimodal Haystack",
+      "url": "https://huggingface.co/papers/2406.07230",
+      "authors": [
+        "Shuibo Zhang",
+        "Shuo Liu",
+        "Mengkang Hu",
+        "Zhe Chen",
+        "Yu Qiao",
+        "Jifeng Dai"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.07230.pdf",
+      "abstract": "With the rapid advancement of multimodal large language models (MLLMs), their\nevaluation has become increasingly comprehensive. However, understanding long\nmultimodal content, as a foundational ability for real-world applications,\nremains underexplored. In this work, we present Needle In A Multimodal Haystack\n(MM-NIAH), the first benchmark specifically designed to systematically evaluate\nthe capability of existing MLLMs to comprehend long multimodal documents. Our\nbenchmark includes three types of evaluation tasks: multimodal retrieval,\ncounting, and reasoning. In each task, the model is required to answer the\nquestions according to different key information scattered throughout the given\nmultimodal document. Evaluating the leading MLLMs on MM-NIAH, we observe that\nexisting models still have significant room for improvement on these tasks,\nespecially on vision-centric evaluation. We hope this work can provide a\nplatform for further research on long multimodal document comprehension and\ncontribute to the advancement of MLLMs. Code and benchmark are released at\nhttps://github.com/OpenGVLab/MM-NIAH.",
+      "upvotes": 52
+    },
+    {
+      "title": "BABILong: Testing the Limits of LLMs with Long Context Reasoning-in-a-Haystack",
+      "url": "https://huggingface.co/papers/2406.10149",
+      "authors": [
+        "Dmitry Sorokin"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.10149.pdf",
+      "abstract": "In recent years, the input context sizes of large language models (LLMs) have\nincreased dramatically. However, existing evaluation methods have not kept\npace, failing to comprehensively assess the efficiency of models in handling\nlong contexts. To bridge this gap, we introduce the BABILong benchmark,\ndesigned to test language models' ability to reason across facts distributed in\nextremely long documents. BABILong includes a diverse set of 20 reasoning\ntasks, including fact chaining, simple induction, deduction, counting, and\nhandling lists/sets. These tasks are challenging on their own, and even more\ndemanding when the required facts are scattered across long natural text. Our\nevaluations show that popular LLMs effectively utilize only 10-20\\% of the\ncontext and their performance declines sharply with increased reasoning\ncomplexity. Among alternatives to in-context reasoning, Retrieval-Augmented\nGeneration methods achieve a modest 60\\% accuracy on single-fact question\nanswering, independent of context length. Among context extension methods, the\nhighest performance is demonstrated by recurrent memory transformers, enabling\nthe processing of lengths up to 11 million tokens. The BABILong benchmark is\nextendable to any length to support the evaluation of new upcoming models with\nincreased capabilities, and we provide splits up to 1 million token lengths.",
+      "upvotes": 48
+    },
+    {
+      "title": "SEACrowd: A Multilingual Multimodal Data Hub and Benchmark Suite for Southeast Asian Languages",
+      "url": "https://huggingface.co/papers/2406.10118",
+      "authors": [
+        "Rahmad Mahendra",
+        "Salsabil Maulana Akbar",
+        "Jennifer Santoso",
+        "Elyanah Aco",
+        "Jonibek Mansurov",
+        "Joel Ruben Antony Moniz",
+        "Frederikus Hudi",
+        "Railey Montalan",
+        "Ryan Ignatius",
+        "William Nixon",
+        "James Jaya",
+        "Ryandito Diandaru",
+        "Yuze Gao",
+        "Patrick Amadeus"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.10118.pdf",
+      "abstract": "Southeast Asia (SEA) is a region rich in linguistic diversity and cultural\nvariety, with over 1,300 indigenous languages and a population of 671 million\npeople. However, prevailing AI models suffer from a significant lack of\nrepresentation of texts, images, and audio datasets from SEA, compromising the\nquality of AI models for SEA languages. Evaluating models for SEA languages is\nchallenging due to the scarcity of high-quality datasets, compounded by the\ndominance of English training data, raising concerns about potential cultural\nmisrepresentation. To address these challenges, we introduce SEACrowd, a\ncollaborative initiative that consolidates a comprehensive resource hub that\nfills the resource gap by providing standardized corpora in nearly 1,000 SEA\nlanguages across three modalities. Through our SEACrowd benchmarks, we assess\nthe quality of AI models on 36 indigenous languages across 13 tasks, offering\nvaluable insights into the current AI landscape in SEA. Furthermore, we propose\nstrategies to facilitate greater AI advancements, maximizing potential utility\nand resource equity for the future of AI in SEA.",
+      "upvotes": 30
+    },
+    {
+      "title": "OmniCorpus: A Unified Multimodal Corpus of 10 Billion-Level Images Interleaved with Text",
+      "url": "https://huggingface.co/papers/2406.08418",
+      "authors": [
+        "Zhe Chen",
+        "Wenhai Wang",
+        "Shenglong Ye",
+        "Zhenjiang Jin",
+        "Guanzhou Chen",
+        "Yinan He",
+        "Zhangwei Gao",
+        "Erfei Cui",
+        "Hao Tian",
+        "Jiasheng Zhou",
+        "Chao Xu",
+        "Bin Wang",
+        "Xingjian Wei",
+        "Wei Li",
+        "Wenjian Zhang",
+        "Bo Zhang",
+        "Pinlong Cai",
+        "Licheng Wen",
+        "Xiangchao Yan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.08418.pdf",
+      "abstract": "Image-text interleaved data, consisting of multiple images and texts arranged\nin a natural document format, aligns with the presentation paradigm of internet\ndata and closely resembles human reading habits. Recent studies have shown that\nsuch data aids multimodal in-context learning and maintains the capabilities of\nlarge language models during multimodal fine-tuning. However, the limited scale\nand diversity of current image-text interleaved data restrict the development\nof multimodal large language models. In this paper, we introduce OmniCorpus, a\n10 billion-scale image-text interleaved dataset. Using an efficient data\nengine, we filter and extract large-scale high-quality documents, which contain\n8.6 billion images and 1,696 billion text tokens. Compared to counterparts\n(e.g., MMC4, OBELICS), our dataset 1) has 15 times larger scales while\nmaintaining good data quality; 2) features more diverse sources, including both\nEnglish and non-English websites as well as video-centric websites; 3) is more\nflexible, easily degradable from an image-text interleaved format to pure text\ncorpus and image-text pairs. Through comprehensive analysis and experiments, we\nvalidate the quality, usability, and effectiveness of the proposed dataset. We\nhope this could provide a solid data foundation for future multimodal model\nresearch. Code and data are released at\nhttps://github.com/OpenGVLab/OmniCorpus.",
+      "upvotes": 28
+    },
+    {
+      "title": "GUI Odyssey: A Comprehensive Dataset for Cross-App GUI Navigation on Mobile Devices",
+      "url": "https://huggingface.co/papers/2406.08451",
+      "authors": [
+        "Botong Chen",
+        "Yu Qiao",
+        "Ping Luo"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.08451.pdf",
+      "abstract": "Smartphone users often navigate across multiple applications (apps) to\ncomplete tasks such as sharing content between social media platforms.\nAutonomous Graphical User Interface (GUI) navigation agents can enhance user\nexperience in communication, entertainment, and productivity by streamlining\nworkflows and reducing manual intervention. However, prior GUI agents often\ntrained with datasets comprising simple tasks that can be completed within a\nsingle app, leading to poor performance in cross-app navigation. To address\nthis problem, we introduce GUI Odyssey, a comprehensive dataset for training\nand evaluating cross-app navigation agents. GUI Odyssey consists of 7,735\nepisodes from 6 mobile devices, spanning 6 types of cross-app tasks, 201 apps,\nand 1.4K app combos. Leveraging GUI Odyssey, we developed OdysseyAgent, a\nmultimodal cross-app navigation agent by fine-tuning the Qwen-VL model with a\nhistory resampling module. Extensive experiments demonstrate OdysseyAgent's\nsuperior accuracy compared to existing models. For instance, OdysseyAgent\nsurpasses fine-tuned Qwen-VL and zero-shot GPT-4V by 1.44\\% and 55.49\\%\nin-domain accuracy, and 2.29\\% and 48.14\\% out-of-domain accuracy on average.\nThe dataset and code will be released in\nhttps://github.com/OpenGVLab/GUI-Odyssey.",
+      "upvotes": 23
+    },
+    {
+      "title": "Glyph-ByT5-v2: A Strong Aesthetic Baseline for Accurate Multilingual Visual Text Rendering",
+      "url": "https://huggingface.co/papers/2406.10208",
+      "authors": [
+        "Zeyu Liu",
+        "Yiming Zhao",
+        "Ji Li",
+        "Yuhui Yuan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.10208.pdf",
+      "abstract": "Recently, Glyph-ByT5 has achieved highly accurate visual text rendering\nperformance in graphic design images. However, it still focuses solely on\nEnglish and performs relatively poorly in terms of visual appeal. In this work,\nwe address these two fundamental limitations by presenting Glyph-ByT5-v2 and\nGlyph-SDXL-v2, which not only support accurate visual text rendering for 10\ndifferent languages but also achieve much better aesthetic quality. To achieve\nthis, we make the following contributions: (i) creating a high-quality\nmultilingual glyph-text and graphic design dataset consisting of more than 1\nmillion glyph-text pairs and 10 million graphic design image-text pairs\ncovering nine other languages, (ii) building a multilingual visual paragraph\nbenchmark consisting of 1,000 prompts, with 100 for each language, to assess\nmultilingual visual spelling accuracy, and (iii) leveraging the latest\nstep-aware preference learning approach to enhance the visual aesthetic\nquality. With the combination of these techniques, we deliver a powerful\ncustomized multilingual text encoder, Glyph-ByT5-v2, and a strong aesthetic\ngraphic generation model, Glyph-SDXL-v2, that can support accurate spelling in\n10 different languages. We perceive our work as a significant advancement,\nconsidering that the latest DALL-E3 and Ideogram 1.0 still struggle with the\nmultilingual visual text rendering task.",
+      "upvotes": 21
+    },
+    {
+      "title": "GEB-1.3B: Open Lightweight Large Language Model",
+      "url": "https://huggingface.co/papers/2406.09900",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2406.09900.pdf",
+      "abstract": "Recently developed large language models (LLMs) such as ChatGPT, Claude, and\nLlama have demonstrated impressive abilities, and even surpass human-level\nperformance in several tasks. Despite their success, the resource-intensive\ndemands of these models, requiring significant computational power for both\ntraining and inference, limit their deployment to high-performance servers.\nAdditionally, the extensive calculation requirements of the models often lead\nto increased latency in response times. With the increasing need for LLMs to\noperate efficiently on CPUs, research about lightweight models that are\noptimized for CPU inference has emerged. In this work, we introduce GEB-1.3B, a\nlightweight LLM trained on 550 billion tokens in both Chinese and English\nlanguages. We employ novel training techniques, including ROPE,\nGroup-Query-Attention, and FlashAttention-2, to accelerate training while\nmaintaining model performance. Additionally, we fine-tune the model using 10\nmillion samples of instruction data to enhance alignment. GEB-1.3B exhibits\noutstanding performance on general benchmarks such as MMLU, C-Eval, and CMMLU,\noutperforming comparative models such as MindLLM-1.3B and TinyLLaMA-1.1B.\nNotably, the FP32 version of GEB-1.3B achieves commendable inference times on\nCPUs, with ongoing efforts to further enhance speed through advanced\nquantization techniques. The release of GEB-1.3B as an open-source model marks\na significant contribution to the development of lightweight LLMs, promising to\nfoster further research and innovation in the field.",
+      "upvotes": 20
+    },
+    {
+      "title": "Training-free Camera Control for Video Generation",
+      "url": "https://huggingface.co/papers/2406.10126",
+      "authors": [
+        "Yan Zeng",
+        "Zhibo Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.10126.pdf",
+      "abstract": "We propose a training-free and robust solution to offer camera movement\ncontrol for off-the-shelf video diffusion models. Unlike previous work, our\nmethod does not require any supervised finetuning on camera-annotated datasets\nor self-supervised training via data augmentation. Instead, it can be plugged\nand played with most pretrained video diffusion models and generate camera\ncontrollable videos with a single image or text prompt as input. The\ninspiration of our work comes from the layout prior that intermediate latents\nhold towards generated results, thus rearranging noisy pixels in them will make\noutput content reallocated as well. As camera move could also be seen as a kind\nof pixel rearrangement caused by perspective change, videos could be\nreorganized following specific camera motion if their noisy latents change\naccordingly. Established on this, we propose our method CamTrol, which enables\nrobust camera control for video diffusion models. It is achieved by a two-stage\nprocess. First, we model image layout rearrangement through explicit camera\nmovement in 3D point cloud space. Second, we generate videos with camera motion\nusing layout prior of noisy latents formed by a series of rearranged images.\nExtensive experiments have demonstrated the robustness our method holds in\ncontrolling camera motion of generated videos. Furthermore, we show that our\nmethod can produce impressive results in generating 3D rotation videos with\ndynamic content. Project page at https://lifedecoder.github.io/CamTrol/.",
+      "upvotes": 12
+    },
+    {
+      "title": "VideoGUI: A Benchmark for GUI Automation from Instructional Videos",
+      "url": "https://huggingface.co/papers/2406.10227",
+      "authors": [
+        "Qinchen WU",
+        "Mingyi Yan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.10227.pdf",
+      "abstract": "Graphical User Interface (GUI) automation holds significant promise for\nenhancing human productivity by assisting with computer tasks. Existing task\nformulations primarily focus on simple tasks that can be specified by a single,\nlanguage-only instruction, such as \"Insert a new slide.\" In this work, we\nintroduce VideoGUI, a novel multi-modal benchmark designed to evaluate GUI\nassistants on visual-centric GUI tasks. Sourced from high-quality web\ninstructional videos, our benchmark focuses on tasks involving professional and\nnovel software (e.g., Adobe Photoshop or Stable Diffusion WebUI) and complex\nactivities (e.g., video editing). VideoGUI evaluates GUI assistants through a\nhierarchical process, allowing for identification of the specific levels at\nwhich they may fail: (i) high-level planning: reconstruct procedural subtasks\nfrom visual conditions without language descriptions; (ii) middle-level\nplanning: generate sequences of precise action narrations based on visual state\n(i.e., screenshot) and goals; (iii) atomic action execution: perform specific\nactions such as accurately clicking designated elements. For each level, we\ndesign evaluation metrics across individual dimensions to provide clear\nsignals, such as individual performance in clicking, dragging, typing, and\nscrolling for atomic action execution. Our evaluation on VideoGUI reveals that\neven the SoTA large multimodal model GPT4o performs poorly on visual-centric\nGUI tasks, especially for high-level planning.",
+      "upvotes": 9
+    },
+    {
+      "title": "Designing a Dashboard for Transparency and Control of Conversational AI",
+      "url": "https://huggingface.co/papers/2406.07882",
+      "authors": [
+        "Yida Chen",
+        "Aoyu Wu",
+        "Trevor DePodesta",
+        "Catherine Yeh",
+        "Kenneth Li",
+        "Nicholas Castillo Marin",
+        "Oam Patel",
+        "Jan Riecke",
+        "Shivam Raval",
+        "Olivia Seow",
+        "Martin Wattenberg",
+        "Fernanda Viégas"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.07882.pdf",
+      "abstract": "Conversational LLMs function as black box systems, leaving users guessing\nabout why they see the output they do. This lack of transparency is potentially\nproblematic, especially given concerns around bias and truthfulness. To address\nthis issue, we present an end-to-end prototype-connecting interpretability\ntechniques with user experience design-that seeks to make chatbots more\ntransparent. We begin by showing evidence that a prominent open-source LLM has\na \"user model\": examining the internal state of the system, we can extract data\nrelated to a user's age, gender, educational level, and socioeconomic status.\nNext, we describe the design of a dashboard that accompanies the chatbot\ninterface, displaying this user model in real time. The dashboard can also be\nused to control the user model and the system's behavior. Finally, we discuss a\nstudy in which users conversed with the instrumented system. Our results\nsuggest that users appreciate seeing internal states, which helped them expose\nbiased behavior and increased their sense of control. Participants also made\nvaluable suggestions that point to future directions for both design and\nmachine learning research. The project page and video demo of our TalkTuner\nsystem are available at https://bit.ly/talktuner-project-page",
+      "upvotes": 9
+    },
+    {
+      "title": "Be like a Goldfish, Don't Memorize! Mitigating Memorization in Generative LLMs",
+      "url": "https://huggingface.co/papers/2406.10209",
+      "authors": [
+        "Yuxin Wen",
+        "John Kirchenbauer",
+        "Hamid Kazemi",
+        "Prajwal Singhania",
+        "Siddharth Singh",
+        "Gowthami Somepalli",
+        "Jonas Geiping",
+        "Abhinav Bhatele",
+        "Tom Goldstein"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.10209.pdf",
+      "abstract": "Large language models can memorize and repeat their training data, causing\nprivacy and copyright risks. To mitigate memorization, we introduce a subtle\nmodification to the next-token training objective that we call the goldfish\nloss. During training, a randomly sampled subset of tokens are excluded from\nthe loss computation. These dropped tokens are not memorized by the model,\nwhich prevents verbatim reproduction of a complete chain of tokens from the\ntraining set. We run extensive experiments training billion-scale Llama-2\nmodels, both pre-trained and trained from scratch, and demonstrate significant\nreductions in extractable memorization with little to no impact on downstream\nbenchmarks.",
+      "upvotes": 8
+    },
+    {
+      "title": "Vivid-ZOO: Multi-View Video Generation with Diffusion Model",
+      "url": "https://huggingface.co/papers/2406.08659",
+      "authors": [
+        "Cheng Zheng",
+        "Wenxuan Zhu",
+        "Jinjie Mai",
+        "Biao Zhang",
+        "Peter Wonka",
+        "Bernard Ghanem"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.08659.pdf",
+      "abstract": "While diffusion models have shown impressive performance in 2D image/video\ngeneration, diffusion-based Text-to-Multi-view-Video (T2MVid) generation\nremains underexplored. The new challenges posed by T2MVid generation lie in the\nlack of massive captioned multi-view videos and the complexity of modeling such\nmulti-dimensional distribution. To this end, we propose a novel diffusion-based\npipeline that generates high-quality multi-view videos centered around a\ndynamic 3D object from text. Specifically, we factor the T2MVid problem into\nviewpoint-space and time components. Such factorization allows us to combine\nand reuse layers of advanced pre-trained multi-view image and 2D video\ndiffusion models to ensure multi-view consistency as well as temporal coherence\nfor the generated multi-view videos, largely reducing the training cost. We\nfurther introduce alignment modules to align the latent spaces of layers from\nthe pre-trained multi-view and the 2D video diffusion models, addressing the\nreused layers' incompatibility that arises from the domain gap between 2D and\nmulti-view data. In support of this and future research, we further contribute\na captioned multi-view video dataset. Experimental results demonstrate that our\nmethod generates high-quality multi-view videos, exhibiting vivid motions,\ntemporal coherence, and multi-view consistency, given a variety of text\nprompts.",
+      "upvotes": 8
+    },
+    {
+      "title": "Rethinking Human Evaluation Protocol for Text-to-Video Models: Enhancing Reliability,Reproducibility, and Practicality",
+      "url": "https://huggingface.co/papers/2406.08845",
+      "authors": [
+        "Tianle Zhang",
+        "Langtian Ma",
+        "Yuchen Yan",
+        "Yuchen Zhang",
+        "Kai Wang",
+        "Yue Yang",
+        "Ziyao Guo",
+        "Wenqi Shao",
+        "Yang You",
+        "Yu Qiao",
+        "Ping Luo"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.08845.pdf",
+      "abstract": "Recent text-to-video (T2V) technology advancements, as demonstrated by models\nsuch as Gen2, Pika, and Sora, have significantly broadened its applicability\nand popularity. Despite these strides, evaluating these models poses\nsubstantial challenges. Primarily, due to the limitations inherent in automatic\nmetrics, manual evaluation is often considered a superior method for assessing\nT2V generation. However, existing manual evaluation protocols face\nreproducibility, reliability, and practicality issues. To address these\nchallenges, this paper introduces the Text-to-Video Human Evaluation (T2VHE)\nprotocol, a comprehensive and standardized protocol for T2V models. The T2VHE\nprotocol includes well-defined metrics, thorough annotator training, and an\neffective dynamic evaluation module. Experimental results demonstrate that this\nprotocol not only ensures high-quality annotations but can also reduce\nevaluation costs by nearly 50%. We will open-source the entire setup of the\nT2VHE protocol, including the complete protocol workflow, the dynamic\nevaluation component details, and the annotation interface code. This will help\ncommunities establish more sophisticated human assessment protocols.",
+      "upvotes": 8
+    },
+    {
+      "title": "RVT-2: Learning Precise Manipulation from Few Demonstrations",
+      "url": "https://huggingface.co/papers/2406.08545",
+      "authors": [
+        "Valts Blukis",
+        "Yijie Guo",
+        "Yu-Wei Chao",
+        "Dieter Fox"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.08545.pdf",
+      "abstract": "In this work, we study how to build a robotic system that can solve multiple\n3D manipulation tasks given language instructions. To be useful in industrial\nand household domains, such a system should be capable of learning new tasks\nwith few demonstrations and solving them precisely. Prior works, like PerAct\nand RVT, have studied this problem, however, they often struggle with tasks\nrequiring high precision. We study how to make them more effective, precise,\nand fast. Using a combination of architectural and system-level improvements,\nwe propose RVT-2, a multitask 3D manipulation model that is 6X faster in\ntraining and 2X faster in inference than its predecessor RVT. RVT-2 achieves a\nnew state-of-the-art on RLBench, improving the success rate from 65% to 82%.\nRVT-2 is also effective in the real world, where it can learn tasks requiring\nhigh precision, like picking up and inserting plugs, with just 10\ndemonstrations. Visual results, code, and trained model are provided at:\nhttps://robotic-view-transformer-2.github.io/.",
+      "upvotes": 7
+    },
+    {
+      "title": "AV-GS: Learning Material and Geometry Aware Priors for Novel View Acoustic Synthesis",
+      "url": "https://huggingface.co/papers/2406.08920",
+      "authors": [
+        "Swapnil Bhosale",
+        "Diptesh Kanojia",
+        "Jiankang Deng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.08920.pdf",
+      "abstract": "Novel view acoustic synthesis (NVAS) aims to render binaural audio at any\ntarget viewpoint, given a mono audio emitted by a sound source at a 3D scene.\nExisting methods have proposed NeRF-based implicit models to exploit visual\ncues as a condition for synthesizing binaural audio. However, in addition to\nlow efficiency originating from heavy NeRF rendering, these methods all have a\nlimited ability of characterizing the entire scene environment such as room\ngeometry, material properties, and the spatial relation between the listener\nand sound source. To address these issues, we propose a novel Audio-Visual\nGaussian Splatting (AV-GS) model. To obtain a material-aware and geometry-aware\ncondition for audio synthesis, we learn an explicit point-based scene\nrepresentation with an audio-guidance parameter on locally initialized Gaussian\npoints, taking into account the space relation from the listener and sound\nsource. To make the visual scene model audio adaptive, we propose a point\ndensification and pruning strategy to optimally distribute the Gaussian points,\nwith the per-point contribution in sound propagation (e.g., more points needed\nfor texture-less wall surfaces as they affect sound path diversion). Extensive\nexperiments validate the superiority of our AV-GS over existing alternatives on\nthe real-world RWAS and simulation-based SoundSpaces datasets.",
+      "upvotes": 7
+    },
+    {
+      "title": "GaussianSR: 3D Gaussian Super-Resolution with 2D Diffusion Priors",
+      "url": "https://huggingface.co/papers/2406.10111",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2406.10111.pdf",
+      "abstract": "Achieving high-resolution novel view synthesis (HRNVS) from low-resolution\ninput views is a challenging task due to the lack of high-resolution data.\nPrevious methods optimize high-resolution Neural Radiance Field (NeRF) from\nlow-resolution input views but suffer from slow rendering speed. In this work,\nwe base our method on 3D Gaussian Splatting (3DGS) due to its capability of\nproducing high-quality images at a faster rendering speed. To alleviate the\nshortage of data for higher-resolution synthesis, we propose to leverage\noff-the-shelf 2D diffusion priors by distilling the 2D knowledge into 3D with\nScore Distillation Sampling (SDS). Nevertheless, applying SDS directly to\nGaussian-based 3D super-resolution leads to undesirable and redundant 3D\nGaussian primitives, due to the randomness brought by generative priors. To\nmitigate this issue, we introduce two simple yet effective techniques to reduce\nstochastic disturbances introduced by SDS. Specifically, we 1) shrink the range\nof diffusion timestep in SDS with an annealing strategy; 2) randomly discard\nredundant Gaussian primitives during densification. Extensive experiments have\ndemonstrated that our proposed GaussainSR can attain high-quality results for\nHRNVS with only low-resolution inputs on both synthetic and real-world\ndatasets. Project page: https://chchnii.github.io/GaussianSR/",
+      "upvotes": 6
+    },
+    {
+      "title": "MaskLID: Code-Switching Language Identification through Iterative Masking",
+      "url": "https://huggingface.co/papers/2406.06263",
+      "authors": [
+        "François Yvon",
+        "Hinrich Schütze"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.06263.pdf",
+      "abstract": "We present MaskLID, a simple, yet effective, code-switching (CS) language\nidentification (LID) method. MaskLID does not require any training and is\ndesigned to complement current high-performance sentence-level LIDs.\nSentence-level LIDs are classifiers trained on monolingual texts to provide\nsingle labels, typically using a softmax layer to turn scores into\nprobabilities. However, in cases where a sentence is composed in both L1 and L2\nlanguages, the LID classifier often only returns the dominant label L1. To\naddress this limitation, MaskLID employs a strategy to mask text features\nassociated with L1, allowing the LID to classify the text as L2 in the next\nround. This method uses the LID itself to identify the features that require\nmasking and does not rely on any external resource. In this work, we explore\nthe use of MaskLID for two open-source LIDs (GlotLID and OpenLID), that are\nboth based on the FastText architecture. Code and demo are available at\nhttps://github.com/cisnlp/MaskLID.",
+      "upvotes": 5
+    },
+    {
+      "title": "Decoding the Diversity: A Review of the Indic AI Research Landscape",
+      "url": "https://huggingface.co/papers/2406.09559",
+      "authors": [
+        "Vinija Jain",
+        "Sreyoshi Bhaduri",
+        "Tamoghna Roy"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.09559.pdf",
+      "abstract": "This review paper provides a comprehensive overview of large language model\n(LLM) research directions within Indic languages. Indic languages are those\nspoken in the Indian subcontinent, including India, Pakistan, Bangladesh, Sri\nLanka, Nepal, and Bhutan, among others. These languages have a rich cultural\nand linguistic heritage and are spoken by over 1.5 billion people worldwide.\nWith the tremendous market potential and growing demand for natural language\nprocessing (NLP) based applications in diverse languages, generative\napplications for Indic languages pose unique challenges and opportunities for\nresearch. Our paper deep dives into the recent advancements in Indic generative\nmodeling, contributing with a taxonomy of research directions, tabulating 84\nrecent publications. Research directions surveyed in this paper include LLM\ndevelopment, fine-tuning existing LLMs, development of corpora, benchmarking\nand evaluation, as well as publications around specific techniques, tools, and\napplications. We found that researchers across the publications emphasize the\nchallenges associated with limited data availability, lack of standardization,\nand the peculiar linguistic complexities of Indic languages. This work aims to\nserve as a valuable resource for researchers and practitioners working in the\nfield of NLP, particularly those focused on Indic languages, and contributes to\nthe development of more accurate and efficient LLM applications for these\nlanguages.",
+      "upvotes": 5
+    }
+  ]
+}

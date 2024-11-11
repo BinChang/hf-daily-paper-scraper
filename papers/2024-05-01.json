@@ -1,0 +1,165 @@
+{
+  "date": "2024-05-01",
+  "papers": [
+    {
+      "title": "Octopus v4: Graph of language models",
+      "url": "https://huggingface.co/papers/2404.19296",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2404.19296.pdf",
+      "abstract": "Language models have been effective in a wide range of applications, yet the\nmost sophisticated models are often proprietary. For example, GPT-4 by OpenAI\nand various models by Anthropic are expensive and consume substantial energy.\nIn contrast, the open-source community has produced competitive models, like\nLlama3. Furthermore, niche-specific smaller language models, such as those\ntailored for legal, medical or financial tasks, have outperformed their\nproprietary counterparts. This paper introduces a novel approach that employs\nfunctional tokens to integrate multiple open-source models,\neach optimized for particular tasks. Our newly developed Octopus v4 model\nleverages functional tokens to intelligently direct user queries to\nthe most appropriate vertical model and reformat the query to achieve the best\nperformance. Octopus v4, an evolution of the Octopus v1, v2, and v3 models,\nexcels in selection and parameter understanding and reformatting. Additionally,\nwe explore the use of graph as a versatile data structure that effectively\ncoordinates multiple open-source models by harnessing the capabilities of the\nOctopus model and functional tokens. Use our open-sourced GitHub\n(https://www.nexa4ai.com/) to try Octopus v4 models\n(https://huggingface.co/NexaAIDev/Octopus-v4), and contrite to a larger\ngraph of language models. By activating models less than 10B parameters, we\nachieved SOTA MMLU score of 74.8 among the same level models.",
+      "upvotes": 117
+    },
+    {
+      "title": "KAN: Kolmogorov-Arnold Networks",
+      "url": "https://huggingface.co/papers/2404.19756",
+      "authors": [
+        "Yixuan Wang",
+        "Sachin Vaidya",
+        "James Halverson",
+        "Marin Soljačić",
+        "Thomas Y. Hou",
+        "Max Tegmark"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.19756.pdf",
+      "abstract": "Inspired by the Kolmogorov-Arnold representation theorem, we propose\nKolmogorov-Arnold Networks (KANs) as promising alternatives to Multi-Layer\nPerceptrons (MLPs). While MLPs have fixed activation functions on nodes\n(\"neurons\"), KANs have learnable activation functions on edges (\"weights\").\nKANs have no linear weights at all -- every weight parameter is replaced by a\nunivariate function parametrized as a spline. We show that this seemingly\nsimple change makes KANs outperform MLPs in terms of accuracy and\ninterpretability. For accuracy, much smaller KANs can achieve comparable or\nbetter accuracy than much larger MLPs in data fitting and PDE solving.\nTheoretically and empirically, KANs possess faster neural scaling laws than\nMLPs. For interpretability, KANs can be intuitively visualized and can easily\ninteract with human users. Through two examples in mathematics and physics,\nKANs are shown to be useful collaborators helping scientists (re)discover\nmathematical and physical laws. In summary, KANs are promising alternatives for\nMLPs, opening opportunities for further improving today's deep learning models\nwhich rely heavily on MLPs.",
+      "upvotes": 108
+    },
+    {
+      "title": "Better & Faster Large Language Models via Multi-token Prediction",
+      "url": "https://huggingface.co/papers/2404.19737",
+      "authors": [
+        "David Lopez-Paz"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.19737.pdf",
+      "abstract": "Large language models such as GPT and Llama are trained with a next-token\nprediction loss. In this work, we suggest that training language models to\npredict multiple future tokens at once results in higher sample efficiency.\nMore specifically, at each position in the training corpus, we ask the model to\npredict the following n tokens using n independent output heads, operating on\ntop of a shared model trunk. Considering multi-token prediction as an auxiliary\ntraining task, we measure improved downstream capabilities with no overhead in\ntraining time for both code and natural language models. The method is\nincreasingly useful for larger model sizes, and keeps its appeal when training\nfor multiple epochs. Gains are especially pronounced on generative benchmarks\nlike coding, where our models consistently outperform strong baselines by\nseveral percentage points. Our 13B parameter models solves 12 % more problems\non HumanEval and 17 % more on MBPP than comparable next-token models.\nExperiments on small algorithmic tasks demonstrate that multi-token prediction\nis favorable for the development of induction heads and algorithmic reasoning\ncapabilities. As an additional benefit, models trained with 4-token prediction\nare up to 3 times faster at inference, even with large batch sizes.",
+      "upvotes": 73
+    },
+    {
+      "title": "InstantFamily: Masked Attention for Zero-shot Multi-ID Image Generation",
+      "url": "https://huggingface.co/papers/2404.19427",
+      "authors": [
+        "Bongmo Kim"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.19427.pdf",
+      "abstract": "In the field of personalized image generation, the ability to create images\npreserving concepts has significantly improved. Creating an image that\nnaturally integrates multiple concepts in a cohesive and visually appealing\ncomposition can indeed be challenging. This paper introduces \"InstantFamily,\"\nan approach that employs a novel masked cross-attention mechanism and a\nmultimodal embedding stack to achieve zero-shot multi-ID image generation. Our\nmethod effectively preserves ID as it utilizes global and local features from a\npre-trained face recognition model integrated with text conditions.\nAdditionally, our masked cross-attention mechanism enables the precise control\nof multi-ID and composition in the generated images. We demonstrate the\neffectiveness of InstantFamily through experiments showing its dominance in\ngenerating images with multi-ID, while resolving well-known multi-ID generation\nproblems. Additionally, our model achieves state-of-the-art performance in both\nsingle-ID and multi-ID preservation. Furthermore, our model exhibits remarkable\nscalability with a greater number of ID preservation than it was originally\ntrained with.",
+      "upvotes": 71
+    },
+    {
+      "title": "Iterative Reasoning Preference Optimization",
+      "url": "https://huggingface.co/papers/2404.19733",
+      "authors": [
+        "He He"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.19733.pdf",
+      "abstract": "Iterative preference optimization methods have recently been shown to perform\nwell for general instruction tuning tasks, but typically make little\nimprovement on reasoning tasks (Yuan et al., 2024, Chen et al., 2024). In this\nwork we develop an iterative approach that optimizes the preference between\ncompeting generated Chain-of-Thought (CoT) candidates by optimizing for winning\nvs. losing reasoning steps that lead to the correct answer. We train using a\nmodified DPO loss (Rafailov et al., 2023) with an additional negative\nlog-likelihood term, which we find to be crucial. We show reasoning improves\nacross repeated iterations of this scheme. While only relying on examples in\nthe training set, our approach results in increasing accuracy for\nLlama-2-70B-Chat from 55.6% to 81.6% on GSM8K (and 88.7% with majority voting\nout of 32 samples), from 12.5% to 20.8% on MATH, and from 77.8% to 86.7% on\nARC-Challenge, which outperforms other Llama-2-based models not relying on\nadditionally sourced datasets.",
+      "upvotes": 47
+    },
+    {
+      "title": "Extending Llama-3's Context Ten-Fold Overnight",
+      "url": "https://huggingface.co/papers/2404.19553",
+      "authors": [
+        "Hongjin Qian"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.19553.pdf",
+      "abstract": "We extend the context length of Llama-3-8B-Instruct from 8K to 80K via QLoRA\nfine-tuning. The entire training cycle is super efficient, which takes 8 hours\non one 8xA800 (80G) GPU machine. The resulted model exhibits superior\nperformances across a broad range of evaluation tasks, such as NIHS, topic\nretrieval, and long-context language understanding; meanwhile, it also well\npreserves the original capability over short contexts. The dramatic context\nextension is mainly attributed to merely 3.5K synthetic training samples\ngenerated by GPT-4 , which indicates the LLMs' inherent (yet largely\nunderestimated) potential to extend its original context length. In fact, the\ncontext length could be extended far beyond 80K with more computation\nresources. Therefore, the team will publicly release the entire resources\n(including data, model, data generation pipeline, training code) so as to\nfacilitate the future research from the community:\nhttps://github.com/FlagOpen/FlagEmbedding.",
+      "upvotes": 33
+    },
+    {
+      "title": "MotionLCM: Real-time Controllable Motion Generation via Latent Consistency Model",
+      "url": "https://huggingface.co/papers/2404.19759",
+      "authors": [
+        "Bo Dai",
+        "Yansong Tang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.19759.pdf",
+      "abstract": "This work introduces MotionLCM, extending controllable motion generation to a\nreal-time level. Existing methods for spatial control in text-conditioned\nmotion generation suffer from significant runtime inefficiency. To address this\nissue, we first propose the motion latent consistency model (MotionLCM) for\nmotion generation, building upon the latent diffusion model (MLD). By employing\none-step (or few-step) inference, we further improve the runtime efficiency of\nthe motion latent diffusion model for motion generation. To ensure effective\ncontrollability, we incorporate a motion ControlNet within the latent space of\nMotionLCM and enable explicit control signals (e.g., pelvis trajectory) in the\nvanilla motion space to control the generation process directly, similar to\ncontrolling other latent-free diffusion models for motion generation. By\nemploying these techniques, our approach can generate human motions with text\nand control signals in real-time. Experimental results demonstrate the\nremarkable generation and controlling capabilities of MotionLCM while\nmaintaining real-time runtime efficiency.",
+      "upvotes": 24
+    },
+    {
+      "title": "Visual Fact Checker: Enabling High-Fidelity Detailed Caption Generation",
+      "url": "https://huggingface.co/papers/2404.19752",
+      "authors": [
+        "Xiaohui Zeng",
+        "Jacob Samuel Huffman"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.19752.pdf",
+      "abstract": "Existing automatic captioning methods for visual content face challenges such\nas lack of detail, content hallucination, and poor instruction following. In\nthis work, we propose VisualFactChecker (VFC), a flexible training-free\npipeline that generates high-fidelity and detailed captions for both 2D images\nand 3D objects. VFC consists of three steps: 1) proposal, where image-to-text\ncaptioning models propose multiple initial captions; 2) verification, where a\nlarge language model (LLM) utilizes tools such as object detection and VQA\nmodels to fact-check proposed captions; 3) captioning, where an LLM generates\nthe final caption by summarizing caption proposals and the fact check\nverification results. In this step, VFC can flexibly generate captions in\nvarious styles following complex instructions. We conduct comprehensive\ncaptioning evaluations using four metrics: 1) CLIP-Score for image-text\nsimilarity; 2) CLIP-Image-Score for measuring the image-image similarity\nbetween the original and the reconstructed image generated by a text-to-image\nmodel using the caption. 3) human study on Amazon Mechanical Turk; 4) GPT-4V\nfor fine-grained evaluation. Evaluation results show that VFC outperforms\nstate-of-the-art open-sourced captioning methods for 2D images on the COCO\ndataset and 3D assets on the Objaverse dataset. Our study demonstrates that by\ncombining open-source models into a pipeline, we can attain captioning\ncapability comparable to proprietary models such as GPT-4V, despite being over\n10x smaller in model size.",
+      "upvotes": 22
+    },
+    {
+      "title": "GS-LRM: Large Reconstruction Model for 3D Gaussian Splatting",
+      "url": "https://huggingface.co/papers/2404.19702",
+      "authors": [
+        "Kai Zhang",
+        "Hao Tan",
+        "Nanxuan Zhao",
+        "Kalyan Sunkavalli"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.19702.pdf",
+      "abstract": "We propose GS-LRM, a scalable large reconstruction model that can predict\nhigh-quality 3D Gaussian primitives from 2-4 posed sparse images in 0.23\nseconds on single A100 GPU. Our model features a very simple transformer-based\narchitecture; we patchify input posed images, pass the concatenated multi-view\nimage tokens through a sequence of transformer blocks, and decode final\nper-pixel Gaussian parameters directly from these tokens for differentiable\nrendering. In contrast to previous LRMs that can only reconstruct objects, by\npredicting per-pixel Gaussians, GS-LRM naturally handles scenes with large\nvariations in scale and complexity. We show that our model can work on both\nobject and scene captures by training it on Objaverse and RealEstate10K\nrespectively. In both scenarios, the models outperform state-of-the-art\nbaselines by a wide margin. We also demonstrate applications of our model in\ndownstream 3D generation tasks. Our project webpage is available at:\nhttps://sai-bi.github.io/project/gs-lrm/ .",
+      "upvotes": 18
+    },
+    {
+      "title": "SAGS: Structure-Aware 3D Gaussian Splatting",
+      "url": "https://huggingface.co/papers/2404.19149",
+      "authors": [
+        "Rolandos Alexandros Potamias",
+        "Stefanos Zafeiriou"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.19149.pdf",
+      "abstract": "Following the advent of NeRFs, 3D Gaussian Splatting (3D-GS) has paved the\nway to real-time neural rendering overcoming the computational burden of\nvolumetric methods. Following the pioneering work of 3D-GS, several methods\nhave attempted to achieve compressible and high-fidelity performance\nalternatives. However, by employing a geometry-agnostic optimization scheme,\nthese methods neglect the inherent 3D structure of the scene, thereby\nrestricting the expressivity and the quality of the representation, resulting\nin various floating points and artifacts. In this work, we propose a\nstructure-aware Gaussian Splatting method (SAGS) that implicitly encodes the\ngeometry of the scene, which reflects to state-of-the-art rendering performance\nand reduced storage requirements on benchmark novel-view synthesis datasets.\nSAGS is founded on a local-global graph representation that facilitates the\nlearning of complex scenes and enforces meaningful point displacements that\npreserve the scene's geometry. Additionally, we introduce a lightweight version\nof SAGS, using a simple yet effective mid-point interpolation scheme, which\nshowcases a compact representation of the scene with up to 24times size\nreduction without the reliance on any compression strategies. Extensive\nexperiments across multiple benchmark datasets demonstrate the superiority of\nSAGS compared to state-of-the-art 3D-GS methods under both rendering quality\nand model size. Besides, we demonstrate that our structure-aware method can\neffectively mitigate floating artifacts and irregular distortions of previous\nmethods while obtaining precise depth maps. Project page\nhttps://eververas.github.io/SAGS/.",
+      "upvotes": 13
+    },
+    {
+      "title": "DOCCI: Descriptions of Connected and Contrasting Images",
+      "url": "https://huggingface.co/papers/2404.19753",
+      "authors": [
+        "Sunayana Rane",
+        "Zachary Berger",
+        "Alexander Ku",
+        "Zarana Parekh",
+        "Garrett Tanzer",
+        "Su Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.19753.pdf",
+      "abstract": "Vision-language datasets are vital for both text-to-image (T2I) and\nimage-to-text (I2T) research. However, current datasets lack descriptions with\nfine-grained detail that would allow for richer associations to be learned by\nmodels. To fill the gap, we introduce Descriptions of Connected and Contrasting\nImages (DOCCI), a dataset with long, human-annotated English descriptions for\n15k images that were taken, curated and donated by a single researcher intent\non capturing key challenges such as spatial relations, counting, text\nrendering, world knowledge, and more. We instruct human annotators to create\ncomprehensive descriptions for each image; these average 136 words in length\nand are crafted to clearly distinguish each image from those that are related\nor similar. Each description is highly compositional and typically encompasses\nmultiple challenges. Through both quantitative and qualitative analyses, we\ndemonstrate that DOCCI serves as an effective training resource for\nimage-to-text generation -- a PaLI 5B model finetuned on DOCCI shows equal or\nsuperior results compared to highly-performant larger models like LLaVA-1.5 7B\nand InstructBLIP 7B. Furthermore, we show that DOCCI is a useful testbed for\ntext-to-image generation, highlighting the limitations of current text-to-image\nmodels in capturing long descriptions and fine details.",
+      "upvotes": 11
+    },
+    {
+      "title": "Invisible Stitch: Generating Smooth 3D Scenes with Depth Inpainting",
+      "url": "https://huggingface.co/papers/2404.19758",
+      "authors": [
+        "Andrea Vedaldi",
+        "Iro Laina",
+        "Christian Rupprecht"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.19758.pdf",
+      "abstract": "3D scene generation has quickly become a challenging new research direction,\nfueled by consistent improvements of 2D generative diffusion models. Most prior\nwork in this area generates scenes by iteratively stitching newly generated\nframes with existing geometry. These works often depend on pre-trained\nmonocular depth estimators to lift the generated images into 3D, fusing them\nwith the existing scene representation. These approaches are then often\nevaluated via a text metric, measuring the similarity between the generated\nimages and a given text prompt. In this work, we make two fundamental\ncontributions to the field of 3D scene generation. First, we note that lifting\nimages to 3D with a monocular depth estimation model is suboptimal as it\nignores the geometry of the existing scene. We thus introduce a novel depth\ncompletion model, trained via teacher distillation and self-training to learn\nthe 3D fusion process, resulting in improved geometric coherence of the scene.\nSecond, we introduce a new benchmarking scheme for scene generation methods\nthat is based on ground truth geometry, and thus measures the quality of the\nstructure of the scene.",
+      "upvotes": 10
+    },
+    {
+      "title": "MicroDreamer: Zero-shot 3D Generation in $\\sim$20 Seconds by Score-based Iterative Reconstruction",
+      "url": "https://huggingface.co/papers/2404.19525",
+      "authors": [
+        "Luxi Chen",
+        "Hang Su",
+        "Jun Zhu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.19525.pdf",
+      "abstract": "Optimization-based approaches, such as score distillation sampling (SDS),\nshow promise in zero-shot 3D generation but suffer from low efficiency,\nprimarily due to the high number of function evaluations (NFEs) required for\neach sample. In this paper, we introduce score-based iterative reconstruction\n(SIR), an efficient and general algorithm for 3D generation with a multi-view\nscore-based diffusion model. Given the images produced by the diffusion model,\nSIR reduces NFEs by repeatedly optimizing 3D parameters, unlike the single\noptimization in SDS, mimicking the 3D reconstruction process. With other\nimprovements including optimization in the pixel space, we present an efficient\napproach called MicroDreamer that generally applies to various 3D\nrepresentations and 3D generation tasks. In particular, retaining a comparable\nperformance, MicroDreamer is 5-20 times faster than SDS in generating neural\nradiance field and takes about 20 seconds to generate meshes from 3D Gaussian\nsplitting on a single A100 GPU, halving the time of the fastest zero-shot\nbaseline, DreamGaussian. Our code is available at\nhttps://github.com/ML-GSAI/MicroDreamer.",
+      "upvotes": 9
+    },
+    {
+      "title": "Lightplane: Highly-Scalable Components for Neural 3D Fields",
+      "url": "https://huggingface.co/papers/2404.19760",
+      "authors": [
+        "Justin Johnson",
+        "Andrea Vedaldi",
+        "David Novotny"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.19760.pdf",
+      "abstract": "Contemporary 3D research, particularly in reconstruction and generation,\nheavily relies on 2D images for inputs or supervision. However, current designs\nfor these 2D-3D mapping are memory-intensive, posing a significant bottleneck\nfor existing methods and hindering new applications. In response, we propose a\npair of highly scalable components for 3D neural fields: Lightplane Render and\nSplatter, which significantly reduce memory usage in 2D-3D mapping. These\ninnovations enable the processing of vastly more and higher resolution images\nwith small memory and computational costs. We demonstrate their utility in\nvarious applications, from benefiting single-scene optimization with\nimage-level losses to realizing a versatile pipeline for dramatically scaling\n3D reconstruction and generation. Code:\nhttps://github.com/facebookresearch/lightplane.",
+      "upvotes": 5
+    }
+  ]
+}

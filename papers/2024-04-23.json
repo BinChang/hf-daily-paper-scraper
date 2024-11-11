@@ -1,0 +1,135 @@
+{
+  "date": "2024-04-23",
+  "papers": [
+    {
+      "title": "Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone",
+      "url": "https://huggingface.co/papers/2404.14219",
+      "authors": [
+        "Hany Awadalla",
+        "Misha Bilenko"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.14219.pdf",
+      "abstract": "We introduce phi-3-mini, a 3.8 billion parameter language model trained on\n3.3 trillion tokens, whose overall performance, as measured by both academic\nbenchmarks and internal testing, rivals that of models such as Mixtral 8x7B and\nGPT-3.5 (e.g., phi-3-mini achieves 69% on MMLU and 8.38 on MT-bench), despite\nbeing small enough to be deployed on a phone. The innovation lies entirely in\nour dataset for training, a scaled-up version of the one used for phi-2,\ncomposed of heavily filtered web data and synthetic data. The model is also\nfurther aligned for robustness, safety, and chat format. We also provide some\ninitial parameter-scaling results with a 7B and 14B models trained for 4.8T\ntokens, called phi-3-small and phi-3-medium, both significantly more capable\nthan phi-3-mini (e.g., respectively 75% and 78% on MMLU, and 8.7 and 8.9 on\nMT-bench).",
+      "upvotes": 253
+    },
+    {
+      "title": "How Good Are Low-bit Quantized LLaMA3 Models? An Empirical Study",
+      "url": "https://huggingface.co/papers/2404.14047",
+      "authors": [
+        "Jie Luo",
+        "Xiaojuan Qi",
+        "Xianglong Liu",
+        "Michele Magno"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.14047.pdf",
+      "abstract": "Meta's LLaMA family has become one of the most powerful open-source Large\nLanguage Model (LLM) series. Notably, LLaMA3 models have recently been released\nand achieve impressive performance across various with super-large scale\npre-training on over 15T tokens of data. Given the wide application of low-bit\nquantization for LLMs in resource-limited scenarios, we explore LLaMA3's\ncapabilities when quantized to low bit-width. This exploration holds the\npotential to unveil new insights and challenges for low-bit quantization of\nLLaMA3 and other forthcoming LLMs, especially in addressing performance\ndegradation problems that suffer in LLM compression. Specifically, we evaluate\nthe 10 existing post-training quantization and LoRA-finetuning methods of\nLLaMA3 on 1-8 bits and diverse datasets to comprehensively reveal LLaMA3's\nlow-bit quantization performance. Our experiment results indicate that LLaMA3\nstill suffers non-negligent degradation in these scenarios, especially in\nultra-low bit-width. This highlights the significant performance gap under low\nbit-width that needs to be bridged in future developments. We expect that this\nempirical study will prove valuable in advancing future models, pushing the\nLLMs to lower bit-width with higher accuracy for being practical. Our project\nis released on https://github.com/Macaronlin/LLaMA3-Quantization and quantized\nLLaMA3 models are released in https://huggingface.co/LLMQ.",
+      "upvotes": 44
+    },
+    {
+      "title": "The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions",
+      "url": "https://huggingface.co/papers/2404.13208",
+      "authors": [
+        "Kai Xiao",
+        "Reimar Leike",
+        "Johannes Heidecke"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.13208.pdf",
+      "abstract": "Today's LLMs are susceptible to prompt injections, jailbreaks, and other\nattacks that allow adversaries to overwrite a model's original instructions\nwith their own malicious prompts. In this work, we argue that one of the\nprimary vulnerabilities underlying these attacks is that LLMs often consider\nsystem prompts (e.g., text from an application developer) to be the same\npriority as text from untrusted users and third parties. To address this, we\npropose an instruction hierarchy that explicitly defines how models should\nbehave when instructions of different priorities conflict. We then propose a\ndata generation method to demonstrate this hierarchical instruction following\nbehavior, which teaches LLMs to selectively ignore lower-privileged\ninstructions. We apply this method to GPT-3.5, showing that it drastically\nincreases robustness -- even for attack types not seen during training -- while\nimposing minimal degradations on standard capabilities.",
+      "upvotes": 38
+    },
+    {
+      "title": "FlowMind: Automatic Workflow Generation with LLMs",
+      "url": "https://huggingface.co/papers/2404.13050",
+      "authors": [
+        "Saba Rahimi",
+        "Tucker Balch",
+        "Manuela Veloso"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.13050.pdf",
+      "abstract": "The rapidly evolving field of Robotic Process Automation (RPA) has made\nsignificant strides in automating repetitive processes, yet its effectiveness\ndiminishes in scenarios requiring spontaneous or unpredictable tasks demanded\nby users. This paper introduces a novel approach, FlowMind, leveraging the\ncapabilities of Large Language Models (LLMs) such as Generative Pretrained\nTransformer (GPT), to address this limitation and create an automatic workflow\ngeneration system. In FlowMind, we propose a generic prompt recipe for a\nlecture that helps ground LLM reasoning with reliable Application Programming\nInterfaces (APIs). With this, FlowMind not only mitigates the common issue of\nhallucinations in LLMs, but also eliminates direct interaction between LLMs and\nproprietary data or code, thus ensuring the integrity and confidentiality of\ninformation - a cornerstone in financial services. FlowMind further simplifies\nuser interaction by presenting high-level descriptions of auto-generated\nworkflows, enabling users to inspect and provide feedback effectively. We also\nintroduce NCEN-QA, a new dataset in finance for benchmarking question-answering\ntasks from N-CEN reports on funds. We used NCEN-QA to evaluate the performance\nof workflows generated by FlowMind against baseline and ablation variants of\nFlowMind. We demonstrate the success of FlowMind, the importance of each\ncomponent in the proposed lecture recipe, and the effectiveness of user\ninteraction and feedback in FlowMind.",
+      "upvotes": 32
+    },
+    {
+      "title": "Hyper-SD: Trajectory Segmented Consistency Model for Efficient Image Synthesis",
+      "url": "https://huggingface.co/papers/2404.13686",
+      "authors": [
+        "Jiacheng Zhang",
+        "Jie Wu",
+        "Xing Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.13686.pdf",
+      "abstract": "Recently, a series of diffusion-aware distillation algorithms have emerged to\nalleviate the computational overhead associated with the multi-step inference\nprocess of Diffusion Models (DMs). Current distillation techniques often\ndichotomize into two distinct aspects: i) ODE Trajectory Preservation; and ii)\nODE Trajectory Reformulation. However, these approaches suffer from severe\nperformance degradation or domain shifts. To address these limitations, we\npropose Hyper-SD, a novel framework that synergistically amalgamates the\nadvantages of ODE Trajectory Preservation and Reformulation, while maintaining\nnear-lossless performance during step compression. Firstly, we introduce\nTrajectory Segmented Consistency Distillation to progressively perform\nconsistent distillation within pre-defined time-step segments, which\nfacilitates the preservation of the original ODE trajectory from a higher-order\nperspective. Secondly, we incorporate human feedback learning to boost the\nperformance of the model in a low-step regime and mitigate the performance loss\nincurred by the distillation process. Thirdly, we integrate score distillation\nto further improve the low-step generation capability of the model and offer\nthe first attempt to leverage a unified LoRA to support the inference process\nat all steps. Extensive experiments and user studies demonstrate that Hyper-SD\nachieves SOTA performance from 1 to 8 inference steps for both SDXL and SD1.5.\nFor example, Hyper-SDXL surpasses SDXL-Lightning by +0.68 in CLIP Score and\n+0.51 in Aes Score in the 1-step inference.",
+      "upvotes": 27
+    },
+    {
+      "title": "A Multimodal Automated Interpretability Agent",
+      "url": "https://huggingface.co/papers/2404.14394",
+      "authors": [
+        "Jacob Andreas",
+        "Antonio Torralba"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.14394.pdf",
+      "abstract": "This paper describes MAIA, a Multimodal Automated Interpretability Agent.\nMAIA is a system that uses neural models to automate neural model understanding\ntasks like feature interpretation and failure mode discovery. It equips a\npre-trained vision-language model with a set of tools that support iterative\nexperimentation on subcomponents of other models to explain their behavior.\nThese include tools commonly used by human interpretability researchers: for\nsynthesizing and editing inputs, computing maximally activating exemplars from\nreal-world datasets, and summarizing and describing experimental results.\nInterpretability experiments proposed by MAIA compose these tools to describe\nand explain system behavior. We evaluate applications of MAIA to computer\nvision models. We first characterize MAIA's ability to describe (neuron-level)\nfeatures in learned representations of images. Across several trained models\nand a novel dataset of synthetic vision neurons with paired ground-truth\ndescriptions, MAIA produces descriptions comparable to those generated by\nexpert human experimenters. We then show that MAIA can aid in two additional\ninterpretability tasks: reducing sensitivity to spurious features, and\nautomatically identifying inputs likely to be mis-classified.",
+      "upvotes": 20
+    },
+    {
+      "title": "SEED-X: Multimodal Models with Unified Multi-granularity Comprehension and Generation",
+      "url": "https://huggingface.co/papers/2404.14396",
+      "authors": [
+        "Jinguo Zhu",
+        "Lin Song",
+        "Chen Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.14396.pdf",
+      "abstract": "The rapid evolution of multimodal foundation model has demonstrated\nsignificant progresses in vision-language understanding and generation, e.g.,\nour previous work SEED-LLaMA. However, there remains a gap between its\ncapability and the real-world applicability, primarily due to the model's\nlimited capacity to effectively respond to various user instructions and\ninteract with diverse visual data. In this work, we focus on bridging this gap\nthrough integrating two enhanced features: (1) comprehending images of\narbitrary sizes and ratios, and (2) enabling multi-granularity image\ngeneration. We present a unified and versatile foundation model, namely,\nSEED-X, which is able to model multi-granularity visual semantics for\ncomprehension and generation tasks. Besides the competitive results on public\nbenchmarks, SEED-X demonstrates its effectiveness in handling real-world\napplications across various domains after instruction tuning. We hope that our\nwork will inspire future research into what can be achieved by versatile\nmultimodal foundation models in real-world applications. The models, codes, and\ndatasets will be released in https://github.com/AILab-CVC/SEED-X.",
+      "upvotes": 18
+    },
+    {
+      "title": "Music Consistency Models",
+      "url": "https://huggingface.co/papers/2404.13358",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2404.13358.pdf",
+      "abstract": "Consistency models have exhibited remarkable capabilities in facilitating\nefficient image/video generation, enabling synthesis with minimal sampling\nsteps. It has proven to be advantageous in mitigating the computational burdens\nassociated with diffusion models. Nevertheless, the application of consistency\nmodels in music generation remains largely unexplored. To address this gap, we\npresent Music Consistency Models (MusicCM), which leverages the\nconcept of consistency models to efficiently synthesize mel-spectrogram for\nmusic clips, maintaining high quality while minimizing the number of sampling\nsteps. Building upon existing text-to-music diffusion models, the\nMusicCM model incorporates consistency distillation and adversarial\ndiscriminator training. Moreover, we find it beneficial to generate extended\ncoherent music by incorporating multiple diffusion processes with shared\nconstraints. Experimental results reveal the effectiveness of our model in\nterms of computational efficiency, fidelity, and naturalness. Notable,\nMusicCM achieves seamless music synthesis with a mere four sampling\nsteps, e.g., only one second per minute of the music clip, showcasing the\npotential for real-time application.",
+      "upvotes": 12
+    },
+    {
+      "title": "MultiBooth: Towards Generating All Your Concepts in an Image from Text",
+      "url": "https://huggingface.co/papers/2404.14239",
+      "authors": [
+        "Chenyang Zhu",
+        "Kai Li",
+        "Chunming He",
+        "Li Xiu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.14239.pdf",
+      "abstract": "This paper introduces MultiBooth, a novel and efficient technique for\nmulti-concept customization in image generation from text. Despite the\nsignificant advancements in customized generation methods, particularly with\nthe success of diffusion models, existing methods often struggle with\nmulti-concept scenarios due to low concept fidelity and high inference cost.\nMultiBooth addresses these issues by dividing the multi-concept generation\nprocess into two phases: a single-concept learning phase and a multi-concept\nintegration phase. During the single-concept learning phase, we employ a\nmulti-modal image encoder and an efficient concept encoding technique to learn\na concise and discriminative representation for each concept. In the\nmulti-concept integration phase, we use bounding boxes to define the generation\narea for each concept within the cross-attention map. This method enables the\ncreation of individual concepts within their specified regions, thereby\nfacilitating the formation of multi-concept images. This strategy not only\nimproves concept fidelity but also reduces additional inference cost.\nMultiBooth surpasses various baselines in both qualitative and quantitative\nevaluations, showcasing its superior performance and computational efficiency.\nProject Page: https://multibooth.github.io/",
+      "upvotes": 8
+    },
+    {
+      "title": "Learning H-Infinity Locomotion Control",
+      "url": "https://huggingface.co/papers/2404.14405",
+      "authors": [
+        "Quanyi Li",
+        "Zirui Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.14405.pdf",
+      "abstract": "Stable locomotion in precipitous environments is an essential capability of\nquadruped robots, demanding the ability to resist various external\ndisturbances. However, recent learning-based policies only use basic domain\nrandomization to improve the robustness of learned policies, which cannot\nguarantee that the robot has adequate disturbance resistance capabilities. In\nthis paper, we propose to model the learning process as an adversarial\ninteraction between the actor and a newly introduced disturber and ensure their\noptimization with H_{infty} constraint. In contrast to the actor that\nmaximizes the discounted overall reward, the disturber is responsible for\ngenerating effective external forces and is optimized by maximizing the error\nbetween the task reward and its oracle, i.e., \"cost\" in each iteration. To keep\njoint optimization between the actor and the disturber stable, our H_{infty}\nconstraint mandates the bound of ratio between the cost to the intensity of the\nexternal forces. Through reciprocal interaction throughout the training phase,\nthe actor can acquire the capability to navigate increasingly complex physical\ndisturbances. We verify the robustness of our approach on quadrupedal\nlocomotion tasks with Unitree Aliengo robot, and also a more challenging task\nwith Unitree A1 robot, where the quadruped is expected to perform locomotion\nmerely on its hind legs as if it is a bipedal robot. The simulated quantitative\nresults show improvement against baselines, demonstrating the effectiveness of\nthe method and each design choice. On the other hand, real-robot experiments\nqualitatively exhibit how robust the policy is when interfering with various\ndisturbances on various terrains, including stairs, high platforms, slopes, and\nslippery terrains. All code, checkpoints, and real-world deployment guidance\nwill be made public.",
+      "upvotes": 6
+    },
+    {
+      "title": "Scene Coordinate Reconstruction: Posing of Image Collections via Incremental Learning of a Relocalizer",
+      "url": "https://huggingface.co/papers/2404.14351",
+      "authors": [
+        "Eric Brachmann",
+        "Jamie Wynn",
+        "Shuai Chen",
+        "Tommaso Cavallari",
+        "Daniyar Turmukhambetov",
+        "Victor Adrian Prisacariu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.14351.pdf",
+      "abstract": "We address the task of estimating camera parameters from a set of images\ndepicting a scene. Popular feature-based structure-from-motion (SfM) tools\nsolve this task by incremental reconstruction: they repeat triangulation of\nsparse 3D points and registration of more camera views to the sparse point\ncloud. We re-interpret incremental structure-from-motion as an iterated\napplication and refinement of a visual relocalizer, that is, of a method that\nregisters new views to the current state of the reconstruction. This\nperspective allows us to investigate alternative visual relocalizers that are\nnot rooted in local feature matching. We show that scene coordinate regression,\na learning-based relocalization approach, allows us to build implicit, neural\nscene representations from unposed images. Different from other learning-based\nreconstruction methods, we do not require pose priors nor sequential inputs,\nand we optimize efficiently over thousands of images. Our method, ACE0 (ACE\nZero), estimates camera poses to an accuracy comparable to feature-based SfM,\nas demonstrated by novel view synthesis. Project page:\nhttps://nianticlabs.github.io/acezero/",
+      "upvotes": 5
+    }
+  ]
+}

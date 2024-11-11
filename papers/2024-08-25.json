@@ -1,0 +1,323 @@
+{
+  "date": "2024-08-25",
+  "papers": [
+    {
+      "title": "Sapiens: Foundation for Human Vision Models",
+      "url": "https://huggingface.co/papers/2408.12569",
+      "authors": [
+        "Julieta Martinez",
+        "Su Zhaoen",
+        "Austin James",
+        "Peter Selednik",
+        "Stuart Anderson"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.12569.pdf",
+      "abstract": "We present Sapiens, a family of models for four fundamental human-centric\nvision tasks - 2D pose estimation, body-part segmentation, depth estimation,\nand surface normal prediction. Our models natively support 1K high-resolution\ninference and are extremely easy to adapt for individual tasks by simply\nfine-tuning models pretrained on over 300 million in-the-wild human images. We\nobserve that, given the same computational budget, self-supervised pretraining\non a curated dataset of human images significantly boosts the performance for a\ndiverse set of human-centric tasks. The resulting models exhibit remarkable\ngeneralization to in-the-wild data, even when labeled data is scarce or\nentirely synthetic. Our simple model design also brings scalability - model\nperformance across tasks improves as we scale the number of parameters from 0.3\nto 2 billion. Sapiens consistently surpasses existing baselines across various\nhuman-centric benchmarks. We achieve significant improvements over the prior\nstate-of-the-art on Humans-5K (pose) by 7.6 mAP, Humans-2K (part-seg) by 17.1\nmIoU, Hi4D (depth) by 22.4% relative RMSE, and THuman2 (normal) by 53.5%\nrelative angular error.",
+      "upvotes": 88
+    },
+    {
+      "title": "Controllable Text Generation for Large Language Models: A Survey",
+      "url": "https://huggingface.co/papers/2408.12599",
+      "authors": [
+        "Xun Liang",
+        "Jiawei Yang",
+        "Simin Niu",
+        "Jie Hu",
+        "Dan Liu",
+        "Shunyu Yao",
+        "Feiyu Xiong",
+        "Zhiyu Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.12599.pdf",
+      "abstract": "In Natural Language Processing (NLP), Large Language Models (LLMs) have\ndemonstrated high text generation quality. However, in real-world applications,\nLLMs must meet increasingly complex requirements. Beyond avoiding misleading or\ninappropriate content, LLMs are also expected to cater to specific user needs,\nsuch as imitating particular writing styles or generating text with poetic\nrichness. These varied demands have driven the development of Controllable Text\nGeneration (CTG) techniques, which ensure that outputs adhere to predefined\ncontrol conditions--such as safety, sentiment, thematic consistency, and\nlinguistic style--while maintaining high standards of helpfulness, fluency, and\ndiversity.\n  This paper systematically reviews the latest advancements in CTG for LLMs,\noffering a comprehensive definition of its core concepts and clarifying the\nrequirements for control conditions and text quality. We categorize CTG tasks\ninto two primary types: content control and attribute control. The key methods\nare discussed, including model retraining, fine-tuning, reinforcement learning,\nprompt engineering, latent space manipulation, and decoding-time intervention.\nWe analyze each method's characteristics, advantages, and limitations,\nproviding nuanced insights for achieving generation control. Additionally, we\nreview CTG evaluation methods, summarize its applications across domains, and\naddress key challenges in current research, including reduced fluency and\npracticality. We also propose several appeals, such as placing greater emphasis\non real-world applications in future research. This paper aims to offer\nvaluable guidance to researchers and developers in the field. Our reference\nlist and Chinese version are open-sourced at\nhttps://github.com/IAAR-Shanghai/CTGSurvey.",
+      "upvotes": 62
+    },
+    {
+      "title": "Open-FinLLMs: Open Multimodal Large Language Models for Financial Applications",
+      "url": "https://huggingface.co/papers/2408.11878",
+      "authors": [
+        "Dong Li",
+        "Mengxi Xiao",
+        "Zihao Jiang",
+        "Ruoyu Xiang",
+        "Xiao Zhang",
+        "Zhengyu Chen",
+        "Weiguang Han",
+        "Lihang Shen",
+        "Zhiwei Liu",
+        "Zheheng Luo",
+        "Yangyang Yu",
+        "Yupeng Cao",
+        "Zhiyang Deng",
+        "Zhiyuan Yao",
+        "Haohang Li",
+        "Duanyu Feng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.11878.pdf",
+      "abstract": "Large language models (LLMs) have advanced financial applications, yet they\noften lack sufficient financial knowledge and struggle with tasks involving\nmulti-modal inputs like tables and time series data. To address these\nlimitations, we introduce Open-FinLLMs, a series of Financial LLMs. We\nbegin with FinLLaMA, pre-trained on a 52 billion token financial corpus,\nincorporating text, tables, and time-series data to embed comprehensive\nfinancial knowledge. FinLLaMA is then instruction fine-tuned with 573K\nfinancial instructions, resulting in FinLLaMA-instruct, which enhances task\nperformance. Finally, we present FinLLaVA, a multimodal LLM trained with 1.43M\nimage-text instructions to handle complex financial data types. Extensive\nevaluations demonstrate FinLLaMA's superior performance over LLaMA3-8B,\nLLaMA3.1-8B, and BloombergGPT in both zero-shot and few-shot settings across 19\nand 4 datasets, respectively. FinLLaMA-instruct outperforms GPT-4 and other\nFinancial LLMs on 15 datasets. FinLLaVA excels in understanding tables and\ncharts across 4 multimodal tasks. Additionally, FinLLaMA achieves impressive\nSharpe Ratios in trading simulations, highlighting its robust financial\napplication capabilities. We will continually maintain and improve our models\nand benchmarks to support ongoing innovation in academia and industry.",
+      "upvotes": 50
+    },
+    {
+      "title": "Show-o: One Single Transformer to Unify Multimodal Understanding and Generation",
+      "url": "https://huggingface.co/papers/2408.12528",
+      "authors": [
+        "Jinheng Xie",
+        "Weijia Mao",
+        "David Junhao Zhang",
+        "Weihao Wang",
+        "Kevin Qinghong Lin",
+        "Yuchao Gu",
+        "Zhijie Chen",
+        "Zhenheng Yang",
+        "Mike Zheng Shou"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.12528.pdf",
+      "abstract": "We present a unified transformer, i.e., Show-o, that unifies multimodal\nunderstanding and generation. Unlike fully autoregressive models, Show-o\nunifies autoregressive and (discrete) diffusion modeling to adaptively handle\ninputs and outputs of various and mixed modalities. The unified model flexibly\nsupports a wide range of vision-language tasks including visual\nquestion-answering, text-to-image generation, text-guided\ninpainting/extrapolation, and mixed-modality generation. Across various\nbenchmarks, it demonstrates comparable or superior performance to existing\nindividual models with an equivalent or larger number of parameters tailored\nfor understanding or generation. This significantly highlights its potential as\na next-generation foundation model. Code and models are released at\nhttps://github.com/showlab/Show-o.",
+      "upvotes": 50
+    },
+    {
+      "title": "Hermes 3 Technical Report",
+      "url": "https://huggingface.co/papers/2408.11857",
+      "authors": [
+        "Ryan Teknium",
+        "Chen Guang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.11857.pdf",
+      "abstract": "Instruct (or \"chat\") tuned models have become the primary way in which most\npeople interact with large language models. As opposed to \"base\" or\n\"foundation\" models, instruct-tuned models are optimized to respond to\nimperative statements. We present Hermes 3, a neutrally-aligned generalist\ninstruct and tool use model with strong reasoning and creative abilities. Its\nlargest version, Hermes 3 405B, achieves state of the art performance among\nopen weight models on several public benchmarks.",
+      "upvotes": 36
+    },
+    {
+      "title": "xGen-VideoSyn-1: High-fidelity Text-to-Video Synthesis with Compressed Representations",
+      "url": "https://huggingface.co/papers/2408.12590",
+      "authors": [
+        "Can Qin",
+        "Congying Xia",
+        "Krithika Ramakrishnan",
+        "Michael Ryoo",
+        "Lifu Tu",
+        "Yihao Feng",
+        "Manli Shu",
+        "Honglu Zhou",
+        "Jun Wang",
+        "Senthil Purushwalkam",
+        "Le Xue",
+        "Yingbo Zhou",
+        "Huan Wang",
+        "Silvio Savarese",
+        "Juan Carlos Niebles",
+        "Zeyuan Chen",
+        "Ran Xu",
+        "Caiming Xiong"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.12590.pdf",
+      "abstract": "We present xGen-VideoSyn-1, a text-to-video (T2V) generation model capable of\nproducing realistic scenes from textual descriptions. Building on recent\nadvancements, such as OpenAI's Sora, we explore the latent diffusion model\n(LDM) architecture and introduce a video variational autoencoder (VidVAE).\nVidVAE compresses video data both spatially and temporally, significantly\nreducing the length of visual tokens and the computational demands associated\nwith generating long-sequence videos. To further address the computational\ncosts, we propose a divide-and-merge strategy that maintains temporal\nconsistency across video segments. Our Diffusion Transformer (DiT) model\nincorporates spatial and temporal self-attention layers, enabling robust\ngeneralization across different timeframes and aspect ratios. We have devised a\ndata processing pipeline from the very beginning and collected over 13M\nhigh-quality video-text pairs. The pipeline includes multiple steps such as\nclipping, text detection, motion estimation, aesthetics scoring, and dense\ncaptioning based on our in-house video-LLM model. Training the VidVAE and DiT\nmodels required approximately 40 and 642 H100 days, respectively. Our model\nsupports over 14-second 720p video generation in an end-to-end way and\ndemonstrates competitive performance against state-of-the-art T2V models.",
+      "upvotes": 33
+    },
+    {
+      "title": "Jamba-1.5: Hybrid Transformer-Mamba Models at Scale",
+      "url": "https://huggingface.co/papers/2408.12570",
+      "authors": [
+        "Jamba Team",
+        "Barak Lenz",
+        "Alan Arazi",
+        "Amir Bergman",
+        "Barak Peleg",
+        "Ben Aviram",
+        "Chen Almagor",
+        "Clara Fridman",
+        "Dan Padnos",
+        "Daniel Gissin",
+        "Daniel Jannai",
+        "Dor Muhlgay",
+        "Dor Zimberg",
+        "Edden M Gerber",
+        "Elad Dolev",
+        "Eran Krakovsky",
+        "Erez Safahi",
+        "Erez Schwartz",
+        "Gal Cohen",
+        "Gal Shachaf",
+        "Haim Rozenblum"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.12570.pdf",
+      "abstract": "We present Jamba-1.5, new instruction-tuned large language models based on\nour Jamba architecture. Jamba is a hybrid Transformer-Mamba mixture of experts\narchitecture, providing high throughput and low memory usage across context\nlengths, while retaining the same or better quality as Transformer models. We\nrelease two model sizes: Jamba-1.5-Large, with 94B active parameters, and\nJamba-1.5-Mini, with 12B active parameters. Both models are fine-tuned for a\nvariety of conversational and instruction-following capabilties, and have an\neffective context length of 256K tokens, the largest amongst open-weight\nmodels. To support cost-effective inference, we introduce ExpertsInt8, a novel\nquantization technique that allows fitting Jamba-1.5-Large on a machine with 8\n80GB GPUs when processing 256K-token contexts without loss of quality. When\nevaluated on a battery of academic and chatbot benchmarks, Jamba-1.5 models\nachieve excellent results while providing high throughput and outperforming\nother open-weight models on long-context benchmarks. The model weights for both\nsizes are publicly available under the Jamba Open Model License and we release\nExpertsInt8 as open source.",
+      "upvotes": 29
+    },
+    {
+      "title": "DreamCinema: Cinematic Transfer with Free Camera and 3D Character",
+      "url": "https://huggingface.co/papers/2408.12601",
+      "authors": [
+        "Weiliang Chen",
+        "Fangfu Liu",
+        "Diankun Wu",
+        "Haixu Song",
+        "Yueqi Duan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.12601.pdf",
+      "abstract": "We are living in a flourishing era of digital media, where everyone has the\npotential to become a personal filmmaker. Current research on cinematic\ntransfer empowers filmmakers to reproduce and manipulate the visual elements\n(e.g., cinematography and character behaviors) from classic shots. However,\ncharacters in the reimagined films still rely on manual crafting, which\ninvolves significant technical complexity and high costs, making it\nunattainable for ordinary users. Furthermore, their estimated cinematography\nlacks smoothness due to inadequate capturing of inter-frame motion and modeling\nof physical trajectories. Fortunately, the remarkable success of 2D and 3D AIGC\nhas opened up the possibility of efficiently generating characters tailored to\nusers' needs, diversifying cinematography. In this paper, we propose\nDreamCinema, a novel cinematic transfer framework that pioneers generative AI\ninto the film production paradigm, aiming at facilitating user-friendly film\ncreation. Specifically, we first extract cinematic elements (i.e., human and\ncamera pose) and optimize the camera trajectory. Then, we apply a character\ngenerator to efficiently create 3D high-quality characters with a human\nstructure prior. Finally, we develop a structure-guided motion transfer\nstrategy to incorporate generated characters into film creation and transfer it\nvia 3D graphics engines smoothly. Extensive experiments demonstrate the\neffectiveness of our method for creating high-quality films with free camera\nand 3D characters.",
+      "upvotes": 28
+    },
+    {
+      "title": "Scalable Autoregressive Image Generation with Mamba",
+      "url": "https://huggingface.co/papers/2408.12245",
+      "authors": [
+        "Jinyue Yang",
+        "Kexin Wang",
+        "Xuerui Qiu",
+        "Yuhong Chou",
+        "Xin Li",
+        "Guoqi Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.12245.pdf",
+      "abstract": "We introduce AiM, an autoregressive (AR) image generative model based on\nMamba architecture. AiM employs Mamba, a novel state-space model characterized\nby its exceptional performance for long-sequence modeling with linear time\ncomplexity, to supplant the commonly utilized Transformers in AR image\ngeneration models, aiming to achieve both superior generation quality and\nenhanced inference speed. Unlike existing methods that adapt Mamba to handle\ntwo-dimensional signals via multi-directional scan, AiM directly utilizes the\nnext-token prediction paradigm for autoregressive image generation. This\napproach circumvents the need for extensive modifications to enable Mamba to\nlearn 2D spatial representations. By implementing straightforward yet\nstrategically targeted modifications for visual generative tasks, we preserve\nMamba's core structure, fully exploiting its efficient long-sequence modeling\ncapabilities and scalability. We provide AiM models in various scales, with\nparameter counts ranging from 148M to 1.3B. On the ImageNet1K 256*256\nbenchmark, our best AiM model achieves a FID of 2.21, surpassing all existing\nAR models of comparable parameter counts and demonstrating significant\ncompetitiveness against diffusion models, with 2 to 10 times faster inference\nspeed. Code is available at https://github.com/hp-l33/AiM",
+      "upvotes": 23
+    },
+    {
+      "title": "The Russian-focused embedders' exploration: ruMTEB benchmark and Russian embedding model design",
+      "url": "https://huggingface.co/papers/2408.12503",
+      "authors": [
+        "Maria Tikhonova",
+        "Anna Maksimova",
+        "Alena Fenogenova"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.12503.pdf",
+      "abstract": "Embedding models play a crucial role in Natural Language Processing (NLP) by\ncreating text embeddings used in various tasks such as information retrieval\nand assessing semantic text similarity. This paper focuses on research related\nto embedding models in the Russian language. It introduces a new\nRussian-focused embedding model called ru-en-RoSBERTa and the ruMTEB benchmark,\nthe Russian version extending the Massive Text Embedding Benchmark (MTEB). Our\nbenchmark includes seven categories of tasks, such as semantic textual\nsimilarity, text classification, reranking, and retrieval. The research also\nassesses a representative set of Russian and multilingual models on the\nproposed benchmark. The findings indicate that the new model achieves results\nthat are on par with state-of-the-art models in Russian. We release the model\nru-en-RoSBERTa, and the ruMTEB framework comes with open-source code,\nintegration into the original framework and a public leaderboard.",
+      "upvotes": 21
+    },
+    {
+      "title": "Vintern-1B: An Efficient Multimodal Large Language Model for Vietnamese",
+      "url": "https://huggingface.co/papers/2408.12480",
+      "authors": [
+        "Thuc D. Pham",
+        "Nhat H. Pham",
+        "Suong N. Hoang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.12480.pdf",
+      "abstract": "In this report, we introduce Vintern-1B, a reliable 1-billion-parameters\nmultimodal large language model (MLLM) for Vietnamese language tasks. By\nintegrating the Qwen2-0.5B-Instruct language model with the\nInternViT-300M-448px visual model, Vintern-1B is optimized for a range of\napplications, including optical character recognition (OCR), document\nextraction, and general question-answering in Vietnamese context. The model is\nfine-tuned on an extensive dataset of over 3 million image-question-answer\npairs, achieving robust performance and reliable results across multiple\nVietnamese language benchmarks like OpenViVQA and ViTextVQA. Vintern-1B is\nsmall enough to fit into various on-device applications easily. Additionally,\nwe have open-sourced several Vietnamese vision question answering (VQA)\ndatasets for text and diagrams, created with Gemini 1.5 Flash. Our models are\navailable at: https://huggingface.co/5CD-AI/Vintern-1B-v2.",
+      "upvotes": 16
+    },
+    {
+      "title": "Real-Time Video Generation with Pyramid Attention Broadcast",
+      "url": "https://huggingface.co/papers/2408.12588",
+      "authors": [
+        "Xiaolong Jin",
+        "Yang You"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.12588.pdf",
+      "abstract": "We present Pyramid Attention Broadcast (PAB), a real-time, high quality and\ntraining-free approach for DiT-based video generation. Our method is founded on\nthe observation that attention difference in the diffusion process exhibits a\nU-shaped pattern, indicating significant redundancy. We mitigate this by\nbroadcasting attention outputs to subsequent steps in a pyramid style. It\napplies different broadcast strategies to each attention based on their\nvariance for best efficiency. We further introduce broadcast sequence parallel\nfor more efficient distributed inference. PAB demonstrates superior results\nacross three models compared to baselines, achieving real-time generation for\nup to 720p videos. We anticipate that our simple yet effective method will\nserve as a robust baseline and facilitate future research and application for\nvideo generation.",
+      "upvotes": 14
+    },
+    {
+      "title": "Strategist: Learning Strategic Skills by LLMs via Bi-Level Tree Search",
+      "url": "https://huggingface.co/papers/2408.10635",
+      "authors": [
+        "Jonathan Light",
+        "Weiqin Chen",
+        "Guanzhi Wang",
+        "Xiusi Chen",
+        "Wei Cheng",
+        "Yisong Yue",
+        "Ziniu Hu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.10635.pdf",
+      "abstract": "In this paper, we propose a new method Strategist that utilizes LLMs to\nacquire new skills for playing multi-agent games through a self-improvement\nprocess. Our method gathers quality feedback through self-play simulations with\nMonte Carlo tree search and LLM-based reflection, which can then be used to\nlearn high-level strategic skills such as how to evaluate states that guide the\nlow-level execution.We showcase how our method can be used in both action\nplanning and dialogue generation in the context of games, achieving good\nperformance on both tasks. Specifically, we demonstrate that our method can\nhelp train agents with better performance than both traditional reinforcement\nlearning-based approaches and other LLM-based skill learning approaches in\ngames including the Game of Pure Strategy (GOPS) and The Resistance: Avalon.",
+      "upvotes": 13
+    },
+    {
+      "title": "ConflictBank: A Benchmark for Evaluating the Influence of Knowledge Conflicts in LLM",
+      "url": "https://huggingface.co/papers/2408.12076",
+      "authors": [
+        "Zhaochen Su",
+        "Jun Zhang",
+        "Yanshu Li",
+        "Jiashuo Sun",
+        "Min Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.12076.pdf",
+      "abstract": "Large language models (LLMs) have achieved impressive advancements across\nnumerous disciplines, yet the critical issue of knowledge conflicts, a major\nsource of hallucinations, has rarely been studied. Only a few research explored\nthe conflicts between the inherent knowledge of LLMs and the retrieved\ncontextual knowledge. However, a thorough assessment of knowledge conflict in\nLLMs is still missing. Motivated by this research gap, we present ConflictBank,\nthe first comprehensive benchmark developed to systematically evaluate\nknowledge conflicts from three aspects: (i) conflicts encountered in retrieved\nknowledge, (ii) conflicts within the models' encoded knowledge, and (iii) the\ninterplay between these conflict forms. Our investigation delves into four\nmodel families and twelve LLM instances, meticulously analyzing conflicts\nstemming from misinformation, temporal discrepancies, and semantic divergences.\nBased on our proposed novel construction framework, we create 7,453,853\nclaim-evidence pairs and 553,117 QA pairs. We present numerous findings on\nmodel scale, conflict causes, and conflict types. We hope our ConflictBank\nbenchmark will help the community better understand model behavior in conflicts\nand develop more reliable LLMs.",
+      "upvotes": 11
+    },
+    {
+      "title": "SPARK: Multi-Vision Sensor Perception and Reasoning Benchmark for Large-scale Vision-Language Models",
+      "url": "https://huggingface.co/papers/2408.12114",
+      "authors": [
+        "Youngjoon Yu",
+        "Yong Man Ro"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.12114.pdf",
+      "abstract": "Large-scale Vision-Language Models (LVLMs) have significantly advanced with\ntext-aligned vision inputs. They have made remarkable progress in computer\nvision tasks by aligning text modality with vision inputs. There are also\nendeavors to incorporate multi-vision sensors beyond RGB, including thermal,\ndepth, and medical X-ray images. However, we observe that current LVLMs view\nimages taken from multi-vision sensors as if they were in the same RGB domain\nwithout considering the physical characteristics of multi-vision sensors. They\nfail to convey the fundamental multi-vision sensor information from the dataset\nand the corresponding contextual knowledge properly. Consequently, alignment\nbetween the information from the actual physical environment and the text is\nnot achieved correctly, making it difficult to answer complex sensor-related\nquestions that consider the physical environment. In this paper, we aim to\nestablish a multi-vision Sensor Perception And Reasoning benchmarK called SPARK\nthat can reduce the fundamental multi-vision sensor information gap between\nimages and multi-vision sensors. We generated 6,248 vision-language test\nsamples automatically to investigate multi-vision sensory perception and\nmulti-vision sensory reasoning on physical sensor knowledge proficiency across\ndifferent formats, covering different types of sensor-related questions. We\nutilized these samples to assess ten leading LVLMs. The results showed that\nmost models displayed deficiencies in multi-vision sensory reasoning to varying\nextents. Codes and data are available at https://github.com/top-yun/SPARK",
+      "upvotes": 11
+    },
+    {
+      "title": "SEA: Supervised Embedding Alignment for Token-Level Visual-Textual Integration in MLLMs",
+      "url": "https://huggingface.co/papers/2408.11813",
+      "authors": [
+        "Yajie Zhang",
+        "Ke Lin",
+        "Jiahao Wang",
+        "Xin Tao",
+        "Pengfei Wan",
+        "Di Zhang",
+        "Baoqun Yin",
+        "Wentao Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.11813.pdf",
+      "abstract": "Multimodal Large Language Models (MLLMs) have recently demonstrated\nremarkable perceptual and reasoning abilities, typically comprising a Vision\nEncoder, an Adapter, and a Large Language Model (LLM). The adapter serves as\nthe critical bridge between the visual and language components. However,\ntraining adapters with image-level supervision often results in significant\nmisalignment, undermining the LLMs' capabilities and limiting the potential of\nMultimodal LLMs. To address this, we introduce Supervised Embedding Alignment\n(SEA), a token-level alignment method that leverages vision-language\npre-trained models, such as CLIP, to align visual tokens with the LLM's\nembedding space through contrastive learning. This approach ensures a more\ncoherent integration of visual and language representations, enhancing the\nperformance and interpretability of multimodal LLMs while preserving their\ninherent capabilities. Extensive experiments show that SEA effectively improves\nMLLMs, particularly for smaller models, without adding extra data or inference\ncomputation. SEA also lays the groundwork for developing more general and\nadaptable solutions to enhance multimodal systems.",
+      "upvotes": 10
+    },
+    {
+      "title": "Anim-Director: A Large Multimodal Model Powered Agent for Controllable Animation Video Generation",
+      "url": "https://huggingface.co/papers/2408.09787",
+      "authors": [
+        "Haoyuan Shi",
+        "Baotian Hu",
+        "Longyue Wang",
+        "Jiashun Zhu",
+        "Jinyi Xu",
+        "Zhen Zhao",
+        "Min Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.09787.pdf",
+      "abstract": "Traditional animation generation methods depend on training generative models\nwith human-labelled data, entailing a sophisticated multi-stage pipeline that\ndemands substantial human effort and incurs high training costs. Due to limited\nprompting plans, these methods typically produce brief, information-poor, and\ncontext-incoherent animations. To overcome these limitations and automate the\nanimation process, we pioneer the introduction of large multimodal models\n(LMMs) as the core processor to build an autonomous animation-making agent,\nnamed Anim-Director. This agent mainly harnesses the advanced understanding and\nreasoning capabilities of LMMs and generative AI tools to create animated\nvideos from concise narratives or simple instructions. Specifically, it\noperates in three main stages: Firstly, the Anim-Director generates a coherent\nstoryline from user inputs, followed by a detailed director's script that\nencompasses settings of character profiles and interior/exterior descriptions,\nand context-coherent scene descriptions that include appearing characters,\ninteriors or exteriors, and scene events. Secondly, we employ LMMs with the\nimage generation tool to produce visual images of settings and scenes. These\nimages are designed to maintain visual consistency across different scenes\nusing a visual-language prompting method that combines scene descriptions and\nimages of the appearing character and setting. Thirdly, scene images serve as\nthe foundation for producing animated videos, with LMMs generating prompts to\nguide this process. The whole process is notably autonomous without manual\nintervention, as the LMMs interact seamlessly with generative tools to generate\nprompts, evaluate visual quality, and select the best one to optimize the final\noutput.",
+      "upvotes": 6
+    },
+    {
+      "title": "Video-Foley: Two-Stage Video-To-Sound Generation via Temporal Event Condition For Foley Sound",
+      "url": "https://huggingface.co/papers/2408.11915",
+      "authors": [
+        "Jaekwon Im",
+        "Dabin Kim",
+        "Juhan Nam"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.11915.pdf",
+      "abstract": "Foley sound synthesis is crucial for multimedia production, enhancing user\nexperience by synchronizing audio and video both temporally and semantically.\nRecent studies on automating this labor-intensive process through\nvideo-to-sound generation face significant challenges. Systems lacking explicit\ntemporal features suffer from poor controllability and alignment, while\ntimestamp-based models require costly and subjective human annotation. We\npropose Video-Foley, a video-to-sound system using Root Mean Square (RMS) as a\ntemporal event condition with semantic timbre prompts (audio or text). RMS, a\nframe-level intensity envelope feature closely related to audio semantics,\nensures high controllability and synchronization. The annotation-free\nself-supervised learning framework consists of two stages, Video2RMS and\nRMS2Sound, incorporating novel ideas including RMS discretization and\nRMS-ControlNet with a pretrained text-to-audio model. Our extensive evaluation\nshows that Video-Foley achieves state-of-the-art performance in audio-visual\nalignment and controllability for sound timing, intensity, timbre, and nuance.\nCode, model weights, and demonstrations are available on the accompanying\nwebsite. (https://jnwnlee.github.io/video-foley-demo)",
+      "upvotes": 6
+    },
+    {
+      "title": "Subsurface Scattering for 3D Gaussian Splatting",
+      "url": "https://huggingface.co/papers/2408.12282",
+      "authors": [
+        "Arjun Majumdar",
+        "Andreas Engelhardt",
+        "Raphael Braun",
+        "Hendrik P. A. Lensch"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.12282.pdf",
+      "abstract": "3D reconstruction and relighting of objects made from scattering materials\npresent a significant challenge due to the complex light transport beneath the\nsurface. 3D Gaussian Splatting introduced high-quality novel view synthesis at\nreal-time speeds. While 3D Gaussians efficiently approximate an object's\nsurface, they fail to capture the volumetric properties of subsurface\nscattering. We propose a framework for optimizing an object's shape together\nwith the radiance transfer field given multi-view OLAT (one light at a time)\ndata. Our method decomposes the scene into an explicit surface represented as\n3D Gaussians, with a spatially varying BRDF, and an implicit volumetric\nrepresentation of the scattering component. A learned incident light field\naccounts for shadowing. We optimize all parameters jointly via ray-traced\ndifferentiable rendering. Our approach enables material editing, relighting and\nnovel view synthesis at interactive rates. We show successful application on\nsynthetic data and introduce a newly acquired multi-view multi-light dataset of\nobjects in a light-stage setup. Compared to previous work we achieve comparable\nor better results at a fraction of optimization and rendering time while\nenabling detailed control over material attributes. Project page\nhttps://sss.jdihlmann.com/",
+      "upvotes": 5
+    },
+    {
+      "title": "Evidence-backed Fact Checking using RAG and Few-Shot In-Context Learning with LLMs",
+      "url": "https://huggingface.co/papers/2408.12060",
+      "authors": [
+        "Ronit Singhal",
+        "Pransh Patwa",
+        "Parth Patwa",
+        "Amitava Das"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.12060.pdf",
+      "abstract": "Given the widespread dissemination of misinformation on social media,\nimplementing fact-checking mechanisms for online claims is essential. Manually\nverifying every claim is highly challenging, underscoring the need for an\nautomated fact-checking system. This paper presents our system designed to\naddress this issue. We utilize the Averitec dataset to assess the veracity of\nclaims. In addition to veracity prediction, our system provides supporting\nevidence, which is extracted from the dataset. We develop a Retrieve and\nGenerate (RAG) pipeline to extract relevant evidence sentences from a knowledge\nbase, which are then inputted along with the claim into a large language model\n(LLM) for classification. We also evaluate the few-shot In-Context Learning\n(ICL) capabilities of multiple LLMs. Our system achieves an 'Averitec' score of\n0.33, which is a 22% absolute improvement over the baseline. All code will be\nmade available on All code will be made available on\nhttps://github.com/ronit-singhal/evidence-backed-fact-checking-using-rag-and-few-shot-in-context-learning-with-llms.",
+      "upvotes": 4
+    }
+  ]
+}

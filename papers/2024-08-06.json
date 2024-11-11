@@ -1,0 +1,167 @@
+{
+  "date": "2024-08-06",
+  "papers": [
+    {
+      "title": "MiniCPM-V: A GPT-4V Level MLLM on Your Phone",
+      "url": "https://huggingface.co/papers/2408.01800",
+      "authors": [
+        "Yuan Yao",
+        "Chongyi Wang",
+        "Huarong Zhou",
+        "Zhensheng Zou",
+        "Jie Zhou",
+        "Jie Cai",
+        "Xu Han"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.01800.pdf",
+      "abstract": "The recent surge of Multimodal Large Language Models (MLLMs) has\nfundamentally reshaped the landscape of AI research and industry, shedding\nlight on a promising path toward the next AI milestone. However, significant\nchallenges remain preventing MLLMs from being practical in real-world\napplications. The most notable challenge comes from the huge cost of running an\nMLLM with a massive number of parameters and extensive computation. As a\nresult, most MLLMs need to be deployed on high-performing cloud servers, which\ngreatly limits their application scopes such as mobile, offline,\nenergy-sensitive, and privacy-protective scenarios. In this work, we present\nMiniCPM-V, a series of efficient MLLMs deployable on end-side devices. By\nintegrating the latest MLLM techniques in architecture, pretraining and\nalignment, the latest MiniCPM-Llama3-V 2.5 has several notable features: (1)\nStrong performance, outperforming GPT-4V-1106, Gemini Pro and Claude 3 on\nOpenCompass, a comprehensive evaluation over 11 popular benchmarks, (2) strong\nOCR capability and 1.8M pixel high-resolution image perception at any aspect\nratio, (3) trustworthy behavior with low hallucination rates, (4) multilingual\nsupport for 30+ languages, and (5) efficient deployment on mobile phones. More\nimportantly, MiniCPM-V can be viewed as a representative example of a promising\ntrend: The model sizes for achieving usable (e.g., GPT-4V) level performance\nare rapidly decreasing, along with the fast growth of end-side computation\ncapacity. This jointly shows that GPT-4V level MLLMs deployed on end devices\nare becoming increasingly possible, unlocking a wider spectrum of real-world AI\napplications in the near future.",
+      "upvotes": 77
+    },
+    {
+      "title": "Language Model Can Listen While Speaking",
+      "url": "https://huggingface.co/papers/2408.02622",
+      "authors": [
+        "Ziyang Ma",
+        "Yakun Song",
+        "Jian Cong",
+        "Zhuo Chen",
+        "Yuping Wang",
+        "Xie Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.02622.pdf",
+      "abstract": "Dialogue serves as the most natural manner of human-computer interaction\n(HCI). Recent advancements in speech language models (SLM) have significantly\nenhanced speech-based conversational AI. However, these models are limited to\nturn-based conversation, lacking the ability to interact with humans in\nreal-time spoken scenarios, for example, being interrupted when the generated\ncontent is not satisfactory. To address these limitations, we explore full\nduplex modeling (FDM) in interactive speech language models (iSLM), focusing on\nenhancing real-time interaction and, more explicitly, exploring the\nquintessential ability of interruption. We introduce a novel model design,\nnamely listening-while-speaking language model (LSLM), an end-to-end system\nequipped with both listening and speaking channels. Our LSLM employs a\ntoken-based decoder-only TTS for speech generation and a streaming\nself-supervised learning (SSL) encoder for real-time audio input. LSLM fuses\nboth channels for autoregressive generation and detects turn-taking in real\ntime. Three fusion strategies -- early fusion, middle fusion, and late fusion\n-- are explored, with middle fusion achieving an optimal balance between speech\ngeneration and real-time interaction. Two experimental settings, command-based\nFDM and voice-based FDM, demonstrate LSLM's robustness to noise and sensitivity\nto diverse instructions. Our results highlight LSLM's capability to achieve\nduplex communication with minimal impact on existing systems. This study aims\nto advance the development of interactive speech dialogue systems, enhancing\ntheir applicability in real-world contexts.",
+      "upvotes": 37
+    },
+    {
+      "title": "RAG Foundry: A Framework for Enhancing LLMs for Retrieval Augmented Generation",
+      "url": "https://huggingface.co/papers/2408.02545",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2408.02545.pdf",
+      "abstract": "Implementing Retrieval-Augmented Generation (RAG) systems is inherently\ncomplex, requiring deep understanding of data, use cases, and intricate design\ndecisions. Additionally, evaluating these systems presents significant\nchallenges, necessitating assessment of both retrieval accuracy and generative\nquality through a multi-faceted approach. We introduce RAG Foundry, an\nopen-source framework for augmenting large language models for RAG use cases.\nRAG Foundry integrates data creation, training, inference and evaluation into a\nsingle workflow, facilitating the creation of data-augmented datasets for\ntraining and evaluating large language models in RAG settings. This integration\nenables rapid prototyping and experimentation with various RAG techniques,\nallowing users to easily generate datasets and train RAG models using internal\nor specialized knowledge sources. We demonstrate the framework effectiveness by\naugmenting and fine-tuning Llama-3 and Phi-3 models with diverse RAG\nconfigurations, showcasing consistent improvements across three\nknowledge-intensive datasets. Code is released as open-source in\nhttps://github.com/IntelLabs/RAGFoundry.",
+      "upvotes": 33
+    },
+    {
+      "title": "Lumina-mGPT: Illuminate Flexible Photorealistic Text-to-Image Generation with Multimodal Generative Pretraining",
+      "url": "https://huggingface.co/papers/2408.02657",
+      "authors": [
+        "Yu Qiao",
+        "Peng Gao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.02657.pdf",
+      "abstract": "We present Lumina-mGPT, a family of multimodal autoregressive models capable\nof various vision and language tasks, particularly excelling in generating\nflexible photorealistic images from text descriptions. Unlike existing\nautoregressive image generation approaches, Lumina-mGPT employs a pretrained\ndecoder-only transformer as a unified framework for modeling multimodal token\nsequences. Our key insight is that a simple decoder-only transformer with\nmultimodal Generative PreTraining (mGPT), utilizing the next-token prediction\nobjective on massive interleaved text-image sequences, can learn broad and\ngeneral multimodal capabilities, thereby illuminating photorealistic\ntext-to-image generation. Building on these pretrained models, we propose\nFlexible Progressive Supervised Finetuning (FP-SFT) on high-quality image-text\npairs to fully unlock their potential for high-aesthetic image synthesis at any\nresolution while maintaining their general multimodal capabilities.\nFurthermore, we introduce Ominiponent Supervised Finetuning (Omni-SFT),\ntransforming Lumina-mGPT into a foundation model that seamlessly achieves\nomnipotent task unification. The resulting model demonstrates versatile\nmultimodal capabilities, including visual generation tasks like flexible\ntext-to-image generation and controllable generation, visual recognition tasks\nlike segmentation and depth estimation, and vision-language tasks like\nmultiturn visual question answering. Additionally, we analyze the differences\nand similarities between diffusion-based and autoregressive methods in a direct\ncomparison.",
+      "upvotes": 32
+    },
+    {
+      "title": "MeshAnything V2: Artist-Created Mesh Generation With Adjacent Mesh Tokenization",
+      "url": "https://huggingface.co/papers/2408.02555",
+      "authors": [
+        "Jun Zhu",
+        "Guosheng Lin"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.02555.pdf",
+      "abstract": "We introduce MeshAnything V2, an autoregressive transformer that generates\nArtist-Created Meshes (AM) aligned to given shapes. It can be integrated with\nvarious 3D asset production pipelines to achieve high-quality, highly\ncontrollable AM generation. MeshAnything V2 surpasses previous methods in both\nefficiency and performance using models of the same size. These improvements\nare due to our newly proposed mesh tokenization method: Adjacent Mesh\nTokenization (AMT). Different from previous methods that represent each face\nwith three vertices, AMT uses a single vertex whenever possible. Compared to\nprevious methods, AMT requires about half the token sequence length to\nrepresent the same mesh in average. Furthermore, the token sequences from AMT\nare more compact and well-structured, fundamentally benefiting AM generation.\nOur extensive experiments show that AMT significantly improves the efficiency\nand performance of AM generation. Project Page:\nhttps://buaacyw.github.io/meshanything-v2/",
+      "upvotes": 28
+    },
+    {
+      "title": "Self-Taught Evaluators",
+      "url": "https://huggingface.co/papers/2408.02666",
+      "authors": [
+        "Jane Dwivedi-Yu",
+        "Maryam Fazel-Zarandi",
+        "Xian Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.02666.pdf",
+      "abstract": "Model-based evaluation is at the heart of successful model development -- as\na reward model for training, and as a replacement for human evaluation. To\ntrain such evaluators, the standard approach is to collect a large amount of\nhuman preference judgments over model responses, which is costly and the data\nbecomes stale as models improve. In this work, we present an approach that aims\nto im-prove evaluators without human annotations, using synthetic training data\nonly. Starting from unlabeled instructions, our iterative self-improvement\nscheme generates contrasting model outputs and trains an LLM-as-a-Judge to\nproduce reasoning traces and final judgments, repeating this training at each\nnew iteration using the improved predictions. Without any labeled preference\ndata, our Self-Taught Evaluator can improve a strong LLM (Llama3-70B-Instruct)\nfrom 75.4 to 88.3 (88.7 with majority vote) on RewardBench. This outperforms\ncommonly used LLM judges such as GPT-4 and matches the performance of the\ntop-performing reward models trained with labeled examples.",
+      "upvotes": 26
+    },
+    {
+      "title": "Unleashing the Power of Data Tsunami: A Comprehensive Survey on Data Assessment and Selection for Instruction Tuning of Language Models",
+      "url": "https://huggingface.co/papers/2408.02085",
+      "authors": [
+        "Yuncheng Yang",
+        "Yuchen Shi",
+        "Zihan Xu",
+        "Yun Gu",
+        "Ke Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.02085.pdf",
+      "abstract": "Instruction tuning plays a critical role in aligning large language models\n(LLMs) with human preference. Despite the vast amount of open instruction\ndatasets, naively training a LLM on all existing instructions may not be\noptimal and practical. To pinpoint the most beneficial datapoints, data\nassessment and selection methods have been proposed in the fields of natural\nlanguage processing (NLP) and deep learning. However, under the context of\ninstruction tuning, there still exists a gap in knowledge on what kind of data\nevaluation metrics can be employed and how they can be integrated into the\nselection mechanism. To bridge this gap, we present a comprehensive review on\nexisting literature of data assessment and selection especially for instruction\ntuning of LLMs. We systematically categorize all applicable methods into\nquality-based, diversity-based, and importance-based ones where a unified,\nfine-grained taxonomy is structured. For each category, representative methods\nare elaborated to describe the landscape of relevant research. In addition,\ncomparison between latest methods is conducted on their officially reported\nresults to provide in-depth discussions on their limitations. Finally, we\nsummarize the open challenges and propose the promosing avenues for future\nstudies. All related contents are available at\nhttps://github.com/yuleiqin/fantastic-data-engineering.",
+      "upvotes": 17
+    },
+    {
+      "title": "VidGen-1M: A Large-Scale Dataset for Text-to-video Generation",
+      "url": "https://huggingface.co/papers/2408.02629",
+      "authors": [
+        "Zhiyu Tan",
+        "Xiaomeng Yang",
+        "Hao Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.02629.pdf",
+      "abstract": "The quality of video-text pairs fundamentally determines the upper bound of\ntext-to-video models. Currently, the datasets used for training these models\nsuffer from significant shortcomings, including low temporal consistency,\npoor-quality captions, substandard video quality, and imbalanced data\ndistribution. The prevailing video curation process, which depends on image\nmodels for tagging and manual rule-based curation, leads to a high\ncomputational load and leaves behind unclean data. As a result, there is a lack\nof appropriate training datasets for text-to-video models. To address this\nproblem, we present VidGen-1M, a superior training dataset for text-to-video\nmodels. Produced through a coarse-to-fine curation strategy, this dataset\nguarantees high-quality videos and detailed captions with excellent temporal\nconsistency. When used to train the video generation model, this dataset has\nled to experimental results that surpass those obtained with other models.",
+      "upvotes": 13
+    },
+    {
+      "title": "ProCreate, Dont Reproduce! Propulsive Energy Diffusion for Creative Generation",
+      "url": "https://huggingface.co/papers/2408.02226",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2408.02226.pdf",
+      "abstract": "In this paper, we propose ProCreate, a simple and easy-to-implement method to\nimprove sample diversity and creativity of diffusion-based image generative\nmodels and to prevent training data reproduction. ProCreate operates on a set\nof reference images and actively propels the generated image embedding away\nfrom the reference embeddings during the generation process. We propose FSCG-8\n(Few-Shot Creative Generation 8), a few-shot creative generation dataset on\neight different categories -- encompassing different concepts, styles, and\nsettings -- in which ProCreate achieves the highest sample diversity and\nfidelity. Furthermore, we show that ProCreate is effective at preventing\nreplicating training data in a large-scale evaluation using training text\nprompts. Code and FSCG-8 are available at\nhttps://github.com/Agentic-Learning-AI-Lab/procreate-diffusion-public. The\nproject page is available at https://procreate-diffusion.github.io.",
+      "upvotes": 10
+    },
+    {
+      "title": "BioMamba: A Pre-trained Biomedical Language Representation Model Leveraging Mamba",
+      "url": "https://huggingface.co/papers/2408.02600",
+      "authors": [
+        "Yingzhou Lu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.02600.pdf",
+      "abstract": "The advancement of natural language processing (NLP) in biology hinges on\nmodels' ability to interpret intricate biomedical literature. Traditional\nmodels often struggle with the complex and domain-specific language in this\nfield. In this paper, we present BioMamba, a pre-trained model specifically\ndesigned for biomedical text mining. BioMamba builds upon the Mamba\narchitecture and is pre-trained on an extensive corpus of biomedical\nliterature. Our empirical studies demonstrate that BioMamba significantly\noutperforms models like BioBERT and general-domain Mamba across various\nbiomedical tasks. For instance, BioMamba achieves a 100 times reduction in\nperplexity and a 4 times reduction in cross-entropy loss on the BioASQ test\nset. We provide an overview of the model architecture, pre-training process,\nand fine-tuning techniques. Additionally, we release the code and trained model\nto facilitate further research.",
+      "upvotes": 8
+    },
+    {
+      "title": "The Impact of Hyperparameters on Large Language Model Inference Performance: An Evaluation of vLLM and HuggingFace Pipelines",
+      "url": "https://huggingface.co/papers/2408.01050",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2408.01050.pdf",
+      "abstract": "The recent surge of open-source large language models (LLMs) enables\ndevelopers to create AI-based solutions while maintaining control over aspects\nsuch as privacy and compliance, thereby providing governance and ownership of\nthe model deployment process. To utilize these LLMs, inference engines are\nneeded. These engines load the model's weights onto available resources, such\nas GPUs, and process queries to generate responses. The speed of inference, or\nperformance, of the LLM, is critical for real-time applications, as it computes\nmillions or billions of floating point operations per inference. Recently,\nadvanced inference engines such as vLLM have emerged, incorporating novel\nmechanisms such as efficient memory management to achieve state-of-the-art\nperformance. In this paper, we analyze the performance, particularly the\nthroughput (tokens generated per unit of time), of 20 LLMs using two inference\nlibraries: vLLM and HuggingFace's pipelines. We investigate how various\nhyperparameters, which developers must configure, influence inference\nperformance. Our results reveal that throughput landscapes are irregular, with\ndistinct peaks, highlighting the importance of hyperparameter optimization to\nachieve maximum performance. We also show that applying hyperparameter\noptimization when upgrading or downgrading the GPU model used for inference can\nimprove throughput from HuggingFace pipelines by an average of 9.16% and 13.7%,\nrespectively.",
+      "upvotes": 8
+    },
+    {
+      "title": "ExoViP: Step-by-step Verification and Exploration with Exoskeleton Modules for Compositional Visual Reasoning",
+      "url": "https://huggingface.co/papers/2408.02210",
+      "authors": [
+        "Alan Yuille"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.02210.pdf",
+      "abstract": "Compositional visual reasoning methods, which translate a complex query into\na structured composition of feasible visual tasks, have exhibited a strong\npotential in complicated multi-modal tasks. Empowered by recent advances in\nlarge language models (LLMs), this multi-modal challenge has been brought to a\nnew stage by treating LLMs as few-shot/zero-shot planners, i.e.,\nvision-language (VL) programming. Such methods, despite their numerous merits,\nsuffer from challenges due to LLM planning mistakes or inaccuracy of visual\nexecution modules, lagging behind the non-compositional models. In this work,\nwe devise a \"plug-and-play\" method, ExoViP, to correct errors in both the\nplanning and execution stages through introspective verification. We employ\nverification modules as \"exoskeletons\" to enhance current VL programming\nschemes. Specifically, our proposed verification module utilizes a mixture of\nthree sub-verifiers to validate predictions after each reasoning step,\nsubsequently calibrating the visual module predictions and refining the\nreasoning trace planned by LLMs. Experimental results on two representative VL\nprogramming methods showcase consistent improvements on five compositional\nreasoning tasks on standard benchmarks. In light of this, we believe that\nExoViP can foster better performance and generalization on open-domain\nmulti-modal challenges.",
+      "upvotes": 7
+    },
+    {
+      "title": "GPUDrive: Data-driven, multi-agent driving simulation at 1 million FPS",
+      "url": "https://huggingface.co/papers/2408.01584",
+      "authors": [
+        "Saman Kazemkhani",
+        "Aarav Pandya",
+        "Daphne Cornelisse"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.01584.pdf",
+      "abstract": "Multi-agent learning algorithms have been successful at generating superhuman\nplanning in a wide variety of games but have had little impact on the design of\ndeployed multi-agent planners. A key bottleneck in applying these techniques to\nmulti-agent planning is that they require billions of steps of experience. To\nenable the study of multi-agent planning at this scale, we present GPUDrive, a\nGPU-accelerated, multi-agent simulator built on top of the Madrona Game Engine\nthat can generate over a million steps of experience per second. Observation,\nreward, and dynamics functions are written directly in C++, allowing users to\ndefine complex, heterogeneous agent behaviors that are lowered to\nhigh-performance CUDA. We show that using GPUDrive we are able to effectively\ntrain reinforcement learning agents over many scenes in the Waymo Motion\ndataset, yielding highly effective goal-reaching agents in minutes for\nindividual scenes and generally capable agents in a few hours. We ship these\ntrained agents as part of the code base at\nhttps://github.com/Emerge-Lab/gpudrive.",
+      "upvotes": 7
+    },
+    {
+      "title": "Operationalizing Contextual Integrity in Privacy-Conscious Assistants",
+      "url": "https://huggingface.co/papers/2408.02373",
+      "authors": [
+        "Ren Yi",
+        "Ilia Shumailov",
+        "Aneesh Pappu",
+        "Chongyang Shi",
+        "Robert Stanforth",
+        "Pushmeet Kohli"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.02373.pdf",
+      "abstract": "Advanced AI assistants combine frontier LLMs and tool access to autonomously\nperform complex tasks on behalf of users. While the helpfulness of such\nassistants can increase dramatically with access to user information including\nemails and documents, this raises privacy concerns about assistants sharing\ninappropriate information with third parties without user supervision. To steer\ninformation-sharing assistants to behave in accordance with privacy\nexpectations, we propose to operationalize contextual integrity\n(CI), a framework that equates privacy with the appropriate flow of information\nin a given context. In particular, we design and evaluate a number of\nstrategies to steer assistants' information-sharing actions to be CI compliant.\nOur evaluation is based on a novel form filling benchmark composed of synthetic\ndata and human annotations, and it reveals that prompting frontier LLMs to\nperform CI-based reasoning yields strong results.",
+      "upvotes": 4
+    }
+  ]
+}

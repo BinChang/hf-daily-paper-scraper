@@ -1,0 +1,233 @@
+{
+  "date": "2024-11-03",
+  "papers": [
+    {
+      "title": "Unpacking SDXL Turbo: Interpreting Text-to-Image Models with Sparse Autoencoders",
+      "url": "https://huggingface.co/papers/2410.22366",
+      "authors": [
+        "Chris Wendler",
+        "Mikhail Terekhov",
+        "Robert West",
+        "Caglar Gulcehre"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.22366.pdf",
+      "abstract": "Sparse autoencoders (SAEs) have become a core ingredient in the reverse\nengineering of large-language models (LLMs). For LLMs, they have been shown to\ndecompose intermediate representations that often are not interpretable\ndirectly into sparse sums of interpretable features, facilitating better\ncontrol and subsequent analysis. However, similar analyses and approaches have\nbeen lacking for text-to-image models. We investigated the possibility of using\nSAEs to learn interpretable features for a few-step text-to-image diffusion\nmodels, such as SDXL Turbo. To this end, we train SAEs on the updates performed\nby transformer blocks within SDXL Turbo's denoising U-net. We find that their\nlearned features are interpretable, causally influence the generation process,\nand reveal specialization among the blocks. In particular, we find one block\nthat deals mainly with image composition, one that is mainly responsible for\nadding local details, and one for color, illumination, and style. Therefore,\nour work is an important first step towards better understanding the internals\nof generative text-to-image models like SDXL Turbo and showcases the potential\nof features learned by SAEs for the visual domain.\n  Code is available at https://github.com/surkovv/sdxl-unbox",
+      "upvotes": 72
+    },
+    {
+      "title": "What Happened in LLMs Layers when Trained for Fast vs. Slow Thinking: A Gradient Perspective",
+      "url": "https://huggingface.co/papers/2410.23743",
+      "authors": [
+        "Yanhong Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.23743.pdf",
+      "abstract": "What makes a difference in the post-training of LLMs? We investigate the\ntraining patterns of different layers in large language models (LLMs), through\nthe lens of gradient, when training with different responses and initial\nmodels. We are specifically interested in how fast vs. slow thinking affects\nthe layer-wise gradients, given the recent popularity of training LLMs on\nreasoning paths such as chain-of-thoughts (CoT) and process rewards. In our\nstudy, fast thinking without CoT leads to larger gradients and larger\ndifferences of gradients across layers than slow thinking (Detailed CoT),\nindicating the learning stability brought by the latter. Moreover, pre-trained\nLLMs are less affected by the instability of fast thinking than\ninstruction-tuned LLMs. Additionally, we study whether the gradient patterns\ncan reflect the correctness of responses when training different LLMs using\nslow vs. fast thinking paths. The results show that the gradients of slow\nthinking can distinguish correct and irrelevant reasoning paths. As a\ncomparison, we conduct similar gradient analyses on non-reasoning knowledge\nlearning tasks, on which, however, trivially increasing the response length\ndoes not lead to similar behaviors of slow thinking. Our study strengthens\nfundamental understandings of LLM training and sheds novel insights on its\nefficiency and stability, which pave the way towards building a generalizable\nSystem-2 agent. Our code, data, and gradient statistics can be found in:\nhttps://github.com/MingLiiii/Layer_Gradient.",
+      "upvotes": 57
+    },
+    {
+      "title": "A Pointer Network-based Approach for Joint Extraction and Detection of Multi-Label Multi-Class Intents",
+      "url": "https://huggingface.co/papers/2410.22476",
+      "authors": [
+        "Ankan Mullick",
+        "Sombit Bose",
+        "Gajula Sai Chaitanya",
+        "Pawan Goyal"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.22476.pdf",
+      "abstract": "In task-oriented dialogue systems, intent detection is crucial for\ninterpreting user queries and providing appropriate responses. Existing\nresearch primarily addresses simple queries with a single intent, lacking\neffective systems for handling complex queries with multiple intents and\nextracting different intent spans. Additionally, there is a notable absence of\nmultilingual, multi-intent datasets. This study addresses three critical tasks:\nextracting multiple intent spans from queries, detecting multiple intents, and\ndeveloping a multi-lingual multi-label intent dataset. We introduce a novel\nmulti-label multi-class intent detection dataset (MLMCID-dataset) curated from\nexisting benchmark datasets. We also propose a pointer network-based\narchitecture (MLMCID) to extract intent spans and detect multiple intents with\ncoarse and fine-grained labels in the form of sextuplets. Comprehensive\nanalysis demonstrates the superiority of our pointer network-based system over\nbaseline approaches in terms of accuracy and F1-score across various datasets.",
+      "upvotes": 24
+    },
+    {
+      "title": "SelfCodeAlign: Self-Alignment for Code Generation",
+      "url": "https://huggingface.co/papers/2410.24198",
+      "authors": [
+        "Federico Cassano",
+        "Jiawei Liu",
+        "Naman Jain",
+        "Harm de Vries",
+        "Arjun Guha",
+        "Lingming Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.24198.pdf",
+      "abstract": "Instruction tuning is a supervised fine-tuning approach that significantly\nimproves the ability of large language models (LLMs) to follow human\ninstructions. We propose SelfCodeAlign, the first fully transparent and\npermissive pipeline for self-aligning code LLMs without extensive human\nannotations or distillation. SelfCodeAlign employs the same base model for\ninference throughout the data generation process. It first extracts diverse\ncoding concepts from high-quality seed snippets to generate new tasks. It then\nsamples multiple responses per task, pairs each with test cases, and validates\nthem in a sandbox environment. Finally, passing examples are selected for\ninstruction tuning. In our primary experiments, we use SelfCodeAlign with\nCodeQwen1.5-7B to generate a dataset of 74k instruction-response pairs.\nFinetuning on this dataset leads to a model that achieves a 67.1 pass@1 on\nHumanEval+, surpassing CodeLlama-70B-Instruct despite being ten times smaller.\nAcross all benchmarks, this finetuned model consistently outperforms the\noriginal version trained with OctoPack, the previous state-of-the-art method\nfor instruction tuning without human annotations or distillation. Additionally,\nwe show that SelfCodeAlign is effective across LLMs of various sizes, from 3B\nto 33B, and that the base models can benefit more from alignment with their own\ndata distribution. We further validate each component's effectiveness in our\npipeline, showing that SelfCodeAlign outperforms both direct distillation from\nGPT-4o and leading GPT-3.5-based distillation methods, such as OSS-Instruct and\nEvol-Instruct. SelfCodeAlign has also led to the creation of\nStarCoder2-Instruct, the first fully transparent, permissively licensed, and\nself-aligned code LLM that achieves state-of-the-art coding performance.",
+      "upvotes": 20
+    },
+    {
+      "title": "BitStack: Fine-Grained Size Control for Compressed Large Language Models in Variable Memory Environments",
+      "url": "https://huggingface.co/papers/2410.23918",
+      "authors": [
+        "Pengyu Wang",
+        "Bo Wang",
+        "Dong Zhang",
+        "Yunhua Zhou",
+        "Xipeng Qiu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.23918.pdf",
+      "abstract": "Large language models (LLMs) have revolutionized numerous applications, yet\ntheir deployment remains challenged by memory constraints on local devices.\nWhile scaling laws have enhanced LLM capabilities, the primary bottleneck has\nshifted from capability to availability, emphasizing the need\nfor efficient memory management. Traditional compression methods, such as\nquantization, often require predefined compression ratios and separate\ncompression processes for each setting, complicating deployment in variable\nmemory environments. In this paper, we introduce BitStack, a novel,\ntraining-free weight compression approach that enables megabyte-level\ntrade-offs between memory usage and model performance. By leveraging weight\ndecomposition, BitStack can dynamically adjust the model size with minimal\ntransmission between running memory and storage devices. Our approach\niteratively decomposes weight matrices while considering the significance of\neach parameter, resulting in an approximately 1-bit per parameter residual\nblock in each decomposition iteration. These blocks are sorted and stacked in\nstorage as basic transmission units, with different quantities loaded based on\ncurrent memory availability. Extensive experiments across a wide range of tasks\ndemonstrate that, despite offering fine-grained size control, BitStack\nconsistently matches or surpasses strong quantization baselines, particularly\nat extreme compression ratios. To the best of our knowledge, this is the first\ndecomposition-based method that effectively bridges the gap to practical\ncompression techniques like quantization. Code is available at\nhttps://github.com/xinghaow99/BitStack.",
+      "upvotes": 17
+    },
+    {
+      "title": "NeuZip: Memory-Efficient Training and Inference with Dynamic Compression of Neural Networks",
+      "url": "https://huggingface.co/papers/2410.20650",
+      "authors": [
+        "Yanshuai Cao",
+        "Lili Mou"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.20650.pdf",
+      "abstract": "The performance of neural networks improves when more parameters are used.\nHowever, the model sizes are constrained by the available on-device memory\nduring training and inference. Although applying techniques like quantization\ncan alleviate the constraint, they suffer from performance degradation. In this\nwork, we introduce NeuZip, a new weight compression scheme based on the entropy\nof floating-point numbers in neural networks. With NeuZip, we are able to\nachieve memory-efficient training and inference without sacrificing\nperformance. Notably, we significantly reduce the memory footprint of training\na Llama-3 8B model from 31GB to less than 16GB, while keeping the training\ndynamics fully unchanged. In inference, our method can reduce memory usage by\nmore than half while maintaining near-lossless performance. Our code is\npublicly available.",
+      "upvotes": 15
+    },
+    {
+      "title": "Language Models can Self-Lengthen to Generate Long Texts",
+      "url": "https://huggingface.co/papers/2410.23933",
+      "authors": [
+        "Tianyi Tang",
+        "Bowen Yu",
+        "An Yang",
+        "Dayiheng Liu",
+        "Bofei Gao",
+        "Jianhong Tu",
+        "Yichang Zhang",
+        "Jingren Zhou",
+        "Junyang Lin"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.23933.pdf",
+      "abstract": "Recent advancements in Large Language Models (LLMs) have significantly\nenhanced their ability to process long contexts, yet a notable gap remains in\ngenerating long, aligned outputs. This limitation stems from a training gap\nwhere pre-training lacks effective instructions for long-text generation, and\npost-training data primarily consists of short query-response pairs. Current\napproaches, such as instruction backtranslation and behavior imitation, face\nchallenges including data quality, copyright issues, and constraints on\nproprietary model usage. In this paper, we introduce an innovative iterative\ntraining framework called Self-Lengthen that leverages only the intrinsic\nknowledge and skills of LLMs without the need for auxiliary data or proprietary\nmodels. The framework consists of two roles: the Generator and the Extender.\nThe Generator produces the initial response, which is then split and expanded\nby the Extender. This process results in a new, longer response, which is used\nto train both the Generator and the Extender iteratively. Through this process,\nthe models are progressively trained to handle increasingly longer responses.\nExperiments on benchmarks and human evaluations show that Self-Lengthen\noutperforms existing methods in long-text generation, when applied to top\nopen-source LLMs such as Qwen2 and LLaMA3. Our code is publicly available at\nhttps://github.com/QwenLM/Self-Lengthen.",
+      "upvotes": 15
+    },
+    {
+      "title": "Constraint Back-translation Improves Complex Instruction Following of Large Language Models",
+      "url": "https://huggingface.co/papers/2410.24175",
+      "authors": [
+        "Hao Peng",
+        "Xiaozhi Wang",
+        "Bin Xu",
+        "Lei Hou",
+        "Juanzi Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.24175.pdf",
+      "abstract": "Large language models (LLMs) struggle to follow instructions with complex\nconstraints in format, length, etc. Following the conventional\ninstruction-tuning practice, previous works conduct post-training on complex\ninstruction-response pairs generated by feeding complex instructions to\nadvanced LLMs. However, even advanced LLMs cannot follow complex instructions\nwell, thus limiting the quality of generated data. In this work, we find that\nexisting datasets inherently contain implicit complex constraints and propose a\nnovel data generation technique, constraint back-translation. Specifically, we\ntake the high-quality instruction-response pairs in existing datasets and only\nadopt advanced LLMs to add complex constraints already met by the responses to\nthe instructions, which naturally reduces costs and data noise. In the\nexperiments, we adopt Llama3-70B-Instruct to back-translate constraints and\ncreate a high-quality complex instruction-response dataset, named CRAB. We\npresent that post-training on CRAB improves multiple backbone LLMs' complex\ninstruction-following ability, evaluated on extensive instruction-following\nbenchmarks. We further find that constraint back-translation also serves as a\nuseful auxiliary training objective in post-training. Our code, data, and\nmodels will be released to facilitate future research.",
+      "upvotes": 15
+    },
+    {
+      "title": "Learning Video Representations without Natural Videos",
+      "url": "https://huggingface.co/papers/2410.24213",
+      "authors": [
+        "Xueyang Yu",
+        "Xinlei Chen",
+        "Yossi Gandelsman"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.24213.pdf",
+      "abstract": "In this paper, we show that useful video representations can be learned from\nsynthetic videos and natural images, without incorporating natural videos in\nthe training. We propose a progression of video datasets synthesized by simple\ngenerative processes, that model a growing set of natural video properties\n(e.g. motion, acceleration, and shape transformations). The downstream\nperformance of video models pre-trained on these generated datasets gradually\nincreases with the dataset progression. A VideoMAE model pre-trained on our\nsynthetic videos closes 97.2% of the performance gap on UCF101 action\nclassification between training from scratch and self-supervised pre-training\nfrom natural videos, and outperforms the pre-trained model on HMDB51.\nIntroducing crops of static images to the pre-training stage results in similar\nperformance to UCF101 pre-training and outperforms the UCF101 pre-trained model\non 11 out of 14 out-of-distribution datasets of UCF101-P. Analyzing the\nlow-level properties of the datasets, we identify correlations between frame\ndiversity, frame similarity to natural data, and downstream performance. Our\napproach provides a more controllable and transparent alternative to video data\ncuration processes for pre-training.",
+      "upvotes": 14
+    },
+    {
+      "title": "AAAR-1.0: Assessing AI's Potential to Assist Research",
+      "url": "https://huggingface.co/papers/2410.22394",
+      "authors": [
+        "Renze Lou",
+        "Hanzi Xu",
+        "Sijia Wang",
+        "Jiangshu Du",
+        "Xiaoxin Lu",
+        "Yuxuan Sun",
+        "Yusen Zhang",
+        "Jihyun Janice Ahn",
+        "Hongchao Fang",
+        "Zhuoyang Zou",
+        "Wenchao Ma",
+        "Xi Li",
+        "Kai Zhang",
+        "Congying Xia",
+        "Lifu Huang",
+        "Wenpeng Yin"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.22394.pdf",
+      "abstract": "Numerous studies have assessed the proficiency of AI systems, particularly\nlarge language models (LLMs), in facilitating everyday tasks such as email\nwriting, question answering, and creative content generation. However,\nresearchers face unique challenges and opportunities in leveraging LLMs for\ntheir own work, such as brainstorming research ideas, designing experiments,\nand writing or reviewing papers. In this study, we introduce AAAR-1.0, a\nbenchmark dataset designed to evaluate LLM performance in three fundamental,\nexpertise-intensive research tasks: (i) EquationInference, assessing the\ncorrectness of equations based on the contextual information in paper\nsubmissions; (ii) ExperimentDesign, designing experiments to validate research\nideas and solutions; (iii) PaperWeakness, identifying weaknesses in paper\nsubmissions; and (iv) REVIEWCRITIQUE, identifying each segment in human reviews\nis deficient or not. AAAR-1.0 differs from prior benchmarks in two key ways:\nfirst, it is explicitly research-oriented, with tasks requiring deep domain\nexpertise; second, it is researcher-oriented, mirroring the primary activities\nthat researchers engage in on a daily basis. An evaluation of both open-source\nand proprietary LLMs reveals their potential as well as limitations in\nconducting sophisticated research tasks. We will keep iterating AAAR-1.0 to new\nversions.",
+      "upvotes": 13
+    },
+    {
+      "title": "Navigating the Unknown: A Chat-Based Collaborative Interface for Personalized Exploratory Tasks",
+      "url": "https://huggingface.co/papers/2410.24032",
+      "authors": [
+        "Xiaoting Qin",
+        "Zhiyang Zhang",
+        "Jue Zhang",
+        "Qingwei Lin",
+        "Xu Yang",
+        "Dongmei Zhang",
+        "Saravan Rajmohan",
+        "Qi Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.24032.pdf",
+      "abstract": "The rise of large language models (LLMs) has revolutionized user interactions\nwith knowledge-based systems, enabling chatbots to synthesize vast amounts of\ninformation and assist with complex, exploratory tasks. However, LLM-based\nchatbots often struggle to provide personalized support, particularly when\nusers start with vague queries or lack sufficient contextual information. This\npaper introduces the Collaborative Assistant for Personalized Exploration\n(CARE), a system designed to enhance personalization in exploratory tasks by\ncombining a multi-agent LLM framework with a structured user interface. CARE's\ninterface consists of a Chat Panel, Solution Panel, and Needs Panel, enabling\niterative query refinement and dynamic solution generation. The multi-agent\nframework collaborates to identify both explicit and implicit user needs,\ndelivering tailored, actionable solutions. In a within-subject user study with\n22 participants, CARE was consistently preferred over a baseline LLM chatbot,\nwith users praising its ability to reduce cognitive load, inspire creativity,\nand provide more tailored solutions. Our findings highlight CARE's potential to\ntransform LLM-based systems from passive information retrievers to proactive\npartners in personalized problem-solving and exploration.",
+      "upvotes": 8
+    },
+    {
+      "title": "DELTA: Dense Efficient Long-range 3D Tracking for any video",
+      "url": "https://huggingface.co/papers/2410.24211",
+      "authors": [
+        "Tuan Duc Ngo",
+        "Peiye Zhuang",
+        "Chuang Gan",
+        "Evangelos Kalogerakis",
+        "Sergey Tulyakov",
+        "Hsin-Ying Lee",
+        "Chaoyang Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.24211.pdf",
+      "abstract": "Tracking dense 3D motion from monocular videos remains challenging,\nparticularly when aiming for pixel-level precision over long sequences. We\nintroduce \\Approach, a novel method that efficiently tracks every pixel in 3D\nspace, enabling accurate motion estimation across entire videos. Our approach\nleverages a joint global-local attention mechanism for reduced-resolution\ntracking, followed by a transformer-based upsampler to achieve high-resolution\npredictions. Unlike existing methods, which are limited by computational\ninefficiency or sparse tracking, \\Approach delivers dense 3D tracking at scale,\nrunning over 8x faster than previous methods while achieving state-of-the-art\naccuracy. Furthermore, we explore the impact of depth representation on\ntracking performance and identify log-depth as the optimal choice. Extensive\nexperiments demonstrate the superiority of \\Approach on multiple benchmarks,\nachieving new state-of-the-art results in both 2D and 3D dense tracking tasks.\nOur method provides a robust solution for applications requiring fine-grained,\nlong-term motion tracking in 3D space.",
+      "upvotes": 8
+    },
+    {
+      "title": "BenchX: A Unified Benchmark Framework for Medical Vision-Language Pretraining on Chest X-Rays",
+      "url": "https://huggingface.co/papers/2410.21969",
+      "authors": [
+        "Tan Li Hui Faith",
+        "Yanyu Xu",
+        "Sicong Leng",
+        "Xinxing Xu",
+        "Yong Liu",
+        "Rick Siow Mong Goh"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.21969.pdf",
+      "abstract": "Medical Vision-Language Pretraining (MedVLP) shows promise in learning\ngeneralizable and transferable visual representations from paired and unpaired\nmedical images and reports. MedVLP can provide useful features to downstream\ntasks and facilitate adapting task-specific models to new setups using fewer\nexamples. However, existing MedVLP methods often differ in terms of datasets,\npreprocessing, and finetuning implementations. This pose great challenges in\nevaluating how well a MedVLP method generalizes to various clinically-relevant\ntasks due to the lack of unified, standardized, and comprehensive benchmark. To\nfill this gap, we propose BenchX, a unified benchmark framework that enables\nhead-to-head comparison and systematical analysis between MedVLP methods using\npublic chest X-ray datasets. Specifically, BenchX is composed of three\ncomponents: 1) Comprehensive datasets covering nine datasets and four medical\ntasks; 2) Benchmark suites to standardize data preprocessing, train-test\nsplits, and parameter selection; 3) Unified finetuning protocols that\naccommodate heterogeneous MedVLP methods for consistent task adaptation in\nclassification, segmentation, and report generation, respectively. Utilizing\nBenchX, we establish baselines for nine state-of-the-art MedVLP methods and\nfound that the performance of some early MedVLP methods can be enhanced to\nsurpass more recent ones, prompting a revisiting of the developments and\nconclusions from prior works in MedVLP. Our code are available at\nhttps://github.com/yangzhou12/BenchX.",
+      "upvotes": 8
+    },
+    {
+      "title": "Minimum Entropy Coupling with Bottleneck",
+      "url": "https://huggingface.co/papers/2410.21666",
+      "authors": [
+        "Jun Chen",
+        "Ashish Khisti"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.21666.pdf",
+      "abstract": "This paper investigates a novel lossy compression framework operating under\nlogarithmic loss, designed to handle situations where the reconstruction\ndistribution diverges from the source distribution. This framework is\nespecially relevant for applications that require joint compression and\nretrieval, and in scenarios involving distributional shifts due to processing.\nWe show that the proposed formulation extends the classical minimum entropy\ncoupling framework by integrating a bottleneck, allowing for a controlled\ndegree of stochasticity in the coupling. We explore the decomposition of the\nMinimum Entropy Coupling with Bottleneck (MEC-B) into two distinct optimization\nproblems: Entropy-Bounded Information Maximization (EBIM) for the encoder, and\nMinimum Entropy Coupling (MEC) for the decoder. Through extensive analysis, we\nprovide a greedy algorithm for EBIM with guaranteed performance, and\ncharacterize the optimal solution near functional mappings, yielding\nsignificant theoretical insights into the structural complexity of this\nproblem. Furthermore, we illustrate the practical application of MEC-B through\nexperiments in Markov Coding Games (MCGs) under rate limits. These games\nsimulate a communication scenario within a Markov Decision Process, where an\nagent must transmit a compressed message from a sender to a receiver through\nits actions. Our experiments highlight the trade-offs between MDP rewards and\nreceiver accuracy across various compression rates, showcasing the efficacy of\nour method compared to conventional compression baseline.",
+      "upvotes": 4
+    },
+    {
+      "title": "Teaching Embodied Reinforcement Learning Agents: Informativeness and Diversity of Language Use",
+      "url": "https://huggingface.co/papers/2410.24218",
+      "authors": [
+        "Jiajun Xi",
+        "Yinong He",
+        "Yinpei Dai",
+        "Joyce Chai"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.24218.pdf",
+      "abstract": "In real-world scenarios, it is desirable for embodied agents to have the\nability to leverage human language to gain explicit or implicit knowledge for\nlearning tasks. Despite recent progress, most previous approaches adopt simple\nlow-level instructions as language inputs, which may not reflect natural human\ncommunication. It's not clear how to incorporate rich language use to\nfacilitate task learning. To address this question, this paper studies\ndifferent types of language inputs in facilitating reinforcement learning (RL)\nembodied agents. More specifically, we examine how different levels of language\ninformativeness (i.e., feedback on past behaviors and future guidance) and\ndiversity (i.e., variation of language expressions) impact agent learning and\ninference. Our empirical results based on four RL benchmarks demonstrate that\nagents trained with diverse and informative language feedback can achieve\nenhanced generalization and fast adaptation to new tasks. These findings\nhighlight the pivotal role of language use in teaching embodied agents new\ntasks in an open world. Project website:\nhttps://github.com/sled-group/Teachable_RL",
+      "upvotes": 4
+    },
+    {
+      "title": "GlotCC: An Open Broad-Coverage CommonCrawl Corpus and Pipeline for Minority Languages",
+      "url": "https://huggingface.co/papers/2410.23825",
+      "authors": [
+        "François Yvon",
+        "Hinrich Schütze"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.23825.pdf",
+      "abstract": "The need for large text corpora has increased with the advent of pretrained\nlanguage models and, in particular, the discovery of scaling laws for these\nmodels. Most available corpora have sufficient data only for languages with\nlarge dominant communities. However, there is no corpus available that (i)\ncovers a wide range of minority languages; (ii) is generated by an open-source\nreproducible pipeline; and (iii) is rigorously cleaned from noise, making it\ntrustworthy to use. We present GlotCC, a clean, document-level, 2TB general\ndomain corpus derived from CommonCrawl, covering more than 1000 languages. We\nmake GlotCC and the system used to generate it - including the pipeline,\nlanguage identification model, and filters - available to the research\ncommunity. Corpus v. 1.0 https://huggingface.co/datasets/cis-lmu/GlotCC-v1,\nPipeline v. 3.0 https://github.com/cisnlp/GlotCC.",
+      "upvotes": 3
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "date": "2024-01-02",
+  "papers": [
+    {
+      "title": "Improving Text Embeddings with Large Language Models",
+      "url": "https://huggingface.co/papers/2401.00368",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2401.00368.pdf",
+      "abstract": "In this paper, we introduce a novel and simple method for obtaining\nhigh-quality text embeddings using only synthetic data and less than 1k\ntraining steps. Unlike existing methods that often depend on multi-stage\nintermediate pre-training with billions of weakly-supervised text pairs,\nfollowed by fine-tuning with a few labeled datasets, our method does not\nrequire building complex training pipelines or relying on manually collected\ndatasets that are often constrained by task diversity and language coverage. We\nleverage proprietary LLMs to generate diverse synthetic data for hundreds of\nthousands of text embedding tasks across nearly 100 languages. We then\nfine-tune open-source decoder-only LLMs on the synthetic data using standard\ncontrastive loss. Experiments demonstrate that our method achieves strong\nperformance on highly competitive text embedding benchmarks without using any\nlabeled data. Furthermore, when fine-tuned with a mixture of synthetic and\nlabeled data, our model sets new state-of-the-art results on the BEIR and MTEB\nbenchmarks.",
+      "upvotes": 79
+    },
+    {
+      "title": "Beyond Chinchilla-Optimal: Accounting for Inference in Language Model Scaling Laws",
+      "url": "https://huggingface.co/papers/2401.00448",
+      "authors": [
+        "Nikhil Sardana"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.00448.pdf",
+      "abstract": "Large language model (LLM) scaling laws are empirical formulas that estimate\nchanges in model quality as a result of increasing parameter count and training\ndata. However, these formulas, including the popular DeepMind Chinchilla\nscaling laws, neglect to include the cost of inference. We modify the\nChinchilla scaling laws to calculate the optimal LLM parameter count and\npre-training data size to train and deploy a model of a given quality and\ninference demand. We conduct our analysis both in terms of a compute budget and\nreal-world costs and find that LLM researchers expecting reasonably large\ninference demand (~1B requests) should train models smaller and longer than\nChinchilla-optimal.",
+      "upvotes": 28
+    },
+    {
+      "title": "Astraios: Parameter-Efficient Instruction Tuning Code Large Language Models",
+      "url": "https://huggingface.co/papers/2401.00788",
+      "authors": [
+        "Armel Zebaze",
+        "Nitchakarn Suppattarachai",
+        "Leandro von Werra",
+        "Harm de Vries"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.00788.pdf",
+      "abstract": "The high cost of full-parameter fine-tuning (FFT) of Large Language Models\n(LLMs) has led to a series of parameter-efficient fine-tuning (PEFT) methods.\nHowever, it remains unclear which methods provide the best cost-performance\ntrade-off at different model scales. We introduce Astraios, a suite of 28\ninstruction-tuned OctoCoder models using 7 tuning methods and 4 model sizes up\nto 16 billion parameters. Through investigations across 5 tasks and 8 different\ndatasets encompassing both code comprehension and code generation tasks, we\nfind that FFT generally leads to the best downstream performance across all\nscales, and PEFT methods differ significantly in their efficacy based on the\nmodel scale. LoRA usually offers the most favorable trade-off between cost and\nperformance. Further investigation into the effects of these methods on both\nmodel robustness and code security reveals that larger models tend to\ndemonstrate reduced robustness and less security. At last, we explore the\nrelationships among updated parameters, cross-entropy loss, and task\nperformance. We find that the tuning effectiveness observed in small models\ngeneralizes well to larger models, and the validation loss in instruction\ntuning can be a reliable indicator of overall downstream performance.",
+      "upvotes": 21
+    },
+    {
+      "title": "COSMO: COntrastive Streamlined MultimOdal Model with Interleaved Pre-Training",
+      "url": "https://huggingface.co/papers/2401.00849",
+      "authors": [
+        "Alex Jinpeng Wang",
+        "Linjie Li",
+        "Jianfeng Wang",
+        "Kevin Lin",
+        "Zhengyuan Yang",
+        "Lijuan Wang",
+        "Mike Zheng Shou"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.00849.pdf",
+      "abstract": "In the evolution of Vision-Language Pre-training, shifting from short-text\ncomprehension to encompassing extended textual contexts is pivotal. Recent\nautoregressive vision-language models like flamingo, palme, leveraging\nthe long-context capability of Large Language Models, have excelled in few-shot\ntext generation tasks but face challenges in alignment tasks. Addressing this\ngap, we introduce the contrastive loss into text generation models, presenting\nthe COntrastive-Streamlined MultimOdal framework (\\ModelName), strategically\npartitioning the language model into dedicated unimodal text processing and\nadept multimodal data handling components. \\ModelName, our unified framework,\nmerges unimodal and multimodal elements, enhancing model performance for tasks\ninvolving textual and visual data while notably reducing learnable parameters.\nHowever, these models demand extensive long-text datasets, yet the availability\nof high-quality long-text video datasets remains limited. To bridge this gap,\nthis work introduces \\VideoDatasetName, an inaugural interleaved video-text\ndataset featuring comprehensive captions, marking a significant step forward.\nDemonstrating its impact, we illustrate how  enhances model\nperformance in image-text tasks. With 34% learnable parameters and utilizing\n72\\% of the available data, our model demonstrates significant superiority over\nOpenFlamingo~openflamingo. For instance, in the 4-shot flickr captioning\ntask, performance notably improves from 57.2% to 65.\\%. The contributions of\n and  are underscored by notable performance\ngains across 14 diverse downstream datasets encompassing both image-text and\nvideo-text tasks.",
+      "upvotes": 14
+    },
+    {
+      "title": "Boosting Large Language Model for Speech Synthesis: An Empirical Study",
+      "url": "https://huggingface.co/papers/2401.00246",
+      "authors": [
+        "Hongkun Hao",
+        "Long Zhou",
+        "Shujie Liu",
+        "Jinyu Li",
+        "Shujie Hu",
+        "Rui Wang",
+        "Furu Wei"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.00246.pdf",
+      "abstract": "Large language models (LLMs) have made significant advancements in natural\nlanguage processing and are concurrently extending the language ability to\nother modalities, such as speech and vision. Nevertheless, most of the previous\nwork focuses on prompting LLMs with perception abilities like auditory\ncomprehension, and the effective approach for augmenting LLMs with speech\nsynthesis capabilities remains ambiguous. In this paper, we conduct a\ncomprehensive empirical exploration of boosting LLMs with the ability to\ngenerate speech, by combining pre-trained LLM LLaMA/OPT and text-to-speech\nsynthesis model VALL-E. We compare three integration methods between LLMs and\nspeech synthesis models, including directly fine-tuned LLMs, superposed layers\nof LLMs and VALL-E, and coupled LLMs and VALL-E using LLMs as a powerful text\nencoder. Experimental results show that, using LoRA method to fine-tune LLMs\ndirectly to boost the speech synthesis capability does not work well, and\nsuperposed LLMs and VALL-E can improve the quality of generated speech both in\nspeaker similarity and word error rate (WER). Among these three methods,\ncoupled methods leveraging LLMs as the text encoder can achieve the best\nperformance, making it outperform original speech synthesis models with a\nconsistently better speaker similarity and a significant (10.9%) WER reduction.",
+      "upvotes": 10
+    },
+    {
+      "title": "Unicron: Economizing Self-Healing LLM Training at Scale",
+      "url": "https://huggingface.co/papers/2401.00134",
+      "authors": [
+        "Tao He",
+        "Xue Li",
+        "Zhibin Wang",
+        "Kun Qian",
+        "Wenyuan Yu",
+        "Jingren Zhou"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.00134.pdf",
+      "abstract": "Training large-scale language models is increasingly critical in various\ndomains, but it is hindered by frequent failures, leading to significant time\nand economic costs. Current failure recovery methods in cloud-based settings\ninadequately address the diverse and complex scenarios that arise, focusing\nnarrowly on erasing downtime for individual tasks without considering the\noverall cost impact on a cluster. We introduce Unicron, a workload manager\ndesigned for efficient self-healing in large-scale language model training.\nUnicron optimizes the training process by minimizing failure-related costs\nacross multiple concurrent tasks within a cluster. Its key features include\nin-band error detection for real-time error identification without extra\noverhead, a dynamic cost-aware plan generation mechanism for optimal\nreconfiguration, and an efficient transition strategy to reduce downtime during\nstate changes. Deployed on a 128-GPU distributed cluster, Unicron demonstrates\nup to a 1.9x improvement in training efficiency over state-of-the-art methods,\nsignificantly reducing failure recovery costs and enhancing the reliability of\nlarge-scale language model training.",
+      "upvotes": 9
+    },
+    {
+      "title": "GeoGalactica: A Scientific Large Language Model in Geoscience",
+      "url": "https://huggingface.co/papers/2401.00434",
+      "authors": [
+        "Zhouhan Lin",
+        "Cheng Deng",
+        "Le Zhou",
+        "Tianhang Zhang",
+        "Yi Xu",
+        "Yutong Xu",
+        "Zhongmou He",
+        "Yuanyuan Shi",
+        "Beiya Dai",
+        "Yunchong Song",
+        "Boyi Zeng",
+        "Qiyuan Chen",
+        "Tao Shi",
+        "Tianyu Huang",
+        "Yiwei Xu",
+        "Shu Wang",
+        "Luoyi Fu",
+        "Weinan Zhang",
+        "Junxian He",
+        "Chao Ma",
+        "Yunqiang Zhu",
+        "Xinbing Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.00434.pdf",
+      "abstract": "Large language models (LLMs) have achieved huge success for their general\nknowledge and ability to solve a wide spectrum of tasks in natural language\nprocessing (NLP). Due to their impressive abilities, LLMs have shed light on\npotential inter-discipline applications to foster scientific discoveries of a\nspecific domain by using artificial intelligence (AI for science, AI4S). In the\nmeantime, utilizing NLP techniques in geoscience research and practice is wide\nand convoluted, contributing from knowledge extraction and document\nclassification to question answering and knowledge discovery. In this work, we\ntake the initial step to leverage LLM for science, through a rather\nstraightforward approach. We try to specialize an LLM into geoscience, by\nfurther pre-training the model with a vast amount of texts in geoscience, as\nwell as supervised fine-tuning (SFT) the resulting model with our custom\ncollected instruction tuning dataset. These efforts result in a model\nGeoGalactica consisting of 30 billion parameters. To our best knowledge, it is\nthe largest language model for the geoscience domain. More specifically,\nGeoGalactica is from further pre-training of Galactica. We train GeoGalactica\nover a geoscience-related text corpus containing 65 billion tokens curated from\nextensive data sources in the big science project Deep-time Digital Earth\n(DDE), preserving as the largest geoscience-specific text corpus. Then we\nfine-tune the model with 1 million pairs of instruction-tuning data consisting\nof questions that demand professional geoscience knowledge to answer. In this\ntechnical report, we will illustrate in detail all aspects of GeoGalactica,\nincluding data collection, data cleaning, base model selection, pre-training,\nSFT, and evaluation. We open-source our data curation tools and the checkpoints\nof GeoGalactica during the first 3/4 of pre-training.",
+      "upvotes": 7
+    },
+    {
+      "title": "SteinDreamer: Variance Reduction for Text-to-3D Score Distillation via Stein Identity",
+      "url": "https://huggingface.co/papers/2401.00604",
+      "authors": [
+        "Zhiwen Fan",
+        "Dilin Wang",
+        "Sreyas Mohan",
+        "Forrest Iandola",
+        "Rakesh Ranjan",
+        "Yilei Li",
+        "Qiang Liu",
+        "Zhangyang Wang",
+        "Vikas Chandra"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.00604.pdf",
+      "abstract": "Score distillation has emerged as one of the most prevalent approaches for\ntext-to-3D asset synthesis. Essentially, score distillation updates 3D\nparameters by lifting and back-propagating scores averaged over different\nviews. In this paper, we reveal that the gradient estimation in score\ndistillation is inherent to high variance. Through the lens of variance\nreduction, the effectiveness of SDS and VSD can be interpreted as applications\nof various control variates to the Monte Carlo estimator of the distilled\nscore. Motivated by this rethinking and based on Stein's identity, we propose a\nmore general solution to reduce variance for score distillation, termed Stein\nScore Distillation (SSD). SSD incorporates control variates constructed by\nStein identity, allowing for arbitrary baseline functions. This enables us to\ninclude flexible guidance priors and network architectures to explicitly\noptimize for variance reduction. In our experiments, the overall pipeline,\ndubbed SteinDreamer, is implemented by instantiating the control variate with a\nmonocular depth estimator. The results suggest that SSD can effectively reduce\nthe distillation variance and consistently improve visual quality for both\nobject- and scene-level generation. Moreover, we demonstrate that SteinDreamer\nachieves faster convergence than existing methods due to more stable gradient\nupdates.",
+      "upvotes": 4
+    }
+  ]
+}

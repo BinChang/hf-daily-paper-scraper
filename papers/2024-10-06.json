@@ -1,0 +1,322 @@
+{
+  "date": "2024-10-06",
+  "papers": [
+    {
+      "title": "Revisit Large-Scale Image-Caption Data in Pre-training Multimodal Foundation Models",
+      "url": "https://huggingface.co/papers/2410.02740",
+      "authors": [
+        "Vasileios Saveris",
+        "Chen Chen",
+        "Bowen Zhang",
+        "Juan Lao Tebar",
+        "Wenze Hu",
+        "Zhe Gan",
+        "Peter Grasch",
+        "Meng Cao",
+        "Yinfei Yang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.02740.pdf",
+      "abstract": "Recent advancements in multimodal models highlight the value of rewritten\ncaptions for improving performance, yet key challenges remain. For example,\nwhile synthetic captions often provide superior quality and image-text\nalignment, it is not clear whether they can fully replace AltTexts: the role of\nsynthetic captions and their interaction with original web-crawled AltTexts in\npre-training is still not well understood. Moreover, different multimodal\nfoundation models may have unique preferences for specific caption formats, but\nefforts to identify the optimal captions for each model remain limited. In this\nwork, we propose a novel, controllable, and scalable captioning pipeline\ndesigned to generate diverse caption formats tailored to various multimodal\nmodels. By examining Short Synthetic Captions (SSC) towards Dense Synthetic\nCaptions (DSC+) as case studies, we systematically explore their effects and\ninteractions with AltTexts across models such as CLIP, multimodal LLMs, and\ndiffusion models. Our findings reveal that a hybrid approach that keeps both\nsynthetic captions and AltTexts can outperform the use of synthetic captions\nalone, improving both alignment and performance, with each model demonstrating\npreferences for particular caption formats. This comprehensive analysis\nprovides valuable insights into optimizing captioning strategies, thereby\nadvancing the pre-training of multimodal foundation models.",
+      "upvotes": 52
+    },
+    {
+      "title": "SageAttention: Accurate 8-Bit Attention for Plug-and-play Inference Acceleration",
+      "url": "https://huggingface.co/papers/2410.02367",
+      "authors": [
+        "Jia wei",
+        "Pengle Zhang",
+        "Jun Zhu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.02367.pdf",
+      "abstract": "The transformer architecture predominates across various models. As the heart\nof the transformer, attention has a computational complexity of O(N^2),\ncompared to O(N) for linear transformations. When handling large sequence\nlengths, attention becomes the primary time-consuming component. Although\nquantization has proven to be an effective method for accelerating model\ninference, existing quantization methods primarily focus on optimizing the\nlinear layer. In response, we first analyze the feasibility of quantization in\nattention detailedly. Following that, we propose SageAttention, a highly\nefficient and accurate quantization method for attention. The OPS (operations\nper second) of our approach outperforms FlashAttention2 and xformers by about\n2.1 times and 2.7 times, respectively. SageAttention also achieves superior\naccuracy performance over FlashAttention3. Comprehensive experiments confirm\nthat our approach incurs almost no end-to-end metrics loss across diverse\nmodels, including those for large language processing, image generation, and\nvideo generation.",
+      "upvotes": 45
+    },
+    {
+      "title": "Depth Pro: Sharp Monocular Metric Depth in Less Than a Second",
+      "url": "https://huggingface.co/papers/2410.02073",
+      "authors": [
+        "Hugo Germain",
+        "Yichao Zhou"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.02073.pdf",
+      "abstract": "We present a foundation model for zero-shot metric monocular depth\nestimation. Our model, Depth Pro, synthesizes high-resolution depth maps with\nunparalleled sharpness and high-frequency details. The predictions are metric,\nwith absolute scale, without relying on the availability of metadata such as\ncamera intrinsics. And the model is fast, producing a 2.25-megapixel depth map\nin 0.3 seconds on a standard GPU. These characteristics are enabled by a number\nof technical contributions, including an efficient multi-scale vision\ntransformer for dense prediction, a training protocol that combines real and\nsynthetic datasets to achieve high metric accuracy alongside fine boundary\ntracing, dedicated evaluation metrics for boundary accuracy in estimated depth\nmaps, and state-of-the-art focal length estimation from a single image.\nExtensive experiments analyze specific design choices and demonstrate that\nDepth Pro outperforms prior work along multiple dimensions. We release code and\nweights at https://github.com/apple/ml-depth-pro",
+      "upvotes": 40
+    },
+    {
+      "title": "Loong: Generating Minute-level Long Videos with Autoregressive Language Models",
+      "url": "https://huggingface.co/papers/2410.02757",
+      "authors": [
+        "Daquan Zhou",
+        "Yang Zhao",
+        "Jiashi Feng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.02757.pdf",
+      "abstract": "It is desirable but challenging to generate content-rich long videos in the\nscale of minutes. Autoregressive large language models (LLMs) have achieved\ngreat success in generating coherent and long sequences of tokens in the domain\nof natural language processing, while the exploration of autoregressive LLMs\nfor video generation is limited to generating short videos of several seconds.\nIn this work, we conduct a deep analysis of the challenges that prevent\nautoregressive LLM-based video generators from generating long videos. Based on\nthe observations and analysis, we propose Loong, a new autoregressive LLM-based\nvideo generator that can generate minute-long videos. Specifically, we model\nthe text tokens and video tokens as a unified sequence for autoregressive LLMs\nand train the model from scratch. We propose progressive short-to-long training\nwith a loss re-weighting scheme to mitigate the loss imbalance problem for long\nvideo training. We further investigate inference strategies, including video\ntoken re-encoding and sampling strategies, to diminish error accumulation\nduring inference. Our proposed Loong can be trained on 10-second videos and be\nextended to generate minute-level long videos conditioned on text prompts, as\ndemonstrated by the results. More samples are available at:\nhttps://epiphqny.github.io/Loong-video.",
+      "upvotes": 36
+    },
+    {
+      "title": "Video Instruction Tuning With Synthetic Data",
+      "url": "https://huggingface.co/papers/2410.02713",
+      "authors": [
+        "Wei Li",
+        "Zejun Ma"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.02713.pdf",
+      "abstract": "The development of video large multimodal models (LMMs) has been hindered by\nthe difficulty of curating large amounts of high-quality raw data from the web.\nTo address this, we propose an alternative approach by creating a high-quality\nsynthetic dataset specifically for video instruction-following, namely\nLLaVA-Video-178K. This dataset includes key tasks such as detailed captioning,\nopen-ended question-answering (QA), and multiple-choice QA. By training on this\ndataset, in combination with existing visual instruction tuning data, we\nintroduce LLaVA-Video, a new video LMM. Our experiments demonstrate that\nLLaVA-Video achieves strong performance across various video benchmarks,\nhighlighting the effectiveness of our dataset. We plan to release the dataset,\nits generation pipeline, and the model checkpoints.",
+      "upvotes": 36
+    },
+    {
+      "title": "LLaVA-Critic: Learning to Evaluate Multimodal Models",
+      "url": "https://huggingface.co/papers/2410.02712",
+      "authors": [
+        "Dong Guo",
+        "Qinghao Ye",
+        "Haoqi Fan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.02712.pdf",
+      "abstract": "We introduce LLaVA-Critic, the first open-source large multimodal model (LMM)\ndesigned as a generalist evaluator to assess performance across a wide range of\nmultimodal tasks. LLaVA-Critic is trained using a high-quality critic\ninstruction-following dataset that incorporates diverse evaluation criteria and\nscenarios. Our experiments demonstrate the model's effectiveness in two key\nareas: (1) LMM-as-a-Judge, where LLaVA-Critic provides reliable evaluation\nscores, performing on par with or surpassing GPT models on multiple evaluation\nbenchmarks; and (2) Preference Learning, where it generates reward signals for\npreference learning, enhancing model alignment capabilities. This work\nunderscores the potential of open-source LMMs in self-critique and evaluation,\nsetting the stage for future research into scalable, superhuman alignment\nfeedback mechanisms for LMMs.",
+      "upvotes": 34
+    },
+    {
+      "title": "Large Language Models as Markov Chains",
+      "url": "https://huggingface.co/papers/2410.02724",
+      "authors": [
+        "Linus Bleistein"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.02724.pdf",
+      "abstract": "Large language models (LLMs) have proven to be remarkably efficient, both\nacross a wide range of natural language processing tasks and well beyond them.\nHowever, a comprehensive theoretical analysis of the origins of their\nimpressive performance remains elusive. In this paper, we approach this\nchallenging task by drawing an equivalence between generic autoregressive\nlanguage models with vocabulary of size T and context window of size K and\nMarkov chains defined on a finite state space of size O(T^K). We\nderive several surprising findings related to the existence of a stationary\ndistribution of Markov chains that capture the inference power of LLMs, their\nspeed of convergence to it, and the influence of the temperature on the latter.\nWe then prove pre-training and in-context generalization bounds and show how\nthe drawn equivalence allows us to enrich their interpretation. Finally, we\nillustrate our theoretical guarantees with experiments on several recent LLMs\nto highlight how they capture the behavior observed in practice.",
+      "upvotes": 31
+    },
+    {
+      "title": "Contrastive Localized Language-Image Pre-Training",
+      "url": "https://huggingface.co/papers/2410.02746",
+      "authors": [
+        "Xinze Wang",
+        "Marcin Eichner",
+        "Keen You",
+        "Meng Cao",
+        "Bowen Zhang",
+        "Yinfei Yang",
+        "Zhe Gan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.02746.pdf",
+      "abstract": "Contrastive Language-Image Pre-training (CLIP) has been a celebrated method\nfor training vision encoders to generate image/text representations\nfacilitating various applications. Recently, CLIP has been widely adopted as\nthe vision backbone of multimodal large language models (MLLMs) to connect\nimage inputs for language interactions. The success of CLIP as a\nvision-language foundation model relies on aligning web-crawled noisy text\nannotations at image levels. Nevertheless, such criteria may become\ninsufficient for downstream tasks in need of fine-grained vision\nrepresentations, especially when region-level understanding is demanding for\nMLLMs. In this paper, we improve the localization capability of CLIP with\nseveral advances. We propose a pre-training method called Contrastive Localized\nLanguage-Image Pre-training (CLOC) by complementing CLIP with region-text\ncontrastive loss and modules. We formulate a new concept, promptable\nembeddings, of which the encoder produces image embeddings easy to transform\ninto region representations given spatial hints. To support large-scale\npre-training, we design a visually-enriched and spatially-localized captioning\nframework to effectively generate region-text pseudo-labels at scale. By\nscaling up to billions of annotated images, CLOC enables high-quality regional\nembeddings for image region recognition and retrieval tasks, and can be a\ndrop-in replacement of CLIP to enhance MLLMs, especially on referring and\ngrounding tasks.",
+      "upvotes": 31
+    },
+    {
+      "title": "Eliminating Oversaturation and Artifacts of High Guidance Scales in Diffusion Models",
+      "url": "https://huggingface.co/papers/2410.02416",
+      "authors": [
+        "Otmar Hilliges"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.02416.pdf",
+      "abstract": "Classifier-free guidance (CFG) is crucial for improving both generation\nquality and alignment between the input condition and final output in diffusion\nmodels. While a high guidance scale is generally required to enhance these\naspects, it also causes oversaturation and unrealistic artifacts. In this\npaper, we revisit the CFG update rule and introduce modifications to address\nthis issue. We first decompose the update term in CFG into parallel and\northogonal components with respect to the conditional model prediction and\nobserve that the parallel component primarily causes oversaturation, while the\northogonal component enhances image quality. Accordingly, we propose\ndown-weighting the parallel component to achieve high-quality generations\nwithout oversaturation. Additionally, we draw a connection between CFG and\ngradient ascent and introduce a new rescaling and momentum method for the CFG\nupdate rule based on this insight. Our approach, termed adaptive projected\nguidance (APG), retains the quality-boosting advantages of CFG while enabling\nthe use of higher guidance scales without oversaturation. APG is easy to\nimplement and introduces practically no additional computational overhead to\nthe sampling process. Through extensive experiments, we demonstrate that APG is\ncompatible with various conditional diffusion models and samplers, leading to\nimproved FID, recall, and saturation scores while maintaining precision\ncomparable to CFG, making our method a superior plug-and-play alternative to\nstandard classifier-free guidance.",
+      "upvotes": 25
+    },
+    {
+      "title": "VinePPO: Unlocking RL Potential For LLM Reasoning Through Refined Credit Assignment",
+      "url": "https://huggingface.co/papers/2410.01679",
+      "authors": [
+        "Milad Aghajohari",
+        "Eva Portelance",
+        "Alessandro Sordoni",
+        "Siva Reddy",
+        "Aaron Courville",
+        "Nicolas Le Roux"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.01679.pdf",
+      "abstract": "Large language models (LLMs) are increasingly applied to complex reasoning\ntasks that require executing several complex steps before receiving any reward.\nProperly assigning credit to these steps is essential for enhancing model\nperformance. Proximal Policy Optimization (PPO), a state-of-the-art\nreinforcement learning (RL) algorithm used for LLM finetuning, employs value\nnetworks to tackle credit assignment. However, value networks face challenges\nin predicting the expected cumulative rewards accurately in complex reasoning\ntasks, often leading to high-variance updates and suboptimal performance. In\nthis work, we systematically evaluate the efficacy of value networks and reveal\ntheir significant shortcomings in reasoning-heavy LLM tasks, showing that they\nbarely outperform a random baseline when comparing alternative steps. To\naddress this, we propose VinePPO, a straightforward approach that leverages the\nflexibility of language environments to compute unbiased Monte Carlo-based\nestimates, bypassing the need for large value networks. Our method consistently\noutperforms PPO and other RL-free baselines across MATH and GSM8K datasets with\nfewer gradient updates (up to 9x), less wall-clock time (up to 3.0x). These\nresults emphasize the importance of accurate credit assignment in RL finetuning\nof LLM and demonstrate VinePPO's potential as a superior alternative.",
+      "upvotes": 22
+    },
+    {
+      "title": "Distilling an End-to-End Voice Assistant Without Instruction Training Data",
+      "url": "https://huggingface.co/papers/2410.02678",
+      "authors": [
+        "Diyi Yang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.02678.pdf",
+      "abstract": "Voice assistants, such as Siri and Google Assistant, typically model audio\nand text separately, resulting in lost speech information and increased\ncomplexity. Recent efforts to address this with end-to-end Speech Large\nLanguage Models (LLMs) trained with supervised finetuning (SFT)\n  have led to models ``forgetting\" capabilities from text-only LLMs. Our work\nproposes an alternative paradigm for training Speech LLMs without instruction\ndata, using the response of a text-only LLM to transcripts as self-supervision.\nImportantly, this process can be performed without annotated responses. We show\nthat our Distilled Voice Assistant (DiVA) generalizes to Spoken Question\nAnswering, Classification, and Translation. Furthermore, we show that DiVA\nbetter meets user preferences, achieving a 72\\% win rate compared with\nstate-of-the-art models like Qwen 2 Audio, despite using >100x less training\ncompute.",
+      "upvotes": 22
+    },
+    {
+      "title": "CLIP-MoE: Towards Building Mixture of Experts for CLIP with Diversified Multiplet Upcycling",
+      "url": "https://huggingface.co/papers/2409.19291",
+      "authors": [
+        "Jihai Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.19291.pdf",
+      "abstract": "In recent years, Contrastive Language-Image Pre-training (CLIP) has become a\ncornerstone in multimodal intelligence. However, recent studies have identified\nthat the information loss in the CLIP encoding process is substantial, and CLIP\ntends to capture only coarse-grained features from the input. This deficiency\nsignificantly limits the ability of a single CLIP model to handle images rich\nin visual detail. In this work, we propose a simple yet effective\nmodel-agnostic strategy, Diversified Multiplet Upcycling (DMU), for CLIP. DMU\nefficiently fine-tunes a series of CLIP models that capture different feature\nspaces, from a dense pre-trained CLIP checkpoint, sharing parameters except for\nthe Feed-Forward Network (FFN). These models can then be transformed into a\nCLIP-MoE with a larger model capacity, leading to significantly enhanced\nperformance with minimal computational overhead. To the best of our knowledge,\nDiversified Multiplet Upcycling is the first approach to introduce sparsely\nactivated MoE into CLIP foundation models. Extensive experiments demonstrate\nthe significant performance of CLIP-MoE across various zero-shot retrieval,\nzero-shot image classification tasks, and downstream Multimodal Large Language\nModel (MLLM) benchmarks by serving as a vision encoder. Furthermore,\nDiversified Multiplet Upcycling enables the conversion of any dense CLIP model\ninto CLIP-MoEs, which can seamlessly replace CLIP in a plug-and-play manner\nwithout requiring further adaptation in downstream frameworks. Through\nDiversified Multiplet Upcycling, we aim to provide valuable insights for future\nresearch on developing more efficient and effective multimodal learning\nsystems.",
+      "upvotes": 18
+    },
+    {
+      "title": "Contextual Document Embeddings",
+      "url": "https://huggingface.co/papers/2410.02525",
+      "authors": [
+        "Alexander M. Rush"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.02525.pdf",
+      "abstract": "Dense document embeddings are central to neural retrieval. The dominant\nparadigm is to train and construct embeddings by running encoders directly on\nindividual documents. In this work, we argue that these embeddings, while\neffective, are implicitly out-of-context for targeted use cases of retrieval,\nand that a contextualized document embedding should take into account both the\ndocument and neighboring documents in context - analogous to contextualized\nword embeddings. We propose two complementary methods for contextualized\ndocument embeddings: first, an alternative contrastive learning objective that\nexplicitly incorporates the document neighbors into the intra-batch contextual\nloss; second, a new contextual architecture that explicitly encodes neighbor\ndocument information into the encoded representation. Results show that both\nmethods achieve better performance than biencoders in several settings, with\ndifferences especially pronounced out-of-domain. We achieve state-of-the-art\nresults on the MTEB benchmark with no hard negative mining, score distillation,\ndataset-specific instructions, intra-GPU example-sharing, or extremely large\nbatch sizes. Our method can be applied to improve performance on any\ncontrastive learning dataset and any biencoder.",
+      "upvotes": 16
+    },
+    {
+      "title": "Training Language Models on Synthetic Edit Sequences Improves Code Synthesis",
+      "url": "https://huggingface.co/papers/2410.02749",
+      "authors": [
+        "Rob Fergus"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.02749.pdf",
+      "abstract": "Software engineers mainly write code by editing existing programs. In\ncontrast, large language models (LLMs) autoregressively synthesize programs in\na single pass. One explanation for this is the scarcity of open-sourced edit\ndata. While high-quality instruction data for code synthesis is already scarce,\nhigh-quality edit data is even scarcer. To fill this gap, we develop a\nsynthetic data generation algorithm called LintSeq. This algorithm refactors\nexisting code into a sequence of code edits by using a linter to procedurally\nsample across the error-free insertions that can be used to sequentially write\nprograms. It outputs edit sequences as text strings consisting of consecutive\nprogram diffs. To test LintSeq, we use it to refactor a dataset of instruction\n+ program pairs into instruction + program-diff-sequence tuples. Then, we\ninstruction finetune a series of smaller LLMs ranging from 2.6B to 14B\nparameters on both the re-factored and original versions of this dataset,\ncomparing zero-shot performance on code synthesis benchmarks. We show that\nduring repeated sampling, edit sequence finetuned models produce more diverse\nprograms than baselines. This results in better inference-time scaling for\nbenchmark coverage as a function of samples, i.e. the fraction of problems\n\"pass@k\" solved by any attempt given \"k\" tries. For example, on HumanEval\npass@50, small LLMs finetuned on synthetic edit sequences are competitive with\nGPT-4 and outperform models finetuned on the baseline dataset by +20% (+/-3%)\nin absolute score. Finally, we also pretrain our own tiny LMs for code\nunderstanding. We show that finetuning tiny models on synthetic code edits\nresults in state-of-the-art code synthesis for the on-device model class. Our\n150M parameter edit sequence LM matches or outperforms code models with twice\nas many parameters, both with and without repeated sampling, including Codex\nand AlphaCode.",
+      "upvotes": 12
+    },
+    {
+      "title": "Open-RAG: Enhanced Retrieval-Augmented Reasoning with Open-Source Large Language Models",
+      "url": "https://huggingface.co/papers/2410.01782",
+      "authors": [
+        "Md Asib Rahman",
+        "K S M Tozammel Hossain",
+        "Enamul Hoque",
+        "Shafiq Joty",
+        "Md Rizwan Parvez"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.01782.pdf",
+      "abstract": "Retrieval-Augmented Generation (RAG) has been shown to enhance the factual\naccuracy of Large Language Models (LLMs), but existing methods often suffer\nfrom limited reasoning capabilities in effectively using the retrieved\nevidence, particularly when using open-source LLMs. To mitigate this gap, we\nintroduce a novel framework, Open-RAG, designed to enhance reasoning\ncapabilities in RAG with open-source LLMs. Our framework transforms an\narbitrary dense LLM into a parameter-efficient sparse mixture of experts (MoE)\nmodel capable of handling complex reasoning tasks, including both single- and\nmulti-hop queries. Open-RAG uniquely trains the model to navigate challenging\ndistractors that appear relevant but are misleading. As a result, Open-RAG\nleverages latent learning, dynamically selecting relevant experts and\nintegrating external knowledge effectively for more accurate and contextually\nrelevant responses. In addition, we propose a hybrid adaptive retrieval method\nto determine retrieval necessity and balance the trade-off between performance\ngain and inference speed. Experimental results show that the Llama2-7B-based\nOpen-RAG outperforms state-of-the-art LLMs and RAG models such as ChatGPT,\nSelf-RAG, and Command R+ in various knowledge-intensive tasks. We open-source\nour code and models at https://openragmoe.github.io/",
+      "upvotes": 10
+    },
+    {
+      "title": "L-CiteEval: Do Long-Context Models Truly Leverage Context for Responding?",
+      "url": "https://huggingface.co/papers/2410.02115",
+      "authors": [
+        "Keyan Zhou",
+        "Baibei Ji",
+        "Jianye Hou",
+        "Min Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.02115.pdf",
+      "abstract": "Long-context models (LCMs) have made remarkable strides in recent years,\noffering users great convenience for handling tasks that involve long context,\nsuch as document summarization. As the community increasingly prioritizes the\nfaithfulness of generated results, merely ensuring the accuracy of LCM outputs\nis insufficient, as it is quite challenging for humans to verify the results\nfrom the extremely lengthy context. Yet, although some efforts have been made\nto assess whether LCMs respond truly based on the context, these works either\nare limited to specific tasks or heavily rely on external evaluation resources\nlike GPT-4.In this work, we introduce L-CiteEval, a comprehensive multi-task\nbenchmark for long-context understanding with citations, aiming to evaluate\nboth the understanding capability and faithfulness of LCMs. L-CiteEval covers\n11 tasks from diverse domains, spanning context lengths from 8K to 48K, and\nprovides a fully automated evaluation suite. Through testing with 11\ncutting-edge closed-source and open-source LCMs, we find that although these\nmodels show minor differences in their generated results, open-source models\nsubstantially trail behind their closed-source counterparts in terms of\ncitation accuracy and recall. This suggests that current open-source LCMs are\nprone to responding based on their inherent knowledge rather than the given\ncontext, posing a significant risk to the user experience in practical\napplications. We also evaluate the RAG approach and observe that RAG can\nsignificantly improve the faithfulness of LCMs, albeit with a slight decrease\nin the generation quality. Furthermore, we discover a correlation between the\nattention mechanisms of LCMs and the citation generation process.",
+      "upvotes": 10
+    },
+    {
+      "title": "Interpreting and Editing Vision-Language Representations to Mitigate Hallucinations",
+      "url": "https://huggingface.co/papers/2410.02762",
+      "authors": [
+        "Nick Jiang",
+        "Anish Kachinthaya",
+        "Suzie Petryk",
+        "Yossi Gandelsman"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.02762.pdf",
+      "abstract": "We investigate the internal representations of vision-language models (VLMs)\nto address hallucinations, a persistent challenge despite advances in model\nsize and training. We project VLMs' internal image representations to their\nlanguage vocabulary and observe more confident output probabilities on real\nobjects than hallucinated objects. We additionally use these output\nprobabilities to spatially localize real objects. Building on this approach, we\nintroduce a knowledge erasure algorithm that removes hallucinations by linearly\northogonalizing image features with respect to hallucinated object features. We\nshow that targeted edits to a model's latent representations can reduce\nhallucinations by up to 25.7% on the COCO2014 dataset while preserving\nperformance. Our findings demonstrate how a deeper understanding of VLMs'\nlatent representations can enhance reliability and enable novel capabilities,\nsuch as zero-shot segmentation.",
+      "upvotes": 9
+    },
+    {
+      "title": "Improving Autonomous AI Agents with Reflective Tree Search and Self-Learning",
+      "url": "https://huggingface.co/papers/2410.02052",
+      "authors": [
+        "Hao Cheng",
+        "Zhou Yu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.02052.pdf",
+      "abstract": "Autonomous agents have demonstrated significant potential in automating\ncomplex multistep decision-making tasks. However, even state-of-the-art\nvision-language models (VLMs), such as GPT-4o, still fall short of human-level\nperformance, particularly in intricate web environments and long-horizon\nplanning tasks. To address these limitations, we introduce Reflective Monte\nCarlo Tree Search (R-MCTS), a novel test-time algorithm designed to enhance the\nability of AI agents, e.g., powered by GPT-4o, to explore decision space on the\nfly. R-MCTS extends traditional MCTS by 1) incorporating contrastive\nreflection, allowing agents to learn from past interactions and dynamically\nimprove their search efficiency; and 2) using multi-agent debate to provide\nreliable state evaluation. Moreover, we improve the agent's performance by\nfine-tuning GPT-4o through self-learning, using R-MCTS generated tree\ntraversals without any human-provided labels. On the challenging VisualWebArena\nbenchmark, our GPT-4o-based R-MCTS agent achieves a 6% to 30% relative\nimprovement across various tasks compared to the previous state-of-the-art.\nAdditionally, we show that the knowledge gained from test-time search can be\neffectively transferred back to GPT-4o via fine-tuning. The fine-tuned GPT-4o\nmatches 97% of R-MCTS's performance while reducing compute usage by a factor of\nfour at test time. Furthermore, qualitative results reveal that the fine-tuned\nGPT-4o model demonstrates the ability to explore the environment, evaluate a\nstate, and backtrack to viable ones when it detects that the current state\ncannot lead to success. Moreover, our work demonstrates the compute scaling\nproperties in both training - data collection with R-MCTS - and testing time.\nThese results suggest a promising research direction to enhance VLMs' reasoning\nand planning capabilities for agentic applications via test-time search and\nself-learning.",
+      "upvotes": 9
+    },
+    {
+      "title": "MedVisionLlama: Leveraging Pre-Trained Large Language Model Layers to Enhance Medical Image Segmentation",
+      "url": "https://huggingface.co/papers/2410.02458",
+      "authors": [
+        "Janine Mendola",
+        "Amir Shmuel"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.02458.pdf",
+      "abstract": "Large Language Models (LLMs), known for their versatility in textual data,\nare increasingly being explored for their potential to enhance medical image\nsegmentation, a crucial task for accurate diagnostic imaging. This study\nexplores enhancing Vision Transformers (ViTs) for medical image segmentation by\nintegrating pre-trained LLM transformer blocks. Our approach, which\nincorporates a frozen LLM transformer block into the encoder of a ViT-based\nmodel, leads to substantial improvements in segmentation performance across\nvarious medical imaging modalities. We propose a Hybrid Attention Mechanism\nthat combines global and local feature learning with a Multi-Scale Fusion Block\nfor aggregating features across different scales. The enhanced model shows\nsignificant performance gains, including an average Dice score increase from\n0.74 to 0.79 and improvements in accuracy, precision, and the Jaccard Index.\nThese results demonstrate the effectiveness of LLM-based transformers in\nrefining medical image segmentation, highlighting their potential to\nsignificantly boost model accuracy and robustness. The source code and our\nimplementation are available at: https://bit.ly/3zf2CVs",
+      "upvotes": 9
+    },
+    {
+      "title": "MVGS: Multi-view-regulated Gaussian Splatting for Novel View Synthesis",
+      "url": "https://huggingface.co/papers/2410.02103",
+      "authors": [
+        "Yida Wang",
+        "Xin Yu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.02103.pdf",
+      "abstract": "Recent works in volume rendering, e.g. NeRF and 3D Gaussian\nSplatting (3DGS), significantly advance the rendering quality and efficiency\nwith the help of the learned implicit neural radiance field or 3D Gaussians.\nRendering on top of an explicit representation, the vanilla 3DGS and its\nvariants deliver real-time efficiency by optimizing the parametric model with\nsingle-view supervision per iteration during training which is adopted from\nNeRF. Consequently, certain views are overfitted, leading to unsatisfying\nappearance in novel-view synthesis and imprecise 3D geometries. To solve\naforementioned problems, we propose a new 3DGS optimization method embodying\nfour key novel contributions: 1) We transform the conventional single-view\ntraining paradigm into a multi-view training strategy. With our proposed\nmulti-view regulation, 3D Gaussian attributes are further optimized without\noverfitting certain training views. As a general solution, we improve the\noverall accuracy in a variety of scenarios and different Gaussian variants. 2)\nInspired by the benefit introduced by additional views, we further propose a\ncross-intrinsic guidance scheme, leading to a coarse-to-fine training procedure\nconcerning different resolutions. 3) Built on top of our multi-view regulated\ntraining, we further propose a cross-ray densification strategy, densifying\nmore Gaussian kernels in the ray-intersect regions from a selection of views.\n4) By further investigating the densification strategy, we found that the\neffect of densification should be enhanced when certain views are distinct\ndramatically. As a solution, we propose a novel multi-view augmented\ndensification strategy, where 3D Gaussians are encouraged to get densified to a\nsufficient number accordingly, resulting in improved reconstruction accuracy.",
+      "upvotes": 8
+    },
+    {
+      "title": "Vinoground: Scrutinizing LMMs over Dense Temporal Reasoning with Short Videos",
+      "url": "https://huggingface.co/papers/2410.02763",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2410.02763.pdf",
+      "abstract": "There has been growing sentiment recently that modern large multimodal models\n(LMMs) have addressed most of the key challenges related to short video\ncomprehension. As a result, both academia and industry are gradually shifting\ntheir attention towards the more complex challenges posed by understanding\nlong-form videos. However, is this really the case? Our studies indicate that\nLMMs still lack many fundamental reasoning capabilities even when dealing with\nshort videos. We introduce Vinoground, a temporal counterfactual LMM evaluation\nbenchmark encompassing 1000 short and natural video-caption pairs. We\ndemonstrate that existing LMMs severely struggle to distinguish temporal\ndifferences between different actions and object transformations. For example,\nthe best model GPT-4o only obtains ~50% on our text and video scores, showing a\nlarge gap compared to the human baseline of ~90%. All open-source multimodal\nmodels and CLIP-based models perform much worse, producing mostly random chance\nperformance. Through this work, we shed light onto the fact that temporal\nreasoning in short videos is a problem yet to be fully solved. The dataset and\nevaluation code are available at https://vinoground.github.io.",
+      "upvotes": 7
+    },
+    {
+      "title": "Intelligence at the Edge of Chaos",
+      "url": "https://huggingface.co/papers/2410.02536",
+      "authors": [
+        "Shiyang Zhang",
+        "Syed A Rizvi",
+        "Nianchen Liu",
+        "Sizhuang He",
+        "Amin Karbasi",
+        "Emanuele Zappala"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.02536.pdf",
+      "abstract": "We explore the emergence of intelligent behavior in artificial systems by\ninvestigating how the complexity of rule-based systems influences the\ncapabilities of models trained to predict these rules. Our study focuses on\nelementary cellular automata (ECA), simple yet powerful one-dimensional systems\nthat generate behaviors ranging from trivial to highly complex. By training\ndistinct Large Language Models (LLMs) on different ECAs, we evaluated the\nrelationship between the complexity of the rules' behavior and the intelligence\nexhibited by the LLMs, as reflected in their performance on downstream tasks.\nOur findings reveal that rules with higher complexity lead to models exhibiting\ngreater intelligence, as demonstrated by their performance on reasoning and\nchess move prediction tasks. Both uniform and periodic systems, and often also\nhighly chaotic systems, resulted in poorer downstream performance, highlighting\na sweet spot of complexity conducive to intelligence. We conjecture that\nintelligence arises from the ability to predict complexity and that creating\nintelligence may require only exposure to complexity.",
+      "upvotes": 6
+    },
+    {
+      "title": "Synthio: Augmenting Small-Scale Audio Classification Datasets with Synthetic Data",
+      "url": "https://huggingface.co/papers/2410.02056",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2410.02056.pdf",
+      "abstract": "We present Synthio, a novel approach for augmenting small-scale audio\nclassification datasets with synthetic data. Our goal is to improve audio\nclassification accuracy with limited labeled data. Traditional data\naugmentation techniques, which apply artificial transformations (e.g., adding\nrandom noise or masking segments), struggle to create data that captures the\ntrue diversity present in real-world audios. To address this shortcoming, we\npropose to augment the dataset with synthetic audio generated from\ntext-to-audio (T2A) diffusion models. However, synthesizing effective\naugmentations is challenging because not only should the generated data be\nacoustically consistent with the underlying small-scale dataset, but they\nshould also have sufficient compositional diversity. To overcome the first\nchallenge, we align the generations of the T2A model with the small-scale\ndataset using preference optimization. This ensures that the acoustic\ncharacteristics of the generated data remain consistent with the small-scale\ndataset. To address the second challenge, we propose a novel caption generation\ntechnique that leverages the reasoning capabilities of Large Language Models to\n(1) generate diverse and meaningful audio captions and (2) iteratively refine\ntheir quality. The generated captions are then used to prompt the aligned T2A\nmodel. We extensively evaluate Synthio on ten datasets and four simulated\nlimited-data settings. Results indicate our method consistently outperforms all\nbaselines by 0.1%-39% using a T2A model trained only on weakly-captioned\nAudioSet.",
+      "upvotes": 6
+    },
+    {
+      "title": "Layer Swapping for Zero-Shot Cross-Lingual Transfer in Large Language Models",
+      "url": "https://huggingface.co/papers/2410.01335",
+      "authors": [
+        "Benjamin Muller",
+        "Rui Hou",
+        "Nayan Singhal",
+        "Hongjiang Lv",
+        "Bing Liu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.01335.pdf",
+      "abstract": "Model merging, such as model souping, is the practice of combining different\nmodels with the same architecture together without further training. In this\nwork, we present a model merging methodology that addresses the difficulty of\nfine-tuning Large Language Models (LLMs) for target tasks in non-English\nlanguages, where task-specific data is often unavailable. We focus on\nmathematical reasoning and without in-language math data, facilitate\ncross-lingual transfer by composing language and math capabilities. Starting\nfrom the same pretrained model, we fine-tune separate \"experts\" on math\ninstruction data in English and on generic instruction data in the target\nlanguage. We then replace the top and bottom transformer layers of the math\nexpert directly with layers from the language expert, which consequently\nenhances math performance in the target language. The resulting merged models\noutperform the individual experts and other merging methods on the math\nbenchmark, MGSM, by 10% across four major languages where math instruction data\nis scarce. In addition, this layer swapping is simple, inexpensive, and\nintuitive, as it is based on an interpretative analysis of the most important\nparameter changes during the fine-tuning of each expert. The ability to\nsuccessfully re-compose LLMs for cross-lingual transfer in this manner opens up\nfuture possibilities to combine model expertise, create modular solutions, and\ntransfer reasoning capabilities across languages all post hoc.",
+      "upvotes": 5
+    },
+    {
+      "title": "Robin3D: Improving 3D Large Language Model via Robust Instruction Tuning",
+      "url": "https://huggingface.co/papers/2410.00255",
+      "authors": [
+        "Mubarak Shah",
+        "Yan Yan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.00255.pdf",
+      "abstract": "Recent advancements in 3D Large Language Models (3DLLMs) have highlighted\ntheir potential in building general-purpose agents in the 3D real world, yet\nchallenges remain due to the lack of high-quality robust instruction-following\ndata, leading to limited discriminative power and generalization of 3DLLMs. In\nthis paper, we introduce Robin3D, a powerful 3DLLM trained on large-scale\ninstruction-following data generated by our novel data engine, Robust\nInstruction Generation (RIG) engine. RIG generates two key instruction data: 1)\nthe Adversarial Instruction-following data, which features mixed negative and\npositive samples to enhance the model's discriminative understanding. 2) the\nDiverse Instruction-following data, which contains various instruction styles\nto enhance model's generalization. As a result, we construct 1 million\ninstruction-following data, consisting of 344K Adversarial samples, 508K\nDiverse samples, and 165K benchmark training set samples. To better handle\nthese complex instructions, Robin3D first incorporates Relation-Augmented\nProjector to enhance spatial understanding, and then strengthens the object\nreferring and grounding ability through ID-Feature Bonding. Robin3D\nconsistently outperforms previous methods across five widely-used 3D multimodal\nlearning benchmarks, without the need for task-specific fine-tuning. Notably,\nwe achieve a 7.8\\% improvement in the grounding task (Multi3DRefer) and a 6.9\\%\nimprovement in the captioning task (Scan2Cap).",
+      "upvotes": 5
+    },
+    {
+      "title": "Learning the Latent Rules of a Game from Data: A Chess Story",
+      "url": "https://huggingface.co/papers/2410.02426",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2410.02426.pdf",
+      "abstract": "We demonstrate that small pretrained foundational generative language models\nwith millions of parameters can learn the latent rules of a process from data\nassociated with the process. Inspired by Stefan Zweig's novella\n\"Schachnovelle,\" also known as \"The Royal Game\" in English, we show that 28M\nand 125M parameter pretrained foundational small language models (SLMs) can be\ninstruction fine-tuned with 1,000-to-1,000,000 examples to learn the rules of\nchess, propose legal moves, and accurately solve chess problems. We also\nexplore the impact of successive language model fine-tuning epochs on improved\noutcomes and demonstrate reductions in model hallucinations by increasing the\nnumber of instruction fine-tuning examples.",
+      "upvotes": 5
+    },
+    {
+      "title": "SciPrompt: Knowledge-augmented Prompting for Fine-grained Categorization of Scientific Topics",
+      "url": "https://huggingface.co/papers/2410.01946",
+      "authors": [
+        "Kanyao Han",
+        "Haotian Zhu",
+        "Bertram Ludäscher",
+        "Jana Diesner"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.01946.pdf",
+      "abstract": "Prompt-based fine-tuning has become an essential method for eliciting\ninformation encoded in pre-trained language models for a variety of tasks,\nincluding text classification. For multi-class classification tasks,\nprompt-based fine-tuning under low-resource scenarios has resulted in\nperformance levels comparable to those of fully fine-tuning methods. Previous\nstudies have used crafted prompt templates and verbalizers, mapping from the\nlabel terms space to the class space, to solve the classification problem as a\nmasked language modeling task. However, cross-domain and fine-grained\nprompt-based fine-tuning with an automatically enriched verbalizer remains\nunexplored, mainly due to the difficulty and costs of manually selecting domain\nlabel terms for the verbalizer, which requires humans with domain expertise. To\naddress this challenge, we introduce SciPrompt, a framework designed to\nautomatically retrieve scientific topic-related terms for low-resource text\nclassification tasks. To this end, we select semantically correlated and\ndomain-specific label terms within the context of scientific literature for\nverbalizer augmentation. Furthermore, we propose a new verbalization strategy\nthat uses correlation scores as additional weights to enhance the prediction\nperformance of the language model during model tuning. Our method outperforms\nstate-of-the-art, prompt-based fine-tuning methods on scientific text\nclassification tasks under few and zero-shot settings, especially in\nclassifying fine-grained and emerging scientific topics.",
+      "upvotes": 4
+    }
+  ]
+}

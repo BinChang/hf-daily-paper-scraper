@@ -1,0 +1,129 @@
+{
+  "date": "2024-06-10",
+  "papers": [
+    {
+      "title": "Mixture-of-Agents Enhances Large Language Model Capabilities",
+      "url": "https://huggingface.co/papers/2406.04692",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2406.04692.pdf",
+      "abstract": "Recent advances in large language models (LLMs) demonstrate substantial\ncapabilities in natural language understanding and generation tasks. With the\ngrowing number of LLMs, how to harness the collective expertise of multiple\nLLMs is an exciting open direction. Toward this goal, we propose a new approach\nthat leverages the collective strengths of multiple LLMs through a\nMixture-of-Agents (MoA) methodology. In our approach, we construct a layered\nMoA architecture wherein each layer comprises multiple LLM agents. Each agent\ntakes all the outputs from agents in the previous layer as auxiliary\ninformation in generating its response. MoA models achieves state-of-art\nperformance on AlpacaEval 2.0, MT-Bench and FLASK, surpassing GPT-4 Omni. For\nexample, our MoA using only open-source LLMs is the leader of AlpacaEval 2.0 by\na substantial gap, achieving a score of 65.1% compared to 57.5% by GPT-4 Omni.",
+      "upvotes": 55
+    },
+    {
+      "title": "CRAG -- Comprehensive RAG Benchmark",
+      "url": "https://huggingface.co/papers/2406.04744",
+      "authors": [
+        "Kai Sun",
+        "Hao Xin",
+        "Yushi Sun",
+        "Xiangsen Chen",
+        "Rongze Daniel Gui",
+        "Ziran Will Jiang",
+        "Brian Moran",
+        "Yifan Ethan Xu",
+        "An Yan",
+        "Chenyu Yang",
+        "Eting Yuan",
+        "Hanwen Zha",
+        "Nan Tang",
+        "Lei Chen",
+        "Nicolas Scheffer"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.04744.pdf",
+      "abstract": "Retrieval-Augmented Generation (RAG) has recently emerged as a promising\nsolution to alleviate Large Language Model (LLM)'s deficiency in lack of\nknowledge. Existing RAG datasets, however, do not adequately represent the\ndiverse and dynamic nature of real-world Question Answering (QA) tasks. To\nbridge this gap, we introduce the Comprehensive RAG Benchmark (CRAG), a factual\nquestion answering benchmark of 4,409 question-answer pairs and mock APIs to\nsimulate web and Knowledge Graph (KG) search. CRAG is designed to encapsulate a\ndiverse array of questions across five domains and eight question categories,\nreflecting varied entity popularity from popular to long-tail, and temporal\ndynamisms ranging from years to seconds. Our evaluation on this benchmark\nhighlights the gap to fully trustworthy QA. Whereas most advanced LLMs achieve\n<=34% accuracy on CRAG, adding RAG in a straightforward manner improves the\naccuracy only to 44%. State-of-the-art industry RAG solutions only answer 63%\nquestions without any hallucination. CRAG also reveals much lower accuracy in\nanswering questions regarding facts with higher dynamism, lower popularity, or\nhigher complexity, suggesting future research directions. The CRAG benchmark\nlaid the groundwork for a KDD Cup 2024 challenge, attracting thousands of\nparticipants and submissions within the first 50 days of the competition. We\ncommit to maintaining CRAG to serve research communities in advancing RAG\nsolutions and general QA solutions.",
+      "upvotes": 41
+    },
+    {
+      "title": "WildBench: Benchmarking LLMs with Challenging Tasks from Real Users in the Wild",
+      "url": "https://huggingface.co/papers/2406.04770",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2406.04770.pdf",
+      "abstract": "We introduce WildBench, an automated evaluation framework designed to\nbenchmark large language models (LLMs) using challenging, real-world user\nqueries. WildBench consists of 1,024 tasks carefully selected from over one\nmillion human-chatbot conversation logs. For automated evaluation with\nWildBench, we have developed two metrics, WB-Reward and WB-Score, which are\ncomputable using advanced LLMs such as GPT-4-turbo. WildBench evaluation uses\ntask-specific checklists to evaluate model outputs systematically and provides\nstructured explanations that justify the scores and comparisons, resulting in\nmore reliable and interpretable automatic judgments. WB-Reward employs\nfine-grained pairwise comparisons between model responses, generating five\npotential outcomes: much better, slightly better, slightly worse, much worse,\nor a tie. Unlike previous evaluations that employed a single baseline model, we\nselected three baseline models at varying performance levels to ensure a\ncomprehensive pairwise evaluation. Additionally, we propose a simple method to\nmitigate length bias, by converting outcomes of ``slightly better/worse'' to\n``tie'' if the winner response exceeds the loser one by more than K\ncharacters. WB-Score evaluates the quality of model outputs individually,\nmaking it a fast and cost-efficient evaluation metric. WildBench results\ndemonstrate a strong correlation with the human-voted Elo ratings from Chatbot\nArena on hard tasks. Specifically, WB-Reward achieves a Pearson correlation of\n0.98 with top-ranking models. Additionally, WB-Score reaches 0.95, surpassing\nboth ArenaHard's 0.91 and AlpacaEval2.0's 0.89 for length-controlled win rates,\nas well as the 0.87 for regular win rates.",
+      "upvotes": 26
+    },
+    {
+      "title": "Large Language Model Confidence Estimation via Black-Box Access",
+      "url": "https://huggingface.co/papers/2406.04370",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2406.04370.pdf",
+      "abstract": "Estimating uncertainty or confidence in the responses of a model can be\nsignificant in evaluating trust not only in the responses, but also in the\nmodel as a whole. In this paper, we explore the problem of estimating\nconfidence for responses of large language models (LLMs) with simply black-box\nor query access to them. We propose a simple and extensible framework where, we\nengineer novel features and train a (interpretable) model (viz. logistic\nregression) on these features to estimate the confidence. We empirically\ndemonstrate that our simple framework is effective in estimating confidence of\nflan-ul2, llama-13b and mistral-7b with it consistently outperforming existing\nblack-box confidence estimation approaches on benchmark datasets such as\nTriviaQA, SQuAD, CoQA and Natural Questions by even over 10% (on AUROC) in\nsome cases. Additionally, our interpretable approach provides insight into\nfeatures that are predictive of confidence, leading to the interesting and\nuseful discovery that our confidence models built for one LLM generalize\nzero-shot across others on a given dataset.",
+      "upvotes": 19
+    },
+    {
+      "title": "GenAI Arena: An Open Evaluation Platform for Generative Models",
+      "url": "https://huggingface.co/papers/2406.04485",
+      "authors": [
+        "Rongqi Fan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.04485.pdf",
+      "abstract": "Generative AI has made remarkable strides to revolutionize fields such as\nimage and video generation. These advancements are driven by innovative\nalgorithms, architecture, and data. However, the rapid proliferation of\ngenerative models has highlighted a critical gap: the absence of trustworthy\nevaluation metrics. Current automatic assessments such as FID, CLIP, FVD, etc\noften fail to capture the nuanced quality and user satisfaction associated with\ngenerative outputs. This paper proposes an open platform GenAI-Arena to\nevaluate different image and video generative models, where users can actively\nparticipate in evaluating these models. By leveraging collective user feedback\nand votes, GenAI-Arena aims to provide a more democratic and accurate measure\nof model performance. It covers three arenas for text-to-image generation,\ntext-to-video generation, and image editing respectively. Currently, we cover a\ntotal of 27 open-source generative models. GenAI-Arena has been operating for\nfour months, amassing over 6000 votes from the community. We describe our\nplatform, analyze the data, and explain the statistical methods for ranking the\nmodels. To further promote the research in building model-based evaluation\nmetrics, we release a cleaned version of our preference data for the three\ntasks, namely GenAI-Bench. We prompt the existing multi-modal models like\nGemini, GPT-4o to mimic human voting. We compute the correlation between model\nvoting with human voting to understand their judging abilities. Our results\nshow existing multimodal models are still lagging in assessing the generated\nvisual content, even the best model GPT-4o only achieves a Pearson correlation\nof 0.22 in the quality subscore, and behaves like random guessing in others.",
+      "upvotes": 19
+    },
+    {
+      "title": "Proofread: Fixes All Errors with One Tap",
+      "url": "https://huggingface.co/papers/2406.04523",
+      "authors": [
+        "Yun Zhu",
+        "Haicheng Sun",
+        "Michael Xuelin Huang",
+        "Lei Meng",
+        "Shumin Zhai"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.04523.pdf",
+      "abstract": "The impressive capabilities in Large Language Models (LLMs) provide a\npowerful approach to reimagine users' typing experience. This paper\ndemonstrates Proofread, a novel Gboard feature powered by a server-side LLM in\nGboard, enabling seamless sentence-level and paragraph-level corrections with a\nsingle tap. We describe the complete system in this paper, from data\ngeneration, metrics design to model tuning and deployment. To obtain models\nwith sufficient quality, we implement a careful data synthetic pipeline\ntailored to online use cases, design multifaceted metrics, employ a two-stage\ntuning approach to acquire the dedicated LLM for the feature: the Supervised\nFine Tuning (SFT) for foundational quality, followed by the Reinforcement\nLearning (RL) tuning approach for targeted refinement. Specifically, we find\nsequential tuning on Rewrite and proofread tasks yields the best quality in SFT\nstage, and propose global and direct rewards in the RL tuning stage to seek\nfurther improvement. Extensive experiments on a human-labeled golden set showed\nour tuned PaLM2-XS model achieved 85.56\\% good ratio. We launched the feature\nto Pixel 8 devices by serving the model on TPU v5 in Google Cloud, with\nthousands of daily active users. Serving latency was significantly reduced by\nquantization, bucket inference, text segmentation, and speculative decoding.\nOur demo could be seen in https://youtu.be/4ZdcuiwFU7I{Youtube}.",
+      "upvotes": 12
+    },
+    {
+      "title": "NATURAL PLAN: Benchmarking LLMs on Natural Language Planning",
+      "url": "https://huggingface.co/papers/2406.04520",
+      "authors": [
+        "Huaixiu Steven Zheng",
+        "Azade Nova",
+        "Heng-Tze Cheng",
+        "Quoc V. Le",
+        "Ed H. Chi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.04520.pdf",
+      "abstract": "We introduce NATURAL PLAN, a realistic planning benchmark in natural language\ncontaining 3 key tasks: Trip Planning, Meeting Planning, and Calendar\nScheduling. We focus our evaluation on the planning capabilities of LLMs with\nfull information on the task, by providing outputs from tools such as Google\nFlights, Google Maps, and Google Calendar as contexts to the models. This\neliminates the need for a tool-use environment for evaluating LLMs on Planning.\nWe observe that NATURAL PLAN is a challenging benchmark for state of the art\nmodels. For example, in Trip Planning, GPT-4 and Gemini 1.5 Pro could only\nachieve 31.1% and 34.8% solve rate respectively. We find that model performance\ndrops drastically as the complexity of the problem increases: all models\nperform below 5% when there are 10 cities, highlighting a significant gap in\nplanning in natural language for SoTA LLMs. We also conduct extensive ablation\nstudies on NATURAL PLAN to further shed light on the (in)effectiveness of\napproaches such as self-correction, few-shot generalization, and in-context\nplanning with long-contexts on improving LLM planning.",
+      "upvotes": 10
+    },
+    {
+      "title": "Why Has Predicting Downstream Capabilities of Frontier AI Models with Scale Remained Elusive?",
+      "url": "https://huggingface.co/papers/2406.04391",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2406.04391.pdf",
+      "abstract": "Predictable behavior from scaling advanced AI systems is an extremely\ndesirable property. Although a well-established literature exists on how\npretraining performance scales, the literature on how particular downstream\ncapabilities scale is significantly muddier. In this work, we take a step back\nand ask: why has predicting specific downstream capabilities with scale\nremained elusive? While many factors are certainly responsible, we identify a\nnew factor that makes modeling scaling behavior on widely used multiple-choice\nquestion-answering benchmarks challenging. Using five model families and twelve\nwell-established multiple-choice benchmarks, we show that downstream\nperformance is computed from negative log likelihoods via a sequence of\ntransformations that progressively degrade the statistical relationship between\nperformance and scale. We then reveal the mechanism causing this degradation:\ndownstream metrics require comparing the correct choice against a small number\nof specific incorrect choices, meaning accurately predicting downstream\ncapabilities requires predicting not just how probability mass concentrates on\nthe correct choice with scale, but also how probability mass fluctuates on\nspecific incorrect choices with scale. We empirically study how probability\nmass on the correct choice co-varies with probability mass on incorrect choices\nwith increasing compute, suggesting that scaling laws for incorrect choices\nmight be achievable. Our work also explains why pretraining scaling laws are\ncommonly regarded as more predictable than downstream capabilities and\ncontributes towards establishing scaling-predictable evaluations of frontier AI\nmodels.",
+      "upvotes": 6
+    },
+    {
+      "title": "Boosting Large-scale Parallel Training Efficiency with C4: A Communication-Driven Approach",
+      "url": "https://huggingface.co/papers/2406.04594",
+      "authors": [
+        "Jianbo Dong",
+        "Bin Luo",
+        "Jun Zhang",
+        "Pengcheng Zhang",
+        "Fei Feng",
+        "Yikai Zhu",
+        "Ang Liu",
+        "Zian Chen",
+        "Yi Shi",
+        "Hairong Jiao",
+        "Gang Lu",
+        "Yu Guan",
+        "Ennan Zhai",
+        "Wencong Xiao",
+        "Hanyu Zhao",
+        "Man Yuan",
+        "Siran Yang",
+        "Xiang Li",
+        "Jiamang Wang",
+        "Jianwei Zhang",
+        "Huang Zhong"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.04594.pdf",
+      "abstract": "The emergence of Large Language Models (LLMs) has necessitated the adoption\nof parallel training techniques, involving the deployment of thousands of GPUs\nto train a single model. Unfortunately, we have found that the efficiency of\ncurrent parallel training is often suboptimal, largely due to the following two\nmain issues. Firstly, hardware failures are inevitable, leading to\ninterruptions in the training tasks. The inability to quickly identify the\nfaulty components results in a substantial waste of GPU resources. Secondly,\nsince GPUs must wait for parameter synchronization to complete before\nproceeding to the next round of computation, network congestions can greatly\nincrease the waiting time for GPUs. To address these challenges, this paper\nintroduces a communication-driven solution, namely the C4. The key insights of\nC4 are two folds. First, in parallel training, collective communication\nexhibits periodic and homogeneous characteristics, so any anomalies are\ncertainly due to some form of hardware malfunction. By leveraging this feature,\nC4 can rapidly identify the faulty components, swiftly isolate the anomaly, and\nrestart the task, thereby avoiding resource wastage caused by delays in anomaly\ndetection. Second, the predictable communication model of collective\ncommunication, involving few large flows, allows C4 to efficiently execute\ntraffic planning, substantially reducing network congestion. C4 has been\nextensively implemented across our production systems, cutting error-induced\noverhead by roughly 30% and enhancing runtime performance by about 15% for\ncertain applications with moderate communication costs.",
+      "upvotes": 4
+    }
+  ]
+}

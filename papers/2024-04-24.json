@@ -1,0 +1,99 @@
+{
+  "date": "2024-04-24",
+  "papers": [
+    {
+      "title": "OpenELM: An Efficient Language Model Family with Open-source Training and Inference Framework",
+      "url": "https://huggingface.co/papers/2404.14619",
+      "authors": [
+        "Peter Zatloukal"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.14619.pdf",
+      "abstract": "The reproducibility and transparency of large language models are crucial for\nadvancing open research, ensuring the trustworthiness of results, and enabling\ninvestigations into data and model biases, as well as potential risks. To this\nend, we release OpenELM, a state-of-the-art open language model. OpenELM uses a\nlayer-wise scaling strategy to efficiently allocate parameters within each\nlayer of the transformer model, leading to enhanced accuracy. For example, with\na parameter budget of approximately one billion parameters, OpenELM exhibits a\n2.36% improvement in accuracy compared to OLMo while requiring 2times fewer\npre-training tokens.\n  Diverging from prior practices that only provide model weights and inference\ncode, and pre-train on private datasets, our release includes the complete\nframework for training and evaluation of the language model on publicly\navailable datasets, including training logs, multiple checkpoints, and\npre-training configurations. We also release code to convert models to MLX\nlibrary for inference and fine-tuning on Apple devices. This comprehensive\nrelease aims to empower and strengthen the open research community, paving the\nway for future open research endeavors.\n  Our source code along with pre-trained model weights and training recipes is\navailable at https://github.com/apple/corenet. Additionally, \\model\nmodels can be found on HuggingFace at:\nhttps://huggingface.co/apple/OpenELM.",
+      "upvotes": 124
+    },
+    {
+      "title": "Multi-Head Mixture-of-Experts",
+      "url": "https://huggingface.co/papers/2404.15045",
+      "authors": [
+        "Xun Wu",
+        "Wenhui Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.15045.pdf",
+      "abstract": "Sparse Mixtures of Experts (SMoE) scales model capacity without significant\nincreases in training and inference costs, but exhibits the following two\nissues: (1) Low expert activation, where only a small subset of experts are\nactivated for optimization. (2) Lacking fine-grained analytical capabilities\nfor multiple semantic concepts within individual tokens. We propose Multi-Head\nMixture-of-Experts (MH-MoE), which employs a multi-head mechanism to split each\ntoken into multiple sub-tokens. These sub-tokens are then assigned to and\nprocessed by a diverse set of experts in parallel, and seamlessly reintegrated\ninto the original token form. The multi-head mechanism enables the model to\ncollectively attend to information from various representation spaces within\ndifferent experts, while significantly enhances expert activation, thus deepens\ncontext understanding and alleviate overfitting. Moreover, our MH-MoE is\nstraightforward to implement and decouples from other SMoE optimization\nmethods, making it easy to integrate with other SMoE models for enhanced\nperformance. Extensive experimental results across three tasks: English-focused\nlanguage modeling, Multi-lingual language modeling and Masked multi-modality\nmodeling tasks, demonstrate the effectiveness of MH-MoE.",
+      "upvotes": 59
+    },
+    {
+      "title": "Pegasus-v1 Technical Report",
+      "url": "https://huggingface.co/papers/2404.14687",
+      "authors": [
+        "Raehyuk Jung",
+        "Daniel Kim",
+        "Jay Suh",
+        "Jeff Kim",
+        "Junwan Kim",
+        "Kyle Park",
+        "Lucas Lee",
+        "Mars Ha",
+        "Abraham Jo",
+        "Ed Park",
+        "Hassan Kianinejad",
+        "SJ Kim",
+        "Wade Jeong"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.14687.pdf",
+      "abstract": "This technical report introduces Pegasus-1, a multimodal language model\nspecialized in video content understanding and interaction through natural\nlanguage. Pegasus-1 is designed to address the unique challenges posed by video\ndata, such as interpreting spatiotemporal information, to offer nuanced video\ncontent comprehension across various lengths. This technical report overviews\nPegasus-1's architecture, training strategies, and its performance in\nbenchmarks on video conversation, zero-shot video question answering, and video\nsummarization. We also explore qualitative characteristics of Pegasus-1 ,\ndemonstrating its capabilities as well as its limitations, in order to provide\nreaders a balanced view of its current state and its future direction.",
+      "upvotes": 30
+    },
+    {
+      "title": "FlashSpeech: Efficient Zero-Shot Speech Synthesis",
+      "url": "https://huggingface.co/papers/2404.14700",
+      "authors": [
+        "Zhen Ye",
+        "Zeqian Ju",
+        "Jianyi Chen",
+        "Yiwen Lu",
+        "Peiwen Sun",
+        "Weizhen Bian",
+        "Shulin He",
+        "Qifeng Liu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.14700.pdf",
+      "abstract": "Recent progress in large-scale zero-shot speech synthesis has been\nsignificantly advanced by language models and diffusion models. However, the\ngeneration process of both methods is slow and computationally intensive.\nEfficient speech synthesis using a lower computing budget to achieve quality on\npar with previous work remains a significant challenge. In this paper, we\npresent FlashSpeech, a large-scale zero-shot speech synthesis system with\napproximately 5\\% of the inference time compared with previous work.\nFlashSpeech is built on the latent consistency model and applies a novel\nadversarial consistency training approach that can train from scratch without\nthe need for a pre-trained diffusion model as the teacher. Furthermore, a new\nprosody generator module enhances the diversity of prosody, making the rhythm\nof the speech sound more natural. The generation processes of FlashSpeech can\nbe achieved efficiently with one or two sampling steps while maintaining high\naudio quality and high similarity to the audio prompt for zero-shot speech\ngeneration. Our experimental results demonstrate the superior performance of\nFlashSpeech. Notably, FlashSpeech can be about 20 times faster than other\nzero-shot speech synthesis systems while maintaining comparable performance in\nterms of voice quality and similarity. Furthermore, FlashSpeech demonstrates\nits versatility by efficiently performing tasks like voice conversion, speech\nediting, and diverse speech sampling. Audio samples can be found in\nhttps://flashspeech.github.io/.",
+      "upvotes": 29
+    },
+    {
+      "title": "SnapKV: LLM Knows What You are Looking for Before Generation",
+      "url": "https://huggingface.co/papers/2404.14469",
+      "authors": [
+        "Yuhong Li",
+        "Yingbing Huang",
+        "Bowen Yang",
+        "Hanchen Ye",
+        "Patrick Lewis",
+        "Deming Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.14469.pdf",
+      "abstract": "Large Language Models (LLMs) have made remarkable progress in processing\nextensive contexts, with the Key-Value (KV) cache playing a vital role in\nenhancing their performance. However, the growth of the KV cache in response to\nincreasing input length poses challenges to memory and time efficiency. To\naddress this problem, this paper introduces SnapKV, an innovative and\nfine-tuning-free approach that efficiently minimizes KV cache size while still\ndelivering comparable performance in real-world applications.\n  We discover that each attention head in the model consistently focuses on\nspecific prompt attention features during generation. Meanwhile, this robust\npattern can be obtained from an `observation' window located at the end of the\nprompts. Drawing on this insight, SnapKV automatically compresses KV caches by\nselecting clustered important KV positions for each attention head. Our\napproach significantly reduces the growing computational overhead and memory\nfootprint when processing long input sequences. Specifically, SnapKV achieves a\nconsistent decoding speed with a 3.6x increase in generation speed and an 8.2x\nenhancement in memory efficiency compared to baseline when processing inputs of\n16K tokens. At the same time, it maintains comparable performance to baseline\nmodels across 16 long sequence datasets. Moreover, SnapKV can process up to\n380K context tokens on a single A100-80GB GPU using HuggingFace implementation\nwith minor changes, exhibiting only a negligible accuracy drop in the\nNeedle-in-a-Haystack test. Further comprehensive studies suggest SnapKV's\npotential for practical applications.",
+      "upvotes": 23
+    },
+    {
+      "title": "Align Your Steps: Optimizing Sampling Schedules in Diffusion Models",
+      "url": "https://huggingface.co/papers/2404.14507",
+      "authors": [
+        "Sanja Fidler",
+        "Karsten Kreis"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.14507.pdf",
+      "abstract": "Diffusion models (DMs) have established themselves as the state-of-the-art\ngenerative modeling approach in the visual domain and beyond. A crucial\ndrawback of DMs is their slow sampling speed, relying on many sequential\nfunction evaluations through large neural networks. Sampling from DMs can be\nseen as solving a differential equation through a discretized set of noise\nlevels known as the sampling schedule. While past works primarily focused on\nderiving efficient solvers, little attention has been given to finding optimal\nsampling schedules, and the entire literature relies on hand-crafted\nheuristics. In this work, for the first time, we propose a general and\nprincipled approach to optimizing the sampling schedules of DMs for\nhigh-quality outputs, called Align Your Steps. We leverage methods\nfrom stochastic calculus and find optimal schedules specific to different\nsolvers, trained DMs and datasets. We evaluate our novel approach on several\nimage, video as well as 2D toy data synthesis benchmarks, using a variety of\ndifferent samplers, and observe that our optimized schedules outperform\nprevious hand-crafted schedules in almost all experiments. Our method\ndemonstrates the untapped potential of sampling schedule optimization,\nespecially in the few-step synthesis regime.",
+      "upvotes": 21
+    },
+    {
+      "title": "Transformers Can Represent $n$-gram Language Models",
+      "url": "https://huggingface.co/papers/2404.14994",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2404.14994.pdf",
+      "abstract": "Plenty of existing work has analyzed the abilities of the transformer\narchitecture by describing its representational capacity with formal models of\ncomputation. However, the focus so far has been on analyzing the architecture\nin terms of language acceptance. We contend that this is an ill-suited\nproblem in the study of language models (LMs), which are definitionally\nprobability distributions over strings. In this paper, we focus on the\nrelationship between transformer LMs and n-gram LMs, a simple and\nhistorically relevant class of language models. We show that transformer LMs\nusing the hard or sparse attention mechanisms can exactly represent any\nn-gram LM, giving us a concrete lower bound on their probabilistic\nrepresentational capacity. This provides a first step towards understanding the\nmechanisms that transformer LMs can use to represent probability distributions\nover strings.",
+      "upvotes": 18
+    }
+  ]
+}

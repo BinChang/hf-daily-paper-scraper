@@ -1,0 +1,181 @@
+{
+  "date": "2024-02-28",
+  "papers": [
+    {
+      "title": "The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits",
+      "url": "https://huggingface.co/papers/2402.17764",
+      "authors": [
+        "Wenhui Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.17764.pdf",
+      "abstract": "Recent research, such as BitNet, is paving the way for a new era of 1-bit\nLarge Language Models (LLMs). In this work, we introduce a 1-bit LLM variant,\nnamely BitNet b1.58, in which every single parameter (or weight) of the LLM is\nternary {-1, 0, 1}. It matches the full-precision (i.e., FP16 or BF16)\nTransformer LLM with the same model size and training tokens in terms of both\nperplexity and end-task performance, while being significantly more\ncost-effective in terms of latency, memory, throughput, and energy consumption.\nMore profoundly, the 1.58-bit LLM defines a new scaling law and recipe for\ntraining new generations of LLMs that are both high-performance and\ncost-effective. Furthermore, it enables a new computation paradigm and opens\nthe door for designing specific hardware optimized for 1-bit LLMs.",
+      "upvotes": 602
+    },
+    {
+      "title": "EMO: Emote Portrait Alive - Generating Expressive Portrait Videos with Audio2Video Diffusion Model under Weak Conditions",
+      "url": "https://huggingface.co/papers/2402.17485",
+      "authors": [
+        "Linrui Tian",
+        "Bang Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.17485.pdf",
+      "abstract": "In this work, we tackle the challenge of enhancing the realism and\nexpressiveness in talking head video generation by focusing on the dynamic and\nnuanced relationship between audio cues and facial movements. We identify the\nlimitations of traditional techniques that often fail to capture the full\nspectrum of human expressions and the uniqueness of individual facial styles.\nTo address these issues, we propose EMO, a novel framework that utilizes a\ndirect audio-to-video synthesis approach, bypassing the need for intermediate\n3D models or facial landmarks. Our method ensures seamless frame transitions\nand consistent identity preservation throughout the video, resulting in highly\nexpressive and lifelike animations. Experimental results demonsrate that EMO is\nable to produce not only convincing speaking videos but also singing videos in\nvarious styles, significantly outperforming existing state-of-the-art\nmethodologies in terms of expressiveness and realism.",
+      "upvotes": 188
+    },
+    {
+      "title": "Sora: A Review on Background, Technology, Limitations, and Opportunities of Large Vision Models",
+      "url": "https://huggingface.co/papers/2402.17177",
+      "authors": [
+        "Yuan Li",
+        "Yue Huang",
+        "Lifang He"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.17177.pdf",
+      "abstract": "Sora is a text-to-video generative AI model, released by OpenAI in February\n2024. The model is trained to generate videos of realistic or imaginative\nscenes from text instructions and show potential in simulating the physical\nworld. Based on public technical reports and reverse engineering, this paper\npresents a comprehensive review of the model's background, related\ntechnologies, applications, remaining challenges, and future directions of\ntext-to-video AI models. We first trace Sora's development and investigate the\nunderlying technologies used to build this \"world simulator\". Then, we describe\nin detail the applications and potential impact of Sora in multiple industries\nranging from film-making and education to marketing. We discuss the main\nchallenges and limitations that need to be addressed to widely deploy Sora,\nsuch as ensuring safe and unbiased video generation. Lastly, we discuss the\nfuture development of Sora and video generation models in general, and how\nadvancements in the field could enable new ways of human-AI interaction,\nboosting productivity and creativity of video generation.",
+      "upvotes": 88
+    },
+    {
+      "title": "When Scaling Meets LLM Finetuning: The Effect of Data, Model and Finetuning Method",
+      "url": "https://huggingface.co/papers/2402.17193",
+      "authors": [
+        "Orhan Firat"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.17193.pdf",
+      "abstract": "While large language models (LLMs) often adopt finetuning to unlock their\ncapabilities for downstream applications, our understanding on the inductive\nbiases (especially the scaling properties) of different finetuning methods is\nstill limited. To fill this gap, we conduct systematic experiments studying\nwhether and how different scaling factors, including LLM model size,\npretraining data size, new finetuning parameter size and finetuning data size,\naffect the finetuning performance. We consider two types of finetuning --\nfull-model tuning (FMT) and parameter efficient tuning (PET, including prompt\ntuning and LoRA), and explore their scaling behaviors in the data-limited\nregime where the LLM model size substantially outweighs the finetuning data\nsize. Based on two sets of pretrained bilingual LLMs from 1B to 16B and\nexperiments on bilingual machine translation and multilingual summarization\nbenchmarks, we find that 1) LLM finetuning follows a powerbased multiplicative\njoint scaling law between finetuning data size and each other scaling factor;\n2) LLM finetuning benefits more from LLM model scaling than pretraining data\nscaling, and PET parameter scaling is generally ineffective; and 3) the optimal\nfinetuning method is highly task- and finetuning data-dependent. We hope our\nfindings could shed light on understanding, selecting and developing LLM\nfinetuning methods.",
+      "upvotes": 23
+    },
+    {
+      "title": "DiffuseKronA: A Parameter Efficient Fine-tuning Method for Personalized Diffusion Model",
+      "url": "https://huggingface.co/papers/2402.17412",
+      "authors": [
+        "Chia-Mu Yu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.17412.pdf",
+      "abstract": "In the realm of subject-driven text-to-image (T2I) generative models, recent\ndevelopments like DreamBooth and BLIP-Diffusion have led to impressive results\nyet encounter limitations due to their intensive fine-tuning demands and\nsubstantial parameter requirements. While the low-rank adaptation (LoRA) module\nwithin DreamBooth offers a reduction in trainable parameters, it introduces a\npronounced sensitivity to hyperparameters, leading to a compromise between\nparameter efficiency and the quality of T2I personalized image synthesis.\nAddressing these constraints, we introduce \\textit{DiffuseKronA}, a\nnovel Kronecker product-based adaptation module that not only significantly\nreduces the parameter count by 35\\% and 99.947\\% compared to LoRA-DreamBooth\nand the original DreamBooth, respectively, but also enhances the quality of\nimage synthesis. Crucially, DiffuseKronA mitigates the issue of\nhyperparameter sensitivity, delivering consistent high-quality generations\nacross a wide range of hyperparameters, thereby diminishing the necessity for\nextensive fine-tuning. Furthermore, a more controllable decomposition makes\nDiffuseKronA more interpretable and even can achieve up to a 50\\%\nreduction with results comparable to LoRA-Dreambooth. Evaluated against diverse\nand complex input images and text prompts, DiffuseKronA consistently\noutperforms existing models, producing diverse images of higher quality with\nimproved fidelity and a more accurate color distribution of objects, all the\nwhile upholding exceptional parameter efficiency, thus presenting a substantial\nadvancement in the field of T2I generative modeling. Our project page,\nconsisting of links to the code, and pre-trained checkpoints, is available at\nhttps://diffusekrona.github.io/{https://diffusekrona.github.io/}.",
+      "upvotes": 21
+    },
+    {
+      "title": "OmniACT: A Dataset and Benchmark for Enabling Multimodal Generalist Autonomous Agents for Desktop and Web",
+      "url": "https://huggingface.co/papers/2402.17553",
+      "authors": [
+        "Ruslan Salakhutdinov"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.17553.pdf",
+      "abstract": "For decades, human-computer interaction has fundamentally been manual. Even\ntoday, almost all productive work done on the computer necessitates human input\nat every step. Autonomous virtual agents represent an exciting step in\nautomating many of these menial tasks. Virtual agents would empower users with\nlimited technical proficiency to harness the full possibilities of computer\nsystems. They could also enable the efficient streamlining of numerous computer\ntasks, ranging from calendar management to complex travel bookings, with\nminimal human intervention. In this paper, we introduce OmniACT, the\nfirst-of-a-kind dataset and benchmark for assessing an agent's capability to\ngenerate executable programs to accomplish computer tasks. Our scope extends\nbeyond traditional web automation, covering a diverse range of desktop\napplications. The dataset consists of fundamental tasks such as \"Play the next\nsong\", as well as longer horizon tasks such as \"Send an email to John Doe\nmentioning the time and place to meet\". Specifically, given a pair of screen\nimage and a visually-grounded natural language task, the goal is to generate a\nscript capable of fully executing the task. We run several strong baseline\nlanguage model agents on our benchmark. The strongest baseline, GPT-4, performs\nthe best on our benchmark However, its performance level still reaches only 15%\nof the human proficiency in generating executable scripts capable of completing\nthe task, demonstrating the challenge of our task for conventional web agents.\nOur benchmark provides a platform to measure and evaluate the progress of\nlanguage model agents in automating computer tasks and motivates future work\ntowards building multimodal models that bridge large language models and the\nvisual grounding of computer screens.",
+      "upvotes": 21
+    },
+    {
+      "title": "Training-Free Long-Context Scaling of Large Language Models",
+      "url": "https://huggingface.co/papers/2402.17463",
+      "authors": [
+        "Jun Zhang",
+        "Lingpeng Kong"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.17463.pdf",
+      "abstract": "The ability of Large Language Models (LLMs) to process and generate coherent\ntext is markedly weakened when the number of input tokens exceeds their\npretraining length. Given the expensive overhead of finetuning large-scale\nmodels with longer sequences, we propose Dual Chunk Attention (DCA), which\nenables Llama2 70B to support context windows of more than 100k tokens without\ncontinual training. By decomposing the attention computation for long sequences\ninto chunk-based modules, DCA manages to effectively capture the relative\npositional information of tokens within the same chunk (Intra-Chunk) and across\ndistinct chunks (Inter-Chunk), as well as integrates seamlessly with Flash\nAttention. In addition to its impressive extrapolation capability, DCA achieves\nperformance on practical long-context tasks that is comparable to or even\nbetter than that of finetuned models. When compared with proprietary models,\nour training-free 70B model attains 94% of the performance of gpt-3.5-16k,\nindicating it is a viable open-source alternative. All code and data used in\nthis work are released at https://github.com/HKUNLP/ChunkLlama.",
+      "upvotes": 19
+    },
+    {
+      "title": "Evaluating Very Long-Term Conversational Memory of LLM Agents",
+      "url": "https://huggingface.co/papers/2402.17753",
+      "authors": [
+        "Sergey Tulyakov",
+        "Mohit Bansal",
+        "Francesco Barbieri",
+        "Yuwei Fang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.17753.pdf",
+      "abstract": "Existing works on long-term open-domain dialogues focus on evaluating model\nresponses within contexts spanning no more than five chat sessions. Despite\nadvancements in long-context large language models (LLMs) and retrieval\naugmented generation (RAG) techniques, their efficacy in very long-term\ndialogues remains unexplored. To address this research gap, we introduce a\nmachine-human pipeline to generate high-quality, very long-term dialogues by\nleveraging LLM-based agent architectures and grounding their dialogues on\npersonas and temporal event graphs. Moreover, we equip each agent with the\ncapability of sharing and reacting to images. The generated conversations are\nverified and edited by human annotators for long-range consistency and\ngrounding to the event graphs. Using this pipeline, we collect LoCoMo, a\ndataset of very long-term conversations, each encompassing 300 turns and 9K\ntokens on avg., over up to 35 sessions. Based on LoCoMo, we present a\ncomprehensive evaluation benchmark to measure long-term memory in models,\nencompassing question answering, event summarization, and multi-modal dialogue\ngeneration tasks. Our experimental results indicate that LLMs exhibit\nchallenges in understanding lengthy conversations and comprehending long-range\ntemporal and causal dynamics within dialogues. Employing strategies like\nlong-context LLMs or RAG can offer improvements but these models still\nsubstantially lag behind human performance.",
+      "upvotes": 18
+    },
+    {
+      "title": "Video as the New Language for Real-World Decision Making",
+      "url": "https://huggingface.co/papers/2402.17139",
+      "authors": [
+        "Jacob Walker",
+        "Jack Parker-Holder",
+        "Jake Bruce",
+        "Andre Barreto",
+        "Pieter Abbeel",
+        "Dale Schuurmans"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.17139.pdf",
+      "abstract": "Both text and video data are abundant on the internet and support large-scale\nself-supervised learning through next token or frame prediction. However, they\nhave not been equally leveraged: language models have had significant\nreal-world impact, whereas video generation has remained largely limited to\nmedia entertainment. Yet video data captures important information about the\nphysical world that is difficult to express in language. To address this gap,\nwe discuss an under-appreciated opportunity to extend video generation to solve\ntasks in the real world. We observe how, akin to language, video can serve as a\nunified interface that can absorb internet knowledge and represent diverse\ntasks. Moreover, we demonstrate how, like language models, video generation can\nserve as planners, agents, compute engines, and environment simulators through\ntechniques such as in-context learning, planning and reinforcement learning. We\nidentify major impact opportunities in domains such as robotics, self-driving,\nand science, supported by recent work that demonstrates how such advanced\ncapabilities in video generation are plausibly within reach. Lastly, we\nidentify key challenges in video generation that mitigate progress. Addressing\nthese challenges will enable video generation models to demonstrate unique\nvalue alongside language models in a wider array of AI applications.",
+      "upvotes": 18
+    },
+    {
+      "title": "Towards Optimal Learning of Language Models",
+      "url": "https://huggingface.co/papers/2402.17759",
+      "authors": [
+        "Yaru Hao",
+        "Minlie Huang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.17759.pdf",
+      "abstract": "This work studies the general principles of improving the learning of\nlanguage models (LMs), which aims at reducing the necessary training steps for\nachieving superior performance. Specifically, we present a theory for the\noptimal learning of LMs. We first propose an objective that optimizes LM\nlearning by maximizing the data compression ratio in an\n\"LM-training-as-lossless-compression\" view. Then, we derive a theorem, named\nLearning Law, to reveal the properties of the dynamics in the optimal learning\nprocess under our objective. The theorem is then validated by experiments on a\nlinear classification and a real-world language modeling task. Finally, we\nempirically verify that the optimal learning of LMs essentially stems from the\nimprovement of the coefficients in the scaling law of LMs, indicating great\npromise and significance for designing practical learning acceleration methods.\nOur code can be found at https://aka.ms/LearningLaw.",
+      "upvotes": 16
+    },
+    {
+      "title": "Seeing and Hearing: Open-domain Visual-Audio Generation with Diffusion Latent Aligners",
+      "url": "https://huggingface.co/papers/2402.17723",
+      "authors": [
+        "Yazhou Xing",
+        "Zeyue Tian"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.17723.pdf",
+      "abstract": "Video and audio content creation serves as the core technique for the movie\nindustry and professional users. Recently, existing diffusion-based methods\ntackle video and audio generation separately, which hinders the technique\ntransfer from academia to industry. In this work, we aim at filling the gap,\nwith a carefully designed optimization-based framework for cross-visual-audio\nand joint-visual-audio generation. We observe the powerful generation ability\nof off-the-shelf video or audio generation models. Thus, instead of training\nthe giant models from scratch, we propose to bridge the existing strong models\nwith a shared latent representation space. Specifically, we propose a\nmultimodality latent aligner with the pre-trained ImageBind model. Our latent\naligner shares a similar core as the classifier guidance that guides the\ndiffusion denoising process during inference time. Through carefully designed\noptimization strategy and loss functions, we show the superior performance of\nour method on joint video-audio generation, visual-steered audio generation,\nand audio-steered visual generation tasks. The project website can be found at\nhttps://yzxing87.github.io/Seeing-and-Hearing/",
+      "upvotes": 16
+    },
+    {
+      "title": "Sora Generates Videos with Stunning Geometrical Consistency",
+      "url": "https://huggingface.co/papers/2402.17403",
+      "authors": [
+        "Chenxu Zhang",
+        "Shaodong Wei",
+        "Qibin Hou"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.17403.pdf",
+      "abstract": "The recently developed Sora model [1] has exhibited remarkable capabilities\nin video generation, sparking intense discussions regarding its ability to\nsimulate real-world phenomena. Despite its growing popularity, there is a lack\nof established metrics to evaluate its fidelity to real-world physics\nquantitatively. In this paper, we introduce a new benchmark that assesses the\nquality of the generated videos based on their adherence to real-world physics\nprinciples. We employ a method that transforms the generated videos into 3D\nmodels, leveraging the premise that the accuracy of 3D reconstruction is\nheavily contingent on the video quality. From the perspective of 3D\nreconstruction, we use the fidelity of the geometric constraints satisfied by\nthe constructed 3D models as a proxy to gauge the extent to which the generated\nvideos conform to real-world physics rules. Project page:\nhttps://sora-geometrical-consistency.github.io/",
+      "upvotes": 16
+    },
+    {
+      "title": "Disentangled 3D Scene Generation with Layout Learning",
+      "url": "https://huggingface.co/papers/2402.16936",
+      "authors": [
+        "Ben Mildenhall",
+        "Alexei A. Efros"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.16936.pdf",
+      "abstract": "We introduce a method to generate 3D scenes that are disentangled into their\ncomponent objects. This disentanglement is unsupervised, relying only on the\nknowledge of a large pretrained text-to-image model. Our key insight is that\nobjects can be discovered by finding parts of a 3D scene that, when rearranged\nspatially, still produce valid configurations of the same scene. Concretely,\nour method jointly optimizes multiple NeRFs from scratch - each representing\nits own object - along with a set of layouts that composite these objects into\nscenes. We then encourage these composited scenes to be in-distribution\naccording to the image generator. We show that despite its simplicity, our\napproach successfully generates 3D scenes decomposed into individual objects,\nenabling new capabilities in text-to-3D content creation. For results and an\ninteractive demo, see our project page at https://dave.ml/layoutlearning/",
+      "upvotes": 10
+    },
+    {
+      "title": "Playground v2.5: Three Insights towards Enhancing Aesthetic Quality in Text-to-Image Generation",
+      "url": "https://huggingface.co/papers/2402.17245",
+      "authors": [
+        "Suhail Doshi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.17245.pdf",
+      "abstract": "In this work, we share three insights for achieving state-of-the-art\naesthetic quality in text-to-image generative models. We focus on three\ncritical aspects for model improvement: enhancing color and contrast, improving\ngeneration across multiple aspect ratios, and improving human-centric fine\ndetails. First, we delve into the significance of the noise schedule in\ntraining a diffusion model, demonstrating its profound impact on realism and\nvisual fidelity. Second, we address the challenge of accommodating various\naspect ratios in image generation, emphasizing the importance of preparing a\nbalanced bucketed dataset. Lastly, we investigate the crucial role of aligning\nmodel outputs with human preferences, ensuring that generated images resonate\nwith human perceptual expectations. Through extensive analysis and experiments,\nPlayground v2.5 demonstrates state-of-the-art performance in terms of aesthetic\nquality under various conditions and aspect ratios, outperforming both\nwidely-used open-source models like SDXL and Playground v2, and closed-source\ncommercial systems such as DALLE 3 and Midjourney v5.2. Our model is\nopen-source, and we hope the development of Playground v2.5 provides valuable\nguidelines for researchers aiming to elevate the aesthetic quality of\ndiffusion-based image generation models.",
+      "upvotes": 10
+    },
+    {
+      "title": "VastGaussian: Vast 3D Gaussians for Large Scene Reconstruction",
+      "url": "https://huggingface.co/papers/2402.17427",
+      "authors": [
+        "Jiaqi Lin",
+        "Xiao Tang",
+        "Jianzhuang Liu",
+        "Shiyong Liu",
+        "Jiayue Liu",
+        "Yangdi Lu",
+        "Xiaofei Wu",
+        "Songcen Xu",
+        "Youliang Yan",
+        "Wenming Yang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.17427.pdf",
+      "abstract": "Existing NeRF-based methods for large scene reconstruction often have\nlimitations in visual quality and rendering speed. While the recent 3D Gaussian\nSplatting works well on small-scale and object-centric scenes, scaling it up to\nlarge scenes poses challenges due to limited video memory, long optimization\ntime, and noticeable appearance variations. To address these challenges, we\npresent VastGaussian, the first method for high-quality reconstruction and\nreal-time rendering on large scenes based on 3D Gaussian Splatting. We propose\na progressive partitioning strategy to divide a large scene into multiple\ncells, where the training cameras and point cloud are properly distributed with\nan airspace-aware visibility criterion. These cells are merged into a complete\nscene after parallel optimization. We also introduce decoupled appearance\nmodeling into the optimization process to reduce appearance variations in the\nrendered images. Our approach outperforms existing NeRF-based methods and\nachieves state-of-the-art results on multiple large scene datasets, enabling\nfast optimization and high-fidelity real-time rendering.",
+      "upvotes": 9
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "date": "2024-02-21",
+  "papers": [
+    {
+      "title": "Neural Network Diffusion",
+      "url": "https://huggingface.co/papers/2402.13144",
+      "authors": [
+        "Zhaopan Xu",
+        "Zelin Zang",
+        "Yang You"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.13144.pdf",
+      "abstract": "Diffusion models have achieved remarkable success in image and video\ngeneration. In this work, we demonstrate that diffusion models can also\ngenerate high-performing neural network parameters. Our approach is\nsimple, utilizing an autoencoder and a standard latent diffusion model. The\nautoencoder extracts latent representations of a subset of the trained network\nparameters. A diffusion model is then trained to synthesize these latent\nparameter representations from random noise. It then generates new\nrepresentations that are passed through the autoencoder's decoder, whose\noutputs are ready to use as new subsets of network parameters. Across various\narchitectures and datasets, our diffusion process consistently generates models\nof comparable or improved performance over trained networks, with minimal\nadditional cost. Notably, we empirically find that the generated models perform\ndifferently with the trained networks. Our results encourage more exploration\non the versatile use of diffusion models.",
+      "upvotes": 94
+    },
+    {
+      "title": "Synthetic Data (Almost) from Scratch: Generalized Instruction Tuning for Language Models",
+      "url": "https://huggingface.co/papers/2402.13064",
+      "authors": [
+        "Haoran Li",
+        "Xingxing Zhang",
+        "Zeqiang Huang",
+        "Xin Cheng",
+        "Xun Wang",
+        "Si-Qing Chen",
+        "Zhifang Sui",
+        "Wai Lam"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.13064.pdf",
+      "abstract": "We introduce Generalized Instruction Tuning (called GLAN), a general and\nscalable method for instruction tuning of Large Language Models (LLMs). Unlike\nprior work that relies on seed examples or existing datasets to construct\ninstruction tuning data, GLAN exclusively utilizes a pre-curated taxonomy of\nhuman knowledge and capabilities as input and generates large-scale synthetic\ninstruction data across all disciplines. Specifically, inspired by the\nsystematic structure in human education system, we build the taxonomy by\ndecomposing human knowledge and capabilities to various fields, sub-fields and\nultimately, distinct disciplines semi-automatically, facilitated by LLMs.\nSubsequently, we generate a comprehensive list of subjects for every discipline\nand proceed to design a syllabus tailored to each subject, again utilizing\nLLMs. With the fine-grained key concepts detailed in every class session of the\nsyllabus, we are able to generate diverse instructions with a broad coverage\nacross the entire spectrum of human knowledge and skills. Extensive experiments\non large language models (e.g., Mistral) demonstrate that GLAN excels in\nmultiple dimensions from mathematical reasoning, coding, academic exams,\nlogical reasoning to general instruction following without using task-specific\ntraining data of these tasks. In addition, GLAN allows for easy customization\nand new fields or skills can be added by simply incorporating a new node into\nour taxonomy.",
+      "upvotes": 46
+    },
+    {
+      "title": "Instruction-tuned Language Models are Better Knowledge Learners",
+      "url": "https://huggingface.co/papers/2402.12847",
+      "authors": [
+        "Pedro Rodriguez",
+        "Wen-tau Yih",
+        "Srinivasan Iyer"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.12847.pdf",
+      "abstract": "In order for large language model (LLM)-based assistants to effectively adapt\nto evolving information needs, it must be possible to update their factual\nknowledge through continued training on new data. The standard recipe for doing\nso involves continued pre-training on new documents followed by\ninstruction-tuning on question-answer (QA) pairs. However, we find that LLMs\ntrained with this recipe struggle to answer questions, even though the\nperplexity of documents is minimized. We found that QA pairs are generally\nstraightforward, while documents are more complex, weaving many factual\nstatements together in an intricate manner. Therefore, we hypothesize that it\nis beneficial to expose LLMs to QA pairs before continued pre-training on\ndocuments so that the process of encoding knowledge from complex documents\ntakes into account how this knowledge is accessed through questions. Based on\nthis, we propose pre-instruction-tuning (PIT), a method that instruction-tunes\non questions prior to training on documents. This contrasts with standard\ninstruction-tuning, which learns how to extract knowledge after training on\ndocuments. Extensive experiments and ablation studies demonstrate that PIT\nsignificantly enhances the ability of LLMs to absorb knowledge from new\ndocuments, outperforming standard instruction-tuning by 17.8%.",
+      "upvotes": 24
+    },
+    {
+      "title": "Video ReCap: Recursive Captioning of Hour-Long Videos",
+      "url": "https://huggingface.co/papers/2402.13250",
+      "authors": [
+        "Ngan Ho",
+        "Xitong Yang",
+        "Tushar Nagarajan",
+        "Lorenzo Torresani"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.13250.pdf",
+      "abstract": "Most video captioning models are designed to process short video clips of few\nseconds and output text describing low-level visual concepts (e.g., objects,\nscenes, atomic actions). However, most real-world videos last for minutes or\nhours and have a complex hierarchical structure spanning different temporal\ngranularities. We propose Video ReCap, a recursive video captioning model that\ncan process video inputs of dramatically different lengths (from 1 second to 2\nhours) and output video captions at multiple hierarchy levels. The recursive\nvideo-language architecture exploits the synergy between different video\nhierarchies and can process hour-long videos efficiently. We utilize a\ncurriculum learning training scheme to learn the hierarchical structure of\nvideos, starting from clip-level captions describing atomic actions, then\nfocusing on segment-level descriptions, and concluding with generating\nsummaries for hour-long videos. Furthermore, we introduce Ego4D-HCap dataset by\naugmenting Ego4D with 8,267 manually collected long-range video summaries. Our\nrecursive model can flexibly generate captions at different hierarchy levels\nwhile also being useful for other complex video understanding tasks, such as\nVideoQA on EgoSchema. Data, code, and models are available at:\nhttps://sites.google.com/view/vidrecap",
+      "upvotes": 24
+    },
+    {
+      "title": "VideoPrism: A Foundational Visual Encoder for Video Understanding",
+      "url": "https://huggingface.co/papers/2402.13217",
+      "authors": [
+        "Nitesh B. Gundavarapu",
+        "Liangzhe Yuan",
+        "Hao Zhou",
+        "Shen Yan",
+        "Luke Friedman",
+        "Rui Qian",
+        "Tobias Weyand",
+        "Rachel Hornung",
+        "Florian Schroff",
+        "Ming-Hsuan Yang",
+        "David A. Ross",
+        "Huisheng Wang",
+        "Hartwig Adam",
+        "Boqing Gong"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.13217.pdf",
+      "abstract": "We introduce VideoPrism, a general-purpose video encoder that tackles diverse\nvideo understanding tasks with a single frozen model. We pretrain VideoPrism on\na heterogeneous corpus containing 36M high-quality video-caption pairs and 582M\nvideo clips with noisy parallel text (e.g., ASR transcripts). The pretraining\napproach improves upon masked autoencoding by global-local distillation of\nsemantic video embeddings and a token shuffling scheme, enabling VideoPrism to\nfocus primarily on the video modality while leveraging the invaluable text\nassociated with videos. We extensively test VideoPrism on four broad groups of\nvideo understanding tasks, from web video question answering to CV for science,\nachieving state-of-the-art performance on 30 out of 33 video understanding\nbenchmarks.",
+      "upvotes": 21
+    },
+    {
+      "title": "Improving Robustness for Joint Optimization of Camera Poses and Decomposed Low-Rank Tensorial Radiance Fields",
+      "url": "https://huggingface.co/papers/2402.13252",
+      "authors": [
+        "Bo-Yu Cheng",
+        "Wei-Chen Chiu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.13252.pdf",
+      "abstract": "In this paper, we propose an algorithm that allows joint refinement of camera\npose and scene geometry represented by decomposed low-rank tensor, using only\n2D images as supervision. First, we conduct a pilot study based on a 1D signal\nand relate our findings to 3D scenarios, where the naive joint pose\noptimization on voxel-based NeRFs can easily lead to sub-optimal solutions.\nMoreover, based on the analysis of the frequency spectrum, we propose to apply\nconvolutional Gaussian filters on 2D and 3D radiance fields for a\ncoarse-to-fine training schedule that enables joint camera pose optimization.\nLeveraging the decomposition property in decomposed low-rank tensor, our method\nachieves an equivalent effect to brute-force 3D convolution with only incurring\nlittle computational overhead. To further improve the robustness and stability\nof joint optimization, we also propose techniques of smoothed 2D supervision,\nrandomly scaled kernel parameters, and edge-guided loss mask. Extensive\nquantitative and qualitative evaluations demonstrate that our proposed\nframework achieves superior performance in novel view synthesis as well as\nrapid convergence for optimization.",
+      "upvotes": 17
+    },
+    {
+      "title": "The FinBen: An Holistic Financial Benchmark for Large Language Models",
+      "url": "https://huggingface.co/papers/2402.12659",
+      "authors": [
+        "Zhengyu Chen",
+        "Ruoyu Xiang",
+        "Xiao Zhang",
+        "Mengxi Xiao",
+        "Dong Li",
+        "Yongfu Dai",
+        "Yijing Xu",
+        "Haoqiang Kang",
+        "Ziyan Kuang",
+        "Tianlin Zhang",
+        "Guojun Xiong",
+        "Zhiyang Deng",
+        "Yuechen Jiang",
+        "Zhiyuan Yao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.12659.pdf",
+      "abstract": "LLMs have transformed NLP and shown promise in various fields, yet their\npotential in finance is underexplored due to a lack of thorough evaluations and\nthe complexity of financial tasks. This along with the rapid development of\nLLMs, highlights the urgent need for a systematic financial evaluation\nbenchmark for LLMs. In this paper, we introduce FinBen, the first comprehensive\nopen-sourced evaluation benchmark, specifically designed to thoroughly assess\nthe capabilities of LLMs in the financial domain. FinBen encompasses 35\ndatasets across 23 financial tasks, organized into three spectrums of\ndifficulty inspired by the Cattell-Horn-Carroll theory, to evaluate LLMs'\ncognitive abilities in inductive reasoning, associative memory, quantitative\nreasoning, crystallized intelligence, and more. Our evaluation of 15\nrepresentative LLMs, including GPT-4, ChatGPT, and the latest Gemini, reveals\ninsights into their strengths and limitations within the financial domain. The\nfindings indicate that GPT-4 leads in quantification, extraction, numerical\nreasoning, and stock trading, while Gemini shines in generation and\nforecasting; however, both struggle with complex extraction and forecasting,\nshowing a clear need for targeted enhancements. Instruction tuning boosts\nsimple task performance but falls short in improving complex reasoning and\nforecasting abilities. FinBen seeks to continuously evaluate LLMs in finance,\nfostering AI development with regular updates of tasks and models.",
+      "upvotes": 16
+    },
+    {
+      "title": "MVDiffusion++: A Dense High-resolution Multi-view Diffusion Model for Single or Sparse-view 3D Object Reconstruction",
+      "url": "https://huggingface.co/papers/2402.12712",
+      "authors": [
+        "Shitao Tang",
+        "Dilin Wang",
+        "Chengzhou Tang",
+        "Fuyang Zhang",
+        "Yuchen Fan",
+        "Yasutaka Furukawa",
+        "Rakesh Ranjan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.12712.pdf",
+      "abstract": "This paper presents a neural architecture MVDiffusion++ for 3D object\nreconstruction that synthesizes dense and high-resolution views of an object\ngiven one or a few images without camera poses. MVDiffusion++ achieves superior\nflexibility and scalability with two surprisingly simple ideas: 1) A\n``pose-free architecture'' where standard self-attention among 2D latent\nfeatures learns 3D consistency across an arbitrary number of conditional and\ngeneration views without explicitly using camera pose information; and 2) A\n``view dropout strategy'' that discards a substantial number of output views\nduring training, which reduces the training-time memory footprint and enables\ndense and high-resolution view synthesis at test time. We use the Objaverse for\ntraining and the Google Scanned Objects for evaluation with standard novel view\nsynthesis and 3D reconstruction metrics, where MVDiffusion++ significantly\noutperforms the current state of the arts. We also demonstrate a text-to-3D\napplication example by combining MVDiffusion++ with a text-to-image generative\nmodel.",
+      "upvotes": 15
+    },
+    {
+      "title": "FlashTex: Fast Relightable Mesh Texturing with LightControlNet",
+      "url": "https://huggingface.co/papers/2402.13251",
+      "authors": [
+        "Kangle Deng",
+        "Timothy Omernick",
+        "Alexander Weiss",
+        "Tinghui Zhou"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.13251.pdf",
+      "abstract": "Manually creating textures for 3D meshes is time-consuming, even for expert\nvisual content creators. We propose a fast approach for automatically texturing\nan input 3D mesh based on a user-provided text prompt. Importantly, our\napproach disentangles lighting from surface material/reflectance in the\nresulting texture so that the mesh can be properly relit and rendered in any\nlighting environment. We introduce LightControlNet, a new text-to-image model\nbased on the ControlNet architecture, which allows the specification of the\ndesired lighting as a conditioning image to the model. Our text-to-texture\npipeline then constructs the texture in two stages. The first stage produces a\nsparse set of visually consistent reference views of the mesh using\nLightControlNet. The second stage applies a texture optimization based on Score\nDistillation Sampling (SDS) that works with LightControlNet to increase the\ntexture quality while disentangling surface material from lighting. Our\npipeline is significantly faster than previous text-to-texture methods, while\nproducing high-quality and relightable textures.",
+      "upvotes": 13
+    },
+    {
+      "title": "A Touch, Vision, and Language Dataset for Multimodal Alignment",
+      "url": "https://huggingface.co/papers/2402.13232",
+      "authors": [
+        "Gaurav Datta",
+        "Huang Huang",
+        "William Chung-Ho Panitch",
+        "Jaimyn Drake",
+        "Joseph Ortiz",
+        "Mustafa Mukadam",
+        "Mike Lambeta",
+        "Roberto Calandra",
+        "Ken Goldberg"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.13232.pdf",
+      "abstract": "Touch is an important sensing modality for humans, but it has not yet been\nincorporated into a multimodal generative language model. This is partially due\nto the difficulty of obtaining natural language labels for tactile data and the\ncomplexity of aligning tactile readings with both visual observations and\nlanguage descriptions. As a step towards bridging that gap, this work\nintroduces a new dataset of 44K in-the-wild vision-touch pairs, with English\nlanguage labels annotated by humans (10%) and textual pseudo-labels from GPT-4V\n(90%). We use this dataset to train a vision-language-aligned tactile encoder\nfor open-vocabulary classification and a touch-vision-language (TVL) model for\ntext generation using the trained encoder. Results suggest that by\nincorporating touch, the TVL model improves (+29% classification accuracy)\ntouch-vision-language alignment over existing models trained on any pair of\nthose modalities. Although only a small fraction of the dataset is\nhuman-labeled, the TVL model demonstrates improved visual-tactile understanding\nover GPT-4V (+12%) and open-source vision-language models (+32%) on a new\ntouch-vision understanding benchmark. Code and data:\nhttps://tactile-vlm.github.io.",
+      "upvotes": 13
+    },
+    {
+      "title": "How Easy is It to Fool Your Multimodal LLMs? An Empirical Analysis on Deceptive Prompts",
+      "url": "https://huggingface.co/papers/2402.13220",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2402.13220.pdf",
+      "abstract": "The remarkable advancements in Multimodal Large Language Models (MLLMs) have\nnot rendered them immune to challenges, particularly in the context of handling\ndeceptive information in prompts, thus producing hallucinated responses under\nsuch conditions. To quantitatively assess this vulnerability, we present\nMAD-Bench, a carefully curated benchmark that contains 850 test samples divided\ninto 6 categories, such as non-existent objects, count of objects, spatial\nrelationship, and visual confusion. We provide a comprehensive analysis of\npopular MLLMs, ranging from GPT-4V, Gemini-Pro, to open-sourced models, such as\nLLaVA-1.5 and CogVLM. Empirically, we observe significant performance gaps\nbetween GPT-4V and other models; and previous robust instruction-tuned models,\nsuch as LRV-Instruction and LLaVA-RLHF, are not effective on this new\nbenchmark. While GPT-4V achieves 75.02% accuracy on MAD-Bench, the accuracy of\nany other model in our experiments ranges from 5% to 35%. We further propose a\nremedy that adds an additional paragraph to the deceptive prompts to encourage\nmodels to think twice before answering the question. Surprisingly, this simple\nmethod can even double the accuracy; however, the absolute numbers are still\ntoo low to be satisfactory. We hope MAD-Bench can serve as a valuable benchmark\nto stimulate further research to enhance models' resilience against deceptive\nprompts.",
+      "upvotes": 12
+    },
+    {
+      "title": "TofuEval: Evaluating Hallucinations of LLMs on Topic-Focused Dialogue Summarization",
+      "url": "https://huggingface.co/papers/2402.13249",
+      "authors": [
+        "Amy Wing-mei Wong",
+        "Jon Burnsky",
+        "Yu'an Yang",
+        "Song Feng",
+        "Hang Su",
+        "Lijia Sun",
+        "Yi Zhang",
+        "Saab Mansour",
+        "Kathleen McKeown"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.13249.pdf",
+      "abstract": "Single document news summarization has seen substantial progress on\nfaithfulness in recent years, driven by research on the evaluation of factual\nconsistency, or hallucinations. We ask whether these advances carry over to\nother text summarization domains. We propose a new evaluation benchmark on\ntopic-focused dialogue summarization, generated by LLMs of varying sizes. We\nprovide binary sentence-level human annotations of the factual consistency of\nthese summaries along with detailed explanations of factually inconsistent\nsentences. Our analysis shows that existing LLMs hallucinate significant\namounts of factual errors in the dialogue domain, regardless of the model's\nsize. On the other hand, when LLMs, including GPT-4, serve as binary factual\nevaluators, they perform poorly and can be outperformed by prevailing\nstate-of-the-art specialized factuality evaluation metrics. Finally, we\nconducted an analysis of hallucination types with a curated error taxonomy. We\nfind that there are diverse errors and error distributions in model-generated\nsummaries and that non-LLM based metrics can capture all error types better\nthan LLM-based evaluators.",
+      "upvotes": 10
+    },
+    {
+      "title": "RealCompo: Dynamic Equilibrium between Realism and Compositionality Improves Text-to-Image Diffusion Models",
+      "url": "https://huggingface.co/papers/2402.12908",
+      "authors": [
+        "Zhaochen Yu",
+        "Jiake Xie",
+        "Ye Tian",
+        "Yong Tang",
+        "Bin Cui"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.12908.pdf",
+      "abstract": "Diffusion models have achieved remarkable advancements in text-to-image\ngeneration. However, existing models still have many difficulties when faced\nwith multiple-object compositional generation. In this paper, we propose a new\ntraining-free and transferred-friendly text-to-image generation framework,\nnamely RealCompo, which aims to leverage the advantages of text-to-image and\nlayout-to-image models to enhance both realism and compositionality of the\ngenerated images. An intuitive and novel balancer is proposed to dynamically\nbalance the strengths of the two models in denoising process, allowing\nplug-and-play use of any model without extra training. Extensive experiments\nshow that our RealCompo consistently outperforms state-of-the-art text-to-image\nmodels and layout-to-image models in multiple-object compositional generation\nwhile keeping satisfactory realism and compositionality of the generated\nimages. Code is available at https://github.com/YangLing0818/RealCompo",
+      "upvotes": 8
+    }
+  ]
+}

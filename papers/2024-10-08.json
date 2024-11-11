@@ -1,0 +1,313 @@
+{
+  "date": "2024-10-08",
+  "papers": [
+    {
+      "title": "Differential Transformer",
+      "url": "https://huggingface.co/papers/2410.05258",
+      "authors": [
+        "Yi Zhu",
+        "Gao Huang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.05258.pdf",
+      "abstract": "Transformer tends to overallocate attention to irrelevant context. In this\nwork, we introduce Diff Transformer, which amplifies attention to the relevant\ncontext while canceling noise. Specifically, the differential attention\nmechanism calculates attention scores as the difference between two separate\nsoftmax attention maps. The subtraction cancels noise, promoting the emergence\nof sparse attention patterns. Experimental results on language modeling show\nthat Diff Transformer outperforms Transformer in various settings of scaling up\nmodel size and training tokens. More intriguingly, it offers notable advantages\nin practical applications, such as long-context modeling, key information\nretrieval, hallucination mitigation, in-context learning, and reduction of\nactivation outliers. By being less distracted by irrelevant context, Diff\nTransformer can mitigate hallucination in question answering and text\nsummarization. For in-context learning, Diff Transformer not only enhances\naccuracy but is also more robust to order permutation, which was considered as\na chronic robustness issue. The results position Diff Transformer as a highly\neffective and promising architecture to advance large language models.",
+      "upvotes": 165
+    },
+    {
+      "title": "LLaMA-Berry: Pairwise Optimization for O1-like Olympiad-Level Mathematical Reasoning",
+      "url": "https://huggingface.co/papers/2410.02884",
+      "authors": [
+        "Jingdi Lei",
+        "Tong Che",
+        "Tong Xie",
+        "Xiaoshui Huang",
+        "Shufei Zhang",
+        "Marco Pavone",
+        "Yuqiang Li",
+        "Wanli Ouyang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.02884.pdf",
+      "abstract": "This paper presents an advanced mathematical problem-solving framework,\nLLaMA-Berry, for enhancing the mathematical reasoning ability of Large Language\nModels (LLMs). The framework combines Monte Carlo Tree Search (MCTS) with\niterative Self-Refine to optimize the reasoning path and utilizes a pairwise\nreward model to evaluate different paths globally. By leveraging the\nself-critic and rewriting capabilities of LLMs, Self-Refine applied to MCTS\n(SR-MCTS) overcomes the inefficiencies and limitations of conventional\nstep-wise and greedy search algorithms by fostering a more efficient\nexploration of solution spaces. Pairwise Preference Reward Model~(PPRM),\ninspired by Reinforcement Learning from Human Feedback (RLHF), is then used to\nmodel pairwise preferences between solutions, utilizing an Enhanced Borda Count\n(EBC) method to synthesize these preferences into a global ranking score to\nfind better answers. This approach addresses the challenges of scoring\nvariability and non-independent distributions in mathematical reasoning tasks.\nThe framework has been tested on general and advanced benchmarks, showing\nsuperior performance in terms of search efficiency and problem-solving\ncapability compared to existing methods like ToT and rStar, particularly in\ncomplex Olympiad-level benchmarks, including GPQA, AIME24 and AMC23.",
+      "upvotes": 48
+    },
+    {
+      "title": "LLMs Know More Than They Show: On the Intrinsic Representation of LLM Hallucinations",
+      "url": "https://huggingface.co/papers/2410.02707",
+      "authors": [
+        "Zorik Gekhman",
+        "Roi Reichart",
+        "Idan Szpektor",
+        "Hadas Kotek"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.02707.pdf",
+      "abstract": "Large language models (LLMs) often produce errors, including factual\ninaccuracies, biases, and reasoning failures, collectively referred to as\n\"hallucinations\". Recent studies have demonstrated that LLMs' internal states\nencode information regarding the truthfulness of their outputs, and that this\ninformation can be utilized to detect errors. In this work, we show that the\ninternal representations of LLMs encode much more information about\ntruthfulness than previously recognized. We first discover that the\ntruthfulness information is concentrated in specific tokens, and leveraging\nthis property significantly enhances error detection performance. Yet, we show\nthat such error detectors fail to generalize across datasets, implying that --\ncontrary to prior claims -- truthfulness encoding is not universal but rather\nmultifaceted. Next, we show that internal representations can also be used for\npredicting the types of errors the model is likely to make, facilitating the\ndevelopment of tailored mitigation strategies. Lastly, we reveal a discrepancy\nbetween LLMs' internal encoding and external behavior: they may encode the\ncorrect answer, yet consistently generate an incorrect one. Taken together,\nthese insights deepen our understanding of LLM errors from the model's internal\nperspective, which can guide future research on enhancing error analysis and\nmitigation.",
+      "upvotes": 48
+    },
+    {
+      "title": "VideoGuide: Improving Video Diffusion Models without Training Through a Teacher's Guide",
+      "url": "https://huggingface.co/papers/2410.04364",
+      "authors": [
+        "Jong Chul Ye"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.04364.pdf",
+      "abstract": "Text-to-image (T2I) diffusion models have revolutionized visual content\ncreation, but extending these capabilities to text-to-video (T2V) generation\nremains a challenge, particularly in preserving temporal consistency. Existing\nmethods that aim to improve consistency often cause trade-offs such as reduced\nimaging quality and impractical computational time. To address these issues we\nintroduce VideoGuide, a novel framework that enhances the temporal consistency\nof pretrained T2V models without the need for additional training or\nfine-tuning. Instead, VideoGuide leverages any pretrained video diffusion model\n(VDM) or itself as a guide during the early stages of inference, improving\ntemporal quality by interpolating the guiding model's denoised samples into the\nsampling model's denoising process. The proposed method brings about\nsignificant improvement in temporal consistency and image fidelity, providing a\ncost-effective and practical solution that synergizes the strengths of various\nvideo diffusion models. Furthermore, we demonstrate prior distillation,\nrevealing that base models can achieve enhanced text coherence by utilizing the\nsuperior data prior of the guiding model through the proposed method. Project\nPage: http://videoguide2025.github.io/",
+      "upvotes": 27
+    },
+    {
+      "title": "FAN: Fourier Analysis Networks",
+      "url": "https://huggingface.co/papers/2410.02675",
+      "authors": [
+        "Yongding Tao",
+        "Xue Jiang",
+        "Jia Li",
+        "Jing Su",
+        "Jun Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.02675.pdf",
+      "abstract": "Despite the remarkable success achieved by neural networks, particularly\nthose represented by MLP and Transformer, we reveal that they exhibit potential\nflaws in the modeling and reasoning of periodicity, i.e., they tend to memorize\nthe periodic data rather than genuinely understanding the underlying principles\nof periodicity. However, periodicity is a crucial trait in various forms of\nreasoning and generalization, underpinning predictability across natural and\nengineered systems through recurring patterns in observations. In this paper,\nwe propose FAN, a novel network architecture based on Fourier Analysis, which\nempowers the ability to efficiently model and reason about periodic phenomena.\nBy introducing Fourier Series, the periodicity is naturally integrated into the\nstructure and computational processes of the neural network, thus achieving a\nmore accurate expression and prediction of periodic patterns. As a promising\nsubstitute to multi-layer perceptron (MLP), FAN can seamlessly replace MLP in\nvarious models with fewer parameters and FLOPs. Through extensive experiments,\nwe demonstrate the effectiveness of FAN in modeling and reasoning about\nperiodic functions, and the superiority and generalizability of FAN across a\nrange of real-world tasks, including symbolic formula representation, time\nseries forecasting, and language modeling.",
+      "upvotes": 24
+    },
+    {
+      "title": "ScienceAgentBench: Toward Rigorous Assessment of Language Agents for Data-Driven Scientific Discovery",
+      "url": "https://huggingface.co/papers/2410.05080",
+      "authors": [
+        "Shijie Chen",
+        "Qianheng Zhang",
+        "Boshi Wang",
+        "Botao Yu",
+        "Yifei Li",
+        "Zeyi Liao",
+        "Chen Wei",
+        "Zitong Lu",
+        "Vishal Dey",
+        "Mingyi Xue",
+        "Benjamin Burns",
+        "Daniel Adu-Ampratwum",
+        "Xuhui Huang",
+        "Xia Ning",
+        "Song Gao",
+        "Huan Sun"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.05080.pdf",
+      "abstract": "The advancements of language language models (LLMs) have piqued growing\ninterest in developing LLM-based language agents to automate scientific\ndiscovery end-to-end, which has sparked both excitement and skepticism about\nthe true capabilities of such agents. In this work, we argue that for an agent\nto fully automate scientific discovery, it must be able to complete all\nessential tasks in the workflow. Thus, we call for rigorous assessment of\nagents on individual tasks in a scientific workflow before making bold claims\non end-to-end automation. To this end, we present ScienceAgentBench, a new\nbenchmark for evaluating language agents for data-driven scientific discovery.\nTo ensure the scientific authenticity and real-world relevance of our\nbenchmark, we extract 102 tasks from 44 peer-reviewed publications in four\ndisciplines and engage nine subject matter experts to validate them. We unify\nthe target output for every task to a self-contained Python program file and\nemploy an array of evaluation metrics to examine the generated programs,\nexecution results, and costs. Each task goes through multiple rounds of manual\nvalidation by annotators and subject matter experts to ensure its annotation\nquality and scientific plausibility. We also propose two effective strategies\nto mitigate data contamination concerns. Using our benchmark, we evaluate five\nopen-weight and proprietary LLMs, each with three frameworks: direct prompting,\nOpenHands, and self-debug. Given three attempts for each task, the\nbest-performing agent can only solve 32.4% of the tasks independently and 34.3%\nwith expert-provided knowledge. These results underscore the limited capacities\nof current language agents in generating code for data-driven discovery, let\nalone end-to-end automation for scientific research.",
+      "upvotes": 19
+    },
+    {
+      "title": "GSM-Symbolic: Understanding the Limitations of Mathematical Reasoning in Large Language Models",
+      "url": "https://huggingface.co/papers/2410.05229",
+      "authors": [
+        "Iman Mirzadeh",
+        "Keivan Alizadeh",
+        "Hooman Shahrokhi",
+        "Oncel Tuzel",
+        "Samy Bengio",
+        "Mehrdad Farajtabar"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.05229.pdf",
+      "abstract": "Recent advancements in Large Language Models (LLMs) have sparked interest in\ntheir formal reasoning capabilities, particularly in mathematics. The GSM8K\nbenchmark is widely used to assess the mathematical reasoning of models on\ngrade-school-level questions. While the performance of LLMs on GSM8K has\nsignificantly improved in recent years, it remains unclear whether their\nmathematical reasoning capabilities have genuinely advanced, raising questions\nabout the reliability of the reported metrics. To address these concerns, we\nconduct a large-scale study on several SOTA open and closed models. To overcome\nthe limitations of existing evaluations, we introduce GSM-Symbolic, an improved\nbenchmark created from symbolic templates that allow for the generation of a\ndiverse set of questions. GSM-Symbolic enables more controllable evaluations,\nproviding key insights and more reliable metrics for measuring the reasoning\ncapabilities of models.Our findings reveal that LLMs exhibit noticeable\nvariance when responding to different instantiations of the same question.\nSpecifically, the performance of all models declines when only the numerical\nvalues in the question are altered in the GSM-Symbolic benchmark. Furthermore,\nwe investigate the fragility of mathematical reasoning in these models and show\nthat their performance significantly deteriorates as the number of clauses in a\nquestion increases. We hypothesize that this decline is because current LLMs\ncannot perform genuine logical reasoning; they replicate reasoning steps from\ntheir training data. Adding a single clause that seems relevant to the question\ncauses significant performance drops (up to 65%) across all state-of-the-art\nmodels, even though the clause doesn't contribute to the reasoning chain needed\nfor the final answer. Overall, our work offers a more nuanced understanding of\nLLMs' capabilities and limitations in mathematical reasoning.",
+      "upvotes": 18
+    },
+    {
+      "title": "UniMuMo: Unified Text, Music and Motion Generation",
+      "url": "https://huggingface.co/papers/2410.04534",
+      "authors": [
+        "Kun Su",
+        "Yutong Zhang",
+        "Gaowen Liu",
+        "Chuang Gan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.04534.pdf",
+      "abstract": "We introduce UniMuMo, a unified multimodal model capable of taking arbitrary\ntext, music, and motion data as input conditions to generate outputs across all\nthree modalities. To address the lack of time-synchronized data, we align\nunpaired music and motion data based on rhythmic patterns to leverage existing\nlarge-scale music-only and motion-only datasets. By converting music, motion,\nand text into token-based representation, our model bridges these modalities\nthrough a unified encoder-decoder transformer architecture. To support multiple\ngeneration tasks within a single framework, we introduce several architectural\nimprovements. We propose encoding motion with a music codebook, mapping motion\ninto the same feature space as music. We introduce a music-motion parallel\ngeneration scheme that unifies all music and motion generation tasks into a\nsingle transformer decoder architecture with a single training task of\nmusic-motion joint generation. Moreover, the model is designed by fine-tuning\nexisting pre-trained single-modality models, significantly reducing\ncomputational demands. Extensive experiments demonstrate that UniMuMo achieves\ncompetitive results on all unidirectional generation benchmarks across music,\nmotion, and text modalities. Quantitative results are available in the\nhttps://hanyangclarence.github.io/unimumo_demo/{project page}.",
+      "upvotes": 18
+    },
+    {
+      "title": "Named Clinical Entity Recognition Benchmark",
+      "url": "https://huggingface.co/papers/2410.05046",
+      "authors": [
+        "Nasir Hayat",
+        "Shadab Khan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.05046.pdf",
+      "abstract": "This technical report introduces a Named Clinical Entity Recognition\nBenchmark for evaluating language models in healthcare, addressing the crucial\nnatural language processing (NLP) task of extracting structured information\nfrom clinical narratives to support applications like automated coding,\nclinical trial cohort identification, and clinical decision support.\n  The leaderboard provides a standardized platform for assessing diverse\nlanguage models, including encoder and decoder architectures, on their ability\nto identify and classify clinical entities across multiple medical domains. A\ncurated collection of openly available clinical datasets is utilized,\nencompassing entities such as diseases, symptoms, medications, procedures, and\nlaboratory measurements. Importantly, these entities are standardized according\nto the Observational Medical Outcomes Partnership (OMOP) Common Data Model,\nensuring consistency and interoperability across different healthcare systems\nand datasets, and a comprehensive evaluation of model performance. Performance\nof models is primarily assessed using the F1-score, and it is complemented by\nvarious assessment modes to provide comprehensive insights into model\nperformance. The report also includes a brief analysis of models evaluated to\ndate, highlighting observed trends and limitations.\n  By establishing this benchmarking framework, the leaderboard aims to promote\ntransparency, facilitate comparative analyses, and drive innovation in clinical\nentity recognition tasks, addressing the need for robust evaluation methods in\nhealthcare NLP.",
+      "upvotes": 17
+    },
+    {
+      "title": "MonST3R: A Simple Approach for Estimating Geometry in the Presence of Motion",
+      "url": "https://huggingface.co/papers/2410.03825",
+      "authors": [
+        "Varun Jampani",
+        "Deqing Sun",
+        "Ming-Hsuan Yang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.03825.pdf",
+      "abstract": "Estimating geometry from dynamic scenes, where objects move and deform over\ntime, remains a core challenge in computer vision. Current approaches often\nrely on multi-stage pipelines or global optimizations that decompose the\nproblem into subtasks, like depth and flow, leading to complex systems prone to\nerrors. In this paper, we present Motion DUSt3R (MonST3R), a novel\ngeometry-first approach that directly estimates per-timestep geometry from\ndynamic scenes. Our key insight is that by simply estimating a pointmap for\neach timestep, we can effectively adapt DUST3R's representation, previously\nonly used for static scenes, to dynamic scenes. However, this approach presents\na significant challenge: the scarcity of suitable training data, namely\ndynamic, posed videos with depth labels. Despite this, we show that by posing\nthe problem as a fine-tuning task, identifying several suitable datasets, and\nstrategically training the model on this limited data, we can surprisingly\nenable the model to handle dynamics, even without an explicit motion\nrepresentation. Based on this, we introduce new optimizations for several\ndownstream video-specific tasks and demonstrate strong performance on video\ndepth and camera pose estimation, outperforming prior work in terms of\nrobustness and efficiency. Moreover, MonST3R shows promising results for\nprimarily feed-forward 4D reconstruction.",
+      "upvotes": 17
+    },
+    {
+      "title": "Navigating the Digital World as Humans Do: Universal Visual Grounding for GUI Agents",
+      "url": "https://huggingface.co/papers/2410.05243",
+      "authors": [
+        "Yanan Xie",
+        "Cheng Chang",
+        "Huan Sun"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.05243.pdf",
+      "abstract": "Multimodal large language models (MLLMs) are transforming the capabilities of\ngraphical user interface (GUI) agents, facilitating their transition from\ncontrolled simulations to complex, real-world applications across various\nplatforms. However, the effectiveness of these agents hinges on the robustness\nof their grounding capability. Current GUI agents predominantly utilize\ntext-based representations such as HTML or accessibility trees, which, despite\ntheir utility, often introduce noise, incompleteness, and increased\ncomputational overhead. In this paper, we advocate a human-like embodiment for\nGUI agents that perceive the environment entirely visually and directly take\npixel-level operations on the GUI. The key is visual grounding models that can\naccurately map diverse referring expressions of GUI elements to their\ncoordinates on the GUI across different platforms. We show that a simple\nrecipe, which includes web-based synthetic data and slight adaptation of the\nLLaVA architecture, is surprisingly effective for training such visual\ngrounding models. We collect the largest dataset for GUI visual grounding so\nfar, containing 10M GUI elements and their referring expressions over 1.3M\nscreenshots, and use it to train UGround, a strong universal visual grounding\nmodel for GUI agents. Empirical results on six benchmarks spanning three\ncategories (grounding, offline agent, and online agent) show that 1) UGround\nsubstantially outperforms existing visual grounding models for GUI agents, by\nup to 20% absolute, and 2) agents with UGround outperform state-of-the-art\nagents, despite the fact that existing agents use additional text-based input\nwhile ours only uses visual perception. These results provide strong support\nfor the feasibility and promises of GUI agents that navigate the digital world\nas humans do.",
+      "upvotes": 16
+    },
+    {
+      "title": "TLDR: Token-Level Detective Reward Model for Large Vision Language Models",
+      "url": "https://huggingface.co/papers/2410.04734",
+      "authors": [
+        "Tong Xiao",
+        "Rui Wang",
+        "Wang Zhu",
+        "Robin Jia",
+        "Lawrence Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.04734.pdf",
+      "abstract": "Although reward models have been successful in improving multimodal large\nlanguage models, the reward models themselves remain brutal and contain minimal\ninformation. Notably, existing reward models only mimic human annotations by\nassigning only one binary feedback to any text, no matter how long the text is.\nIn the realm of multimodal language models, where models are required to\nprocess both images and texts, a naive reward model may learn implicit biases\ntoward texts and become less grounded in images. In this paper, we propose a\nToken-Level Detective Reward Model\n(TLDR) to provide fine-grained annotations to each text token. We\nfirst introduce a perturbation-based method to generate synthetic hard\nnegatives and their token-level labels to train TLDR models. Then we show the\nrich usefulness of TLDR models both in assisting off-the-shelf models to\nself-correct their generations, and in serving as a hallucination evaluation\ntool. Finally, we show that TLDR models can significantly speed up human\nannotation by 3 times to acquire a broader range of high-quality vision\nlanguage data.",
+      "upvotes": 16
+    },
+    {
+      "title": "Presto! Distilling Steps and Layers for Accelerating Music Generation",
+      "url": "https://huggingface.co/papers/2410.05167",
+      "authors": [
+        "Ge Zhu",
+        "Jonah Casebeer",
+        "Julian McAuley"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.05167.pdf",
+      "abstract": "Despite advances in diffusion-based text-to-music (TTM) methods, efficient,\nhigh-quality generation remains a challenge. We introduce Presto!, an approach\nto inference acceleration for score-based diffusion transformers via reducing\nboth sampling steps and cost per step. To reduce steps, we develop a new\nscore-based distribution matching distillation (DMD) method for the EDM-family\nof diffusion models, the first GAN-based distillation method for TTM. To reduce\nthe cost per step, we develop a simple, but powerful improvement to a recent\nlayer distillation method that improves learning via better preserving hidden\nstate variance. Finally, we combine our step and layer distillation methods\ntogether for a dual-faceted approach. We evaluate our step and layer\ndistillation methods independently and show each yield best-in-class\nperformance. Our combined distillation method can generate high-quality outputs\nwith improved diversity, accelerating our base model by 10-18x (230/435ms\nlatency for 32 second mono/stereo 44.1kHz, 15x faster than comparable SOTA) --\nthe fastest high-quality TTM to our knowledge. Sound examples can be found at\nhttps://presto-music.github.io/web/.",
+      "upvotes": 15
+    },
+    {
+      "title": "MathHay: An Automated Benchmark for Long-Context Mathematical Reasoning in LLMs",
+      "url": "https://huggingface.co/papers/2410.04698",
+      "authors": [
+        "Shan Dong",
+        "Amrita Saha",
+        "Ee-Peng Lim"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.04698.pdf",
+      "abstract": "Recent large language models (LLMs) have demonstrated versatile capabilities\nin long-context scenarios. Although some recent benchmarks have been developed\nto evaluate the long-context capabilities of LLMs, there is a lack of\nbenchmarks evaluating the mathematical reasoning abilities of LLMs over long\ncontexts, which is crucial for LLMs' application in real-world scenarios. In\nthis paper, we introduce MathHay, an automated benchmark designed to assess the\nlong-context mathematical reasoning capabilities of LLMs. Unlike previous\nbenchmarks like Needle in a Haystack, which focus primarily on information\nretrieval within long texts, MathHay demands models with both\ninformation-seeking and complex mathematical reasoning abilities. We conduct\nextensive experiments on MathHay to assess the long-context mathematical\nreasoning abilities of eight top-performing LLMs. Even the best-performing\nmodel, Gemini-1.5-Pro-002, still struggles with mathematical reasoning over\nlong contexts, achieving only 51.26% accuracy at 128K tokens. This highlights\nthe significant room for improvement on the MathHay benchmark.",
+      "upvotes": 13
+    },
+    {
+      "title": "OmniBooth: Learning Latent Control for Image Synthesis with Multi-modal Instruction",
+      "url": "https://huggingface.co/papers/2410.04932",
+      "authors": [
+        "Weichao Qiu",
+        "Xu Yan",
+        "Jing He",
+        "Kaiqiang Zhou",
+        "Qing Lian",
+        "Ying-Cong Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.04932.pdf",
+      "abstract": "We present OmniBooth, an image generation framework that enables spatial\ncontrol with instance-level multi-modal customization. For all instances, the\nmultimodal instruction can be described through text prompts or image\nreferences. Given a set of user-defined masks and associated text or image\nguidance, our objective is to generate an image, where multiple objects are\npositioned at specified coordinates and their attributes are precisely aligned\nwith the corresponding guidance. This approach significantly expands the scope\nof text-to-image generation, and elevates it to a more versatile and practical\ndimension in controllability. In this paper, our core contribution lies in the\nproposed latent control signals, a high-dimensional spatial feature that\nprovides a unified representation to integrate the spatial, textual, and image\nconditions seamlessly. The text condition extends ControlNet to provide\ninstance-level open-vocabulary generation. The image condition further enables\nfine-grained control with personalized identity. In practice, our method\nempowers users with more flexibility in controllable generation, as users can\nchoose multi-modal conditions from text or images as needed. Furthermore,\nthorough experiments demonstrate our enhanced performance in image synthesis\nfidelity and alignment across different tasks and datasets. Project page:\nhttps://len-li.github.io/omnibooth-web/",
+      "upvotes": 9
+    },
+    {
+      "title": "TurtleBench: Evaluating Top Language Models via Real-World Yes/No Puzzles",
+      "url": "https://huggingface.co/papers/2410.05262",
+      "authors": [
+        "Ke Fang",
+        "Hanyu Wang",
+        "Zhiyu Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.05262.pdf",
+      "abstract": "As the application of Large Language Models (LLMs) expands, the demand for\nreliable evaluations increases. Existing LLM evaluation benchmarks primarily\nrely on static datasets, making it challenging to assess model performance in\ndynamic interactions with users. Moreover, these benchmarks often depend on\nspecific background knowledge, complicating the measurement of a model's\nlogical reasoning capabilities. Other dynamic evaluation methods based on\nstrong models or manual efforts may introduce biases and incur high costs and\ntime demands, hindering large-scale application. To address these issues, we\npropose TurtleBench. TurtleBench collects real user guesses from our online\nTurtle Soup Puzzle platform that we developed. This approach allows for the\nrelatively dynamic generation of evaluation datasets, mitigating the risk of\nmodel cheating while aligning assessments more closely with genuine user needs\nfor reasoning capabilities, thus enhancing the reliability of evaluations.\nTurtleBench includes 1,532 user guesses along with the correctness of guesses\nafter annotation. Using this dataset, we thoroughly evaluated nine of the most\nadvanced LLMs available today. Notably, the OpenAI o1 series models did not\nachieve leading results in these evaluations. We propose several hypotheses for\nfurther research, such as \"the latent reasoning of o1 utilizes trivial\nChain-of-Thought (CoT) techniques\" and \"increasing CoT length not only provides\nreasoning benefits but also incurs noise costs.\"",
+      "upvotes": 9
+    },
+    {
+      "title": "What Matters for Model Merging at Scale?",
+      "url": "https://huggingface.co/papers/2410.03617",
+      "authors": [
+        "Prateek Yadav",
+        "Tu Vu",
+        "Jonathan Lai",
+        "Alexandra Chronopoulou",
+        "Manaal Faruqui",
+        "Mohit Bansal",
+        "Tsendsuren Munkhdalai"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.03617.pdf",
+      "abstract": "Model merging aims to combine multiple expert models into a more capable\nsingle model, offering benefits such as reduced storage and serving costs,\nimproved generalization, and support for decentralized model development.\nDespite its promise, previous studies have primarily focused on merging a few\nsmall models. This leaves many unanswered questions about the effect of scaling\nmodel size and how it interplays with other key factors -- like the base model\nquality and number of expert models -- , to affect the merged model's\nperformance. This work systematically evaluates the utility of model merging at\nscale, examining the impact of these different factors. We experiment with\nmerging fully fine-tuned models using 4 popular merging methods -- Averaging,\nTask~Arithmetic, Dare, and TIES -- across model sizes ranging from 1B-64B\nparameters and merging up to 8 different expert models. We evaluate the merged\nmodels on both held-in tasks, i.e., the expert's training tasks, and zero-shot\ngeneralization to unseen held-out tasks. Our experiments provide several new\ninsights about model merging at scale and the interplay between different\nfactors. First, we find that merging is more effective when experts are created\nfrom strong base models, i.e., models with good zero-shot performance. Second,\nlarger models facilitate easier merging. Third merging consistently improves\ngeneralization capabilities. Notably, when merging 8 large expert models, the\nmerged models often generalize better compared to the multitask trained models.\nFourth, we can better merge more expert models when working with larger models.\nFifth, different merging methods behave very similarly at larger scales.\nOverall, our findings shed light on some interesting properties of model\nmerging while also highlighting some limitations. We hope that this study will\nserve as a reference point on large-scale merging for upcoming research.",
+      "upvotes": 8
+    },
+    {
+      "title": "SELECT: A Large-Scale Benchmark of Data Curation Strategies for Image Classification",
+      "url": "https://huggingface.co/papers/2410.05057",
+      "authors": [
+        "Jiawei Xu",
+        "Niv Cohen",
+        "Patrick Yubeaton",
+        "Govind Mittal",
+        "Chinmay Hegde"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.05057.pdf",
+      "abstract": "Data curation is the problem of how to collect and organize samples into a\ndataset that supports efficient learning. Despite the centrality of the task,\nlittle work has been devoted towards a large-scale, systematic comparison of\nvarious curation methods. In this work, we take steps towards a formal\nevaluation of data curation strategies and introduce SELECT, the first\nlarge-scale benchmark of curation strategies for image classification.\n  In order to generate baseline methods for the SELECT benchmark, we create a\nnew dataset, ImageNet++, which constitutes the largest superset of ImageNet-1K\nto date. Our dataset extends ImageNet with 5 new training-data shifts, each\napproximately the size of ImageNet-1K itself, and each assembled using a\ndistinct curation strategy. We evaluate our data curation baselines in two\nways: (i) using each training-data shift to train identical image\nclassification models from scratch (ii) using the data itself to fit a\npretrained self-supervised representation.\n  Our findings show interesting trends, particularly pertaining to recent\nmethods for data curation such as synthetic data generation and lookup based on\nCLIP embeddings. We show that although these strategies are highly competitive\nfor certain tasks, the curation strategy used to assemble the original\nImageNet-1K dataset remains the gold standard. We anticipate that our benchmark\ncan illuminate the path for new methods to further reduce the gap. We release\nour checkpoints, code, documentation, and a link to our dataset at\nhttps://github.com/jimmyxu123/SELECT.",
+      "upvotes": 7
+    },
+    {
+      "title": "Autonomous Character-Scene Interaction Synthesis from Text Instruction",
+      "url": "https://huggingface.co/papers/2410.03187",
+      "authors": [
+        "Zi Wang",
+        "Yixin Zhu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.03187.pdf",
+      "abstract": "Synthesizing human motions in 3D environments, particularly those with\ncomplex activities such as locomotion, hand-reaching, and human-object\ninteraction, presents substantial demands for user-defined waypoints and stage\ntransitions. These requirements pose challenges for current models, leading to\na notable gap in automating the animation of characters from simple human\ninputs. This paper addresses this challenge by introducing a comprehensive\nframework for synthesizing multi-stage scene-aware interaction motions directly\nfrom a single text instruction and goal location. Our approach employs an\nauto-regressive diffusion model to synthesize the next motion segment, along\nwith an autonomous scheduler predicting the transition for each action stage.\nTo ensure that the synthesized motions are seamlessly integrated within the\nenvironment, we propose a scene representation that considers the local\nperception both at the start and the goal location. We further enhance the\ncoherence of the generated motion by integrating frame embeddings with language\ninput. Additionally, to support model training, we present a comprehensive\nmotion-captured dataset comprising 16 hours of motion sequences in 120 indoor\nscenes covering 40 types of motions, each annotated with precise language\ndescriptions. Experimental results demonstrate the efficacy of our method in\ngenerating high-quality, multi-stage motions closely aligned with environmental\nand textual conditions.",
+      "upvotes": 7
+    },
+    {
+      "title": "Redefining Temporal Modeling in Video Diffusion: The Vectorized Timestep Approach",
+      "url": "https://huggingface.co/papers/2410.03160",
+      "authors": [
+        "Yumeng Ren",
+        "Xiaodong Cun",
+        "Aitor Artola",
+        "Yang Liu",
+        "Tieyong Zeng",
+        "Raymond H. Chan",
+        "Jean-michel Morel"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.03160.pdf",
+      "abstract": "Diffusion models have revolutionized image generation, and their extension to\nvideo generation has shown promise. However, current video diffusion\nmodels~(VDMs) rely on a scalar timestep variable applied at the clip level,\nwhich limits their ability to model complex temporal dependencies needed for\nvarious tasks like image-to-video generation. To address this limitation, we\npropose a frame-aware video diffusion model~(FVDM), which introduces a novel\nvectorized timestep variable~(VTV). Unlike conventional VDMs, our approach\nallows each frame to follow an independent noise schedule, enhancing the\nmodel's capacity to capture fine-grained temporal dependencies. FVDM's\nflexibility is demonstrated across multiple tasks, including standard video\ngeneration, image-to-video generation, video interpolation, and long video\nsynthesis. Through a diverse set of VTV configurations, we achieve superior\nquality in generated videos, overcoming challenges such as catastrophic\nforgetting during fine-tuning and limited generalizability in zero-shot\nmethods.Our empirical evaluations show that FVDM outperforms state-of-the-art\nmethods in video generation quality, while also excelling in extended tasks. By\naddressing fundamental shortcomings in existing VDMs, FVDM sets a new paradigm\nin video synthesis, offering a robust framework with significant implications\nfor generative modeling and multimedia applications.",
+      "upvotes": 4
+    },
+    {
+      "title": "SePPO: Semi-Policy Preference Optimization for Diffusion Alignment",
+      "url": "https://huggingface.co/papers/2410.05255",
+      "authors": [
+        "Dong-Jun Han",
+        "Xiaoman Pan",
+        "Pengcheng Chen",
+        "Yu Dong",
+        "Christopher Brinton",
+        "Jiebo Luo"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.05255.pdf",
+      "abstract": "Reinforcement learning from human feedback (RLHF) methods are emerging as a\nway to fine-tune diffusion models (DMs) for visual generation. However,\ncommonly used on-policy strategies are limited by the generalization capability\nof the reward model, while off-policy approaches require large amounts of\ndifficult-to-obtain paired human-annotated data, particularly in visual\ngeneration tasks. To address the limitations of both on- and off-policy RLHF,\nwe propose a preference optimization method that aligns DMs with preferences\nwithout relying on reward models or paired human-annotated data. Specifically,\nwe introduce a Semi-Policy Preference Optimization (SePPO) method. SePPO\nleverages previous checkpoints as reference models while using them to generate\non-policy reference samples, which replace \"losing images\" in preference pairs.\nThis approach allows us to optimize using only off-policy \"winning images.\"\nFurthermore, we design a strategy for reference model selection that expands\nthe exploration in the policy space. Notably, we do not simply treat reference\nsamples as negative examples for learning. Instead, we design an anchor-based\ncriterion to assess whether the reference samples are likely to be winning or\nlosing images, allowing the model to selectively learn from the generated\nreference samples. This approach mitigates performance degradation caused by\nthe uncertainty in reference sample quality. We validate SePPO across both\ntext-to-image and text-to-video benchmarks. SePPO surpasses all previous\napproaches on the text-to-image benchmarks and also demonstrates outstanding\nperformance on the text-to-video benchmarks. Code will be released in\nhttps://github.com/DwanZhang-AI/SePPO.",
+      "upvotes": 4
+    },
+    {
+      "title": "Grounding Language in Multi-Perspective Referential Communication",
+      "url": "https://huggingface.co/papers/2410.03959",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2410.03959.pdf",
+      "abstract": "We introduce a task and dataset for referring expression generation and\ncomprehension in multi-agent embodied environments. In this task, two agents in\na shared scene must take into account one another's visual perspective, which\nmay be different from their own, to both produce and understand references to\nobjects in a scene and the spatial relations between them. We collect a dataset\nof 2,970 human-written referring expressions, each paired with human\ncomprehension judgments, and evaluate the performance of automated models as\nspeakers and listeners paired with human partners, finding that model\nperformance in both reference generation and comprehension lags behind that of\npairs of human agents. Finally, we experiment training an open-weight speaker\nmodel with evidence of communicative success when paired with a listener,\nresulting in an improvement from 58.9 to 69.3% in communicative success and\neven outperforming the strongest proprietary model.",
+      "upvotes": 3
+    },
+    {
+      "title": "SwiftKV: Fast Prefill-Optimized Inference with Knowledge-Preserving Model Transformation",
+      "url": "https://huggingface.co/papers/2410.03960",
+      "authors": [
+        "Yuxiong He"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.03960.pdf",
+      "abstract": "LLM inference for popular enterprise use cases, such as summarization, RAG,\nand code-generation, typically observes orders of magnitude longer prompt\nlengths than generation lengths. This characteristic leads to high cost of\nprefill and increased response latency. In this paper, we present SwiftKV, a\nnovel model transformation and distillation procedure specifically designed to\nreduce the time and cost of processing prompt tokens while preserving high\nquality of generated tokens. SwiftKV combines three key mechanisms: i)\nSingleInputKV, which prefills later layers' KV cache using a much earlier\nlayer's output, allowing prompt tokens to skip much of the model computation,\nii) AcrossKV, which merges the KV caches of neighboring layers to reduce the\nmemory footprint and support larger batch size for higher throughput, and iii)\na knowledge-preserving distillation procedure that can adapt existing LLMs for\nSwiftKV with minimal accuracy impact and low compute and data requirement. For\nLlama-3.1-8B and 70B, SwiftKV reduces the compute requirement of prefill by 50%\nand the memory requirement of the KV cache by 62.5% while incurring minimum\nquality degradation across a wide range of tasks. In the end-to-end inference\nserving using an optimized vLLM implementation, SwiftKV realizes up to 2x\nhigher aggregate throughput and 60% lower time per output token. It can achieve\na staggering 560 TFlops/GPU of normalized inference throughput, which\ntranslates to 16K tokens/s for Llama-3.1-70B in 16-bit precision on 4x H100\nGPUs.",
+      "upvotes": 1
+    }
+  ]
+}

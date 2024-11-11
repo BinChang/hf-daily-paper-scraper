@@ -1,0 +1,136 @@
+{
+  "date": "2024-07-24",
+  "papers": [
+    {
+      "title": "CoD, Towards an Interpretable Medical Agent using Chain of Diagnosis",
+      "url": "https://huggingface.co/papers/2407.13301",
+      "authors": [
+        "Chi Gui",
+        "Ke Ji",
+        "Xiang Wan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.13301.pdf",
+      "abstract": "The field of medical diagnosis has undergone a significant transformation\nwith the advent of large language models (LLMs), yet the challenges of\ninterpretability within these models remain largely unaddressed. This study\nintroduces Chain-of-Diagnosis (CoD) to enhance the interpretability of\nLLM-based medical diagnostics. CoD transforms the diagnostic process into a\ndiagnostic chain that mirrors a physician's thought process, providing a\ntransparent reasoning pathway. Additionally, CoD outputs the disease confidence\ndistribution to ensure transparency in decision-making. This interpretability\nmakes model diagnostics controllable and aids in identifying critical symptoms\nfor inquiry through the entropy reduction of confidences. With CoD, we\ndeveloped DiagnosisGPT, capable of diagnosing 9604 diseases. Experimental\nresults demonstrate that DiagnosisGPT outperforms other LLMs on diagnostic\nbenchmarks. Moreover, DiagnosisGPT provides interpretability while ensuring\ncontrollability in diagnostic rigor.",
+      "upvotes": 54
+    },
+    {
+      "title": "KAN or MLP: A Fairer Comparison",
+      "url": "https://huggingface.co/papers/2407.16674",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2407.16674.pdf",
+      "abstract": "This paper does not introduce a novel method. Instead, it offers a fairer and\nmore comprehensive comparison of KAN and MLP models across various tasks,\nincluding machine learning, computer vision, audio processing, natural language\nprocessing, and symbolic formula representation. Specifically, we control the\nnumber of parameters and FLOPs to compare the performance of KAN and MLP. Our\nmain observation is that, except for symbolic formula representation tasks, MLP\ngenerally outperforms KAN. We also conduct ablation studies on KAN and find\nthat its advantage in symbolic formula representation mainly stems from its\nB-spline activation function. When B-spline is applied to MLP, performance in\nsymbolic formula representation significantly improves, surpassing or matching\nthat of KAN. However, in other tasks where MLP already excels over KAN,\nB-spline does not substantially enhance MLP's performance. Furthermore, we find\nthat KAN's forgetting issue is more severe than that of MLP in a standard\nclass-incremental continual learning setting, which differs from the findings\nreported in the KAN paper. We hope these results provide insights for future\nresearch on KAN and other MLP alternatives. Project link:\nhttps://github.com/yu-rp/KANbeFair",
+      "upvotes": 41
+    },
+    {
+      "title": "MovieDreamer: Hierarchical Generation for Coherent Long Visual Sequence",
+      "url": "https://huggingface.co/papers/2407.16655",
+      "authors": [
+        "Hao Chen",
+        "Chunhua Shen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.16655.pdf",
+      "abstract": "Recent advancements in video generation have primarily leveraged diffusion\nmodels for short-duration content. However, these approaches often fall short\nin modeling complex narratives and maintaining character consistency over\nextended periods, which is essential for long-form video production like\nmovies. We propose MovieDreamer, a novel hierarchical framework that integrates\nthe strengths of autoregressive models with diffusion-based rendering to\npioneer long-duration video generation with intricate plot progressions and\nhigh visual fidelity. Our approach utilizes autoregressive models for global\nnarrative coherence, predicting sequences of visual tokens that are\nsubsequently transformed into high-quality video frames through diffusion\nrendering. This method is akin to traditional movie production processes, where\ncomplex stories are factorized down into manageable scene capturing. Further,\nwe employ a multimodal script that enriches scene descriptions with detailed\ncharacter information and visual style, enhancing continuity and character\nidentity across scenes. We present extensive experiments across various movie\ngenres, demonstrating that our approach not only achieves superior visual and\nnarrative quality but also effectively extends the duration of generated\ncontent significantly beyond current capabilities. Homepage:\nhttps://aim-uofa.github.io/MovieDreamer/.",
+      "upvotes": 27
+    },
+    {
+      "title": "OutfitAnyone: Ultra-high Quality Virtual Try-On for Any Clothing and Any Person",
+      "url": "https://huggingface.co/papers/2407.16224",
+      "authors": [
+        "Ke Sun",
+        "Jian Cao",
+        "Qi Wang",
+        "Linrui Tian",
+        "Xindi Zhang",
+        "Bang Zhang",
+        "Weiming Zhang",
+        "Daiheng Gao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.16224.pdf",
+      "abstract": "Virtual Try-On (VTON) has become a transformative technology, empowering\nusers to experiment with fashion without ever having to physically try on\nclothing. However, existing methods often struggle with generating\nhigh-fidelity and detail-consistent results. While diffusion models, such as\nStable Diffusion series, have shown their capability in creating high-quality\nand photorealistic images, they encounter formidable challenges in conditional\ngeneration scenarios like VTON. Specifically, these models struggle to maintain\na balance between control and consistency when generating images for virtual\nclothing trials. OutfitAnyone addresses these limitations by leveraging a\ntwo-stream conditional diffusion model, enabling it to adeptly handle garment\ndeformation for more lifelike results. It distinguishes itself with\nscalability-modulating factors such as pose, body shape and broad\napplicability, extending from anime to in-the-wild images. OutfitAnyone's\nperformance in diverse scenarios underscores its utility and readiness for\nreal-world deployment. For more details and animated results, please see\nhttps://humanaigc.github.io/outfit-anyone/.",
+      "upvotes": 24
+    },
+    {
+      "title": "T2V-CompBench: A Comprehensive Benchmark for Compositional Text-to-video Generation",
+      "url": "https://huggingface.co/papers/2407.14505",
+      "authors": [
+        "Yue Wu",
+        "Zihan Xu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.14505.pdf",
+      "abstract": "Text-to-video (T2V) generation models have advanced significantly, yet their\nability to compose different objects, attributes, actions, and motions into a\nvideo remains unexplored. Previous text-to-video benchmarks also neglect this\nimportant ability for evaluation. In this work, we conduct the first systematic\nstudy on compositional text-to-video generation. We propose T2V-CompBench, the\nfirst benchmark tailored for compositional text-to-video generation.\nT2V-CompBench encompasses diverse aspects of compositionality, including\nconsistent attribute binding, dynamic attribute binding, spatial relationships,\nmotion binding, action binding, object interactions, and generative numeracy.\nWe further carefully design evaluation metrics of MLLM-based metrics,\ndetection-based metrics, and tracking-based metrics, which can better reflect\nthe compositional text-to-video generation quality of seven proposed categories\nwith 700 text prompts. The effectiveness of the proposed metrics is verified by\ncorrelation with human evaluations. We also benchmark various text-to-video\ngenerative models and conduct in-depth analysis across different models and\ndifferent compositional categories. We find that compositional text-to-video\ngeneration is highly challenging for current models, and we hope that our\nattempt will shed light on future research in this direction.",
+      "upvotes": 23
+    },
+    {
+      "title": "INF-LLaVA: Dual-perspective Perception for High-Resolution Multimodal Large Language Model",
+      "url": "https://huggingface.co/papers/2407.16198",
+      "authors": [
+        "Xiaoshuai Sun",
+        "Qiang Zhou",
+        "Rongrong Ji"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.16198.pdf",
+      "abstract": "With advancements in data availability and computing resources, Multimodal\nLarge Language Models (MLLMs) have showcased capabilities across various\nfields. However, the quadratic complexity of the vision encoder in MLLMs\nconstrains the resolution of input images. Most current approaches mitigate\nthis issue by cropping high-resolution images into smaller sub-images, which\nare then processed independently by the vision encoder. Despite capturing\nsufficient local details, these sub-images lack global context and fail to\ninteract with one another. To address this limitation, we propose a novel MLLM,\nINF-LLaVA, designed for effective high-resolution image perception. INF-LLaVA\nincorporates two innovative components. First, we introduce a Dual-perspective\nCropping Module (DCM), which ensures that each sub-image contains continuous\ndetails from a local perspective and comprehensive information from a global\nperspective. Second, we introduce Dual-perspective Enhancement Module (DEM) to\nenable the mutual enhancement of global and local features, allowing INF-LLaVA\nto effectively process high-resolution images by simultaneously capturing\ndetailed local information and comprehensive global context. Extensive ablation\nstudies validate the effectiveness of these components, and experiments on a\ndiverse set of benchmarks demonstrate that INF-LLaVA outperforms existing\nMLLMs. Code and pretrained model are available at\nhttps://github.com/WeihuangLin/INF-LLaVA.",
+      "upvotes": 13
+    },
+    {
+      "title": "F-HOI: Toward Fine-grained Semantic-Aligned 3D Human-Object Interactions",
+      "url": "https://huggingface.co/papers/2407.12435",
+      "authors": [
+        "Jie Yang",
+        "Nan Jiang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.12435.pdf",
+      "abstract": "Existing 3D human object interaction (HOI) datasets and models simply align\nglobal descriptions with the long HOI sequence, while lacking a detailed\nunderstanding of intermediate states and the transitions between states. In\nthis paper, we argue that fine-grained semantic alignment, which utilizes\nstate-level descriptions, offers a promising paradigm for learning semantically\nrich HOI representations. To achieve this, we introduce Semantic-HOI, a new\ndataset comprising over 20K paired HOI states with fine-grained descriptions\nfor each HOI state and the body movements that happen between two consecutive\nstates. Leveraging the proposed dataset, we design three state-level HOI tasks\nto accomplish fine-grained semantic alignment within the HOI sequence.\nAdditionally, we propose a unified model called F-HOI, designed to leverage\nmultimodal instructions and empower the Multi-modal Large Language Model to\nefficiently handle diverse HOI tasks. F-HOI offers multiple advantages: (1) It\nemploys a unified task formulation that supports the use of versatile\nmultimodal inputs. (2) It maintains consistency in HOI across 2D, 3D, and\nlinguistic spaces. (3) It utilizes fine-grained textual supervision for direct\noptimization, avoiding intricate modeling of HOI states. Extensive experiments\nreveal that F-HOI effectively aligns HOI states with fine-grained semantic\ndescriptions, adeptly tackling understanding, reasoning, generation, and\nreconstruction tasks.",
+      "upvotes": 13
+    },
+    {
+      "title": "A Simulation Benchmark for Autonomous Racing with Large-Scale Human Data",
+      "url": "https://huggingface.co/papers/2407.16680",
+      "authors": [
+        "Adrian Remonda",
+        "Ayoub Raji",
+        "Nicola Musiu",
+        "Marko Bertogna",
+        "Eduardo Veas",
+        "Xiaolong Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.16680.pdf",
+      "abstract": "Despite the availability of international prize-money competitions, scaled\nvehicles, and simulation environments, research on autonomous racing and the\ncontrol of sports cars operating close to the limit of handling has been\nlimited by the high costs of vehicle acquisition and management, as well as the\nlimited physics accuracy of open-source simulators. In this paper, we propose a\nracing simulation platform based on the simulator Assetto Corsa to test,\nvalidate, and benchmark autonomous driving algorithms, including reinforcement\nlearning (RL) and classical Model Predictive Control (MPC), in realistic and\nchallenging scenarios. Our contributions include the development of this\nsimulation platform, several state-of-the-art algorithms tailored to the racing\nenvironment, and a comprehensive dataset collected from human drivers.\nAdditionally, we evaluate algorithms in the offline RL setting. All the\nnecessary code (including environment and benchmarks), working examples,\ndatasets, and videos are publicly released and can be found at:\nhttps://assetto-corsa-gym.github.io.",
+      "upvotes": 11
+    },
+    {
+      "title": "SIGMA: Sinkhorn-Guided Masked Video Modeling",
+      "url": "https://huggingface.co/papers/2407.15447",
+      "authors": [
+        "Fida Mohammad Thoker",
+        "Efstratios Gavves",
+        "Cees G. M. Snoek"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.15447.pdf",
+      "abstract": "Video-based pretraining offers immense potential for learning strong visual\nrepresentations on an unprecedented scale. Recently, masked video modeling\nmethods have shown promising scalability, yet fall short in capturing\nhigher-level semantics due to reconstructing predefined low-level targets such\nas pixels. To tackle this, we present Sinkhorn-guided Masked Video Modelling\n(SIGMA), a novel video pretraining method that jointly learns the video model\nin addition to a target feature space using a projection network. However, this\nsimple modification means that the regular L2 reconstruction loss will lead to\ntrivial solutions as both networks are jointly optimized. As a solution, we\ndistribute features of space-time tubes evenly across a limited number of\nlearnable clusters. By posing this as an optimal transport problem, we enforce\nhigh entropy in the generated features across the batch, infusing semantic and\ntemporal meaning into the feature space. The resulting cluster assignments are\nused as targets for a symmetric prediction task where the video model predicts\ncluster assignment of the projection network and vice versa. Experimental\nresults on ten datasets across three benchmarks validate the effectiveness of\nSIGMA in learning more performant, temporally-aware, and robust video\nrepresentations improving upon state-of-the-art methods. Our project website\nwith code is available at: https://quva-lab.github.io/SIGMA.",
+      "upvotes": 6
+    },
+    {
+      "title": "PrimeGuard: Safe and Helpful LLMs through Tuning-Free Routing",
+      "url": "https://huggingface.co/papers/2407.16318",
+      "authors": [
+        "Eric Lin"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.16318.pdf",
+      "abstract": "Deploying language models (LMs) necessitates outputs to be both high-quality\nand compliant with safety guidelines. Although Inference-Time Guardrails (ITG)\noffer solutions that shift model output distributions towards compliance, we\nfind that current methods struggle in balancing safety with helpfulness. ITG\nMethods that safely address non-compliant queries exhibit lower helpfulness\nwhile those that prioritize helpfulness compromise on safety. We refer to this\ntrade-off as the guardrail tax, analogous to the alignment tax. To address\nthis, we propose PrimeGuard, a novel ITG method that utilizes structured\ncontrol flow.\n  PrimeGuard routes requests to different self-instantiations of the LM with\nvarying instructions, leveraging its inherent instruction-following\ncapabilities and in-context learning. Our tuning-free approach dynamically\ncompiles system-designer guidelines for each query. We construct and release\nsafe-eval, a diverse red-team safety benchmark. Extensive evaluations\ndemonstrate that PrimeGuard, without fine-tuning, overcomes the guardrail tax\nby (1) significantly increasing resistance to iterative jailbreak attacks and\n(2) achieving state-of-the-art results in safety guardrailing while (3)\nmatching helpfulness scores of alignment-tuned models. Extensive evaluations\ndemonstrate that PrimeGuard, without fine-tuning, outperforms all competing\nbaselines and overcomes the guardrail tax by improving the fraction of safe\nresponses from 61% to 97% and increasing average helpfulness scores from 4.17\nto 4.29 on the largest models, while reducing attack success rate from 100% to\n8%.\n  PrimeGuard implementation is available at\nhttps://github.com/dynamofl/PrimeGuard and safe-eval dataset is available at\nhttps://huggingface.co/datasets/dynamoai/safe_eval.",
+      "upvotes": 5
+    },
+    {
+      "title": "Cross Anything: General Quadruped Robot Navigation through Complex Terrains",
+      "url": "https://huggingface.co/papers/2407.16412",
+      "authors": [
+        "Shaoting Zhu",
+        "Yong Liu",
+        "Ningyi Xu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.16412.pdf",
+      "abstract": "The application of vision-language models (VLMs) has achieved impressive\nsuccess in various robotics tasks, but there are few explorations for\nfoundation models used in quadruped robot navigation. We introduce Cross\nAnything System (CAS), an innovative system composed of a high-level reasoning\nmodule and a low-level control policy, enabling the robot to navigate across\ncomplex 3D terrains and reach the goal position. For high-level reasoning and\nmotion planning, we propose a novel algorithmic system taking advantage of a\nVLM, with a design of task decomposition and a closed-loop sub-task execution\nmechanism. For low-level locomotion control, we utilize the Probability\nAnnealing Selection (PAS) method to train a control policy by reinforcement\nlearning. Numerous experiments show that our whole system can accurately and\nrobustly navigate across complex 3D terrains, and its strong generalization\nability ensures the applications in diverse indoor and outdoor scenarios and\nterrains. Project page: https://cross-anything.github.io/",
+      "upvotes": 4
+    }
+  ]
+}

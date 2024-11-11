@@ -1,0 +1,69 @@
+{
+  "date": "2024-05-20",
+  "papers": [
+    {
+      "title": "INDUS: Effective and Efficient Language Models for Scientific Applications",
+      "url": "https://huggingface.co/papers/2405.10725",
+      "authors": [
+        "Bishwaranjan Bhattacharjee",
+        "Masayasu Muraoka",
+        "Bharath Dandala",
+        "Rahul Ramachandran",
+        "Kayleen Bugbee",
+        "Mike Little",
+        "Lauren Sanders",
+        "Sylvain Costes",
+        "Thomas Allen",
+        "Felix Grazes",
+        "Megan Ansdel",
+        "Yousef El-Kurdi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.10725.pdf",
+      "abstract": "Large language models (LLMs) trained on general domain corpora showed\nremarkable results on natural language processing (NLP) tasks. However,\nprevious research demonstrated LLMs trained using domain-focused corpora\nperform better on specialized tasks. Inspired by this pivotal insight, we\ndeveloped INDUS, a comprehensive suite of LLMs tailored for the Earth science,\nbiology, physics, heliophysics, planetary sciences and astrophysics domains and\ntrained using curated scientific corpora drawn from diverse data sources. The\nsuite of models include: (1) an encoder model trained using domain-specific\nvocabulary and corpora to address natural language understanding tasks, (2) a\ncontrastive-learning-based general text embedding model trained using a diverse\nset of datasets drawn from multiple sources to address information retrieval\ntasks and (3) smaller versions of these models created using knowledge\ndistillation techniques to address applications which have latency or resource\nconstraints. We also created three new scientific benchmark datasets namely,\nCLIMATE-CHANGE-NER (entity-recognition), NASA-QA (extractive QA) and NASA-IR\n(IR) to accelerate research in these multi-disciplinary fields. Finally, we\nshow that our models outperform both general-purpose encoders (RoBERTa) and\nexisting domain-specific encoders (SciBERT) on these new tasks as well as\nexisting benchmark tasks in the domains of interest.",
+      "upvotes": 32
+    },
+    {
+      "title": "Layer-Condensed KV Cache for Efficient Inference of Large Language Models",
+      "url": "https://huggingface.co/papers/2405.10637",
+      "authors": [
+        "Kewei Tu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.10637.pdf",
+      "abstract": "Huge memory consumption has been a major bottleneck for deploying\nhigh-throughput large language models in real-world applications. In addition\nto the large number of parameters, the key-value (KV) cache for the attention\nmechanism in the transformer architecture consumes a significant amount of\nmemory, especially when the number of layers is large for deep language models.\nIn this paper, we propose a novel method that only computes and caches the KVs\nof a small number of layers, thus significantly saving memory consumption and\nimproving inference throughput. Our experiments on large language models show\nthat our method achieves up to 26times higher throughput than standard\ntransformers and competitive performance in language modeling and downstream\ntasks. In addition, our method is orthogonal to existing transformer\nmemory-saving techniques, so it is straightforward to integrate them with our\nmodel, achieving further improvement in inference efficiency. Our code is\navailable at https://github.com/whyNLP/LCKV.",
+      "upvotes": 19
+    },
+    {
+      "title": "Observational Scaling Laws and the Predictability of Language Model Performance",
+      "url": "https://huggingface.co/papers/2405.10938",
+      "authors": [
+        "Chris J. Maddison"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.10938.pdf",
+      "abstract": "Understanding how language model performance varies with scale is critical to\nbenchmark and algorithm development. Scaling laws are one approach to building\nthis understanding, but the requirement of training models across many\ndifferent scales has limited their use. We propose an alternative,\nobservational approach that bypasses model training and instead builds scaling\nlaws from ~80 publically available models. Building a single scaling law from\nmultiple model families is challenging due to large variations in their\ntraining compute efficiencies and capabilities. However, we show that these\nvariations are consistent with a simple, generalized scaling law where language\nmodel performance is a function of a low-dimensional capability space, and\nmodel families only vary in their efficiency in converting training compute to\ncapabilities. Using this approach, we show the surprising predictability of\ncomplex scaling phenomena: we show that several emergent phenomena follow a\nsmooth, sigmoidal behavior and are predictable from small models; we show that\nthe agent performance of models such as GPT-4 can be precisely predicted from\nsimpler non-agentic benchmarks; and we show how to predict the impact of\npost-training interventions like Chain-of-Thought and Self-Consistency as\nlanguage model capabilities continue to improve.",
+      "upvotes": 11
+    },
+    {
+      "title": "Grounded 3D-LLM with Referent Tokens",
+      "url": "https://huggingface.co/papers/2405.10370",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2405.10370.pdf",
+      "abstract": "Prior studies on 3D scene understanding have primarily developed specialized\nmodels for specific tasks or required task-specific fine-tuning. In this study,\nwe propose Grounded 3D-LLM, which explores the potential of 3D large\nmulti-modal models (3D LMMs) to consolidate various 3D vision tasks within a\nunified generative framework. The model uses scene referent tokens as special\nnoun phrases to reference 3D scenes, enabling the handling of sequences that\ninterleave 3D and textual data. It offers a natural approach for translating 3D\nvision tasks into language formats using task-specific instruction templates.\nTo facilitate the use of referent tokens in subsequent language modeling, we\nhave curated large-scale grounded language datasets that offer finer scene-text\ncorrespondence at the phrase level by bootstrapping existing object labels.\nSubsequently, we introduced Contrastive LAnguage-Scene Pre-training (CLASP) to\neffectively leverage this data, thereby integrating 3D vision with language\nmodels. Our comprehensive evaluation covers open-ended tasks like dense\ncaptioning and 3D QA, alongside close-ended tasks such as object detection and\nlanguage grounding. Experiments across multiple 3D benchmarks reveal the\nleading performance and the broad applicability of Grounded 3D-LLM. Code and\ndatasets will be released on the project page:\nhttps://groundedscenellm.github.io/grounded_3d-llm.github.io.",
+      "upvotes": 9
+    },
+    {
+      "title": "Dynamic data sampler for cross-language transfer learning in large language models",
+      "url": "https://huggingface.co/papers/2405.10626",
+      "authors": [
+        "Yudong Li",
+        "Yuhao Feng",
+        "Wen Zhou",
+        "Zhe Zhao",
+        "Linlin Shen",
+        "Cheng Hou"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.10626.pdf",
+      "abstract": "Large Language Models (LLMs) have gained significant attention in the field\nof natural language processing (NLP) due to their wide range of applications.\nHowever, training LLMs for languages other than English poses significant\nchallenges, due to the difficulty in acquiring large-scale corpus and the\nrequisite computing resources. In this paper, we propose ChatFlow, a\ncross-language transfer-based LLM, to address these challenges and train large\nChinese language models in a cost-effective manner. We employ a mix of Chinese,\nEnglish, and parallel corpus to continuously train the LLaMA2 model, aiming to\nalign cross-language representations and facilitate the knowledge transfer\nspecifically to the Chinese language model. In addition, we use a dynamic data\nsampler to progressively transition the model from unsupervised pre-training to\nsupervised fine-tuning. Experimental results demonstrate that our approach\naccelerates model convergence and achieves superior performance. We evaluate\nChatFlow on popular Chinese and English benchmarks, the results indicate that\nit outperforms other Chinese models post-trained on LLaMA-2-7B.",
+      "upvotes": 4
+    }
+  ]
+}

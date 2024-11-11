@@ -1,0 +1,76 @@
+{
+  "date": "2024-06-03",
+  "papers": [
+    {
+      "title": "Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality",
+      "url": "https://huggingface.co/papers/2405.21060",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2405.21060.pdf",
+      "abstract": "While Transformers have been the main architecture behind deep learning's\nsuccess in language modeling, state-space models (SSMs) such as Mamba have\nrecently been shown to match or outperform Transformers at small to medium\nscale. We show that these families of models are actually quite closely\nrelated, and develop a rich framework of theoretical connections between SSMs\nand variants of attention, connected through various decompositions of a\nwell-studied class of structured semiseparable matrices. Our state space\nduality (SSD) framework allows us to design a new architecture (Mamba-2) whose\ncore layer is an a refinement of Mamba's selective SSM that is 2-8X faster,\nwhile continuing to be competitive with Transformers on language modeling.",
+      "upvotes": 63
+    },
+    {
+      "title": "Perplexed by Perplexity: Perplexity-Based Data Pruning With Small Reference Models",
+      "url": "https://huggingface.co/papers/2405.20541",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2405.20541.pdf",
+      "abstract": "In this work, we investigate whether small language models can determine\nhigh-quality subsets of large-scale text datasets that improve the performance\nof larger language models. While existing work has shown that pruning based on\nthe perplexity of a larger model can yield high-quality data, we investigate\nwhether smaller models can be used for perplexity-based pruning and how pruning\nis affected by the domain composition of the data being pruned. We demonstrate\nthat for multiple dataset compositions, perplexity-based pruning of pretraining\ndata can significantly improve downstream task performance: pruning\nbased on perplexities computed with a 125 million parameter model improves the\naverage performance on downstream tasks of a 3 billion parameter model by up to\n2.04 and achieves up to a 1.45times reduction in pretraining steps to reach\ncommensurate baseline performance. Furthermore, we demonstrate that such\nperplexity-based data pruning also yields downstream performance gains in the\nover-trained and data-constrained regimes.",
+      "upvotes": 20
+    },
+    {
+      "title": "Video-MME: The First-Ever Comprehensive Evaluation Benchmark of Multi-modal LLMs in Video Analysis",
+      "url": "https://huggingface.co/papers/2405.21075",
+      "authors": [
+        "Yondong Luo",
+        "Renrui Zhang",
+        "Zihan Wang",
+        "Chenyu Zhou",
+        "Mengdan Zhang",
+        "Peixian Chen",
+        "Ke Li",
+        "Tong Xu",
+        "Xiawu Zheng",
+        "Rongrong Ji",
+        "Xing Sun"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.21075.pdf",
+      "abstract": "In the quest for artificial general intelligence, Multi-modal Large Language\nModels (MLLMs) have emerged as a focal point in recent advancements. However,\nthe predominant focus remains on developing their capabilities in static image\nunderstanding. The potential of MLLMs in processing sequential visual data is\nstill insufficiently explored, highlighting the absence of a comprehensive,\nhigh-quality assessment of their performance. In this paper, we introduce\nVideo-MME, the first-ever full-spectrum, Multi-Modal Evaluation benchmark of\nMLLMs in Video analysis. Our work distinguishes from existing benchmarks\nthrough four key features: 1) Diversity in video types, spanning 6 primary\nvisual domains with 30 subfields to ensure broad scenario generalizability; 2)\nDuration in temporal dimension, encompassing both short-, medium-, and\nlong-term videos, ranging from 11 seconds to 1 hour, for robust contextual\ndynamics; 3) Breadth in data modalities, integrating multi-modal inputs besides\nvideo frames, including subtitles and audios, to unveil the all-round\ncapabilities of MLLMs; 4) Quality in annotations, utilizing rigorous manual\nlabeling by expert annotators to facilitate precise and reliable model\nassessment. 900 videos with a total of 256 hours are manually selected and\nannotated by repeatedly viewing all the video content, resulting in 2,700\nquestion-answer pairs. With Video-MME, we extensively evaluate various\nstate-of-the-art MLLMs, including GPT-4 series and Gemini 1.5 Pro, as well as\nopen-source image models like InternVL-Chat-V1.5 and video models like\nLLaVA-NeXT-Video. Our experiments reveal that Gemini 1.5 Pro is the\nbest-performing commercial model, significantly outperforming the open-source\nmodels. Our dataset along with these findings underscores the need for further\nimprovements in handling longer sequences and multi-modal data. Project Page:\nhttps://video-mme.github.io",
+      "upvotes": 18
+    },
+    {
+      "title": "Kaleido Diffusion: Improving Conditional Diffusion Models with Autoregressive Latent Modeling",
+      "url": "https://huggingface.co/papers/2405.21048",
+      "authors": [
+        "Jiatao Gu",
+        "Shuangfei Zhai"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.21048.pdf",
+      "abstract": "Diffusion models have emerged as a powerful tool for generating high-quality\nimages from textual descriptions. Despite their successes, these models often\nexhibit limited diversity in the sampled images, particularly when sampling\nwith a high classifier-free guidance weight. To address this issue, we present\nKaleido, a novel approach that enhances the diversity of samples by\nincorporating autoregressive latent priors. Kaleido integrates an\nautoregressive language model that encodes the original caption and generates\nlatent variables, serving as abstract and intermediary representations for\nguiding and facilitating the image generation process. In this paper, we\nexplore a variety of discrete latent representations, including textual\ndescriptions, detection bounding boxes, object blobs, and visual tokens. These\nrepresentations diversify and enrich the input conditions to the diffusion\nmodels, enabling more diverse outputs. Our experimental results demonstrate\nthat Kaleido effectively broadens the diversity of the generated image samples\nfrom a given textual description while maintaining high image quality.\nFurthermore, we show that Kaleido adheres closely to the guidance provided by\nthe generated latent variables, demonstrating its capability to effectively\ncontrol and direct the image generation process.",
+      "upvotes": 12
+    },
+    {
+      "title": "4Diffusion: Multi-view Video Diffusion Model for 4D Generation",
+      "url": "https://huggingface.co/papers/2405.20674",
+      "authors": [
+        "Yunhong Wang",
+        "Yu Qiao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.20674.pdf",
+      "abstract": "Current 4D generation methods have achieved noteworthy efficacy with the aid\nof advanced diffusion generative models. However, these methods lack multi-view\nspatial-temporal modeling and encounter challenges in integrating diverse prior\nknowledge from multiple diffusion models, resulting in inconsistent temporal\nappearance and flickers. In this paper, we propose a novel 4D generation\npipeline, namely 4Diffusion aimed at generating spatial-temporally consistent\n4D content from a monocular video. We first design a unified diffusion model\ntailored for multi-view video generation by incorporating a learnable motion\nmodule into a frozen 3D-aware diffusion model to capture multi-view\nspatial-temporal correlations. After training on a curated dataset, our\ndiffusion model acquires reasonable temporal consistency and inherently\npreserves the generalizability and spatial consistency of the 3D-aware\ndiffusion model. Subsequently, we propose 4D-aware Score Distillation Sampling\nloss, which is based on our multi-view video diffusion model, to optimize 4D\nrepresentation parameterized by dynamic NeRF. This aims to eliminate\ndiscrepancies arising from multiple diffusion models, allowing for generating\nspatial-temporally consistent 4D content. Moreover, we devise an anchor loss to\nenhance the appearance details and facilitate the learning of dynamic NeRF.\nExtensive qualitative and quantitative experiments demonstrate that our method\nachieves superior performance compared to previous methods.",
+      "upvotes": 11
+    },
+    {
+      "title": "4-bit Shampoo for Memory-Efficient Network Training",
+      "url": "https://huggingface.co/papers/2405.18144",
+      "authors": [
+        "Sike Wang",
+        "Jia Li",
+        "Pan Zhou",
+        "Hua Huang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.18144.pdf",
+      "abstract": "Second-order optimizers, maintaining a matrix termed a preconditioner, are\nsuperior to first-order optimizers in both theory and practice. The states\nforming the preconditioner and its inverse root restrict the maximum size of\nmodels trained by second-order optimizers. To address this, compressing 32-bit\noptimizer states to lower bitwidths has shown promise in reducing memory usage.\nHowever, current approaches only pertain to first-order optimizers. In this\npaper, we propose the first 4-bit second-order optimizers, exemplified by 4-bit\nShampoo, maintaining performance similar to that of 32-bit ones. We show that\nquantizing the eigenvector matrix of the preconditioner in 4-bit Shampoo is\nremarkably better than quantizing the preconditioner itself both theoretically\nand experimentally. By rectifying the orthogonality of the quantized\neigenvector matrix, we enhance the approximation of the preconditioner's\neigenvector matrix, which also benefits the computation of its inverse 4-th\nroot. Besides, we find that linear square quantization slightly outperforms\ndynamic tree quantization when quantizing second-order optimizer states.\nEvaluation on various networks for image classification demonstrates that our\n4-bit Shampoo achieves comparable test accuracy to its 32-bit counterpart while\nbeing more memory-efficient. The source code will be made available.",
+      "upvotes": 8
+    }
+  ]
+}

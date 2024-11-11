@@ -1,0 +1,139 @@
+{
+  "date": "2024-03-23",
+  "papers": [
+    {
+      "title": "MathVerse: Does Your Multi-modal LLM Truly See the Diagrams in Visual Math Problems?",
+      "url": "https://huggingface.co/papers/2403.14624",
+      "authors": [
+        "Pengshuo Qiu",
+        "Peng Gao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.14624.pdf",
+      "abstract": "The remarkable progress of Multi-modal Large Language Models (MLLMs) has\ngarnered unparalleled attention, due to their superior performance in visual\ncontexts. However, their capabilities in visual math problem-solving remain\ninsufficiently evaluated and understood. We investigate current benchmarks to\nincorporate excessive visual content within textual questions, which\npotentially assist MLLMs in deducing answers without truly interpreting the\ninput diagrams. To this end, we introduce MathVerse, an all-around visual math\nbenchmark designed for an equitable and in-depth evaluation of MLLMs. We\nmeticulously collect 2,612 high-quality, multi-subject math problems with\ndiagrams from publicly available sources. Each problem is then transformed by\nhuman annotators into six distinct versions, each offering varying degrees of\ninformation content in multi-modality, contributing to 15K test samples in\ntotal. This approach allows MathVerse to comprehensively assess whether and how\nmuch MLLMs can truly understand the visual diagrams for mathematical reasoning.\nIn addition, we propose a Chain-of-Thought (CoT) evaluation strategy for a\nfine-grained assessment of the output answers. Rather than naively judging True\nor False, we employ GPT-4(V) to adaptively extract crucial reasoning steps, and\nthen score each step with detailed error analysis, which can reveal the\nintermediate CoT reasoning quality by MLLMs. We hope the MathVerse benchmark\nmay provide unique insights to guide the future development of MLLMs. Project\npage: https://mathverse-cuhk.github.io",
+      "upvotes": 51
+    },
+    {
+      "title": "DreamReward: Text-to-3D Generation with Human Preference",
+      "url": "https://huggingface.co/papers/2403.14613",
+      "authors": [
+        "Qixiu Li",
+        "Yikai Wang",
+        "Yueqi Duan",
+        "Jun Zhu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.14613.pdf",
+      "abstract": "3D content creation from text prompts has shown remarkable success recently.\nHowever, current text-to-3D methods often generate 3D results that do not align\nwell with human preferences. In this paper, we present a comprehensive\nframework, coined DreamReward, to learn and improve text-to-3D models from\nhuman preference feedback. To begin with, we collect 25k expert comparisons\nbased on a systematic annotation pipeline including rating and ranking. Then,\nwe build Reward3D -- the first general-purpose text-to-3D human preference\nreward model to effectively encode human preferences. Building upon the 3D\nreward model, we finally perform theoretical analysis and present the Reward3D\nFeedback Learning (DreamFL), a direct tuning algorithm to optimize the\nmulti-view diffusion models with a redefined scorer. Grounded by theoretical\nproof and extensive experiment comparisons, our DreamReward successfully\ngenerates high-fidelity and 3D consistent results with significant boosts in\nprompt alignment with human intention. Our results demonstrate the great\npotential for learning from human feedback to improve text-to-3D models.",
+      "upvotes": 35
+    },
+    {
+      "title": "Cobra: Extending Mamba to Multi-Modal Large Language Model for Efficient Inference",
+      "url": "https://huggingface.co/papers/2403.14520",
+      "authors": [
+        "Min Zhang",
+        "Wei Zhao",
+        "Pengxiang Ding",
+        "Donglin Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.14520.pdf",
+      "abstract": "In recent years, the application of multimodal large language models (MLLM)\nin various fields has achieved remarkable success. However, as the foundation\nmodel for many downstream tasks, current MLLMs are composed of the well-known\nTransformer network, which has a less efficient quadratic computation\ncomplexity. To improve the efficiency of such basic models, we propose Cobra, a\nlinear computational complexity MLLM. Specifically, Cobra integrates the\nefficient Mamba language model into the visual modality. Moreover, we explore\nand study various modal fusion schemes to create an effective multi-modal\nMamba. Extensive experiments demonstrate that (1) Cobra achieves extremely\ncompetitive performance with current computationally efficient state-of-the-art\nmethods, e.g., LLaVA-Phi, TinyLLaVA, and MobileVLM v2, and has faster\nspeed due to Cobra's linear sequential modeling. (2) Interestingly, the results\nof closed-set challenging prediction benchmarks show that Cobra performs well\nin overcoming visual illusions and spatial relationship judgments. (3) Notably,\nCobra even achieves comparable performance to LLaVA with about 43% of the\nnumber of parameters. We will make all codes of Cobra open-source and hope that\nthe proposed method can facilitate future research on complexity problems in\nMLLM. Our project page is available at: https://sites.google.com/view/cobravlm.",
+      "upvotes": 33
+    },
+    {
+      "title": "AnyV2V: A Plug-and-Play Framework For Any Video-to-Video Editing Tasks",
+      "url": "https://huggingface.co/papers/2403.14468",
+      "authors": [
+        "Huan Yang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.14468.pdf",
+      "abstract": "Video-to-video editing involves editing a source video along with additional\ncontrol (such as text prompts, subjects, or styles) to generate a new video\nthat aligns with the source video and the provided control. Traditional methods\nhave been constrained to certain editing types, limiting their ability to meet\nthe wide range of user demands. In this paper, we introduce AnyV2V, a novel\ntraining-free framework designed to simplify video editing into two primary\nsteps: (1) employing an off-the-shelf image editing model (e.g.\nInstructPix2Pix, InstantID, etc) to modify the first frame, (2) utilizing an\nexisting image-to-video generation model (e.g. I2VGen-XL) for DDIM inversion\nand feature injection. In the first stage, AnyV2V can plug in any existing\nimage editing tools to support an extensive array of video editing tasks.\nBeyond the traditional prompt-based editing methods, AnyV2V also can support\nnovel video editing tasks, including reference-based style transfer,\nsubject-driven editing, and identity manipulation, which were unattainable by\nprevious methods. In the second stage, AnyV2V can plug in any existing\nimage-to-video models to perform DDIM inversion and intermediate feature\ninjection to maintain the appearance and motion consistency with the source\nvideo. On the prompt-based editing, we show that AnyV2V can outperform the\nprevious best approach by 35\\% on prompt alignment, and 25\\% on human\npreference. On the three novel tasks, we show that AnyV2V also achieves a high\nsuccess rate. We believe AnyV2V will continue to thrive due to its ability to\nseamlessly integrate the fast-evolving image editing methods. Such\ncompatibility can help AnyV2V to increase its versatility to cater to diverse\nuser demands.",
+      "upvotes": 22
+    },
+    {
+      "title": "ReNoise: Real Image Inversion Through Iterative Noising",
+      "url": "https://huggingface.co/papers/2403.14602",
+      "authors": [
+        "Hadar Averbuch-Elor"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.14602.pdf",
+      "abstract": "Recent advancements in text-guided diffusion models have unlocked powerful\nimage manipulation capabilities. However, applying these methods to real images\nnecessitates the inversion of the images into the domain of the pretrained\ndiffusion model. Achieving faithful inversion remains a challenge, particularly\nfor more recent models trained to generate images with a small number of\ndenoising steps. In this work, we introduce an inversion method with a high\nquality-to-operation ratio, enhancing reconstruction accuracy without\nincreasing the number of operations. Building on reversing the diffusion\nsampling process, our method employs an iterative renoising mechanism at each\ninversion sampling step. This mechanism refines the approximation of a\npredicted point along the forward diffusion trajectory, by iteratively applying\nthe pretrained diffusion model, and averaging these predictions. We evaluate\nthe performance of our ReNoise technique using various sampling algorithms and\nmodels, including recent accelerated diffusion models. Through comprehensive\nevaluations and comparisons, we show its effectiveness in terms of both\naccuracy and speed. Furthermore, we confirm that our method preserves\neditability by demonstrating text-driven image editing on real images.",
+      "upvotes": 19
+    },
+    {
+      "title": "Efficient Video Diffusion Models via Content-Frame Motion-Latent Decomposition",
+      "url": "https://huggingface.co/papers/2403.14148",
+      "authors": [
+        "Jinwoo Shin"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.14148.pdf",
+      "abstract": "Video diffusion models have recently made great progress in generation\nquality, but are still limited by the high memory and computational\nrequirements. This is because current video diffusion models often attempt to\nprocess high-dimensional videos directly. To tackle this issue, we propose\ncontent-motion latent diffusion model (CMD), a novel efficient extension of\npretrained image diffusion models for video generation. Specifically, we\npropose an autoencoder that succinctly encodes a video as a combination of a\ncontent frame (like an image) and a low-dimensional motion latent\nrepresentation. The former represents the common content, and the latter\nrepresents the underlying motion in the video, respectively. We generate the\ncontent frame by fine-tuning a pretrained image diffusion model, and we\ngenerate the motion latent representation by training a new lightweight\ndiffusion model. A key innovation here is the design of a compact latent space\nthat can directly utilizes a pretrained image diffusion model, which has not\nbeen done in previous latent video diffusion models. This leads to considerably\nbetter quality generation and reduced computational costs. For instance, CMD\ncan sample a video 7.7times faster than prior approaches by generating a\nvideo of 512times1024 resolution and length 16 in 3.1 seconds. Moreover, CMD\nachieves an FVD score of 212.7 on WebVid-10M, 27.3% better than the previous\nstate-of-the-art of 292.4.",
+      "upvotes": 18
+    },
+    {
+      "title": "MyVLM: Personalizing VLMs for User-Specific Queries",
+      "url": "https://huggingface.co/papers/2403.14599",
+      "authors": [
+        "Sergey Tulyakov",
+        "Kfir Aberman"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.14599.pdf",
+      "abstract": "Recent large-scale vision-language models (VLMs) have demonstrated remarkable\ncapabilities in understanding and generating textual descriptions for visual\ncontent. However, these models lack an understanding of user-specific concepts.\nIn this work, we take a first step toward the personalization of VLMs, enabling\nthem to learn and reason over user-provided concepts. For example, we explore\nwhether these models can learn to recognize you in an image and communicate\nwhat you are doing, tailoring the model to reflect your personal experiences\nand relationships. To effectively recognize a variety of user-specific\nconcepts, we augment the VLM with external concept heads that function as\ntoggles for the model, enabling the VLM to identify the presence of specific\ntarget concepts in a given image. Having recognized the concept, we learn a new\nconcept embedding in the intermediate feature space of the VLM. This embedding\nis tasked with guiding the language model to naturally integrate the target\nconcept in its generated response. We apply our technique to BLIP-2 and LLaVA\nfor personalized image captioning and further show its applicability for\npersonalized visual question-answering. Our experiments demonstrate our ability\nto generalize to unseen images of learned concepts while preserving the model\nbehavior on unrelated inputs.",
+      "upvotes": 15
+    },
+    {
+      "title": "GRM: Large Gaussian Reconstruction Model for Efficient 3D Reconstruction and Generation",
+      "url": "https://huggingface.co/papers/2403.14621",
+      "authors": [
+        "Zifan Shi",
+        "Wang Yifan",
+        "Yujun Shen",
+        "Gordon Wetzstein"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.14621.pdf",
+      "abstract": "We introduce GRM, a large-scale reconstructor capable of recovering a 3D\nasset from sparse-view images in around 0.1s. GRM is a feed-forward\ntransformer-based model that efficiently incorporates multi-view information to\ntranslate the input pixels into pixel-aligned Gaussians, which are unprojected\nto create a set of densely distributed 3D Gaussians representing a scene.\nTogether, our transformer architecture and the use of 3D Gaussians unlock a\nscalable and efficient reconstruction framework. Extensive experimental results\ndemonstrate the superiority of our method over alternatives regarding both\nreconstruction quality and efficiency. We also showcase the potential of GRM in\ngenerative tasks, i.e., text-to-3D and image-to-3D, by integrating it with\nexisting multi-view diffusion models. Our project website is at:\nhttps://justimyhxu.github.io/projects/grm/.",
+      "upvotes": 14
+    },
+    {
+      "title": "Gaussian Frosting: Editable Complex Radiance Fields with Real-Time Rendering",
+      "url": "https://huggingface.co/papers/2403.14554",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2403.14554.pdf",
+      "abstract": "We propose Gaussian Frosting, a novel mesh-based representation for\nhigh-quality rendering and editing of complex 3D effects in real-time. Our\napproach builds on the recent 3D Gaussian Splatting framework, which optimizes\na set of 3D Gaussians to approximate a radiance field from images. We propose\nfirst extracting a base mesh from Gaussians during optimization, then building\nand refining an adaptive layer of Gaussians with a variable thickness around\nthe mesh to better capture the fine details and volumetric effects near the\nsurface, such as hair or grass. We call this layer Gaussian Frosting, as it\nresembles a coating of frosting on a cake. The fuzzier the material, the\nthicker the frosting. We also introduce a parameterization of the Gaussians to\nenforce them to stay inside the frosting layer and automatically adjust their\nparameters when deforming, rescaling, editing or animating the mesh. Our\nrepresentation allows for efficient rendering using Gaussian splatting, as well\nas editing and animation by modifying the base mesh. We demonstrate the\neffectiveness of our method on various synthetic and real scenes, and show that\nit outperforms existing surface-based approaches. We will release our code and\na web-based viewer as additional contributions. Our project page is the\nfollowing: https://anttwo.github.io/frosting/",
+      "upvotes": 12
+    },
+    {
+      "title": "Explorative Inbetweening of Time and Space",
+      "url": "https://huggingface.co/papers/2403.14611",
+      "authors": [
+        "Zheng Ding",
+        "Simon Niklaus",
+        "Victoria Abrevaya",
+        "Xuaner Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.14611.pdf",
+      "abstract": "We introduce bounded generation as a generalized task to control video\ngeneration to synthesize arbitrary camera and subject motion based only on a\ngiven start and end frame. Our objective is to fully leverage the inherent\ngeneralization capability of an image-to-video model without additional\ntraining or fine-tuning of the original model. This is achieved through the\nproposed new sampling strategy, which we call Time Reversal Fusion, that fuses\nthe temporally forward and backward denoising paths conditioned on the start\nand end frame, respectively. The fused path results in a video that smoothly\nconnects the two frames, generating inbetweening of faithful subject motion,\nnovel views of static scenes, and seamless video looping when the two bounding\nframes are identical. We curate a diverse evaluation dataset of image pairs and\ncompare against the closest existing methods. We find that Time Reversal Fusion\noutperforms related work on all subtasks, exhibiting the ability to generate\ncomplex motions and 3D-consistent views guided by bounded frames. See project\npage at https://time-reversal.github.io.",
+      "upvotes": 11
+    },
+    {
+      "title": "StyleCineGAN: Landscape Cinemagraph Generation using a Pre-trained StyleGAN",
+      "url": "https://huggingface.co/papers/2403.14186",
+      "authors": [
+        "Amirsaman Ashtari",
+        "Junyong Noh"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.14186.pdf",
+      "abstract": "We propose a method that can generate cinemagraphs automatically from a still\nlandscape image using a pre-trained StyleGAN. Inspired by the success of recent\nunconditional video generation, we leverage a powerful pre-trained image\ngenerator to synthesize high-quality cinemagraphs. Unlike previous approaches\nthat mainly utilize the latent space of a pre-trained StyleGAN, our approach\nutilizes its deep feature space for both GAN inversion and cinemagraph\ngeneration. Specifically, we propose multi-scale deep feature warping (MSDFW),\nwhich warps the intermediate features of a pre-trained StyleGAN at different\nresolutions. By using MSDFW, the generated cinemagraphs are of high resolution\nand exhibit plausible looping animation. We demonstrate the superiority of our\nmethod through user studies and quantitative comparisons with state-of-the-art\ncinemagraph generation methods and a video generation method that uses a\npre-trained StyleGAN.",
+      "upvotes": 8
+    },
+    {
+      "title": "Recourse for reclamation: Chatting with generative language models",
+      "url": "https://huggingface.co/papers/2403.14467",
+      "authors": [
+        "Jackie Kay",
+        "William Isaac"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.14467.pdf",
+      "abstract": "Researchers and developers increasingly rely on toxicity scoring to moderate\ngenerative language model outputs, in settings such as customer service,\ninformation retrieval, and content generation. However, toxicity scoring may\nrender pertinent information inaccessible, rigidify or \"value-lock\" cultural\nnorms, and prevent language reclamation processes, particularly for\nmarginalized people. In this work, we extend the concept of algorithmic\nrecourse to generative language models: we provide users a novel mechanism to\nachieve their desired prediction by dynamically setting thresholds for toxicity\nfiltering. Users thereby exercise increased agency relative to interactions\nwith the baseline system. A pilot study (n = 30) supports the potential of\nour proposed recourse mechanism, indicating improvements in usability compared\nto fixed-threshold toxicity-filtering of model outputs. Future work should\nexplore the intersection of toxicity scoring, model controllability, user\nagency, and language reclamation processes -- particularly with regard to the\nbias that many communities encounter when interacting with generative language\nmodels.",
+      "upvotes": 6
+    }
+  ]
+}

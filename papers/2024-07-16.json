@@ -1,0 +1,261 @@
+{
+  "date": "2024-07-16",
+  "papers": [
+    {
+      "title": "Qwen2 Technical Report",
+      "url": "https://huggingface.co/papers/2407.10671",
+      "authors": [
+        "Bowen Yu",
+        "Chengyuan Li",
+        "Jialin Wang",
+        "Jianwei Zhang",
+        "Jianxin Ma",
+        "Jin Xu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.10671.pdf",
+      "abstract": "This report introduces the Qwen2 series, the latest addition to our large\nlanguage models and large multimodal models. We release a comprehensive suite\nof foundational and instruction-tuned language models, encompassing a parameter\nrange from 0.5 to 72 billion, featuring dense models and a Mixture-of-Experts\nmodel. Qwen2 surpasses most prior open-weight models, including its predecessor\nQwen1.5, and exhibits competitive performance relative to proprietary models\nacross diverse benchmarks on language understanding, generation, multilingual\nproficiency, coding, mathematics, and reasoning.\n  The flagship model, Qwen2-72B, showcases remarkable performance: 84.2 on\nMMLU, 37.9 on GPQA, 64.6 on HumanEval, 89.5 on GSM8K, and 82.4 on BBH as a base\nlanguage model. The instruction-tuned variant, Qwen2-72B-Instruct, attains 9.1\non MT-Bench, 48.1 on Arena-Hard, and 35.7 on LiveCodeBench. Moreover, Qwen2\ndemonstrates robust multilingual capabilities, proficient in approximately 30\nlanguages, spanning English, Chinese, Spanish, French, German, Arabic, Russian,\nKorean, Japanese, Thai, Vietnamese, and more, underscoring its versatility and\nglobal reach.\n  To foster community innovation and accessibility, we have made the Qwen2\nmodel weights openly available on Hugging Face1 and ModelScope2, and the\nsupplementary materials including example code on GitHub3. These platforms also\ninclude resources for quantization, fine-tuning, and deployment, facilitating a\nwide range of applications and research endeavors.",
+      "upvotes": 155
+    },
+    {
+      "title": "Learning to Refuse: Towards Mitigating Privacy Risks in LLMs",
+      "url": "https://huggingface.co/papers/2407.10058",
+      "authors": [
+        "Chuanyuan Tan",
+        "Wenliang Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.10058.pdf",
+      "abstract": "Large language models (LLMs) exhibit remarkable capabilities in understanding\nand generating natural language. However, these models can inadvertently\nmemorize private information, posing significant privacy risks. This study\naddresses the challenge of enabling LLMs to protect specific individuals'\nprivate data without the need for complete retraining. We propose \\return, a\nReal-world pErsonal daTa UnleaRNing dataset, comprising 2,492 individuals from\nWikipedia with associated QA pairs, to evaluate machine unlearning (MU) methods\nfor protecting personal data in a realistic scenario. Additionally, we\nintroduce the Name-Aware Unlearning Framework (NAUF) for Privacy Protection,\nwhich enables the model to learn which individuals' information should be\nprotected without affecting its ability to answer questions related to other\nunrelated individuals. Our extensive experiments demonstrate that NAUF achieves\na state-of-the-art average unlearning score, surpassing the best baseline\nmethod by 5.65 points, effectively protecting target individuals' personal data\nwhile maintaining the model's general capabilities.",
+      "upvotes": 29
+    },
+    {
+      "title": "GRUtopia: Dream General Robots in a City at Scale",
+      "url": "https://huggingface.co/papers/2407.10943",
+      "authors": [
+        "Hanqing Wang",
+        "Jiahe Chen",
+        "Wensi Huang",
+        "Qingwei Ben",
+        "Tai Wang",
+        "Boyu Mi",
+        "Tao Huang",
+        "Siheng Zhao",
+        "Yilun Chen",
+        "Sizhe Yang",
+        "Peizhou Cao",
+        "Wenye Yu",
+        "Zichao Ye",
+        "Jialun Li",
+        "Junfeng Long",
+        "Zirui Wang",
+        "Huiling Wang",
+        "Ying Zhao",
+        "Zhongying Tu",
+        "Yu Qiao",
+        "Dahua Lin",
+        "Jiangmiao Pang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.10943.pdf",
+      "abstract": "Recent works have been exploring the scaling laws in the field of Embodied\nAI. Given the prohibitive costs of collecting real-world data, we believe the\nSimulation-to-Real (Sim2Real) paradigm is a crucial step for scaling the\nlearning of embodied models. This paper introduces project GRUtopia, the first\nsimulated interactive 3D society designed for various robots. It features\nseveral advancements: (a) The scene dataset, GRScenes, includes 100k\ninteractive, finely annotated scenes, which can be freely combined into\ncity-scale environments. In contrast to previous works mainly focusing on home,\nGRScenes covers 89 diverse scene categories, bridging the gap of\nservice-oriented environments where general robots would be initially deployed.\n(b) GRResidents, a Large Language Model (LLM) driven Non-Player Character (NPC)\nsystem that is responsible for social interaction, task generation, and task\nassignment, thus simulating social scenarios for embodied AI applications. (c)\nThe benchmark, GRBench, supports various robots but focuses on legged robots as\nprimary agents and poses moderately challenging tasks involving Object\nLoco-Navigation, Social Loco-Navigation, and Loco-Manipulation. We hope that\nthis work can alleviate the scarcity of high-quality data in this field and\nprovide a more comprehensive assessment of Embodied AI research. The project is\navailable at https://github.com/OpenRobotLab/GRUtopia.",
+      "upvotes": 23
+    },
+    {
+      "title": "The Good, The Bad, and The Greedy: Evaluation of LLMs Should Not Ignore Non-Determinism",
+      "url": "https://huggingface.co/papers/2407.10457",
+      "authors": [
+        "Yifan Song",
+        "Guoyin Wang",
+        "Sujian Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.10457.pdf",
+      "abstract": "Current evaluations of large language models (LLMs) often overlook\nnon-determinism, typically focusing on a single output per example. This limits\nour understanding of LLM performance variability in real-world applications.\nOur study addresses this issue by exploring key questions about the performance\ndifferences between greedy decoding and sampling, identifying benchmarks'\nconsistency regarding non-determinism, and examining unique model behaviors.\nThrough extensive experiments, we observe that greedy decoding generally\noutperforms sampling methods for most evaluated tasks. We also observe\nconsistent performance across different LLM sizes and alignment methods, noting\nthat alignment can reduce sampling variance. Moreover, our best-of-N sampling\napproach demonstrates that smaller LLMs can match or surpass larger models such\nas GPT-4-Turbo, highlighting the untapped potential of smaller LLMs. This\nresearch shows the importance of considering non-determinism in LLM evaluations\nand provides insights for future LLM development and evaluation.",
+      "upvotes": 22
+    },
+    {
+      "title": "Q-Sparse: All Large Language Models can be Fully Sparsely-Activated",
+      "url": "https://huggingface.co/papers/2407.10969",
+      "authors": [
+        "Shuming Ma",
+        "Ruiping Wang",
+        "Furu Wei"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.10969.pdf",
+      "abstract": "We introduce, Q-Sparse, a simple yet effective approach to training\nsparsely-activated large language models (LLMs). Q-Sparse enables full sparsity\nof activations in LLMs which can bring significant efficiency gains in\ninference. This is achieved by applying top-K sparsification to the activations\nand the straight-through-estimator to the training. The key results from this\nwork are, (1) Q-Sparse can achieve results comparable to those of baseline LLMs\nwhile being much more efficient at inference time; (2) We present an\ninference-optimal scaling law for sparsely-activated LLMs; (3) Q-Sparse is\neffective in different settings, including training-from-scratch,\ncontinue-training of off-the-shelf LLMs, and finetuning; (4) Q-Sparse works for\nboth full-precision and 1-bit LLMs (e.g., BitNet b1.58). Particularly, the\nsynergy of BitNet b1.58 and Q-Sparse (can be equipped with MoE) provides the\ncornerstone and a clear path to revolutionize the efficiency, including cost\nand energy consumption, of future LLMs.",
+      "upvotes": 20
+    },
+    {
+      "title": "Foundational Autoraters: Taming Large Language Models for Better Automatic Evaluation",
+      "url": "https://huggingface.co/papers/2407.10817",
+      "authors": [
+        "Salaheddin Alzubi",
+        "Manaal Faruqui",
+        "Yun-Hsuan Sung"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.10817.pdf",
+      "abstract": "As large language models (LLMs) advance, it becomes more challenging to\nreliably evaluate their output due to the high costs of human evaluation. To\nmake progress towards better LLM autoraters, we introduce FLAMe, a family of\nFoundational Large Autorater Models. FLAMe is trained on our large and diverse\ncollection of 100+ quality assessment tasks comprising 5M+ human judgments,\ncurated and standardized using publicly released human evaluations from\nprevious research. FLAMe significantly improves generalization to a wide\nvariety of held-out tasks, outperforming LLMs trained on proprietary data like\nGPT-4 and Claude-3 on many tasks. We show that FLAMe can also serve as a\npowerful starting point for further downstream fine-tuning, using reward\nmodeling evaluation as a case study (FLAMe-RM). Notably, on RewardBench, our\nFLAMe-RM-24B model (with an accuracy of 87.8%) is the top-performing generative\nmodel trained exclusively on permissively licensed data, outperforming both\nGPT-4-0125 (85.9%) and GPT-4o (84.7%). Additionally, we explore a more\ncomputationally efficient approach using a novel tail-patch fine-tuning\nstrategy to optimize our FLAMe multitask mixture for reward modeling evaluation\n(FLAMe-Opt-RM), offering competitive RewardBench performance while requiring\napproximately 25x less training datapoints. Overall, our FLAMe variants\noutperform all popular proprietary LLM-as-a-Judge models we consider across 8\nout of 12 autorater evaluation benchmarks, encompassing 53 quality assessment\ntasks, including RewardBench and LLM-AggreFact. Finally, our analysis reveals\nthat FLAMe is significantly less biased than these LLM-as-a-Judge models on the\nCoBBLEr autorater bias benchmark, while effectively identifying high-quality\nresponses for code generation.",
+      "upvotes": 13
+    },
+    {
+      "title": "Make-An-Agent: A Generalizable Policy Network Generator with Behavior-Prompted Diffusion",
+      "url": "https://huggingface.co/papers/2407.10973",
+      "authors": [
+        "Yongyuan Liang",
+        "Tingqiang Xu",
+        "Kaizhe Hu",
+        "Guangqi Jiang",
+        "Furong Huang",
+        "Huazhe Xu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.10973.pdf",
+      "abstract": "Can we generate a control policy for an agent using just one demonstration of\ndesired behaviors as a prompt, as effortlessly as creating an image from a\ntextual description? In this paper, we present Make-An-Agent, a novel policy\nparameter generator that leverages the power of conditional diffusion models\nfor behavior-to-policy generation. Guided by behavior embeddings that encode\ntrajectory information, our policy generator synthesizes latent parameter\nrepresentations, which can then be decoded into policy networks. Trained on\npolicy network checkpoints and their corresponding trajectories, our generation\nmodel demonstrates remarkable versatility and scalability on multiple tasks and\nhas a strong generalization ability on unseen tasks to output well-performed\npolicies with only few-shot demonstrations as inputs. We showcase its efficacy\nand efficiency on various domains and tasks, including varying objectives,\nbehaviors, and even across different robot manipulators. Beyond simulation, we\ndirectly deploy policies generated by Make-An-Agent onto real-world robots on\nlocomotion tasks.",
+      "upvotes": 9
+    },
+    {
+      "title": "DataDream: Few-shot Guided Dataset Generation",
+      "url": "https://huggingface.co/papers/2407.10910",
+      "authors": [
+        "Jae Myung Kim",
+        "Jessica Bader",
+        "Stephan Alaniz",
+        "Cordelia Schmid",
+        "Zeynep Akata"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.10910.pdf",
+      "abstract": "While text-to-image diffusion models have been shown to achieve\nstate-of-the-art results in image synthesis, they have yet to prove their\neffectiveness in downstream applications. Previous work has proposed to\ngenerate data for image classifier training given limited real data access.\nHowever, these methods struggle to generate in-distribution images or depict\nfine-grained features, thereby hindering the generalization of classification\nmodels trained on synthetic datasets. We propose DataDream, a framework for\nsynthesizing classification datasets that more faithfully represents the real\ndata distribution when guided by few-shot examples of the target classes.\nDataDream fine-tunes LoRA weights for the image generation model on the few\nreal images before generating the training data using the adapted model. We\nthen fine-tune LoRA weights for CLIP using the synthetic data to improve\ndownstream image classification over previous approaches on a large variety of\ndatasets. We demonstrate the efficacy of DataDream through extensive\nexperiments, surpassing state-of-the-art classification accuracy with few-shot\ndata across 7 out of 10 datasets, while being competitive on the other 3.\nAdditionally, we provide insights into the impact of various factors, such as\nthe number of real-shot and generated images as well as the fine-tuning compute\non model performance. The code is available at\nhttps://github.com/ExplainableML/DataDream.",
+      "upvotes": 8
+    },
+    {
+      "title": "Masked Generative Video-to-Audio Transformers with Enhanced Synchronicity",
+      "url": "https://huggingface.co/papers/2407.10387",
+      "authors": [
+        "Santiago Pascual",
+        "Chunghsin Yeh",
+        "Joan Serrà"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.10387.pdf",
+      "abstract": "Video-to-audio (V2A) generation leverages visual-only video features to\nrender plausible sounds that match the scene. Importantly, the generated sound\nonsets should match the visual actions that are aligned with them, otherwise\nunnatural synchronization artifacts arise. Recent works have explored the\nprogression of conditioning sound generators on still images and then video\nfeatures, focusing on quality and semantic matching while ignoring\nsynchronization, or by sacrificing some amount of quality to focus on improving\nsynchronization only. In this work, we propose a V2A generative model, named\nMaskVAT, that interconnects a full-band high-quality general audio codec with a\nsequence-to-sequence masked generative model. This combination allows modeling\nboth high audio quality, semantic matching, and temporal synchronicity at the\nsame time. Our results show that, by combining a high-quality codec with the\nproper pre-trained audio-visual features and a sequence-to-sequence parallel\nstructure, we are able to yield highly synchronized results on one hand, whilst\nbeing competitive with the state of the art of non-codec generative audio\nmodels. Sample videos and generated audios are available at\nhttps://maskvat.github.io .",
+      "upvotes": 6
+    },
+    {
+      "title": "Video Occupancy Models",
+      "url": "https://huggingface.co/papers/2407.09533",
+      "authors": [
+        "Manan Tomar",
+        "Philippe Hansen-Estruch",
+        "Philip Bachman",
+        "Alex Lamb",
+        "John Langford",
+        "Matthew E. Taylor",
+        "Sergey Levine"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.09533.pdf",
+      "abstract": "We introduce a new family of video prediction models designed to support\ndownstream control tasks. We call these models Video Occupancy models (VOCs).\nVOCs operate in a compact latent space, thus avoiding the need to make\npredictions about individual pixels. Unlike prior latent-space world models,\nVOCs directly predict the discounted distribution of future states in a single\nstep, thus avoiding the need for multistep roll-outs. We show that both\nproperties are beneficial when building predictive models of video for use in\ndownstream control. Code is available at\nhttps://github.com/manantomar/video-occupancy-models{github.com/manantomar/video-occupancy-models}.",
+      "upvotes": 6
+    },
+    {
+      "title": "Spider2-V: How Far Are Multimodal Agents From Automating Data Science and Engineering Workflows?",
+      "url": "https://huggingface.co/papers/2407.10956",
+      "authors": [
+        "Fangyu Lei",
+        "Haoyuan Wu",
+        "Yeqiao Fu",
+        "Xinzhuang Xiong",
+        "Hanchong Zhang",
+        "Yuchen Mao",
+        "Wenjing Hu",
+        "Hongshen Xu",
+        "Danyang Zhang",
+        "Sida Wang",
+        "Ruoxi Sun",
+        "Pengcheng Yin",
+        "Caiming Xiong",
+        "Ansong Ni",
+        "Qian Liu",
+        "Victor Zhong",
+        "Lu Chen",
+        "Kai Yu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.10956.pdf",
+      "abstract": "Data science and engineering workflows often span multiple stages, from\nwarehousing to orchestration, using tools like BigQuery, dbt, and Airbyte. As\nvision language models (VLMs) advance in multimodal understanding and code\ngeneration, VLM-based agents could potentially automate these workflows by\ngenerating SQL queries, Python code, and GUI operations. This automation can\nimprove the productivity of experts while democratizing access to large-scale\ndata analysis. In this paper, we introduce Spider2-V, the first multimodal\nagent benchmark focusing on professional data science and engineering\nworkflows, featuring 494 real-world tasks in authentic computer environments\nand incorporating 20 enterprise-level professional applications. These tasks,\nderived from real-world use cases, evaluate the ability of a multimodal agent\nto perform data-related tasks by writing code and managing the GUI in\nenterprise data software systems. To balance realistic simulation with\nevaluation simplicity, we devote significant effort to developing automatic\nconfigurations for task setup and carefully crafting evaluation metrics for\neach task. Furthermore, we supplement multimodal agents with comprehensive\ndocuments of these enterprise data software systems. Our empirical evaluation\nreveals that existing state-of-the-art LLM/VLM-based agents do not reliably\nautomate full data workflows (14.0% success). Even with step-by-step guidance,\nthese agents still underperform in tasks that require fine-grained,\nknowledge-intensive GUI actions (16.2%) and involve remote cloud-hosted\nworkspaces (10.6%). We hope that Spider2-V paves the way for autonomous\nmultimodal agents to transform the automation of data science and engineering\nworkflow. Our code and data are available at https://spider2-v.github.io.",
+      "upvotes": 5
+    },
+    {
+      "title": "LLM Circuit Analyses Are Consistent Across Training and Scale",
+      "url": "https://huggingface.co/papers/2407.10827",
+      "authors": [
+        "Curt Tigges",
+        "Michael Hanna",
+        "Qinan Yu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.10827.pdf",
+      "abstract": "Most currently deployed large language models (LLMs) undergo continuous\ntraining or additional finetuning. By contrast, most research into LLMs'\ninternal mechanisms focuses on models at one snapshot in time (the end of\npre-training), raising the question of whether their results generalize to\nreal-world settings. Existing studies of mechanisms over time focus on\nencoder-only or toy models, which differ significantly from most deployed\nmodels. In this study, we track how model mechanisms, operationalized as\ncircuits, emerge and evolve across 300 billion tokens of training in\ndecoder-only LLMs, in models ranging from 70 million to 2.8 billion parameters.\nWe find that task abilities and the functional components that support them\nemerge consistently at similar token counts across scale. Moreover, although\nsuch components may be implemented by different attention heads over time, the\noverarching algorithm that they implement remains. Surprisingly, both these\nalgorithms and the types of components involved therein can replicate across\nmodel scale. These results suggest that circuit analyses conducted on small\nmodels at the end of pre-training can provide insights that still apply after\nadditional pre-training and over model scale.",
+      "upvotes": 4
+    },
+    {
+      "title": "MMM: Multilingual Mutual Reinforcement Effect Mix Datasets & Test with Open-domain Information Extraction Large Language Models",
+      "url": "https://huggingface.co/papers/2407.10953",
+      "authors": [
+        "Xinyang He",
+        "Hanjun Wei",
+        "Yunhao Liang",
+        "Younghun Lim",
+        "Shijian Wang",
+        "Hexiang Huang",
+        "Qinghao Zhang",
+        "Shiwen Ni",
+        "Tatsunori Mori"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.10953.pdf",
+      "abstract": "The Mutual Reinforcement Effect (MRE) represents a promising avenue in\ninformation extraction and multitasking research. Nevertheless, its\napplicability has been constrained due to the exclusive availability of MRE mix\ndatasets in Japanese, thereby limiting comprehensive exploration by the global\nresearch community. To address this limitation, we introduce a Multilingual MRE\nmix dataset (MMM) that encompasses 21 sub-datasets in English, Japanese, and\nChinese. In this paper, we also propose a method for dataset translation\nassisted by Large Language Models (LLMs), which significantly reduces the\nmanual annotation time required for dataset construction by leveraging LLMs to\ntranslate the original Japanese datasets. Additionally, we have enriched the\ndataset by incorporating open-domain Named Entity Recognition (NER) and\nsentence classification tasks. Utilizing this expanded dataset, we developed a\nunified input-output framework to train an Open-domain Information Extraction\nLarge Language Model (OIELLM). The OIELLM model demonstrates the capability to\neffectively process novel MMM datasets, exhibiting significant improvements in\nperformance.",
+      "upvotes": 4
+    },
+    {
+      "title": "LAB-Bench: Measuring Capabilities of Language Models for Biology Research",
+      "url": "https://huggingface.co/papers/2407.10362",
+      "authors": [
+        "Jon M. Laurent",
+        "Joseph D. Janizek",
+        "Michael Ruzo",
+        "Michaela M. Hinks",
+        "Michael J. Hammerling",
+        "Siddharth Narayanan",
+        "Manvitha Ponnapati",
+        "Andrew D. White",
+        "Samuel G. Rodriques"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.10362.pdf",
+      "abstract": "There is widespread optimism that frontier Large Language Models (LLMs) and\nLLM-augmented systems have the potential to rapidly accelerate scientific\ndiscovery across disciplines. Today, many benchmarks exist to measure LLM\nknowledge and reasoning on textbook-style science questions, but few if any\nbenchmarks are designed to evaluate language model performance on practical\ntasks required for scientific research, such as literature search, protocol\nplanning, and data analysis. As a step toward building such benchmarks, we\nintroduce the Language Agent Biology Benchmark (LAB-Bench), a broad dataset of\nover 2,400 multiple choice questions for evaluating AI systems on a range of\npractical biology research capabilities, including recall and reasoning over\nliterature, interpretation of figures, access and navigation of databases, and\ncomprehension and manipulation of DNA and protein sequences. Importantly, in\ncontrast to previous scientific benchmarks, we expect that an AI system that\ncan achieve consistently high scores on the more difficult LAB-Bench tasks\nwould serve as a useful assistant for researchers in areas such as literature\nsearch and molecular cloning. As an initial assessment of the emergent\nscientific task capabilities of frontier language models, we measure\nperformance of several against our benchmark and report results compared to\nhuman expert biology researchers. We will continue to update and expand\nLAB-Bench over time, and expect it to serve as a useful tool in the development\nof automated research systems going forward. A public subset of LAB-Bench is\navailable for use at the following URL:\nhttps://huggingface.co/datasets/futurehouse/lab-bench",
+      "upvotes": 4
+    },
+    {
+      "title": "Noise Calibration: Plug-and-play Content-Preserving Video Enhancement using Pre-trained Video Diffusion Models",
+      "url": "https://huggingface.co/papers/2407.10285",
+      "authors": [
+        "Qinyu Yang",
+        "Haoxin Chen",
+        "Yong Zhang",
+        "Menghan Xia",
+        "Xiaodong Cun",
+        "Zhixun Su",
+        "Ying Shan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.10285.pdf",
+      "abstract": "In order to improve the quality of synthesized videos, currently, one\npredominant method involves retraining an expert diffusion model and then\nimplementing a noising-denoising process for refinement. Despite the\nsignificant training costs, maintaining consistency of content between the\noriginal and enhanced videos remains a major challenge. To tackle this\nchallenge, we propose a novel formulation that considers both visual quality\nand consistency of content. Consistency of content is ensured by a proposed\nloss function that maintains the structure of the input, while visual quality\nis improved by utilizing the denoising process of pretrained diffusion models.\nTo address the formulated optimization problem, we have developed a\nplug-and-play noise optimization strategy, referred to as Noise Calibration. By\nrefining the initial random noise through a few iterations, the content of\noriginal video can be largely preserved, and the enhancement effect\ndemonstrates a notable improvement. Extensive experiments have demonstrated the\neffectiveness of the proposed method.",
+      "upvotes": 4
+    },
+    {
+      "title": "SHERL: Synthesizing High Accuracy and Efficient Memory for Resource-Limited Transfer Learning",
+      "url": "https://huggingface.co/papers/2407.07523",
+      "authors": [
+        "Bo Wan",
+        "Xu Jia",
+        "Yunzhi Zhuge",
+        "Ying Zhang",
+        "Huchuan Lu",
+        "Long Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.07523.pdf",
+      "abstract": "Parameter-efficient transfer learning (PETL) has emerged as a flourishing\nresearch field for adapting large pre-trained models to downstream tasks,\ngreatly reducing trainable parameters while grappling with memory challenges\nduring fine-tuning. To address it, memory-efficient series (METL) avoid\nbackpropagating gradients through the large backbone. However, they compromise\nby exclusively relying on frozen intermediate outputs and limiting the\nexhaustive exploration of prior knowledge from pre-trained models. Moreover,\nthe dependency and redundancy between cross-layer features are frequently\noverlooked, thereby submerging more discriminative representations and causing\nan inherent performance gap (vs. conventional PETL methods). Hence, we propose\nan innovative METL strategy called SHERL for resource-limited scenarios to\ndecouple the entire adaptation into two successive and complementary processes.\nIn the early route, intermediate outputs are consolidated via an\nanti-redundancy operation, enhancing their compatibility for subsequent\ninteractions; thereby in the late route, utilizing minimal late pre-trained\nlayers could alleviate the peak demand on memory overhead and regulate these\nfairly flexible features into more adaptive and powerful representations for\nnew domains. Extensive ablations on vision-and-language and language-only tasks\nshow that SHERL combines the strengths of both parameter and memory-efficient\ntechniques, performing on-par or better across diverse architectures with lower\nmemory during fine-tuning. Our code is publicly available at:\nhttps://github.com/Paranioar/SHERL.",
+      "upvotes": 4
+    }
+  ]
+}

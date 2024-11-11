@@ -1,0 +1,132 @@
+{
+  "date": "2024-08-12",
+  "papers": [
+    {
+      "title": "VITA: Towards Open-Source Interactive Omni Multimodal LLM",
+      "url": "https://huggingface.co/papers/2408.05211",
+      "authors": [
+        "Chaoyou Fu",
+        "Zuwei Long",
+        "Xiong Wang",
+        "Di Yin",
+        "Long Ma",
+        "Ran He",
+        "Rongrong Ji",
+        "Yunsheng Wu",
+        "Caifeng Shan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.05211.pdf",
+      "abstract": "The remarkable multimodal capabilities and interactive experience of GPT-4o\nunderscore their necessity in practical applications, yet open-source models\nrarely excel in both areas. In this paper, we introduce VITA, the first-ever\nopen-source Multimodal Large Language Model (MLLM) adept at simultaneous\nprocessing and analysis of Video, Image, Text, and Audio modalities, and\nmeanwhile has an advanced multimodal interactive experience. Starting from\nMixtral 8x7B as a language foundation, we expand its Chinese vocabulary\nfollowed by bilingual instruction tuning. We further endow the language model\nwith visual and audio capabilities through two-stage multi-task learning of\nmultimodal alignment and instruction tuning. VITA demonstrates robust\nfoundational capabilities of multilingual, vision, and audio understanding, as\nevidenced by its strong performance across a range of both unimodal and\nmultimodal benchmarks. Beyond foundational capabilities, we have made\nconsiderable progress in enhancing the natural multimodal human-computer\ninteraction experience. To the best of our knowledge, we are the first to\nexploit non-awakening interaction and audio interrupt in MLLM. VITA is the\nfirst step for the open-source community to explore the seamless integration of\nmultimodal understanding and interaction. While there is still lots of work to\nbe done on VITA to get close to close-source counterparts, we hope that its\nrole as a pioneer can serve as a cornerstone for subsequent research. Project\nPage: https://vita-home.github.io.",
+      "upvotes": 46
+    },
+    {
+      "title": "Gemma Scope: Open Sparse Autoencoders Everywhere All At Once on Gemma 2",
+      "url": "https://huggingface.co/papers/2408.05147",
+      "authors": [
+        "Tom Lieberum",
+        "Lewis Smith",
+        "Nicolas Sonnerat",
+        "Anca Dragan",
+        "Rohin Shah"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.05147.pdf",
+      "abstract": "Sparse autoencoders (SAEs) are an unsupervised method for learning a sparse\ndecomposition of a neural network's latent representations into seemingly\ninterpretable features. Despite recent excitement about their potential,\nresearch applications outside of industry are limited by the high cost of\ntraining a comprehensive suite of SAEs. In this work, we introduce Gemma Scope,\nan open suite of JumpReLU SAEs trained on all layers and sub-layers of Gemma 2\n2B and 9B and select layers of Gemma 2 27B base models. We primarily train SAEs\non the Gemma 2 pre-trained models, but additionally release SAEs trained on\ninstruction-tuned Gemma 2 9B for comparison. We evaluate the quality of each\nSAE on standard metrics and release these results. We hope that by releasing\nthese SAE weights, we can help make more ambitious safety and interpretability\nresearch easier for the community. Weights and a tutorial can be found at\nhttps://huggingface.co/google/gemma-scope and an interactive demo can be found\nat https://www.neuronpedia.org/gemma-scope",
+      "upvotes": 37
+    },
+    {
+      "title": "mPLUG-Owl3: Towards Long Image-Sequence Understanding in Multi-Modal Large Language Models",
+      "url": "https://huggingface.co/papers/2408.04840",
+      "authors": [
+        "Jiabo Ye",
+        "Haowei Liu",
+        "Qi Qian",
+        "Ji Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.04840.pdf",
+      "abstract": "Multi-modal Large Language Models (MLLMs) have demonstrated remarkable\ncapabilities in executing instructions for a variety of single-image tasks.\nDespite this progress, significant challenges remain in modeling long image\nsequences. In this work, we introduce the versatile multi-modal large language\nmodel, mPLUG-Owl3, which enhances the capability for long image-sequence\nunderstanding in scenarios that incorporate retrieved image-text knowledge,\ninterleaved image-text, and lengthy videos. Specifically, we propose novel\nhyper attention blocks to efficiently integrate vision and language into a\ncommon language-guided semantic space, thereby facilitating the processing of\nextended multi-image scenarios. Extensive experimental results suggest that\nmPLUG-Owl3 achieves state-of-the-art performance among models with a similar\nsize on single-image, multi-image, and video benchmarks. Moreover, we propose a\nchallenging long visual sequence evaluation named Distractor Resistance to\nassess the ability of models to maintain focus amidst distractions. Finally,\nwith the proposed architecture, mPLUG-Owl3 demonstrates outstanding performance\non ultra-long visual sequence inputs. We hope that mPLUG-Owl3 can contribute to\nthe development of more efficient and powerful multimodal large language\nmodels.",
+      "upvotes": 31
+    },
+    {
+      "title": "UniBench: Visual Reasoning Requires Rethinking Vision-Language Beyond Scaling",
+      "url": "https://huggingface.co/papers/2408.04810",
+      "authors": [
+        "Mark Ibrahim"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.04810.pdf",
+      "abstract": "Significant research efforts have been made to scale and improve\nvision-language model (VLM) training approaches. Yet, with an ever-growing\nnumber of benchmarks, researchers are tasked with the heavy burden of\nimplementing each protocol, bearing a non-trivial computational cost, and\nmaking sense of how all these benchmarks translate into meaningful axes of\nprogress. To facilitate a systematic evaluation of VLM progress, we introduce\nUniBench: a unified implementation of 50+ VLM benchmarks spanning a\ncomprehensive range of carefully categorized capabilities from object\nrecognition to spatial awareness, counting, and much more. We showcase the\nutility of UniBench for measuring progress by evaluating nearly 60 publicly\navailable vision-language models, trained on scales of up to 12.8B samples. We\nfind that while scaling training data or model size can boost many\nvision-language model capabilities, scaling offers little benefit for reasoning\nor relations. Surprisingly, we also discover today's best VLMs struggle on\nsimple digit recognition and counting tasks, e.g. MNIST, which much simpler\nnetworks can solve. Where scale falls short, we find that more precise\ninterventions, such as data quality or tailored-learning objectives offer more\npromise. For practitioners, we also offer guidance on selecting a suitable VLM\nfor a given application. Finally, we release an easy-to-run UniBench code-base\nwith the full set of 50+ benchmarks and comparisons across 59 models as well as\na distilled, representative set of benchmarks that runs in 5 minutes on a\nsingle GPU.",
+      "upvotes": 22
+    },
+    {
+      "title": "ToolSandbox: A Stateful, Conversational, Interactive Evaluation Benchmark for LLM Tool Use Capabilities",
+      "url": "https://huggingface.co/papers/2408.04682",
+      "authors": [
+        "Thomas Holleis",
+        "Bernhard Aumayer",
+        "Feng Nan",
+        "Shuang Ma",
+        "Shen Ma",
+        "Zirui Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.04682.pdf",
+      "abstract": "Recent large language models (LLMs) advancements sparked a growing research\ninterest in tool assisted LLMs solving real-world challenges, which calls for\ncomprehensive evaluation of tool-use capabilities. While previous works focused\non either evaluating over stateless web services (RESTful API), based on a\nsingle turn user prompt, or an off-policy dialog trajectory, ToolSandbox\nincludes stateful tool execution, implicit state dependencies between tools, a\nbuilt-in user simulator supporting on-policy conversational evaluation and a\ndynamic evaluation strategy for intermediate and final milestones over an\narbitrary trajectory. We show that open source and proprietary models have a\nsignificant performance gap, and complex tasks like State Dependency,\nCanonicalization and Insufficient Information defined in ToolSandbox are\nchallenging even the most capable SOTA LLMs, providing brand-new insights into\ntool-use LLM capabilities. ToolSandbox evaluation framework is released at\nhttps://github.com/apple/ToolSandbox",
+      "upvotes": 14
+    },
+    {
+      "title": "Kalman-Inspired Feature Propagation for Video Face Super-Resolution",
+      "url": "https://huggingface.co/papers/2408.05205",
+      "authors": [
+        "Ruicheng Feng",
+        "Chongyi Li",
+        "Chen Change Loy"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.05205.pdf",
+      "abstract": "Despite the promising progress of face image super-resolution, video face\nsuper-resolution remains relatively under-explored. Existing approaches either\nadapt general video super-resolution networks to face datasets or apply\nestablished face image super-resolution models independently on individual\nvideo frames. These paradigms encounter challenges either in reconstructing\nfacial details or maintaining temporal consistency. To address these issues, we\nintroduce a novel framework called Kalman-inspired Feature Propagation (KEEP),\ndesigned to maintain a stable face prior over time. The Kalman filtering\nprinciples offer our method a recurrent ability to use the information from\npreviously restored frames to guide and regulate the restoration process of the\ncurrent frame. Extensive experiments demonstrate the effectiveness of our\nmethod in capturing facial details consistently across video frames. Code and\nvideo demo are available at https://jnjaby.github.io/projects/KEEP.",
+      "upvotes": 8
+    },
+    {
+      "title": "BRAT: Bonus oRthogonAl Token for Architecture Agnostic Textual Inversion",
+      "url": "https://huggingface.co/papers/2408.04785",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2408.04785.pdf",
+      "abstract": "Textual Inversion remains a popular method for personalizing diffusion\nmodels, in order to teach models new subjects and styles. We note that textual\ninversion has been underexplored using alternatives to the UNet, and experiment\nwith textual inversion with a vision transformer. We also seek to optimize\ntextual inversion using a strategy that does not require explicit use of the\nUNet and its idiosyncratic layers, so we add bonus tokens and enforce\northogonality. We find the use of the bonus token improves adherence to the\nsource images and the use of the vision transformer improves adherence to the\nprompt. Code is available at https://github.com/jamesBaker361/tex_inv_plus.",
+      "upvotes": 6
+    },
+    {
+      "title": "MooER: LLM-based Speech Recognition and Translation Models from Moore Threads",
+      "url": "https://huggingface.co/papers/2408.05101",
+      "authors": [
+        "Junhao Xu",
+        "Zhenlin Liang",
+        "Yi Liu",
+        "Jian Li",
+        "Yajun Zheng",
+        "Hua Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.05101.pdf",
+      "abstract": "In this paper, we present MooER, a LLM-based large-scale automatic speech\nrecognition (ASR) / automatic speech translation (AST) model of Moore Threads.\nA 5000h pseudo labeled dataset containing open source and self collected speech\ndata is used for training. We achieve performance comparable to other open\nsource models trained with up to hundreds of thousands of hours of labeled\nspeech data. Meanwhile, experiments conducted on Covost2 Zh2en testset suggest\nthat our model outperforms other open source Speech LLMs. A BLEU score of 25.2\ncan be obtained. The main contributions of this paper are summarized as\nfollows. First, this paper presents a training strategy for encoders and LLMs\non speech related tasks (including ASR and AST) using a small size of pseudo\nlabeled data without any extra manual annotation and selection. Second, we\nrelease our ASR and AST models and plan to open-source our training code and\nstrategy in the near future. Moreover, a model trained on 8wh scale training\ndata is planned to be released later on.",
+      "upvotes": 6
+    },
+    {
+      "title": "MulliVC: Multi-lingual Voice Conversion With Cycle Consistency",
+      "url": "https://huggingface.co/papers/2408.04708",
+      "authors": [
+        "Chen Zhang",
+        "Yi Ren",
+        "Ziyue Jiang",
+        "Xiang Yin",
+        "Zhou Zhao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.04708.pdf",
+      "abstract": "Voice conversion aims to modify the source speaker's voice to resemble the\ntarget speaker while preserving the original speech content. Despite notable\nadvancements in voice conversion these days, multi-lingual voice conversion\n(including both monolingual and cross-lingual scenarios) has yet to be\nextensively studied. It faces two main challenges: 1) the considerable\nvariability in prosody and articulation habits across languages; and 2) the\nrarity of paired multi-lingual datasets from the same speaker. In this paper,\nwe propose MulliVC, a novel voice conversion system that only converts timbre\nand keeps original content and source language prosody without multi-lingual\npaired data. Specifically, each training step of MulliVC contains three\nsubsteps: In step one the model is trained with monolingual speech data; then,\nsteps two and three take inspiration from back translation, construct a\ncyclical process to disentangle the timbre and other information (content,\nprosody, and other language-related information) in the absence of\nmulti-lingual data from the same speaker. Both objective and subjective results\nindicate that MulliVC significantly surpasses other methods in both monolingual\nand cross-lingual contexts, demonstrating the system's efficacy and the\nviability of the three-step approach with cycle consistency. Audio samples can\nbe found on our demo page (mullivc.github.io).",
+      "upvotes": 5
+    },
+    {
+      "title": "Generating novel experimental hypotheses from language models: A case study on cross-dative generalization",
+      "url": "https://huggingface.co/papers/2408.05086",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2408.05086.pdf",
+      "abstract": "Neural network language models (LMs) have been shown to successfully capture\ncomplex linguistic knowledge. However, their utility for understanding language\nacquisition is still debated. We contribute to this debate by presenting a case\nstudy where we use LMs as simulated learners to derive novel experimental\nhypotheses to be tested with humans. We apply this paradigm to study\ncross-dative generalization (CDG): productive generalization of novel verbs\nacross dative constructions (she pilked me the ball/she pilked the ball to me)\n-- acquisition of which is known to involve a large space of contextual\nfeatures -- using LMs trained on child-directed speech. We specifically ask:\n\"what properties of the training exposure facilitate a novel verb's\ngeneralization to the (unmodeled) alternate construction?\" To answer this, we\nsystematically vary the exposure context in which a novel dative verb occurs in\nterms of the properties of the theme and recipient, and then analyze the LMs'\nusage of the novel verb in the unmodeled dative construction. We find LMs to\nreplicate known patterns of children's CDG, as a precondition to exploring\nnovel hypotheses. Subsequent simulations reveal a nuanced role of the features\nof the novel verbs' exposure context on the LMs' CDG. We find CDG to be\nfacilitated when the first postverbal argument of the exposure context is\npronominal, definite, short, and conforms to the prototypical animacy\nexpectations of the exposure dative. These patterns are characteristic of\nharmonic alignment in datives, where the argument with features ranking higher\non the discourse prominence scale tends to precede the other. This gives rise\nto a novel hypothesis that CDG is facilitated insofar as the features of the\nexposure context -- in particular, its first postverbal argument -- are\nharmonically aligned. We conclude by proposing future experiments that can test\nthis hypothesis in children.",
+      "upvotes": 4
+    }
+  ]
+}

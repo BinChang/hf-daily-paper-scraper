@@ -1,0 +1,137 @@
+{
+  "date": "2024-02-01",
+  "papers": [
+    {
+      "title": "RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval",
+      "url": "https://huggingface.co/papers/2401.18059",
+      "authors": [
+        "Aditi Tuli",
+        "Anna Goldie"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.18059.pdf",
+      "abstract": "Retrieval-augmented language models can better adapt to changes in world\nstate and incorporate long-tail knowledge. However, most existing methods\nretrieve only short contiguous chunks from a retrieval corpus, limiting\nholistic understanding of the overall document context. We introduce the novel\napproach of recursively embedding, clustering, and summarizing chunks of text,\nconstructing a tree with differing levels of summarization from the bottom up.\nAt inference time, our RAPTOR model retrieves from this tree, integrating\ninformation across lengthy documents at different levels of abstraction.\nControlled experiments show that retrieval with recursive summaries offers\nsignificant improvements over traditional retrieval-augmented LMs on several\ntasks. On question-answering tasks that involve complex, multi-step reasoning,\nwe show state-of-the-art results; for example, by coupling RAPTOR retrieval\nwith the use of GPT-4, we can improve the best performance on the QuALITY\nbenchmark by 20% in absolute accuracy.",
+      "upvotes": 36
+    },
+    {
+      "title": "Infini-gram: Scaling Unbounded n-gram Language Models to a Trillion Tokens",
+      "url": "https://huggingface.co/papers/2401.17377",
+      "authors": [
+        "Luke Zettlemoyer",
+        "Hannaneh Hajishirzi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.17377.pdf",
+      "abstract": "Are n-gram language models still relevant in this era of neural large\nlanguage models (LLMs)? Our answer is yes, and we show their values in both\ntext analysis and improving neural LLMs. Yet this necessitates modernizing\nn-gram models in two aspects. First, we train them at the same data scale as\nneural LLMs -- 1.4 trillion tokens. This is the largest n-gram model ever\nbuilt. Second, existing n-gram models use small n which hinders their\nperformance; we instead allow n to be arbitrarily large, by introducing a new\ninfty-gram LM with backoff. Instead of pre-computing n-gram count tables\n(which would be very expensive), we develop an engine named infini-gram --\npowered by suffix arrays -- that can compute infty-gram (as well as n-gram\nwith arbitrary n) probabilities with millisecond-level latency. The\ninfty-gram framework and infini-gram engine enable us to conduct many novel\nand interesting analyses of human-written and machine-generated text: we find\nthat the infty-gram LM has fairly high accuracy for next-token prediction\n(47%), and can complement neural LLMs to greatly reduce their language modeling\nperplexities. When analyzing machine-generated text, we also observe\nirregularities in the machine--infty-gram agreement level with respect to\nthe suffix length, which indicates deficiencies in neural LLM pretraining and\nthe positional embeddings of Transformers. We open-source our infini-gram\nengine in the hopes of enabling more study on how to best use verbatim\ninformation retrieved from large text corpora.",
+      "upvotes": 34
+    },
+    {
+      "title": "Agile But Safe: Learning Collision-Free High-Speed Legged Locomotion",
+      "url": "https://huggingface.co/papers/2401.17583",
+      "authors": [
+        "Chong Zhang",
+        "Wenli Xiao",
+        "Guanqi He",
+        "Changliu Liu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.17583.pdf",
+      "abstract": "Legged robots navigating cluttered environments must be jointly agile for\nefficient task execution and safe to avoid collisions with obstacles or humans.\nExisting studies either develop conservative controllers (< 1.0 m/s) to ensure\nsafety, or focus on agility without considering potentially fatal collisions.\nThis paper introduces Agile But Safe (ABS), a learning-based control framework\nthat enables agile and collision-free locomotion for quadrupedal robots. ABS\ninvolves an agile policy to execute agile motor skills amidst obstacles and a\nrecovery policy to prevent failures, collaboratively achieving high-speed and\ncollision-free navigation. The policy switch in ABS is governed by a learned\ncontrol-theoretic reach-avoid value network, which also guides the recovery\npolicy as an objective function, thereby safeguarding the robot in a closed\nloop. The training process involves the learning of the agile policy, the\nreach-avoid value network, the recovery policy, and an exteroception\nrepresentation network, all in simulation. These trained modules can be\ndirectly deployed in the real world with onboard sensing and computation,\nleading to high-speed and collision-free navigation in confined indoor and\noutdoor spaces with both static and dynamic obstacles.",
+      "upvotes": 25
+    },
+    {
+      "title": "LongAlign: A Recipe for Long Context Alignment of Large Language Models",
+      "url": "https://huggingface.co/papers/2401.18058",
+      "authors": [
+        "Ji Qi",
+        "Lei Hou",
+        "Juanzi Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.18058.pdf",
+      "abstract": "Extending large language models to effectively handle long contexts requires\ninstruction fine-tuning on input sequences of similar length. To address this,\nwe present LongAlign -- a recipe of the instruction data, training, and\nevaluation for long context alignment. First, we construct a long\ninstruction-following dataset using Self-Instruct. To ensure the data\ndiversity, it covers a broad range of tasks from various long context sources.\nSecond, we adopt the packing and sorted batching strategies to speed up\nsupervised fine-tuning on data with varied length distributions. Additionally,\nwe develop a loss weighting method to balance the contribution to the loss\nacross different sequences during packing training. Third, we introduce the\nLongBench-Chat benchmark for evaluating instruction-following capabilities on\nqueries of 10k-100k in length. Experiments show that LongAlign outperforms\nexisting recipes for LLMs in long context tasks by up to 30\\%, while also\nmaintaining their proficiency in handling short, generic tasks. The code, data,\nand long-aligned models are open-sourced at https://github.com/THUDM/LongAlign.",
+      "upvotes": 21
+    },
+    {
+      "title": "Advances in 3D Generation: A Survey",
+      "url": "https://huggingface.co/papers/2401.17807",
+      "authors": [
+        "Qi Zhang",
+        "Weihao Cheng",
+        "Jing Liao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.17807.pdf",
+      "abstract": "Generating 3D models lies at the core of computer graphics and has been the\nfocus of decades of research. With the emergence of advanced neural\nrepresentations and generative models, the field of 3D content generation is\ndeveloping rapidly, enabling the creation of increasingly high-quality and\ndiverse 3D models. The rapid growth of this field makes it difficult to stay\nabreast of all recent developments. In this survey, we aim to introduce the\nfundamental methodologies of 3D generation methods and establish a structured\nroadmap, encompassing 3D representation, generation methods, datasets, and\ncorresponding applications. Specifically, we introduce the 3D representations\nthat serve as the backbone for 3D generation. Furthermore, we provide a\ncomprehensive overview of the rapidly growing literature on generation methods,\ncategorized by the type of algorithmic paradigms, including feedforward\ngeneration, optimization-based generation, procedural generation, and\ngenerative novel view synthesis. Lastly, we discuss available datasets,\napplications, and open challenges. We hope this survey will help readers\nexplore this exciting topic and foster further advancements in the field of 3D\ncontent generation.",
+      "upvotes": 17
+    },
+    {
+      "title": "Anything in Any Scene: Photorealistic Video Object Insertion",
+      "url": "https://huggingface.co/papers/2401.17509",
+      "authors": [
+        "Chen Bai",
+        "Zeman Shao",
+        "Guoxiang Zhang",
+        "Di Liang",
+        "Jie Yang",
+        "Zhuorui Zhang",
+        "Yujian Guo",
+        "Chengzhang Zhong",
+        "Yiqiao Qiu",
+        "Zhendong Wang",
+        "Yichen Guan",
+        "Xiaoyin Zheng",
+        "Tao Wang",
+        "Cheng Lu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.17509.pdf",
+      "abstract": "Realistic video simulation has shown significant potential across diverse\napplications, from virtual reality to film production. This is particularly\ntrue for scenarios where capturing videos in real-world settings is either\nimpractical or expensive. Existing approaches in video simulation often fail to\naccurately model the lighting environment, represent the object geometry, or\nachieve high levels of photorealism. In this paper, we propose Anything in Any\nScene, a novel and generic framework for realistic video simulation that\nseamlessly inserts any object into an existing dynamic video with a strong\nemphasis on physical realism. Our proposed general framework encompasses three\nkey processes: 1) integrating a realistic object into a given scene video with\nproper placement to ensure geometric realism; 2) estimating the sky and\nenvironmental lighting distribution and simulating realistic shadows to enhance\nthe light realism; 3) employing a style transfer network that refines the final\nvideo output to maximize photorealism. We experimentally demonstrate that\nAnything in Any Scene framework produces simulated videos of great geometric\nrealism, lighting realism, and photorealism. By significantly mitigating the\nchallenges associated with video data generation, our framework offers an\nefficient and cost-effective solution for acquiring high-quality videos.\nFurthermore, its applications extend well beyond video data augmentation,\nshowing promising potential in virtual reality, video editing, and various\nother video-centric applications. Please check our project website\nhttps://anythinginanyscene.github.io for access to our project code and more\nhigh-resolution video results.",
+      "upvotes": 16
+    },
+    {
+      "title": "Efficient Tool Use with Chain-of-Abstraction Reasoning",
+      "url": "https://huggingface.co/papers/2401.17464",
+      "authors": [
+        "Jane Dwivedi-Yu",
+        "Asli Celikyilmaz"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.17464.pdf",
+      "abstract": "To achieve faithful reasoning that aligns with human expectations, large\nlanguage models (LLMs) need to ground their reasoning to real-world knowledge\n(e.g., web facts, math and physical rules). Tools help LLMs access this\nexternal knowledge, but there remains challenges for fine-tuning LLM agents\n(e.g., Toolformer) to invoke tools in multi-step reasoning problems, where\ninter-connected tool calls require holistic and efficient tool usage planning.\n  In this work, we propose a new method for LLMs to better leverage tools in\nmulti-step reasoning. Our method, Chain-of-Abstraction (CoA), trains LLMs to\nfirst decode reasoning chains with abstract placeholders, and then call domain\ntools to reify each reasoning chain by filling in specific knowledge. This\nplanning with abstract chains enables LLMs to learn more general reasoning\nstrategies, which are robust to shifts of domain knowledge (e.g., math results)\nrelevant to different reasoning questions. It also allows LLMs to perform\ndecoding and calling of external tools in parallel, which avoids the inference\ndelay caused by waiting for tool responses. In mathematical reasoning and Wiki\nQA domains, we show that our method consistently outperforms previous\nchain-of-thought and tool-augmented baselines on both in-distribution and\nout-of-distribution test sets, with an average ~6% absolute QA accuracy\nimprovement. LLM agents trained with our method also show more efficient tool\nuse, with inference speed being on average ~1.4x faster than baseline\ntool-augmented LLMs.",
+      "upvotes": 16
+    },
+    {
+      "title": "ReplaceAnything3D:Text-Guided 3D Scene Editing with Compositional Neural Radiance Fields",
+      "url": "https://huggingface.co/papers/2401.17895",
+      "authors": [
+        "Chris Xie",
+        "Numair Khan",
+        "Armen Avetisyan",
+        "Douglas Lanman",
+        "Lei Xiao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.17895.pdf",
+      "abstract": "We introduce ReplaceAnything3D model (RAM3D), a novel text-guided 3D scene\nediting method that enables the replacement of specific objects within a scene.\nGiven multi-view images of a scene, a text prompt describing the object to\nreplace, and a text prompt describing the new object, our Erase-and-Replace\napproach can effectively swap objects in the scene with newly generated content\nwhile maintaining 3D consistency across multiple viewpoints. We demonstrate the\nversatility of ReplaceAnything3D by applying it to various realistic 3D scenes,\nshowcasing results of modified foreground objects that are well-integrated with\nthe rest of the scene without affecting its overall integrity.",
+      "upvotes": 15
+    },
+    {
+      "title": "Scavenging Hyena: Distilling Transformers into Long Convolution Models",
+      "url": "https://huggingface.co/papers/2401.17574",
+      "authors": [
+        "Mohammad Sami Nur Islam",
+        "Laurence Liang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.17574.pdf",
+      "abstract": "The rapid evolution of Large Language Models (LLMs), epitomized by\narchitectures like GPT-4, has reshaped the landscape of natural language\nprocessing. This paper introduces a pioneering approach to address the\nefficiency concerns associated with LLM pre-training, proposing the use of\nknowledge distillation for cross-architecture transfer. Leveraging insights\nfrom the efficient Hyena mechanism, our method replaces attention heads in\ntransformer models by Hyena, offering a cost-effective alternative to\ntraditional pre-training while confronting the challenge of processing long\ncontextual information, inherent in quadratic attention mechanisms. Unlike\nconventional compression-focused methods, our technique not only enhances\ninference speed but also surpasses pre-training in terms of both accuracy and\nefficiency. In the era of evolving LLMs, our work contributes to the pursuit of\nsustainable AI solutions, striking a balance between computational power and\nenvironmental impact.",
+      "upvotes": 15
+    },
+    {
+      "title": "CARFF: Conditional Auto-encoded Radiance Field for 3D Scene Forecasting",
+      "url": "https://huggingface.co/papers/2401.18075",
+      "authors": [
+        "Khushi Desai",
+        "Charles Packer",
+        "Harshil Bhatia",
+        "Nicholas Rhinehart",
+        "Joseph Gonzalez"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.18075.pdf",
+      "abstract": "We propose CARFF: Conditional Auto-encoded Radiance Field for 3D Scene\nForecasting, a method for predicting future 3D scenes given past observations,\nsuch as 2D ego-centric images. Our method maps an image to a distribution over\nplausible 3D latent scene configurations using a probabilistic encoder, and\npredicts the evolution of the hypothesized scenes through time. Our latent\nscene representation conditions a global Neural Radiance Field (NeRF) to\nrepresent a 3D scene model, which enables explainable predictions and\nstraightforward downstream applications. This approach extends beyond previous\nneural rendering work by considering complex scenarios of uncertainty in\nenvironmental states and dynamics. We employ a two-stage training of\nPose-Conditional-VAE and NeRF to learn 3D representations. Additionally, we\nauto-regressively predict latent scene representations as a partially\nobservable Markov decision process, utilizing a mixture density network. We\ndemonstrate the utility of our method in realistic scenarios using the CARLA\ndriving simulator, where CARFF can be used to enable efficient trajectory and\ncontingency planning in complex multi-agent autonomous driving scenarios\ninvolving visual occlusions.",
+      "upvotes": 8
+    }
+  ]
+}

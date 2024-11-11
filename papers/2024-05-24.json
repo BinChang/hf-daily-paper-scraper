@@ -1,0 +1,219 @@
+{
+  "date": "2024-05-24",
+  "papers": [
+    {
+      "title": "Not All Language Model Features Are Linear",
+      "url": "https://huggingface.co/papers/2405.14860",
+      "authors": [
+        "Isaac Liao",
+        "Max Tegmark"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.14860.pdf",
+      "abstract": "Recent work has proposed the linear representation hypothesis: that language\nmodels perform computation by manipulating one-dimensional representations of\nconcepts (\"features\") in activation space. In contrast, we explore whether some\nlanguage model representations may be inherently multi-dimensional. We begin by\ndeveloping a rigorous definition of irreducible multi-dimensional features\nbased on whether they can be decomposed into either independent or\nnon-co-occurring lower-dimensional features. Motivated by these definitions, we\ndesign a scalable method that uses sparse autoencoders to automatically find\nmulti-dimensional features in GPT-2 and Mistral 7B. These auto-discovered\nfeatures include strikingly interpretable examples, e.g. circular features\nrepresenting days of the week and months of the year. We identify tasks where\nthese exact circles are used to solve computational problems involving modular\narithmetic in days of the week and months of the year. Finally, we provide\nevidence that these circular features are indeed the fundamental unit of\ncomputation in these tasks with intervention experiments on Mistral 7B and\nLlama 3 8B, and we find further circular representations by breaking down the\nhidden states for these tasks into interpretable components.",
+      "upvotes": 39
+    },
+    {
+      "title": "DeepSeek-Prover: Advancing Theorem Proving in LLMs through Large-Scale Synthetic Data",
+      "url": "https://huggingface.co/papers/2405.14333",
+      "authors": [
+        "Wenda Li",
+        "Xiaodan Liang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.14333.pdf",
+      "abstract": "Proof assistants like Lean have revolutionized mathematical proof\nverification, ensuring high accuracy and reliability. Although large language\nmodels (LLMs) show promise in mathematical reasoning, their advancement in\nformal theorem proving is hindered by a lack of training data. To address this\nissue, we introduce an approach to generate extensive Lean 4 proof data derived\nfrom high-school and undergraduate-level mathematical competition problems.\nThis approach involves translating natural language problems into formal\nstatements, filtering out low-quality statements, and generating proofs to\ncreate synthetic data. After fine-tuning the DeepSeekMath 7B model on this\nsynthetic dataset, which comprises 8 million formal statements with proofs, our\nmodel achieved whole-proof generation accuracies of 46.3% with 64 samples and\n52% cumulatively on the Lean 4 miniF2F test, surpassing the baseline GPT-4 at\n23.0% with 64 samples and a tree search reinforcement learning method at 41.0%.\nAdditionally, our model successfully proved 5 out of 148 problems in the Lean 4\nFormalized International Mathematical Olympiad (FIMO) benchmark, while GPT-4\nfailed to prove any. These results demonstrate the potential of leveraging\nlarge-scale synthetic data to enhance theorem-proving capabilities in LLMs.\nBoth the synthetic dataset and the model will be made available to facilitate\nfurther research in this promising field.",
+      "upvotes": 34
+    },
+    {
+      "title": "ReVideo: Remake a Video with Motion and Content Control",
+      "url": "https://huggingface.co/papers/2405.13865",
+      "authors": [
+        "Ying Shan",
+        "Jian Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.13865.pdf",
+      "abstract": "Despite significant advancements in video generation and editing using\ndiffusion models, achieving accurate and localized video editing remains a\nsubstantial challenge. Additionally, most existing video editing methods\nprimarily focus on altering visual content, with limited research dedicated to\nmotion editing. In this paper, we present a novel attempt to Remake a Video\n(ReVideo) which stands out from existing methods by allowing precise video\nediting in specific areas through the specification of both content and motion.\nContent editing is facilitated by modifying the first frame, while the\ntrajectory-based motion control offers an intuitive user interaction\nexperience. ReVideo addresses a new task involving the coupling and training\nimbalance between content and motion control. To tackle this, we develop a\nthree-stage training strategy that progressively decouples these two aspects\nfrom coarse to fine. Furthermore, we propose a spatiotemporal adaptive fusion\nmodule to integrate content and motion control across various sampling steps\nand spatial locations. Extensive experiments demonstrate that our ReVideo has\npromising performance on several accurate video editing applications, i.e., (1)\nlocally changing video content while keeping the motion constant, (2) keeping\ncontent unchanged and customizing new motion trajectories, (3) modifying both\ncontent and motion trajectories. Our method can also seamlessly extend these\napplications to multi-area editing without specific training, demonstrating its\nflexibility and robustness.",
+      "upvotes": 22
+    },
+    {
+      "title": "Dense Connector for MLLMs",
+      "url": "https://huggingface.co/papers/2405.13800",
+      "authors": [
+        "Taojiannan Yang",
+        "Haocheng Feng",
+        "Yifan Sun",
+        "Wanli Ouyang",
+        "Jingdong Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.13800.pdf",
+      "abstract": "Do we fully leverage the potential of visual encoder in Multimodal Large\nLanguage Models (MLLMs)? The recent outstanding performance of MLLMs in\nmultimodal understanding has garnered broad attention from both academia and\nindustry. In the current MLLM rat race, the focus seems to be predominantly on\nthe linguistic side. We witness the rise of larger and higher-quality\ninstruction datasets, as well as the involvement of larger-sized LLMs. Yet,\nscant attention has been directed towards the visual signals utilized by MLLMs,\noften assumed to be the final high-level features extracted by a frozen visual\nencoder. In this paper, we introduce the Dense Connector - a simple, effective,\nand plug-and-play vision-language connector that significantly enhances\nexisting MLLMs by leveraging multi-layer visual features, with minimal\nadditional computational overhead. Furthermore, our model, trained solely on\nimages, showcases remarkable zero-shot capabilities in video understanding as\nwell. Experimental results across various vision encoders, image resolutions,\ntraining dataset scales, varying sizes of LLMs (2.7B->70B), and diverse\narchitectures of MLLMs (e.g., LLaVA and Mini-Gemini) validate the versatility\nand scalability of our approach, achieving state-of-the-art performance on\nacross 19 image and video benchmarks. We hope that this work will provide\nvaluable experience and serve as a basic module for future MLLM development.",
+      "upvotes": 21
+    },
+    {
+      "title": "Distributed Speculative Inference of Large Language Models",
+      "url": "https://huggingface.co/papers/2405.14105",
+      "authors": [
+        "Michal Gordon",
+        "David Harel"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.14105.pdf",
+      "abstract": "Accelerating the inference of large language models (LLMs) is an important\nchallenge in artificial intelligence. This paper introduces distributed\nspeculative inference (DSI), a novel distributed inference algorithm that is\nprovably faster than speculative inference (SI) [leviathan2023fast,\nchen2023accelerating, miao2023specinfer] and traditional autoregressive\ninference (non-SI). Like other SI algorithms, DSI works on frozen LLMs,\nrequiring no training or architectural modifications, and it preserves the\ntarget distribution.\n  Prior studies on SI have demonstrated empirical speedups (compared to non-SI)\nbut require a fast and accurate drafter LLM. In practice, off-the-shelf LLMs\noften do not have matching drafters that are sufficiently fast and accurate. We\nshow a gap: SI gets slower than non-SI when using slower or less accurate\ndrafters. We close this gap by proving that DSI is faster than both SI and\nnon-SI given any drafters. By orchestrating multiple instances of the target\nand drafters, DSI is not only faster than SI but also supports LLMs that cannot\nbe accelerated with SI.\n  Our simulations show speedups of off-the-shelf LLMs in realistic settings:\nDSI is 1.29-1.92x faster than SI.",
+      "upvotes": 16
+    },
+    {
+      "title": "LiteVAE: Lightweight and Efficient Variational Autoencoders for Latent Diffusion Models",
+      "url": "https://huggingface.co/papers/2405.14477",
+      "authors": [
+        "Derek Bradley",
+        "Otmar Hilliges"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.14477.pdf",
+      "abstract": "Advances in latent diffusion models (LDMs) have revolutionized\nhigh-resolution image generation, but the design space of the autoencoder that\nis central to these systems remains underexplored. In this paper, we introduce\nLiteVAE, a family of autoencoders for LDMs that leverage the 2D discrete\nwavelet transform to enhance scalability and computational efficiency over\nstandard variational autoencoders (VAEs) with no sacrifice in output quality.\nWe also investigate the training methodologies and the decoder architecture of\nLiteVAE and propose several enhancements that improve the training dynamics and\nreconstruction quality. Our base LiteVAE model matches the quality of the\nestablished VAEs in current LDMs with a six-fold reduction in encoder\nparameters, leading to faster training and lower GPU memory requirements, while\nour larger model outperforms VAEs of comparable complexity across all evaluated\nmetrics (rFID, LPIPS, PSNR, and SSIM).",
+      "upvotes": 16
+    },
+    {
+      "title": "Thermodynamic Natural Gradient Descent",
+      "url": "https://huggingface.co/papers/2405.13817",
+      "authors": [
+        "Samuel Duffield",
+        "Maxwell Aifer",
+        "Denis Melanson",
+        "Gavin Crooks",
+        "Patrick J. Coles"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.13817.pdf",
+      "abstract": "Second-order training methods have better convergence properties than\ngradient descent but are rarely used in practice for large-scale training due\nto their computational overhead. This can be viewed as a hardware limitation\n(imposed by digital computers). Here we show that natural gradient descent\n(NGD), a second-order method, can have a similar computational complexity per\niteration to a first-order method, when employing appropriate hardware. We\npresent a new hybrid digital-analog algorithm for training neural networks that\nis equivalent to NGD in a certain parameter regime but avoids prohibitively\ncostly linear system solves. Our algorithm exploits the thermodynamic\nproperties of an analog system at equilibrium, and hence requires an analog\nthermodynamic computer. The training occurs in a hybrid digital-analog loop,\nwhere the gradient and Fisher information matrix (or any other positive\nsemi-definite curvature matrix) are calculated at given time intervals while\nthe analog dynamics take place. We numerically demonstrate the superiority of\nthis approach over state-of-the-art digital first- and second-order training\nmethods on classification tasks and language model fine-tuning tasks.",
+      "upvotes": 13
+    },
+    {
+      "title": "AlignGPT: Multi-modal Large Language Models with Adaptive Alignment Capability",
+      "url": "https://huggingface.co/papers/2405.14129",
+      "authors": [
+        "Chunhui Li",
+        "Zhen Wu",
+        "Xinyu Dai"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.14129.pdf",
+      "abstract": "Multimodal Large Language Models (MLLMs) are widely regarded as crucial in\nthe exploration of Artificial General Intelligence (AGI). The core of MLLMs\nlies in their capability to achieve cross-modal alignment. To attain this goal,\ncurrent MLLMs typically follow a two-phase training paradigm: the pre-training\nphase and the instruction-tuning phase. Despite their success, there are\nshortcomings in the modeling of alignment capabilities within these models.\nFirstly, during the pre-training phase, the model usually assumes that all\nimage-text pairs are uniformly aligned, but in fact the degree of alignment\nbetween different image-text pairs is inconsistent. Secondly, the instructions\ncurrently used for finetuning incorporate a variety of tasks, different tasks's\ninstructions usually require different levels of alignment capabilities, but\nprevious MLLMs overlook these differentiated alignment needs. To tackle these\nissues, we propose a new multimodal large language model AlignGPT. In the\npre-training stage, instead of treating all image-text pairs equally, we assign\ndifferent levels of alignment capabilities to different image-text pairs. Then,\nin the instruction-tuning phase, we adaptively combine these different levels\nof alignment capabilities to meet the dynamic alignment needs of different\ninstructions. Extensive experimental results show that our model achieves\ncompetitive performance on 12 benchmarks.",
+      "upvotes": 12
+    },
+    {
+      "title": "DiM: Diffusion Mamba for Efficient High-Resolution Image Synthesis",
+      "url": "https://huggingface.co/papers/2405.14224",
+      "authors": [
+        "Yue Wu",
+        "Guohao Dai",
+        "Yu Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.14224.pdf",
+      "abstract": "Diffusion models have achieved great success in image generation, with the\nbackbone evolving from U-Net to Vision Transformers. However, the computational\ncost of Transformers is quadratic to the number of tokens, leading to\nsignificant challenges when dealing with high-resolution images. In this work,\nwe propose Diffusion Mamba (DiM), which combines the efficiency of Mamba, a\nsequence model based on State Space Models (SSM), with the expressive power of\ndiffusion models for efficient high-resolution image synthesis. To address the\nchallenge that Mamba cannot generalize to 2D signals, we make several\narchitecture designs including multi-directional scans, learnable padding\ntokens at the end of each row and column, and lightweight local feature\nenhancement. Our DiM architecture achieves inference-time efficiency for\nhigh-resolution images. In addition, to further improve training efficiency for\nhigh-resolution image generation with DiM, we investigate ``weak-to-strong''\ntraining strategy that pretrains DiM on low-resolution images (256times 256)\nand then finetune it on high-resolution images (512 times 512). We further\nexplore training-free upsampling strategies to enable the model to generate\nhigher-resolution images (e.g., 1024times 1024 and 1536times 1536)\nwithout further fine-tuning. Experiments demonstrate the effectiveness and\nefficiency of our DiM.",
+      "upvotes": 12
+    },
+    {
+      "title": "Improved Distribution Matching Distillation for Fast Image Synthesis",
+      "url": "https://huggingface.co/papers/2405.14867",
+      "authors": [
+        "Richard Zhang",
+        "Eli Shechtman",
+        "Fredo Durand"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.14867.pdf",
+      "abstract": "Recent approaches have shown promises distilling diffusion models into\nefficient one-step generators. Among them, Distribution Matching Distillation\n(DMD) produces one-step generators that match their teacher in distribution,\nwithout enforcing a one-to-one correspondence with the sampling trajectories of\ntheir teachers. However, to ensure stable training, DMD requires an additional\nregression loss computed using a large set of noise-image pairs generated by\nthe teacher with many steps of a deterministic sampler. This is costly for\nlarge-scale text-to-image synthesis and limits the student's quality, tying it\ntoo closely to the teacher's original sampling paths. We introduce DMD2, a set\nof techniques that lift this limitation and improve DMD training. First, we\neliminate the regression loss and the need for expensive dataset construction.\nWe show that the resulting instability is due to the fake critic not estimating\nthe distribution of generated samples accurately and propose a two time-scale\nupdate rule as a remedy. Second, we integrate a GAN loss into the distillation\nprocedure, discriminating between generated samples and real images. This lets\nus train the student model on real data, mitigating the imperfect real score\nestimation from the teacher model, and enhancing quality. Lastly, we modify the\ntraining procedure to enable multi-step sampling. We identify and address the\ntraining-inference input mismatch problem in this setting, by simulating\ninference-time generator samples during training time. Taken together, our\nimprovements set new benchmarks in one-step image generation, with FID scores\nof 1.28 on ImageNet-64x64 and 8.35 on zero-shot COCO 2014, surpassing the\noriginal teacher despite a 500X reduction in inference cost. Further, we show\nour approach can generate megapixel images by distilling SDXL, demonstrating\nexceptional visual quality among few-step methods.",
+      "upvotes": 11
+    },
+    {
+      "title": "Visual Echoes: A Simple Unified Transformer for Audio-Visual Generation",
+      "url": "https://huggingface.co/papers/2405.14598",
+      "authors": [
+        "Zhi Zhong",
+        "Mengjie Zhao",
+        "Shusuke Takahashi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.14598.pdf",
+      "abstract": "In recent years, with the realistic generation results and a wide range of\npersonalized applications, diffusion-based generative models gain huge\nattention in both visual and audio generation areas. Compared to the\nconsiderable advancements of text2image or text2audio generation, research in\naudio2visual or visual2audio generation has been relatively slow. The recent\naudio-visual generation methods usually resort to huge large language model or\ncomposable diffusion models. Instead of designing another giant model for\naudio-visual generation, in this paper we take a step back showing a simple and\nlightweight generative transformer, which is not fully investigated in\nmulti-modal generation, can achieve excellent results on image2audio\ngeneration. The transformer operates in the discrete audio and visual\nVector-Quantized GAN space, and is trained in the mask denoising manner. After\ntraining, the classifier-free guidance could be deployed off-the-shelf\nachieving better performance, without any extra training or modification. Since\nthe transformer model is modality symmetrical, it could also be directly\ndeployed for audio2image generation and co-generation. In the experiments, we\nshow that our simple method surpasses recent image2audio generation methods.\nGenerated audio samples can be found at\nhttps://docs.google.com/presentation/d/1ZtC0SeblKkut4XJcRaDsSTuCRIXB3ypxmSi7HTY3IyQ",
+      "upvotes": 11
+    },
+    {
+      "title": "RectifID: Personalizing Rectified Flow with Anchored Classifier Guidance",
+      "url": "https://huggingface.co/papers/2405.14677",
+      "authors": [
+        "Zhenhao Yang",
+        "Haozhe Chi",
+        "Kun Xu",
+        "Kun Xu",
+        "Liwei Chen",
+        "Hao Jiang",
+        "Di Zhang",
+        "Yang Song",
+        "Kun Gai",
+        "Yadong Mu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.14677.pdf",
+      "abstract": "Customizing diffusion models to generate identity-preserving images from\nuser-provided reference images is an intriguing new problem. The prevalent\napproaches typically require training on extensive domain-specific images to\nachieve identity preservation, which lacks flexibility across different use\ncases. To address this issue, we exploit classifier guidance, a training-free\ntechnique that steers diffusion models using an existing classifier, for\npersonalized image generation. Our study shows that based on a recent rectified\nflow framework, the major limitation of vanilla classifier guidance in\nrequiring a special classifier can be resolved with a simple fixed-point\nsolution, allowing flexible personalization with off-the-shelf image\ndiscriminators. Moreover, its solving procedure proves to be stable when\nanchored to a reference flow trajectory, with a convergence guarantee. The\nderived method is implemented on rectified flow with different off-the-shelf\nimage discriminators, delivering advantageous personalization results for human\nfaces, live subjects, and certain objects. Code is available at\nhttps://github.com/feifeiobama/RectifID.",
+      "upvotes": 9
+    },
+    {
+      "title": "CamViG: Camera Aware Image-to-Video Generation with Multimodal Transformers",
+      "url": "https://huggingface.co/papers/2405.13195",
+      "authors": [
+        "Grant Schindler",
+        "José Lezama",
+        "Bryan Seybold",
+        "Irfan Essa"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.13195.pdf",
+      "abstract": "We extend multimodal transformers to include 3D camera motion as a\nconditioning signal for the task of video generation. Generative video models\nare becoming increasingly powerful, thus focusing research efforts on methods\nof controlling the output of such models. We propose to add virtual 3D camera\ncontrols to generative video methods by conditioning generated video on an\nencoding of three-dimensional camera movement over the course of the generated\nvideo. Results demonstrate that we are (1) able to successfully control the\ncamera during video generation, starting from a single frame and a camera\nsignal, and (2) we demonstrate the accuracy of the generated 3D camera paths\nusing traditional computer vision methods.",
+      "upvotes": 9
+    },
+    {
+      "title": "Semantica: An Adaptable Image-Conditioned Diffusion Model",
+      "url": "https://huggingface.co/papers/2405.14857",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2405.14857.pdf",
+      "abstract": "We investigate the task of adapting image generative models to different\ndatasets without finetuneing. To this end, we introduce Semantica, an\nimage-conditioned diffusion model capable of generating images based on the\nsemantics of a conditioning image. Semantica is trained exclusively on\nweb-scale image pairs, that is it receives a random image from a webpage as\nconditional input and models another random image from the same webpage. Our\nexperiments highlight the expressivity of pretrained image encoders and\nnecessity of semantic-based data filtering in achieving high-quality image\ngeneration. Once trained, it can adaptively generate new images from a dataset\nby simply using images from that dataset as input. We study the transfer\nproperties of Semantica on ImageNet, LSUN Churches, LSUN Bedroom and SUN397.",
+      "upvotes": 8
+    },
+    {
+      "title": "NeRF-Casting: Improved View-Dependent Appearance with Consistent Reflections",
+      "url": "https://huggingface.co/papers/2405.14871",
+      "authors": [
+        "Pratul P. Srinivasan",
+        "Ben Mildenhall",
+        "Richard Szeliski",
+        "Jonathan T. Barron"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.14871.pdf",
+      "abstract": "Neural Radiance Fields (NeRFs) typically struggle to reconstruct and render\nhighly specular objects, whose appearance varies quickly with changes in\nviewpoint. Recent works have improved NeRF's ability to render detailed\nspecular appearance of distant environment illumination, but are unable to\nsynthesize consistent reflections of closer content. Moreover, these techniques\nrely on large computationally-expensive neural networks to model outgoing\nradiance, which severely limits optimization and rendering speed. We address\nthese issues with an approach based on ray tracing: instead of querying an\nexpensive neural network for the outgoing view-dependent radiance at points\nalong each camera ray, our model casts reflection rays from these points and\ntraces them through the NeRF representation to render feature vectors which are\ndecoded into color using a small inexpensive network. We demonstrate that our\nmodel outperforms prior methods for view synthesis of scenes containing shiny\nobjects, and that it is the only existing NeRF method that can synthesize\nphotorealistic specular appearance and reflections in real-world scenes, while\nrequiring comparable optimization time to current state-of-the-art view\nsynthesis models.",
+      "upvotes": 7
+    },
+    {
+      "title": "Neural Directional Encoding for Efficient and Accurate View-Dependent Appearance Modeling",
+      "url": "https://huggingface.co/papers/2405.14847",
+      "authors": [
+        "Kai Zhang",
+        "Kalyan Sunkavalli",
+        "Ravi Ramamoorthi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.14847.pdf",
+      "abstract": "Novel-view synthesis of specular objects like shiny metals or glossy paints\nremains a significant challenge. Not only the glossy appearance but also global\nillumination effects, including reflections of other objects in the\nenvironment, are critical components to faithfully reproduce a scene. In this\npaper, we present Neural Directional Encoding (NDE), a view-dependent\nappearance encoding of neural radiance fields (NeRF) for rendering specular\nobjects. NDE transfers the concept of feature-grid-based spatial encoding to\nthe angular domain, significantly improving the ability to model high-frequency\nangular signals. In contrast to previous methods that use encoding functions\nwith only angular input, we additionally cone-trace spatial features to obtain\na spatially varying directional encoding, which addresses the challenging\ninterreflection effects. Extensive experiments on both synthetic and real\ndatasets show that a NeRF model with NDE (1) outperforms the state of the art\non view synthesis of specular objects, and (2) works with small networks to\nallow fast (real-time) inference. The project webpage and source code are\navailable at: https://lwwu2.github.io/nde/.",
+      "upvotes": 6
+    },
+    {
+      "title": "Tele-Aloha: A Low-budget and High-authenticity Telepresence System Using Sparse RGB Cameras",
+      "url": "https://huggingface.co/papers/2405.14866",
+      "authors": [
+        "Hanzhang Tu",
+        "Xue Dong",
+        "Shunyuan Zheng",
+        "Hao Zhang",
+        "Lili Chen",
+        "Wenyu Li",
+        "Siyan Ma",
+        "Shengping Zhang",
+        "Boyao Zhou"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.14866.pdf",
+      "abstract": "In this paper, we present a low-budget and high-authenticity bidirectional\ntelepresence system, Tele-Aloha, targeting peer-to-peer communication\nscenarios. Compared to previous systems, Tele-Aloha utilizes only four sparse\nRGB cameras, one consumer-grade GPU, and one autostereoscopic screen to achieve\nhigh-resolution (2048x2048), real-time (30 fps), low-latency (less than 150ms)\nand robust distant communication. As the core of Tele-Aloha, we propose an\nefficient novel view synthesis algorithm for upper-body. Firstly, we design a\ncascaded disparity estimator for obtaining a robust geometry cue. Additionally\na neural rasterizer via Gaussian Splatting is introduced to project latent\nfeatures onto target view and to decode them into a reduced resolution.\nFurther, given the high-quality captured data, we leverage weighted blending\nmechanism to refine the decoded image into the final resolution of 2K.\nExploiting world-leading autostereoscopic display and low-latency iris\ntracking, users are able to experience a strong three-dimensional sense even\nwithout any wearable head-mounted display device. Altogether, our telepresence\nsystem demonstrates the sense of co-presence in real-life experiments,\ninspiring the next generation of communication.",
+      "upvotes": 5
+    }
+  ]
+}

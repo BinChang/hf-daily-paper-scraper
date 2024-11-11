@@ -1,0 +1,148 @@
+{
+  "date": "2024-04-27",
+  "papers": [
+    {
+      "title": "Layer Skip: Enabling Early Exit Inference and Self-Speculative Decoding",
+      "url": "https://huggingface.co/papers/2404.16710",
+      "authors": [
+        "Diana Liskovich",
+        "Saurabh Agarwal",
+        "Ahmed Roman",
+        "Ahmed A Aly",
+        "Carole-Jean Wu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.16710.pdf",
+      "abstract": "We present LayerSkip, an end-to-end solution to speed-up inference of large\nlanguage models (LLMs). First, during training we apply layer dropout, with low\ndropout rates for earlier layers and higher dropout rates for later layers, and\nan early exit loss where all transformer layers share the same exit. Second,\nduring inference, we show that this training recipe increases the accuracy of\nearly exit at earlier layers, without adding any auxiliary layers or modules to\nthe model. Third, we present a novel self-speculative decoding solution where\nwe exit at early layers and verify and correct with remaining layers of the\nmodel. Our proposed self-speculative decoding approach has less memory\nfootprint than other speculative decoding approaches and benefits from shared\ncompute and activations of the draft and verification stages. We run\nexperiments on different Llama model sizes on different types of training:\npretraining from scratch, continual pretraining, finetuning on specific data\ndomain, and finetuning on specific task. We implement our inference solution\nand show speedups of up to 2.16x on summarization for CNN/DM documents, 1.82x\non coding, and 2.0x on TOPv2 semantic parsing task. We open source our code and\ncheckpoints at https://github.com/facebookresearch/LayerSkip.",
+      "upvotes": 73
+    },
+    {
+      "title": "How Far Are We to GPT-4V? Closing the Gap to Commercial Multimodal Models with Open-Source Suites",
+      "url": "https://huggingface.co/papers/2404.16821",
+      "authors": [
+        "Zhe Chen",
+        "Hao Tian",
+        "Zhangwei Gao",
+        "Kongzhi Hu",
+        "Zheng Ma",
+        "Ji Ma",
+        "Xiaoyi Dong",
+        "Hang Yan",
+        "Hewei Guo",
+        "Chao Xu",
+        "Bin Wang",
+        "Wei Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.16821.pdf",
+      "abstract": "In this report, we introduce InternVL 1.5, an open-source multimodal large\nlanguage model (MLLM) to bridge the capability gap between open-source and\nproprietary commercial models in multimodal understanding. We introduce three\nsimple improvements: (1) Strong Vision Encoder: we explored a continuous\nlearning strategy for the large-scale vision foundation model -- InternViT-6B,\nboosting its visual understanding capabilities, and making it can be\ntransferred and reused in different LLMs. (2) Dynamic High-Resolution: we\ndivide images into tiles ranging from 1 to 40 of 448times448 pixels\naccording to the aspect ratio and resolution of the input images, which\nsupports up to 4K resolution input. (3) High-Quality Bilingual Dataset: we\ncarefully collected a high-quality bilingual dataset that covers common scenes,\ndocument images, and annotated them with English and Chinese question-answer\npairs, significantly enhancing performance in OCR- and Chinese-related tasks.\nWe evaluate InternVL 1.5 through a series of benchmarks and comparative\nstudies. Compared to both open-source and proprietary models, InternVL 1.5\nshows competitive performance, achieving state-of-the-art results in 8 of 18\nbenchmarks. Code has been released at https://github.com/OpenGVLab/InternVL.",
+      "upvotes": 53
+    },
+    {
+      "title": "Make Your LLM Fully Utilize the Context",
+      "url": "https://huggingface.co/papers/2404.16811",
+      "authors": [
+        "Nanning Zheng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.16811.pdf",
+      "abstract": "While many contemporary large language models (LLMs) can process lengthy\ninput, they still struggle to fully utilize information within the long\ncontext, known as the lost-in-the-middle challenge. We hypothesize that it\nstems from insufficient explicit supervision during the long-context training,\nwhich fails to emphasize that any position in a long context can hold crucial\ninformation. Based on this intuition, our study presents information-intensive\n(IN2) training, a purely data-driven solution to overcome lost-in-the-middle.\nSpecifically, IN2 training leverages a synthesized long-context question-answer\ndataset, where the answer requires (1) fine-grained information awareness on a\nshort segment (~128 tokens) within a synthesized long context (4K-32K tokens),\nand (2) the integration and reasoning of information from two or more short\nsegments. Through applying this information-intensive training on Mistral-7B,\nwe present FILM-7B (FILl-in-the-Middle). To thoroughly assess the ability of\nFILM-7B for utilizing long contexts, we design three probing tasks that\nencompass various context styles (document, code, and structured-data context)\nand information retrieval patterns (forward, backward, and bi-directional\nretrieval). The probing results demonstrate that FILM-7B can robustly retrieve\ninformation from different positions in its 32K context window. Beyond these\nprobing tasks, FILM-7B significantly improves the performance on real-world\nlong-context tasks (e.g., 23.5->26.9 F1 score on NarrativeQA), while\nmaintaining a comparable performance on short-context tasks (e.g., 59.3->59.2\naccuracy on MMLU). Github Link: https://github.com/microsoft/FILM.",
+      "upvotes": 52
+    },
+    {
+      "title": "Interactive3D: Create What You Want by Interactive 3D Generation",
+      "url": "https://huggingface.co/papers/2404.16510",
+      "authors": [
+        "Zibin Wang",
+        "Tianfan Xue",
+        "Dan Xu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.16510.pdf",
+      "abstract": "3D object generation has undergone significant advancements, yielding\nhigh-quality results. However, fall short of achieving precise user control,\noften yielding results that do not align with user expectations, thus limiting\ntheir applicability. User-envisioning 3D object generation faces significant\nchallenges in realizing its concepts using current generative models due to\nlimited interaction capabilities. Existing methods mainly offer two approaches:\n(i) interpreting textual instructions with constrained controllability, or (ii)\nreconstructing 3D objects from 2D images. Both of them limit customization to\nthe confines of the 2D reference and potentially introduce undesirable\nartifacts during the 3D lifting process, restricting the scope for direct and\nversatile 3D modifications. In this work, we introduce Interactive3D, an\ninnovative framework for interactive 3D generation that grants users precise\ncontrol over the generative process through extensive 3D interaction\ncapabilities. Interactive3D is constructed in two cascading stages, utilizing\ndistinct 3D representations. The first stage employs Gaussian Splatting for\ndirect user interaction, allowing modifications and guidance of the generative\ndirection at any intermediate step through (i) Adding and Removing components,\n(ii) Deformable and Rigid Dragging, (iii) Geometric Transformations, and (iv)\nSemantic Editing. Subsequently, the Gaussian splats are transformed into\nInstantNGP. We introduce a novel (v) Interactive Hash Refinement module to\nfurther add details and extract the geometry in the second stage. Our\nexperiments demonstrate that Interactive3D markedly improves the\ncontrollability and quality of 3D generation. Our project webpage is available\nat https://interactive-3d.github.io/.",
+      "upvotes": 18
+    },
+    {
+      "title": "Tele-FLM Technical Report",
+      "url": "https://huggingface.co/papers/2404.16645",
+      "authors": [
+        "Chao Wang",
+        "Xinzhang Liu",
+        "Zihan Wang",
+        "Yu Zhao",
+        "Xin Wang",
+        "Yuyao Huang",
+        "Shuangyong Song",
+        "Zheng Zhang",
+        "Aixin Sun",
+        "Zhongjiang He",
+        "Zhongyuan Wang",
+        "Xuelong Li",
+        "Tiejun Huang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.16645.pdf",
+      "abstract": "Large language models (LLMs) have showcased profound capabilities in language\nunderstanding and generation, facilitating a wide array of applications.\nHowever, there is a notable paucity of detailed, open-sourced methodologies on\nefficiently scaling LLMs beyond 50 billion parameters with minimum\ntrial-and-error cost and computational resources. In this report, we introduce\nTele-FLM (aka FLM-2), a 52B open-sourced multilingual large language model that\nfeatures a stable, efficient pre-training paradigm and enhanced factual\njudgment capabilities. Tele-FLM demonstrates superior multilingual language\nmodeling abilities, measured by BPB on textual corpus. Besides, in both English\nand Chinese foundation model evaluation, it is comparable to strong\nopen-sourced models that involve larger pre-training FLOPs, such as Llama2-70B\nand DeepSeek-67B. In addition to the model weights, we share the core designs,\nengineering practices, and training details, which we expect to benefit both\nthe academic and industrial communities.",
+      "upvotes": 17
+    },
+    {
+      "title": "List Items One by One: A New Data Source and Learning Paradigm for Multimodal LLMs",
+      "url": "https://huggingface.co/papers/2404.16375",
+      "authors": [
+        "Linjie Li",
+        "Julian McAuley"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.16375.pdf",
+      "abstract": "Set-of-Mark (SoM) Prompting unleashes the visual grounding capability of\nGPT-4V, by enabling the model to associate visual objects with tags inserted on\nthe image. These tags, marked with alphanumerics, can be indexed via text\ntokens for easy reference. Despite the extraordinary performance from GPT-4V,\nwe observe that other Multimodal Large Language Models (MLLMs) struggle to\nunderstand these visual tags. To promote the learning of SoM prompting for\nopen-source models, we propose a new learning paradigm: \"list items one by\none,\" which asks the model to enumerate and describe all visual tags placed on\nthe image following the alphanumeric orders of tags. By integrating our curated\ndataset with other visual instruction tuning datasets, we are able to equip\nexisting MLLMs with the SoM prompting ability. Furthermore, we evaluate our\nfinetuned SoM models on five MLLM benchmarks. We find that this new dataset,\neven in a relatively small size (10k-30k images with tags), significantly\nenhances visual reasoning capabilities and reduces hallucinations for MLLMs.\nPerhaps surprisingly, these improvements persist even when the visual tags are\nomitted from input images during inference. This suggests the potential of\n\"list items one by one\" as a new paradigm for training MLLMs, which strengthens\nthe object-text alignment through the use of visual tags in the training stage.\nFinally, we conduct analyses by probing trained models to understand the\nworking mechanism of SoM. Our code and data are available at\nhttps://github.com/zzxslp/SoM-LLaVA.",
+      "upvotes": 16
+    },
+    {
+      "title": "ConsistentID: Portrait Generation with Multimodal Fine-Grained Identity Preserving",
+      "url": "https://huggingface.co/papers/2404.16771",
+      "authors": [
+        "Xiao Dong",
+        "Wenhui Song",
+        "Hanhui Li",
+        "Jun Zhou",
+        "Long Chen",
+        "Yiqiang Yan",
+        "Shengcai Liao",
+        "Xiaodan Liang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.16771.pdf",
+      "abstract": "Diffusion-based technologies have made significant strides, particularly in\npersonalized and customized facialgeneration. However, existing methods face\nchallenges in achieving high-fidelity and detailed identity (ID)consistency,\nprimarily due to insufficient fine-grained control over facial areas and the\nlack of a comprehensive strategy for ID preservation by fully considering\nintricate facial details and the overall face. To address these limitations, we\nintroduce ConsistentID, an innovative method crafted for\ndiverseidentity-preserving portrait generation under fine-grained multimodal\nfacial prompts, utilizing only a single reference image. ConsistentID comprises\ntwo key components: a multimodal facial prompt generator that combines facial\nfeatures, corresponding facial descriptions and the overall facial context to\nenhance precision in facial details, and an ID-preservation network optimized\nthrough the facial attention localization strategy, aimed at preserving ID\nconsistency in facial regions. Together, these components significantly enhance\nthe accuracy of ID preservation by introducing fine-grained multimodal ID\ninformation from facial regions. To facilitate training of ConsistentID, we\npresent a fine-grained portrait dataset, FGID, with over 500,000 facial images,\noffering greater diversity and comprehensiveness than existing public facial\ndatasets. % such as LAION-Face, CelebA, FFHQ, and SFHQ. Experimental results\nsubstantiate that our ConsistentID achieves exceptional precision and diversity\nin personalized facial generation, surpassing existing methods in the MyStyle\ndataset. Furthermore, while ConsistentID introduces more multimodal ID\ninformation, it maintains a fast inference speed during generation.",
+      "upvotes": 16
+    },
+    {
+      "title": "Revisiting Text-to-Image Evaluation with Gecko: On Metrics, Prompts, and Human Ratings",
+      "url": "https://huggingface.co/papers/2404.16820",
+      "authors": [
+        "Olivia Wiles",
+        "Ivana Kajić",
+        "Su Wang",
+        "Chris Knutsen",
+        "Cyrus Rashtchian",
+        "Aida Nematzadeh"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.16820.pdf",
+      "abstract": "While text-to-image (T2I) generative models have become ubiquitous, they do\nnot necessarily generate images that align with a given prompt. While previous\nwork has evaluated T2I alignment by proposing metrics, benchmarks, and\ntemplates for collecting human judgements, the quality of these components is\nnot systematically measured. Human-rated prompt sets are generally small and\nthe reliability of the ratings -- and thereby the prompt set used to compare\nmodels -- is not evaluated. We address this gap by performing an extensive\nstudy evaluating auto-eval metrics and human templates. We provide three main\ncontributions: (1) We introduce a comprehensive skills-based benchmark that can\ndiscriminate models across different human templates. This skills-based\nbenchmark categorises prompts into sub-skills, allowing a practitioner to\npinpoint not only which skills are challenging, but at what level of complexity\na skill becomes challenging. (2) We gather human ratings across four templates\nand four T2I models for a total of >100K annotations. This allows us to\nunderstand where differences arise due to inherent ambiguity in the prompt and\nwhere they arise due to differences in metric and model quality. (3) Finally,\nwe introduce a new QA-based auto-eval metric that is better correlated with\nhuman ratings than existing metrics for our new dataset, across different human\ntemplates, and on TIFA160.",
+      "upvotes": 15
+    },
+    {
+      "title": "NeRF-XL: Scaling NeRFs with Multiple GPUs",
+      "url": "https://huggingface.co/papers/2404.16221",
+      "authors": [
+        "Sanja Fidler"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.16221.pdf",
+      "abstract": "We present NeRF-XL, a principled method for distributing Neural Radiance\nFields (NeRFs) across multiple GPUs, thus enabling the training and rendering\nof NeRFs with an arbitrarily large capacity. We begin by revisiting existing\nmulti-GPU approaches, which decompose large scenes into multiple independently\ntrained NeRFs, and identify several fundamental issues with these methods that\nhinder improvements in reconstruction quality as additional computational\nresources (GPUs) are used in training. NeRF-XL remedies these issues and\nenables the training and rendering of NeRFs with an arbitrary number of\nparameters by simply using more hardware. At the core of our method lies a\nnovel distributed training and rendering formulation, which is mathematically\nequivalent to the classic single-GPU case and minimizes communication between\nGPUs. By unlocking NeRFs with arbitrarily large parameter counts, our approach\nis the first to reveal multi-GPU scaling laws for NeRFs, showing improvements\nin reconstruction quality with larger parameter counts and speed improvements\nwith more GPUs. We demonstrate the effectiveness of NeRF-XL on a wide variety\nof datasets, including the largest open-source dataset to date, MatrixCity,\ncontaining 258K images covering a 25km^2 city area.",
+      "upvotes": 12
+    },
+    {
+      "title": "SEED-Bench-2-Plus: Benchmarking Multimodal Large Language Models with Text-Rich Visual Comprehension",
+      "url": "https://huggingface.co/papers/2404.16790",
+      "authors": [
+        "Yi Chen",
+        "Ying Shan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.16790.pdf",
+      "abstract": "Comprehending text-rich visual content is paramount for the practical\napplication of Multimodal Large Language Models (MLLMs), since text-rich\nscenarios are ubiquitous in the real world, which are characterized by the\npresence of extensive texts embedded within images. Recently, the advent of\nMLLMs with impressive versatility has raised the bar for what we can expect\nfrom MLLMs. However, their proficiency in text-rich scenarios has yet to be\ncomprehensively and objectively assessed, since current MLLM benchmarks\nprimarily focus on evaluating general visual comprehension. In this work, we\nintroduce SEED-Bench-2-Plus, a benchmark specifically designed for evaluating\ntext-rich visual comprehension of MLLMs. Our benchmark comprises 2.3K\nmultiple-choice questions with precise human annotations, spanning three broad\ncategories: Charts, Maps, and Webs, each of which covers a wide spectrum of\ntext-rich scenarios in the real world. These categories, due to their inherent\ncomplexity and diversity, effectively simulate real-world text-rich\nenvironments. We further conduct a thorough evaluation involving 34 prominent\nMLLMs (including GPT-4V, Gemini-Pro-Vision and Claude-3-Opus) and emphasize the\ncurrent limitations of MLLMs in text-rich visual comprehension. We hope that\nour work can serve as a valuable addition to existing MLLM benchmarks,\nproviding insightful observations and inspiring further research in the area of\ntext-rich visual comprehension with MLLMs. The dataset and evaluation code can\nbe accessed at https://github.com/AILab-CVC/SEED-Bench.",
+      "upvotes": 7
+    }
+  ]
+}

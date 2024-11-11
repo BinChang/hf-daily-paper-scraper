@@ -1,0 +1,132 @@
+{
+  "date": "2024-08-28",
+  "papers": [
+    {
+      "title": "Writing in the Margins: Better Inference Pattern for Long Context Retrieval",
+      "url": "https://huggingface.co/papers/2408.14906",
+      "authors": [
+        "Christopher Bryant"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.14906.pdf",
+      "abstract": "In this paper, we introduce Writing in the Margins (WiM), a new inference\npattern for Large Language Models designed to optimize the handling of long\ninput sequences in retrieval-oriented tasks. This approach leverages the\nchunked prefill of the key-value cache to perform segment-wise inference, which\nenables efficient processing of extensive contexts along with the generation\nand classification of intermediate information (\"margins\") that guide the model\ntowards specific tasks. This method increases computational overhead marginally\nwhile significantly enhancing the performance of off-the-shelf models without\nthe need for fine-tuning. Specifically, we observe that WiM provides an average\nenhancement of 7.5% in accuracy for reasoning skills (HotpotQA, MultiHop-RAG)\nand more than a 30.0% increase in the F1-score for aggregation tasks (CWE).\nAdditionally, we show how the proposed pattern fits into an interactive\nretrieval design that provides end-users with ongoing updates about the\nprogress of context processing, and pinpoints the integration of relevant\ninformation into the final response. We release our implementation of WiM using\nHugging Face Transformers library at\nhttps://github.com/writer/writing-in-the-margins.",
+      "upvotes": 138
+    },
+    {
+      "title": "Diffusion Models Are Real-Time Game Engines",
+      "url": "https://huggingface.co/papers/2408.14837",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2408.14837.pdf",
+      "abstract": "We present GameNGen, the first game engine powered entirely by a neural model\nthat enables real-time interaction with a complex environment over long\ntrajectories at high quality. GameNGen can interactively simulate the classic\ngame DOOM at over 20 frames per second on a single TPU. Next frame prediction\nachieves a PSNR of 29.4, comparable to lossy JPEG compression. Human raters are\nonly slightly better than random chance at distinguishing short clips of the\ngame from clips of the simulation. GameNGen is trained in two phases: (1) an\nRL-agent learns to play the game and the training sessions are recorded, and\n(2) a diffusion model is trained to produce the next frame, conditioned on the\nsequence of past frames and actions. Conditioning augmentations enable stable\nauto-regressive generation over long trajectories.",
+      "upvotes": 121
+    },
+    {
+      "title": "The Mamba in the Llama: Distilling and Accelerating Hybrid Models",
+      "url": "https://huggingface.co/papers/2408.15237",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2408.15237.pdf",
+      "abstract": "Linear RNN architectures, like Mamba, can be competitive with Transformer\nmodels in language modeling while having advantageous deployment\ncharacteristics. Given the focus on training large-scale Transformer models, we\nconsider the challenge of converting these pretrained models for deployment. We\ndemonstrate that it is feasible to distill large Transformers into linear RNNs\nby reusing the linear projection weights from attention layers with academic\nGPU resources. The resulting hybrid model, which incorporates a quarter of the\nattention layers, achieves performance comparable to the original Transformer\nin chat benchmarks and outperforms open-source hybrid Mamba models trained from\nscratch with trillions of tokens in both chat benchmarks and general\nbenchmarks. Moreover, we introduce a hardware-aware speculative decoding\nalgorithm that accelerates the inference speed of Mamba and hybrid models.\nOverall we show how, with limited computation resources, we can remove many of\nthe original attention layers and generate from the resulting model more\nefficiently. Our top-performing model, distilled from Llama3-8B-Instruct,\nachieves a 29.61 length-controlled win rate on AlpacaEval 2 against GPT-4 and\n7.35 on MT-Bench, surpassing the best instruction-tuned linear RNN model.",
+      "upvotes": 36
+    },
+    {
+      "title": "Generative Inbetweening: Adapting Image-to-Video Models for Keyframe Interpolation",
+      "url": "https://huggingface.co/papers/2408.15239",
+      "authors": [
+        "Brian Curless",
+        "Steven M. Seitz"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.15239.pdf",
+      "abstract": "We present a method for generating video sequences with coherent motion\nbetween a pair of input key frames. We adapt a pretrained large-scale\nimage-to-video diffusion model (originally trained to generate videos moving\nforward in time from a single input image) for key frame interpolation, i.e.,\nto produce a video in between two input frames. We accomplish this adaptation\nthrough a lightweight fine-tuning technique that produces a version of the\nmodel that instead predicts videos moving backwards in time from a single input\nimage. This model (along with the original forward-moving model) is\nsubsequently used in a dual-directional diffusion sampling process that\ncombines the overlapping model estimates starting from each of the two\nkeyframes. Our experiments show that our method outperforms both existing\ndiffusion-based methods and traditional frame interpolation techniques.",
+      "upvotes": 27
+    },
+    {
+      "title": "Text2SQL is Not Enough: Unifying AI and Databases with TAG",
+      "url": "https://huggingface.co/papers/2408.14717",
+      "authors": [
+        "Liana Patel",
+        "Carlos Guestrin"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.14717.pdf",
+      "abstract": "AI systems that serve natural language questions over databases promise to\nunlock tremendous value. Such systems would allow users to leverage the\npowerful reasoning and knowledge capabilities of language models (LMs)\nalongside the scalable computational power of data management systems. These\ncombined capabilities would empower users to ask arbitrary natural language\nquestions over custom data sources. However, existing methods and benchmarks\ninsufficiently explore this setting. Text2SQL methods focus solely on natural\nlanguage questions that can be expressed in relational algebra, representing a\nsmall subset of the questions real users wish to ask. Likewise,\nRetrieval-Augmented Generation (RAG) considers the limited subset of queries\nthat can be answered with point lookups to one or a few data records within the\ndatabase. We propose Table-Augmented Generation (TAG), a unified and\ngeneral-purpose paradigm for answering natural language questions over\ndatabases. The TAG model represents a wide range of interactions between the LM\nand database that have been previously unexplored and creates exciting research\nopportunities for leveraging the world knowledge and reasoning capabilities of\nLMs over data. We systematically develop benchmarks to study the TAG problem\nand find that standard methods answer no more than 20% of queries correctly,\nconfirming the need for further research in this area. We release code for the\nbenchmark at https://github.com/TAG-Research/TAG-Bench.",
+      "upvotes": 23
+    },
+    {
+      "title": "Build-A-Scene: Interactive 3D Layout Control for Diffusion-Based Image Generation",
+      "url": "https://huggingface.co/papers/2408.14819",
+      "authors": [
+        "Peter Wonka"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.14819.pdf",
+      "abstract": "We propose a diffusion-based approach for Text-to-Image (T2I) generation with\ninteractive 3D layout control. Layout control has been widely studied to\nalleviate the shortcomings of T2I diffusion models in understanding objects'\nplacement and relationships from text descriptions. Nevertheless, existing\napproaches for layout control are limited to 2D layouts, require the user to\nprovide a static layout beforehand, and fail to preserve generated images under\nlayout changes. This makes these approaches unsuitable for applications that\nrequire 3D object-wise control and iterative refinements, e.g., interior design\nand complex scene generation. To this end, we leverage the recent advancements\nin depth-conditioned T2I models and propose a novel approach for interactive 3D\nlayout control. We replace the traditional 2D boxes used in layout control with\n3D boxes. Furthermore, we revamp the T2I task as a multi-stage generation\nprocess, where at each stage, the user can insert, change, and move an object\nin 3D while preserving objects from earlier stages. We achieve this through our\nproposed Dynamic Self-Attention (DSA) module and the consistent 3D object\ntranslation strategy. Experiments show that our approach can generate\ncomplicated scenes based on 3D layouts, boosting the object generation success\nrate over the standard depth-conditioned T2I methods by 2x. Moreover, it\noutperforms other methods in comparison in preserving objects under layout\nchanges. Project Page: https://abdo-eldesokey.github.io/build-a-scene/",
+      "upvotes": 19
+    },
+    {
+      "title": "GenCA: A Text-conditioned Generative Model for Realistic and Drivable Codec Avatars",
+      "url": "https://huggingface.co/papers/2408.13674",
+      "authors": [
+        "Amin Jourabloo",
+        "Riddhish Bhalodia",
+        "Moustafa Meshry",
+        "Yu Rong",
+        "Zhengyu Yang",
+        "Christian Haene",
+        "Jiu Xu",
+        "Sam Johnson",
+        "Sofien Bouaziz"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.13674.pdf",
+      "abstract": "Photo-realistic and controllable 3D avatars are crucial for various\napplications such as virtual and mixed reality (VR/MR), telepresence, gaming,\nand film production. Traditional methods for avatar creation often involve\ntime-consuming scanning and reconstruction processes for each avatar, which\nlimits their scalability. Furthermore, these methods do not offer the\nflexibility to sample new identities or modify existing ones. On the other\nhand, by learning a strong prior from data, generative models provide a\npromising alternative to traditional reconstruction methods, easing the time\nconstraints for both data capture and processing. Additionally, generative\nmethods enable downstream applications beyond reconstruction, such as editing\nand stylization. Nonetheless, the research on generative 3D avatars is still in\nits infancy, and therefore current methods still have limitations such as\ncreating static avatars, lacking photo-realism, having incomplete facial\ndetails, or having limited drivability. To address this, we propose a\ntext-conditioned generative model that can generate photo-realistic facial\navatars of diverse identities, with more complete details like hair, eyes and\nmouth interior, and which can be driven through a powerful non-parametric\nlatent expression space. Specifically, we integrate the generative and editing\ncapabilities of latent diffusion models with a strong prior model for avatar\nexpression driving.\n  Our model can generate and control high-fidelity avatars, even those\nout-of-distribution. We also highlight its potential for downstream\napplications, including avatar editing and single-shot avatar reconstruction.",
+      "upvotes": 17
+    },
+    {
+      "title": "Platypus: A Generalized Specialist Model for Reading Text in Various Forms",
+      "url": "https://huggingface.co/papers/2408.14805",
+      "authors": [
+        "Peng Wang",
+        "Zhaohai Li",
+        "Jun Tang",
+        "Humen Zhong"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.14805.pdf",
+      "abstract": "Reading text from images (either natural scenes or documents) has been a\nlong-standing research topic for decades, due to the high technical challenge\nand wide application range. Previously, individual specialist models are\ndeveloped to tackle the sub-tasks of text reading (e.g., scene text\nrecognition, handwritten text recognition and mathematical expression\nrecognition). However, such specialist models usually cannot effectively\ngeneralize across different sub-tasks. Recently, generalist models (such as\nGPT-4V), trained on tremendous data in a unified way, have shown enormous\npotential in reading text in various scenarios, but with the drawbacks of\nlimited accuracy and low efficiency. In this work, we propose Platypus, a\ngeneralized specialist model for text reading. Specifically, Platypus combines\nthe best of both worlds: being able to recognize text of various forms with a\nsingle unified architecture, while achieving excellent accuracy and high\nefficiency. To better exploit the advantage of Platypus, we also construct a\ntext reading dataset (called Worms), the images of which are curated from\nprevious datasets and partially re-labeled. Experiments on standard benchmarks\ndemonstrate the effectiveness and superiority of the proposed Platypus model.\nModel and data will be made publicly available at\nhttps://github.com/AlibabaResearch/AdvancedLiterateMachinery/tree/main/OCR/Platypus.",
+      "upvotes": 12
+    },
+    {
+      "title": "Project SHADOW: Symbolic Higher-order Associative Deductive reasoning On Wikidata using LM probing",
+      "url": "https://huggingface.co/papers/2408.14849",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2408.14849.pdf",
+      "abstract": "We introduce SHADOW, a fine-tuned language model trained on an intermediate\ntask using associative deductive reasoning, and measure its performance on a\nknowledge base construction task using Wikidata triple completion. We evaluate\nSHADOW on the LM-KBC 2024 challenge and show that it outperforms the baseline\nsolution by 20% with a F1 score of 68.72%.",
+      "upvotes": 3
+    },
+    {
+      "title": "Temporally-consistent 3D Reconstruction of Birds",
+      "url": "https://huggingface.co/papers/2408.13629",
+      "authors": [
+        "Johannes Hägerlind",
+        "Bastian Wandt"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.13629.pdf",
+      "abstract": "This paper deals with 3D reconstruction of seabirds which recently came into\nfocus of environmental scientists as valuable bio-indicators for environmental\nchange. Such 3D information is beneficial for analyzing the bird's behavior and\nphysiological shape, for example by tracking motion, shape, and appearance\nchanges. From a computer vision perspective birds are especially challenging\ndue to their rapid and oftentimes non-rigid motions. We propose an approach to\nreconstruct the 3D pose and shape from monocular videos of a specific breed of\nseabird - the common murre. Our approach comprises a full pipeline of\ndetection, tracking, segmentation, and temporally consistent 3D reconstruction.\nAdditionally, we propose a temporal loss that extends current single-image 3D\nbird pose estimators to the temporal domain. Moreover, we provide a real-world\ndataset of 10000 frames of video observations on average capture nine birds\nsimultaneously, comprising a large variety of motions and interactions,\nincluding a smaller test set with bird-specific keypoint labels. Using our\ntemporal optimization, we achieve state-of-the-art performance for the\nchallenging sequences in our dataset.",
+      "upvotes": 3
+    },
+    {
+      "title": "DSTI at LLMs4OL 2024 Task A: Intrinsic versus extrinsic knowledge for type classification",
+      "url": "https://huggingface.co/papers/2408.14236",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2408.14236.pdf",
+      "abstract": "We introduce semantic towers, an extrinsic knowledge representation method,\nand compare it to intrinsic knowledge in large language models for ontology\nlearning. Our experiments show a trade-off between performance and semantic\ngrounding for extrinsic knowledge compared to a fine-tuned model intrinsic\nknowledge. We report our findings on the Large Language Models for Ontology\nLearning (LLMs4OL) 2024 challenge.",
+      "upvotes": 3
+    },
+    {
+      "title": "LLM-3D Print: Large Language Models To Monitor and Control 3D Printing",
+      "url": "https://huggingface.co/papers/2408.14307",
+      "authors": [
+        "Peter Pak",
+        "Amir Barati Farimani"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.14307.pdf",
+      "abstract": "Industry 4.0 has revolutionized manufacturing by driving digitalization and\nshifting the paradigm toward additive manufacturing (AM). Fused Deposition\nModeling (FDM), a key AM technology, enables the creation of highly customized,\ncost-effective products with minimal material waste through layer-by-layer\nextrusion, posing a significant challenge to traditional subtractive methods.\nHowever, the susceptibility of material extrusion techniques to errors often\nrequires expert intervention to detect and mitigate defects that can severely\ncompromise product quality. While automated error detection and machine\nlearning models exist, their generalizability across diverse 3D printer setups,\nfirmware, and sensors is limited, and deep learning methods require extensive\nlabeled datasets, hindering scalability and adaptability. To address these\nchallenges, we present a process monitoring and control framework that\nleverages pre-trained Large Language Models (LLMs) alongside 3D printers to\ndetect and address printing defects. The LLM evaluates print quality by\nanalyzing images captured after each layer or print segment, identifying\nfailure modes and querying the printer for relevant parameters. It then\ngenerates and executes a corrective action plan. We validated the effectiveness\nof the proposed framework in identifying defects by comparing it against a\ncontrol group of engineers with diverse AM expertise. Our evaluation\ndemonstrated that LLM-based agents not only accurately identify common 3D\nprinting errors, such as inconsistent extrusion, stringing, warping, and layer\nadhesion, but also effectively determine the parameters causing these failures\nand autonomously correct them without any need for human intervention.",
+      "upvotes": 2
+    }
+  ]
+}

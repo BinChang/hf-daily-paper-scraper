@@ -1,0 +1,169 @@
+{
+  "date": "2024-04-06",
+  "papers": [
+    {
+      "title": "ReFT: Representation Finetuning for Language Models",
+      "url": "https://huggingface.co/papers/2404.03592",
+      "authors": [
+        "Zheng Wang",
+        "Dan Jurafsky",
+        "Christopher Potts"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.03592.pdf",
+      "abstract": "Parameter-efficient fine-tuning (PEFT) methods seek to adapt large models via\nupdates to a small number of weights. However, much prior interpretability work\nhas shown that representations encode rich semantic information, suggesting\nthat editing representations might be a more powerful alternative. Here, we\npursue this hypothesis by developing a family of Representation\nFinetuning (ReFT) methods. ReFT methods operate on a frozen base model and\nlearn task-specific interventions on hidden representations. We define a strong\ninstance of the ReFT family, Low-rank Linear Subspace ReFT (LoReFT). LoReFT is\na drop-in replacement for existing PEFTs and learns interventions that are\n10x-50x more parameter-efficient than prior state-of-the-art PEFTs. We showcase\nLoReFT on eight commonsense reasoning tasks, four arithmetic reasoning tasks,\nAlpaca-Eval v1.0, and GLUE. In all these evaluations, LoReFT delivers the best\nbalance of efficiency and performance, and almost always outperforms\nstate-of-the-art PEFTs. We release a generic ReFT training library publicly at\nhttps://github.com/stanfordnlp/pyreft.",
+      "upvotes": 89
+    },
+    {
+      "title": "CoMat: Aligning Text-to-Image Diffusion Model with Image-to-Text Concept Matching",
+      "url": "https://huggingface.co/papers/2404.03653",
+      "authors": [
+        "Guanglu Song",
+        "Xiaoshi Wu",
+        "Renrui Zhang",
+        "Dazhong Shen",
+        "Yu Liu",
+        "Hongsheng Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.03653.pdf",
+      "abstract": "Diffusion models have demonstrated great success in the field of\ntext-to-image generation. However, alleviating the misalignment between the\ntext prompts and images is still challenging. The root reason behind the\nmisalignment has not been extensively investigated. We observe that the\nmisalignment is caused by inadequate token attention activation. We further\nattribute this phenomenon to the diffusion model's insufficient condition\nutilization, which is caused by its training paradigm. To address the issue, we\npropose CoMat, an end-to-end diffusion model fine-tuning strategy with an\nimage-to-text concept matching mechanism. We leverage an image captioning model\nto measure image-to-text alignment and guide the diffusion model to revisit\nignored tokens. A novel attribute concentration module is also proposed to\naddress the attribute binding problem. Without any image or human preference\ndata, we use only 20K text prompts to fine-tune SDXL to obtain CoMat-SDXL.\nExtensive experiments show that CoMat-SDXL significantly outperforms the\nbaseline model SDXL in two text-to-image alignment benchmarks and achieves\nstart-of-the-art performance.",
+      "upvotes": 33
+    },
+    {
+      "title": "MiniGPT4-Video: Advancing Multimodal LLMs for Video Understanding with Interleaved Visual-Textual Tokens",
+      "url": "https://huggingface.co/papers/2404.03413",
+      "authors": [
+        "Kirolos Ataallah",
+        "Eslam Abdelrahman",
+        "Essam Sleiman",
+        "Deyao Zhu",
+        "Jian Ding",
+        "Mohamed Elhoseiny"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.03413.pdf",
+      "abstract": "This paper introduces MiniGPT4-Video, a multimodal Large Language Model (LLM)\ndesigned specifically for video understanding. The model is capable of\nprocessing both temporal visual and textual data, making it adept at\nunderstanding the complexities of videos. Building upon the success of\nMiniGPT-v2, which excelled in translating visual features into the LLM space\nfor single images and achieved impressive results on various image-text\nbenchmarks, this paper extends the model's capabilities to process a sequence\nof frames, enabling it to comprehend videos. MiniGPT4-video does not only\nconsider visual content but also incorporates textual conversations, allowing\nthe model to effectively answer queries involving both visual and text\ncomponents. The proposed model outperforms existing state-of-the-art methods,\nregistering gains of 4.22%, 1.13%, 20.82%, and 13.1% on the MSVD, MSRVTT, TGIF,\nand TVQA benchmarks respectively. Our models and code have been made publicly\navailable here https://vision-cair.github.io/MiniGPT4-video/",
+      "upvotes": 25
+    },
+    {
+      "title": "AutoWebGLM: Bootstrap And Reinforce A Large Language Model-based Web Navigating Agent",
+      "url": "https://huggingface.co/papers/2404.03648",
+      "authors": [
+        "Hanyu Lai",
+        "Iat Long Iong",
+        "Shuntian Yao",
+        "Yuxuan Chen",
+        "Pengbo Shen",
+        "Hao Yu",
+        "Hanchen Zhang",
+        "Xiaohan Zhang",
+        "Yuxiao Dong",
+        "Jie Tang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.03648.pdf",
+      "abstract": "Large language models (LLMs) have fueled many intelligent agent tasks, such\nas web navigation -- but most existing agents perform far from satisfying in\nreal-world webpages due to three factors: (1) the versatility of actions on\nwebpages, (2) HTML text exceeding model processing capacity, and (3) the\ncomplexity of decision-making due to the open-domain nature of web. In light of\nthe challenge, we develop AutoWebGLM, a GPT-4-outperforming automated web\nnavigation agent built upon ChatGLM3-6B. Inspired by human browsing patterns,\nwe design an HTML simplification algorithm to represent webpages, preserving\nvital information succinctly. We employ a hybrid human-AI method to build web\nbrowsing data for curriculum training. Then, we bootstrap the model by\nreinforcement learning and rejection sampling to further facilitate webpage\ncomprehension, browser operations, and efficient task decomposition by itself.\nFor testing, we establish a bilingual benchmark -- AutoWebBench -- for\nreal-world web browsing tasks. We evaluate AutoWebGLM across diverse web\nnavigation benchmarks, revealing its improvements but also underlying\nchallenges to tackle real environments. Related code, model, and data will be\nreleased at https://github.com/THUDM/AutoWebGLM.",
+      "upvotes": 24
+    },
+    {
+      "title": "LVLM-Intrepret: An Interpretability Tool for Large Vision-Language Models",
+      "url": "https://huggingface.co/papers/2404.03118",
+      "authors": [
+        "Gabriela Ben Melech Stan",
+        "Raanan Yehezkel Rohekar",
+        "Yaniv Gurwicz",
+        "Matthew Lyle Olson",
+        "Anahita Bhiwandiwalla",
+        "Estelle Aflalo",
+        "Chenfei Wu",
+        "Nan Duan",
+        "Shao-Yen Tseng",
+        "Vasudev Lal"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.03118.pdf",
+      "abstract": "In the rapidly evolving landscape of artificial intelligence, multi-modal\nlarge language models are emerging as a significant area of interest. These\nmodels, which combine various forms of data input, are becoming increasingly\npopular. However, understanding their internal mechanisms remains a complex\ntask. Numerous advancements have been made in the field of explainability tools\nand mechanisms, yet there is still much to explore. In this work, we present a\nnovel interactive application aimed towards understanding the internal\nmechanisms of large vision-language models. Our interface is designed to\nenhance the interpretability of the image patches, which are instrumental in\ngenerating an answer, and assess the efficacy of the language model in\ngrounding its output in the image. With our application, a user can\nsystematically investigate the model and uncover system limitations, paving the\nway for enhancements in system capabilities. Finally, we present a case study\nof how our application can aid in understanding failure mechanisms in a popular\nlarge multi-modal model: LLaVA.",
+      "upvotes": 23
+    },
+    {
+      "title": "Training LLMs over Neurally Compressed Text",
+      "url": "https://huggingface.co/papers/2404.03626",
+      "authors": [
+        "Brian Lester",
+        "Jaehoon Lee",
+        "Alex Alemi",
+        "Jeffrey Pennington",
+        "Adam Roberts",
+        "Jascha Sohl-Dickstein",
+        "Noah Constant"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.03626.pdf",
+      "abstract": "In this paper, we explore the idea of training large language models (LLMs)\nover highly compressed text. While standard subword tokenizers compress text by\na small factor, neural text compressors can achieve much higher rates of\ncompression. If it were possible to train LLMs directly over neurally\ncompressed text, this would confer advantages in training and serving\nefficiency, as well as easier handling of long text spans. The main obstacle to\nthis goal is that strong compression tends to produce opaque outputs that are\nnot well-suited for learning. In particular, we find that text na\\\"ively\ncompressed via Arithmetic Coding is not readily learnable by LLMs. To overcome\nthis, we propose Equal-Info Windows, a novel compression technique whereby text\nis segmented into blocks that each compress to the same bit length. Using this\nmethod, we demonstrate effective learning over neurally compressed text that\nimproves with scale, and outperforms byte-level baselines by a wide margin on\nperplexity and inference speed benchmarks. While our method delivers worse\nperplexity than subword tokenizers for models trained with the same parameter\ncount, it has the benefit of shorter sequence lengths. Shorter sequence lengths\nrequire fewer autoregressive generation steps, and reduce latency. Finally, we\nprovide extensive analysis of the properties that contribute to learnability,\nand offer concrete suggestions for how to further improve the performance of\nhigh-compression tokenizers.",
+      "upvotes": 21
+    },
+    {
+      "title": "CodeEditorBench: Evaluating Code Editing Capability of Large Language Models",
+      "url": "https://huggingface.co/papers/2404.03543",
+      "authors": [
+        "Jiawei Guo",
+        "Ziming Li",
+        "Xueling Liu",
+        "Kaijing Ma",
+        "Zhouliang Yu",
+        "Ding Pan",
+        "Yizhi LI",
+        "Ruibo Liu",
+        "Yue Wang",
+        "Shuyue Guo",
+        "Xingwei Qu",
+        "Wenhu Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.03543.pdf",
+      "abstract": "Large Language Models (LLMs) for code are rapidly evolving, with code editing\nemerging as a critical capability. We introduce CodeEditorBench, an evaluation\nframework designed to rigorously assess the performance of LLMs in code editing\ntasks, including debugging, translating, polishing, and requirement switching.\nUnlike existing benchmarks focusing solely on code generation, CodeEditorBench\nemphasizes real-world scenarios and practical aspects of software development.\nWe curate diverse coding challenges and scenarios from five sources, covering\nvarious programming languages, complexity levels, and editing tasks. Evaluation\nof 19 LLMs reveals that closed-source models (particularly Gemini-Ultra and\nGPT-4), outperform open-source models in CodeEditorBench, highlighting\ndifferences in model performance based on problem types and prompt\nsensitivities. CodeEditorBench aims to catalyze advancements in LLMs by\nproviding a robust platform for assessing code editing capabilities. We will\nrelease all prompts and datasets to enable the community to expand the dataset\nand benchmark emerging LLMs. By introducing CodeEditorBench, we contribute to\nthe advancement of LLMs in code editing and provide a valuable resource for\nresearchers and practitioners.",
+      "upvotes": 15
+    },
+    {
+      "title": "PointInfinity: Resolution-Invariant Point Diffusion Models",
+      "url": "https://huggingface.co/papers/2404.03566",
+      "authors": [
+        "Justin Johnson",
+        "Shoubhik Debnath",
+        "James M. Rehg",
+        "Chao-Yuan Wu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.03566.pdf",
+      "abstract": "We present PointInfinity, an efficient family of point cloud diffusion\nmodels. Our core idea is to use a transformer-based architecture with a\nfixed-size, resolution-invariant latent representation. This enables efficient\ntraining with low-resolution point clouds, while allowing high-resolution point\nclouds to be generated during inference. More importantly, we show that scaling\nthe test-time resolution beyond the training resolution improves the fidelity\nof generated point clouds and surfaces. We analyze this phenomenon and draw a\nlink to classifier-free guidance commonly used in diffusion models,\ndemonstrating that both allow trading off fidelity and variability during\ninference. Experiments on CO3D show that PointInfinity can efficiently generate\nhigh-resolution point clouds (up to 131k points, 31 times more than Point-E)\nwith state-of-the-art quality.",
+      "upvotes": 13
+    },
+    {
+      "title": "Red Teaming GPT-4V: Are GPT-4V Safe Against Uni/Multi-Modal Jailbreak Attacks?",
+      "url": "https://huggingface.co/papers/2404.03411",
+      "authors": [
+        "Zhen Han",
+        "Bailan He",
+        "Wenqian Yu",
+        "Philip Torr",
+        "Volker Tresp",
+        "Jindong Gu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.03411.pdf",
+      "abstract": "Various jailbreak attacks have been proposed to red-team Large Language\nModels (LLMs) and revealed the vulnerable safeguards of LLMs. Besides, some\nmethods are not limited to the textual modality and extend the jailbreak attack\nto Multimodal Large Language Models (MLLMs) by perturbing the visual input.\nHowever, the absence of a universal evaluation benchmark complicates the\nperformance reproduction and fair comparison. Besides, there is a lack of\ncomprehensive evaluation of closed-source state-of-the-art (SOTA) models,\nespecially MLLMs, such as GPT-4V. To address these issues, this work first\nbuilds a comprehensive jailbreak evaluation dataset with 1445 harmful questions\ncovering 11 different safety policies. Based on this dataset, extensive\nred-teaming experiments are conducted on 11 different LLMs and MLLMs, including\nboth SOTA proprietary models and open-source models. We then conduct a deep\nanalysis of the evaluated results and find that (1) GPT4 and GPT-4V demonstrate\nbetter robustness against jailbreak attacks compared to open-source LLMs and\nMLLMs. (2) Llama2 and Qwen-VL-Chat are more robust compared to other\nopen-source models. (3) The transferability of visual jailbreak methods is\nrelatively limited compared to textual jailbreak methods. The dataset and code\ncan be found here\nhttps://anonymous.4open.science/r/red_teaming_gpt4-C1CE/README.md .",
+      "upvotes": 8
+    },
+    {
+      "title": "RALL-E: Robust Codec Language Modeling with Chain-of-Thought Prompting for Text-to-Speech Synthesis",
+      "url": "https://huggingface.co/papers/2404.03204",
+      "authors": [
+        "Detai Xin",
+        "Kai Shen",
+        "Zeqian Ju",
+        "Dongchao Yang",
+        "Yuancheng Wang",
+        "Shinnosuke Takamichi",
+        "Hiroshi Saruwatari",
+        "Shujie Liu",
+        "Jinyu Li",
+        "Sheng Zhao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.03204.pdf",
+      "abstract": "We present RALL-E, a robust language modeling method for text-to-speech (TTS)\nsynthesis. While previous work based on large language models (LLMs) shows\nimpressive performance on zero-shot TTS, such methods often suffer from poor\nrobustness, such as unstable prosody (weird pitch and rhythm/duration) and a\nhigh word error rate (WER), due to the autoregressive prediction style of\nlanguage models. The core idea behind RALL-E is chain-of-thought (CoT)\nprompting, which decomposes the task into simpler steps to enhance the\nrobustness of LLM-based TTS. To accomplish this idea, RALL-E first predicts\nprosody features (pitch and duration) of the input text and uses them as\nintermediate conditions to predict speech tokens in a CoT style. Second, RALL-E\nutilizes the predicted duration prompt to guide the computing of self-attention\nweights in Transformer to enforce the model to focus on the corresponding\nphonemes and prosody features when predicting speech tokens. Results of\ncomprehensive objective and subjective evaluations demonstrate that, compared\nto a powerful baseline method VALL-E, RALL-E significantly improves the WER of\nzero-shot TTS from 6.3% (without reranking) and 2.1% (with reranking) to\n2.8% and 1.0%, respectively. Furthermore, we demonstrate that RALL-E\ncorrectly synthesizes sentences that are hard for VALL-E and reduces the error\nrate from 68% to 4%.",
+      "upvotes": 7
+    }
+  ]
+}

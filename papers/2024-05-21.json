@@ -1,0 +1,105 @@
+{
+  "date": "2024-05-21",
+  "papers": [
+    {
+      "title": "FIFO-Diffusion: Generating Infinite Videos from Text without Training",
+      "url": "https://huggingface.co/papers/2405.11473",
+      "authors": [
+        "Jinyoung Choi",
+        "Bohyung Han"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.11473.pdf",
+      "abstract": "We propose a novel inference technique based on a pretrained diffusion model\nfor text-conditional video generation. Our approach, called FIFO-Diffusion, is\nconceptually capable of generating infinitely long videos without training.\nThis is achieved by iteratively performing diagonal denoising, which\nconcurrently processes a series of consecutive frames with increasing noise\nlevels in a queue; our method dequeues a fully denoised frame at the head while\nenqueuing a new random noise frame at the tail. However, diagonal denoising is\na double-edged sword as the frames near the tail can take advantage of cleaner\nones by forward reference but such a strategy induces the discrepancy between\ntraining and inference. Hence, we introduce latent partitioning to reduce the\ntraining-inference gap and lookahead denoising to leverage the benefit of\nforward referencing. We have demonstrated the promising results and\neffectiveness of the proposed methods on existing text-to-video generation\nbaselines.",
+      "upvotes": 53
+    },
+    {
+      "title": "MoRA: High-Rank Updating for Parameter-Efficient Fine-Tuning",
+      "url": "https://huggingface.co/papers/2405.12130",
+      "authors": [
+        "Ting Jiang",
+        "Zihan Zhang",
+        "Qi Zhang",
+        "Deqing Wang",
+        "Fuzhen Zhuang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.12130.pdf",
+      "abstract": "Low-rank adaptation is a popular parameter-efficient fine-tuning method for\nlarge language models. In this paper, we analyze the impact of low-rank\nupdating, as implemented in LoRA. Our findings suggest that the low-rank\nupdating mechanism may limit the ability of LLMs to effectively learn and\nmemorize new knowledge. Inspired by this observation, we propose a new method\ncalled MoRA, which employs a square matrix to achieve high-rank updating while\nmaintaining the same number of trainable parameters. To achieve it, we\nintroduce the corresponding non-parameter operators to reduce the input\ndimension and increase the output dimension for the square matrix. Furthermore,\nthese operators ensure that the weight can be merged back into LLMs, which\nmakes our method can be deployed like LoRA. We perform a comprehensive\nevaluation of our method across five tasks: instruction tuning, mathematical\nreasoning, continual pretraining, memory and pretraining. Our method\noutperforms LoRA on memory-intensive tasks and achieves comparable performance\non other tasks.",
+      "upvotes": 45
+    },
+    {
+      "title": "OpenRLHF: An Easy-to-use, Scalable and High-performance RLHF Framework",
+      "url": "https://huggingface.co/papers/2405.11143",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2405.11143.pdf",
+      "abstract": "As large language models (LLMs) continue to grow by scaling laws,\nreinforcement learning from human feedback (RLHF) has gained significant\nattention due to its outstanding performance. However, unlike pretraining or\nfine-tuning a single model, scaling reinforcement learning from human feedback\n(RLHF) for training large language models poses coordination challenges across\nfour models. We present OpenRLHF, an open-source framework enabling efficient\nRLHF scaling. Unlike existing RLHF frameworks that co-locate four models on the\nsame GPUs, OpenRLHF re-designs scheduling for the models beyond 70B parameters\nusing Ray, vLLM, and DeepSpeed, leveraging improved resource utilization and\ndiverse training approaches. Integrating seamlessly with Hugging Face, OpenRLHF\nprovides an out-of-the-box solution with optimized algorithms and launch\nscripts, which ensures user-friendliness. OpenRLHF implements RLHF, DPO,\nrejection sampling, and other alignment techniques. Empowering state-of-the-art\nLLM development, OpenRLHF's code is available at\nhttps://github.com/OpenLLMAI/OpenRLHF.",
+      "upvotes": 33
+    },
+    {
+      "title": "Imp: Highly Capable Large Multimodal Models for Mobile Devices",
+      "url": "https://huggingface.co/papers/2405.12107",
+      "authors": [
+        "Zhou Yu",
+        "Jun Yu",
+        "Xuecheng Ouyang",
+        "Zhenbiao Gai",
+        "Mingyang Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.12107.pdf",
+      "abstract": "By harnessing the capabilities of large language models (LLMs), recent large\nmultimodal models (LMMs) have shown remarkable versatility in open-world\nmultimodal understanding. Nevertheless, they are usually parameter-heavy and\ncomputation-intensive, thus hindering their applicability in\nresource-constrained scenarios. To this end, several lightweight LMMs have been\nproposed successively to maximize the capabilities under constrained scale\n(e.g., 3B). Despite the encouraging results achieved by these methods, most of\nthem only focus on one or two aspects of the design space, and the key design\nchoices that influence model capability have not yet been thoroughly\ninvestigated. In this paper, we conduct a systematic study for lightweight LMMs\nfrom the aspects of model architecture, training strategy, and training data.\nBased on our findings, we obtain Imp -- a family of highly capable LMMs at the\n2B-4B scales. Notably, our Imp-3B model steadily outperforms all the existing\nlightweight LMMs of similar size, and even surpasses the state-of-the-art LMMs\nat the 13B scale. With low-bit quantization and resolution reduction\ntechniques, our Imp model can be deployed on a Qualcomm Snapdragon 8Gen3 mobile\nchip with a high inference speed of about 13 tokens/s.",
+      "upvotes": 25
+    },
+    {
+      "title": "Towards Modular LLMs by Building and Reusing a Library of LoRAs",
+      "url": "https://huggingface.co/papers/2405.11157",
+      "authors": [
+        "Laurent Charlin",
+        "Matheus Pereira"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.11157.pdf",
+      "abstract": "The growing number of parameter-efficient adaptations of a base large\nlanguage model (LLM) calls for studying whether we can reuse such trained\nadapters to improve performance for new tasks. We study how to best build a\nlibrary of adapters given multi-task data and devise techniques for both\nzero-shot and supervised task generalization through routing in such library.\nWe benchmark existing approaches to build this library and introduce\nmodel-based clustering, MBC, a method that groups tasks based on the similarity\nof their adapter parameters, indirectly optimizing for transfer across the\nmulti-task dataset. To re-use the library, we present a novel zero-shot routing\nmechanism, Arrow, which enables dynamic selection of the most relevant adapters\nfor new inputs without the need for retraining. We experiment with several\nLLMs, such as Phi-2 and Mistral, on a wide array of held-out tasks, verifying\nthat MBC-based adapters and Arrow routing lead to superior generalization to\nnew tasks. We make steps towards creating modular, adaptable LLMs that can\nmatch or outperform traditional joint training.",
+      "upvotes": 25
+    },
+    {
+      "title": "Octo: An Open-Source Generalist Robot Policy",
+      "url": "https://huggingface.co/papers/2405.12213",
+      "authors": [
+        "Octo Model Team",
+        "Homer Walke",
+        "Kevin Black",
+        "Sudeep Dasari",
+        "Joey Hejna",
+        "Tobias Kreiman",
+        "Ted Xiao",
+        "Dorsa Sadigh",
+        "Sergey Levine"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.12213.pdf",
+      "abstract": "Large policies pretrained on diverse robot datasets have the potential to\ntransform robotic learning: instead of training new policies from scratch, such\ngeneralist robot policies may be finetuned with only a little in-domain data,\nyet generalize broadly. However, to be widely applicable across a range of\nrobotic learning scenarios, environments, and tasks, such policies need to\nhandle diverse sensors and action spaces, accommodate a variety of commonly\nused robotic platforms, and finetune readily and efficiently to new domains. In\nthis work, we aim to lay the groundwork for developing open-source, widely\napplicable, generalist policies for robotic manipulation. As a first step, we\nintroduce Octo, a large transformer-based policy trained on 800k trajectories\nfrom the Open X-Embodiment dataset, the largest robot manipulation dataset to\ndate. It can be instructed via language commands or goal images and can be\neffectively finetuned to robot setups with new sensory inputs and action spaces\nwithin a few hours on standard consumer GPUs. In experiments across 9 robotic\nplatforms, we demonstrate that Octo serves as a versatile policy initialization\nthat can be effectively finetuned to new observation and action spaces. We also\nperform detailed ablations of design decisions for the Octo model, from\narchitecture to training data, to guide future research on building generalist\nrobot models.",
+      "upvotes": 23
+    },
+    {
+      "title": "SLAB: Efficient Transformers with Simplified Linear Attention and Progressive Re-parameterized Batch Normalization",
+      "url": "https://huggingface.co/papers/2405.11582",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2405.11582.pdf",
+      "abstract": "Transformers have become foundational architectures for both natural language\nand computer vision tasks. However, the high computational cost makes it quite\nchallenging to deploy on resource-constraint devices. This paper investigates\nthe computational bottleneck modules of efficient transformer, i.e.,\nnormalization layers and attention modules. LayerNorm is commonly used in\ntransformer architectures but is not computational friendly due to statistic\ncalculation during inference. However, replacing LayerNorm with more efficient\nBatchNorm in transformer often leads to inferior performance and collapse in\ntraining. To address this problem, we propose a novel method named PRepBN to\nprogressively replace LayerNorm with re-parameterized BatchNorm in training.\nMoreover, we propose a simplified linear attention (SLA) module that is simple\nyet effective to achieve strong performance. Extensive experiments on image\nclassification as well as object detection demonstrate the effectiveness of our\nproposed method. For example, our SLAB-Swin obtains 83.6% top-1 accuracy on\nImageNet-1K with 16.2ms latency, which is 2.4ms less than that of\nFlatten-Swin with 0.1% higher accuracy. We also evaluated our method for\nlanguage modeling task and obtain comparable performance and lower\nlatency.Codes are publicly available at https://github.com/xinghaochen/SLAB and\nhttps://github.com/mindspore-lab/models/tree/master/research/huawei-noah/SLAB.",
+      "upvotes": 12
+    },
+    {
+      "title": "Dreamer XL: Towards High-Resolution Text-to-3D Generation via Trajectory Score Matching",
+      "url": "https://huggingface.co/papers/2405.11252",
+      "authors": [
+        "Xingyu Miao",
+        "Haoran Duan",
+        "Varun Ojha",
+        "Jun Song",
+        "Tejal Shah",
+        "Yang Long",
+        "Rajiv Ranjan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.11252.pdf",
+      "abstract": "In this work, we propose a novel Trajectory Score Matching (TSM) method that\naims to solve the pseudo ground truth inconsistency problem caused by the\naccumulated error in Interval Score Matching (ISM) when using the Denoising\nDiffusion Implicit Models (DDIM) inversion process. Unlike ISM which adopts the\ninversion process of DDIM to calculate on a single path, our TSM method\nleverages the inversion process of DDIM to generate two paths from the same\nstarting point for calculation. Since both paths start from the same starting\npoint, TSM can reduce the accumulated error compared to ISM, thus alleviating\nthe problem of pseudo ground truth inconsistency. TSM enhances the stability\nand consistency of the model's generated paths during the distillation process.\nWe demonstrate this experimentally and further show that ISM is a special case\nof TSM. Furthermore, to optimize the current multi-stage optimization process\nfrom high-resolution text to 3D generation, we adopt Stable Diffusion XL for\nguidance. In response to the issues of abnormal replication and splitting\ncaused by unstable gradients during the 3D Gaussian splatting process when\nusing Stable Diffusion XL, we propose a pixel-by-pixel gradient clipping\nmethod. Extensive experiments show that our model significantly surpasses the\nstate-of-the-art models in terms of visual quality and performance. Code:\nhttps://github.com/xingy038/Dreamer-XL.",
+      "upvotes": 12
+    }
+  ]
+}

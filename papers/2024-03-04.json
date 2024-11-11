@@ -1,0 +1,65 @@
+{
+  "date": "2024-03-04",
+  "papers": [
+    {
+      "title": "VisionLLaMA: A Unified LLaMA Interface for Vision Tasks",
+      "url": "https://huggingface.co/papers/2403.00522",
+      "authors": [
+        "Xiangxiang Chu",
+        "Chunhua Shen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.00522.pdf",
+      "abstract": "Large language models are built on top of a transformer-based architecture to\nprocess textual inputs. For example, the LLaMA stands out among many\nopen-source implementations. Can the same transformer be used to process 2D\nimages? In this paper, we answer this question by unveiling a LLaMA-like vision\ntransformer in plain and pyramid forms, termed VisionLLaMA, which is tailored\nfor this purpose. VisionLLaMA is a unified and generic modelling framework for\nsolving most vision tasks. We extensively evaluate its effectiveness using\ntypical pre-training paradigms in a good portion of downstream tasks of image\nperception and especially image generation. In many cases, VisionLLaMA have\nexhibited substantial gains over the previous state-of-the-art vision\ntransformers. We believe that VisionLLaMA can serve as a strong new baseline\nmodel for vision generation and understanding. Our code will be released at\nhttps://github.com/Meituan-AutoML/VisionLLaMA.",
+      "upvotes": 44
+    },
+    {
+      "title": "Learning and Leveraging World Models in Visual Representation Learning",
+      "url": "https://huggingface.co/papers/2403.00504",
+      "authors": [
+        "Quentin Garrido",
+        "Mahmoud Assran",
+        "Nicolas Ballas",
+        "Adrien Bardes",
+        "Laurent Najman"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.00504.pdf",
+      "abstract": "Joint-Embedding Predictive Architecture (JEPA) has emerged as a promising\nself-supervised approach that learns by leveraging a world model. While\npreviously limited to predicting missing parts of an input, we explore how to\ngeneralize the JEPA prediction task to a broader set of corruptions. We\nintroduce Image World Models, an approach that goes beyond masked image\nmodeling and learns to predict the effect of global photometric transformations\nin latent space. We study the recipe of learning performant IWMs and show that\nit relies on three key aspects: conditioning, prediction difficulty, and\ncapacity. Additionally, we show that the predictive world model learned by IWM\ncan be adapted through finetuning to solve diverse tasks; a fine-tuned IWM\nworld model matches or surpasses the performance of previous self-supervised\nmethods. Finally, we show that learning with an IWM allows one to control the\nabstraction level of the learned representations, learning invariant\nrepresentations such as contrastive methods, or equivariant representations\nsuch as masked image modelling.",
+      "upvotes": 31
+    },
+    {
+      "title": "Resonance RoPE: Improving Context Length Generalization of Large Language Models",
+      "url": "https://huggingface.co/papers/2403.00071",
+      "authors": [
+        "Ivan Kobyzev",
+        "Peng Lu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.00071.pdf",
+      "abstract": "This paper addresses the challenge of train-short-test-long (TSTL) scenarios\nin Large Language Models (LLMs) equipped with Rotary Position Embedding (RoPE),\nwhere models pre-trained on shorter sequences face difficulty with\nout-of-distribution (OOD) token positions in longer sequences. We introduce\nResonance RoPE, a novel approach designed to narrow the generalization gap in\nTSTL scenarios by refining the interpolation of RoPE features for OOD\npositions, significantly improving the model performance without additional\nonline computational costs. Furthermore, we present PosGen, a new synthetic\nbenchmark specifically designed for fine-grained behavior analysis in TSTL\nscenarios, aiming to isolate the constantly increasing difficulty of token\ngeneration on long contexts from the challenges of recognizing new token\npositions. Our experiments on synthetic tasks show that after applying\nResonance RoPE, Transformers recognize OOD position better and more robustly.\nOur extensive LLM experiments also show superior performance after applying\nResonance RoPE to the current state-of-the-art RoPE scaling method, YaRN, on\nboth upstream language modeling tasks and a variety of downstream long-text\napplications.",
+      "upvotes": 22
+    },
+    {
+      "title": "RealCustom: Narrowing Real Text Word for Real-Time Open-Domain Text-to-Image Customization",
+      "url": "https://huggingface.co/papers/2403.00483",
+      "authors": [
+        "Zhendong Mao",
+        "Qian He",
+        "Yongdong Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.00483.pdf",
+      "abstract": "Text-to-image customization, which aims to synthesize text-driven images for\nthe given subjects, has recently revolutionized content creation. Existing\nworks follow the pseudo-word paradigm, i.e., represent the given subjects as\npseudo-words and then compose them with the given text. However, the inherent\nentangled influence scope of pseudo-words with the given text results in a\ndual-optimum paradox, i.e., the similarity of the given subjects and the\ncontrollability of the given text could not be optimal simultaneously. We\npresent RealCustom that, for the first time, disentangles similarity from\ncontrollability by precisely limiting subject influence to relevant parts only,\nachieved by gradually narrowing real text word from its general connotation to\nthe specific subject and using its cross-attention to distinguish relevance.\nSpecifically, RealCustom introduces a novel \"train-inference\" decoupled\nframework: (1) during training, RealCustom learns general alignment between\nvisual conditions to original textual conditions by a novel adaptive scoring\nmodule to adaptively modulate influence quantity; (2) during inference, a novel\nadaptive mask guidance strategy is proposed to iteratively update the influence\nscope and influence quantity of the given subjects to gradually narrow the\ngeneration of the real text word. Comprehensive experiments demonstrate the\nsuperior real-time customization ability of RealCustom in the open domain,\nachieving both unprecedented similarity of the given subjects and\ncontrollability of the given text for the first time. The project page is\nhttps://corleone-huang.github.io/realcustom/.",
+      "upvotes": 12
+    },
+    {
+      "title": "AtP*: An efficient and scalable method for localizing LLM behaviour to components",
+      "url": "https://huggingface.co/papers/2403.00745",
+      "authors": [
+        "János Kramár",
+        "Tom Lieberum",
+        "Rohin Shah"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.00745.pdf",
+      "abstract": "Activation Patching is a method of directly computing causal attributions of\nbehavior to model components. However, applying it exhaustively requires a\nsweep with cost scaling linearly in the number of model components, which can\nbe prohibitively expensive for SoTA Large Language Models (LLMs). We\ninvestigate Attribution Patching (AtP), a fast gradient-based approximation to\nActivation Patching and find two classes of failure modes of AtP which lead to\nsignificant false negatives. We propose a variant of AtP called AtP*, with two\nchanges to address these failure modes while retaining scalability. We present\nthe first systematic study of AtP and alternative methods for faster activation\npatching and show that AtP significantly outperforms all other investigated\nmethods, with AtP* providing further significant improvement. Finally, we\nprovide a method to bound the probability of remaining false negatives of AtP*\nestimates.",
+      "upvotes": 11
+    }
+  ]
+}

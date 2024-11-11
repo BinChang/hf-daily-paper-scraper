@@ -1,0 +1,316 @@
+{
+  "date": "2024-10-17",
+  "papers": [
+    {
+      "title": "VidEgoThink: Assessing Egocentric Video Understanding Capabilities for Embodied AI",
+      "url": "https://huggingface.co/papers/2410.11623",
+      "authors": [
+        "Kechen Fang",
+        "Yangyang Yu",
+        "Bohao Li",
+        "Tingguang Li",
+        "Lei Han",
+        "Yang Liu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.11623.pdf",
+      "abstract": "Recent advancements in Multi-modal Large Language Models (MLLMs) have opened\nnew avenues for applications in Embodied AI. Building on previous work,\nEgoThink, we introduce VidEgoThink, a comprehensive benchmark for evaluating\negocentric video understanding capabilities. To bridge the gap between MLLMs\nand low-level control in Embodied AI, we design four key interrelated tasks:\nvideo question-answering, hierarchy planning, visual grounding and reward\nmodeling. To minimize manual annotation costs, we develop an automatic data\ngeneration pipeline based on the Ego4D dataset, leveraging the prior knowledge\nand multimodal capabilities of GPT-4o. Three human annotators then filter the\ngenerated data to ensure diversity and quality, resulting in the VidEgoThink\nbenchmark. We conduct extensive experiments with three types of models:\nAPI-based MLLMs, open-source image-based MLLMs, and open-source video-based\nMLLMs. Experimental results indicate that all MLLMs, including GPT-4o, perform\npoorly across all tasks related to egocentric video understanding. These\nfindings suggest that foundation models still require significant advancements\nto be effectively applied to first-person scenarios in Embodied AI. In\nconclusion, VidEgoThink reflects a research trend towards employing MLLMs for\negocentric vision, akin to human capabilities, enabling active observation and\ninteraction in the complex real-world environments.",
+      "upvotes": 46
+    },
+    {
+      "title": "HumanEval-V: Evaluating Visual Understanding and Reasoning Abilities of Large Multimodal Models Through Coding Tasks",
+      "url": "https://huggingface.co/papers/2410.12381",
+      "authors": [
+        "Linquan Wu",
+        "Huiyu Bai",
+        "Guancheng Lin",
+        "Xiao Li",
+        "Xiao Yu",
+        "Yue Wang",
+        "Bei Chen",
+        "Jacky Keung"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.12381.pdf",
+      "abstract": "Coding tasks have been valuable for evaluating Large Language Models (LLMs),\nas they demand the comprehension of high-level instructions, complex reasoning,\nand the implementation of functional programs -- core capabilities for\nadvancing Artificial General Intelligence. Despite the progress in Large\nMultimodal Models (LMMs), which extend LLMs with visual perception and\nunderstanding capabilities, there remains a notable lack of coding benchmarks\nthat rigorously assess these models, particularly in tasks that emphasize\nvisual reasoning. To address this gap, we introduce HumanEval-V, a novel and\nlightweight benchmark specifically designed to evaluate LMMs' visual\nunderstanding and reasoning capabilities through code generation. HumanEval-V\nincludes 108 carefully crafted, entry-level Python coding tasks derived from\nplatforms like CodeForces and Stack Overflow. Each task is adapted by modifying\nthe context and algorithmic patterns of the original problems, with visual\nelements redrawn to ensure distinction from the source, preventing potential\ndata leakage. LMMs are required to complete the code solution based on the\nprovided visual context and a predefined Python function signature outlining\nthe task requirements. Every task is equipped with meticulously handcrafted\ntest cases to ensure a thorough and reliable evaluation of model-generated\nsolutions. We evaluate 19 state-of-the-art LMMs using HumanEval-V, uncovering\nsignificant challenges. Proprietary models like GPT-4o achieve only 13% pass@1\nand 36.4% pass@10, while open-weight models with 70B parameters score below 4%\npass@1. Ablation studies further reveal the limitations of current LMMs in\nvision reasoning and coding capabilities. These results underscore key areas\nfor future research to enhance LMMs' capabilities. We have open-sourced our\ncode and benchmark at https://github.com/HumanEval-V/HumanEval-V-Benchmark.",
+      "upvotes": 41
+    },
+    {
+      "title": "The Curse of Multi-Modalities: Evaluating Hallucinations of Large Multimodal Models across Language, Visual, and Audio",
+      "url": "https://huggingface.co/papers/2410.12787",
+      "authors": [
+        "Sicong Leng",
+        "Hang Zhang",
+        "Deli Zhao",
+        "Shijian Lu",
+        "Chunyan Miao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.12787.pdf",
+      "abstract": "Recent advancements in large multimodal models (LMMs) have significantly\nenhanced performance across diverse tasks, with ongoing efforts to further\nintegrate additional modalities such as video and audio. However, most existing\nLMMs remain vulnerable to hallucinations, the discrepancy between the factual\nmultimodal input and the generated textual output, which has limited their\napplicability in various real-world scenarios. This paper presents the first\nsystematic investigation of hallucinations in LMMs involving the three most\ncommon modalities: language, visual, and audio. Our study reveals two key\ncontributors to hallucinations: overreliance on unimodal priors and spurious\ninter-modality correlations. To address these challenges, we introduce the\nbenchmark The Curse of Multi-Modalities (CMM), which comprehensively evaluates\nhallucinations in LMMs, providing a detailed analysis of their underlying\nissues. Our findings highlight key vulnerabilities, including imbalances in\nmodality integration and biases from training data, underscoring the need for\nbalanced cross-modal learning and enhanced hallucination mitigation strategies.\nBased on our observations and findings, we suggest potential research\ndirections that could enhance the reliability of LMMs.",
+      "upvotes": 30
+    },
+    {
+      "title": "DocLayout-YOLO: Enhancing Document Layout Analysis through Diverse Synthetic Data and Global-to-Local Adaptive Perception",
+      "url": "https://huggingface.co/papers/2410.12628",
+      "authors": [
+        "Zhiyuan Zhao",
+        "Hengrui Kang",
+        "Conghui He"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.12628.pdf",
+      "abstract": "Document Layout Analysis is crucial for real-world document understanding\nsystems, but it encounters a challenging trade-off between speed and accuracy:\nmultimodal methods leveraging both text and visual features achieve higher\naccuracy but suffer from significant latency, whereas unimodal methods relying\nsolely on visual features offer faster processing speeds at the expense of\naccuracy. To address this dilemma, we introduce DocLayout-YOLO, a novel\napproach that enhances accuracy while maintaining speed advantages through\ndocument-specific optimizations in both pre-training and model design. For\nrobust document pre-training, we introduce the Mesh-candidate BestFit\nalgorithm, which frames document synthesis as a two-dimensional bin packing\nproblem, generating the large-scale, diverse DocSynth-300K dataset.\nPre-training on the resulting DocSynth-300K dataset significantly improves\nfine-tuning performance across various document types. In terms of model\noptimization, we propose a Global-to-Local Controllable Receptive Module that\nis capable of better handling multi-scale variations of document elements.\nFurthermore, to validate performance across different document types, we\nintroduce a complex and challenging benchmark named DocStructBench. Extensive\nexperiments on downstream datasets demonstrate that DocLayout-YOLO excels in\nboth speed and accuracy. Code, data, and models are available at\nhttps://github.com/opendatalab/DocLayout-YOLO.",
+      "upvotes": 26
+    },
+    {
+      "title": "Revealing the Barriers of Language Agents in Planning",
+      "url": "https://huggingface.co/papers/2410.12409",
+      "authors": [
+        "Siyu Yuan",
+        "Kai Zhang",
+        "Yikai Zhang",
+        "Lei Li",
+        "Yanghua Xiao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.12409.pdf",
+      "abstract": "Autonomous planning has been an ongoing pursuit since the inception of\nartificial intelligence. Based on curated problem solvers, early planning\nagents could deliver precise solutions for specific tasks but lacked\ngeneralization. The emergence of large language models (LLMs) and their\npowerful reasoning capabilities has reignited interest in autonomous planning\nby automatically generating reasonable solutions for given tasks. However,\nprior research and our experiments show that current language agents still lack\nhuman-level planning abilities. Even the state-of-the-art reasoning model,\nOpenAI o1, achieves only 15.6% on one of the complex real-world planning\nbenchmarks. This highlights a critical question: What hinders language agents\nfrom achieving human-level planning? Although existing studies have highlighted\nweak performance in agent planning, the deeper underlying issues and the\nmechanisms and limitations of the strategies proposed to address them remain\ninsufficiently understood. In this work, we apply the feature attribution study\nand identify two key factors that hinder agent planning: the limited role of\nconstraints and the diminishing influence of questions. We also find that\nalthough current strategies help mitigate these challenges, they do not fully\nresolve them, indicating that agents still have a long way to go before\nreaching human-level intelligence.",
+      "upvotes": 23
+    },
+    {
+      "title": "Exploring Model Kinship for Merging Large Language Models",
+      "url": "https://huggingface.co/papers/2410.12613",
+      "authors": [
+        "Yunzhi Yao",
+        "Shumin Deng",
+        "Huajun Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.12613.pdf",
+      "abstract": "Model merging has become one of the key technologies for enhancing the\ncapabilities and efficiency of Large Language Models (LLMs). However, our\nunderstanding of the expected performance gains and principles when merging any\ntwo models remains limited. In this work, we introduce model kinship, the\ndegree of similarity or relatedness between LLMs, analogous to biological\nevolution. With comprehensive empirical analysis, we find that there is a\ncertain relationship between model kinship and the performance gains after\nmodel merging, which can help guide our selection of candidate models. Inspired\nby this, we propose a new model merging strategy: Top-k Greedy Merging with\nModel Kinship, which can yield better performance on benchmark datasets.\nSpecifically, we discover that using model kinship as a criterion can assist us\nin continuously performing model merging, alleviating the degradation (local\noptima) in model evolution, whereas model kinship can serve as a guide to\nescape these traps. Code is available at\nhttps://github.com/zjunlp/ModelKinship.",
+      "upvotes": 19
+    },
+    {
+      "title": "Large Language Model Evaluation via Matrix Nuclear-Norm",
+      "url": "https://huggingface.co/papers/2410.10672",
+      "authors": [
+        "Yahan Li",
+        "Yi Chang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.10672.pdf",
+      "abstract": "As large language models (LLMs) continue to evolve, efficient evaluation\nmetrics are vital for assessing their ability to compress information and\nreduce redundancy. While traditional metrics like Matrix Entropy offer valuable\ninsights, they are computationally intensive for large-scale models due to\ntheir \\( O(n^3) \\) time complexity with Singular Value Decomposition (SVD). To\nmitigate this issue, we introduce the Matrix Nuclear-Norm, which not only\nserves as a metric to quantify the data compression proficiency of LLM but also\nprovides a convex approximation of matrix rank to capture both predictive\ndiscriminability and diversity. By employing the \\( L_{1,2}-norm \\) to\nfurther approximate the nuclear norm, we can effectively assess the model's\ninformation compression capabilities. This approach reduces the time complexity\nto \\( O(n^2) \\) and eliminates the need for SVD computation. Consequently, the\nMatrix Nuclear-Norm achieves speeds 8 to 24 times faster than Matrix Entropy\nfor the CEREBRAS-GPT model as sizes increase from 111M to 6.7B. This\nperformance gap becomes more pronounced with larger models, as validated in\ntests with other models like Pythia. Additionally, evaluations on benchmarks\nand model responses confirm that our proposed Matrix Nuclear-Norm is a\nreliable, scalable, and efficient tool for assessing LLMs' performance,\nstriking a balance between accuracy and computational efficiency. The code is\navailable at https://github.com/MLGroupJLU/MatrixNuclearNorm.",
+      "upvotes": 18
+    },
+    {
+      "title": "Simplifying, Stabilizing and Scaling Continuous-Time Consistency Models",
+      "url": "https://huggingface.co/papers/2410.11081",
+      "authors": [
+        "Cheng Lu",
+        "Yang Song"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.11081.pdf",
+      "abstract": "Consistency models (CMs) are a powerful class of diffusion-based generative\nmodels optimized for fast sampling. Most existing CMs are trained using\ndiscretized timesteps, which introduce additional hyperparameters and are prone\nto discretization errors. While continuous-time formulations can mitigate these\nissues, their success has been limited by training instability. To address\nthis, we propose a simplified theoretical framework that unifies previous\nparameterizations of diffusion models and CMs, identifying the root causes of\ninstability. Based on this analysis, we introduce key improvements in diffusion\nprocess parameterization, network architecture, and training objectives. These\nchanges enable us to train continuous-time CMs at an unprecedented scale,\nreaching 1.5B parameters on ImageNet 512x512. Our proposed training algorithm,\nusing only two sampling steps, achieves FID scores of 2.06 on CIFAR-10, 1.48 on\nImageNet 64x64, and 1.88 on ImageNet 512x512, narrowing the gap in FID scores\nwith the best existing diffusion models to within 10%.",
+      "upvotes": 17
+    },
+    {
+      "title": "Improving Long-Text Alignment for Text-to-Image Diffusion Models",
+      "url": "https://huggingface.co/papers/2410.11817",
+      "authors": [
+        "Chao Du",
+        "Tianyu Pang",
+        "Zehan Wang",
+        "Chongxuan Li",
+        "Dong Xu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.11817.pdf",
+      "abstract": "The rapid advancement of text-to-image (T2I) diffusion models has enabled\nthem to generate unprecedented results from given texts. However, as text\ninputs become longer, existing encoding methods like CLIP face limitations, and\naligning the generated images with long texts becomes challenging. To tackle\nthese issues, we propose LongAlign, which includes a segment-level encoding\nmethod for processing long texts and a decomposed preference optimization\nmethod for effective alignment training. For segment-level encoding, long texts\nare divided into multiple segments and processed separately. This method\novercomes the maximum input length limits of pretrained encoding models. For\npreference optimization, we provide decomposed CLIP-based preference models to\nfine-tune diffusion models. Specifically, to utilize CLIP-based preference\nmodels for T2I alignment, we delve into their scoring mechanisms and find that\nthe preference scores can be decomposed into two components: a text-relevant\npart that measures T2I alignment and a text-irrelevant part that assesses other\nvisual aspects of human preference. Additionally, we find that the\ntext-irrelevant part contributes to a common overfitting problem during\nfine-tuning. To address this, we propose a reweighting strategy that assigns\ndifferent weights to these two components, thereby reducing overfitting and\nenhancing alignment. After fine-tuning 512 times 512 Stable Diffusion (SD)\nv1.5 for about 20 hours using our method, the fine-tuned SD outperforms\nstronger foundation models in T2I alignment, such as PixArt-alpha and\nKandinsky v2.2. The code is available at\nhttps://github.com/luping-liu/LongAlign.",
+      "upvotes": 14
+    },
+    {
+      "title": "ProSA: Assessing and Understanding the Prompt Sensitivity of LLMs",
+      "url": "https://huggingface.co/papers/2410.12405",
+      "authors": [
+        "Xinyu Fang",
+        "Dahua Lin",
+        "Kai Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.12405.pdf",
+      "abstract": "Large language models (LLMs) have demonstrated impressive capabilities across\nvarious tasks, but their performance is highly sensitive to the prompts\nutilized. This variability poses challenges for accurate assessment and user\nsatisfaction. Current research frequently overlooks instance-level prompt\nvariations and their implications on subjective evaluations. To address these\nshortcomings, we introduce ProSA, a framework designed to evaluate and\ncomprehend prompt sensitivity in LLMs. ProSA incorporates a novel sensitivity\nmetric, PromptSensiScore, and leverages decoding confidence to elucidate\nunderlying mechanisms. Our extensive study, spanning multiple tasks, uncovers\nthat prompt sensitivity fluctuates across datasets and models, with larger\nmodels exhibiting enhanced robustness. We observe that few-shot examples can\nalleviate this sensitivity issue, and subjective evaluations are also\nsusceptible to prompt sensitivities, particularly in complex,\nreasoning-oriented tasks. Furthermore, our findings indicate that higher model\nconfidence correlates with increased prompt robustness. We believe this work\nwill serve as a helpful tool in studying prompt sensitivity of LLMs. The\nproject is released at: https://github.com/open-compass/ProSA .",
+      "upvotes": 13
+    },
+    {
+      "title": "Controllable Safety Alignment: Inference-Time Adaptation to Diverse Safety Requirements",
+      "url": "https://huggingface.co/papers/2410.08968",
+      "authors": [
+        "Ahmed Elgohary",
+        "Ahmed Magooda",
+        "Daniel Khashabi",
+        "Benjamin Van Durme"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.08968.pdf",
+      "abstract": "The current paradigm for safety alignment of large language models (LLMs)\nfollows a one-size-fits-all approach: the model refuses to interact with any\ncontent deemed unsafe by the model provider. This approach lacks flexibility in\nthe face of varying social norms across cultures and regions. In addition,\nusers may have diverse safety needs, making a model with static safety\nstandards too restrictive to be useful, as well as too costly to be re-aligned.\n  We propose Controllable Safety Alignment (CoSA), a framework designed to\nadapt models to diverse safety requirements without re-training. Instead of\naligning a fixed model, we align models to follow safety configs -- free-form\nnatural language descriptions of the desired safety behaviors -- that are\nprovided as part of the system prompt. To adjust model safety behavior,\nauthorized users only need to modify such safety configs at inference time. To\nenable that, we propose CoSAlign, a data-centric method for aligning LLMs to\neasily adapt to diverse safety configs. Furthermore, we devise a novel\ncontrollability evaluation protocol that considers both helpfulness and\nconfigured safety, summarizing them into CoSA-Score, and construct CoSApien, a\nhuman-authored benchmark that consists of real-world LLM use cases with diverse\nsafety requirements and corresponding evaluation prompts.\n  We show that CoSAlign leads to substantial gains of controllability over\nstrong baselines including in-context alignment. Our framework encourages\nbetter representation and adaptation to pluralistic human values in LLMs, and\nthereby increasing their practicality.",
+      "upvotes": 12
+    },
+    {
+      "title": "DyVo: Dynamic Vocabularies for Learned Sparse Retrieval with Entities",
+      "url": "https://huggingface.co/papers/2410.07722",
+      "authors": [
+        "Thong Nguyen",
+        "Iain Mackie"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.07722.pdf",
+      "abstract": "Learned Sparse Retrieval (LSR) models use vocabularies from pre-trained\ntransformers, which often split entities into nonsensical fragments. Splitting\nentities can reduce retrieval accuracy and limits the model's ability to\nincorporate up-to-date world knowledge not included in the training data. In\nthis work, we enhance the LSR vocabulary with Wikipedia concepts and entities,\nenabling the model to resolve ambiguities more effectively and stay current\nwith evolving knowledge. Central to our approach is a Dynamic Vocabulary (DyVo)\nhead, which leverages existing entity embeddings and an entity retrieval\ncomponent that identifies entities relevant to a query or document. We use the\nDyVo head to generate entity weights, which are then merged with word piece\nweights to create joint representations for efficient indexing and retrieval\nusing an inverted index. In experiments across three entity-rich document\nranking datasets, the resulting DyVo model substantially outperforms\nstate-of-the-art baselines.",
+      "upvotes": 12
+    },
+    {
+      "title": "ZipVL: Efficient Large Vision-Language Models with Dynamic Token Sparsification and KV Cache Compression",
+      "url": "https://huggingface.co/papers/2410.08584",
+      "authors": [
+        "Yefei He",
+        "Feng Chen",
+        "Jing Liu",
+        "Wenqi Shao",
+        "Hong Zhou",
+        "Bohan Zhuang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.08584.pdf",
+      "abstract": "The efficiency of large vision-language models (LVLMs) is constrained by the\ncomputational bottleneck of the attention mechanism during the prefill phase\nand the memory bottleneck of fetching the key-value (KV) cache in the decoding\nphase, particularly in scenarios involving high-resolution images or videos.\nVisual content often exhibits substantial redundancy, resulting in highly\nsparse attention maps within LVLMs. This sparsity can be leveraged to\naccelerate attention computation or compress the KV cache through various\napproaches. However, most studies focus on addressing only one of these\nbottlenecks and do not adequately support dynamic adjustment of sparsity\nconcerning distinct layers or tasks. In this paper, we present ZipVL, an\nefficient inference framework designed for LVLMs that resolves both computation\nand memory bottlenecks through a dynamic ratio allocation strategy of important\ntokens. This ratio is adaptively determined based on the layer-specific\ndistribution of attention scores, rather than fixed hyper-parameters, thereby\nimproving efficiency for less complex tasks while maintaining high performance\nfor more challenging ones. Then we select important tokens based on their\nnormalized attention scores and perform attention mechanism solely on those\nimportant tokens to accelerate the prefill phase. To mitigate the memory\nbottleneck in the decoding phase, we employ mixed-precision quantization to the\nKV cache, where high-bit quantization is used for caches of important tokens,\nwhile low-bit quantization is applied to those of less importance. Our\nexperiments demonstrate that ZipVL can accelerate the prefill phase by\n2.6times and reduce GPU memory usage by 50.0%, with a minimal accuracy\nreduction of only 0.2% on Video-MME benchmark over LongVA-7B model, effectively\nenhancing the generation efficiency of LVLMs.",
+      "upvotes": 11
+    },
+    {
+      "title": "Stabilize the Latent Space for Image Autoregressive Modeling: A Unified Perspective",
+      "url": "https://huggingface.co/papers/2410.12490",
+      "authors": [
+        "Yongxin Zhu",
+        "Bocheng Li",
+        "Hang Zhang",
+        "Linli Xu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.12490.pdf",
+      "abstract": "Latent-based image generative models, such as Latent Diffusion Models (LDMs)\nand Mask Image Models (MIMs), have achieved notable success in image generation\ntasks. These models typically leverage reconstructive autoencoders like VQGAN\nor VAE to encode pixels into a more compact latent space and learn the data\ndistribution in the latent space instead of directly from pixels. However, this\npractice raises a pertinent question: Is it truly the optimal choice? In\nresponse, we begin with an intriguing observation: despite sharing the same\nlatent space, autoregressive models significantly lag behind LDMs and MIMs in\nimage generation. This finding contrasts sharply with the field of NLP, where\nthe autoregressive model GPT has established a commanding presence. To address\nthis discrepancy, we introduce a unified perspective on the relationship\nbetween latent space and generative models, emphasizing the stability of latent\nspace in image generative modeling. Furthermore, we propose a simple but\neffective discrete image tokenizer to stabilize the latent space for image\ngenerative modeling. Experimental results show that image autoregressive\nmodeling with our tokenizer (DiGIT) benefits both image understanding and image\ngeneration with the next token prediction principle, which is inherently\nstraightforward for GPT models but challenging for other generative models.\nRemarkably, for the first time, a GPT-style autoregressive model for images\noutperforms LDMs, which also exhibits substantial improvement akin to GPT when\nscaling up model size. Our findings underscore the potential of an optimized\nlatent space and the integration of discrete tokenization in advancing the\ncapabilities of image generative models. The code is available at\nhttps://github.com/DAMO-NLP-SG/DiGIT.",
+      "upvotes": 8
+    },
+    {
+      "title": "ChroKnowledge: Unveiling Chronological Knowledge of Language Models in Multiple Domains",
+      "url": "https://huggingface.co/papers/2410.09870",
+      "authors": [
+        "Yein Park",
+        "Chanwoong Yoon",
+        "Donghyeon Lee",
+        "Jaewoo Kang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.09870.pdf",
+      "abstract": "Large language models (LLMs) have significantly impacted many aspects of our\nlives. However, assessing and ensuring their chronological knowledge remains\nchallenging. Existing approaches fall short in addressing the accumulative\nnature of knowledge, often relying on a single time stamp. To overcome this, we\nintroduce ChroKnowBench, a benchmark dataset designed to evaluate\nchronologically accumulated knowledge across three key aspects: multiple\ndomains, time dependency, temporal state. Our benchmark distinguishes between\nknowledge that evolves (e.g., scientific discoveries, amended laws) and\nknowledge that remain constant (e.g., mathematical truths, commonsense facts).\nBuilding on this benchmark, we present ChroKnowledge (Chronological\nCategorization of Knowledge), a novel sampling-based framework for evaluating\nand updating LLMs' non-parametric chronological knowledge. Our evaluation\nshows: (1) The ability of eliciting temporal knowledge varies depending on the\ndata format that model was trained on. (2) LLMs partially recall knowledge or\nshow a cut-off at temporal boundaries rather than recalling all aspects of\nknowledge correctly. Thus, we apply our ChroKnowPrompt, an in-depth prompting\nto elicit chronological knowledge by traversing step-by-step through the\nsurrounding time spans. We observe that our framework successfully updates the\noverall knowledge across the entire timeline in both the biomedical domain\n(+11.9%) and the general domain (+2.8%), demonstrating its effectiveness in\nrefining temporal knowledge. This non-parametric approach also enables\nknowledge updates not only in open-source models but also in proprietary LLMs,\nensuring comprehensive applicability across model types. We perform a\ncomprehensive analysis based on temporal characteristics of ChroKnowPrompt and\nvalidate the potential of various models to elicit intrinsic temporal knowledge\nthrough our method.",
+      "upvotes": 7
+    },
+    {
+      "title": "Neural Metamorphosis",
+      "url": "https://huggingface.co/papers/2410.11878",
+      "authors": [
+        "Xingyi Yang",
+        "Xinchao Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.11878.pdf",
+      "abstract": "This paper introduces a new learning paradigm termed Neural Metamorphosis\n(NeuMeta), which aims to build self-morphable neural networks. Contrary to\ncrafting separate models for different architectures or sizes, NeuMeta directly\nlearns the continuous weight manifold of neural networks. Once trained, we can\nsample weights for any-sized network directly from the manifold, even for\npreviously unseen configurations, without retraining. To achieve this ambitious\ngoal, NeuMeta trains neural implicit functions as hypernetworks. They accept\ncoordinates within the model space as input, and generate corresponding weight\nvalues on the manifold. In other words, the implicit function is learned in a\nway, that the predicted weights is well-performed across various models sizes.\nIn training those models, we notice that, the final performance closely relates\non smoothness of the learned manifold. In pursuit of enhancing this smoothness,\nwe employ two strategies. First, we permute weight matrices to achieve\nintra-model smoothness, by solving the Shortest Hamiltonian Path problem.\nBesides, we add a noise on the input coordinates when training the implicit\nfunction, ensuring models with various sizes shows consistent outputs. As such,\nNeuMeta shows promising results in synthesizing parameters for various network\nconfigurations. Our extensive tests in image classification, semantic\nsegmentation, and image generation reveal that NeuMeta sustains full-size\nperformance even at a 75% compression rate.",
+      "upvotes": 7
+    },
+    {
+      "title": "Tracking Universal Features Through Fine-Tuning and Model Merging",
+      "url": "https://huggingface.co/papers/2410.12391",
+      "authors": [
+        "Desmond Elliott"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.12391.pdf",
+      "abstract": "We study how features emerge, disappear, and persist across models fine-tuned\non different domains of text. More specifically, we start from a base one-layer\nTransformer language model that is trained on a combination of the BabyLM\ncorpus, and a collection of Python code from The Stack. This base model is\nadapted to two new domains of text: TinyStories, and the Lua programming\nlanguage, respectively; and then these two models are merged using these two\nmodels using spherical linear interpolation. Our exploration aims to provide\ndeeper insights into the stability and transformation of features across\ntypical transfer-learning scenarios using small-scale models and sparse\nauto-encoders.",
+      "upvotes": 5
+    },
+    {
+      "title": "WorldMedQA-V: a multilingual, multimodal medical examination dataset for multimodal language models evaluation",
+      "url": "https://huggingface.co/papers/2410.12722",
+      "authors": [
+        "Siena Placino",
+        "Yingya Li",
+        "Juan Carlos Climent Pardo",
+        "Daphna Idan",
+        "Takeshi Tohyama",
+        "David Restrepo",
+        "Luis F. Nakayama",
+        "Jose M. M. Pascual-Leone",
+        "Guergana Savova",
+        "Hugo Aerts",
+        "Leo A. Celi",
+        "A. Ian Wong",
+        "Danielle S. Bitterman",
+        "Jack Gallifant"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.12722.pdf",
+      "abstract": "Multimodal/vision language models (VLMs) are increasingly being deployed in\nhealthcare settings worldwide, necessitating robust benchmarks to ensure their\nsafety, efficacy, and fairness. Multiple-choice question and answer (QA)\ndatasets derived from national medical examinations have long served as\nvaluable evaluation tools, but existing datasets are largely text-only and\navailable in a limited subset of languages and countries. To address these\nchallenges, we present WorldMedQA-V, an updated multilingual, multimodal\nbenchmarking dataset designed to evaluate VLMs in healthcare. WorldMedQA-V\nincludes 568 labeled multiple-choice QAs paired with 568 medical images from\nfour countries (Brazil, Israel, Japan, and Spain), covering original languages\nand validated English translations by native clinicians, respectively. Baseline\nperformance for common open- and closed-source models are provided in the local\nlanguage and English translations, and with and without images provided to the\nmodel. The WorldMedQA-V benchmark aims to better match AI systems to the\ndiverse healthcare environments in which they are deployed, fostering more\nequitable, effective, and representative applications.",
+      "upvotes": 5
+    },
+    {
+      "title": "Insights from the Inverse: Reconstructing LLM Training Goals Through Inverse RL",
+      "url": "https://huggingface.co/papers/2410.12491",
+      "authors": [
+        "Jared Joselowitz",
+        "Arjun Jagota",
+        "Sonali Parbhoo"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.12491.pdf",
+      "abstract": "Large language models (LLMs) trained with Reinforcement Learning from Human\nFeedback (RLHF) have demonstrated remarkable capabilities, but their underlying\nreward functions and decision-making processes remain opaque. This paper\nintroduces a novel approach to interpreting LLMs by applying inverse\nreinforcement learning (IRL) to recover their implicit reward functions. We\nconduct experiments on toxicity-aligned LLMs of varying sizes, extracting\nreward models that achieve up to 80.40% accuracy in predicting human\npreferences. Our analysis reveals key insights into the non-identifiability of\nreward functions, the relationship between model size and interpretability, and\npotential pitfalls in the RLHF process. We demonstrate that IRL-derived reward\nmodels can be used to fine-tune new LLMs, resulting in comparable or improved\nperformance on toxicity benchmarks. This work provides a new lens for\nunderstanding and improving LLM alignment, with implications for the\nresponsible development and deployment of these powerful systems.",
+      "upvotes": 4
+    },
+    {
+      "title": "OMCAT: Omni Context Aware Transformer",
+      "url": "https://huggingface.co/papers/2410.12109",
+      "authors": [
+        "Karan Sapra",
+        "Matthieu Le",
+        "Rafael Valle",
+        "Andrew Tao",
+        "Bryan Catanzaro"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.12109.pdf",
+      "abstract": "Large Language Models (LLMs) have made significant strides in text generation\nand comprehension, with recent advancements extending into multimodal LLMs that\nintegrate visual and audio inputs. However, these models continue to struggle\nwith fine-grained, cross-modal temporal understanding, particularly when\ncorrelating events across audio and video streams. We address these challenges\nwith two key contributions: a new dataset and model, called OCTAV and OMCAT\nrespectively. OCTAV (Omni Context and Temporal Audio Video) is a novel dataset\ndesigned to capture event transitions across audio and video. Second, OMCAT\n(Omni Context Aware Transformer) is a powerful model that leverages RoTE\n(Rotary Time Embeddings), an innovative extension of RoPE, to enhance temporal\ngrounding and computational efficiency in time-anchored tasks. Through a robust\nthree-stage training pipeline-feature alignment, instruction tuning, and\nOCTAV-specific training-OMCAT excels in cross-modal temporal understanding. Our\nmodel demonstrates state-of-the-art performance on Audio-Visual Question\nAnswering (AVQA) tasks and the OCTAV benchmark, showcasing significant gains in\ntemporal reasoning and cross-modal alignment, as validated through\ncomprehensive experiments and ablation studies. Our dataset and code will be\nmade publicly available. The link to our demo page is https://om-cat.github.io.",
+      "upvotes": 4
+    },
+    {
+      "title": "FLARE: Faithful Logic-Aided Reasoning and Exploration",
+      "url": "https://huggingface.co/papers/2410.11900",
+      "authors": [
+        "Pasquale Minervini",
+        "Pat Verga",
+        "Patrick Lewis",
+        "Isabelle Augenstein"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.11900.pdf",
+      "abstract": "Modern Question Answering (QA) and Reasoning approaches based on Large\nLanguage Models (LLMs) commonly use prompting techniques, such as\nChain-of-Thought (CoT), assuming the resulting generation will have a more\ngranular exploration and reasoning over the question space and scope. However,\nsuch methods struggle with generating outputs that are faithful to the\nintermediate chain of reasoning produced by the model. On the other end of the\nspectrum, neuro-symbolic methods such as Faithful CoT (F-CoT) propose to\ncombine LLMs with external symbolic solvers. While such approaches boast a high\ndegree of faithfulness, they usually require a model trained for code\ngeneration and struggle with tasks that are ambiguous or hard to formalise\nstrictly. We introduce Faithful Logic-Aided\nReasoning and Exploration (\\ours), a novel\ninterpretable approach for traversing the problem space using task\ndecompositions. We use the LLM to plan a solution, soft-formalise the query\ninto facts and predicates using a logic programming code and simulate that code\nexecution using an exhaustive multi-hop search over the defined space. Our\nmethod allows us to compute the faithfulness of the reasoning process w.r.t.\nthe generated code and analyse the steps of the multi-hop search without\nrelying on external solvers. Our methods achieve SOTA results on 7\nout of 9 diverse reasoning benchmarks. We also show that model\nfaithfulness positively correlates with overall performance and further\ndemonstrate that {\\ours} allows pinpointing the decisive factors\nsufficient for and leading to the correct answer with optimal reasoning during\nthe multi-hop search.",
+      "upvotes": 3
+    },
+    {
+      "title": "Taming Overconfidence in LLMs: Reward Calibration in RLHF",
+      "url": "https://huggingface.co/papers/2410.09724",
+      "authors": [
+        "Banghua Zhu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.09724.pdf",
+      "abstract": "Language model calibration refers to the alignment between the confidence of\nthe model and the actual performance of its responses. While previous studies\npoint out the overconfidence phenomenon in Large Language Models (LLMs) and\nshow that LLMs trained with Reinforcement Learning from Human Feedback (RLHF)\nare overconfident with a more sharpened output probability, in this study, we\nreveal that RLHF tends to lead models to express verbalized overconfidence in\ntheir own responses. We investigate the underlying cause of this overconfidence\nand demonstrate that reward models used for Proximal Policy Optimization (PPO)\nexhibit inherent biases towards high-confidence scores regardless of the actual\nquality of responses. Building upon this insight, we propose two PPO variants:\nPPO-M: PPO with Calibrated Reward Modeling and PPO-C: PPO with Calibrated\nReward Calculation. PPO-M integrates explicit confidence scores in reward model\ntraining, which calibrates reward models to better capture the alignment\nbetween response quality and verbalized confidence. PPO-C adjusts the reward\nscore during PPO based on the difference between the current reward and the\nmoving average of past rewards. Both PPO-M and PPO-C can be seamlessly\nintegrated into the current PPO pipeline and do not require additional golden\nlabels. We evaluate our methods on both Llama3-8B and Mistral-7B across six\ndiverse datasets including multiple-choice and open-ended generation.\nExperiment results demonstrate that both of our methods can reduce calibration\nerror and maintain performance comparable to standard PPO. We further show that\nthey do not compromise model capabilities in open-ended conversation settings.",
+      "upvotes": 2
+    },
+    {
+      "title": "From Commands to Prompts: LLM-based Semantic File System for AIOS",
+      "url": "https://huggingface.co/papers/2410.11843",
+      "authors": [
+        "Zeru Shi",
+        "Kai Mei",
+        "Mingyu Jin",
+        "Yongye Su",
+        "Chaoji Zuo",
+        "Wenyue Hua",
+        "Wujiang Xu",
+        "Yujie Ren",
+        "Zirui Liu",
+        "Mengnan Du",
+        "Dong Deng",
+        "Yongfeng Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.11843.pdf",
+      "abstract": "Large language models (LLMs) have demonstrated significant potential in the\ndevelopment of intelligent applications and systems such as LLM-based agents\nand agent operating systems (AIOS). However, when these applications and\nsystems interact with the underlying file system, the file system still remains\nthe traditional paradigm: reliant on manual navigation through precise\ncommands. This paradigm poses a bottleneck to the usability of these systems as\nusers are required to navigate complex folder hierarchies and remember cryptic\nfile names. To address this limitation, we propose an LLM-based semantic file\nsystem ( LSFS ) for prompt-driven file management. Unlike conventional\napproaches, LSFS incorporates LLMs to enable users or agents to interact with\nfiles through natural language prompts, facilitating semantic file management.\nAt the macro-level, we develop a comprehensive API set to achieve semantic file\nmanagement functionalities, such as semantic file retrieval, file update\nmonitoring and summarization, and semantic file rollback). At the micro-level,\nwe store files by constructing semantic indexes for them, design and implement\nsyscalls of different semantic operations (e.g., CRUD, group by, join) powered\nby vector database. Our experiments show that LSFS offers significant\nimprovements over traditional file systems in terms of user convenience, the\ndiversity of supported functions, and the accuracy and efficiency of file\noperations. Additionally, with the integration of LLM, our system enables more\nintelligent file management tasks, such as content summarization and version\ncomparison, further enhancing its capabilities.",
+      "upvotes": 1
+    }
+  ]
+}

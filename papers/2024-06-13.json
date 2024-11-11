@@ -1,0 +1,251 @@
+{
+  "date": "2024-06-13",
+  "papers": [
+    {
+      "title": "Magpie: Alignment Data Synthesis from Scratch by Prompting Aligned LLMs with Nothing",
+      "url": "https://huggingface.co/papers/2406.08464",
+      "authors": [
+        "Yuntian Deng",
+        "Radha Poovendran",
+        "Yejin Choi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.08464.pdf",
+      "abstract": "High-quality instruction data is critical for aligning large language models\n(LLMs). Although some models, such as Llama-3-Instruct, have open weights,\ntheir alignment data remain private, which hinders the democratization of AI.\nHigh human labor costs and a limited, predefined scope for prompting prevent\nexisting open-source data creation methods from scaling effectively,\npotentially limiting the diversity and quality of public alignment datasets. Is\nit possible to synthesize high-quality instruction data at scale by extracting\nit directly from an aligned LLM? We present a self-synthesis method for\ngenerating large-scale alignment data named Magpie. Our key observation is that\naligned LLMs like Llama-3-Instruct can generate a user query when we input only\nthe left-side templates up to the position reserved for user messages, thanks\nto their auto-regressive nature. We use this method to prompt Llama-3-Instruct\nand generate 4 million instructions along with their corresponding responses.\nWe perform a comprehensive analysis of the extracted data and select 300K\nhigh-quality instances. To compare Magpie data with other public instruction\ndatasets, we fine-tune Llama-3-8B-Base with each dataset and evaluate the\nperformance of the fine-tuned models. Our results indicate that in some tasks,\nmodels fine-tuned with Magpie perform comparably to the official\nLlama-3-8B-Instruct, despite the latter being enhanced with 10 million data\npoints through supervised fine-tuning (SFT) and subsequent feedback learning.\nWe also show that using Magpie solely for SFT can surpass the performance of\nprevious public datasets utilized for both SFT and preference optimization,\nsuch as direct preference optimization with UltraFeedback. This advantage is\nevident on alignment benchmarks such as AlpacaEval, ArenaHard, and WildBench.",
+      "upvotes": 65
+    },
+    {
+      "title": "NaRCan: Natural Refined Canonical Image with Integration of Diffusion Prior for Video Editing",
+      "url": "https://huggingface.co/papers/2406.06523",
+      "authors": [
+        "Hau-Shiang Shiu",
+        "Shih-Han Yen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.06523.pdf",
+      "abstract": "We propose a video editing framework, NaRCan, which integrates a hybrid\ndeformation field and diffusion prior to generate high-quality natural\ncanonical images to represent the input video. Our approach utilizes homography\nto model global motion and employs multi-layer perceptrons (MLPs) to capture\nlocal residual deformations, enhancing the model's ability to handle complex\nvideo dynamics. By introducing a diffusion prior from the early stages of\ntraining, our model ensures that the generated images retain a high-quality\nnatural appearance, making the produced canonical images suitable for various\ndownstream tasks in video editing, a capability not achieved by current\ncanonical-based methods. Furthermore, we incorporate low-rank adaptation (LoRA)\nfine-tuning and introduce a noise and diffusion prior update scheduling\ntechnique that accelerates the training process by 14 times. Extensive\nexperimental results show that our method outperforms existing approaches in\nvarious video editing tasks and produces coherent and high-quality edited video\nsequences. See our project page for video results at\nhttps://koi953215.github.io/NaRCan_page/.",
+      "upvotes": 50
+    },
+    {
+      "title": "MotionClone: Training-Free Motion Cloning for Controllable Video Generation",
+      "url": "https://huggingface.co/papers/2406.05338",
+      "authors": [
+        "Pengyang Ling",
+        "Jiazi Bu",
+        "Pan Zhang",
+        "Xiaoyi Dong",
+        "Tong Wu",
+        "Huaian Chen",
+        "Yi Jin"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.05338.pdf",
+      "abstract": "Motion-based controllable text-to-video generation involves motions to\ncontrol the video generation. Previous methods typically require the training\nof models to encode motion cues or the fine-tuning of video diffusion models.\nHowever, these approaches often result in suboptimal motion generation when\napplied outside the trained domain. In this work, we propose MotionClone, a\ntraining-free framework that enables motion cloning from a reference video to\ncontrol text-to-video generation. We employ temporal attention in video\ninversion to represent the motions in the reference video and introduce primary\ntemporal-attention guidance to mitigate the influence of noisy or very subtle\nmotions within the attention weights. Furthermore, to assist the generation\nmodel in synthesizing reasonable spatial relationships and enhance its\nprompt-following capability, we propose a location-aware semantic guidance\nmechanism that leverages the coarse location of the foreground from the\nreference video and original classifier-free guidance features to guide the\nvideo generation. Extensive experiments demonstrate that MotionClone exhibits\nproficiency in both global camera motion and local object motion, with notable\nsuperiority in terms of motion fidelity, textual alignment, and temporal\nconsistency.",
+      "upvotes": 39
+    },
+    {
+      "title": "What If We Recaption Billions of Web Images with LLaMA-3?",
+      "url": "https://huggingface.co/papers/2406.08478",
+      "authors": [
+        "Sucheng Ren",
+        "Qing Liu",
+        "Yuyin Zhou"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.08478.pdf",
+      "abstract": "Web-crawled image-text pairs are inherently noisy. Prior studies demonstrate\nthat semantically aligning and enriching textual descriptions of these pairs\ncan significantly enhance model training across various vision-language tasks,\nparticularly text-to-image generation. However, large-scale investigations in\nthis area remain predominantly closed-source. Our paper aims to bridge this\ncommunity effort, leveraging the powerful and open-sourced LLaMA-3, a\nGPT-4 level LLM. Our recaptioning pipeline is simple: first, we fine-tune a\nLLaMA-3-8B powered LLaVA-1.5 and then employ it to recaption 1.3 billion images\nfrom the DataComp-1B dataset. Our empirical results confirm that this enhanced\ndataset, Recap-DataComp-1B, offers substantial benefits in training advanced\nvision-language models. For discriminative models like CLIP, we observe\nenhanced zero-shot performance in cross-modal retrieval tasks. For generative\nmodels like text-to-image Diffusion Transformers, the generated images exhibit\na significant improvement in alignment with users' text instructions,\nespecially in following complex queries. Our project page is\nhttps://www.haqtu.me/Recap-Datacomp-1B/",
+      "upvotes": 39
+    },
+    {
+      "title": "Are We Done with MMLU?",
+      "url": "https://huggingface.co/papers/2406.04127",
+      "authors": [
+        "Xiaotang Du",
+        "Joshua Harris"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.04127.pdf",
+      "abstract": "Maybe not. We identify and analyse errors in the popular Massive Multitask\nLanguage Understanding (MMLU) benchmark. Even though MMLU is widely adopted,\nour analysis demonstrates numerous ground truth errors that obscure the true\ncapabilities of LLMs. For example, we find that 57% of the analysed questions\nin the Virology subset contain errors. To address this issue, we introduce a\ncomprehensive framework for identifying dataset errors using a novel error\ntaxonomy. Then, we create MMLU-Redux, which is a subset of 3,000 manually\nre-annotated questions across 30 MMLU subjects. Using MMLU-Redux, we\ndemonstrate significant discrepancies with the model performance metrics that\nwere originally reported. Our results strongly advocate for revising MMLU's\nerror-ridden questions to enhance its future utility and reliability as a\nbenchmark. Therefore, we open up MMLU-Redux for additional annotation\nhttps://huggingface.co/datasets/edinburgh-dawg/mmlu-redux.",
+      "upvotes": 37
+    },
+    {
+      "title": "PowerInfer-2: Fast Large Language Model Inference on a Smartphone",
+      "url": "https://huggingface.co/papers/2406.06282",
+      "authors": [
+        "Zhenliang Xue"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.06282.pdf",
+      "abstract": "This paper introduces PowerInfer-2, a framework designed for high-speed\ninference of Large Language Models (LLMs) on smartphones, particularly\neffective for models whose sizes exceed the device's memory capacity. The key\ninsight of PowerInfer-2 is to utilize the heterogeneous computation, memory,\nand I/O resources in smartphones by decomposing traditional matrix computations\ninto fine-grained neuron cluster computations. Specifically, PowerInfer-2\nfeatures a polymorphic neuron engine that adapts computational strategies for\nvarious stages of LLM inference. Additionally, it introduces segmented neuron\ncaching and fine-grained neuron-cluster-level pipelining, which effectively\nminimize and conceal the overhead caused by I/O operations. The implementation\nand evaluation of PowerInfer-2 demonstrate its capability to support a wide\narray of LLM models on two smartphones, achieving up to a 29.2x speed increase\ncompared with state-of-the-art frameworks. Notably, PowerInfer-2 is the first\nsystem to serve the TurboSparse-Mixtral-47B model with a generation rate of\n11.68 tokens per second on a smartphone. For models that fit entirely within\nthe memory, PowerInfer-2 can achieve approximately a 40% reduction in memory\nusage while maintaining inference speeds comparable to llama.cpp and MLC-LLM.\nFor more details, including a demonstration video, please visit the project\nsite at www.powerinfer.ai/v2.",
+      "upvotes": 36
+    },
+    {
+      "title": "Physics3D: Learning Physical Properties of 3D Gaussians via Video Diffusion",
+      "url": "https://huggingface.co/papers/2406.04338",
+      "authors": [
+        "Jie Zhou",
+        "Yueqi Duan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.04338.pdf",
+      "abstract": "In recent years, there has been rapid development in 3D generation models,\nopening up new possibilities for applications such as simulating the dynamic\nmovements of 3D objects and customizing their behaviors. However, current 3D\ngenerative models tend to focus only on surface features such as color and\nshape, neglecting the inherent physical properties that govern the behavior of\nobjects in the real world. To accurately simulate physics-aligned dynamics, it\nis essential to predict the physical properties of materials and incorporate\nthem into the behavior prediction process. Nonetheless, predicting the diverse\nmaterials of real-world objects is still challenging due to the complex nature\nof their physical attributes. In this paper, we propose Physics3D, a\nnovel method for learning various physical properties of 3D objects through a\nvideo diffusion model. Our approach involves designing a highly generalizable\nphysical simulation system based on a viscoelastic material model, which\nenables us to simulate a wide range of materials with high-fidelity\ncapabilities. Moreover, we distill the physical priors from a video diffusion\nmodel that contains more understanding of realistic object materials. Extensive\nexperiments demonstrate the effectiveness of our method with both elastic and\nplastic materials. Physics3D shows great potential for bridging the gap between\nthe physical world and virtual neural space, providing a better integration and\napplication of realistic physical principles in virtual environments. Project\npage: https://liuff19.github.io/Physics3D.",
+      "upvotes": 34
+    },
+    {
+      "title": "VideoLLaMA 2: Advancing Spatial-Temporal Modeling and Audio Understanding in Video-LLMs",
+      "url": "https://huggingface.co/papers/2406.07476",
+      "authors": [
+        "Hang Zhang",
+        "Yifei Xin",
+        "Guanzheng Chen",
+        "Wenqi Zhang",
+        "Deli Zhao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.07476.pdf",
+      "abstract": "In this paper, we present the VideoLLaMA 2, a set of Video Large Language\nModels (Video-LLMs) designed to enhance spatial-temporal modeling and audio\nunderstanding in video and audio-oriented tasks. Building upon its predecessor,\nVideoLLaMA 2 incorporates a tailor-made Spatial-Temporal Convolution (STC)\nconnector, which effectively captures the intricate spatial and temporal\ndynamics of video data. Additionally, we integrate an Audio Branch into the\nmodel through joint training, thereby enriching the multimodal understanding\ncapabilities of the model by seamlessly incorporating audio cues. Comprehensive\nevaluations on multiple-choice video question answering (MC-VQA), open-ended\nvideo question answering (OE-VQA), and video captioning (VC) tasks demonstrate\nthat VideoLLaMA 2 consistently achieves competitive results among open-source\nmodels and even gets close to some proprietary models on several benchmarks.\nFurthermore, VideoLLaMA 2 exhibits reasonable improvements in audio-only and\naudio-video question-answering (AQA & OE-AVQA) benchmarks over existing models.\nThese advancements underline VideoLLaMA 2's superior performance in multimodal\ncomprehension, setting a new standard for intelligent video analysis systems.\nAll models are public to facilitate further research.",
+      "upvotes": 32
+    },
+    {
+      "title": "3D-GRAND: A Million-Scale Dataset for 3D-LLMs with Better Grounding and Less Hallucination",
+      "url": "https://huggingface.co/papers/2406.05132",
+      "authors": [
+        "David F. Fouhey",
+        "Joyce Chai"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.05132.pdf",
+      "abstract": "The integration of language and 3D perception is crucial for developing\nembodied agents and robots that comprehend and interact with the physical\nworld. While large language models (LLMs) have demonstrated impressive language\nunderstanding and generation capabilities, their adaptation to 3D environments\n(3D-LLMs) remains in its early stages. A primary challenge is the absence of\nlarge-scale datasets that provide dense grounding between language and 3D\nscenes. In this paper, we introduce 3D-GRAND, a pioneering large-scale dataset\ncomprising 40,087 household scenes paired with 6.2 million densely-grounded\nscene-language instructions. Our results show that instruction tuning with\n3D-GRAND significantly enhances grounding capabilities and reduces\nhallucinations in 3D-LLMs. As part of our contributions, we propose a\ncomprehensive benchmark 3D-POPE to systematically evaluate hallucination in\n3D-LLMs, enabling fair comparisons among future models. Our experiments\nhighlight a scaling effect between dataset size and 3D-LLM performance,\nemphasizing the critical role of large-scale 3D-text datasets in advancing\nembodied AI research. Notably, our results demonstrate early signals for\neffective sim-to-real transfer, indicating that models trained on large\nsynthetic data can perform well on real-world 3D scans. Through 3D-GRAND and\n3D-POPE, we aim to equip the embodied AI community with essential resources and\ninsights, setting the stage for more reliable and better-grounded 3D-LLMs.\nProject website: https://3d-grand.github.io",
+      "upvotes": 27
+    },
+    {
+      "title": "MMWorld: Towards Multi-discipline Multi-faceted World Model Evaluation in Videos",
+      "url": "https://huggingface.co/papers/2406.08407",
+      "authors": [
+        "Kaizhi Zheng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.08407.pdf",
+      "abstract": "Multimodal Language Language Models (MLLMs) demonstrate the emerging\nabilities of \"world models\" -- interpreting and reasoning about complex\nreal-world dynamics. To assess these abilities, we posit videos are the ideal\nmedium, as they encapsulate rich representations of real-world dynamics and\ncausalities. To this end, we introduce MMWorld, a new benchmark for\nmulti-discipline, multi-faceted multimodal video understanding. MMWorld\ndistinguishes itself from previous video understanding benchmarks with two\nunique advantages: (1) multi-discipline, covering various disciplines that\noften require domain expertise for comprehensive understanding; (2)\nmulti-faceted reasoning, including explanation, counterfactual thinking, future\nprediction, etc. MMWorld consists of a human-annotated dataset to evaluate\nMLLMs with questions about the whole videos and a synthetic dataset to analyze\nMLLMs within a single modality of perception. Together, MMWorld encompasses\n1,910 videos across seven broad disciplines and 69 subdisciplines, complete\nwith 6,627 question-answer pairs and associated captions. The evaluation\nincludes 2 proprietary and 10 open-source MLLMs, which struggle on MMWorld\n(e.g., GPT-4V performs the best with only 52.3\\% accuracy), showing large room\nfor improvement. Further ablation studies reveal other interesting findings\nsuch as models' different skill sets from humans. We hope MMWorld can serve as\nan essential step towards world model evaluation in videos.",
+      "upvotes": 24
+    },
+    {
+      "title": "Turbo Sparse: Achieving LLM SOTA Performance with Minimal Activated Parameters",
+      "url": "https://huggingface.co/papers/2406.05955",
+      "authors": [
+        "Haotong Xie",
+        "Bo Wen",
+        "Li Ma",
+        "Haibo Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.05955.pdf",
+      "abstract": "Exploiting activation sparsity is a promising approach to significantly\naccelerating the inference process of large language models (LLMs) without\ncompromising performance. However, activation sparsity is determined by\nactivation functions, and commonly used ones like SwiGLU and GeGLU exhibit\nlimited sparsity. Simply replacing these functions with ReLU fails to achieve\nsufficient sparsity. Moreover, inadequate training data can further increase\nthe risk of performance degradation. To address these challenges, we propose a\nnovel dReLU function, which is designed to improve LLM activation sparsity,\nalong with a high-quality training data mixture ratio to facilitate effective\nsparsification. Additionally, we leverage sparse activation patterns within the\nFeed-Forward Network (FFN) experts of Mixture-of-Experts (MoE) models to\nfurther boost efficiency. By applying our neuron sparsification method to the\nMistral and Mixtral models, only 2.5 billion and 4.3 billion parameters are\nactivated per inference iteration, respectively, while achieving even more\npowerful model performance. Evaluation results demonstrate that this sparsity\nachieves a 2-5x decoding speedup. Remarkably, on mobile phones, our\nTurboSparse-Mixtral-47B achieves an inference speed of 11 tokens per second.\nOur models are available at https://huggingface.co/PowerInfer",
+      "upvotes": 22
+    },
+    {
+      "title": "FontStudio: Shape-Adaptive Diffusion Model for Coherent and Consistent Font Effect Generation",
+      "url": "https://huggingface.co/papers/2406.08392",
+      "authors": [
+        "Xinzhi Mu",
+        "Li Chen",
+        "Bohan Chen",
+        "Dong Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.08392.pdf",
+      "abstract": "Recently, the application of modern diffusion-based text-to-image generation\nmodels for creating artistic fonts, traditionally the domain of professional\ndesigners, has garnered significant interest. Diverging from the majority of\nexisting studies that concentrate on generating artistic typography, our\nresearch aims to tackle a novel and more demanding challenge: the generation of\ntext effects for multilingual fonts. This task essentially requires generating\ncoherent and consistent visual content within the confines of a font-shaped\ncanvas, as opposed to a traditional rectangular canvas. To address this task,\nwe introduce a novel shape-adaptive diffusion model capable of interpreting the\ngiven shape and strategically planning pixel distributions within the irregular\ncanvas. To achieve this, we curate a high-quality shape-adaptive image-text\ndataset and incorporate the segmentation mask as a visual condition to steer\nthe image generation process within the irregular-canvas. This approach enables\nthe traditionally rectangle canvas-based diffusion model to produce the desired\nconcepts in accordance with the provided geometric shapes. Second, to maintain\nconsistency across multiple letters, we also present a training-free,\nshape-adaptive effect transfer method for transferring textures from a\ngenerated reference letter to others. The key insights are building a font\neffect noise prior and propagating the font effect information in a\nconcatenated latent space. The efficacy of our FontStudio system is confirmed\nthrough user preference studies, which show a marked preference (78% win-rates\non aesthetics) for our system even when compared to the latest unrivaled\ncommercial product, Adobe Firefly.",
+      "upvotes": 18
+    },
+    {
+      "title": "AV-DiT: Efficient Audio-Visual Diffusion Transformer for Joint Audio and Video Generation",
+      "url": "https://huggingface.co/papers/2406.07686",
+      "authors": [
+        "Kai Wang",
+        "Jing Shi",
+        "Dimitrios Hatzinakos",
+        "Yapeng Tian"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.07686.pdf",
+      "abstract": "Recent Diffusion Transformers (DiTs) have shown impressive capabilities in\ngenerating high-quality single-modality content, including images, videos, and\naudio. However, it is still under-explored whether the transformer-based\ndiffuser can efficiently denoise the Gaussian noises towards superb multimodal\ncontent creation. To bridge this gap, we introduce AV-DiT, a novel and\nefficient audio-visual diffusion transformer designed to generate high-quality,\nrealistic videos with both visual and audio tracks. To minimize model\ncomplexity and computational costs, AV-DiT utilizes a shared DiT backbone\npre-trained on image-only data, with only lightweight, newly inserted adapters\nbeing trainable. This shared backbone facilitates both audio and video\ngeneration. Specifically, the video branch incorporates a trainable temporal\nattention layer into a frozen pre-trained DiT block for temporal consistency.\nAdditionally, a small number of trainable parameters adapt the image-based DiT\nblock for audio generation. An extra shared DiT block, equipped with\nlightweight parameters, facilitates feature interaction between audio and\nvisual modalities, ensuring alignment. Extensive experiments on the AIST++ and\nLandscape datasets demonstrate that AV-DiT achieves state-of-the-art\nperformance in joint audio-visual generation with significantly fewer tunable\nparameters. Furthermore, our results highlight that a single shared image\ngenerative backbone with modality-specific adaptations is sufficient for\nconstructing a joint audio-video generator. Our source code and pre-trained\nmodels will be released.",
+      "upvotes": 14
+    },
+    {
+      "title": "Discovering Preference Optimization Algorithms with and for Large Language Models",
+      "url": "https://huggingface.co/papers/2406.08414",
+      "authors": [
+        "Jakob Foerster",
+        "Mihaela van der Schaar",
+        "Robert Tjarko Lange"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.08414.pdf",
+      "abstract": "Offline preference optimization is a key method for enhancing and controlling\nthe quality of Large Language Model (LLM) outputs. Typically, preference\noptimization is approached as an offline supervised learning task using\nmanually-crafted convex loss functions. While these methods are based on\ntheoretical insights, they are inherently constrained by human creativity, so\nthe large search space of possible loss functions remains under explored. We\naddress this by performing LLM-driven objective discovery to automatically\ndiscover new state-of-the-art preference optimization algorithms without\n(expert) human intervention. Specifically, we iteratively prompt an LLM to\npropose and implement new preference optimization loss functions based on\npreviously-evaluated performance metrics. This process leads to the discovery\nof previously-unknown and performant preference optimization algorithms. The\nbest performing of these we call Discovered Preference Optimization (DiscoPOP),\na novel algorithm that adaptively blends logistic and exponential losses.\nExperiments demonstrate the state-of-the-art performance of DiscoPOP and its\nsuccessful transfer to held-out tasks.",
+      "upvotes": 13
+    },
+    {
+      "title": "Hierarchical Patch Diffusion Models for High-Resolution Video Generation",
+      "url": "https://huggingface.co/papers/2406.07792",
+      "authors": [
+        "Sergey Tulyakov"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.07792.pdf",
+      "abstract": "Diffusion models have demonstrated remarkable performance in image and video\nsynthesis. However, scaling them to high-resolution inputs is challenging and\nrequires restructuring the diffusion pipeline into multiple independent\ncomponents, limiting scalability and complicating downstream applications. This\nmakes it very efficient during training and unlocks end-to-end optimization on\nhigh-resolution videos. We improve PDMs in two principled ways. First, to\nenforce consistency between patches, we develop deep context fusion -- an\narchitectural technique that propagates the context information from low-scale\nto high-scale patches in a hierarchical manner. Second, to accelerate training\nand inference, we propose adaptive computation, which allocates more network\ncapacity and computation towards coarse image details. The resulting model sets\na new state-of-the-art FVD score of 66.32 and Inception Score of 87.68 in\nclass-conditional video generation on UCF-101 256^2, surpassing recent\nmethods by more than 100%. Then, we show that it can be rapidly fine-tuned from\na base 36times 64 low-resolution generator for high-resolution 64 times\n288 times 512 text-to-video synthesis. To the best of our knowledge, our\nmodel is the first diffusion-based architecture which is trained on such high\nresolutions entirely end-to-end. Project webpage:\nhttps://snap-research.github.io/hpdm.",
+      "upvotes": 13
+    },
+    {
+      "title": "Beyond LLaVA-HD: Diving into High-Resolution Large Multimodal Models",
+      "url": "https://huggingface.co/papers/2406.08487",
+      "authors": [
+        "Qingsong Wen",
+        "Chaoyou Fu",
+        "Xue Wang",
+        "Zhang Zhang",
+        "Liang Wang",
+        "Rong Jin"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.08487.pdf",
+      "abstract": "Seeing clearly with high resolution is a foundation of Large Multimodal\nModels (LMMs), which has been proven to be vital for visual perception and\nreasoning. Existing works usually employ a straightforward resolution upscaling\nmethod, where the image consists of global and local branches, with the latter\nbeing the sliced image patches but resized to the same resolution as the\nformer. This means that higher resolution requires more local patches,\nresulting in exorbitant computational expenses, and meanwhile, the dominance of\nlocal image tokens may diminish the global context. In this paper, we dive into\nthe problems and propose a new framework as well as an elaborate optimization\nstrategy. Specifically, we extract contextual information from the global view\nusing a mixture of adapters, based on the observation that different adapters\nexcel at different tasks. With regard to local patches, learnable query\nembeddings are introduced to reduce image tokens, the most important tokens\naccounting for the user question will be further selected by a similarity-based\nselector. Our empirical results demonstrate a `less is more' pattern, where\nutilizing fewer but more informative local image tokens leads to\nimproved performance. Besides, a significant challenge lies in the training\nstrategy, as simultaneous end-to-end training of the global mining block and\nlocal compression block does not yield optimal results. We thus advocate for an\nalternating training way, ensuring balanced learning between global and local\naspects. Finally, we also introduce a challenging dataset with high\nrequirements for image detail, enhancing the training of the local compression\nlayer. The proposed method, termed LMM with Sophisticated Tasks, Local image\ncompression, and Mixture of global Experts (SliME), achieves leading\nperformance across various benchmarks with only 2 million training data.",
+      "upvotes": 11
+    },
+    {
+      "title": "VCR: Visual Caption Restoration",
+      "url": "https://huggingface.co/papers/2406.06462",
+      "authors": [
+        "Perouz Taslakian",
+        "Yoshua Bengio"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.06462.pdf",
+      "abstract": "We introduce Visual Caption Restoration (VCR), a novel vision-language task\nthat challenges models to accurately restore partially obscured texts using\npixel-level hints within images. This task stems from the observation that text\nembedded in images is intrinsically different from common visual elements and\nnatural language due to the need to align the modalities of vision, text, and\ntext embedded in images. While numerous works have integrated text embedded in\nimages into visual question-answering tasks, approaches to these tasks\ngenerally rely on optical character recognition or masked language modeling,\nthus reducing the task to mainly text-based processing. However, text-based\nprocessing becomes ineffective in VCR as accurate text restoration depends on\nthe combined information from provided images, context, and subtle cues from\nthe tiny exposed areas of masked texts. We develop a pipeline to generate\nsynthetic images for the VCR task using image-caption pairs, with adjustable\ncaption visibility to control the task difficulty. With this pipeline, we\nconstruct a dataset for VCR called VCR-Wiki using images with captions from\nWikipedia, comprising 2.11M English and 346K Chinese entities in both easy and\nhard split variants. Our results reveal that current vision language models\nsignificantly lag behind human performance in the VCR task, and merely\nfine-tuning the models on our dataset does not lead to notable improvements. We\nrelease VCR-Wiki and the data construction code to facilitate future research.",
+      "upvotes": 10
+    },
+    {
+      "title": "Large Language Model Unlearning via Embedding-Corrupted Prompts",
+      "url": "https://huggingface.co/papers/2406.07933",
+      "authors": [
+        "Jeffrey Flanigan",
+        "Yang Liu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.07933.pdf",
+      "abstract": "Large language models (LLMs) have advanced to encompass extensive knowledge\nacross diverse domains. Yet controlling what a large language model should not\nknow is important for ensuring alignment and thus safe use. However, accurately\nand efficiently unlearning knowledge from an LLM remains challenging due to the\npotential collateral damage caused by the fuzzy boundary between retention and\nforgetting, and the large computational requirements for optimization across\nstate-of-the-art models with hundreds of billions of parameters. In this work,\nwe present Embedding-COrrupted (ECO) Prompts, a lightweight unlearning\nframework for large language models to address both the challenges of knowledge\nentanglement and unlearning efficiency. Instead of relying on the LLM itself to\nunlearn, we enforce an unlearned state during inference by employing a prompt\nclassifier to identify and safeguard prompts to forget. We learn corruptions\nadded to prompt embeddings via zeroth order optimization toward the unlearning\nobjective offline and corrupt prompts flagged by the classifier during\ninference. We find that these embedding-corrupted prompts not only lead to\ndesirable outputs that satisfy the unlearning objective but also closely\napproximate the output from a model that has never been trained on the data\nintended for forgetting. Through extensive experiments on unlearning, we\ndemonstrate the superiority of our method in achieving promising unlearning at\nnearly zero side effects in general domains and domains closely related to the\nunlearned ones. Additionally, we highlight the scalability of our method to 100\nLLMs, ranging from 0.5B to 236B parameters, incurring no additional cost as the\nnumber of parameters increases.",
+      "upvotes": 7
+    },
+    {
+      "title": "Chimera: Effectively Modeling Multivariate Time Series with 2-Dimensional State Space Models",
+      "url": "https://huggingface.co/papers/2406.04320",
+      "authors": [
+        "Michele Santacatterina",
+        "Ramin Zabih"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.04320.pdf",
+      "abstract": "Modeling multivariate time series is a well-established problem with a wide\nrange of applications from healthcare to financial markets. Traditional State\nSpace Models (SSMs) are classical approaches for univariate time series\nmodeling due to their simplicity and expressive power to represent linear\ndependencies. They, however, have fundamentally limited expressive power to\ncapture non-linear dependencies, are slow in practice, and fail to model the\ninter-variate information flow. Despite recent attempts to improve the\nexpressive power of SSMs by using deep structured SSMs, the existing methods\nare either limited to univariate time series, fail to model complex patterns\n(e.g., seasonal patterns), fail to dynamically model the dependencies of\nvariate and time dimensions, and/or are input-independent. We present Chimera\nthat uses two input-dependent 2-D SSM heads with different discretization\nprocesses to learn long-term progression and seasonal patterns. To improve the\nefficiency of complex 2D recurrence, we present a fast training using a new\n2-dimensional parallel selective scan. We further present and discuss\n2-dimensional Mamba and Mamba-2 as the spacial cases of our 2D SSM. Our\nexperimental evaluation shows the superior performance of Chimera on extensive\nand diverse benchmarks, including ECG and speech time series classification,\nlong-term and short-term time series forecasting, and time series anomaly\ndetection.",
+      "upvotes": 7
+    },
+    {
+      "title": "Hibou: A Family of Foundational Vision Transformers for Pathology",
+      "url": "https://huggingface.co/papers/2406.05074",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2406.05074.pdf",
+      "abstract": "Pathology, the microscopic examination of diseased tissue, is critical for\ndiagnosing various medical conditions, particularly cancers. Traditional\nmethods are labor-intensive and prone to human error. Digital pathology, which\nconverts glass slides into high-resolution digital images for analysis by\ncomputer algorithms, revolutionizes the field by enhancing diagnostic accuracy,\nconsistency, and efficiency through automated image analysis and large-scale\ndata processing. Foundational transformer pretraining is crucial for developing\nrobust, generalizable models as it enables learning from vast amounts of\nunannotated data.\n  This paper introduces the Hibou family of foundational vision transformers\nfor pathology, leveraging the DINOv2 framework to pretrain two model variants,\nHibou-B and Hibou-L, on a proprietary dataset of over 1 million whole slide\nimages (WSIs) representing diverse tissue types and staining techniques. Our\npretrained models demonstrate superior performance on both patch-level and\nslide-level benchmarks, surpassing existing state-of-the-art methods. Notably,\nHibou-L achieves the highest average accuracy across multiple benchmark\ndatasets. To support further research and application in the field, we have\nopen-sourced the Hibou-B model, which can be accessed at\nhttps://github.com/HistAI/hibou",
+      "upvotes": 6
+    },
+    {
+      "title": "Simplified and Generalized Masked Diffusion for Discrete Data",
+      "url": "https://huggingface.co/papers/2406.04329",
+      "authors": [
+        "Kehang Han",
+        "Michalis K. Titsias"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.04329.pdf",
+      "abstract": "Masked (or absorbing) diffusion is actively explored as an alternative to\nautoregressive models for generative modeling of discrete data. However,\nexisting work in this area has been hindered by unnecessarily complex model\nformulations and unclear relationships between different perspectives, leading\nto suboptimal parameterization, training objectives, and ad hoc adjustments to\ncounteract these issues. In this work, we aim to provide a simple and general\nframework that unlocks the full potential of masked diffusion models. We show\nthat the continuous-time variational objective of masked diffusion models is a\nsimple weighted integral of cross-entropy losses. Our framework also enables\ntraining generalized masked diffusion models with state-dependent masking\nschedules. When evaluated by perplexity, our models trained on OpenWebText\nsurpass prior diffusion language models at GPT-2 scale and demonstrate superior\nperformance on 4 out of 5 zero-shot language modeling tasks. Furthermore, our\nmodels vastly outperform previous discrete diffusion models on pixel-level\nimage modeling, achieving 2.78~(CIFAR-10) and 3.42 (ImageNet 64times64) bits\nper dimension that are comparable or better than autoregressive models of\nsimilar sizes.",
+      "upvotes": 4
+    }
+  ]
+}

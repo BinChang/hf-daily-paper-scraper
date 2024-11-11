@@ -1,0 +1,219 @@
+{
+  "date": "2024-02-06",
+  "papers": [
+    {
+      "title": "DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models",
+      "url": "https://huggingface.co/papers/2402.03300",
+      "authors": [
+        "Runxin Xu",
+        "Mingchuan Zhang",
+        "Y. K. Li",
+        "Y. Wu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.03300.pdf",
+      "abstract": "Mathematical reasoning poses a significant challenge for language models due\nto its complex and structured nature. In this paper, we introduce DeepSeekMath\n7B, which continues pre-training DeepSeek-Coder-Base-v1.5 7B with 120B\nmath-related tokens sourced from Common Crawl, together with natural language\nand code data. DeepSeekMath 7B has achieved an impressive score of 51.7% on the\ncompetition-level MATH benchmark without relying on external toolkits and\nvoting techniques, approaching the performance level of Gemini-Ultra and GPT-4.\nSelf-consistency over 64 samples from DeepSeekMath 7B achieves 60.9% on MATH.\nThe mathematical reasoning capability of DeepSeekMath is attributed to two key\nfactors: First, we harness the significant potential of publicly available web\ndata through a meticulously engineered data selection pipeline. Second, we\nintroduce Group Relative Policy Optimization (GRPO), a variant of Proximal\nPolicy Optimization (PPO), that enhances mathematical reasoning abilities while\nconcurrently optimizing the memory usage of PPO.",
+      "upvotes": 69
+    },
+    {
+      "title": "Training-Free Consistent Text-to-Image Generation",
+      "url": "https://huggingface.co/papers/2402.03286",
+      "authors": [
+        "Yoad Tewel",
+        "Omri Kaduri",
+        "Rinon Gal",
+        "Yoni Kasten",
+        "Lior Wolf",
+        "Gal Chechik",
+        "Yuval Atzmon"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.03286.pdf",
+      "abstract": "Text-to-image models offer a new level of creative flexibility by allowing\nusers to guide the image generation process through natural language. However,\nusing these models to consistently portray the same subject across diverse\nprompts remains challenging. Existing approaches fine-tune the model to teach\nit new words that describe specific user-provided subjects or add image\nconditioning to the model. These methods require lengthy per-subject\noptimization or large-scale pre-training. Moreover, they struggle to align\ngenerated images with text prompts and face difficulties in portraying multiple\nsubjects. Here, we present ConsiStory, a training-free approach that enables\nconsistent subject generation by sharing the internal activations of the\npretrained model. We introduce a subject-driven shared attention block and\ncorrespondence-based feature injection to promote subject consistency between\nimages. Additionally, we develop strategies to encourage layout diversity while\nmaintaining subject consistency. We compare ConsiStory to a range of baselines,\nand demonstrate state-of-the-art performance on subject consistency and text\nalignment, without requiring a single optimization step. Finally, ConsiStory\ncan naturally extend to multi-subject scenarios, and even enable training-free\npersonalization for common objects.",
+      "upvotes": 65
+    },
+    {
+      "title": "OpenMoE: An Early Effort on Open Mixture-of-Experts Language Models",
+      "url": "https://huggingface.co/papers/2402.01739",
+      "authors": [
+        "Fuzhao Xue",
+        "Zangwei Zheng",
+        "Yang You"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.01739.pdf",
+      "abstract": "To help the open-source community have a better understanding of\nMixture-of-Experts (MoE) based large language models (LLMs), we train and\nrelease OpenMoE, a series of fully open-sourced and reproducible decoder-only\nMoE LLMs, ranging from 650M to 34B parameters and trained on up to over 1T\ntokens. Our investigation confirms that MoE-based LLMs can offer a more\nfavorable cost-effectiveness trade-off than dense LLMs, highlighting the\npotential effectiveness for future LLM development.\n  One more important contribution of this study is an in-depth analysis of the\nrouting mechanisms within our OpenMoE models, leading to three significant\nfindings: Context-Independent Specialization, Early Routing Learning, and\nDrop-towards-the-End. We discovered that routing decisions in MoE models are\npredominantly based on token IDs, with minimal context relevance. The\ntoken-to-expert assignments are determined early in the pre-training phase and\nremain largely unchanged. This imperfect routing can result in performance\ndegradation, particularly in sequential tasks like multi-turn conversations,\nwhere tokens appearing later in a sequence are more likely to be dropped.\nFinally, we rethink our design based on the above-mentioned observations and\nanalysis. To facilitate future MoE LLM development, we propose potential\nstrategies for mitigating the issues we found and further improving\noff-the-shelf MoE LLM designs.",
+      "upvotes": 26
+    },
+    {
+      "title": "BlackMamba: Mixture of Experts for State-Space Models",
+      "url": "https://huggingface.co/papers/2402.01771",
+      "authors": [
+        "Paolo Glorioso"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.01771.pdf",
+      "abstract": "State-space models (SSMs) have recently demonstrated competitive performance\nto transformers at large-scale language modeling benchmarks while achieving\nlinear time and memory complexity as a function of sequence length. Mamba, a\nrecently released SSM model, shows impressive performance in both language\nmodeling and long sequence processing tasks. Simultaneously, mixture-of-expert\n(MoE) models have shown remarkable performance while significantly reducing the\ncompute and latency costs of inference at the expense of a larger memory\nfootprint. In this paper, we present BlackMamba, a novel architecture that\ncombines the Mamba SSM with MoE to obtain the benefits of both. We demonstrate\nthat BlackMamba performs competitively against both Mamba and transformer\nbaselines, and outperforms in inference and training FLOPs. We fully train and\nopen-source 340M/1.5B and 630M/2.8B BlackMamba models on 300B tokens of a\ncustom dataset. We show that BlackMamba inherits and combines both of the\nbenefits of SSM and MoE architectures, combining linear-complexity generation\nfrom SSM with cheap and fast inference from MoE. We release all weights,\ncheckpoints, and inference code open-source. Inference code at:\nhttps://github.com/Zyphra/BlackMamba",
+      "upvotes": 23
+    },
+    {
+      "title": "Rethinking Interpretability in the Era of Large Language Models",
+      "url": "https://huggingface.co/papers/2402.01761",
+      "authors": [
+        "Jeevana Priya Inala",
+        "Michel Galley",
+        "Rich Caruana",
+        "Jianfeng Gao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.01761.pdf",
+      "abstract": "Interpretable machine learning has exploded as an area of interest over the\nlast decade, sparked by the rise of increasingly large datasets and deep neural\nnetworks. Simultaneously, large language models (LLMs) have demonstrated\nremarkable capabilities across a wide array of tasks, offering a chance to\nrethink opportunities in interpretable machine learning. Notably, the\ncapability to explain in natural language allows LLMs to expand the scale and\ncomplexity of patterns that can be given to a human. However, these new\ncapabilities raise new challenges, such as hallucinated explanations and\nimmense computational costs.\n  In this position paper, we start by reviewing existing methods to evaluate\nthe emerging field of LLM interpretation (both interpreting LLMs and using LLMs\nfor explanation). We contend that, despite their limitations, LLMs hold the\nopportunity to redefine interpretability with a more ambitious scope across\nmany applications, including in auditing LLMs themselves. We highlight two\nemerging research priorities for LLM interpretation: using LLMs to directly\nanalyze new datasets and to generate interactive explanations.",
+      "upvotes": 21
+    },
+    {
+      "title": "LiPO: Listwise Preference Optimization through Learning-to-Rank",
+      "url": "https://huggingface.co/papers/2402.01878",
+      "authors": [
+        "Junru Wu",
+        "Jiaming Shen",
+        "Rishabh Joshi",
+        "Yao Zhao",
+        "Mohammad Saleh",
+        "Simon Baumgartner",
+        "Jialu Liu",
+        "Xuanhui Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.01878.pdf",
+      "abstract": "Aligning language models (LMs) with curated human feedback is critical to\ncontrol their behaviors in real-world applications. Several recent policy\noptimization methods, such as DPO and SLiC, serve as promising alternatives to\nthe traditional Reinforcement Learning from Human Feedback (RLHF) approach. In\npractice, human feedback often comes in a format of a ranked list over multiple\nresponses to amortize the cost of reading prompt. Multiple responses can also\nbe ranked by reward models or AI feedback. There lacks such a study on directly\nfitting upon a list of responses. In this work, we formulate the LM alignment\nas a listwise ranking problem and describe the Listwise Preference Optimization\n(LiPO) framework, where the policy can potentially learn more effectively from\na ranked list of plausible responses given the prompt. This view draws an\nexplicit connection to Learning-to-Rank (LTR), where most existing preference\noptimization work can be mapped to existing ranking objectives, especially\npairwise ones. Following this connection, we provide an examination of ranking\nobjectives that are not well studied for LM alignment withDPO and SLiC as\nspecial cases when list size is two. In particular, we highlight a specific\nmethod, LiPO-{\\lambda}, which leverages a state-of-the-art listwise ranking\nobjective and weights each preference pair in a more advanced manner. We show\nthat LiPO-{\\lambda} can outperform DPO and SLiC by a clear margin on two\npreference alignment tasks.",
+      "upvotes": 19
+    },
+    {
+      "title": "Direct-a-Video: Customized Video Generation with User-Directed Camera Movement and Object Motion",
+      "url": "https://huggingface.co/papers/2402.03162",
+      "authors": [
+        "Shiyuan Yang",
+        "Liang Hou",
+        "Haibin Huang",
+        "Chongyang Ma",
+        "Pengfei Wan",
+        "Di Zhang",
+        "Xiaodong Chen",
+        "Jing Liao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.03162.pdf",
+      "abstract": "Recent text-to-video diffusion models have achieved impressive progress. In\npractice, users often desire the ability to control object motion and camera\nmovement independently for customized video creation. However, current methods\nlack the focus on separately controlling object motion and camera movement in a\ndecoupled manner, which limits the controllability and flexibility of\ntext-to-video models. In this paper, we introduce Direct-a-Video, a system that\nallows users to independently specify motions for one or multiple objects\nand/or camera movements, as if directing a video. We propose a simple yet\neffective strategy for the decoupled control of object motion and camera\nmovement. Object motion is controlled through spatial cross-attention\nmodulation using the model's inherent priors, requiring no additional\noptimization. For camera movement, we introduce new temporal cross-attention\nlayers to interpret quantitative camera movement parameters. We further employ\nan augmentation-based approach to train these layers in a self-supervised\nmanner on a small-scale dataset, eliminating the need for explicit motion\nannotation. Both components operate independently, allowing individual or\ncombined control, and can generalize to open-domain scenarios. Extensive\nexperiments demonstrate the superiority and effectiveness of our method.\nProject page: https://direct-a-video.github.io/.",
+      "upvotes": 17
+    },
+    {
+      "title": "InteractiveVideo: User-Centric Controllable Video Generation with Synergistic Multimodal Instructions",
+      "url": "https://huggingface.co/papers/2402.03040",
+      "authors": [
+        "Yuhao Kang",
+        "Zhixin Zhang",
+        "Xiaohan Ding",
+        "Sanyuan Zhao",
+        "Xiangyu Yue"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.03040.pdf",
+      "abstract": "We introduce InteractiveVideo, a user-centric framework for video\ngeneration. Different from traditional generative approaches that operate based\non user-provided images or text, our framework is designed for dynamic\ninteraction, allowing users to instruct the generative model through various\nintuitive mechanisms during the whole generation process, e.g. text and image\nprompts, painting, drag-and-drop, etc. We propose a Synergistic Multimodal\nInstruction mechanism, designed to seamlessly integrate users' multimodal\ninstructions into generative models, thus facilitating a cooperative and\nresponsive interaction between user inputs and the generative process. This\napproach enables iterative and fine-grained refinement of the generation result\nthrough precise and effective user instructions. With\nInteractiveVideo, users are given the flexibility to meticulously\ntailor key aspects of a video. They can paint the reference image, edit\nsemantics, and adjust video motions until their requirements are fully met.\nCode, models, and demo are available at\nhttps://github.com/invictus717/InteractiveVideo",
+      "upvotes": 17
+    },
+    {
+      "title": "V-IRL: Grounding Virtual Intelligence in Real Life",
+      "url": "https://huggingface.co/papers/2402.03310",
+      "authors": [
+        "Xiaojuan Qi",
+        "Saining Xie"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.03310.pdf",
+      "abstract": "There is a sensory gulf between the Earth that humans inhabit and the digital\nrealms in which modern AI agents are created. To develop AI agents that can\nsense, think, and act as flexibly as humans in real-world settings, it is\nimperative to bridge the realism gap between the digital and physical worlds.\nHow can we embody agents in an environment as rich and diverse as the one we\ninhabit, without the constraints imposed by real hardware and control? Towards\nthis end, we introduce V-IRL: a platform that enables agents to scalably\ninteract with the real world in a virtual yet realistic environment. Our\nplatform serves as a playground for developing agents that can accomplish\nvarious practical tasks and as a vast testbed for measuring progress in\ncapabilities spanning perception, decision-making, and interaction with\nreal-world data across the entire globe.",
+      "upvotes": 15
+    },
+    {
+      "title": "Video-LaVIT: Unified Video-Language Pre-training with Decoupled Visual-Motional Tokenization",
+      "url": "https://huggingface.co/papers/2402.03161",
+      "authors": [
+        "Kun Xu",
+        "Kun Xu",
+        "Liwei Chen",
+        "Hao Jiang",
+        "Quzhe Huang",
+        "Chengru Song",
+        "Yuliang Liu",
+        "Di Zhang",
+        "Yang Song",
+        "Kun Gai",
+        "Yadong Mu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.03161.pdf",
+      "abstract": "In light of recent advances in multimodal Large Language Models (LLMs), there\nis increasing attention to scaling them from image-text data to more\ninformative real-world videos. Compared to static images, video poses unique\nchallenges for effective large-scale pre-training due to the modeling of its\nspatiotemporal dynamics. In this paper, we address such limitations in\nvideo-language pre-training with an efficient video decomposition that\nrepresents each video as keyframes and temporal motions. These are then adapted\nto an LLM using well-designed tokenizers that discretize visual and temporal\ninformation as a few tokens, thus enabling unified generative pre-training of\nvideos, images, and text. At inference, the generated tokens from the LLM are\ncarefully recovered to the original continuous pixel space to create various\nvideo content. Our proposed framework is both capable of comprehending and\ngenerating image and video content, as demonstrated by its competitive\nperformance across 13 multimodal benchmarks in image and video understanding\nand generation. Our code and models will be available at\nhttps://video-lavit.github.io.",
+      "upvotes": 14
+    },
+    {
+      "title": "Shortened LLaMA: A Simple Depth Pruning for Large Language Models",
+      "url": "https://huggingface.co/papers/2402.02834",
+      "authors": [
+        "Shinkook Choi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.02834.pdf",
+      "abstract": "Structured pruning of modern large language models (LLMs) has emerged as a\nway of decreasing their high computational needs. Width pruning reduces the\nsize of projection weight matrices (e.g., by removing attention heads) while\nmaintaining the number of layers. Depth pruning, in contrast, removes entire\nlayers or blocks, while keeping the size of the remaining weights unchanged.\nMost current research focuses on either width-only or a blend of width and\ndepth pruning, with little comparative analysis between the two units (width\nvs. depth) concerning their impact on LLM inference efficiency. In this work,\nwe show that a simple depth pruning approach can compete with recent width\npruning methods in terms of zero-shot task performance. Our pruning method\nboosts inference speeds, especially under memory-constrained conditions that\nrequire limited batch sizes for running LLMs, where width pruning is\nineffective. We hope this work can help deploy LLMs on local and edge devices.",
+      "upvotes": 14
+    },
+    {
+      "title": "Audio Flamingo: A Novel Audio Language Model with Few-Shot Learning and Dialogue Abilities",
+      "url": "https://huggingface.co/papers/2402.01831",
+      "authors": [
+        "Arushi Goel",
+        "Rohan Badlani",
+        "Rafael Valle",
+        "Bryan Catanzaro"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.01831.pdf",
+      "abstract": "Augmenting large language models (LLMs) to understand audio -- including\nnon-speech sounds and non-verbal speech -- is critically important for diverse\nreal-world applications of LLMs. In this paper, we propose Audio Flamingo, a\nnovel audio language model with 1) strong audio understanding abilities, 2) the\nability to quickly adapt to unseen tasks via in-context learning and retrieval,\nand 3) strong multi-turn dialogue abilities. We introduce a series of training\ntechniques, architecture design, and data strategies to enhance our model with\nthese abilities. Extensive evaluations across various audio understanding tasks\nconfirm the efficacy of our method, setting new state-of-the-art benchmarks.",
+      "upvotes": 13
+    },
+    {
+      "title": "Rethinking Optimization and Architecture for Tiny Language Models",
+      "url": "https://huggingface.co/papers/2402.02791",
+      "authors": [
+        "Yehui Tang",
+        "Fangcheng Liu",
+        "Yunsheng Ni",
+        "Yuchuan Tian",
+        "Zheyuan Bai",
+        "Yi-Qi Hu",
+        "Sichao Liu",
+        "Shangling Jui",
+        "Yunhe Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.02791.pdf",
+      "abstract": "The power of large language models (LLMs) has been demonstrated through\nnumerous data and computing resources. However, the application of language\nmodels on mobile devices is facing huge challenge on the computation and memory\ncosts, that is, tiny language models with high performance are urgently\nrequired. Limited by the highly complex training process, there are many\ndetails for optimizing language models that are seldom studied carefully. In\nthis study, based on a tiny language model with 1B parameters, we carefully\ndesign a series of empirical study to analyze the effect of each component.\nThree perspectives are mainly discussed, i.e., neural architecture, parameter\ninitialization, and optimization strategy. Several design formulas are\nempirically proved especially effective for tiny language models, including\ntokenizer compression, architecture tweaking, parameter inheritance and\nmultiple-round training. Then we train PanGu-pi-1B Pro and PanGu-pi-1.5B\nPro on 1.6T multilingual corpora, following the established formulas.\nExperimental results demonstrate the improved optimization and architecture\nyield a notable average improvement of 8.87 on benchmark evaluation sets for\nPanGu-pi-1B Pro. Besides, PanGu-pi-1.5B Pro surpasses a range of SOTA\nmodels with larger model sizes, validating its superior performance. The code\nwill be released soon (https://github.com/YuchuanTian/RethinkTinyLM).",
+      "upvotes": 12
+    },
+    {
+      "title": "Code Representation Learning At Scale",
+      "url": "https://huggingface.co/papers/2402.01935",
+      "authors": [
+        "Wasi Ahmad",
+        "Ming Tan",
+        "Hantian Ding",
+        "Ramesh Nallapati",
+        "Dan Roth",
+        "Xiaofei Ma",
+        "Bing Xiang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.01935.pdf",
+      "abstract": "Recent studies have shown that code language models at scale demonstrate\nsignificant performance gains on downstream tasks, i.e., code generation.\nHowever, most of the existing works on code representation learning train\nmodels at a hundred million parameter scale using very limited pretraining\ncorpora. In this work, we fuel code representation learning with a vast amount\nof code data via a two-stage pretraining scheme. We first train the encoders\nvia a mix that leverages both randomness in masking language modeling and the\nstructure aspect of programming language. We then enhance the representations\nvia contrastive learning with hard negative and hard positive constructed in an\nunsupervised manner. We establish an off-the-shelf encoder model that\npersistently outperforms the existing models on a wide variety of downstream\ntasks by large margins. To comprehend the factors contributing to successful\ncode representation learning, we conduct detailed ablations and share our\nfindings on (i) a customized and effective token-level denoising scheme for\nsource code; (ii) the importance of hard negatives and hard positives; (iii)\nhow the proposed bimodal contrastive learning boost the cross-lingual semantic\nsearch performance; and (iv) how the pretraining schemes decide the downstream\ntask performance scales with the model size.",
+      "upvotes": 12
+    },
+    {
+      "title": "DiffEditor: Boosting Accuracy and Flexibility on Diffusion-based Image Editing",
+      "url": "https://huggingface.co/papers/2402.02583",
+      "authors": [
+        "Chong Mou",
+        "Xintao Wang",
+        "Jiechong Song",
+        "Ying Shan",
+        "Jian Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.02583.pdf",
+      "abstract": "Large-scale Text-to-Image (T2I) diffusion models have revolutionized image\ngeneration over the last few years. Although owning diverse and high-quality\ngeneration capabilities, translating these abilities to fine-grained image\nediting remains challenging. In this paper, we propose DiffEditor to rectify\ntwo weaknesses in existing diffusion-based image editing: (1) in complex\nscenarios, editing results often lack editing accuracy and exhibit unexpected\nartifacts; (2) lack of flexibility to harmonize editing operations, e.g.,\nimagine new content. In our solution, we introduce image prompts in\nfine-grained image editing, cooperating with the text prompt to better describe\nthe editing content. To increase the flexibility while maintaining content\nconsistency, we locally combine stochastic differential equation (SDE) into the\nordinary differential equation (ODE) sampling. In addition, we incorporate\nregional score-based gradient guidance and a time travel strategy into the\ndiffusion sampling, further improving the editing quality. Extensive\nexperiments demonstrate that our method can efficiently achieve\nstate-of-the-art performance on various fine-grained image editing tasks,\nincluding editing within a single image (e.g., object moving, resizing, and\ncontent dragging) and across images (e.g., appearance replacing and object\npasting). Our source code is released at\nhttps://github.com/MC-E/DragonDiffusion.",
+      "upvotes": 7
+    }
+  ]
+}

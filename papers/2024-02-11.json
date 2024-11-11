@@ -1,0 +1,200 @@
+{
+  "date": "2024-02-11",
+  "papers": [
+    {
+      "title": "More Agents Is All You Need",
+      "url": "https://huggingface.co/papers/2402.05120",
+      "authors": [
+        "Junyou Li",
+        "Qin Zhang",
+        "Yangbin Yu",
+        "Qiang Fu",
+        "Deheng Ye"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.05120.pdf",
+      "abstract": "We find that, simply via a sampling-and-voting method, the performance of\nlarge language models (LLMs) scales with the number of agents instantiated.\nAlso, this method is orthogonal to existing complicated methods to further\nenhance LLMs, while the degree of enhancement is correlated to the task\ndifficulty. We conduct comprehensive experiments on a wide range of LLM\nbenchmarks to verify the presence of our finding, and to study the properties\nthat can facilitate its occurrence. Our code is publicly available at:\nhttps://anonymous.4open.science/r/more_agent_is_all_you_need.",
+      "upvotes": 51
+    },
+    {
+      "title": "WebLINX: Real-World Website Navigation with Multi-Turn Dialogue",
+      "url": "https://huggingface.co/papers/2402.05930",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2402.05930.pdf",
+      "abstract": "We propose the problem of conversational web navigation, where a digital\nagent controls a web browser and follows user instructions to solve real-world\ntasks in a multi-turn dialogue fashion. To support this problem, we introduce\nWEBLINX - a large-scale benchmark of 100K interactions across 2300 expert\ndemonstrations of conversational web navigation. Our benchmark covers a broad\nrange of patterns on over 150 real-world websites and can be used to train and\nevaluate agents in diverse scenarios. Due to the magnitude of information\npresent, Large Language Models (LLMs) cannot process entire web pages in\nreal-time. To solve this bottleneck, we design a retrieval-inspired model that\nefficiently prunes HTML pages by ranking relevant elements. We use the selected\nelements, along with screenshots and action history, to assess a variety of\nmodels for their ability to replicate human behavior when navigating the web.\nOur experiments span from small text-only to proprietary multimodal LLMs. We\nfind that smaller finetuned decoders surpass the best zero-shot LLMs (including\nGPT-4V), but also larger finetuned multimodal models which were explicitly\npretrained on screenshots. However, all finetuned models struggle to generalize\nto unseen websites. Our findings highlight the need for large multimodal models\nthat can generalize to novel settings. Our code, data and models are available\nfor research: https://mcgill-nlp.github.io/weblinx",
+      "upvotes": 39
+    },
+    {
+      "title": "An Interactive Agent Foundation Model",
+      "url": "https://huggingface.co/papers/2402.05929",
+      "authors": [
+        "Paul Tang",
+        "Kevin Schulman",
+        "Arnold Milstein",
+        "Demetri Terzopoulos",
+        "Ade Famoti",
+        "Noboru Kuno",
+        "Ashley Llorens",
+        "Katsu Ikeuchi",
+        "Li Fei-Fei",
+        "Qiuyuan Huang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.05929.pdf",
+      "abstract": "The development of artificial intelligence systems is transitioning from\ncreating static, task-specific models to dynamic, agent-based systems capable\nof performing well in a wide range of applications. We propose an Interactive\nAgent Foundation Model that uses a novel multi-task agent training paradigm for\ntraining AI agents across a wide range of domains, datasets, and tasks. Our\ntraining paradigm unifies diverse pre-training strategies, including visual\nmasked auto-encoders, language modeling, and next-action prediction, enabling a\nversatile and adaptable AI framework. We demonstrate the performance of our\nframework across three separate domains -- Robotics, Gaming AI, and Healthcare.\nOur model demonstrates its ability to generate meaningful and contextually\nrelevant outputs in each area. The strength of our approach lies in its\ngenerality, leveraging a variety of data sources such as robotics sequences,\ngameplay data, large-scale video datasets, and textual information for\neffective multimodal and multi-task learning. Our approach provides a promising\navenue for developing generalist, action-taking, multimodal systems.",
+      "upvotes": 27
+    },
+    {
+      "title": "Multilingual E5 Text Embeddings: A Technical Report",
+      "url": "https://huggingface.co/papers/2402.05672",
+      "authors": [
+        "Liang Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.05672.pdf",
+      "abstract": "This technical report presents the training methodology and evaluation\nresults of the open-source multilingual E5 text embedding models, released in\nmid-2023. Three embedding models of different sizes (small / base / large) are\nprovided, offering a balance between the inference efficiency and embedding\nquality. The training procedure adheres to the English E5 model recipe,\ninvolving contrastive pre-training on 1 billion multilingual text pairs,\nfollowed by fine-tuning on a combination of labeled datasets. Additionally, we\nintroduce a new instruction-tuned embedding model, whose performance is on par\nwith state-of-the-art, English-only models of similar sizes. Information\nregarding the model release can be found at\nhttps://github.com/microsoft/unilm/tree/master/e5 .",
+      "upvotes": 20
+    },
+    {
+      "title": "Tag-LLM: Repurposing General-Purpose LLMs for Specialized Domains",
+      "url": "https://huggingface.co/papers/2402.05140",
+      "authors": [
+        "James Brian Hall"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.05140.pdf",
+      "abstract": "Large Language Models (LLMs) have demonstrated remarkable proficiency in\nunderstanding and generating natural language. However, their capabilities wane\nin highly specialized domains underrepresented in the pretraining corpus, such\nas physical and biomedical sciences. This work explores how to repurpose\ngeneral LLMs into effective task solvers for specialized domains. We introduce\na novel, model-agnostic framework for learning custom input tags, which are\nparameterized as continuous vectors appended to the LLM's embedding layer, to\ncondition the LLM. We design two types of input tags: domain tags are used to\ndelimit specialized representations (e.g., chemical formulas) and provide\ndomain-relevant context; function tags are used to represent specific functions\n(e.g., predicting molecular properties) and compress function-solving\ninstructions. We develop a three-stage protocol to learn these tags using\nauxiliary data and domain knowledge. By explicitly disentangling task domains\nfrom task functions, our method enables zero-shot generalization to unseen\nproblems through diverse combinations of the input tags. It also boosts LLM's\nperformance in various specialized domains, such as predicting protein or\nchemical properties and modeling drug-target interactions, outperforming expert\nmodels tailored to these tasks.",
+      "upvotes": 20
+    },
+    {
+      "title": "$λ$-ECLIPSE: Multi-Concept Personalized Text-to-Image Diffusion Models by Leveraging CLIP Latent Space",
+      "url": "https://huggingface.co/papers/2402.05195",
+      "authors": [
+        "Yezhou Yang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.05195.pdf",
+      "abstract": "Despite the recent advances in personalized text-to-image (P-T2I) generative\nmodels, subject-driven T2I remains challenging. The primary bottlenecks include\n1) Intensive training resource requirements, 2) Hyper-parameter sensitivity\nleading to inconsistent outputs, and 3) Balancing the intricacies of novel\nvisual concept and composition alignment. We start by re-iterating the core\nphilosophy of T2I diffusion models to address the above limitations.\nPredominantly, contemporary subject-driven T2I approaches hinge on Latent\nDiffusion Models (LDMs), which facilitate T2I mapping through cross-attention\nlayers. While LDMs offer distinct advantages, P-T2I methods' reliance on the\nlatent space of these diffusion models significantly escalates resource\ndemands, leading to inconsistent results and necessitating numerous iterations\nfor a single desired image. Recently, ECLIPSE has demonstrated a more\nresource-efficient pathway for training UnCLIP-based T2I models, circumventing\nthe need for diffusion text-to-image priors. Building on this, we introduce\nlambda-ECLIPSE. Our method illustrates that effective P-T2I does not\nnecessarily depend on the latent space of diffusion models. lambda-ECLIPSE\nachieves single, multi-subject, and edge-guided T2I personalization with just\n34M parameters and is trained on a mere 74 GPU hours using 1.6M image-text\ninterleaved data. Through extensive experiments, we also establish that\nlambda-ECLIPSE surpasses existing baselines in composition alignment while\npreserving concept alignment performance, even with significantly lower\nresource utilization.",
+      "upvotes": 18
+    },
+    {
+      "title": "SPHINX-X: Scaling Data and Parameters for a Family of Multi-modal Large Language Models",
+      "url": "https://huggingface.co/papers/2402.05935",
+      "authors": [
+        "Peng Gao",
+        "Chris Liu",
+        "Longtian Qiu",
+        "Ziyi Lin",
+        "Junjun He",
+        "Yu Qiao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.05935.pdf",
+      "abstract": "We propose SPHINX-X, an extensive Multimodality Large Language Model (MLLM)\nseries developed upon SPHINX. To improve the architecture and training\nefficiency, we modify the SPHINX framework by removing redundant visual\nencoders, bypassing fully-padded sub-images with skip tokens, and simplifying\nmulti-stage training into a one-stage all-in-one paradigm. To fully unleash the\npotential of MLLMs, we assemble a comprehensive multi-domain and multimodal\ndataset covering publicly available resources in language, vision, and\nvision-language tasks. We further enrich this collection with our curated OCR\nintensive and Set-of-Mark datasets, extending the diversity and generality. By\ntraining over different base LLMs including TinyLlama1.1B, InternLM2-7B,\nLLaMA2-13B, and Mixtral8x7B, we obtain a spectrum of MLLMs that vary in\nparameter size and multilingual capabilities. Comprehensive benchmarking\nreveals a strong correlation between the multi-modal performance with the data\nand parameter scales. Code and models are released at\nhttps://github.com/Alpha-VLLM/LLaMA2-Accessory",
+      "upvotes": 15
+    },
+    {
+      "title": "In-Context Principle Learning from Mistakes",
+      "url": "https://huggingface.co/papers/2402.05403",
+      "authors": [
+        "Steven Zheng",
+        "Yiming Yang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.05403.pdf",
+      "abstract": "In-context learning (ICL, also known as few-shot prompting) has been the\nstandard method of adapting LLMs to downstream tasks, by learning from a few\ninput-output examples. Nonetheless, all ICL-based approaches only learn from\ncorrect input-output pairs. In this paper, we revisit this paradigm, by\nlearning more from the few given input-output examples. We introduce Learning\nPrinciples (LEAP): First, we intentionally induce the model to make mistakes on\nthese few examples; then we reflect on these mistakes, and learn explicit\ntask-specific \"principles\" from them, which help solve similar problems and\navoid common mistakes; finally, we prompt the model to answer unseen test\nquestions using the original few-shot examples and these learned general\nprinciples. We evaluate LEAP on a wide range of benchmarks, including multi-hop\nquestion answering (Hotpot QA), textual QA (DROP), Big-Bench Hard reasoning,\nand math problems (GSM8K and MATH); in all these benchmarks, LEAP improves the\nstrongest available LLMs such as GPT-3.5-turbo, GPT-4, GPT-4 turbo and\nClaude-2.1. For example, LEAP improves over the standard few-shot prompting\nusing GPT-4 by 7.5% in DROP, and by 3.3% in HotpotQA. Importantly, LEAP does\nnot require any more input or examples than the standard few-shot prompting\nsettings.",
+      "upvotes": 14
+    },
+    {
+      "title": "SpiRit-LM: Interleaved Spoken and Written Language Model",
+      "url": "https://huggingface.co/papers/2402.05755",
+      "authors": [
+        "Marta R. Costa-jussa",
+        "Benoit Sagot"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.05755.pdf",
+      "abstract": "We introduce SPIRIT-LM, a foundation multimodal language model that freely\nmixes text and speech. Our model is based on a pretrained text language model\nthat we extend to the speech modality by continuously training it on text and\nspeech units. Speech and text sequences are concatenated as a single set of\ntokens, and trained with a word-level interleaving method using a small\nautomatically-curated speech-text parallel corpus. SPIRIT-LM comes in two\nversions: a BASE version that uses speech semantic units and an EXPRESSIVE\nversion that models expressivity using pitch and style units in addition to the\nsemantic units. For both versions, the text is encoded with subword BPE tokens.\nThe resulting model displays both the semantic abilities of text models and the\nexpressive abilities of speech models. Additionally, we demonstrate that\nSPIRIT-LM is able to learn new tasks in a few-shot fashion across modalities\n(i.e. ASR, TTS, Speech Classification).",
+      "upvotes": 12
+    },
+    {
+      "title": "InstaGen: Enhancing Object Detection by Training on Synthetic Dataset",
+      "url": "https://huggingface.co/papers/2402.05937",
+      "authors": [
+        "Zequn Jie",
+        "Lin Ma"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.05937.pdf",
+      "abstract": "In this paper, we introduce a novel paradigm to enhance the ability of object\ndetector, e.g., expanding categories or improving detection performance, by\ntraining on synthetic dataset generated from diffusion models. Specifically, we\nintegrate an instance-level grounding head into a pre-trained, generative\ndiffusion model, to augment it with the ability of localising arbitrary\ninstances in the generated images. The grounding head is trained to align the\ntext embedding of category names with the regional visual feature of the\ndiffusion model, using supervision from an off-the-shelf object detector, and a\nnovel self-training scheme on (novel) categories not covered by the detector.\nThis enhanced version of diffusion model, termed as InstaGen, can serve as a\ndata synthesizer for object detection. We conduct thorough experiments to show\nthat, object detector can be enhanced while training on the synthetic dataset\nfrom InstaGen, demonstrating superior performance over existing\nstate-of-the-art methods in open-vocabulary (+4.5 AP) and data-sparse (+1.2 to\n5.2 AP) scenarios.",
+      "upvotes": 11
+    },
+    {
+      "title": "Memory Consolidation Enables Long-Context Video Understanding",
+      "url": "https://huggingface.co/papers/2402.05861",
+      "authors": [
+        "Ivana Balažević",
+        "Yuge Shi",
+        "Pinelopi Papalampidi",
+        "Rahma Chaabouni"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.05861.pdf",
+      "abstract": "Most transformer-based video encoders are limited to short temporal contexts\ndue to their quadratic complexity. While various attempts have been made to\nextend this context, this has often come at the cost of both conceptual and\ncomputational complexity. We propose to instead re-purpose existing pre-trained\nvideo transformers by simply fine-tuning them to attend to memories derived\nnon-parametrically from past activations. By leveraging redundancy reduction,\nour memory-consolidated vision transformer (MC-ViT) effortlessly extends its\ncontext far into the past and exhibits excellent scaling behavior when learning\nfrom longer videos. In doing so, MC-ViT sets a new state-of-the-art in\nlong-context video understanding on EgoSchema, Perception Test, and Diving48,\noutperforming methods that benefit from orders of magnitude more parameters.",
+      "upvotes": 8
+    },
+    {
+      "title": "Question Aware Vision Transformer for Multimodal Reasoning",
+      "url": "https://huggingface.co/papers/2402.05472",
+      "authors": [
+        "Yair Kittenplon",
+        "Aviad Aberdam",
+        "Oren Nuriel",
+        "Shai Mazor",
+        "Ron Litman"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.05472.pdf",
+      "abstract": "Vision-Language (VL) models have gained significant research focus, enabling\nremarkable advances in multimodal reasoning. These architectures typically\ncomprise a vision encoder, a Large Language Model (LLM), and a projection\nmodule that aligns visual features with the LLM's representation space. Despite\ntheir success, a critical limitation persists: the vision encoding process\nremains decoupled from user queries, often in the form of image-related\nquestions. Consequently, the resulting visual features may not be optimally\nattuned to the query-specific elements of the image. To address this, we\nintroduce QA-ViT, a Question Aware Vision Transformer approach for multimodal\nreasoning, which embeds question awareness directly within the vision encoder.\nThis integration results in dynamic visual features focusing on relevant image\naspects to the posed question. QA-ViT is model-agnostic and can be incorporated\nefficiently into any VL architecture. Extensive experiments demonstrate the\neffectiveness of applying our method to various multimodal architectures,\nleading to consistent improvement across diverse tasks and showcasing its\npotential for enhancing visual and scene-text understanding.",
+      "upvotes": 8
+    },
+    {
+      "title": "Implicit Diffusion: Efficient Optimization through Stochastic Sampling",
+      "url": "https://huggingface.co/papers/2402.05468",
+      "authors": [
+        "Anna Korba",
+        "Peter Bartlett",
+        "Mathieu Blondel",
+        "Arnaud Doucet",
+        "Felipe Llinares-López",
+        "Courtney Paquette",
+        "Quentin Berthet"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.05468.pdf",
+      "abstract": "We present a new algorithm to optimize distributions defined implicitly by\nparameterized stochastic diffusions. Doing so allows us to modify the outcome\ndistribution of sampling processes by optimizing over their parameters. We\nintroduce a general framework for first-order optimization of these processes,\nthat performs jointly, in a single loop, optimization and sampling steps. This\napproach is inspired by recent advances in bilevel optimization and automatic\nimplicit differentiation, leveraging the point of view of sampling as\noptimization over the space of probability distributions. We provide\ntheoretical guarantees on the performance of our method, as well as\nexperimental results demonstrating its effectiveness in real-world settings.",
+      "upvotes": 5
+    },
+    {
+      "title": "Offline Actor-Critic Reinforcement Learning Scales to Large Models",
+      "url": "https://huggingface.co/papers/2402.05546",
+      "authors": [
+        "Jost Tobias Springenberg",
+        "Abbas Abdolmaleki",
+        "Jingwei Zhang",
+        "Michael Bloesch",
+        "Philemon Brakel",
+        "Sarah Bechtle",
+        "Steven Kapturowski",
+        "Nicolas Heess",
+        "Martin Riedmiller"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.05546.pdf",
+      "abstract": "We show that offline actor-critic reinforcement learning can scale to large\nmodels - such as transformers - and follows similar scaling laws as supervised\nlearning. We find that offline actor-critic algorithms can outperform strong,\nsupervised, behavioral cloning baselines for multi-task training on a large\ndataset containing both sub-optimal and expert behavior on 132 continuous\ncontrol tasks. We introduce a Perceiver-based actor-critic model and elucidate\nthe key model features needed to make offline RL work with self- and\ncross-attention modules. Overall, we find that: i) simple offline actor critic\nalgorithms are a natural choice for gradually moving away from the currently\npredominant paradigm of behavioral cloning, and ii) via offline RL it is\npossible to learn multi-task policies that master many domains simultaneously,\nincluding real robotics tasks, from sub-optimal demonstrations or\nself-generated data.",
+      "upvotes": 4
+    },
+    {
+      "title": "Driving Everywhere with Large Language Model Policy Adaptation",
+      "url": "https://huggingface.co/papers/2402.05932",
+      "authors": [
+        "Yue Wang",
+        "Jiageng Mao",
+        "Boris Ivanovic",
+        "Sushant Veer",
+        "Karen Leung",
+        "Marco Pavone"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.05932.pdf",
+      "abstract": "Adapting driving behavior to new environments, customs, and laws is a\nlong-standing problem in autonomous driving, precluding the widespread\ndeployment of autonomous vehicles (AVs). In this paper, we present LLaDA, a\nsimple yet powerful tool that enables human drivers and autonomous vehicles\nalike to drive everywhere by adapting their tasks and motion plans to traffic\nrules in new locations. LLaDA achieves this by leveraging the impressive\nzero-shot generalizability of large language models (LLMs) in interpreting the\ntraffic rules in the local driver handbook. Through an extensive user study, we\nshow that LLaDA's instructions are useful in disambiguating in-the-wild\nunexpected situations. We also demonstrate LLaDA's ability to adapt AV motion\nplanning policies in real-world datasets; LLaDA outperforms baseline planning\napproaches on all our metrics. Please check our website for more details:\nhttps://boyiliee.github.io/llada.",
+      "upvotes": 3
+    }
+  ]
+}

@@ -1,0 +1,349 @@
+{
+  "date": "2024-06-19",
+  "papers": [
+    {
+      "title": "DeepSeek-Coder-V2: Breaking the Barrier of Closed-Source Models in Code Intelligence",
+      "url": "https://huggingface.co/papers/2406.11931",
+      "authors": [
+        "DeepSeek-AI",
+        "Runxin Xu",
+        "Xiao Bi",
+        "Zihui Gu",
+        "Hanwei Xu",
+        "Kai Dong",
+        "Liyue Zhang",
+        "Yishi Piao",
+        "Zhewen Hao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.11931.pdf",
+      "abstract": "We present DeepSeek-Coder-V2, an open-source Mixture-of-Experts (MoE) code\nlanguage model that achieves performance comparable to GPT4-Turbo in\ncode-specific tasks. Specifically, DeepSeek-Coder-V2 is further pre-trained\nfrom an intermediate checkpoint of DeepSeek-V2 with additional 6 trillion\ntokens. Through this continued pre-training, DeepSeek-Coder-V2 substantially\nenhances the coding and mathematical reasoning capabilities of DeepSeek-V2,\nwhile maintaining comparable performance in general language tasks. Compared to\nDeepSeek-Coder-33B, DeepSeek-Coder-V2 demonstrates significant advancements in\nvarious aspects of code-related tasks, as well as reasoning and general\ncapabilities. Additionally, DeepSeek-Coder-V2 expands its support for\nprogramming languages from 86 to 338, while extending the context length from\n16K to 128K. In standard benchmark evaluations, DeepSeek-Coder-V2 achieves\nsuperior performance compared to closed-source models such as GPT4-Turbo,\nClaude 3 Opus, and Gemini 1.5 Pro in coding and math benchmarks.",
+      "upvotes": 57
+    },
+    {
+      "title": "Depth Anywhere: Enhancing 360 Monocular Depth Estimation via Perspective Distillation and Unlabeled Data Augmentation",
+      "url": "https://huggingface.co/papers/2406.12849",
+      "authors": [
+        "Yu-Lun Liu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.12849.pdf",
+      "abstract": "Accurately estimating depth in 360-degree imagery is crucial for virtual\nreality, autonomous navigation, and immersive media applications. Existing\ndepth estimation methods designed for perspective-view imagery fail when\napplied to 360-degree images due to different camera projections and\ndistortions, whereas 360-degree methods perform inferior due to the lack of\nlabeled data pairs. We propose a new depth estimation framework that utilizes\nunlabeled 360-degree data effectively. Our approach uses state-of-the-art\nperspective depth estimation models as teacher models to generate pseudo labels\nthrough a six-face cube projection technique, enabling efficient labeling of\ndepth in 360-degree images. This method leverages the increasing availability\nof large datasets. Our approach includes two main stages: offline mask\ngeneration for invalid regions and an online semi-supervised joint training\nregime. We tested our approach on benchmark datasets such as Matterport3D and\nStanford2D3D, showing significant improvements in depth estimation accuracy,\nparticularly in zero-shot scenarios. Our proposed training pipeline can enhance\nany 360 monocular depth estimator and demonstrates effective knowledge transfer\nacross different camera projections and data types. See our project page for\nresults: https://albert100121.github.io/Depth-Anywhere/",
+      "upvotes": 49
+    },
+    {
+      "title": "Bootstrapping Language Models with DPO Implicit Rewards",
+      "url": "https://huggingface.co/papers/2406.09760",
+      "authors": [
+        "Zichen Liu",
+        "Arunesh Sinha",
+        "Min Lin"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.09760.pdf",
+      "abstract": "Human alignment in large language models (LLMs) is an active area of\nresearch. A recent groundbreaking work, direct preference optimization (DPO),\nhas greatly simplified the process from past work in reinforcement learning\nfrom human feedback (RLHF) by bypassing the reward learning stage in RLHF. DPO,\nafter training, provides an implicit reward model. In this work, we make a\nnovel observation that this implicit reward model can by itself be used in a\nbootstrapping fashion to further align the LLM. Our approach is to use the\nrewards from a current LLM model to construct a preference dataset, which is\nthen used in subsequent DPO rounds. We incorporate refinements that debias the\nlength of the responses and improve the quality of the preference dataset to\nfurther improve our approach. Our approach, named self-alignment with DPO\nImpliCit rEwards (DICE), shows great improvements in alignment and achieves\nsuperior performance than Gemini Pro on AlpacaEval 2, reaching 27.55%\nlength-controlled win rate against GPT-4 Turbo, but with only 8B parameters and\nno external feedback. Our code is available at https://github.com/sail-sg/dice.",
+      "upvotes": 38
+    },
+    {
+      "title": "TroL: Traversal of Layers for Large Language and Vision Models",
+      "url": "https://huggingface.co/papers/2406.12246",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2406.12246.pdf",
+      "abstract": "Large language and vision models (LLVMs) have been driven by the\ngeneralization power of large language models (LLMs) and the advent of visual\ninstruction tuning. Along with scaling them up directly, these models enable\nLLVMs to showcase powerful vision language (VL) performances by covering\ndiverse tasks via natural language instructions. However, existing open-source\nLLVMs that perform comparably to closed-source LLVMs such as GPT-4V are often\nconsidered too large (e.g., 26B, 34B, and 110B parameters), having a larger\nnumber of layers. These large models demand costly, high-end resources for both\ntraining and inference. To address this issue, we present a new efficient LLVM\nfamily with 1.8B, 3.8B, and 7B LLM model sizes, Traversal of Layers (TroL),\nwhich enables the reuse of layers in a token-wise manner. This layer traversing\ntechnique simulates the effect of looking back and retracing the answering\nstream while increasing the number of forward propagation layers without\nphysically adding more layers. We demonstrate that TroL employs a simple layer\ntraversing approach yet efficiently outperforms the open-source LLVMs with\nlarger model sizes and rivals the performances of the closed-source LLVMs with\nsubstantial sizes.",
+      "upvotes": 34
+    },
+    {
+      "title": "ChatGLM: A Family of Large Language Models from GLM-130B to GLM-4 All Tools",
+      "url": "https://huggingface.co/papers/2406.12793",
+      "authors": [
+        "Team GLM",
+        "Bin Xu",
+        "Bowen Wang",
+        "Hao Yu",
+        "Hongning Wang",
+        "Jing Zhang",
+        "Lei Zhao",
+        "Lindong Wu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.12793.pdf",
+      "abstract": "We introduce ChatGLM, an evolving family of large language models that we\nhave been developing over time. This report primarily focuses on the GLM-4\nlanguage series, which includes GLM-4, GLM-4-Air, and GLM-4-9B. They represent\nour most capable models that are trained with all the insights and lessons\ngained from the preceding three generations of ChatGLM. To date, the GLM-4\nmodels are pre-trained on ten trillions of tokens mostly in Chinese and\nEnglish, along with a small set of corpus from 24 languages, and aligned\nprimarily for Chinese and English usage. The high-quality alignment is achieved\nvia a multi-stage post-training process, which involves supervised fine-tuning\nand learning from human feedback. Evaluations show that GLM-4 1) closely rivals\nor outperforms GPT-4 in terms of general metrics such as MMLU, GSM8K, MATH,\nBBH, GPQA, and HumanEval, 2) gets close to GPT-4-Turbo in instruction following\nas measured by IFEval, 3) matches GPT-4 Turbo (128K) and Claude 3 for long\ncontext tasks, and 4) outperforms GPT-4 in Chinese alignments as measured by\nAlignBench. The GLM-4 All Tools model is further aligned to understand user\nintent and autonomously decide when and which tool(s) touse -- including web\nbrowser, Python interpreter, text-to-image model, and user-defined functions --\nto effectively complete complex tasks. In practical applications, it matches\nand even surpasses GPT-4 All Tools in tasks like accessing online information\nvia web browsing and solving math problems using Python interpreter. Over the\ncourse, we have open-sourced a series of models, including ChatGLM-6B (three\ngenerations), GLM-4-9B (128K, 1M), GLM-4V-9B, WebGLM, and CodeGeeX, attracting\nover 10 million downloads on Hugging face in the year 2023 alone. The open\nmodels can be accessed through https://github.com/THUDM and\nhttps://huggingface.co/THUDM.",
+      "upvotes": 31
+    },
+    {
+      "title": "VoCo-LLaMA: Towards Vision Compression with Large Language Models",
+      "url": "https://huggingface.co/papers/2406.12275",
+      "authors": [
+        "Ying Shan",
+        "Yansong Tang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.12275.pdf",
+      "abstract": "Vision-Language Models (VLMs) have achieved remarkable success in various\nmulti-modal tasks, but they are often bottlenecked by the limited context\nwindow and high computational cost of processing high-resolution image inputs\nand videos. Vision compression can alleviate this problem by reducing the\nvision token count. Previous approaches compress vision tokens with external\nmodules and force LLMs to understand the compressed ones, leading to visual\ninformation loss. However, the LLMs' understanding paradigm of vision tokens is\nnot fully utilised in the compression learning process. We propose VoCo-LLaMA,\nthe first approach to compress vision tokens using LLMs. By introducing Vision\nCompression tokens during the vision instruction tuning phase and leveraging\nattention distillation, our method distill how LLMs comprehend vision tokens\ninto their processing of VoCo tokens. VoCo-LLaMA facilitates effective vision\ncompression and improves the computational efficiency during the inference\nstage. Specifically, our method achieves minimal performance loss with a\ncompression ratio of 576times, resulting in up to 94.8% fewer FLOPs and\n69.6% acceleration in inference time. Furthermore, through continuous\ntraining using time-series compressed token sequences of video frames,\nVoCo-LLaMA demonstrates the ability to understand temporal correlations,\noutperforming previous methods on popular video question-answering benchmarks.\nOur approach presents a promising way to unlock the full potential of VLMs'\ncontextual window, enabling more scalable multi-modal applications. The project\npage, along with the associated code, can be accessed via\nhttps://yxxxb.github.io/VoCo-LLaMA-page/{this https URL}.",
+      "upvotes": 29
+    },
+    {
+      "title": "AgileCoder: Dynamic Collaborative Agents for Software Development based on Agile Methodology",
+      "url": "https://huggingface.co/papers/2406.11912",
+      "authors": [
+        "Minh Huynh Nguyen",
+        "Thang Phan Chau",
+        "Phong X. Nguyen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.11912.pdf",
+      "abstract": "Software agents have emerged as promising tools for addressing complex\nsoftware engineering tasks. However, existing works oversimplify software\ndevelopment workflows by following the waterfall model. Thus, we propose\nAgileCoder, a multi-agent system that integrates Agile Methodology (AM) into\nthe framework. This system assigns specific AM roles such as Product Manager,\nDeveloper, and Tester to different agents, who then collaboratively develop\nsoftware based on user inputs. AgileCoder enhances development efficiency by\norganizing work into sprints, focusing on incrementally developing software\nthrough sprints. Additionally, we introduce Dynamic Code Graph Generator, a\nmodule that creates a Code Dependency Graph dynamically as updates are made to\nthe codebase. This allows agents to better comprehend the codebase, leading to\nmore precise code generation and modifications throughout the software\ndevelopment process. AgileCoder surpasses existing benchmarks, like ChatDev and\nMetaGPT, establishing a new standard and showcasing the capabilities of\nmulti-agent systems in advanced software engineering environments. Our source\ncode can be found at https://github.com/FSoft-AI4Code/AgileCoder.",
+      "upvotes": 26
+    },
+    {
+      "title": "From RAGs to rich parameters: Probing how language models utilize external knowledge over parametric information for factual queries",
+      "url": "https://huggingface.co/papers/2406.12824",
+      "authors": [
+        "Soundararajan Srinivasan",
+        "Shreyas Chaudhari"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.12824.pdf",
+      "abstract": "Retrieval Augmented Generation (RAG) enriches the ability of language models\nto reason using external context to augment responses for a given user prompt.\nThis approach has risen in popularity due to practical applications in various\napplications of language models in search, question/answering, and chat-bots.\nHowever, the exact nature of how this approach works isn't clearly understood.\nIn this paper, we mechanistically examine the RAG pipeline to highlight that\nlanguage models take shortcut and have a strong bias towards utilizing only the\ncontext information to answer the question, while relying minimally on their\nparametric memory. We probe this mechanistic behavior in language models with:\n(i) Causal Mediation Analysis to show that the parametric memory is minimally\nutilized when answering a question and (ii) Attention Contributions and\nKnockouts to show that the last token residual stream do not get enriched from\nthe subject token in the question, but gets enriched from other informative\ntokens in the context. We find this pronounced shortcut behaviour true across\nboth LLaMa and Phi family of models.",
+      "upvotes": 20
+    },
+    {
+      "title": "Learn Beyond The Answer: Training Language Models with Reflection for Mathematical Reasoning",
+      "url": "https://huggingface.co/papers/2406.12050",
+      "authors": [
+        "Zhenwen Liang",
+        "Wenhao Yu",
+        "Mengzhao Jia",
+        "Dong Yu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.12050.pdf",
+      "abstract": "Supervised fine-tuning enhances the problem-solving abilities of language\nmodels across various mathematical reasoning tasks. To maximize such benefits,\nexisting research focuses on broadening the training set with various data\naugmentation techniques, which is effective for standard single-round\nquestion-answering settings. Our work introduces a novel technique aimed at\ncultivating a deeper understanding of the training problems at hand, enhancing\nperformance not only in standard settings but also in more complex scenarios\nthat require reflective thinking. Specifically, we propose reflective\naugmentation, a method that embeds problem reflection into each training\ninstance. It trains the model to consider alternative perspectives and engage\nwith abstractions and analogies, thereby fostering a thorough comprehension\nthrough reflective reasoning. Extensive experiments validate the achievement of\nour aim, underscoring the unique advantages of our method and its complementary\nnature relative to existing augmentation techniques.",
+      "upvotes": 18
+    },
+    {
+      "title": "RepLiQA: A Question-Answering Dataset for Benchmarking LLMs on Unseen Reference Content",
+      "url": "https://huggingface.co/papers/2406.11811",
+      "authors": [
+        "Etienne Marcotte",
+        "David Vazquez",
+        "Christopher Pal",
+        "Perouz Taslakian"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.11811.pdf",
+      "abstract": "Large Language Models (LLMs) are trained on vast amounts of data, most of\nwhich is automatically scraped from the internet. This data includes\nencyclopedic documents that harbor a vast amount of general knowledge (e.g.,\nWikipedia) but also potentially overlap with benchmark datasets used for\nevaluating LLMs. Consequently, evaluating models on test splits that might have\nleaked into the training set is prone to misleading conclusions. To foster\nsound evaluation of language models, we introduce a new test dataset named\nRepLiQA, suited for question-answering and topic retrieval tasks. RepLiQA is a\ncollection of five splits of test sets, four of which have not been released to\nthe internet or exposed to LLM APIs prior to this publication. Each sample in\nRepLiQA comprises (1) a reference document crafted by a human annotator and\ndepicting an imaginary scenario (e.g., a news article) absent from the\ninternet; (2) a question about the document's topic; (3) a ground-truth answer\nderived directly from the information in the document; and (4) the paragraph\nextracted from the reference document containing the answer. As such, accurate\nanswers can only be generated if a model can find relevant content within the\nprovided document. We run a large-scale benchmark comprising several\nstate-of-the-art LLMs to uncover differences in performance across models of\nvarious types and sizes in a context-conditional language modeling setting.\nReleased splits of RepLiQA can be found here:\nhttps://huggingface.co/datasets/ServiceNow/repliqa.",
+      "upvotes": 16
+    },
+    {
+      "title": "Safety Arithmetic: A Framework for Test-time Safety Alignment of Language Models by Steering Parameters and Activations",
+      "url": "https://huggingface.co/papers/2406.11801",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2406.11801.pdf",
+      "abstract": "Ensuring the safe alignment of large language models (LLMs) with human values\nis critical as they become integral to applications like translation and\nquestion answering. Current alignment methods struggle with dynamic user\nintentions and complex objectives, making models vulnerable to generating\nharmful content. We propose Safety Arithmetic, a training-free framework\nenhancing LLM safety across different scenarios: Base models, Supervised\nfine-tuned models (SFT), and Edited models. Safety Arithmetic involves Harm\nDirection Removal to avoid harmful content and Safety Alignment to promote safe\nresponses. Additionally, we present NoIntentEdit, a dataset highlighting edit\ninstances that could compromise model safety if used unintentionally. Our\nexperiments show that Safety Arithmetic significantly improves safety measures,\nreduces over-safety, and maintains model utility, outperforming existing\nmethods in ensuring safe content generation.",
+      "upvotes": 15
+    },
+    {
+      "title": "Tokenization Falling Short: The Curse of Tokenization",
+      "url": "https://huggingface.co/papers/2406.11687",
+      "authors": [
+        "Yewei Fang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.11687.pdf",
+      "abstract": "Language models typically tokenize raw text into sequences of subword\nidentifiers from a predefined vocabulary, a process inherently sensitive to\ntypographical errors, length variations, and largely oblivious to the internal\nstructure of tokens-issues we term the curse of tokenization. In this study, we\ndelve into these drawbacks and demonstrate that large language models (LLMs)\nremain susceptible to these problems. This study systematically investigates\nthese challenges and their impact on LLMs through three critical research\nquestions: (1) complex problem solving, (2) token structure probing, and (3)\nresilience to typographical variation. Our findings reveal that scaling model\nparameters can mitigate the issue of tokenization; however, LLMs still suffer\nfrom biases induced by typos and other text format variations. Our experiments\nshow that subword regularization such as BPE-dropout can mitigate this issue.\nWe will release our code and data to facilitate further research.",
+      "upvotes": 15
+    },
+    {
+      "title": "SafeInfer: Context Adaptive Decoding Time Safety Alignment for Large Language Models",
+      "url": "https://huggingface.co/papers/2406.12274",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2406.12274.pdf",
+      "abstract": "Safety-aligned language models often exhibit fragile and imbalanced safety\nmechanisms, increasing the likelihood of generating unsafe content. In\naddition, incorporating new knowledge through editing techniques to language\nmodels can further compromise safety. To address these issues, we propose\nSafeInfer, a context-adaptive, decoding-time safety alignment strategy for\ngenerating safe responses to user queries. SafeInfer comprises two phases: the\nsafety amplification phase, which employs safe demonstration examples to adjust\nthe model's hidden states and increase the likelihood of safer outputs, and the\nsafety-guided decoding phase, which influences token selection based on\nsafety-optimized distributions, ensuring the generated content complies with\nethical guidelines. Further, we present HarmEval, a novel benchmark for\nextensive safety evaluations, designed to address potential misuse scenarios in\naccordance with the policies of leading AI tech giants.",
+      "upvotes": 14
+    },
+    {
+      "title": "Benchmarking Multi-Image Understanding in Vision and Language Models: Perception, Knowledge, Reasoning, and Multi-Hop Reasoning",
+      "url": "https://huggingface.co/papers/2406.12742",
+      "authors": [
+        "Timothy Hospedales"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.12742.pdf",
+      "abstract": "The advancement of large language models (LLMs) has significantly broadened\nthe scope of applications in natural language processing, with multi-modal LLMs\nextending these capabilities to integrate and interpret visual data. However,\nexisting benchmarks for visual language models (VLMs) predominantly focus on\nsingle-image inputs, neglecting the crucial aspect of multi-image\nunderstanding. In this paper, we introduce a Multi-Image Relational Benchmark\nMIRB, designed to evaluate VLMs' ability to compare, analyze, and reason across\nmultiple images. Our benchmark encompasses four categories: perception, visual\nworld knowledge, reasoning, and multi-hop reasoning. Through a comprehensive\nevaluation of a wide range of open-source and closed-source models, we\ndemonstrate that while open-source VLMs were shown to approach the performance\nof GPT-4V in single-image tasks, a significant performance gap remains in\nmulti-image reasoning tasks. Our findings also reveal that even the\nstate-of-the-art GPT-4V model struggles with our benchmark, underscoring the\nneed for further research and development in this area. We believe our\ncontribution of MIRB could serve as a testbed for developing the\nnext-generation multi-modal models.",
+      "upvotes": 14
+    },
+    {
+      "title": "OlympicArena: Benchmarking Multi-discipline Cognitive Reasoning for Superintelligent AI",
+      "url": "https://huggingface.co/papers/2406.12753",
+      "authors": [
+        "Lyumanshan Ye",
+        "Yixin Ye",
+        "Yuqing Yang",
+        "Ting Wu",
+        "Binjie Wang",
+        "Shichao Sun",
+        "Yang Xiao",
+        "Yiyuan Li",
+        "Yiwei Qin",
+        "Yan Ma"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.12753.pdf",
+      "abstract": "The evolution of Artificial Intelligence (AI) has been significantly\naccelerated by advancements in Large Language Models (LLMs) and Large\nMultimodal Models (LMMs), gradually showcasing potential cognitive reasoning\nabilities in problem-solving and scientific discovery (i.e., AI4Science) once\nexclusive to human intellect. To comprehensively evaluate current models'\nperformance in cognitive reasoning abilities, we introduce OlympicArena, which\nincludes 11,163 bilingual problems across both text-only and interleaved\ntext-image modalities. These challenges encompass a wide range of disciplines\nspanning seven fields and 62 international Olympic competitions, rigorously\nexamined for data leakage. We argue that the challenges in Olympic competition\nproblems are ideal for evaluating AI's cognitive reasoning due to their\ncomplexity and interdisciplinary nature, which are essential for tackling\ncomplex scientific challenges and facilitating discoveries. Beyond evaluating\nperformance across various disciplines using answer-only criteria, we conduct\ndetailed experiments and analyses from multiple perspectives. We delve into the\nmodels' cognitive reasoning abilities, their performance across different\nmodalities, and their outcomes in process-level evaluations, which are vital\nfor tasks requiring complex reasoning with lengthy solutions. Our extensive\nevaluations reveal that even advanced models like GPT-4o only achieve a 39.97%\noverall accuracy, illustrating current AI limitations in complex reasoning and\nmultimodal integration. Through the OlympicArena, we aim to advance AI towards\nsuperintelligence, equipping it to address more complex challenges in science\nand beyond. We also provide a comprehensive set of resources to support AI\nresearch, including a benchmark dataset, an open-source annotation platform, a\ndetailed evaluation tool, and a leaderboard with automatic submission features.",
+      "upvotes": 14
+    },
+    {
+      "title": "HumanSplat: Generalizable Single-Image Human Gaussian Splatting with Structure Priors",
+      "url": "https://huggingface.co/papers/2406.12459",
+      "authors": [
+        "Zhuo Su",
+        "Zhen Fan",
+        "Tingting Shen",
+        "Yadong Mu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.12459.pdf",
+      "abstract": "Despite recent advancements in high-fidelity human reconstruction techniques,\nthe requirements for densely captured images or time-consuming per-instance\noptimization significantly hinder their applications in broader scenarios. To\ntackle these issues, we present HumanSplat which predicts the 3D Gaussian\nSplatting properties of any human from a single input image in a generalizable\nmanner. In particular, HumanSplat comprises a 2D multi-view diffusion model and\na latent reconstruction transformer with human structure priors that adeptly\nintegrate geometric priors and semantic features within a unified framework. A\nhierarchical loss that incorporates human semantic information is further\ndesigned to achieve high-fidelity texture modeling and better constrain the\nestimated multiple views. Comprehensive experiments on standard benchmarks and\nin-the-wild images demonstrate that HumanSplat surpasses existing\nstate-of-the-art methods in achieving photorealistic novel-view synthesis.",
+      "upvotes": 11
+    },
+    {
+      "title": "Not All Prompts Are Made Equal: Prompt-based Pruning of Text-to-Image Diffusion Models",
+      "url": "https://huggingface.co/papers/2406.12042",
+      "authors": [
+        "Alireza Ganjdanesh",
+        "Heng Huang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.12042.pdf",
+      "abstract": "Text-to-image (T2I) diffusion models have demonstrated impressive image\ngeneration capabilities. Still, their computational intensity prohibits\nresource-constrained organizations from deploying T2I models after fine-tuning\nthem on their internal target data. While pruning techniques offer a potential\nsolution to reduce the computational burden of T2I models, static pruning\nmethods use the same pruned model for all input prompts, overlooking the\nvarying capacity requirements of different prompts. Dynamic pruning addresses\nthis issue by utilizing a separate sub-network for each prompt, but it prevents\nbatch parallelism on GPUs. To overcome these limitations, we introduce Adaptive\nPrompt-Tailored Pruning (APTP), a novel prompt-based pruning method designed\nfor T2I diffusion models. Central to our approach is a prompt router model,\nwhich learns to determine the required capacity for an input text prompt and\nroutes it to an architecture code, given a total desired compute budget for\nprompts. Each architecture code represents a specialized model tailored to the\nprompts assigned to it, and the number of codes is a hyperparameter. We train\nthe prompt router and architecture codes using contrastive learning, ensuring\nthat similar prompts are mapped to nearby codes. Further, we employ optimal\ntransport to prevent the codes from collapsing into a single one. We\ndemonstrate APTP's effectiveness by pruning Stable Diffusion (SD) V2.1 using\nCC3M and COCO as target datasets. APTP outperforms the single-model pruning\nbaselines in terms of FID, CLIP, and CMMD scores. Our analysis of the clusters\nlearned by APTP reveals they are semantically meaningful. We also show that\nAPTP can automatically discover previously empirically found challenging\nprompts for SD, e.g., prompts for generating text images, assigning them to\nhigher capacity codes.",
+      "upvotes": 8
+    },
+    {
+      "title": "Large Scale Transfer Learning for Tabular Data via Language Modeling",
+      "url": "https://huggingface.co/papers/2406.12031",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2406.12031.pdf",
+      "abstract": "Tabular data -- structured, heterogeneous, spreadsheet-style data with rows\nand columns -- is widely used in practice across many domains. However, while\nrecent foundation models have reduced the need for developing task-specific\ndatasets and predictors in domains such as language modeling and computer\nvision, this transfer learning paradigm has not had similar impact in the\ntabular domain. In this work, we seek to narrow this gap and present TabuLa-8B,\na language model for tabular prediction. We define a process for extracting a\nlarge, high-quality training dataset from the TabLib corpus, proposing methods\nfor tabular data filtering and quality control. Using the resulting dataset,\nwhich comprises over 1.6B rows from 3.1M unique tables, we fine-tune a Llama\n3-8B large language model (LLM) for tabular data prediction (classification and\nbinned regression) using a novel packing and attention scheme for tabular\nprediction. Through evaluation across a test suite of 329 datasets, we find\nthat TabuLa-8B has zero-shot accuracy on unseen tables that is over 15\npercentage points (pp) higher than random guessing, a feat that is not possible\nwith existing state-of-the-art tabular prediction models (e.g. XGBoost,\nTabPFN). In the few-shot setting (1-32 shots), without any fine-tuning on the\ntarget datasets, TabuLa-8B is 5-15 pp more accurate than XGBoost and TabPFN\nmodels that are explicitly trained on equal, or even up to 16x more data. We\nrelease our model, code, and data along with the publication of this paper.",
+      "upvotes": 8
+    },
+    {
+      "title": "Language Models are Surprisingly Fragile to Drug Names in Biomedical Benchmarks",
+      "url": "https://huggingface.co/papers/2406.12066",
+      "authors": [
+        "Leo Anthony Celi",
+        "Hugo Aerts",
+        "Thomas Hartvigsen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.12066.pdf",
+      "abstract": "Medical knowledge is context-dependent and requires consistent reasoning\nacross various natural language expressions of semantically equivalent phrases.\nThis is particularly crucial for drug names, where patients often use brand\nnames like Advil or Tylenol instead of their generic equivalents. To study\nthis, we create a new robustness dataset, RABBITS, to evaluate performance\ndifferences on medical benchmarks after swapping brand and generic drug names\nusing physician expert annotations.\n  We assess both open-source and API-based LLMs on MedQA and MedMCQA, revealing\na consistent performance drop ranging from 1-10\\%. Furthermore, we identify a\npotential source of this fragility as the contamination of test data in widely\nused pre-training datasets. All code is accessible at\nhttps://github.com/BittermanLab/RABBITS, and a HuggingFace leaderboard is\navailable at https://huggingface.co/spaces/AIM-Harvard/rabbits-leaderboard.",
+      "upvotes": 8
+    },
+    {
+      "title": "Estimating Knowledge in Large Language Models Without Generating a Single Token",
+      "url": "https://huggingface.co/papers/2406.12673",
+      "authors": [
+        "Mor Geva"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.12673.pdf",
+      "abstract": "To evaluate knowledge in large language models (LLMs), current methods query\nthe model and then evaluate its generated responses. In this work, we ask\nwhether evaluation can be done before the model has generated any\ntext. Concretely, is it possible to estimate how knowledgeable a model is about\na certain entity, only from its internal computation? We study this question\nwith two tasks: given a subject entity, the goal is to predict (a) the ability\nof the model to answer common questions about the entity, and (b) the\nfactuality of responses generated by the model about the entity. Experiments\nwith a variety of LLMs show that KEEN, a simple probe trained over internal\nsubject representations, succeeds at both tasks - strongly correlating with\nboth the QA accuracy of the model per-subject and FActScore, a recent\nfactuality metric in open-ended generation. Moreover, KEEN naturally aligns\nwith the model's hedging behavior and faithfully reflects changes in the\nmodel's knowledge after fine-tuning. Lastly, we show a more interpretable yet\nequally performant variant of KEEN, which highlights a small set of tokens that\ncorrelates with the model's lack of knowledge. Being simple and lightweight,\nKEEN can be leveraged to identify gaps and clusters of entity knowledge in\nLLMs, and guide decisions such as augmenting queries with retrieval.",
+      "upvotes": 7
+    },
+    {
+      "title": "BPO: Supercharging Online Preference Learning by Adhering to the Proximity of Behavior LLM",
+      "url": "https://huggingface.co/papers/2406.12168",
+      "authors": [
+        "Wenda Xu",
+        "Lei Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.12168.pdf",
+      "abstract": "Direct alignment from preferences (DAP) has emerged as a promising paradigm\nfor aligning large language models (LLMs) to human desiderata from\npre-collected, offline preference datasets. While recent studies indicate that\nexisting offline DAP methods can directly benefit from online training samples,\nwe highlight the need to develop specific online DAP algorithms to fully\nharness the power of online training. Specifically, we identify that the\nlearned LLM should adhere to the proximity of the behavior LLM, which collects\nthe training samples. To this end, we propose online Preference Optimization in\nproximity to the Behavior LLM (BPO), emphasizing the importance of constructing\na proper trust region for LLM alignment.\n  We conduct extensive experiments to validate the effectiveness and\napplicability of our approach by integrating it with various DAP methods,\nresulting in significant performance improvements across a wide range of tasks\nwhen training with the same amount of preference data. Even when only\nintroducing one additional data collection phase, our online BPO improves its\noffline DAP baseline from 72.0% to 80.2% on TL;DR and from 82.2% to 89.1% on\nAnthropic Helpfulness in terms of win rate against human reference text.",
+      "upvotes": 7
+    },
+    {
+      "title": "From Crowdsourced Data to High-Quality Benchmarks: Arena-Hard and BenchBuilder Pipeline",
+      "url": "https://huggingface.co/papers/2406.11939",
+      "authors": [
+        "Tianhao Wu",
+        "Ion Stoica"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.11939.pdf",
+      "abstract": "The rapid evolution of language models has necessitated the development of\nmore challenging benchmarks. Current static benchmarks often struggle to\nconsistently distinguish between the capabilities of different models and fail\nto align with real-world user preferences. On the other hand, live\ncrowd-sourced platforms like the Chatbot Arena collect a wide range of natural\nprompts and user feedback. However, these prompts vary in sophistication and\nthe feedback cannot be applied offline to new models. In order to ensure that\nbenchmarks keep up with the pace of LLM development, we address how one can\nevaluate benchmarks on their ability to confidently separate models and their\nalignment with human preference. Under these principles, we developed\nBenchBuilder, a living benchmark that filters high-quality prompts from live\ndata sources to enable offline evaluation on fresh, challenging prompts.\nBenchBuilder identifies seven indicators of a high-quality prompt, such as the\nrequirement for domain knowledge, and utilizes an LLM annotator to select a\nhigh-quality subset of prompts from various topic clusters. The LLM evaluation\nprocess employs an LLM judge to ensure a fully automated, high-quality, and\nconstantly updating benchmark. We apply BenchBuilder on prompts from the\nChatbot Arena to create Arena-Hard-Auto v0.1: 500 challenging user prompts from\na wide range of tasks. Arena-Hard-Auto v0.1 offers 3x tighter confidence\nintervals than MT-Bench and achieves a state-of-the-art 89.1% agreement with\nhuman preference rankings, all at a cost of only $25 and without human\nlabelers. The BenchBuilder pipeline enhances evaluation benchmarks and provides\na valuable tool for developers, enabling them to extract high-quality\nbenchmarks from extensive data with minimal effort.",
+      "upvotes": 6
+    },
+    {
+      "title": "Mixture of Scales: Memory-Efficient Token-Adaptive Binarization for Large Language Models",
+      "url": "https://huggingface.co/papers/2406.12311",
+      "authors": [
+        "Jae-Joon Kim"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.12311.pdf",
+      "abstract": "Binarization, which converts weight parameters to binary values, has emerged\nas an effective strategy to reduce the size of large language models (LLMs).\nHowever, typical binarization techniques significantly diminish linguistic\neffectiveness of LLMs. To address this issue, we introduce a novel binarization\ntechnique called Mixture of Scales (BinaryMoS). Unlike conventional methods,\nBinaryMoS employs multiple scaling experts for binary weights, dynamically\nmerging these experts for each token to adaptively generate scaling factors.\nThis token-adaptive approach boosts the representational power of binarized\nLLMs by enabling contextual adjustments to the values of binary weights.\nMoreover, because this adaptive process only involves the scaling factors\nrather than the entire weight matrix, BinaryMoS maintains compression\nefficiency similar to traditional static binarization methods. Our experimental\nresults reveal that BinaryMoS surpasses conventional binarization techniques in\nvarious natural language processing tasks and even outperforms 2-bit\nquantization methods, all while maintaining similar model size to static\nbinarization techniques.",
+      "upvotes": 6
+    },
+    {
+      "title": "VIA: A Spatiotemporal Video Adaptation Framework for Global and Local Video Editing",
+      "url": "https://huggingface.co/papers/2406.12831",
+      "authors": [
+        "Peter Wonka",
+        "Sergey Tulyakov"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.12831.pdf",
+      "abstract": "Video editing stands as a cornerstone of digital media, from entertainment\nand education to professional communication. However, previous methods often\noverlook the necessity of comprehensively understanding both global and local\ncontexts, leading to inaccurate and inconsistency edits in the spatiotemporal\ndimension, especially for long videos. In this paper, we introduce VIA, a\nunified spatiotemporal VIdeo Adaptation framework for global and local video\nediting, pushing the limits of consistently editing minute-long videos. First,\nto ensure local consistency within individual frames, the foundation of VIA is\na novel test-time editing adaptation method, which adapts a pre-trained image\nediting model for improving consistency between potential editing directions\nand the text instruction, and adapts masked latent variables for precise local\ncontrol. Furthermore, to maintain global consistency over the video sequence,\nwe introduce spatiotemporal adaptation that adapts consistent attention\nvariables in key frames and strategically applies them across the whole\nsequence to realize the editing effects. Extensive experiments demonstrate\nthat, compared to baseline methods, our VIA approach produces edits that are\nmore faithful to the source videos, more coherent in the spatiotemporal\ncontext, and more precise in local control. More importantly, we show that VIA\ncan achieve consistent long video editing in minutes, unlocking the potentials\nfor advanced video editing tasks over long video sequences.",
+      "upvotes": 5
+    },
+    {
+      "title": "Super(ficial)-alignment: Strong Models May Deceive Weak Models in Weak-to-Strong Generalization",
+      "url": "https://huggingface.co/papers/2406.11431",
+      "authors": [
+        "Shiqi Shen",
+        "Guangyao Shen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.11431.pdf",
+      "abstract": "Superalignment, where humans are weak supervisors of superhuman models, has\nbecome an important and widely discussed issue in the current era of rapid\ndevelopment of Large Language Models (LLMs). The recent work preliminarily\nstudies this problem by using weak models to supervise strong models. It\ndiscovers that weakly supervised strong students can consistently outperform\nweak teachers towards the alignment target, leading to a weak-to-strong\ngeneralization phenomenon. However, we are concerned that behind such a\npromising phenomenon, whether there exists an issue of weak-to-strong\ndeception, where strong models may deceive weak models by exhibiting\nwell-aligned in areas known to weak models but producing misaligned behaviors\nin cases weak models do not know. We then take an initial step towards\nexploring this security issue in a specific but realistic multi-objective\nalignment case, where there may be some alignment targets conflicting with each\nother (e.g., helpfulness v.s. harmlessness). Such a conflict is likely to cause\nstrong models to deceive weak models in one alignment dimension to gain high\nreward in other alignment dimension. Our experiments on both the reward\nmodeling task and the preference optimization scenario indicate: (1) the\nweak-to-strong deception exists; (2) the deception phenomenon may intensify as\nthe capability gap between weak and strong models increases. We also discuss\npotential solutions and find bootstrapping with an intermediate model can\nmitigate the deception to some extent. Our work highlights the urgent need to\npay more attention to the true reliability of superalignment.",
+      "upvotes": 4
+    },
+    {
+      "title": "Immiscible Diffusion: Accelerating Diffusion Training with Noise Assignment",
+      "url": "https://huggingface.co/papers/2406.12303",
+      "authors": [
+        "Akio Kodaira",
+        "Masayoshi Tomizuka"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.12303.pdf",
+      "abstract": "In this paper, we point out suboptimal noise-data mapping leads to slow\ntraining of diffusion models. During diffusion training, current methods\ndiffuse each image across the entire noise space, resulting in a mixture of all\nimages at every point in the noise layer. We emphasize that this random mixture\nof noise-data mapping complicates the optimization of the denoising function in\ndiffusion models. Drawing inspiration from the immiscible phenomenon in\nphysics, we propose Immiscible Diffusion, a simple and effective method to\nimprove the random mixture of noise-data mapping. In physics, miscibility can\nvary according to various intermolecular forces. Thus, immiscibility means that\nthe mixing of the molecular sources is distinguishable. Inspired by this, we\npropose an assignment-then-diffusion training strategy. Specifically, prior to\ndiffusing the image data into noise, we assign diffusion target noise for the\nimage data by minimizing the total image-noise pair distance in a mini-batch.\nThe assignment functions analogously to external forces to separate the\ndiffuse-able areas of images, thus mitigating the inherent difficulties in\ndiffusion training. Our approach is remarkably simple, requiring only one line\nof code to restrict the diffuse-able area for each image while preserving the\nGaussian distribution of noise. This ensures that each image is projected only\nto nearby noise. To address the high complexity of the assignment algorithm, we\nemploy a quantized-assignment method to reduce the computational overhead to a\nnegligible level. Experiments demonstrate that our method achieve up to 3x\nfaster training for consistency models and DDIM on the CIFAR dataset, and up to\n1.3x faster on CelebA datasets for consistency models. Besides, we conduct\nthorough analysis about the Immiscible Diffusion, which sheds lights on how it\nimproves diffusion training speed while improving the fidelity.",
+      "upvotes": 4
+    },
+    {
+      "title": "Adversarial Attacks on Multimodal Agents",
+      "url": "https://huggingface.co/papers/2406.12814",
+      "authors": [
+        "Ruslan Salakhutdinov",
+        "Daniel Fried"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.12814.pdf",
+      "abstract": "Vision-enabled language models (VLMs) are now used to build autonomous\nmultimodal agents capable of taking actions in real environments. In this\npaper, we show that multimodal agents raise new safety risks, even though\nattacking agents is more challenging than prior attacks due to limited access\nto and knowledge about the environment. Our attacks use adversarial text\nstrings to guide gradient-based perturbation over one trigger image in the\nenvironment: (1) our captioner attack attacks white-box captioners if they are\nused to process images into captions as additional inputs to the VLM; (2) our\nCLIP attack attacks a set of CLIP models jointly, which can transfer to\nproprietary VLMs. To evaluate the attacks, we curated VisualWebArena-Adv, a set\nof adversarial tasks based on VisualWebArena, an environment for web-based\nmultimodal agent tasks. Within an L-infinity norm of 16/256 on a single\nimage, the captioner attack can make a captioner-augmented GPT-4V agent execute\nthe adversarial goals with a 75% success rate. When we remove the captioner or\nuse GPT-4V to generate its own captions, the CLIP attack can achieve success\nrates of 21% and 43%, respectively. Experiments on agents based on other VLMs,\nsuch as Gemini-1.5, Claude-3, and GPT-4o, show interesting differences in their\nrobustness. Further analysis reveals several key factors contributing to the\nattack's success, and we also discuss the implications for defenses as well.\nProject page: https://chenwu.io/attack-agent Code and data:\nhttps://github.com/ChenWu98/agent-attack",
+      "upvotes": 4
+    },
+    {
+      "title": "Hierarchical Prompting Taxonomy: A Universal Evaluation Framework for Large Language Models",
+      "url": "https://huggingface.co/papers/2406.12644",
+      "authors": [
+        "Ashutosh Kumar",
+        "Vinija Jain"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.12644.pdf",
+      "abstract": "Assessing the effectiveness of large language models (LLMs) in addressing\ndiverse tasks is essential for comprehending their strengths and weaknesses.\nConventional evaluation techniques typically apply a single prompting strategy\nuniformly across datasets, not considering the varying degrees of task\ncomplexity. We introduce the Hierarchical Prompting Taxonomy (HPT), a taxonomy\nthat employs a Hierarchical Prompt Framework (HPF) composed of five unique\nprompting strategies, arranged from the simplest to the most complex, to assess\nLLMs more precisely and to offer a clearer perspective. This taxonomy assigns a\nscore, called the Hierarchical Prompting Score (HP-Score), to datasets as well\nas LLMs based on the rules of the taxonomy, providing a nuanced understanding\nof their ability to solve diverse tasks and offering a universal measure of\ntask complexity. Additionally, we introduce the Adaptive Hierarchical Prompt\nframework, which automates the selection of appropriate prompting strategies\nfor each task. This study compares manual and adaptive hierarchical prompt\nframeworks using four instruction-tuned LLMs, namely Llama 3 8B, Phi 3 3.8B,\nMistral 7B, and Gemma 7B, across four datasets: BoolQ, CommonSenseQA (CSQA),\nIWSLT-2017 en-fr (IWSLT), and SamSum. Experiments demonstrate the effectiveness\nof HPT, providing a reliable way to compare different tasks and LLM\ncapabilities. This paper leads to the development of a universal evaluation\nmetric that can be used to evaluate both the complexity of the datasets and the\ncapabilities of LLMs. The implementation of both manual HPF and adaptive HPF is\npublicly available.",
+      "upvotes": 4
+    },
+    {
+      "title": "JEN-1 DreamStyler: Customized Musical Concept Learning via Pivotal Parameters Tuning",
+      "url": "https://huggingface.co/papers/2406.12292",
+      "authors": [
+        "Boyu Chen",
+        "Yao Yao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.12292.pdf",
+      "abstract": "Large models for text-to-music generation have achieved significant progress,\nfacilitating the creation of high-quality and varied musical compositions from\nprovided text prompts. However, input text prompts may not precisely capture\nuser requirements, particularly when the objective is to generate music that\nembodies a specific concept derived from a designated reference collection. In\nthis paper, we propose a novel method for customized text-to-music generation,\nwhich can capture the concept from a two-minute reference music and generate a\nnew piece of music conforming to the concept. We achieve this by fine-tuning a\npretrained text-to-music model using the reference music. However, directly\nfine-tuning all parameters leads to overfitting issues. To address this\nproblem, we propose a Pivotal Parameters Tuning method that enables the model\nto assimilate the new concept while preserving its original generative\ncapabilities. Additionally, we identify a potential concept conflict when\nintroducing multiple concepts into the pretrained model. We present a concept\nenhancement strategy to distinguish multiple concepts, enabling the fine-tuned\nmodel to generate music incorporating either individual or multiple concepts\nsimultaneously. Since we are the first to work on the customized music\ngeneration task, we also introduce a new dataset and evaluation protocol for\nthe new task. Our proposed Jen1-DreamStyler outperforms several baselines in\nboth qualitative and quantitative evaluations. Demos will be available at\nhttps://www.jenmusic.ai/research#DreamStyler.",
+      "upvotes": 4
+    },
+    {
+      "title": "Mixture-of-Subspaces in Low-Rank Adaptation",
+      "url": "https://huggingface.co/papers/2406.11909",
+      "authors": [
+        "Jiahao Wang",
+        "Zhe Zhao",
+        "Ngai Wong"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.11909.pdf",
+      "abstract": "In this paper, we introduce a subspace-inspired Low-Rank Adaptation (LoRA)\nmethod, which is computationally efficient, easy to implement, and readily\napplicable to large language, multimodal, and diffusion models. Initially, we\nequivalently decompose the weights of LoRA into two subspaces, and find that\nsimply mixing them can enhance performance. To study such a phenomenon, we\nrevisit it through a fine-grained subspace lens, showing that such modification\nis equivalent to employing a fixed mixer to fuse the subspaces. To be more\nflexible, we jointly learn the mixer with the original LoRA weights, and term\nthe method Mixture-of-Subspaces LoRA (MoSLoRA). MoSLoRA consistently\noutperforms LoRA on tasks in different modalities, including commonsense\nreasoning, visual instruction tuning, and subject-driven text-to-image\ngeneration, demonstrating its effectiveness and robustness. Codes are available\nat https://github.com/wutaiqiang/MoSLoRA{github}.",
+      "upvotes": 3
+    }
+  ]
+}

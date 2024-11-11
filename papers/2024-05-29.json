@@ -1,0 +1,99 @@
+{
+  "date": "2024-05-29",
+  "papers": [
+    {
+      "title": "Phased Consistency Model",
+      "url": "https://huggingface.co/papers/2405.18407",
+      "authors": [
+        "Peng Gao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.18407.pdf",
+      "abstract": "The consistency model (CM) has recently made significant progress in\naccelerating the generation of diffusion models. However, its application to\nhigh-resolution, text-conditioned image generation in the latent space (a.k.a.,\nLCM) remains unsatisfactory. In this paper, we identify three key flaws in the\ncurrent design of LCM. We investigate the reasons behind these limitations and\npropose the Phased Consistency Model (PCM), which generalizes the design space\nand addresses all identified limitations. Our evaluations demonstrate that PCM\nsignificantly outperforms LCM across 1--16 step generation settings. While PCM\nis specifically designed for multi-step refinement, it achieves even superior\nor comparable 1-step generation results to previously state-of-the-art\nspecifically designed 1-step methods. Furthermore, we show that PCM's\nmethodology is versatile and applicable to video generation, enabling us to\ntrain the state-of-the-art few-step text-to-video generator. More details are\navailable at https://g-u-n.github.io/projects/pcm/.",
+      "upvotes": 46
+    },
+    {
+      "title": "2BP: 2-Stage Backpropagation",
+      "url": "https://huggingface.co/papers/2405.18047",
+      "authors": [
+        "James Richings"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.18047.pdf",
+      "abstract": "As Deep Neural Networks (DNNs) grow in size and complexity, they often exceed\nthe memory capacity of a single accelerator, necessitating the sharding of\nmodel parameters across multiple accelerators. Pipeline parallelism is a\ncommonly used sharding strategy for training large DNNs. However, current\nimplementations of pipeline parallelism are being unintentionally bottlenecked\nby the automatic differentiation tools provided by ML frameworks. This paper\nintroduces 2-stage backpropagation (2BP). By splitting the backward propagation\nstep into two separate stages, we can reduce idle compute time. We tested 2BP\non various model architectures and pipelining schedules, achieving increases in\nthroughput in all cases. Using 2BP, we were able to achieve a 1.70x increase in\nthroughput compared to traditional methods when training a LLaMa-like\ntransformer with 7 billion parameters across 4 GPUs.",
+      "upvotes": 23
+    },
+    {
+      "title": "Instruct-MusicGen: Unlocking Text-to-Music Editing for Music Language Models via Instruction Tuning",
+      "url": "https://huggingface.co/papers/2405.18386",
+      "authors": [
+        "Marco A. Martínez-Ramírez",
+        "Gus Xia",
+        "Wei-Hsiang Liao",
+        "Yuki Mitsufuji"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.18386.pdf",
+      "abstract": "Recent advances in text-to-music editing, which employ text queries to modify\nmusic (e.g.\\ by changing its style or adjusting instrumental components),\npresent unique challenges and opportunities for AI-assisted music creation.\nPrevious approaches in this domain have been constrained by the necessity to\ntrain specific editing models from scratch, which is both resource-intensive\nand inefficient; other research uses large language models to predict edited\nmusic, resulting in imprecise audio reconstruction. To Combine the strengths\nand address these limitations, we introduce Instruct-MusicGen, a novel approach\nthat finetunes a pretrained MusicGen model to efficiently follow editing\ninstructions such as adding, removing, or separating stems. Our approach\ninvolves a modification of the original MusicGen architecture by incorporating\na text fusion module and an audio fusion module, which allow the model to\nprocess instruction texts and audio inputs concurrently and yield the desired\nedited music. Remarkably, Instruct-MusicGen only introduces 8% new parameters\nto the original MusicGen model and only trains for 5K steps, yet it achieves\nsuperior performance across all tasks compared to existing baselines, and\ndemonstrates performance comparable to the models trained for specific tasks.\nThis advancement not only enhances the efficiency of text-to-music editing but\nalso broadens the applicability of music language models in dynamic music\nproduction environments.",
+      "upvotes": 20
+    },
+    {
+      "title": "LLaMA-NAS: Efficient Neural Architecture Search for Large Language Models",
+      "url": "https://huggingface.co/papers/2405.18377",
+      "authors": [
+        "Anthony Sarah",
+        "Sairam Sundaresan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.18377.pdf",
+      "abstract": "The abilities of modern large language models (LLMs) in solving natural\nlanguage processing, complex reasoning, sentiment analysis and other tasks have\nbeen extraordinary which has prompted their extensive adoption. Unfortunately,\nthese abilities come with very high memory and computational costs which\nprecludes the use of LLMs on most hardware platforms. To mitigate this, we\npropose an effective method of finding Pareto-optimal network architectures\nbased on LLaMA2-7B using one-shot NAS. In particular, we fine-tune LLaMA2-7B\nonly once and then apply genetic algorithm-based search to find smaller, less\ncomputationally complex network architectures. We show that, for certain\nstandard benchmark tasks, the pre-trained LLaMA2-7B network is unnecessarily\nlarge and complex. More specifically, we demonstrate a 1.5x reduction in model\nsize and 1.3x speedup in throughput for certain tasks with negligible drop in\naccuracy. In addition to finding smaller, higher-performing network\narchitectures, our method does so more effectively and efficiently than certain\npruning or sparsification techniques. Finally, we demonstrate how quantization\nis complementary to our method and that the size and complexity of the networks\nwe find can be further decreased using quantization. We believe that our work\nprovides a way to automatically create LLMs which can be used on less expensive\nand more readily available hardware platforms.",
+      "upvotes": 18
+    },
+    {
+      "title": "Yuan 2.0-M32: Mixture of Experts with Attention Router",
+      "url": "https://huggingface.co/papers/2405.17976",
+      "authors": [
+        "Shaohua Wu",
+        "Jiangang Luo",
+        "Tong Yu",
+        "Chao Wang",
+        "Yue Wang",
+        "Fei Wang",
+        "Weixu Qiao",
+        "Junxiong Mao",
+        "Chong Shen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.17976.pdf",
+      "abstract": "Yuan 2.0-M32, with a similar base architecture as Yuan-2.0 2B, uses a\nmixture-of-experts architecture with 32 experts of which 2 experts are active.\nA new router network, Attention Router, is proposed and adopted for a more\nefficient selection of experts, which boosts the accuracy of 3.8% compared to\nthe model with classical router network. Yuan 2.0-M32 is trained with 2000B\ntokens from scratch, and the training computation consumption is only 9.25% of\na dense model at the same parameter scale. Yuan 2.0-M32 demonstrates\ncompetitive capability on coding, math, and various domains of expertise, with\nonly 3.7B active parameters of 40B in total, and 7.4 GFlops forward computation\nper token, both of which are only 1/19 of Llama3-70B. Yuan 2.0-M32 surpass\nLlama3-70B on MATH and ARC-Challenge benchmark, with accuracy of 55.89 and 95.8\nrespectively. The models and source codes of Yuan 2.0-M32 are released at\nGithub.",
+      "upvotes": 18
+    },
+    {
+      "title": "GFlow: Recovering 4D World from Monocular Video",
+      "url": "https://huggingface.co/papers/2405.18426",
+      "authors": [
+        "Xinchao Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.18426.pdf",
+      "abstract": "Reconstructing 4D scenes from video inputs is a crucial yet challenging task.\nConventional methods usually rely on the assumptions of multi-view video\ninputs, known camera parameters, or static scenes, all of which are typically\nabsent under in-the-wild scenarios. In this paper, we relax all these\nconstraints and tackle a highly ambitious but practical task, which we termed\nas AnyV4D: we assume only one monocular video is available without any camera\nparameters as input, and we aim to recover the dynamic 4D world alongside the\ncamera poses. To this end, we introduce GFlow, a new framework that utilizes\nonly 2D priors (depth and optical flow) to lift a video (3D) to a 4D explicit\nrepresentation, entailing a flow of Gaussian splatting through space and time.\nGFlow first clusters the scene into still and moving parts, then applies a\nsequential optimization process that optimizes camera poses and the dynamics of\n3D Gaussian points based on 2D priors and scene clustering, ensuring fidelity\namong neighboring points and smooth movement across frames. Since dynamic\nscenes always introduce new content, we also propose a new pixel-wise\ndensification strategy for Gaussian points to integrate new visual content.\nMoreover, GFlow transcends the boundaries of mere 4D reconstruction; it also\nenables tracking of any points across frames without the need for prior\ntraining and segments moving objects from the scene in an unsupervised way.\nAdditionally, the camera poses of each frame can be derived from GFlow,\nallowing for rendering novel views of a video scene through changing camera\npose. By employing the explicit representation, we may readily conduct\nscene-level or object-level editing as desired, underscoring its versatility\nand power. Visit our project website at: https://littlepure2333.github.io/GFlow",
+      "upvotes": 15
+    },
+    {
+      "title": "VeLoRA: Memory Efficient Training using Rank-1 Sub-Token Projections",
+      "url": "https://huggingface.co/papers/2405.17991",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2405.17991.pdf",
+      "abstract": "Large language models (LLMs) have recently emerged as powerful tools for\ntackling many language-processing tasks. Despite their success, training and\nfine-tuning these models is still far too computationally and memory intensive.\nIn this paper, we identify and characterise the important components needed for\neffective model convergence using gradient descent. In doing so we find that\nthe intermediate activations used to implement backpropagation can be\nexcessively compressed without incurring any degradation in performance. This\nresult leads us to a cheap and memory-efficient algorithm for both fine-tuning\nand pre-training LLMs. The proposed algorithm simply divides the tokens up into\nsmaller sub-tokens before projecting them onto a fixed 1-dimensional subspace\nduring the forward pass. These features are then coarsely reconstructed during\nthe backward pass to implement the update rules. We confirm the effectiveness\nof our algorithm as being complimentary to many state-of-the-art PEFT methods\non the VTAB-1k fine-tuning benchmark. Furthermore, we outperform QLoRA for\nfine-tuning LLaMA and show competitive performance against other\nmemory-efficient pre-training methods on the large-scale C4 dataset.",
+      "upvotes": 11
+    },
+    {
+      "title": "3DitScene: Editing Any Scene via Language-guided Disentangled Gaussian Splatting",
+      "url": "https://huggingface.co/papers/2405.18424",
+      "authors": [
+        "Yinghao Xu",
+        "Hsin-Ying Lee",
+        "Gordon Wetzstein",
+        "Bolei Zhou",
+        "Ceyuan Yang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.18424.pdf",
+      "abstract": "Scene image editing is crucial for entertainment, photography, and\nadvertising design. Existing methods solely focus on either 2D individual\nobject or 3D global scene editing. This results in a lack of a unified approach\nto effectively control and manipulate scenes at the 3D level with different\nlevels of granularity. In this work, we propose 3DitScene, a novel and unified\nscene editing framework leveraging language-guided disentangled Gaussian\nSplatting that enables seamless editing from 2D to 3D, allowing precise control\nover scene composition and individual objects. We first incorporate 3D\nGaussians that are refined through generative priors and optimization\ntechniques. Language features from CLIP then introduce semantics into 3D\ngeometry for object disentanglement. With the disentangled Gaussians, 3DitScene\nallows for manipulation at both the global and individual levels,\nrevolutionizing creative expression and empowering control over scenes and\nobjects. Experimental results demonstrate the effectiveness and versatility of\n3DitScene in scene image editing. Code and online demo can be found at our\nproject homepage: https://zqh0253.github.io/3DitScene/.",
+      "upvotes": 7
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "date": "2024-06-20",
+  "papers": [
+    {
+      "title": "Multimodal Needle in a Haystack: Benchmarking Long-Context Capability of Multimodal Large Language Models",
+      "url": "https://huggingface.co/papers/2406.11230",
+      "authors": [
+        "Tunyu Zhang",
+        "Tanuja Ganu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.11230.pdf",
+      "abstract": "Multimodal Large Language Models (MLLMs) have shown significant promise in\nvarious applications, leading to broad interest from researchers and\npractitioners alike. However, a comprehensive evaluation of their long-context\ncapabilities remains underexplored. To address these gaps, we introduce the\nMultiModal Needle-in-a-haystack (MMNeedle) benchmark, specifically designed to\nassess the long-context capabilities of MLLMs. Besides multi-image input, we\nemploy image stitching to further increase the input context length, and\ndevelop a protocol to automatically generate labels for sub-image level\nretrieval. Essentially, MMNeedle evaluates MLLMs by stress-testing their\ncapability to locate a target sub-image (needle) within a set of images\n(haystack) based on textual instructions and descriptions of image contents.\nThis setup necessitates an advanced understanding of extensive visual contexts\nand effective information retrieval within long-context image inputs. With this\nbenchmark, we evaluate state-of-the-art MLLMs, encompassing both API-based and\nopen-source models. The findings reveal that GPT-4o consistently surpasses\nother models in long-context scenarios, but suffers from hallucination problems\nin negative samples, i.e., when needles are not in the haystacks. Our\ncomprehensive long-context evaluation of MLLMs also sheds lights on the\nconsiderable performance gap between API-based and open-source models. All the\ncode, data, and instructions required to reproduce the main results are\navailable at https://github.com/Wang-ML-Lab/multimodal-needle-in-a-haystack.",
+      "upvotes": 34
+    },
+    {
+      "title": "Long Code Arena: a Set of Benchmarks for Long-Context Code Models",
+      "url": "https://huggingface.co/papers/2406.11612",
+      "authors": [
+        "Anton Shapkin",
+        "Arie van Deursen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.11612.pdf",
+      "abstract": "Nowadays, the fields of code and natural language processing are evolving\nrapidly. In particular, models become better at processing long context windows\n- supported context sizes have increased by orders of magnitude over the last\nfew years. However, there is a shortage of benchmarks for code processing that\ngo beyond a single file of context, while the most popular ones are limited to\na single method. With this work, we aim to close this gap by introducing Long\nCode Arena, a suite of six benchmarks for code processing tasks that require\nproject-wide context. These tasks cover different aspects of code processing:\nlibrary-based code generation, CI builds repair, project-level code completion,\ncommit message generation, bug localization, and module summarization. For each\ntask, we provide a manually verified dataset for testing, an evaluation suite,\nand open-source baseline solutions based on popular LLMs to showcase the usage\nof the dataset and to simplify adoption by other researchers. We publish the\nbenchmark page on HuggingFace Spaces with the leaderboard, links to HuggingFace\nHub for all the datasets, and link to the GitHub repository with baselines:\nhttps://huggingface.co/spaces/JetBrains-Research/long-code-arena.",
+      "upvotes": 22
+    },
+    {
+      "title": "Probabilistic Conceptual Explainers: Trustworthy Conceptual Explanations for Vision Foundation Models",
+      "url": "https://huggingface.co/papers/2406.12649",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2406.12649.pdf",
+      "abstract": "Vision transformers (ViTs) have emerged as a significant area of focus,\nparticularly for their capacity to be jointly trained with large language\nmodels and to serve as robust vision foundation models. Yet, the development of\ntrustworthy explanation methods for ViTs has lagged, particularly in the\ncontext of post-hoc interpretations of ViT predictions. Existing sub-image\nselection approaches, such as feature-attribution and conceptual models, fall\nshort in this regard. This paper proposes five desiderata for explaining ViTs\n-- faithfulness, stability, sparsity, multi-level structure, and parsimony --\nand demonstrates the inadequacy of current methods in meeting these criteria\ncomprehensively. We introduce a variational Bayesian explanation framework,\ndubbed ProbAbilistic Concept Explainers (PACE), which models the distributions\nof patch embeddings to provide trustworthy post-hoc conceptual explanations.\nOur qualitative analysis reveals the distributions of patch-level concepts,\nelucidating the effectiveness of ViTs by modeling the joint distribution of\npatch embeddings and ViT's predictions. Moreover, these patch-level\nexplanations bridge the gap between image-level and dataset-level explanations,\nthus completing the multi-level structure of PACE. Through extensive\nexperiments on both synthetic and real-world datasets, we demonstrate that PACE\nsurpasses state-of-the-art methods in terms of the defined desiderata.",
+      "upvotes": 15
+    },
+    {
+      "title": "Self-MoE: Towards Compositional Large Language Models with Self-Specialized Experts",
+      "url": "https://huggingface.co/papers/2406.12034",
+      "authors": [
+        "Zhen Wang",
+        "Jacob Hansen",
+        "David Cox"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.12034.pdf",
+      "abstract": "We present Self-MoE, an approach that transforms a monolithic LLM into a\ncompositional, modular system of self-specialized experts, named MiXSE (MiXture\nof Self-specialized Experts). Our approach leverages self-specialization, which\nconstructs expert modules using self-generated synthetic data, each equipped\nwith a shared base LLM and incorporating self-optimized routing. This allows\nfor dynamic and capability-specific handling of various target tasks, enhancing\noverall capabilities, without extensive human-labeled data and added\nparameters. Our empirical results reveal that specializing LLMs may exhibit\npotential trade-offs in performances on non-specialized tasks. On the other\nhand, our Self-MoE demonstrates substantial improvements over the base LLM\nacross diverse benchmarks such as knowledge, reasoning, math, and coding. It\nalso consistently outperforms other methods, including instance merging and\nweight merging, while offering better flexibility and interpretability by\ndesign with semantic experts and routing. Our findings highlight the critical\nrole of modularity and the potential of self-improvement in achieving\nefficient, scalable, and adaptable systems.",
+      "upvotes": 13
+    },
+    {
+      "title": "Breaking Boundaries: Investigating the Effects of Model Editing on Cross-linguistic Performance",
+      "url": "https://huggingface.co/papers/2406.11139",
+      "authors": [
+        "Avik Halder"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.11139.pdf",
+      "abstract": "The integration of pretrained language models (PLMs) like BERT and GPT has\nrevolutionized NLP, particularly for English, but it has also created\nlinguistic imbalances. This paper strategically identifies the need for\nlinguistic equity by examining several knowledge editing techniques in\nmultilingual contexts. We evaluate the performance of models such as Mistral,\nTowerInstruct, OpenHathi, Tamil-Llama, and Kan-Llama across languages including\nEnglish, German, French, Italian, Spanish, Hindi, Tamil, and Kannada. Our\nresearch identifies significant discrepancies in normal and merged models\nconcerning cross-lingual consistency. We employ strategies like 'each language\nfor itself' (ELFI) and 'each language for others' (ELFO) to stress-test these\nmodels. Our findings demonstrate the potential for LLMs to overcome linguistic\nbarriers, laying the groundwork for future research in achieving linguistic\ninclusivity in AI technologies.",
+      "upvotes": 12
+    },
+    {
+      "title": "Measuring memorization in RLHF for code completion",
+      "url": "https://huggingface.co/papers/2406.11715",
+      "authors": [
+        "Aneesh Pappu",
+        "Ilia Shumailov",
+        "Jamie Hayes"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.11715.pdf",
+      "abstract": "Reinforcement learning with human feedback (RLHF) has become the dominant\nmethod to align large models to user preferences. Unlike fine-tuning, for which\nthere are many studies regarding training data memorization, it is not clear\nhow memorization is affected by or introduced in the RLHF alignment process.\nUnderstanding this relationship is important as real user data may be collected\nand used to align large models; if user data is memorized during RLHF and later\nregurgitated, this could raise privacy concerns. In this work, we analyze how\ntraining data memorization can surface and propagate through each phase of\nRLHF. We focus our study on code completion models, as code completion is one\nof the most popular use cases for large language models. We find that RLHF\nsignificantly decreases the chance that data used for reward modeling and\nreinforcement learning is memorized, in comparison to aligning via directly\nfine-tuning on this data, but that examples already memorized during the\nfine-tuning stage of RLHF, will, in the majority of cases, remain memorized\nafter RLHF.",
+      "upvotes": 6
+    },
+    {
+      "title": "Interface Design for Self-Supervised Speech Models",
+      "url": "https://huggingface.co/papers/2406.12209",
+      "authors": [
+        "David Harwath"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.12209.pdf",
+      "abstract": "Self-supervised speech (SSL) models have recently become widely adopted for\nmany downstream speech processing tasks. The general usage pattern is to employ\nSSL models as feature extractors, and then train a downstream prediction head\nto solve a specific task. However, different layers of SSL models have been\nshown to capture different types of information, and the methods of combining\nthem are not well studied. To this end, we extend the general framework for SSL\nmodel utilization by proposing the interface that connects the upstream and\ndownstream. Under this view, the dominant technique of combining features via a\nlayerwise weighted sum can be regarded as a specific interface. We propose\nseveral alternative interface designs and demonstrate that the weighted sum\ninterface is suboptimal for many tasks. In particular, we show that a\nconvolutional interface whose depth scales logarithmically with the depth of\nthe upstream model consistently outperforms many other interface designs.",
+      "upvotes": 6
+    },
+    {
+      "title": "Intrinsic Evaluation of Unlearning Using Parametric Knowledge Traces",
+      "url": "https://huggingface.co/papers/2406.11614",
+      "authors": [
+        "Lei Yu",
+        "Haiqin Yang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.11614.pdf",
+      "abstract": "The task of \"unlearning\" certain concepts in large language models (LLMs) has\nattracted immense attention recently, due to its importance for mitigating\nundesirable model behaviours, such as the generation of harmful, private, or\nincorrect information. Current protocols to evaluate unlearning methods largely\nrely on behavioral tests, without monitoring the presence of unlearned\nknowledge within the model's parameters. This residual knowledge can be\nadversarially exploited to recover the erased information post-unlearning. We\nargue that unlearning should also be evaluated internally, by considering\nchanges in the parametric knowledge traces of the unlearned concepts. To this\nend, we propose a general methodology for eliciting directions in the parameter\nspace (termed \"concept vectors\") that encode concrete concepts, and construct\nConceptVectors, a benchmark dataset containing hundreds of common concepts and\ntheir parametric knowledge traces within two open-source LLMs. Evaluation on\nConceptVectors shows that existing unlearning methods minimally impact concept\nvectors, while directly ablating these vectors demonstrably removes the\nassociated knowledge from the LLMs and significantly reduces their\nsusceptibility to adversarial manipulation. Our results highlight limitations\nin behavioral-based unlearning evaluations and call for future work to include\nparametric-based evaluations. To support this, we release our code and\nbenchmark at https://github.com/yihuaihong/ConceptVectors.",
+      "upvotes": 4
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "date": "2024-09-16",
+  "papers": [
+    {
+      "title": "InstantDrag: Improving Interactivity in Drag-based Image Editing",
+      "url": "https://huggingface.co/papers/2409.08857",
+      "authors": [
+        "Jaesik Park"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.08857.pdf",
+      "abstract": "Drag-based image editing has recently gained popularity for its interactivity\nand precision. However, despite the ability of text-to-image models to generate\nsamples within a second, drag editing still lags behind due to the challenge of\naccurately reflecting user interaction while maintaining image content. Some\nexisting approaches rely on computationally intensive per-image optimization or\nintricate guidance-based methods, requiring additional inputs such as masks for\nmovable regions and text prompts, thereby compromising the interactivity of the\nediting process. We introduce InstantDrag, an optimization-free pipeline that\nenhances interactivity and speed, requiring only an image and a drag\ninstruction as input. InstantDrag consists of two carefully designed networks:\na drag-conditioned optical flow generator (FlowGen) and an optical\nflow-conditioned diffusion model (FlowDiffusion). InstantDrag learns motion\ndynamics for drag-based image editing in real-world video datasets by\ndecomposing the task into motion generation and motion-conditioned image\ngeneration. We demonstrate InstantDrag's capability to perform fast,\nphoto-realistic edits without masks or text prompts through experiments on\nfacial video datasets and general scenes. These results highlight the\nefficiency of our approach in handling drag-based image editing, making it a\npromising solution for interactive, real-time applications.",
+      "upvotes": 30
+    },
+    {
+      "title": "DrawingSpinUp: 3D Animation from Single Character Drawings",
+      "url": "https://huggingface.co/papers/2409.08615",
+      "authors": [
+        "Miu-Ling Lam"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.08615.pdf",
+      "abstract": "Animating various character drawings is an engaging visual content creation\ntask. Given a single character drawing, existing animation methods are limited\nto flat 2D motions and thus lack 3D effects. An alternative solution is to\nreconstruct a 3D model from a character drawing as a proxy and then retarget 3D\nmotion data onto it. However, the existing image-to-3D methods could not work\nwell for amateur character drawings in terms of appearance and geometry. We\nobserve the contour lines, commonly existing in character drawings, would\nintroduce significant ambiguity in texture synthesis due to their\nview-dependence. Additionally, thin regions represented by single-line contours\nare difficult to reconstruct (e.g., slim limbs of a stick figure) due to their\ndelicate structures. To address these issues, we propose a novel system,\nDrawingSpinUp, to produce plausible 3D animations and breathe life into\ncharacter drawings, allowing them to freely spin up, leap, and even perform a\nhip-hop dance. For appearance improvement, we adopt a removal-then-restoration\nstrategy to first remove the view-dependent contour lines and then render them\nback after retargeting the reconstructed character. For geometry refinement, we\ndevelop a skeleton-based thinning deformation algorithm to refine the slim\nstructures represented by the single-line contours. The experimental\nevaluations and a perceptual user study show that our proposed method\noutperforms the existing 2D and 3D animation methods and generates high-quality\n3D animations from a single character drawing. Please refer to our project page\n(https://lordliang.github.io/DrawingSpinUp) for the code and generated\nanimations.",
+      "upvotes": 14
+    },
+    {
+      "title": "A Diffusion Approach to Radiance Field Relighting using Multi-Illumination Synthesis",
+      "url": "https://huggingface.co/papers/2409.08947",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2409.08947.pdf",
+      "abstract": "Relighting radiance fields is severely underconstrained for multi-view data,\nwhich is most often captured under a single illumination condition; It is\nespecially hard for full scenes containing multiple objects. We introduce a\nmethod to create relightable radiance fields using such single-illumination\ndata by exploiting priors extracted from 2D image diffusion models. We first\nfine-tune a 2D diffusion model on a multi-illumination dataset conditioned by\nlight direction, allowing us to augment a single-illumination capture into a\nrealistic -- but possibly inconsistent -- multi-illumination dataset from\ndirectly defined light directions. We use this augmented data to create a\nrelightable radiance field represented by 3D Gaussian splats. To allow direct\ncontrol of light direction for low-frequency lighting, we represent appearance\nwith a multi-layer perceptron parameterized on light direction. To enforce\nmulti-view consistency and overcome inaccuracies we optimize a per-image\nauxiliary feature vector. We show results on synthetic and real multi-view data\nunder single illumination, demonstrating that our method successfully exploits\n2D diffusion model priors to allow realistic 3D relighting for complete scenes.\nProject site\nhttps://repo-sam.inria.fr/fungraph/generative-radiance-field-relighting/",
+      "upvotes": 11
+    },
+    {
+      "title": "Mamba-YOLO-World: Marrying YOLO-World with Mamba for Open-Vocabulary Detection",
+      "url": "https://huggingface.co/papers/2409.08513",
+      "authors": [
+        "Jinlong Peng",
+        "Hao Yang",
+        "Mingmin Chi",
+        "Yabiao Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.08513.pdf",
+      "abstract": "Open-vocabulary detection (OVD) aims to detect objects beyond a predefined\nset of categories. As a pioneering model incorporating the YOLO series into\nOVD, YOLO-World is well-suited for scenarios prioritizing speed and\nefficiency.However, its performance is hindered by its neck feature fusion\nmechanism, which causes the quadratic complexity and the limited guided\nreceptive fields.To address these limitations, we present Mamba-YOLO-World, a\nnovel YOLO-based OVD model employing the proposed MambaFusion Path Aggregation\nNetwork (MambaFusion-PAN) as its neck architecture. Specifically, we introduce\nan innovative State Space Model-based feature fusion mechanism consisting of a\nParallel-Guided Selective Scan algorithm and a Serial-Guided Selective Scan\nalgorithm with linear complexity and globally guided receptive fields. It\nleverages multi-modal input sequences and mamba hidden states to guide the\nselective scanning process.Experiments demonstrate that our model outperforms\nthe original YOLO-World on the COCO and LVIS benchmarks in both zero-shot and\nfine-tuning settings while maintaining comparable parameters and FLOPs.\nAdditionally, it surpasses existing state-of-the-art OVD methods with fewer\nparameters and FLOPs.",
+      "upvotes": 10
+    },
+    {
+      "title": "Robust Dual Gaussian Splatting for Immersive Human-centric Volumetric Videos",
+      "url": "https://huggingface.co/papers/2409.08353",
+      "authors": [
+        "Yuheng Jiang",
+        "Zhehao Shen",
+        "Yu Hong",
+        "Yize Wu",
+        "Yingliang Zhang",
+        "Lan Xu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.08353.pdf",
+      "abstract": "Volumetric video represents a transformative advancement in visual media,\nenabling users to freely navigate immersive virtual experiences and narrowing\nthe gap between digital and real worlds. However, the need for extensive manual\nintervention to stabilize mesh sequences and the generation of excessively\nlarge assets in existing workflows impedes broader adoption. In this paper, we\npresent a novel Gaussian-based approach, dubbed DualGS, for real-time\nand high-fidelity playback of complex human performance with excellent\ncompression ratios. Our key idea in DualGS is to separately represent motion\nand appearance using the corresponding skin and joint Gaussians. Such an\nexplicit disentanglement can significantly reduce motion redundancy and enhance\ntemporal coherence. We begin by initializing the DualGS and anchoring skin\nGaussians to joint Gaussians at the first frame. Subsequently, we employ a\ncoarse-to-fine training strategy for frame-by-frame human performance modeling.\nIt includes a coarse alignment phase for overall motion prediction as well as a\nfine-grained optimization for robust tracking and high-fidelity rendering. To\nintegrate volumetric video seamlessly into VR environments, we efficiently\ncompress motion using entropy encoding and appearance using codec compression\ncoupled with a persistent codebook. Our approach achieves a compression ratio\nof up to 120 times, only requiring approximately 350KB of storage per frame. We\ndemonstrate the efficacy of our representation through photo-realistic,\nfree-view experiences on VR headsets, enabling users to immersively watch\nmusicians in performance and feel the rhythm of the notes at the performers'\nfingertips.",
+      "upvotes": 10
+    },
+    {
+      "title": "Apollo: Band-sequence Modeling for High-Quality Audio Restoration",
+      "url": "https://huggingface.co/papers/2409.08514",
+      "authors": [
+        "Yi Luo"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.08514.pdf",
+      "abstract": "Audio restoration has become increasingly significant in modern society, not\nonly due to the demand for high-quality auditory experiences enabled by\nadvanced playback devices, but also because the growing capabilities of\ngenerative audio models necessitate high-fidelity audio. Typically, audio\nrestoration is defined as a task of predicting undistorted audio from damaged\ninput, often trained using a GAN framework to balance perception and\ndistortion. Since audio degradation is primarily concentrated in mid- and\nhigh-frequency ranges, especially due to codecs, a key challenge lies in\ndesigning a generator capable of preserving low-frequency information while\naccurately reconstructing high-quality mid- and high-frequency content.\nInspired by recent advancements in high-sample-rate music separation, speech\nenhancement, and audio codec models, we propose Apollo, a generative model\ndesigned for high-sample-rate audio restoration. Apollo employs an explicit\nfrequency band split module to model the relationships between different\nfrequency bands, allowing for more coherent and higher-quality restored audio.\nEvaluated on the MUSDB18-HQ and MoisesDB datasets, Apollo consistently\noutperforms existing SR-GAN models across various bit rates and music genres,\nparticularly excelling in complex scenarios involving mixtures of multiple\ninstruments and vocals. Apollo significantly improves music restoration quality\nwhile maintaining computational efficiency. The source code for Apollo is\npublicly available at https://github.com/JusperLee/Apollo.",
+      "upvotes": 8
+    },
+    {
+      "title": "Click2Mask: Local Editing with Dynamic Mask Generation",
+      "url": "https://huggingface.co/papers/2409.08272",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2409.08272.pdf",
+      "abstract": "Recent advancements in generative models have revolutionized image generation\nand editing, making these tasks accessible to non-experts. This paper focuses\non local image editing, particularly the task of adding new content to a\nloosely specified area. Existing methods often require a precise mask or a\ndetailed description of the location, which can be cumbersome and prone to\nerrors. We propose Click2Mask, a novel approach that simplifies the local\nediting process by requiring only a single point of reference (in addition to\nthe content description). A mask is dynamically grown around this point during\na Blended Latent Diffusion (BLD) process, guided by a masked CLIP-based\nsemantic loss. Click2Mask surpasses the limitations of segmentation-based and\nfine-tuning dependent methods, offering a more user-friendly and contextually\naccurate solution. Our experiments demonstrate that Click2Mask not only\nminimizes user effort but also delivers competitive or superior local image\nmanipulation results compared to SoTA methods, according to both human\njudgement and automatic metrics. Key contributions include the simplification\nof user input, the ability to freely add objects unconstrained by existing\nsegments, and the integration potential of our dynamic mask approach within\nother editing methods.",
+      "upvotes": 3
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "date": "2024-06-27",
+  "papers": [
+    {
+      "title": "Adam-mini: Use Fewer Learning Rates To Gain More",
+      "url": "https://huggingface.co/papers/2406.16793",
+      "authors": [
+        "Congliang Chen",
+        "Tian Ding",
+        "Chenwei Wu",
+        "Yinyu Ye",
+        "Zhi-Quan Luo",
+        "Ruoyu Sun"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.16793.pdf",
+      "abstract": "We propose Adam-mini, an optimizer that achieves on-par or better performance\nthan AdamW with 45% to 50% less memory footprint. Adam-mini reduces memory by\ncutting down the learning rate resources in Adam (i.e., 1/v). We find\nthat geq 90% of these learning rates in v could be harmlessly removed if\nwe (1) carefully partition the parameters into blocks following our proposed\nprinciple on Hessian structure; (2) assign a single but good learning rate to\neach parameter block. We further find that, for each of these parameter blocks,\nthere exists a single high-quality learning rate that can outperform Adam,\nprovided that sufficient resources are available to search it out. We then\nprovide one cost-effective way to find good learning rates and propose\nAdam-mini. Empirically, we verify that Adam-mini performs on par or better than\nAdamW on various language models sized from 125M to 7B for pre-training,\nsupervised fine-tuning, and RLHF. The reduced memory footprint of Adam-mini\nalso alleviates communication overheads among GPUs and CPUs, thereby increasing\nthroughput. For instance, Adam-mini achieves 49.6% higher throughput than AdamW\nwhen pre-training Llama2-7B on 2times A800-80GB GPUs, which saves 33%\nwall-clock time for pre-training.",
+      "upvotes": 67
+    },
+    {
+      "title": "Octo-planner: On-device Language Model for Planner-Action Agents",
+      "url": "https://huggingface.co/papers/2406.18082",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2406.18082.pdf",
+      "abstract": "AI agents have become increasingly significant in various domains, enabling\nautonomous decision-making and problem-solving. To function effectively, these\nagents require a planning process that determines the best course of action and\nthen executes the planned actions. In this paper, we present an efficient\non-device Planner-Action framework that separates planning and action execution\ninto two distinct components: a planner agent based on Phi-3 Mini, a 3.8\nbillion parameter LLM optimized for edge devices, and an action agent using the\nOctopus model for function execution. The planner agent first responds to user\nqueries by decomposing tasks into a sequence of sub-steps, which are then\nexecuted by the action agent. To optimize performance on resource-constrained\ndevices, we employ model fine-tuning instead of in-context learning, reducing\ncomputational costs and energy consumption while improving response times. Our\napproach involves using GPT-4 to generate diverse planning queries and\nresponses based on available functions, with subsequent validations to ensure\ndata quality. We fine-tune the Phi-3 Mini model on this curated dataset,\nachieving a 97\\% success rate in our in-domain test environment. To address\nmulti-domain planning challenges, we developed a multi-LoRA training method\nthat merges weights from LoRAs trained on distinct function subsets. This\napproach enables flexible handling of complex, multi-domain queries while\nmaintaining computational efficiency on resource-constrained devices. To\nsupport further research, we have open-sourced our model weights at\nhttps://huggingface.co/NexaAIDev/octopus-planning. For the demo, please\nrefer to https://www.nexa4ai.com/octo-planner.",
+      "upvotes": 47
+    },
+    {
+      "title": "ChronoMagic-Bench: A Benchmark for Metamorphic Evaluation of Text-to-Time-lapse Video Generation",
+      "url": "https://huggingface.co/papers/2406.18522",
+      "authors": [
+        "Shaofeng Zhang",
+        "Jiebo Luo",
+        "Li Yuan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.18522.pdf",
+      "abstract": "We propose a novel text-to-video (T2V) generation benchmark,\nChronoMagic-Bench, to evaluate the temporal and metamorphic capabilities of the\nT2V models (e.g. Sora and Lumiere) in time-lapse video generation. In contrast\nto existing benchmarks that focus on the visual quality and textual relevance\nof generated videos, ChronoMagic-Bench focuses on the model's ability to\ngenerate time-lapse videos with significant metamorphic amplitude and temporal\ncoherence. The benchmark probes T2V models for their physics, biology, and\nchemistry capabilities, in a free-form text query. For these purposes,\nChronoMagic-Bench introduces 1,649 prompts and real-world videos as references,\ncategorized into four major types of time-lapse videos: biological,\nhuman-created, meteorological, and physical phenomena, which are further\ndivided into 75 subcategories. This categorization comprehensively evaluates\nthe model's capacity to handle diverse and complex transformations. To\naccurately align human preference with the benchmark, we introduce two new\nautomatic metrics, MTScore and CHScore, to evaluate the videos' metamorphic\nattributes and temporal coherence. MTScore measures the metamorphic amplitude,\nreflecting the degree of change over time, while CHScore assesses the temporal\ncoherence, ensuring the generated videos maintain logical progression and\ncontinuity. Based on the ChronoMagic-Bench, we conduct comprehensive manual\nevaluations of ten representative T2V models, revealing their strengths and\nweaknesses across different categories of prompts, and providing a thorough\nevaluation framework that addresses current gaps in video generation research.\nMoreover, we create a large-scale ChronoMagic-Pro dataset, containing 460k\nhigh-quality pairs of 720p time-lapse videos and detailed captions ensuring\nhigh physical pertinence and large metamorphic amplitude.",
+      "upvotes": 40
+    },
+    {
+      "title": "CharXiv: Charting Gaps in Realistic Chart Understanding in Multimodal LLMs",
+      "url": "https://huggingface.co/papers/2406.18521",
+      "authors": [
+        "Luxi He",
+        "Sanjeev Arora"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.18521.pdf",
+      "abstract": "Chart understanding plays a pivotal role when applying Multimodal Large\nLanguage Models (MLLMs) to real-world tasks such as analyzing scientific papers\nor financial reports. However, existing datasets often focus on oversimplified\nand homogeneous charts with template-based questions, leading to an\nover-optimistic measure of progress. We demonstrate that although open-source\nmodels can appear to outperform strong proprietary models on these benchmarks,\na simple stress test with slightly different charts or questions can\ndeteriorate performance by up to 34.5%. In this work, we propose CharXiv, a\ncomprehensive evaluation suite involving 2,323 natural, challenging, and\ndiverse charts from arXiv papers. CharXiv includes two types of questions: 1)\ndescriptive questions about examining basic chart elements and 2) reasoning\nquestions that require synthesizing information across complex visual elements\nin the chart. To ensure quality, all charts and questions are handpicked,\ncurated, and verified by human experts. Our results reveal a substantial,\npreviously underestimated gap between the reasoning skills of the strongest\nproprietary model (i.e., GPT-4o), which achieves 47.1% accuracy, and the\nstrongest open-source model (i.e., InternVL Chat V1.5), which achieves 29.2%.\nAll models lag far behind human performance of 80.5%, underscoring weaknesses\nin the chart understanding capabilities of existing MLLMs. We hope CharXiv\nfacilitates future research on MLLM chart understanding by providing a more\nrealistic and faithful measure of progress. Project page and leaderboard:\nhttps://charxiv.github.io/",
+      "upvotes": 28
+    },
+    {
+      "title": "A Closer Look into Mixture-of-Experts in Large Language Models",
+      "url": "https://huggingface.co/papers/2406.18219",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2406.18219.pdf",
+      "abstract": "Mixture-of-experts (MoE) is gaining increasing attention due to its unique\nproperties and remarkable performance, especially for language tasks. By\nsparsely activating a subset of parameters for each token, MoE architecture\ncould increase the model size without sacrificing computational efficiency,\nachieving a better trade-off between performance and training costs. However,\nthe underlying mechanism of MoE still lacks further exploration, and its\nmodularization degree remains questionable. In this paper, we make an initial\nattempt to understand the inner workings of MoE-based large language models.\nConcretely, we comprehensively study the parametric and behavioral features of\nthree recent MoE-based models and reveal some intriguing observations,\nincluding (1) Neurons act like fine-grained experts. (2) The router of MoE\nusually selects experts with larger output norms. (3) The expert diversity\nincreases as the layer increases, while the last layer is an outlier. Based on\nthe observations, we also provide suggestions for a broad spectrum of MoE\npractitioners, such as router design and expert allocation. We hope this work\ncould shed light on future research on the MoE framework and other modular\narchitectures. Code is available at\nhttps://github.com/kamanphoebe/Look-into-MoEs.",
+      "upvotes": 15
+    },
+    {
+      "title": "MatchTime: Towards Automatic Soccer Game Commentary Generation",
+      "url": "https://huggingface.co/papers/2406.18530",
+      "authors": [
+        "Chang Liu",
+        "Yanfeng Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.18530.pdf",
+      "abstract": "Soccer is a globally popular sport with a vast audience, in this paper, we\nconsider constructing an automatic soccer game commentary model to improve the\naudiences' viewing experience. In general, we make the following contributions:\nFirst, observing the prevalent video-text misalignment in existing datasets, we\nmanually annotate timestamps for 49 matches, establishing a more robust\nbenchmark for soccer game commentary generation, termed as\nSN-Caption-test-align; Second, we propose a multi-modal temporal alignment\npipeline to automatically correct and filter the existing dataset at scale,\ncreating a higher-quality soccer game commentary dataset for training, denoted\nas MatchTime; Third, based on our curated dataset, we train an automatic\ncommentary generation model, named MatchVoice. Extensive experiments and\nablation studies have demonstrated the effectiveness of our alignment pipeline,\nand training model on the curated datasets achieves state-of-the-art\nperformance for commentary generation, showcasing that better alignment can\nlead to significant performance improvements in downstream tasks.",
+      "upvotes": 12
+    },
+    {
+      "title": "WildGuard: Open One-Stop Moderation Tools for Safety Risks, Jailbreaks, and Refusals of LLMs",
+      "url": "https://huggingface.co/papers/2406.18495",
+      "authors": [
+        "Kavel Rao",
+        "Liwei Jiang",
+        "Nathan Lambert",
+        "Yejin Choi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.18495.pdf",
+      "abstract": "We introduce WildGuard -- an open, light-weight moderation tool for LLM\nsafety that achieves three goals: (1) identifying malicious intent in user\nprompts, (2) detecting safety risks of model responses, and (3) determining\nmodel refusal rate. Together, WildGuard serves the increasing needs for\nautomatic safety moderation and evaluation of LLM interactions, providing a\none-stop tool with enhanced accuracy and broad coverage across 13 risk\ncategories. While existing open moderation tools such as Llama-Guard2 score\nreasonably well in classifying straightforward model interactions, they lag far\nbehind a prompted GPT-4, especially in identifying adversarial jailbreaks and\nin evaluating models' refusals, a key measure for evaluating safety behaviors\nin model responses.\n  To address these challenges, we construct WildGuardMix, a large-scale and\ncarefully balanced multi-task safety moderation dataset with 92K labeled\nexamples that cover vanilla (direct) prompts and adversarial jailbreaks, paired\nwith various refusal and compliance responses. WildGuardMix is a combination of\nWildGuardTrain, the training data of WildGuard, and WildGuardTest, a\nhigh-quality human-annotated moderation test set with 5K labeled items covering\nbroad risk scenarios. Through extensive evaluations on WildGuardTest and ten\nexisting public benchmarks, we show that WildGuard establishes state-of-the-art\nperformance in open-source safety moderation across all the three tasks\ncompared to ten strong existing open-source moderation models (e.g., up to\n26.4% improvement on refusal detection). Importantly, WildGuard matches and\nsometimes exceeds GPT-4 performance (e.g., up to 3.9% improvement on prompt\nharmfulness identification). WildGuard serves as a highly effective safety\nmoderator in an LLM interface, reducing the success rate of jailbreak attacks\nfrom 79.8% to 2.4%.",
+      "upvotes": 12
+    },
+    {
+      "title": "Symbolic Learning Enables Self-Evolving Agents",
+      "url": "https://huggingface.co/papers/2406.18532",
+      "authors": [
+        "Yixin Ou",
+        "Shengwei Ding",
+        "Jiamin Chen",
+        "Xiaohua Xu",
+        "Huajun Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.18532.pdf",
+      "abstract": "The AI community has been exploring a pathway to artificial general\nintelligence (AGI) by developing \"language agents\", which are complex large\nlanguage models (LLMs) pipelines involving both prompting techniques and tool\nusage methods. While language agents have demonstrated impressive capabilities\nfor many real-world tasks, a fundamental limitation of current language agents\nresearch is that they are model-centric, or engineering-centric. That's to say,\nthe progress on prompts, tools, and pipelines of language agents requires\nsubstantial manual engineering efforts from human experts rather than\nautomatically learning from data. We believe the transition from model-centric,\nor engineering-centric, to data-centric, i.e., the ability of language agents\nto autonomously learn and evolve in environments, is the key for them to\npossibly achieve AGI.\n  In this work, we introduce agent symbolic learning, a systematic framework\nthat enables language agents to optimize themselves on their own in a\ndata-centric way using symbolic optimizers. Specifically, we consider agents as\nsymbolic networks where learnable weights are defined by prompts, tools, and\nthe way they are stacked together. Agent symbolic learning is designed to\noptimize the symbolic network within language agents by mimicking two\nfundamental algorithms in connectionist learning: back-propagation and gradient\ndescent. Instead of dealing with numeric weights, agent symbolic learning works\nwith natural language simulacrums of weights, loss, and gradients. We conduct\nproof-of-concept experiments on both standard benchmarks and complex real-world\ntasks and show that agent symbolic learning enables language agents to update\nthemselves after being created and deployed in the wild, resulting in\n\"self-evolving agents\".",
+      "upvotes": 11
+    },
+    {
+      "title": "EHRCon: Dataset for Checking Consistency between Unstructured Notes and Structured Tables in Electronic Health Records",
+      "url": "https://huggingface.co/papers/2406.16341",
+      "authors": [
+        "Wonchul Cha",
+        "Tom Pollard"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.16341.pdf",
+      "abstract": "Electronic Health Records (EHRs) are integral for storing comprehensive\npatient medical records, combining structured data (e.g., medications) with\ndetailed clinical notes (e.g., physician notes). These elements are essential\nfor straightforward data retrieval and provide deep, contextual insights into\npatient care. However, they often suffer from discrepancies due to unintuitive\nEHR system designs and human errors, posing serious risks to patient safety. To\naddress this, we developed EHRCon, a new dataset and task specifically designed\nto ensure data consistency between structured tables and unstructured notes in\nEHRs. EHRCon was crafted in collaboration with healthcare professionals using\nthe MIMIC-III EHR dataset, and includes manual annotations of 3,943 entities\nacross 105 clinical notes checked against database entries for consistency.\nEHRCon has two versions, one using the original MIMIC-III schema, and another\nusing the OMOP CDM schema, in order to increase its applicability and\ngeneralizability. Furthermore, leveraging the capabilities of large language\nmodels, we introduce CheckEHR, a novel framework for verifying the consistency\nbetween clinical notes and database tables. CheckEHR utilizes an eight-stage\nprocess and shows promising results in both few-shot and zero-shot settings.\nThe code is available at https://github.com/dustn1259/EHRCon.",
+      "upvotes": 11
+    },
+    {
+      "title": "Math-LLaVA: Bootstrapping Mathematical Reasoning for Multimodal Large Language Models",
+      "url": "https://huggingface.co/papers/2406.17294",
+      "authors": [
+        "Wenhao Shi",
+        "Yi Bin",
+        "Junhua Liu",
+        "Yang Yang",
+        "See-Kiong Ng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.17294.pdf",
+      "abstract": "Large language models (LLMs) have demonstrated impressive reasoning\ncapabilities, particularly in textual mathematical problem-solving. However,\nexisting open-source image instruction fine-tuning datasets, containing limited\nquestion-answer pairs per image, do not fully exploit visual information to\nenhance the multimodal mathematical reasoning capabilities of Multimodal LLMs\n(MLLMs). To bridge this gap, we address the lack of high-quality, diverse\nmultimodal mathematical datasets by collecting 40K high-quality images with\nquestion-answer pairs from 24 existing datasets and synthesizing 320K new\npairs, creating the MathV360K dataset, which enhances both the breadth and\ndepth of multimodal mathematical questions. We introduce Math-LLaVA, a\nLLaVA-1.5-based model fine-tuned with MathV360K. This novel approach\nsignificantly improves the multimodal mathematical reasoning capabilities of\nLLaVA-1.5, achieving a 19-point increase and comparable performance to GPT-4V\non MathVista's minitest split. Furthermore, Math-LLaVA demonstrates enhanced\ngeneralizability, showing substantial improvements on the MMMU benchmark. Our\nresearch highlights the importance of dataset diversity and synthesis in\nadvancing MLLMs' mathematical reasoning abilities. The code and data are\navailable at: https://github.com/HZQ950419/Math-LLaVA.",
+      "upvotes": 10
+    },
+    {
+      "title": "Understanding and Diagnosing Deep Reinforcement Learning",
+      "url": "https://huggingface.co/papers/2406.16979",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2406.16979.pdf",
+      "abstract": "Deep neural policies have recently been installed in a diverse range of\nsettings, from biotechnology to automated financial systems. However, the\nutilization of deep neural networks to approximate the value function leads to\nconcerns on the decision boundary stability, in particular, with regard to the\nsensitivity of policy decision making to indiscernible, non-robust features due\nto highly non-convex and complex deep neural manifolds. These concerns\nconstitute an obstruction to understanding the reasoning made by deep neural\npolicies, and their foundational limitations. Hence, it is crucial to develop\ntechniques that aim to understand the sensitivities in the learnt\nrepresentations of neural network policies. To achieve this we introduce a\ntheoretically founded method that provides a systematic analysis of the\nunstable directions in the deep neural policy decision boundary across both\ntime and space. Through experiments in the Arcade Learning Environment (ALE),\nwe demonstrate the effectiveness of our technique for identifying correlated\ndirections of instability, and for measuring how sample shifts remold the set\nof sensitive directions in the neural policy landscape. Most importantly, we\ndemonstrate that state-of-the-art robust training techniques yield learning of\ndisjoint unstable directions, with dramatically larger oscillations over time,\nwhen compared to standard training. We believe our results reveal the\nfundamental properties of the decision process made by reinforcement learning\npolicies, and can help in constructing reliable and robust deep neural\npolicies.",
+      "upvotes": 9
+    },
+    {
+      "title": "Multimodal Task Vectors Enable Many-Shot Multimodal In-Context Learning",
+      "url": "https://huggingface.co/papers/2406.15334",
+      "authors": [
+        "Brandon Huang",
+        "Chancharik Mitra",
+        "Assaf Arbelle",
+        "Leonid Karlinsky",
+        "Trevor Darrell",
+        "Roei Herzig"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.15334.pdf",
+      "abstract": "The recent success of interleaved Large Multimodal Models (LMMs) in few-shot\nlearning suggests that in-context learning (ICL) with many examples can be\npromising for learning new tasks. However, this many-shot multimodal ICL\nsetting has one crucial problem: it is fundamentally limited by the model's\ncontext length set at pretraining. The problem is especially prominent in the\nmultimodal domain, which processes both text and images, requiring additional\ntokens. This motivates the need for a multimodal method to compress many shots\ninto fewer tokens without finetuning. In this work, we enable LMMs to perform\nmultimodal, many-shot in-context learning by leveraging Multimodal Task Vectors\n(MTV)--compact implicit representations of in-context examples compressed in\nthe model's attention heads. Specifically, we first demonstrate the existence\nof such MTV in LMMs and then leverage these extracted MTV to enable many-shot\nin-context learning for various vision-and-language tasks. Our experiments\nsuggest that MTV can scale in performance with the number of compressed shots\nand generalize to similar out-of-domain tasks without additional context length\nfor inference.",
+      "upvotes": 8
+    },
+    {
+      "title": "WildTeaming at Scale: From In-the-Wild Jailbreaks to (Adversarially) Safer Language Models",
+      "url": "https://huggingface.co/papers/2406.18510",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2406.18510.pdf",
+      "abstract": "We introduce WildTeaming, an automatic LLM safety red-teaming framework that\nmines in-the-wild user-chatbot interactions to discover 5.7K unique clusters of\nnovel jailbreak tactics, and then composes multiple tactics for systematic\nexploration of novel jailbreaks. Compared to prior work that performed\nred-teaming via recruited human workers, gradient-based optimization, or\niterative revision with LLMs, our work investigates jailbreaks from chatbot\nusers who were not specifically instructed to break the system. WildTeaming\nreveals previously unidentified vulnerabilities of frontier LLMs, resulting in\nup to 4.6x more diverse and successful adversarial attacks compared to\nstate-of-the-art jailbreak methods.\n  While many datasets exist for jailbreak evaluation, very few open-source\ndatasets exist for jailbreak training, as safety training data has been closed\neven when model weights are open. With WildTeaming we create WildJailbreak, a\nlarge-scale open-source synthetic safety dataset with 262K vanilla (direct\nrequest) and adversarial (complex jailbreak) prompt-response pairs. To mitigate\nexaggerated safety behaviors, WildJailbreak provides two contrastive types of\nqueries: 1) harmful queries (vanilla & adversarial) and 2) benign queries that\nresemble harmful queries in form but contain no harm. As WildJailbreak\nconsiderably upgrades the quality and scale of existing safety resources, it\nuniquely enables us to examine the scaling effects of data and the interplay of\ndata properties and model capabilities during safety training. Through\nextensive experiments, we identify the training properties that enable an ideal\nbalance of safety behaviors: appropriate safeguarding without over-refusal,\neffective handling of vanilla and adversarial queries, and minimal, if any,\ndecrease in general capabilities. All components of WildJailbeak contribute to\nachieving balanced safety behaviors of models.",
+      "upvotes": 8
+    },
+    {
+      "title": "MemServe: Context Caching for Disaggregated LLM Serving with Elastic Memory Pool",
+      "url": "https://huggingface.co/papers/2406.17565",
+      "authors": [
+        "Cunchen Hu",
+        "Jiang Xu",
+        "Xusheng Chen",
+        "Tao Xie",
+        "Chenxi Wang",
+        "Sa Wang",
+        "Yungang Bao",
+        "Ninghui Sun"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.17565.pdf",
+      "abstract": "Large language model (LLM) serving has transformed from stateless to stateful\nsystems, utilizing techniques like context caching and disaggregated inference.\nThese optimizations extend the lifespan and domain of the KV cache,\nnecessitating a new architectural approach. We present MemServe, a unified\nsystem that integrates both inter-request and intra-request optimizations.\nMemServe introduces MemPool, an elastic memory pool managing distributed memory\nand KV caches across serving instances. Using MemPool APIs, MemServe combines\ncontext caching with disaggregated inference for the first time, supported by a\nglobal scheduler that enhances cache reuse through a global prompt tree-based\nlocality-aware policy. Tests show that MemServe significantly improves job\ncompletion time and time-to-first-time.",
+      "upvotes": 5
+    }
+  ]
+}

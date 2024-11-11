@@ -1,0 +1,195 @@
+{
+  "date": "2024-08-04",
+  "papers": [
+    {
+      "title": "SAM 2: Segment Anything in Images and Videos",
+      "url": "https://huggingface.co/papers/2408.00714",
+      "authors": [
+        "Yuan-Ting Hu",
+        "Chaitanya Ryali",
+        "Laura Gustafson",
+        "Eric Mintun",
+        "Kalyan Vasudev Alwala",
+        "Piotr Dollár",
+        "Christoph Feichtenhofer"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.00714.pdf",
+      "abstract": "We present Segment Anything Model 2 (SAM 2), a foundation model towards\nsolving promptable visual segmentation in images and videos. We build a data\nengine, which improves model and data via user interaction, to collect the\nlargest video segmentation dataset to date. Our model is a simple transformer\narchitecture with streaming memory for real-time video processing. SAM 2\ntrained on our data provides strong performance across a wide range of tasks.\nIn video segmentation, we observe better accuracy, using 3x fewer interactions\nthan prior approaches. In image segmentation, our model is more accurate and 6x\nfaster than the Segment Anything Model (SAM). We believe that our data, model,\nand insights will serve as a significant milestone for video segmentation and\nrelated perception tasks. We are releasing a version of our model, the dataset\nand an interactive demo.",
+      "upvotes": 107
+    },
+    {
+      "title": "Gemma 2: Improving Open Language Models at a Practical Size",
+      "url": "https://huggingface.co/papers/2408.00118",
+      "authors": [
+        "Gemma Team",
+        "Bobak Shahriari",
+        "Peter Liu",
+        "Abe Friesen",
+        "Sabela Ramos",
+        "Charline Le Lan",
+        "Sammy Jerome",
+        "Nino Vieillard",
+        "Piotr Stanczyk"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.00118.pdf",
+      "abstract": "In this work, we introduce Gemma 2, a new addition to the Gemma family of\nlightweight, state-of-the-art open models, ranging in scale from 2 billion to\n27 billion parameters. In this new version, we apply several known technical\nmodifications to the Transformer architecture, such as interleaving\nlocal-global attentions (Beltagy et al., 2020a) and group-query attention\n(Ainslie et al., 2023). We also train the 2B and 9B models with knowledge\ndistillation (Hinton et al., 2015) instead of next token prediction. The\nresulting models deliver the best performance for their size, and even offer\ncompetitive alternatives to models that are 2-3 times bigger. We release all\nour models to the community.",
+      "upvotes": 73
+    },
+    {
+      "title": "SF3D: Stable Fast 3D Mesh Reconstruction with UV-unwrapping and Illumination Disentanglement",
+      "url": "https://huggingface.co/papers/2408.00653",
+      "authors": [
+        "Zixuan Huang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.00653.pdf",
+      "abstract": "We present SF3D, a novel method for rapid and high-quality textured object\nmesh reconstruction from a single image in just 0.5 seconds. Unlike most\nexisting approaches, SF3D is explicitly trained for mesh generation,\nincorporating a fast UV unwrapping technique that enables swift texture\ngeneration rather than relying on vertex colors. The method also learns to\npredict material parameters and normal maps to enhance the visual quality of\nthe reconstructed 3D meshes. Furthermore, SF3D integrates a delighting step to\neffectively remove low-frequency illumination effects, ensuring that the\nreconstructed meshes can be easily used in novel illumination conditions.\nExperiments demonstrate the superior performance of SF3D over the existing\ntechniques. Project page: https://stable-fast-3d.github.io",
+      "upvotes": 28
+    },
+    {
+      "title": "OmniParser for Pure Vision Based GUI Agent",
+      "url": "https://huggingface.co/papers/2408.00203",
+      "authors": [
+        "Yadong Lu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.00203.pdf",
+      "abstract": "The recent success of large vision language models shows great potential in\ndriving the agent system operating on user interfaces. However, we argue that\nthe power multimodal models like GPT-4V as a general agent on multiple\noperating systems across different applications is largely underestimated due\nto the lack of a robust screen parsing technique capable of: 1) reliably\nidentifying interactable icons within the user interface, and 2) understanding\nthe semantics of various elements in a screenshot and accurately associate the\nintended action with the corresponding region on the screen. To fill these\ngaps, we introduce OmniParser, a comprehensive method for parsing user\ninterface screenshots into structured elements, which significantly enhances\nthe ability of GPT-4V to generate actions that can be accurately grounded in\nthe corresponding regions of the interface. We first curated an interactable\nicon detection dataset using popular webpages and an icon description dataset.\nThese datasets were utilized to fine-tune specialized models: a detection model\nto parse interactable regions on the screen and a caption model to extract the\nfunctional semantics of the detected elements. OmniParser\nsignificantly improves GPT-4V's performance on ScreenSpot benchmark. And on\nMind2Web and AITW benchmark, OmniParser with screenshot only input\noutperforms the GPT-4V baselines requiring additional information outside of\nscreenshot.",
+      "upvotes": 23
+    },
+    {
+      "title": "Coarse Correspondence Elicit 3D Spacetime Understanding in Multimodal Language Model",
+      "url": "https://huggingface.co/papers/2408.00754",
+      "authors": [
+        "Yansong Tang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.00754.pdf",
+      "abstract": "Multimodal language models (MLLMs) are increasingly being implemented in\nreal-world environments, necessitating their ability to interpret 3D spaces and\ncomprehend temporal dynamics. Despite their potential, current top models\nwithin our community still fall short in adequately understanding spatial and\ntemporal dimensions. We introduce Coarse Correspondence, a simple,\ntraining-free, effective, and general-purpose visual prompting method to elicit\n3D and temporal understanding in multimodal LLMs. Our method uses a lightweight\ntracking model to find object correspondences between frames in a video or\nbetween sets of image viewpoints. It selects the most frequent object instances\nand visualizes them with markers with unique IDs in the image. With this simple\napproach, we achieve state-of-the-art results on 3D understanding benchmarks\nincluding ScanQA (+20.5\\%) and a subset of OpenEQA (+9.7\\%), and on long-form\nvideo benchmarks such as EgoSchema (+6.0\\%). We also curate a small diagnostic\ndataset to evaluate whether MLLMs can reason about space from a described\nviewpoint other than the camera viewpoint. Again, Coarse Correspondence\nimproves spatial perspective-taking abilities but we highlight that MLLMs\nstruggle with this task. Together, we demonstrate that our simple prompting\nmethod can significantly aid downstream tasks that require 3D or temporal\nreasoning.",
+      "upvotes": 21
+    },
+    {
+      "title": "Improving Text Embeddings for Smaller Language Models Using Contrastive Fine-tuning",
+      "url": "https://huggingface.co/papers/2408.00690",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2408.00690.pdf",
+      "abstract": "While Large Language Models show remarkable performance in natural language\nunderstanding, their resource-intensive nature makes them less accessible. In\ncontrast, smaller language models such as MiniCPM offer more sustainable\nscalability, but often underperform without specialized optimization. In this\npaper, we explore the enhancement of smaller language models through the\nimprovement of their text embeddings. We select three language models, MiniCPM,\nPhi-2, and Gemma, to conduct contrastive fine-tuning on the NLI dataset. Our\nresults demonstrate that this fine-tuning method enhances the quality of text\nembeddings for all three models across various benchmarks, with MiniCPM showing\nthe most significant improvements of an average 56.33\\% performance gain. The\ncontrastive fine-tuning code is publicly available at\nhttps://github.com/trapoom555/Language-Model-STS-CFT.",
+      "upvotes": 21
+    },
+    {
+      "title": "TurboEdit: Text-Based Image Editing Using Few-Step Diffusion Models",
+      "url": "https://huggingface.co/papers/2408.00735",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2408.00735.pdf",
+      "abstract": "Diffusion models have opened the path to a wide range of text-based image\nediting frameworks. However, these typically build on the multi-step nature of\nthe diffusion backwards process, and adapting them to distilled, fast-sampling\nmethods has proven surprisingly challenging. Here, we focus on a popular line\nof text-based editing frameworks - the ``edit-friendly'' DDPM-noise inversion\napproach. We analyze its application to fast sampling methods and categorize\nits failures into two classes: the appearance of visual artifacts, and\ninsufficient editing strength. We trace the artifacts to mismatched noise\nstatistics between inverted noises and the expected noise schedule, and suggest\na shifted noise schedule which corrects for this offset. To increase editing\nstrength, we propose a pseudo-guidance approach that efficiently increases the\nmagnitude of edits without introducing new artifacts. All in all, our method\nenables text-based image editing with as few as three diffusion steps, while\nproviding novel insights into the mechanisms behind popular text-based editing\napproaches.",
+      "upvotes": 15
+    },
+    {
+      "title": "Finch: Prompt-guided Key-Value Cache Compression",
+      "url": "https://huggingface.co/papers/2408.00167",
+      "authors": [
+        "Paolo Papotti"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.00167.pdf",
+      "abstract": "Recent large language model applications, such as Retrieval-Augmented\nGeneration and chatbots, have led to an increased need to process longer input\ncontexts. However, this requirement is hampered by inherent limitations.\nArchitecturally, models are constrained by a context window defined during\ntraining. Additionally, processing extensive texts requires substantial GPU\nmemory. We propose a novel approach, Finch, to compress the input context by\nleveraging the pre-trained model weights of the self-attention. Given a prompt\nand a long text, Finch iteratively identifies the most relevant Key (K) and\nValue (V) pairs over chunks of the text conditioned on the prompt. Only such\npairs are stored in the KV cache, which, within the space constrained by the\ncontext window, ultimately contains a compressed version of the long text. Our\nproposal enables models to consume large inputs even with high compression (up\nto 93x) while preserving semantic integrity without the need for fine-tuning.",
+      "upvotes": 13
+    },
+    {
+      "title": "MM-Vet v2: A Challenging Benchmark to Evaluate Large Multimodal Models for Integrated Capabilities",
+      "url": "https://huggingface.co/papers/2408.00765",
+      "authors": [
+        "Linfeng Ren",
+        "Chung-Ching Lin"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.00765.pdf",
+      "abstract": "MM-Vet, with open-ended vision-language questions targeting at evaluating\nintegrated capabilities, has become one of the most popular benchmarks for\nlarge multimodal model evaluation. MM-Vet assesses six core vision-language\n(VL) capabilities: recognition, knowledge, spatial awareness, language\ngeneration, OCR, and math. However, its question format is restricted to single\nimage-text pairs, lacking the interleaved image and text sequences prevalent in\nreal-world scenarios. To address this limitation, we introduce MM-Vet v2, which\nincludes a new VL capability called \"image-text sequence understanding\",\nevaluating models' ability to process VL sequences. Furthermore, we maintain\nthe high quality of evaluation samples while further expanding the evaluation\nset size. Using MM-Vet v2 to benchmark large multimodal models, we found that\nClaude 3.5 Sonnet is the best model with a score of 71.8, slightly\noutperforming GPT-4o which scored 71.0. Among open-weight models,\nInternVL2-Llama3-76B leads with a score of 68.4.",
+      "upvotes": 12
+    },
+    {
+      "title": "Reenact Anything: Semantic Video Motion Transfer Using Motion-Textual Inversion",
+      "url": "https://huggingface.co/papers/2408.00458",
+      "authors": [
+        "Jacek Naruniec",
+        "Christopher Schroers",
+        "Markus Gross"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.00458.pdf",
+      "abstract": "Recent years have seen a tremendous improvement in the quality of video\ngeneration and editing approaches. While several techniques focus on editing\nappearance, few address motion. Current approaches using text, trajectories, or\nbounding boxes are limited to simple motions, so we specify motions with a\nsingle motion reference video instead. We further propose to use a pre-trained\nimage-to-video model rather than a text-to-video model. This approach allows us\nto preserve the exact appearance and position of a target object or scene and\nhelps disentangle appearance from motion. Our method, called motion-textual\ninversion, leverages our observation that image-to-video models extract\nappearance mainly from the (latent) image input, while the text/image embedding\ninjected via cross-attention predominantly controls motion. We thus represent\nmotion using text/image embedding tokens. By operating on an inflated\nmotion-text embedding containing multiple text/image embedding tokens per\nframe, we achieve a high temporal motion granularity. Once optimized on the\nmotion reference video, this embedding can be applied to various target images\nto generate videos with semantically similar motions. Our approach does not\nrequire spatial alignment between the motion reference video and target image,\ngeneralizes across various domains, and can be applied to various tasks such as\nfull-body and face reenactment, as well as controlling the motion of inanimate\nobjects and the camera. We empirically demonstrate the effectiveness of our\nmethod in the semantic video motion transfer task, significantly outperforming\nexisting methods in this context.",
+      "upvotes": 10
+    },
+    {
+      "title": "UniTalker: Scaling up Audio-Driven 3D Facial Animation through A Unified Model",
+      "url": "https://huggingface.co/papers/2408.00762",
+      "authors": [
+        "Jiaqi Li",
+        "Zhiqian Lin",
+        "Weiye Xiao",
+        "Lei Yang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.00762.pdf",
+      "abstract": "Audio-driven 3D facial animation aims to map input audio to realistic facial\nmotion. Despite significant progress, limitations arise from inconsistent 3D\nannotations, restricting previous models to training on specific annotations\nand thereby constraining the training scale. In this work, we present\nUniTalker, a unified model featuring a multi-head architecture designed to\neffectively leverage datasets with varied annotations. To enhance training\nstability and ensure consistency among multi-head outputs, we employ three\ntraining strategies, namely, PCA, model warm-up, and pivot identity embedding.\nTo expand the training scale and diversity, we assemble A2F-Bench, comprising\nfive publicly available datasets and three newly curated datasets. These\ndatasets contain a wide range of audio domains, covering multilingual speech\nvoices and songs, thereby scaling the training data from commonly employed\ndatasets, typically less than 1 hour, to 18.5 hours. With a single trained\nUniTalker model, we achieve substantial lip vertex error reductions of 9.2% for\nBIWI dataset and 13.7% for Vocaset. Additionally, the pre-trained UniTalker\nexhibits promise as the foundation model for audio-driven facial animation\ntasks. Fine-tuning the pre-trained UniTalker on seen datasets further enhances\nperformance on each dataset, with an average error reduction of 6.3% on\nA2F-Bench. Moreover, fine-tuning UniTalker on an unseen dataset with only half\nthe data surpasses prior state-of-the-art models trained on the full dataset.\nThe code and dataset are available at the project page\nhttps://github.com/X-niper/UniTalker.",
+      "upvotes": 9
+    },
+    {
+      "title": "Tails Tell Tales: Chapter-Wide Manga Transcriptions with Character Names",
+      "url": "https://huggingface.co/papers/2408.00298",
+      "authors": [
+        "Andrew Zisserman"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.00298.pdf",
+      "abstract": "Enabling engagement of manga by visually impaired individuals presents a\nsignificant challenge due to its inherently visual nature. With the goal of\nfostering accessibility, this paper aims to generate a dialogue transcript of a\ncomplete manga chapter, entirely automatically, with a particular emphasis on\nensuring narrative consistency. This entails identifying (i) what is being\nsaid, i.e., detecting the texts on each page and classifying them into\nessential vs non-essential, and (ii) who is saying it, i.e., attributing each\ndialogue to its speaker, while ensuring the same characters are named\nconsistently throughout the chapter.\n  To this end, we introduce: (i) Magiv2, a model that is capable of generating\nhigh-quality chapter-wide manga transcripts with named characters and\nsignificantly higher precision in speaker diarisation over prior works; (ii) an\nextension of the PopManga evaluation dataset, which now includes annotations\nfor speech-bubble tail boxes, associations of text to corresponding tails,\nclassifications of text as essential or non-essential, and the identity for\neach character box; and (iii) a new character bank dataset, which comprises\nover 11K characters from 76 manga series, featuring 11.5K exemplar character\nimages in total, as well as a list of chapters in which they appear. The code,\ntrained model, and both datasets can be found at:\nhttps://github.com/ragavsachdeva/magi",
+      "upvotes": 9
+    },
+    {
+      "title": "Smoothed Energy Guidance: Guiding Diffusion Models with Reduced Energy Curvature of Attention",
+      "url": "https://huggingface.co/papers/2408.00760",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2408.00760.pdf",
+      "abstract": "Conditional diffusion models have shown remarkable success in visual content\ngeneration, producing high-quality samples across various domains, largely due\nto classifier-free guidance (CFG). Recent attempts to extend guidance to\nunconditional models have relied on heuristic techniques, resulting in\nsuboptimal generation quality and unintended effects. In this work, we propose\nSmoothed Energy Guidance (SEG), a novel training- and condition-free approach\nthat leverages the energy-based perspective of the self-attention mechanism to\nenhance image generation. By defining the energy of self-attention, we\nintroduce a method to reduce the curvature of the energy landscape of attention\nand use the output as the unconditional prediction. Practically, we control the\ncurvature of the energy landscape by adjusting the Gaussian kernel parameter\nwhile keeping the guidance scale parameter fixed. Additionally, we present a\nquery blurring method that is equivalent to blurring the entire attention\nweights without incurring quadratic complexity in the number of tokens. In our\nexperiments, SEG achieves a Pareto improvement in both quality and the\nreduction of side effects. The code is available at\nhttps://github.com/SusungHong/SEG-SDXL.",
+      "upvotes": 6
+    },
+    {
+      "title": "Non Verbis, Sed Rebus: Large Language Models are Weak Solvers of Italian Rebuses",
+      "url": "https://huggingface.co/papers/2408.00584",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2408.00584.pdf",
+      "abstract": "Rebuses are puzzles requiring constrained multi-step reasoning to identify a\nhidden phrase from a set of images and letters. In this work, we introduce a\nlarge collection of verbalized rebuses for the Italian language and use it to\nassess the rebus-solving capabilities of state-of-the-art large language\nmodels. While general-purpose systems such as LLaMA-3 and GPT-4o perform poorly\non this task, ad-hoc fine-tuning seems to improve models' performance. However,\nwe find that performance gains from training are largely motivated by\nmemorization. Our results suggest that rebus solving remains a challenging test\nbed to evaluate large language models' linguistic proficiency and sequential\ninstruction-following skills.",
+      "upvotes": 6
+    },
+    {
+      "title": "Generalized Out-of-Distribution Detection and Beyond in Vision Language Model Era: A Survey",
+      "url": "https://huggingface.co/papers/2407.21794",
+      "authors": [
+        "Jingkang Yang",
+        "Jingyang Zhang",
+        "Yueqian Lin",
+        "Qing Yu",
+        "Go Irie",
+        "Shafiq Joty",
+        "Yixuan Li",
+        "Hai Li",
+        "Ziwei Liu",
+        "Toshihiko Yamasaki",
+        "Kiyoharu Aizawa"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.21794.pdf",
+      "abstract": "Detecting out-of-distribution (OOD) samples is crucial for ensuring the\nsafety of machine learning systems and has shaped the field of OOD detection.\nMeanwhile, several other problems are closely related to OOD detection,\nincluding anomaly detection (AD), novelty detection (ND), open set recognition\n(OSR), and outlier detection (OD). To unify these problems, a generalized OOD\ndetection framework was proposed, taxonomically categorizing these five\nproblems. However, Vision Language Models (VLMs) such as CLIP have\nsignificantly changed the paradigm and blurred the boundaries between these\nfields, again confusing researchers. In this survey, we first present a\ngeneralized OOD detection v2, encapsulating the evolution of AD, ND, OSR, OOD\ndetection, and OD in the VLM era. Our framework reveals that, with some field\ninactivity and integration, the demanding challenges have become OOD detection\nand AD. In addition, we also highlight the significant shift in the definition,\nproblem settings, and benchmarks; we thus feature a comprehensive review of the\nmethodology for OOD detection, including the discussion over other related\ntasks to clarify their relationship to OOD detection. Finally, we explore the\nadvancements in the emerging Large Vision Language Model (LVLM) era, such as\nGPT-4V. We conclude this survey with open challenges and future directions.",
+      "upvotes": 5
+    },
+    {
+      "title": "Sentence-wise Speech Summarization: Task, Datasets, and End-to-End Modeling with LM Knowledge Distillation",
+      "url": "https://huggingface.co/papers/2408.00205",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2408.00205.pdf",
+      "abstract": "This paper introduces a novel approach called sentence-wise speech\nsummarization (Sen-SSum), which generates text summaries from a spoken document\nin a sentence-by-sentence manner. Sen-SSum combines the real-time processing of\nautomatic speech recognition (ASR) with the conciseness of speech\nsummarization. To explore this approach, we present two datasets for Sen-SSum:\nMega-SSum and CSJ-SSum. Using these datasets, our study evaluates two types of\nTransformer-based models: 1) cascade models that combine ASR and strong text\nsummarization models, and 2) end-to-end (E2E) models that directly convert\nspeech into a text summary. While E2E models are appealing to develop\ncompute-efficient models, they perform worse than cascade models. Therefore, we\npropose knowledge distillation for E2E models using pseudo-summaries generated\nby the cascade models. Our experiments show that this proposed knowledge\ndistillation effectively improves the performance of the E2E model on both\ndatasets.",
+      "upvotes": 4
+    },
+    {
+      "title": "Enhancing Semantic Similarity Understanding in Arabic NLP with Nested Embedding Learning",
+      "url": "https://huggingface.co/papers/2407.21139",
+      "authors": [
+        "Anis Koubaa"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.21139.pdf",
+      "abstract": "This work presents a novel framework for training Arabic nested embedding\nmodels through Matryoshka Embedding Learning, leveraging multilingual,\nArabic-specific, and English-based models, to highlight the power of nested\nembeddings models in various Arabic NLP downstream tasks. Our innovative\ncontribution includes the translation of various sentence similarity datasets\ninto Arabic, enabling a comprehensive evaluation framework to compare these\nmodels across different dimensions. We trained several nested embedding models\non the Arabic Natural Language Inference triplet dataset and assessed their\nperformance using multiple evaluation metrics, including Pearson and Spearman\ncorrelations for cosine similarity, Manhattan distance, Euclidean distance, and\ndot product similarity. The results demonstrate the superior performance of the\nMatryoshka embedding models, particularly in capturing semantic nuances unique\nto the Arabic language. Results demonstrated that Arabic Matryoshka embedding\nmodels have superior performance in capturing semantic nuances unique to the\nArabic language, significantly outperforming traditional models by up to\n20-25\\% across various similarity metrics. These results underscore the\neffectiveness of language-specific training and highlight the potential of\nMatryoshka models in enhancing semantic textual similarity tasks for Arabic\nNLP.",
+      "upvotes": 3
+    }
+  ]
+}

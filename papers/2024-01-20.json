@@ -1,0 +1,133 @@
+{
+  "date": "2024-01-20",
+  "papers": [
+    {
+      "title": "Self-Rewarding Language Models",
+      "url": "https://huggingface.co/papers/2401.10020",
+      "authors": [
+        "Jing Xu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.10020.pdf",
+      "abstract": "We posit that to achieve superhuman agents, future models require superhuman\nfeedback in order to provide an adequate training signal. Current approaches\ncommonly train reward models from human preferences, which may then be\nbottlenecked by human performance level, and secondly these separate frozen\nreward models cannot then learn to improve during LLM training. In this work,\nwe study Self-Rewarding Language Models, where the language model itself is\nused via LLM-as-a-Judge prompting to provide its own rewards during training.\nWe show that during Iterative DPO training that not only does instruction\nfollowing ability improve, but also the ability to provide high-quality rewards\nto itself. Fine-tuning Llama 2 70B on three iterations of our approach yields a\nmodel that outperforms many existing systems on the AlpacaEval 2.0 leaderboard,\nincluding Claude 2, Gemini Pro, and GPT-4 0613. While only a preliminary study,\nthis work opens the door to the possibility of models that can continually\nimprove in both axes.",
+      "upvotes": 144
+    },
+    {
+      "title": "VMamba: Visual State Space Model",
+      "url": "https://huggingface.co/papers/2401.10166",
+      "authors": [
+        "Yue Liu",
+        "Yuzhong Zhao",
+        "Hongtian Yu",
+        "Lingxi Xie",
+        "Qixiang Ye",
+        "Yunfan Liu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.10166.pdf",
+      "abstract": "Convolutional Neural Networks (CNNs) and Vision Transformers (ViTs) stand as\nthe two most popular foundation models for visual representation learning.\nWhile CNNs exhibit remarkable scalability with linear complexity w.r.t. image\nresolution, ViTs surpass them in fitting capabilities despite contending with\nquadratic complexity. A closer inspection reveals that ViTs achieve superior\nvisual modeling performance through the incorporation of global receptive\nfields and dynamic weights. This observation motivates us to propose a novel\narchitecture that inherits these components while enhancing computational\nefficiency. To this end, we draw inspiration from the recently introduced state\nspace model and propose the Visual State Space Model (VMamba), which achieves\nlinear complexity without sacrificing global receptive fields. To address the\nencountered direction-sensitive issue, we introduce the Cross-Scan Module (CSM)\nto traverse the spatial domain and convert any non-causal visual image into\norder patch sequences. Extensive experimental results substantiate that VMamba\nnot only demonstrates promising capabilities across various visual perception\ntasks, but also exhibits more pronounced advantages over established benchmarks\nas the image resolution increases. Source code has been available at\nhttps://github.com/MzeroMiko/VMamba.",
+      "upvotes": 38
+    },
+    {
+      "title": "ChatQA: Building GPT-4 Level Conversational QA Models",
+      "url": "https://huggingface.co/papers/2401.10225",
+      "authors": [
+        "Rajarshi Roy",
+        "Peng Xu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.10225.pdf",
+      "abstract": "In this work, we introduce ChatQA, a family of conversational question\nanswering (QA) models, that obtain GPT-4 level accuracies. Specifically, we\npropose a two-stage instruction tuning method that can significantly improve\nthe zero-shot conversational QA results from large language models (LLMs). To\nhandle retrieval in conversational QA, we fine-tune a dense retriever on a\nmulti-turn QA dataset, which provides comparable results to using the\nstate-of-the-art query rewriting model while largely reducing deployment cost.\nNotably, our ChatQA-70B can outperform GPT-4 in terms of average score on 10\nconversational QA datasets (54.14 vs. 53.90), without relying on any synthetic\ndata from OpenAI GPT models.",
+      "upvotes": 34
+    },
+    {
+      "title": "DiffusionGPT: LLM-Driven Text-to-Image Generation System",
+      "url": "https://huggingface.co/papers/2401.10061",
+      "authors": [
+        "Jie Qin",
+        "Yuxi Ren",
+        "Hefeng Wu",
+        "Rui Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.10061.pdf",
+      "abstract": "Diffusion models have opened up new avenues for the field of image\ngeneration, resulting in the proliferation of high-quality models shared on\nopen-source platforms. However, a major challenge persists in current\ntext-to-image systems are often unable to handle diverse inputs, or are limited\nto single model results. Current unified attempts often fall into two\northogonal aspects: i) parse Diverse Prompts in input stage; ii) activate\nexpert model to output. To combine the best of both worlds, we propose\nDiffusionGPT, which leverages Large Language Models (LLM) to offer a unified\ngeneration system capable of seamlessly accommodating various types of prompts\nand integrating domain-expert models. DiffusionGPT constructs domain-specific\nTrees for various generative models based on prior knowledge. When provided\nwith an input, the LLM parses the prompt and employs the Trees-of-Thought to\nguide the selection of an appropriate model, thereby relaxing input constraints\nand ensuring exceptional performance across diverse domains. Moreover, we\nintroduce Advantage Databases, where the Tree-of-Thought is enriched with human\nfeedback, aligning the model selection process with human preferences. Through\nextensive experiments and comparisons, we demonstrate the effectiveness of\nDiffusionGPT, showcasing its potential for pushing the boundaries of image\nsynthesis in diverse domains.",
+      "upvotes": 28
+    },
+    {
+      "title": "Rethinking FID: Towards a Better Evaluation Metric for Image Generation",
+      "url": "https://huggingface.co/papers/2401.09603",
+      "authors": [
+        "Andreas Veit",
+        "Daniel Glasner",
+        "Ayan Chakrabarti",
+        "Sanjiv Kumar"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.09603.pdf",
+      "abstract": "As with many machine learning problems, the progress of image generation\nmethods hinges on good evaluation metrics. One of the most popular is the\nFrechet Inception Distance (FID). FID estimates the distance between a\ndistribution of Inception-v3 features of real images, and those of images\ngenerated by the algorithm. We highlight important drawbacks of FID:\nInception's poor representation of the rich and varied content generated by\nmodern text-to-image models, incorrect normality assumptions, and poor sample\ncomplexity. We call for a reevaluation of FID's use as the primary quality\nmetric for generated images. We empirically demonstrate that FID contradicts\nhuman raters, it does not reflect gradual improvement of iterative\ntext-to-image models, it does not capture distortion levels, and that it\nproduces inconsistent results when varying the sample size. We also propose an\nalternative new metric, CMMD, based on richer CLIP embeddings and the maximum\nmean discrepancy distance with the Gaussian RBF kernel. It is an unbiased\nestimator that does not make any assumptions on the probability distribution of\nthe embeddings and is sample efficient. Through extensive experiments and\nanalysis, we demonstrate that FID-based evaluations of text-to-image models may\nbe unreliable, and that CMMD offers a more robust and reliable assessment of\nimage quality.",
+      "upvotes": 16
+    },
+    {
+      "title": "Improving fine-grained understanding in image-text pre-training",
+      "url": "https://huggingface.co/papers/2401.09865",
+      "authors": [
+        "Ioana Bica",
+        "Anastasija Ilić",
+        "Matthias Bauer",
+        "Goker Erdogan",
+        "Matko Bošnjak",
+        "Christos Kaplanis",
+        "Alexey A. Gritsenko",
+        "Charles Blundell",
+        "Jovana Mitrović"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.09865.pdf",
+      "abstract": "We introduce SPARse Fine-grained Contrastive Alignment (SPARC), a simple\nmethod for pretraining more fine-grained multimodal representations from\nimage-text pairs. Given that multiple image patches often correspond to single\nwords, we propose to learn a grouping of image patches for every token in the\ncaption. To achieve this, we use a sparse similarity metric between image\npatches and language tokens and compute for each token a language-grouped\nvision embedding as the weighted average of patches. The token and\nlanguage-grouped vision embeddings are then contrasted through a fine-grained\nsequence-wise loss that only depends on individual samples and does not require\nother batch samples as negatives. This enables more detailed information to be\nlearned in a computationally inexpensive manner. SPARC combines this\nfine-grained loss with a contrastive loss between global image and text\nembeddings to learn representations that simultaneously encode global and local\ninformation. We thoroughly evaluate our proposed method and show improved\nperformance over competing approaches both on image-level tasks relying on\ncoarse-grained information, e.g. classification, as well as region-level tasks\nrelying on fine-grained information, e.g. retrieval, object detection, and\nsegmentation. Moreover, SPARC improves model faithfulness and captioning in\nfoundational vision-language models.",
+      "upvotes": 16
+    },
+    {
+      "title": "WorldDreamer: Towards General World Models for Video Generation via Predicting Masked Tokens",
+      "url": "https://huggingface.co/papers/2401.09985",
+      "authors": [
+        "Guan Huang",
+        "Xinze Chen",
+        "Jiwen Lu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.09985.pdf",
+      "abstract": "World models play a crucial role in understanding and predicting the dynamics\nof the world, which is essential for video generation. However, existing world\nmodels are confined to specific scenarios such as gaming or driving, limiting\ntheir ability to capture the complexity of general world dynamic environments.\nTherefore, we introduce WorldDreamer, a pioneering world model to foster a\ncomprehensive comprehension of general world physics and motions, which\nsignificantly enhances the capabilities of video generation. Drawing\ninspiration from the success of large language models, WorldDreamer frames\nworld modeling as an unsupervised visual sequence modeling challenge. This is\nachieved by mapping visual inputs to discrete tokens and predicting the masked\nones. During this process, we incorporate multi-modal prompts to facilitate\ninteraction within the world model. Our experiments show that WorldDreamer\nexcels in generating videos across different scenarios, including natural\nscenes and driving environments. WorldDreamer showcases versatility in\nexecuting tasks such as text-to-video conversion, image-tovideo synthesis, and\nvideo editing. These results underscore WorldDreamer's effectiveness in\ncapturing dynamic elements within diverse general world environments.",
+      "upvotes": 15
+    },
+    {
+      "title": "SHINOBI: Shape and Illumination using Neural Object Decomposition via BRDF Optimization In-the-wild",
+      "url": "https://huggingface.co/papers/2401.10171",
+      "authors": [
+        "Amit Raj",
+        "Deqing Sun",
+        "Ricardo Martin Brualla",
+        "Jonathan T. Barron",
+        "Hendrik P. A. Lensch"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.10171.pdf",
+      "abstract": "We present SHINOBI, an end-to-end framework for the reconstruction of shape,\nmaterial, and illumination from object images captured with varying lighting,\npose, and background. Inverse rendering of an object based on unconstrained\nimage collections is a long-standing challenge in computer vision and graphics\nand requires a joint optimization over shape, radiance, and pose. We show that\nan implicit shape representation based on a multi-resolution hash encoding\nenables faster and robust shape reconstruction with joint camera alignment\noptimization that outperforms prior work. Further, to enable the editing of\nillumination and object reflectance (i.e. material) we jointly optimize BRDF\nand illumination together with the object's shape. Our method is class-agnostic\nand works on in-the-wild image collections of objects to produce relightable 3D\nassets for several use cases such as AR/VR, movies, games, etc. Project page:\nhttps://shinobi.aengelhardt.com Video:\nhttps://www.youtube.com/watch?v=iFENQ6AcYd8&feature=youtu.be",
+      "upvotes": 12
+    },
+    {
+      "title": "FreGrad: Lightweight and Fast Frequency-aware Diffusion Vocoder",
+      "url": "https://huggingface.co/papers/2401.10032",
+      "authors": [
+        "Ji-Hoon Kim"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.10032.pdf",
+      "abstract": "The goal of this paper is to generate realistic audio with a lightweight and\nfast diffusion-based vocoder, named FreGrad. Our framework consists of the\nfollowing three key components: (1) We employ discrete wavelet transform that\ndecomposes a complicated waveform into sub-band wavelets, which helps FreGrad\nto operate on a simple and concise feature space, (2) We design a\nfrequency-aware dilated convolution that elevates frequency awareness,\nresulting in generating speech with accurate frequency information, and (3) We\nintroduce a bag of tricks that boosts the generation quality of the proposed\nmodel. In our experiments, FreGrad achieves 3.7 times faster training time and\n2.2 times faster inference speed compared to our baseline while reducing the\nmodel size by 0.6 times (only 1.78M parameters) without sacrificing the output\nquality. Audio samples are available at:\nhttps://mm.kaist.ac.kr/projects/FreGrad.",
+      "upvotes": 12
+    },
+    {
+      "title": "CustomVideo: Customizing Text-to-Video Generation with Multiple Subjects",
+      "url": "https://huggingface.co/papers/2401.09962",
+      "authors": [
+        "Aoxue Li",
+        "Yong Guo",
+        "Qi Dou"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.09962.pdf",
+      "abstract": "Customized text-to-video generation aims to generate high-quality videos\nguided by text prompts and subject references. Current approaches designed for\nsingle subjects suffer from tackling multiple subjects, which is a more\nchallenging and practical scenario. In this work, we aim to promote\nmulti-subject guided text-to-video customization. We propose CustomVideo, a\nnovel framework that can generate identity-preserving videos with the guidance\nof multiple subjects. To be specific, firstly, we encourage the co-occurrence\nof multiple subjects via composing them in a single image. Further, upon a\nbasic text-to-video diffusion model, we design a simple yet effective attention\ncontrol strategy to disentangle different subjects in the latent space of\ndiffusion model. Moreover, to help the model focus on the specific object area,\nwe segment the object from given reference images and provide a corresponding\nobject mask for attention learning. Also, we collect a multi-subject\ntext-to-video generation dataset as a comprehensive benchmark, with 69\nindividual subjects and 57 meaningful pairs. Extensive qualitative,\nquantitative, and user study results demonstrate the superiority of our method,\ncompared with the previous state-of-the-art approaches.",
+      "upvotes": 8
+    }
+  ]
+}

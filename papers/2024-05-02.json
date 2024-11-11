@@ -1,0 +1,132 @@
+{
+  "date": "2024-05-02",
+  "papers": [
+    {
+      "title": "A Careful Examination of Large Language Model Performance on Grade School Arithmetic",
+      "url": "https://huggingface.co/papers/2405.00332",
+      "authors": [
+        "Jeff Da",
+        "Dean Lee",
+        "Will Song",
+        "Tiffany Zhao",
+        "Michele",
+        "Lunati",
+        "Summer Yue"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.00332.pdf",
+      "abstract": "Large language models (LLMs) have achieved impressive success on many\nbenchmarks for mathematical reasoning. However, there is growing concern that\nsome of this performance actually reflects dataset contamination, where data\nclosely resembling benchmark questions leaks into the training data, instead of\ntrue reasoning ability. To investigate this claim rigorously, we commission\nGrade School Math 1000 (GSM1k). GSM1k is designed to mirror the style and\ncomplexity of the established GSM8k benchmark, the gold standard for measuring\nelementary mathematical reasoning. We ensure that the two benchmarks are\ncomparable across important metrics such as human solve rates, number of steps\nin solution, answer magnitude, and more. When evaluating leading open- and\nclosed-source LLMs on GSM1k, we observe accuracy drops of up to 13%, with\nseveral families of models (e.g., Phi and Mistral) showing evidence of\nsystematic overfitting across almost all model sizes. At the same time, many\nmodels, especially those on the frontier, (e.g., Gemini/GPT/Claude) show\nminimal signs of overfitting. Further analysis suggests a positive relationship\n(Spearman's r^2=0.32) between a model's probability of generating an example\nfrom GSM8k and its performance gap between GSM8k and GSM1k, suggesting that\nmany models may have partially memorized GSM8k.",
+      "upvotes": 30
+    },
+    {
+      "title": "Paint by Inpaint: Learning to Add Image Objects by Removing Them First",
+      "url": "https://huggingface.co/papers/2404.18212",
+      "authors": [
+        "Ron Kimmel"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.18212.pdf",
+      "abstract": "Image editing has advanced significantly with the introduction of\ntext-conditioned diffusion models. Despite this progress, seamlessly adding\nobjects to images based on textual instructions without requiring user-provided\ninput masks remains a challenge. We address this by leveraging the insight that\nremoving objects (Inpaint) is significantly simpler than its inverse process of\nadding them (Paint), attributed to the utilization of segmentation mask\ndatasets alongside inpainting models that inpaint within these masks.\nCapitalizing on this realization, by implementing an automated and extensive\npipeline, we curate a filtered large-scale image dataset containing pairs of\nimages and their corresponding object-removed versions. Using these pairs, we\ntrain a diffusion model to inverse the inpainting process, effectively adding\nobjects into images. Unlike other editing datasets, ours features natural\ntarget images instead of synthetic ones; moreover, it maintains consistency\nbetween source and target by construction. Additionally, we utilize a large\nVision-Language Model to provide detailed descriptions of the removed objects\nand a Large Language Model to convert these descriptions into diverse,\nnatural-language instructions. We show that the trained model surpasses\nexisting ones both qualitatively and quantitatively, and release the\nlarge-scale dataset alongside the trained models for the community.",
+      "upvotes": 27
+    },
+    {
+      "title": "Self-Play Preference Optimization for Language Model Alignment",
+      "url": "https://huggingface.co/papers/2405.00675",
+      "authors": [
+        "Yue Wu",
+        "Yiming Yang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.00675.pdf",
+      "abstract": "Traditional reinforcement learning from human feedback (RLHF) approaches\nrelying on parametric models like the Bradley-Terry model fall short in\ncapturing the intransitivity and irrationality in human preferences. Recent\nadvancements suggest that directly working with preference probabilities can\nyield a more accurate reflection of human preferences, enabling more flexible\nand accurate language model alignment. In this paper, we propose a\nself-play-based method for language model alignment, which treats the problem\nas a constant-sum two-player game aimed at identifying the Nash equilibrium\npolicy. Our approach, dubbed Self-Play Preference Optimization (SPPO),\napproximates the Nash equilibrium through iterative policy updates and enjoys\ntheoretical convergence guarantee. Our method can effectively increase the\nlog-likelihood of the chosen response and decrease that of the rejected\nresponse, which cannot be trivially achieved by symmetric pairwise loss such as\nDirect Preference Optimization (DPO) and Identity Preference Optimization\n(IPO). In our experiments, using only 60k prompts (without responses) from the\nUltraFeedback dataset and without any prompt augmentation, by leveraging a\npre-trained preference model PairRM with only 0.4B parameters, SPPO can obtain\na model from fine-tuning Mistral-7B-Instruct-v0.2 that achieves the\nstate-of-the-art length-controlled win-rate of 28.53% against GPT-4-Turbo on\nAlpacaEval 2.0. It also outperforms the (iterative) DPO and IPO on MT-Bench and\nthe Open LLM Leaderboard. Notably, the strong performance of SPPO is achieved\nwithout additional external supervision (e.g., responses, preferences, etc.)\nfrom GPT-4 or other stronger language models.",
+      "upvotes": 24
+    },
+    {
+      "title": "Is Bigger Edit Batch Size Always Better? -- An Empirical Study on Model Editing with Llama-3",
+      "url": "https://huggingface.co/papers/2405.00664",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2405.00664.pdf",
+      "abstract": "This study presents a targeted model editing analysis focused on the latest\nlarge language model, Llama-3. We explore the efficacy of popular model editing\ntechniques - ROME, MEMIT, and EMMET, which are designed for precise layer\ninterventions. We identify the most effective layers for targeted edits through\nan evaluation that encompasses up to 4096 edits across three distinct\nstrategies: sequential editing, batch editing, and a hybrid approach we call as\nsequential-batch editing. Our findings indicate that increasing edit\nbatch-sizes may degrade model performance more significantly than using smaller\nedit batches sequentially for equal number of edits. With this, we argue that\nsequential model editing is an important component for scaling model editing\nmethods and future research should focus on methods that combine both batched\nand sequential editing. This observation suggests a potential limitation in\ncurrent model editing methods which push towards bigger edit batch sizes, and\nwe hope it paves way for future investigations into optimizing batch sizes and\nmodel editing performance.",
+      "upvotes": 18
+    },
+    {
+      "title": "Clover: Regressive Lightweight Speculative Decoding with Sequential Knowledge",
+      "url": "https://huggingface.co/papers/2405.00263",
+      "authors": [
+        "Chunan Shi",
+        "Lei Su",
+        "Bin Cui"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.00263.pdf",
+      "abstract": "Large language models (LLMs) suffer from low efficiency as the mismatch\nbetween the requirement of auto-regressive decoding and the design of most\ncontemporary GPUs. Specifically, billions to trillions of parameters must be\nloaded to the GPU cache through its limited memory bandwidth for computation,\nbut only a small batch of tokens is actually computed. Consequently, the GPU\nspends most of its time on memory transfer instead of computation. Recently,\nparallel decoding, a type of speculative decoding algorithms, is becoming more\npopular and has demonstrated impressive efficiency improvement in generation.\nIt introduces extra decoding heads to large models, enabling them to predict\nmultiple subsequent tokens simultaneously and verify these candidate\ncontinuations in a single decoding step. However, this approach deviates from\nthe training objective of next token prediction used during pre-training,\nresulting in a low hit rate for candidate tokens. In this paper, we propose a\nnew speculative decoding algorithm, Clover, which integrates sequential\nknowledge into the parallel decoding process. This enhancement improves the hit\nrate of speculators and thus boosts the overall efficiency. Clover transmits\nthe sequential knowledge from pre-speculated tokens via the Regressive\nConnection, then employs an Attention Decoder to integrate these speculated\ntokens. Additionally, Clover incorporates an Augmenting Block that modifies the\nhidden states to better align with the purpose of speculative generation rather\nthan next token prediction. The experiment results demonstrate that Clover\noutperforms the baseline by up to 91% on Baichuan-Small and 146% on\nBaichuan-Large, respectively, and exceeds the performance of the previously\ntop-performing method, Medusa, by up to 37% on Baichuan-Small and 57% on\nBaichuan-Large, respectively.",
+      "upvotes": 14
+    },
+    {
+      "title": "SemantiCodec: An Ultra Low Bitrate Semantic Audio Codec for General Sound",
+      "url": "https://huggingface.co/papers/2405.00233",
+      "authors": [
+        "Yi Yuan",
+        "Mengyue Wu",
+        "Mark D. Plumbley"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.00233.pdf",
+      "abstract": "Large language models (LLMs) have significantly advanced audio processing\nthrough audio codecs that convert audio into discrete tokens, enabling the\napplication of language modelling techniques to audio data. However,\ntraditional codecs often operate at high bitrates or within narrow domains such\nas speech and lack the semantic clues required for efficient language\nmodelling. Addressing these challenges, we introduce SemantiCodec, a novel\ncodec designed to compress audio into fewer than a hundred tokens per second\nacross diverse audio types, including speech, general audio, and music, without\ncompromising quality. SemantiCodec features a dual-encoder architecture: a\nsemantic encoder using a self-supervised AudioMAE, discretized using k-means\nclustering on extensive audio data, and an acoustic encoder to capture the\nremaining details. The semantic and acoustic encoder outputs are used to\nreconstruct audio via a diffusion-model-based decoder. SemantiCodec is\npresented in three variants with token rates of 25, 50, and 100 per second,\nsupporting a range of ultra-low bit rates between 0.31 kbps and 1.43 kbps.\nExperimental results demonstrate that SemantiCodec significantly outperforms\nthe state-of-the-art Descript codec on reconstruction quality. Our results also\nsuggest that SemantiCodec contains significantly richer semantic information\nthan all evaluated audio codecs, even at significantly lower bitrates. Our code\nand demos are available at https://haoheliu.github.io/SemantiCodec/.",
+      "upvotes": 13
+    },
+    {
+      "title": "Spectrally Pruned Gaussian Fields with Neural Compensation",
+      "url": "https://huggingface.co/papers/2405.00676",
+      "authors": [
+        "Zhenxin Zhu",
+        "Zhou Jiang",
+        "Baijun Ye",
+        "Yifei Zhang",
+        "Yuantao Chen",
+        "Jian Zhao",
+        "Hao Zhao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.00676.pdf",
+      "abstract": "Recently, 3D Gaussian Splatting, as a novel 3D representation, has garnered\nattention for its fast rendering speed and high rendering quality. However,\nthis comes with high memory consumption, e.g., a well-trained Gaussian field\nmay utilize three million Gaussian primitives and over 700 MB of memory. We\ncredit this high memory footprint to the lack of consideration for the\nrelationship between primitives. In this paper, we propose a memory-efficient\nGaussian field named SUNDAE with spectral pruning and neural compensation. On\none hand, we construct a graph on the set of Gaussian primitives to model their\nrelationship and design a spectral down-sampling module to prune out primitives\nwhile preserving desired signals. On the other hand, to compensate for the\nquality loss of pruning Gaussians, we exploit a lightweight neural network head\nto mix splatted features, which effectively compensates for quality losses\nwhile capturing the relationship between primitives in its weights. We\ndemonstrate the performance of SUNDAE with extensive results. For example,\nSUNDAE can achieve 26.80 PSNR at 145 FPS using 104 MB memory while the vanilla\nGaussian splatting algorithm achieves 25.60 PSNR at 160 FPS using 523 MB\nmemory, on the Mip-NeRF360 dataset. Codes are publicly available at\nhttps://runyiyang.github.io/projects/SUNDAE/.",
+      "upvotes": 8
+    },
+    {
+      "title": "STT: Stateful Tracking with Transformers for Autonomous Driving",
+      "url": "https://huggingface.co/papers/2405.00236",
+      "authors": [
+        "Longlong Jing",
+        "Ruichi Yu",
+        "Xu Chen",
+        "Zhengli Zhao",
+        "Shiwei Sheng",
+        "Colin Graber",
+        "Qi Chen",
+        "Qinru Li",
+        "Shangxuan Wu",
+        "Han Deng",
+        "Sangjin Lee",
+        "Chris Sweeney",
+        "Qiurui He",
+        "Wei-Chih Hung",
+        "Tong He",
+        "Farshid Moussavi",
+        "Zijian Guo",
+        "Yin Zhou",
+        "Congcong Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.00236.pdf",
+      "abstract": "Tracking objects in three-dimensional space is critical for autonomous\ndriving. To ensure safety while driving, the tracker must be able to reliably\ntrack objects across frames and accurately estimate their states such as\nvelocity and acceleration in the present. Existing works frequently focus on\nthe association task while either neglecting the model performance on state\nestimation or deploying complex heuristics to predict the states. In this\npaper, we propose STT, a Stateful Tracking model built with Transformers, that\ncan consistently track objects in the scenes while also predicting their states\naccurately. STT consumes rich appearance, geometry, and motion signals through\nlong term history of detections and is jointly optimized for both data\nassociation and state estimation tasks. Since the standard tracking metrics\nlike MOTA and MOTP do not capture the combined performance of the two tasks in\nthe wider spectrum of object states, we extend them with new metrics called\nS-MOTA and MOTPS that address this limitation. STT achieves competitive\nreal-time performance on the Waymo Open Dataset.",
+      "upvotes": 7
+    },
+    {
+      "title": "Automatic Creative Selection with Cross-Modal Matching",
+      "url": "https://huggingface.co/papers/2405.00029",
+      "authors": [
+        "Alex Kim",
+        "Rob Monarch",
+        "Jerry Kwac",
+        "Anikesh Kamath",
+        "Parmeshwar Khurd"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.00029.pdf",
+      "abstract": "Application developers advertise their Apps by creating product pages with\nApp images, and bidding on search terms. It is then crucial for App images to\nbe highly relevant with the search terms. Solutions to this problem require an\nimage-text matching model to predict the quality of the match between the\nchosen image and the search terms. In this work, we present a novel approach to\nmatching an App image to search terms based on fine-tuning a pre-trained LXMERT\nmodel. We show that compared to the CLIP model and a baseline using a\nTransformer model for search terms, and a ResNet model for images, we\nsignificantly improve the matching accuracy. We evaluate our approach using two\nsets of labels: advertiser associated (image, search term) pairs for a given\napplication, and human ratings for the relevance between (image, search term)\npairs. Our approach achieves 0.96 AUC score for advertiser associated ground\ntruth, outperforming the transformer+ResNet baseline and the fine-tuned CLIP\nmodel by 8% and 14%. For human labeled ground truth, our approach achieves 0.95\nAUC score, outperforming the transformer+ResNet baseline and the fine-tuned\nCLIP model by 16% and 17%.",
+      "upvotes": 7
+    }
+  ]
+}

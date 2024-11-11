@@ -1,0 +1,184 @@
+{
+  "date": "2024-09-12",
+  "papers": [
+    {
+      "title": "PingPong: A Benchmark for Role-Playing Language Models with User Emulation and Multi-Model Evaluation",
+      "url": "https://huggingface.co/papers/2409.06820",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2409.06820.pdf",
+      "abstract": "We introduce a novel benchmark for evaluating the role-playing capabilities\nof language models. Our approach leverages language models themselves to\nemulate users in dynamic, multi-turn conversations and to assess the resulting\ndialogues. The framework consists of three main components: a player model\nassuming a specific character role, an interrogator model simulating user\nbehavior, and a judge model evaluating conversation quality. We conducted\nexperiments comparing automated evaluations with human annotations to validate\nour approach, demonstrating strong correlations across multiple criteria. This\nwork provides a foundation for a robust and dynamic evaluation of model\ncapabilities in interactive scenarios.",
+      "upvotes": 62
+    },
+    {
+      "title": "MEDIC: Towards a Comprehensive Framework for Evaluating LLMs in Clinical Applications",
+      "url": "https://huggingface.co/papers/2409.07314",
+      "authors": [
+        "Shadab Khan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.07314.pdf",
+      "abstract": "The rapid development of Large Language Models (LLMs) for healthcare\napplications has spurred calls for holistic evaluation beyond frequently-cited\nbenchmarks like USMLE, to better reflect real-world performance. While\nreal-world assessments are valuable indicators of utility, they often lag\nbehind the pace of LLM evolution, likely rendering findings obsolete upon\ndeployment. This temporal disconnect necessitates a comprehensive upfront\nevaluation that can guide model selection for specific clinical applications.\nWe introduce MEDIC, a framework assessing LLMs across five critical dimensions\nof clinical competence: medical reasoning, ethics and bias, data and language\nunderstanding, in-context learning, and clinical safety. MEDIC features a novel\ncross-examination framework quantifying LLM performance across areas like\ncoverage and hallucination detection, without requiring reference outputs. We\napply MEDIC to evaluate LLMs on medical question-answering, safety,\nsummarization, note generation, and other tasks. Our results show performance\ndisparities across model sizes, baseline vs medically finetuned models, and\nhave implications on model selection for applications requiring specific model\nstrengths, such as low hallucination or lower cost of inference. MEDIC's\nmultifaceted evaluation reveals these performance trade-offs, bridging the gap\nbetween theoretical capabilities and practical implementation in healthcare\nsettings, ensuring that the most promising models are identified and adapted\nfor diverse healthcare applications.",
+      "upvotes": 50
+    },
+    {
+      "title": "Agent Workflow Memory",
+      "url": "https://huggingface.co/papers/2409.07429",
+      "authors": [
+        "Daniel Fried"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.07429.pdf",
+      "abstract": "Despite the potential of language model-based agents to solve real-world\ntasks such as web navigation, current methods still struggle with long-horizon\ntasks with complex action trajectories. In contrast, humans can flexibly solve\ncomplex tasks by learning reusable task workflows from past experiences and\nusing them to guide future actions. To build agents that can similarly benefit\nfrom this process, we introduce Agent Workflow Memory (AWM), a method for\ninducing commonly reused routines, i.e., workflows, and selectively providing\nworkflows to the agent to guide subsequent generations. AWM flexibly applies to\nboth offline and online scenarios, where agents induce workflows from training\nexamples beforehand or from test queries on the fly. We experiment on two major\nweb navigation benchmarks -- Mind2Web and WebArena -- that collectively cover\n1000+ tasks from 200+ domains across travel, shopping, and social media, among\nothers. AWM substantially improves the baseline results by 24.6% and 51.1%\nrelative success rate on Mind2Web and WebArena while reducing the number of\nsteps taken to solve WebArena tasks successfully. Furthermore, online AWM\nrobustly generalizes in cross-task, website, and domain evaluations, surpassing\nbaselines from 8.9 to 14.0 absolute points as train-test task distribution gaps\nwiden.",
+      "upvotes": 27
+    },
+    {
+      "title": "Gated Slot Attention for Efficient Linear-Time Sequence Modeling",
+      "url": "https://huggingface.co/papers/2409.07146",
+      "authors": [
+        "Yue Zhang",
+        "Yiqiao Wang",
+        "Bolun Wang",
+        "Bailin Wang",
+        "Wei Bi",
+        "Peng Zhou",
+        "Guohong Fu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.07146.pdf",
+      "abstract": "Linear attention Transformers and their gated variants, celebrated for\nenabling parallel training and efficient recurrent inference, still fall short\nin recall-intensive tasks compared to traditional Transformers and demand\nsignificant resources for training from scratch. This paper introduces Gated\nSlot Attention (GSA), which enhances Attention with Bounded-memory-Control\n(ABC) by incorporating a gating mechanism inspired by Gated Linear Attention\n(GLA). Essentially, GSA comprises a two-layer GLA linked via softmax, utilizing\ncontext-aware memory reading and adaptive forgetting to improve memory capacity\nwhile maintaining compact recurrent state size. This design greatly enhances\nboth training and inference efficiency through GLA's hardware-efficient\ntraining algorithm and reduced state size. Additionally, retaining the softmax\noperation is particularly beneficial in \"finetuning pretrained Transformers to\nRNNs\" (T2R) settings, reducing the need for extensive training from scratch.\nExtensive experiments confirm GSA's superior performance in scenarios requiring\nin-context recall and in T2R settings.",
+      "upvotes": 19
+    },
+    {
+      "title": "Hi3D: Pursuing High-Resolution Image-to-3D Generation with Video Diffusion Models",
+      "url": "https://huggingface.co/papers/2409.07452",
+      "authors": [
+        "Haibo Yang",
+        "Yang Chen",
+        "Yingwei Pan",
+        "Ting Yao",
+        "Zhineng Chen",
+        "Chong-Wah Ngo"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.07452.pdf",
+      "abstract": "Despite having tremendous progress in image-to-3D generation, existing\nmethods still struggle to produce multi-view consistent images with\nhigh-resolution textures in detail, especially in the paradigm of 2D diffusion\nthat lacks 3D awareness. In this work, we present High-resolution Image-to-3D\nmodel (Hi3D), a new video diffusion based paradigm that redefines a single\nimage to multi-view images as 3D-aware sequential image generation (i.e.,\norbital video generation). This methodology delves into the underlying temporal\nconsistency knowledge in video diffusion model that generalizes well to\ngeometry consistency across multiple views in 3D generation. Technically, Hi3D\nfirst empowers the pre-trained video diffusion model with 3D-aware prior\n(camera pose condition), yielding multi-view images with low-resolution texture\ndetails. A 3D-aware video-to-video refiner is learnt to further scale up the\nmulti-view images with high-resolution texture details. Such high-resolution\nmulti-view images are further augmented with novel views through 3D Gaussian\nSplatting, which are finally leveraged to obtain high-fidelity meshes via 3D\nreconstruction. Extensive experiments on both novel view synthesis and single\nview reconstruction demonstrate that our Hi3D manages to produce superior\nmulti-view consistency images with highly-detailed textures. Source code and\ndata are available at https://github.com/yanghb22-fdu/Hi3D-Official.",
+      "upvotes": 18
+    },
+    {
+      "title": "Self-Harmonized Chain of Thought",
+      "url": "https://huggingface.co/papers/2409.04057",
+      "authors": [
+        "Wei Lu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.04057.pdf",
+      "abstract": "Chain-of-Thought (CoT) prompting reveals that large language models are\ncapable of performing complex reasoning via intermediate steps. CoT prompting\nis primarily categorized into three approaches. The first approach utilizes\nstraightforward prompts like ``Let's think step by step'' to generate a\nsequential thought process before yielding an answer. The second approach makes\nuse of human-crafted, step-by-step demonstrations to guide the model's\nreasoning process. The third automates the generation of reasoned\ndemonstrations with the 'Let's think step by step'.This approach sometimes\nleads to reasoning errors, highlighting the need to diversify demonstrations to\nmitigate its misleading effects. However, diverse demonstrations pose\nchallenges for effective representations. In this work, we propose ECHO, a\nself-harmonized chain-of-thought prompting method. It consolidates diverse\nsolution paths into a uniform and effective solution pattern.ECHO demonstrates\nthe best overall performance across three reasoning domains.",
+      "upvotes": 16
+    },
+    {
+      "title": "Can Large Language Models Unlock Novel Scientific Research Ideas?",
+      "url": "https://huggingface.co/papers/2409.06185",
+      "authors": [
+        "Asif Ekbal"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.06185.pdf",
+      "abstract": "\"An idea is nothing more nor less than a new combination of old elements\"\n(Young, J.W.). The widespread adoption of Large Language Models (LLMs) and\npublicly available ChatGPT have marked a significant turning point in the\nintegration of Artificial Intelligence (AI) into people's everyday lives. This\nstudy explores the capability of LLMs in generating novel research ideas based\non information from research papers. We conduct a thorough examination of 4\nLLMs in five domains (e.g., Chemistry, Computer, Economics, Medical, and\nPhysics). We found that the future research ideas generated by Claude-2 and\nGPT-4 are more aligned with the author's perspective than GPT-3.5 and Gemini.\nWe also found that Claude-2 generates more diverse future research ideas than\nGPT-4, GPT-3.5, and Gemini 1.0. We further performed a human evaluation of the\nnovelty, relevancy, and feasibility of the generated future research ideas.\nThis investigation offers insights into the evolving role of LLMs in idea\ngeneration, highlighting both its capability and limitations. Our work\ncontributes to the ongoing efforts in evaluating and utilizing language models\nfor generating future research ideas. We make our datasets and codes publicly\navailable.",
+      "upvotes": 12
+    },
+    {
+      "title": "gsplat: An Open-Source Library for Gaussian Splatting",
+      "url": "https://huggingface.co/papers/2409.06765",
+      "authors": [
+        "Justin Kerr",
+        "Matias Turkulainen",
+        "Jianbo Ye",
+        "Matthew Tancik"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.06765.pdf",
+      "abstract": "gsplat is an open-source library designed for training and developing\nGaussian Splatting methods. It features a front-end with Python bindings\ncompatible with the PyTorch library and a back-end with highly optimized CUDA\nkernels. gsplat offers numerous features that enhance the optimization of\nGaussian Splatting models, which include optimization improvements for speed,\nmemory, and convergence times. Experimental results demonstrate that gsplat\nachieves up to 10% less training time and 4x less memory than the original\nimplementation. Utilized in several research projects, gsplat is actively\nmaintained on GitHub. Source code is available at\nhttps://github.com/nerfstudio-project/gsplat under Apache License 2.0. We\nwelcome contributions from the open-source community.",
+      "upvotes": 12
+    },
+    {
+      "title": "VMAS: Video-to-Music Generation via Semantic Alignment in Web Music Videos",
+      "url": "https://huggingface.co/papers/2409.07450",
+      "authors": [
+        "Yu Tian",
+        "Linjie Yang",
+        "Heng Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.07450.pdf",
+      "abstract": "We present a framework for learning to generate background music from video\ninputs. Unlike existing works that rely on symbolic musical annotations, which\nare limited in quantity and diversity, our method leverages large-scale web\nvideos accompanied by background music. This enables our model to learn to\ngenerate realistic and diverse music. To accomplish this goal, we develop a\ngenerative video-music Transformer with a novel semantic video-music alignment\nscheme. Our model uses a joint autoregressive and contrastive learning\nobjective, which encourages the generation of music aligned with high-level\nvideo content. We also introduce a novel video-beat alignment scheme to match\nthe generated music beats with the low-level motions in the video. Lastly, to\ncapture fine-grained visual cues in a video needed for realistic background\nmusic generation, we introduce a new temporal video encoder architecture,\nallowing us to efficiently process videos consisting of many densely sampled\nframes. We train our framework on our newly curated DISCO-MV dataset,\nconsisting of 2.2M video-music samples, which is orders of magnitude larger\nthan any prior datasets used for video music generation. Our method outperforms\nexisting approaches on the DISCO-MV and MusicCaps datasets according to various\nmusic generation evaluation metrics, including human evaluation. Results are\navailable at https://genjib.github.io/project_page/VMAs/index.html",
+      "upvotes": 10
+    },
+    {
+      "title": "Instant Facial Gaussians Translator for Relightable and Interactable Facial Rendering",
+      "url": "https://huggingface.co/papers/2409.07441",
+      "authors": [
+        "Hongyang Lin",
+        "Longwen Zhang",
+        "Zijun Zhao",
+        "Jun Saito",
+        "Lan Xu",
+        "Taku Komura"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.07441.pdf",
+      "abstract": "We propose GauFace, a novel Gaussian Splatting representation, tailored for\nefficient animation and rendering of physically-based facial assets. Leveraging\nstrong geometric priors and constrained optimization, GauFace ensures a neat\nand structured Gaussian representation, delivering high fidelity and real-time\nfacial interaction of 30fps@1440p on a Snapdragon 8 Gen 2 mobile platform.\n  Then, we introduce TransGS, a diffusion transformer that instantly translates\nphysically-based facial assets into the corresponding GauFace representations.\nSpecifically, we adopt a patch-based pipeline to handle the vast number of\nGaussians effectively. We also introduce a novel pixel-aligned sampling scheme\nwith UV positional encoding to ensure the throughput and rendering quality of\nGauFace assets generated by our TransGS. Once trained, TransGS can instantly\ntranslate facial assets with lighting conditions to GauFace representation,\nWith the rich conditioning modalities, it also enables editing and animation\ncapabilities reminiscent of traditional CG pipelines.\n  We conduct extensive evaluations and user studies, compared to traditional\noffline and online renderers, as well as recent neural rendering methods, which\ndemonstrate the superior performance of our approach for facial asset\nrendering. We also showcase diverse immersive applications of facial assets\nusing our TransGS approach and GauFace representation, across various platforms\nlike PCs, phones and even VR headsets.",
+      "upvotes": 10
+    },
+    {
+      "title": "SUPER: Evaluating Agents on Setting Up and Executing Tasks from Research Repositories",
+      "url": "https://huggingface.co/papers/2409.07440",
+      "authors": [
+        "Ben Bogin",
+        "Kejuan Yang",
+        "Peter Clark",
+        "Ashish Sabharwal",
+        "Tushar Khot"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.07440.pdf",
+      "abstract": "Given that Large Language Models (LLMs) have made significant progress in\nwriting code, can they now be used to autonomously reproduce results from\nresearch repositories? Such a capability would be a boon to the research\ncommunity, helping researchers validate, understand, and extend prior work. To\nadvance towards this goal, we introduce SUPER, the first benchmark designed to\nevaluate the capability of LLMs in setting up and executing tasks from research\nrepositories. SUPERaims to capture the realistic challenges faced by\nresearchers working with Machine Learning (ML) and Natural Language Processing\n(NLP) research repositories. Our benchmark comprises three distinct problem\nsets: 45 end-to-end problems with annotated expert solutions, 152 sub problems\nderived from the expert set that focus on specific challenges (e.g.,\nconfiguring a trainer), and 602 automatically generated problems for\nlarger-scale development. We introduce various evaluation measures to assess\nboth task success and progress, utilizing gold solutions when available or\napproximations otherwise. We show that state-of-the-art approaches struggle to\nsolve these problems with the best model (GPT-4o) solving only 16.3% of the\nend-to-end set, and 46.1% of the scenarios. This illustrates the challenge of\nthis task, and suggests that SUPER can serve as a valuable resource for the\ncommunity to make and measure progress.",
+      "upvotes": 6
+    },
+    {
+      "title": "ProteinBench: A Holistic Evaluation of Protein Foundation Models",
+      "url": "https://huggingface.co/papers/2409.06744",
+      "authors": [
+        "Fei Ye",
+        "Dongyu Xue",
+        "Yuning Shen",
+        "Lihao Wang",
+        "Yiming Ma",
+        "Yan Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.06744.pdf",
+      "abstract": "Recent years have witnessed a surge in the development of protein foundation\nmodels, significantly improving performance in protein prediction and\ngenerative tasks ranging from 3D structure prediction and protein design to\nconformational dynamics. However, the capabilities and limitations associated\nwith these models remain poorly understood due to the absence of a unified\nevaluation framework. To fill this gap, we introduce ProteinBench, a holistic\nevaluation framework designed to enhance the transparency of protein foundation\nmodels. Our approach consists of three key components: (i) A taxonomic\nclassification of tasks that broadly encompass the main challenges in the\nprotein domain, based on the relationships between different protein\nmodalities; (ii) A multi-metric evaluation approach that assesses performance\nacross four key dimensions: quality, novelty, diversity, and robustness; and\n(iii) In-depth analyses from various user objectives, providing a holistic view\nof model performance. Our comprehensive evaluation of protein foundation models\nreveals several key findings that shed light on their current capabilities and\nlimitations. To promote transparency and facilitate further research, we\nrelease the evaluation dataset, code, and a public leaderboard publicly for\nfurther analysis and a general modular toolkit. We intend for ProteinBench to\nbe a living benchmark for establishing a standardized, in-depth evaluation\nframework for protein foundation models, driving their development and\napplication while fostering collaboration within the field.",
+      "upvotes": 6
+    },
+    {
+      "title": "Generative Hierarchical Materials Search",
+      "url": "https://huggingface.co/papers/2409.06762",
+      "authors": [
+        "Sherry Yang",
+        "Simon Batzner",
+        "Muratahan Aykol",
+        "Alexander L. Gaunt",
+        "Brendan McMorrow",
+        "Danilo J. Rezende",
+        "Dale Schuurmans",
+        "Ekin D. Cubuk"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.06762.pdf",
+      "abstract": "Generative models trained at scale can now produce text, video, and more\nrecently, scientific data such as crystal structures. In applications of\ngenerative approaches to materials science, and in particular to crystal\nstructures, the guidance from the domain expert in the form of high-level\ninstructions can be essential for an automated system to output candidate\ncrystals that are viable for downstream research. In this work, we formulate\nend-to-end language-to-structure generation as a multi-objective optimization\nproblem, and propose Generative Hierarchical Materials Search (GenMS) for\ncontrollable generation of crystal structures. GenMS consists of (1) a language\nmodel that takes high-level natural language as input and generates\nintermediate textual information about a crystal (e.g., chemical formulae), and\n(2) a diffusion model that takes intermediate information as input and\ngenerates low-level continuous value crystal structures. GenMS additionally\nuses a graph neural network to predict properties (e.g., formation energy) from\nthe generated crystal structures. During inference, GenMS leverages all three\ncomponents to conduct a forward tree search over the space of possible\nstructures. Experiments show that GenMS outperforms other alternatives of\ndirectly using language models to generate structures both in satisfying user\nrequest and in generating low-energy structures. We confirm that GenMS is able\nto generate common crystal structures such as double perovskites, or spinels,\nsolely from natural language input, and hence can form the foundation for more\ncomplex structure generation in near future.",
+      "upvotes": 6
+    },
+    {
+      "title": "MVLLaVA: An Intelligent Agent for Unified and Flexible Novel View Synthesis",
+      "url": "https://huggingface.co/papers/2409.07129",
+      "authors": [
+        "Hanyu Jiang",
+        "Jian Xue",
+        "Xing Lan",
+        "Guohong Hu",
+        "Ke Lu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.07129.pdf",
+      "abstract": "This paper introduces MVLLaVA, an intelligent agent designed for novel view\nsynthesis tasks. MVLLaVA integrates multiple multi-view diffusion models with a\nlarge multimodal model, LLaVA, enabling it to handle a wide range of tasks\nefficiently. MVLLaVA represents a versatile and unified platform that adapts to\ndiverse input types, including a single image, a descriptive caption, or a\nspecific change in viewing azimuth, guided by language instructions for\nviewpoint generation. We carefully craft task-specific instruction templates,\nwhich are subsequently used to fine-tune LLaVA. As a result, MVLLaVA acquires\nthe capability to generate novel view images based on user instructions,\ndemonstrating its flexibility across diverse tasks. Experiments are conducted\nto validate the effectiveness of MVLLaVA, demonstrating its robust performance\nand versatility in tackling diverse novel view synthesis challenges.",
+      "upvotes": 6
+    }
+  ]
+}

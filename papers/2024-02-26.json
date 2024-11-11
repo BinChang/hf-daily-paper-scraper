@@ -1,0 +1,178 @@
+{
+  "date": "2024-02-26",
+  "papers": [
+    {
+      "title": "MobileLLM: Optimizing Sub-billion Parameter Language Models for On-Device Use Cases",
+      "url": "https://huggingface.co/papers/2402.14905",
+      "authors": [
+        "Chen Lai",
+        "Ernie Chang",
+        "Yangyang Shi",
+        "Raghuraman Krishnamoorthi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.14905.pdf",
+      "abstract": "This paper addresses the growing need for efficient large language models\n(LLMs) on mobile devices, driven by increasing cloud costs and latency\nconcerns. We focus on designing top-quality LLMs with fewer than a billion\nparameters, a practical choice for mobile deployment. Contrary to prevailing\nbelief emphasizing the pivotal role of data and parameter quantity in\ndetermining model quality, our investigation underscores the significance of\nmodel architecture for sub-billion scale LLMs. Leveraging deep and thin\narchitectures, coupled with embedding sharing and grouped-query attention\nmechanisms, we establish a strong baseline network denoted as MobileLLM, which\nattains a remarkable 2.7%/4.3% accuracy boost over preceding 125M/350M\nstate-of-the-art models. Additionally, we propose an immediate block-wise\nweight sharing approach with no increase in model size and only marginal\nlatency overhead. The resultant models, denoted as MobileLLM-LS, demonstrate a\nfurther accuracy enhancement of 0.7%/0.8% than MobileLLM 125M/350M. Moreover,\nMobileLLM model family shows significant improvements compared to previous\nsub-billion models on chat benchmarks, and demonstrates close correctness to\nLLaMA-v2 7B in API calling tasks, highlighting the capability of small models\nfor common on-device use cases.",
+      "upvotes": 126
+    },
+    {
+      "title": "Genie: Generative Interactive Environments",
+      "url": "https://huggingface.co/papers/2402.15391",
+      "authors": [
+        "Jake Bruce",
+        "Michael Dennis",
+        "Ashley Edwards",
+        "Jack Parker-Holder",
+        "Yuge Shi",
+        "Edward Hughes",
+        "Matthew Lai",
+        "Aditi Mavalankar",
+        "Richie Steigerwald",
+        "Chris Apps",
+        "Yusuf Aytar",
+        "Sarah Bechtle",
+        "Stephanie Chan",
+        "Nicolas Heess",
+        "Lucy Gonzalez",
+        "Simon Osindero",
+        "Scott Reed",
+        "Konrad Zolna",
+        "Jeff Clune"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.15391.pdf",
+      "abstract": "We introduce Genie, the first generative interactive environment trained in\nan unsupervised manner from unlabelled Internet videos. The model can be\nprompted to generate an endless variety of action-controllable virtual worlds\ndescribed through text, synthetic images, photographs, and even sketches. At\n11B parameters, Genie can be considered a foundation world model. It is\ncomprised of a spatiotemporal video tokenizer, an autoregressive dynamics\nmodel, and a simple and scalable latent action model. Genie enables users to\nact in the generated environments on a frame-by-frame basis despite training\nwithout any ground-truth action labels or other domain-specific requirements\ntypically found in the world model literature. Further the resulting learned\nlatent action space facilitates training agents to imitate behaviors from\nunseen videos, opening the path for training generalist agents of the future.",
+      "upvotes": 70
+    },
+    {
+      "title": "Orca-Math: Unlocking the potential of SLMs in Grade School Math",
+      "url": "https://huggingface.co/papers/2402.14830",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2402.14830.pdf",
+      "abstract": "Mathematical word problem-solving has long been recognized as a complex task\nfor small language models (SLMs). A recent study hypothesized that the smallest\nmodel size, needed to achieve over 80% accuracy on the GSM8K benchmark, is 34\nbillion parameters. To reach this level of performance with smaller models,\nresearcher often train SLMs to generate Python code or use tools to help avoid\ncalculation errors. Additionally, they employ ensembling, where outputs of up\nto 100 model runs are combined to arrive at a more accurate result. Result\nselection is done using consensus, majority vote or a separate a verifier model\nused in conjunction with the SLM. Ensembling provides a substantial boost in\naccuracy but at a significant cost increase with multiple calls to the model\n(e.g., Phi-GSM uses top-48 to boost the performance from 68.2 to 81.5).\n  In this work, we present Orca-Math, a 7-billion-parameter SLM based on the\nMistral-7B, which achieves 86.81% on GSM8k without the need for multiple model\ncalls or the use of verifiers, code execution or any other external tools. Our\napproach has the following key elements: (1) A high quality synthetic dataset\nof 200K math problems created using a multi-agent setup where agents\ncollaborate to create the data, (2) An iterative learning techniques that\nenables the SLM to practice solving problems, receive feedback on its solutions\nand learn from preference pairs incorporating the SLM solutions and the\nfeedback. When trained with Supervised Fine-Tuning alone, Orca-Math achieves\n81.50% on GSM8k pass@1 metric. With iterative preference learning, Orca-Math\nachieves 86.81% pass@1. Orca-Math surpasses the performance of significantly\nlarger models such as LLAMA-2-70B, WizardMath-70B, Gemini-Pro, ChatGPT-3.5. It\nalso significantly outperforms other smaller models while using much smaller\ndata (hundreds of thousands vs. millions of problems).",
+      "upvotes": 24
+    },
+    {
+      "title": "Divide-or-Conquer? Which Part Should You Distill Your LLM?",
+      "url": "https://huggingface.co/papers/2402.15000",
+      "authors": [
+        "VG Vinod Vydiswaran"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.15000.pdf",
+      "abstract": "Recent methods have demonstrated that Large Language Models (LLMs) can solve\nreasoning tasks better when they are encouraged to solve subtasks of the main\ntask first. In this paper we devise a similar strategy that breaks down\nreasoning tasks into a problem decomposition phase and a problem solving phase\nand show that the strategy is able to outperform a single stage solution.\nFurther, we hypothesize that the decomposition should be easier to distill into\na smaller model compared to the problem solving because the latter requires\nlarge amounts of domain knowledge while the former only requires learning\ngeneral problem solving strategies. We propose methods to distill these two\ncapabilities and evaluate their impact on reasoning outcomes and inference\ncost. We find that we can distill the problem decomposition phase and at the\nsame time achieve good generalization across tasks, datasets, and models.\nHowever, it is harder to distill the problem solving capability without losing\nperformance and the resulting distilled model struggles with generalization.\nThese results indicate that by using smaller, distilled problem decomposition\nmodels in combination with problem solving LLMs we can achieve reasoning with\ncost-efficient inference and local adaptation.",
+      "upvotes": 22
+    },
+    {
+      "title": "Watermarking Makes Language Models Radioactive",
+      "url": "https://huggingface.co/papers/2402.14904",
+      "authors": [
+        "Alain Durmus",
+        "Matthijs Douze"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.14904.pdf",
+      "abstract": "This paper investigates the radioactivity of LLM-generated texts, i.e.\nwhether it is possible to detect that such input was used as training data.\nConventional methods like membership inference can carry out this detection\nwith some level of accuracy. We show that watermarked training data leaves\ntraces easier to detect and much more reliable than membership inference. We\nlink the contamination level to the watermark robustness, its proportion in the\ntraining set, and the fine-tuning process. We notably demonstrate that training\non watermarked synthetic instructions can be detected with high confidence\n(p-value < 1e-5) even when as little as 5% of training text is watermarked.\nThus, LLM watermarking, originally designed for detecting machine-generated\ntext, gives the ability to easily identify if the outputs of a watermarked LLM\nwere used to fine-tune another LLM.",
+      "upvotes": 22
+    },
+    {
+      "title": "Gen4Gen: Generative Data Pipeline for Generative Multi-Concept Composition",
+      "url": "https://huggingface.co/papers/2402.15504",
+      "authors": [
+        "Yi Ma",
+        "Niki Trigoni",
+        "H. T. Kung",
+        "Yubei Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.15504.pdf",
+      "abstract": "Recent text-to-image diffusion models are able to learn and synthesize images\ncontaining novel, personalized concepts (e.g., their own pets or specific\nitems) with just a few examples for training. This paper tackles two\ninterconnected issues within this realm of personalizing text-to-image\ndiffusion models. First, current personalization techniques fail to reliably\nextend to multiple concepts -- we hypothesize this to be due to the mismatch\nbetween complex scenes and simple text descriptions in the pre-training dataset\n(e.g., LAION). Second, given an image containing multiple personalized\nconcepts, there lacks a holistic metric that evaluates performance on not just\nthe degree of resemblance of personalized concepts, but also whether all\nconcepts are present in the image and whether the image accurately reflects the\noverall text description. To address these issues, we introduce Gen4Gen, a\nsemi-automated dataset creation pipeline utilizing generative models to combine\npersonalized concepts into complex compositions along with text-descriptions.\nUsing this, we create a dataset called MyCanvas, that can be used to benchmark\nthe task of multi-concept personalization. In addition, we design a\ncomprehensive metric comprising two scores (CP-CLIP and TI-CLIP) for better\nquantifying the performance of multi-concept, personalized text-to-image\ndiffusion methods. We provide a simple baseline built on top of Custom\nDiffusion with empirical prompting strategies for future researchers to\nevaluate on MyCanvas. We show that by improving data quality and prompting\nstrategies, we can significantly increase multi-concept personalized image\ngeneration quality, without requiring any modifications to model architecture\nor training algorithms.",
+      "upvotes": 21
+    },
+    {
+      "title": "GPTVQ: The Blessing of Dimensionality for LLM Quantization",
+      "url": "https://huggingface.co/papers/2402.15319",
+      "authors": [
+        "Mart van Baalen",
+        "Andrey Kuzmin",
+        "Markus Nagel",
+        "Peter Couperus",
+        "Cedric Bastoul",
+        "Eric Mahurin",
+        "Tijmen Blankevoort",
+        "Paul Whatmough"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.15319.pdf",
+      "abstract": "In this work we show that the size versus accuracy trade-off of neural\nnetwork quantization can be significantly improved by increasing the\nquantization dimensionality. We propose the GPTVQ method, a new fast method for\npost-training vector quantization (VQ) that scales well to Large Language\nModels (LLMs). Our method interleaves quantization of one or more columns with\nupdates to the remaining unquantized weights, using information from the\nHessian of the per-layer output reconstruction MSE. Quantization codebooks are\ninitialized using an efficient data-aware version of the EM algorithm. The\ncodebooks are then updated, and further compressed by using integer\nquantization and SVD-based compression. GPTVQ establishes a new state-of-the\nart in the size vs accuracy trade-offs on a wide range of LLMs such as Llama-v2\nand Mistral. Furthermore, our method is efficient: on a single H100 it takes\nbetween 3 and 11 hours to process a Llamav2-70B model, depending on\nquantization setting. Lastly, with on-device timings for VQ decompression on a\nmobile CPU we show that VQ leads to improved latency compared to using a 4-bit\ninteger format.",
+      "upvotes": 19
+    },
+    {
+      "title": "ChunkAttention: Efficient Self-Attention with Prefix-Aware KV Cache and Two-Phase Partition",
+      "url": "https://huggingface.co/papers/2402.15220",
+      "authors": [
+        "Lu Ye",
+        "Ze Tao",
+        "Yong Huang",
+        "Yang Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.15220.pdf",
+      "abstract": "Self-attention is an essential component of large language models(LLMs) but a\nsignificant source of inference latency for long sequences. In multi-tenant\nLLMs serving scenarios, the compute and memory operation cost of self-attention\ncan be optimized by using the probability that multiple LLM requests have\nshared system prompts in prefixes. In this paper, we introduce ChunkAttention,\na prefix-aware self-attention module that can detect matching prompt prefixes\nacross multiple requests and share their key/value tensors in memory at runtime\nto improve the memory utilization of KV cache. This is achieved by breaking\nmonolithic key/value tensors into smaller chunks and structuring them into the\nauxiliary prefix tree. Consequently, on top of the prefix-tree based KV cache,\nwe design an efficient self-attention kernel, where a two-phase partition\nalgorithm is implemented to improve the data locality during self-attention\ncomputation in the presence of shared system prompts. Experiments show that\nChunkAttention can speed up the self-attention kernel by 3.2-4.8times\ncompared to the start-of-the-art implementation, with the length of the system\nprompt ranging from 1024 to 4096.",
+      "upvotes": 19
+    },
+    {
+      "title": "Same Task, More Tokens: the Impact of Input Length on the Reasoning Performance of Large Language Models",
+      "url": "https://huggingface.co/papers/2402.14848",
+      "authors": [
+        "Yoav Goldberg"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.14848.pdf",
+      "abstract": "This paper explores the impact of extending input lengths on the capabilities\nof Large Language Models (LLMs). Despite LLMs advancements in recent times,\ntheir performance consistency across different input lengths is not well\nunderstood. We investigate this aspect by introducing a novel QA reasoning\nframework, specifically designed to assess the impact of input length. We\nisolate the effect of input length using multiple versions of the same sample,\neach being extended with padding of different lengths, types and locations. Our\nfindings show a notable degradation in LLMs' reasoning performance at much\nshorter input lengths than their technical maximum. We show that the\ndegradation trend appears in every version of our dataset, although at\ndifferent intensities. Additionally, our study reveals that traditional\nperplexity metrics do not correlate with performance of LLMs' in long input\nreasoning tasks. We analyse our results and identify failure modes that can\nserve as useful guides for future research, potentially informing strategies to\naddress the limitations observed in LLMs.",
+      "upvotes": 18
+    },
+    {
+      "title": "Seamless Human Motion Composition with Blended Positional Encodings",
+      "url": "https://huggingface.co/papers/2402.15509",
+      "authors": [
+        "German Barquero",
+        "Sergio Escalera",
+        "Cristina Palmero"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.15509.pdf",
+      "abstract": "Conditional human motion generation is an important topic with many\napplications in virtual reality, gaming, and robotics. While prior works have\nfocused on generating motion guided by text, music, or scenes, these typically\nresult in isolated motions confined to short durations. Instead, we address the\ngeneration of long, continuous sequences guided by a series of varying textual\ndescriptions. In this context, we introduce FlowMDM, the first diffusion-based\nmodel that generates seamless Human Motion Compositions (HMC) without any\npostprocessing or redundant denoising steps. For this, we introduce the Blended\nPositional Encodings, a technique that leverages both absolute and relative\npositional encodings in the denoising chain. More specifically, global motion\ncoherence is recovered at the absolute stage, whereas smooth and realistic\ntransitions are built at the relative stage. As a result, we achieve\nstate-of-the-art results in terms of accuracy, realism, and smoothness on the\nBabel and HumanML3D datasets. FlowMDM excels when trained with only a single\ndescription per motion sequence thanks to its Pose-Centric Cross-ATtention,\nwhich makes it robust against varying text descriptions at inference time.\nFinally, to address the limitations of existing HMC metrics, we propose two new\nmetrics: the Peak Jerk and the Area Under the Jerk, to detect abrupt\ntransitions.",
+      "upvotes": 14
+    },
+    {
+      "title": "AgentOhana: Design Unified Data and Training Pipeline for Effective Agent Learning",
+      "url": "https://huggingface.co/papers/2402.15506",
+      "authors": [
+        "Tian Lan",
+        "Thai Hoang",
+        "Silvio Savarese",
+        "Shelby Heinecke",
+        "Huan Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.15506.pdf",
+      "abstract": "Autonomous agents powered by large language models (LLMs) have garnered\nsignificant research attention. However, fully harnessing the potential of LLMs\nfor agent-based tasks presents inherent challenges due to the heterogeneous\nnature of diverse data sources featuring multi-turn trajectories. In this\npaper, we introduce AgentOhana as a comprehensive solution to address\nthese challenges. AgentOhana aggregates agent trajectories from\ndistinct environments, spanning a wide array of scenarios. It meticulously\nstandardizes and unifies these trajectories into a consistent format,\nstreamlining the creation of a generic data loader optimized for agent\ntraining. Leveraging the data unification, our training pipeline maintains\nequilibrium across different data sources and preserves independent randomness\nacross devices during dataset partitioning and model training. Additionally, we\npresent xLAM-v0.1, a large action model tailored for AI agents, which\ndemonstrates exceptional performance across various benchmarks.",
+      "upvotes": 13
+    },
+    {
+      "title": "API-BLEND: A Comprehensive Corpora for Training and Benchmarking API LLMs",
+      "url": "https://huggingface.co/papers/2402.15491",
+      "authors": [
+        "Soham Dan",
+        "Vinod Muthusamy",
+        "Pavan Kapanipathi",
+        "Luis A. Lastras"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.15491.pdf",
+      "abstract": "There is a growing need for Large Language Models (LLMs) to effectively use\ntools and external Application Programming Interfaces (APIs) to plan and\ncomplete tasks. As such, there is tremendous interest in methods that can\nacquire sufficient quantities of train and test data that involve calls to\ntools / APIs. Two lines of research have emerged as the predominant strategies\nfor addressing this challenge. The first has focused on synthetic data\ngeneration techniques, while the second has involved curating task-adjacent\ndatasets which can be transformed into API / Tool-based tasks. In this paper,\nwe focus on the task of identifying, curating, and transforming existing\ndatasets and, in turn, introduce API-BLEND, a large corpora for training and\nsystematic testing of tool-augmented LLMs. The datasets mimic real-world\nscenarios involving API-tasks such as API / tool detection, slot filling, and\nsequencing of the detected APIs. We demonstrate the utility of the API-BLEND\ndataset for both training and benchmarking purposes.",
+      "upvotes": 13
+    },
+    {
+      "title": "CLoVe: Encoding Compositional Language in Contrastive Vision-Language Models",
+      "url": "https://huggingface.co/papers/2402.15021",
+      "authors": [
+        "Avneesh Saluja",
+        "Zhuoning Yuan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.15021.pdf",
+      "abstract": "Recent years have witnessed a significant increase in the performance of\nVision and Language tasks. Foundational Vision-Language Models (VLMs), such as\nCLIP, have been leveraged in multiple settings and demonstrated remarkable\nperformance across several tasks. Such models excel at object-centric\nrecognition yet learn text representations that seem invariant to word order,\nfailing to compose known concepts in novel ways. However, no evidence exists\nthat any VLM, including large-scale single-stream models such as GPT-4V,\nidentifies compositions successfully. In this paper, we introduce a framework\nto significantly improve the ability of existing models to encode compositional\nlanguage, with over 10% absolute improvement on compositionality benchmarks,\nwhile maintaining or improving the performance on standard object-recognition\nand retrieval benchmarks. Our code and pre-trained models are publicly\navailable at https://github.com/netflix/clove.",
+      "upvotes": 12
+    }
+  ]
+}

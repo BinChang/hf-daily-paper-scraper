@@ -1,0 +1,133 @@
+{
+  "date": "2024-01-24",
+  "papers": [
+    {
+      "title": "Lumiere: A Space-Time Diffusion Model for Video Generation",
+      "url": "https://huggingface.co/papers/2401.12945",
+      "authors": [
+        "Deqing Sun",
+        "Inbar Mosseri"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.12945.pdf",
+      "abstract": "We introduce Lumiere -- a text-to-video diffusion model designed for\nsynthesizing videos that portray realistic, diverse and coherent motion -- a\npivotal challenge in video synthesis. To this end, we introduce a Space-Time\nU-Net architecture that generates the entire temporal duration of the video at\nonce, through a single pass in the model. This is in contrast to existing video\nmodels which synthesize distant keyframes followed by temporal super-resolution\n-- an approach that inherently makes global temporal consistency difficult to\nachieve. By deploying both spatial and (importantly) temporal down- and\nup-sampling and leveraging a pre-trained text-to-image diffusion model, our\nmodel learns to directly generate a full-frame-rate, low-resolution video by\nprocessing it in multiple space-time scales. We demonstrate state-of-the-art\ntext-to-video generation results, and show that our design easily facilitates a\nwide range of content creation tasks and video editing applications, including\nimage-to-video, video inpainting, and stylized generation.",
+      "upvotes": 86
+    },
+    {
+      "title": "Large Language Models are Superpositions of All Characters: Attaining Arbitrary Role-play via Self-Alignment",
+      "url": "https://huggingface.co/papers/2401.12474",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2401.12474.pdf",
+      "abstract": "Considerable efforts have been invested in augmenting the role-playing\nproficiency of open-source large language models (LLMs) by emulating\nproprietary counterparts. Nevertheless, we posit that LLMs inherently harbor\nrole-play capabilities, owing to the extensive knowledge of characters and\npotential dialogues ingrained in their vast training corpora. Thus, in this\nstudy, we introduce Ditto, a self-alignment method for role-play. Ditto\ncapitalizes on character knowledge, encouraging an instruction-following LLM to\nsimulate role-play dialogues as a variant of reading comprehension. This method\ncreates a role-play training set comprising 4,000 characters, surpassing the\nscale of currently available datasets by tenfold regarding the number of roles.\nSubsequently, we fine-tune the LLM using this self-generated dataset to augment\nits role-playing capabilities. Upon evaluating our meticulously constructed and\nreproducible role-play benchmark and the roleplay subset of MT-Bench, Ditto, in\nvarious parameter scales, consistently maintains a consistent role identity and\nprovides accurate role-specific knowledge in multi-turn role-play\nconversations. Notably, it outperforms all open-source role-play baselines,\nshowcasing performance levels comparable to advanced proprietary chatbots.\nFurthermore, we present the first comprehensive cross-supervision alignment\nexperiment in the role-play domain, revealing that the intrinsic capabilities\nof LLMs confine the knowledge within role-play. Meanwhile, the role-play styles\ncan be easily acquired with the guidance of smaller models. We open-source\nrelated resources at https://github.com/OFA-Sys/Ditto.",
+      "upvotes": 34
+    },
+    {
+      "title": "Small Language Model Meets with Reinforced Vision Vocabulary",
+      "url": "https://huggingface.co/papers/2401.12503",
+      "authors": [
+        "Jinyue Chen",
+        "Liang Zhao",
+        "Zheng Ge",
+        "En Yu",
+        "Jianjian Sun",
+        "Chunrui Han",
+        "Xiangyu Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.12503.pdf",
+      "abstract": "Playing Large Vision Language Models (LVLMs) in 2023 is trendy among the AI\ncommunity. However, the relatively large number of parameters (more than 7B) of\npopular LVLMs makes it difficult to train and deploy on consumer GPUs,\ndiscouraging many researchers with limited resources. Imagine how cool it would\nbe to experience all the features of current LVLMs on an old GTX1080ti (our\nonly game card). Accordingly, we present Vary-toy in this report, a small-size\nVary along with Qwen-1.8B as the base ``large'' language model. In Vary-toy, we\nintroduce an improved vision vocabulary, allowing the model to not only possess\nall features of Vary but also gather more generality. Specifically, we replace\nnegative samples of natural images with positive sample data driven by object\ndetection in the procedure of generating vision vocabulary, more sufficiently\nutilizing the capacity of the vocabulary network and enabling it to efficiently\nencode visual information corresponding to natural objects. For experiments,\nVary-toy can achieve 65.6% ANLS on DocVQA, 59.1% accuracy on ChartQA, 88.1%\naccuracy on RefCOCO, and 29% on MMVet. The code will be publicly available on\nthe homepage.",
+      "upvotes": 32
+    },
+    {
+      "title": "Meta-Prompting: Enhancing Language Models with Task-Agnostic Scaffolding",
+      "url": "https://huggingface.co/papers/2401.12954",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2401.12954.pdf",
+      "abstract": "We introduce meta-prompting, an effective scaffolding technique designed to\nenhance the functionality of language models (LMs). This approach transforms a\nsingle LM into a multi-faceted conductor, adept at managing and integrating\nmultiple independent LM queries. By employing high-level instructions,\nmeta-prompting guides the LM to break down complex tasks into smaller, more\nmanageable subtasks. These subtasks are then handled by distinct \"expert\"\ninstances of the same LM, each operating under specific, tailored instructions.\nCentral to this process is the LM itself, in its role as the conductor, which\nensures seamless communication and effective integration of the outputs from\nthese expert models. It additionally employs its inherent critical thinking and\nrobust verification processes to refine and authenticate the end result. This\ncollaborative prompting approach empowers a single LM to simultaneously act as\na comprehensive orchestrator and a panel of diverse experts, significantly\nenhancing its performance across a wide array of tasks. The zero-shot,\ntask-agnostic nature of meta-prompting greatly simplifies user interaction by\nobviating the need for detailed, task-specific instructions. Furthermore, our\nresearch demonstrates the seamless integration of external tools, such as a\nPython interpreter, into the meta-prompting framework, thereby broadening its\napplicability and utility. Through rigorous experimentation with GPT-4, we\nestablish the superiority of meta-prompting over conventional scaffolding\nmethods: When averaged across all tasks, including the Game of 24,\nCheckmate-in-One, and Python Programming Puzzles, meta-prompting, augmented\nwith a Python interpreter functionality, surpasses standard prompting by 17.1%,\nexpert (dynamic) prompting by 17.3%, and multipersona prompting by 15.2%.",
+      "upvotes": 29
+    },
+    {
+      "title": "Large-scale Reinforcement Learning for Diffusion Models",
+      "url": "https://huggingface.co/papers/2401.12244",
+      "authors": [
+        "Yinan Zhang",
+        "Eric Tzeng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.12244.pdf",
+      "abstract": "Text-to-image diffusion models are a class of deep generative models that\nhave demonstrated an impressive capacity for high-quality image generation.\nHowever, these models are susceptible to implicit biases that arise from\nweb-scale text-image training pairs and may inaccurately model aspects of\nimages we care about. This can result in suboptimal samples, model bias, and\nimages that do not align with human ethics and preferences. In this paper, we\npresent an effective scalable algorithm to improve diffusion models using\nReinforcement Learning (RL) across a diverse set of reward functions, such as\nhuman preference, compositionality, and fairness over millions of images. We\nillustrate how our approach substantially outperforms existing methods for\naligning diffusion models with human preferences. We further illustrate how\nthis substantially improves pretrained Stable Diffusion (SD) models, generating\nsamples that are preferred by humans 80.3% of the time over those from the base\nSD model while simultaneously improving both the composition and diversity of\ngenerated samples.",
+      "upvotes": 28
+    },
+    {
+      "title": "AutoRT: Embodied Foundation Models for Large Scale Orchestration of Robotic Agents",
+      "url": "https://huggingface.co/papers/2401.12963",
+      "authors": [
+        "Michael Ahn",
+        "Debidatta Dwibedi",
+        "Montse Gonzalez Arenas",
+        "Alex Irpan",
+        "Ryan Julian",
+        "Isabel Leal",
+        "Edward Lee",
+        "Sergey Levine",
+        "Yao Lu",
+        "Isabel Leal",
+        "Sharath Maddineni",
+        "Kanishka Rao",
+        "Dorsa Sadigh",
+        "Pierre Sermanet"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.12963.pdf",
+      "abstract": "Foundation models that incorporate language, vision, and more recently\nactions have revolutionized the ability to harness internet scale data to\nreason about useful tasks. However, one of the key challenges of training\nembodied foundation models is the lack of data grounded in the physical world.\nIn this paper, we propose AutoRT, a system that leverages existing foundation\nmodels to scale up the deployment of operational robots in completely unseen\nscenarios with minimal human supervision. AutoRT leverages vision-language\nmodels (VLMs) for scene understanding and grounding, and further uses large\nlanguage models (LLMs) for proposing diverse and novel instructions to be\nperformed by a fleet of robots. Guiding data collection by tapping into the\nknowledge of foundation models enables AutoRT to effectively reason about\nautonomy tradeoffs and safety while significantly scaling up data collection\nfor robot learning. We demonstrate AutoRT proposing instructions to over 20\nrobots across multiple buildings and collecting 77k real robot episodes via\nboth teleoperation and autonomous robot policies. We experimentally show that\nsuch \"in-the-wild\" data collected by AutoRT is significantly more diverse, and\nthat AutoRT's use of LLMs allows for instruction following data collection\nrobots that can align to human preferences.",
+      "upvotes": 12
+    },
+    {
+      "title": "Orion-14B: Open-source Multilingual Large Language Models",
+      "url": "https://huggingface.co/papers/2401.12246",
+      "authors": [
+        "Yi Huang",
+        "Haihui Pan",
+        "Zhipeng Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.12246.pdf",
+      "abstract": "In this study, we introduce Orion-14B, a collection of multilingual large\nlanguage models with 14 billion parameters. We utilize a data scheduling\napproach to train a foundational model on a diverse corpus of 2.5 trillion\ntokens, sourced from texts in English, Chinese, Japanese, Korean, and other\nlanguages. Additionally, we fine-tuned a series of models tailored for\nconversational applications and other specific use cases. Our evaluation\nresults demonstrate that Orion-14B achieves state-of-the-art performance across\na broad spectrum of tasks. We make the Orion-14B model family and its\nassociated code publicly accessible https://github.com/OrionStarAI/Orion,\naiming to inspire future research and practical applications in the field.",
+      "upvotes": 12
+    },
+    {
+      "title": "BiTA: Bi-Directional Tuning for Lossless Acceleration in Large Language Models",
+      "url": "https://huggingface.co/papers/2401.12522",
+      "authors": [
+        "Hongbin Li",
+        "Yifan Yang",
+        "Xiaotian Yu",
+        "Guangming Lu",
+        "Rong Xiao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.12522.pdf",
+      "abstract": "Large language models (LLMs) commonly employ autoregressive generation during\ninference, leading to high memory bandwidth demand and consequently extended\nlatency. To mitigate this inefficiency, we present Bi-directional Tuning for\nlossless Acceleration (BiTA), an innovative method expediting LLMs via\nstreamlined semi-autoregressive generation and draft verification. Inspired by\nthe concept of prompt tuning, we enhance LLMs with a parameter-efficient design\ncalled bi-directional tuning for the capability in semi-autoregressive\ngeneration. Employing efficient tree-based decoding, the models perform draft\ncandidate generation and verification in parallel, ensuring outputs identical\nto their autoregressive counterparts under greedy sampling. BiTA serves as a\nlightweight plug-in module, seamlessly boosting the inference efficiency of\nexisting LLMs without requiring additional assistance models or incurring\nsignificant extra memory costs. Applying the proposed BiTA, LLaMA-2-70B-Chat\nachieves a 2.7times speedup on the MT-Bench benchmark. Extensive experiments\nconfirm our method surpasses state-of-the-art acceleration techniques.",
+      "upvotes": 11
+    },
+    {
+      "title": "GALA: Generating Animatable Layered Assets from a Single Scan",
+      "url": "https://huggingface.co/papers/2401.12979",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2401.12979.pdf",
+      "abstract": "We present GALA, a framework that takes as input a single-layer clothed 3D\nhuman mesh and decomposes it into complete multi-layered 3D assets. The outputs\ncan then be combined with other assets to create novel clothed human avatars\nwith any pose. Existing reconstruction approaches often treat clothed humans as\na single-layer of geometry and overlook the inherent compositionality of humans\nwith hairstyles, clothing, and accessories, thereby limiting the utility of the\nmeshes for downstream applications. Decomposing a single-layer mesh into\nseparate layers is a challenging task because it requires the synthesis of\nplausible geometry and texture for the severely occluded regions. Moreover,\neven with successful decomposition, meshes are not normalized in terms of poses\nand body shapes, failing coherent composition with novel identities and poses.\nTo address these challenges, we propose to leverage the general knowledge of a\npretrained 2D diffusion model as geometry and appearance prior for humans and\nother assets. We first separate the input mesh using the 3D surface\nsegmentation extracted from multi-view 2D segmentations. Then we synthesize the\nmissing geometry of different layers in both posed and canonical spaces using a\nnovel pose-guided Score Distillation Sampling (SDS) loss. Once we complete\ninpainting high-fidelity 3D geometry, we also apply the same SDS loss to its\ntexture to obtain the complete appearance including the initially occluded\nregions. Through a series of decomposition steps, we obtain multiple layers of\n3D assets in a shared canonical space normalized in terms of poses and human\nshapes, hence supporting effortless composition to novel identities and\nreanimation with novel poses. Our experiments demonstrate the effectiveness of\nour approach for decomposition, canonicalization, and composition tasks\ncompared to existing solutions.",
+      "upvotes": 7
+    },
+    {
+      "title": "Multilingual and Fully Non-Autoregressive ASR with Large Language Model Fusion: A Comprehensive Study",
+      "url": "https://huggingface.co/papers/2401.12789",
+      "authors": [
+        "W. Ronny Huang",
+        "Cyril Allauzen",
+        "Tongzhou Chen",
+        "Kilol Gupta",
+        "Ke Hu",
+        "Yu Zhang",
+        "Shuo-Yiin Chang",
+        "Tara N. Sainath"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.12789.pdf",
+      "abstract": "In the era of large models, the autoregressive nature of decoding often\nresults in latency serving as a significant bottleneck. We propose a\nnon-autoregressive LM-fused ASR system that effectively leverages the\nparallelization capabilities of accelerator hardware. Our approach combines the\nUniversal Speech Model (USM) and the PaLM 2 language model in per-segment\nscoring mode, achieving an average relative WER improvement across all\nlanguages of 10.8% on FLEURS and 3.6% on YouTube captioning. Furthermore, our\ncomprehensive ablation study analyzes key parameters such as LLM size, context\nlength, vocabulary size, fusion methodology. For instance, we explore the\nimpact of LLM size ranging from 128M to 340B parameters on ASR performance.\nThis study provides valuable insights into the factors influencing the\neffectiveness of practical large-scale LM-fused speech recognition systems.",
+      "upvotes": 7
+    }
+  ]
+}

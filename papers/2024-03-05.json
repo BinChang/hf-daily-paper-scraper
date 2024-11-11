@@ -1,0 +1,140 @@
+{
+  "date": "2024-03-05",
+  "papers": [
+    {
+      "title": "OOTDiffusion: Outfitting Fusion based Latent Diffusion for Controllable Virtual Try-on",
+      "url": "https://huggingface.co/papers/2403.01779",
+      "authors": [
+        "Chengcai Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.01779.pdf",
+      "abstract": "Image-based virtual try-on (VTON), which aims to generate an outfitted image\nof a target human wearing an in-shop garment, is a challenging image-synthesis\ntask calling for not only high fidelity of the outfitted human but also full\npreservation of garment details. To tackle this issue, we propose Outfitting\nover Try-on Diffusion (OOTDiffusion), leveraging the power of pretrained latent\ndiffusion models and designing a novel network architecture for realistic and\ncontrollable virtual try-on. Without an explicit warping process, we propose an\noutfitting UNet to learn the garment detail features, and merge them with the\ntarget human body via our proposed outfitting fusion in the denoising process\nof diffusion models. In order to further enhance the controllability of our\noutfitting UNet, we introduce outfitting dropout to the training process, which\nenables us to adjust the strength of garment features through classifier-free\nguidance. Our comprehensive experiments on the VITON-HD and Dress Code datasets\ndemonstrate that OOTDiffusion efficiently generates high-quality outfitted\nimages for arbitrary human and garment images, which outperforms other VTON\nmethods in both fidelity and controllability, indicating an impressive\nbreakthrough in virtual try-on. Our source code is available at\nhttps://github.com/levihsu/OOTDiffusion.",
+      "upvotes": 28
+    },
+    {
+      "title": "MovieLLM: Enhancing Long Video Understanding with AI-Generated Movies",
+      "url": "https://huggingface.co/papers/2403.01422",
+      "authors": [
+        "Zhende Song",
+        "Jiayuan Fan",
+        "Tao Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.01422.pdf",
+      "abstract": "The development of multimodal models has marked a significant step forward in\nhow machines understand videos. These models have shown promise in analyzing\nshort video clips. However, when it comes to longer formats like movies, they\noften fall short. The main hurdles are the lack of high-quality, diverse video\ndata and the intensive work required to collect or annotate such data. In the\nface of these challenges, we propose MovieLLM, a novel framework designed to\ncreate synthetic, high-quality data for long videos. This framework leverages\nthe power of GPT-4 and text-to-image models to generate detailed scripts and\ncorresponding visuals. Our approach stands out for its flexibility and\nscalability, making it a superior alternative to traditional data collection\nmethods. Our extensive experiments validate that the data produced by MovieLLM\nsignificantly improves the performance of multimodal models in understanding\ncomplex video narratives, overcoming the limitations of existing datasets\nregarding scarcity and bias.",
+      "upvotes": 26
+    },
+    {
+      "title": "AtomoVideo: High Fidelity Image-to-Video Generation",
+      "url": "https://huggingface.co/papers/2403.01800",
+      "authors": [
+        "Weijie Li",
+        "Tiezheng Ge"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.01800.pdf",
+      "abstract": "Recently, video generation has achieved significant rapid development based\non superior text-to-image generation techniques. In this work, we propose a\nhigh fidelity framework for image-to-video generation, named AtomoVideo. Based\non multi-granularity image injection, we achieve higher fidelity of the\ngenerated video to the given image. In addition, thanks to high quality\ndatasets and training strategies, we achieve greater motion intensity while\nmaintaining superior temporal consistency and stability. Our architecture\nextends flexibly to the video frame prediction task, enabling long sequence\nprediction through iterative generation. Furthermore, due to the design of\nadapter training, our approach can be well combined with existing personalised\nmodels and controllable modules. By quantitatively and qualitatively\nevaluation, AtomoVideo achieves superior results compared to popular methods,\nmore examples can be found on our project website: https://atomo-\nvideo.github.io/.",
+      "upvotes": 20
+    },
+    {
+      "title": "DenseMamba: State Space Models with Dense Hidden Connection for Efficient Large Language Models",
+      "url": "https://huggingface.co/papers/2403.00818",
+      "authors": [
+        "Wei He",
+        "Chengcheng Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.00818.pdf",
+      "abstract": "Large language models (LLMs) face a daunting challenge due to the excessive\ncomputational and memory requirements of the commonly used Transformer\narchitecture. While state space model (SSM) is a new type of foundational\nnetwork architecture offering lower computational complexity, their performance\nhas yet to fully rival that of Transformers. This paper introduces DenseSSM, a\nnovel approach to enhance the flow of hidden information between layers in\nSSMs. By selectively integrating shallowlayer hidden states into deeper layers,\nDenseSSM retains fine-grained information crucial for the final output. Dense\nconnections enhanced DenseSSM still maintains the training parallelizability\nand inference efficiency. The proposed method can be widely applicable to\nvarious SSM types like RetNet and Mamba. With similar model size, DenseSSM\nachieves significant improvements, exemplified by DenseRetNet outperforming the\noriginal RetNet with up to 5% accuracy improvement on public benchmarks.",
+      "upvotes": 15
+    },
+    {
+      "title": "InfiMM-HD: A Leap Forward in High-Resolution Multimodal Understanding",
+      "url": "https://huggingface.co/papers/2403.01487",
+      "authors": [
+        "Yunzhe Tao",
+        "Ran He"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.01487.pdf",
+      "abstract": "Multimodal Large Language Models (MLLMs) have experienced significant\nadvancements recently. Nevertheless, challenges persist in the accurate\nrecognition and comprehension of intricate details within high-resolution\nimages. Despite being indispensable for the development of robust MLLMs, this\narea remains underinvestigated. To tackle this challenge, our work introduces\nInfiMM-HD, a novel architecture specifically designed for processing images of\ndifferent resolutions with low computational overhead. This innovation\nfacilitates the enlargement of MLLMs to higher-resolution capabilities.\nInfiMM-HD incorporates a cross-attention module and visual windows to reduce\ncomputation costs. By integrating this architectural design with a four-stage\ntraining pipeline, our model attains improved visual perception efficiently and\ncost-effectively. Empirical study underscores the robustness and effectiveness\nof InfiMM-HD, opening new avenues for exploration in related areas. Codes and\nmodels can be found at https://huggingface.co/Infi-MM/infimm-hd",
+      "upvotes": 14
+    },
+    {
+      "title": "ResAdapter: Domain Consistent Resolution Adapter for Diffusion Models",
+      "url": "https://huggingface.co/papers/2403.02084",
+      "authors": [
+        "Jie Wu",
+        "Yuxi Ren",
+        "Min Zheng",
+        "Lean Fu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.02084.pdf",
+      "abstract": "Recent advancement in text-to-image models (e.g., Stable Diffusion) and\ncorresponding personalized technologies (e.g., DreamBooth and LoRA) enables\nindividuals to generate high-quality and imaginative images. However, they\noften suffer from limitations when generating images with resolutions outside\nof their trained domain. To overcome this limitation, we present the Resolution\nAdapter (ResAdapter), a domain-consistent adapter designed for diffusion models\nto generate images with unrestricted resolutions and aspect ratios. Unlike\nother multi-resolution generation methods that process images of static\nresolution with complex post-process operations, ResAdapter directly generates\nimages with the dynamical resolution. Especially, after learning a deep\nunderstanding of pure resolution priors, ResAdapter trained on the general\ndataset, generates resolution-free images with personalized diffusion models\nwhile preserving their original style domain. Comprehensive experiments\ndemonstrate that ResAdapter with only 0.5M can process images with flexible\nresolutions for arbitrary diffusion models. More extended experiments\ndemonstrate that ResAdapter is compatible with other modules (e.g., ControlNet,\nIP-Adapter and LCM-LoRA) for image generation across a broad range of\nresolutions, and can be integrated into other multi-resolution model (e.g.,\nElasticDiffusion) for efficiently generating higher-resolution images. Project\nlink is https://res-adapter.github.io",
+      "upvotes": 14
+    },
+    {
+      "title": "TripoSR: Fast 3D Object Reconstruction from a Single Image",
+      "url": "https://huggingface.co/papers/2403.02151",
+      "authors": [
+        "Dmitry Tochilkin",
+        "David Pankratz"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.02151.pdf",
+      "abstract": "This technical report introduces TripoSR, a 3D reconstruction model\nleveraging transformer architecture for fast feed-forward 3D generation,\nproducing 3D mesh from a single image in under 0.5 seconds. Building upon the\nLRM network architecture, TripoSR integrates substantial improvements in data\nprocessing, model design, and training techniques. Evaluations on public\ndatasets show that TripoSR exhibits superior performance, both quantitatively\nand qualitatively, compared to other open-source alternatives. Released under\nthe MIT license, TripoSR is intended to empower researchers, developers, and\ncreatives with the latest advancements in 3D generative AI.",
+      "upvotes": 12
+    },
+    {
+      "title": "RT-H: Action Hierarchies Using Language",
+      "url": "https://huggingface.co/papers/2403.01823",
+      "authors": [
+        "Tianli Ding",
+        "Ted Xiao",
+        "Pierre Sermanet",
+        "Quon Vuong",
+        "Jonathan Tompson",
+        "Debidatta Dwibedi",
+        "Dorsa Sadigh"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.01823.pdf",
+      "abstract": "Language provides a way to break down complex concepts into digestible\npieces. Recent works in robot imitation learning use language-conditioned\npolicies that predict actions given visual observations and the high-level task\nspecified in language. These methods leverage the structure of natural language\nto share data between semantically similar tasks (e.g., \"pick coke can\" and\n\"pick an apple\") in multi-task datasets. However, as tasks become more\nsemantically diverse (e.g., \"pick coke can\" and \"pour cup\"), sharing data\nbetween tasks becomes harder, so learning to map high-level tasks to actions\nrequires much more demonstration data. To bridge tasks and actions, our insight\nis to teach the robot the language of actions, describing low-level motions\nwith more fine-grained phrases like \"move arm forward\". Predicting these\nlanguage motions as an intermediate step between tasks and actions forces the\npolicy to learn the shared structure of low-level motions across seemingly\ndisparate tasks. Furthermore, a policy that is conditioned on language motions\ncan easily be corrected during execution through human-specified language\nmotions. This enables a new paradigm for flexible policies that can learn from\nhuman intervention in language. Our method RT-H builds an action hierarchy\nusing language motions: it first learns to predict language motions, and\nconditioned on this and the high-level task, it predicts actions, using visual\ncontext at all stages. We show that RT-H leverages this language-action\nhierarchy to learn policies that are more robust and flexible by effectively\ntapping into multi-task datasets. We show that these policies not only allow\nfor responding to language interventions, but can also learn from such\ninterventions and outperform methods that learn from teleoperated\ninterventions. Our website and videos are found at\nhttps://rt-hierarchy.github.io.",
+      "upvotes": 7
+    },
+    {
+      "title": "ViewDiff: 3D-Consistent Image Generation with Text-to-Image Models",
+      "url": "https://huggingface.co/papers/2403.01807",
+      "authors": [
+        "Aljaž Božič",
+        "Norman Müller",
+        "David Novotny",
+        "Hung-Yu Tseng",
+        "Christian Richardt",
+        "Michael Zollhöfer",
+        "Matthias Nießner"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.01807.pdf",
+      "abstract": "3D asset generation is getting massive amounts of attention, inspired by the\nrecent success of text-guided 2D content creation. Existing text-to-3D methods\nuse pretrained text-to-image diffusion models in an optimization problem or\nfine-tune them on synthetic data, which often results in non-photorealistic 3D\nobjects without backgrounds. In this paper, we present a method that leverages\npretrained text-to-image models as a prior, and learn to generate multi-view\nimages in a single denoising process from real-world data. Concretely, we\npropose to integrate 3D volume-rendering and cross-frame-attention layers into\neach block of the existing U-Net network of the text-to-image model. Moreover,\nwe design an autoregressive generation that renders more 3D-consistent images\nat any viewpoint. We train our model on real-world datasets of objects and\nshowcase its capabilities to generate instances with a variety of high-quality\nshapes and textures in authentic surroundings. Compared to the existing\nmethods, the results generated by our method are consistent, and have favorable\nvisual quality (-30% FID, -37% KID).",
+      "upvotes": 7
+    },
+    {
+      "title": "Twisting Lids Off with Two Hands",
+      "url": "https://huggingface.co/papers/2403.02338",
+      "authors": [
+        "Toru Lin",
+        "Zhao-Heng Yin",
+        "Pieter Abbeel"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.02338.pdf",
+      "abstract": "Manipulating objects with two multi-fingered hands has been a long-standing\nchallenge in robotics, attributed to the contact-rich nature of many\nmanipulation tasks and the complexity inherent in coordinating a\nhigh-dimensional bimanual system. In this work, we consider the problem of\ntwisting lids of various bottle-like objects with two hands, and demonstrate\nthat policies trained in simulation using deep reinforcement learning can be\neffectively transferred to the real world. With novel engineering insights into\nphysical modeling, real-time perception, and reward design, the policy\ndemonstrates generalization capabilities across a diverse set of unseen\nobjects, showcasing dynamic and dexterous behaviors. Our findings serve as\ncompelling evidence that deep reinforcement learning combined with sim-to-real\ntransfer remains a promising approach for addressing manipulation problems of\nunprecedented complexity.",
+      "upvotes": 5
+    },
+    {
+      "title": "3DGStream: On-the-Fly Training of 3D Gaussians for Efficient Streaming of Photo-Realistic Free-Viewpoint Videos",
+      "url": "https://huggingface.co/papers/2403.01444",
+      "authors": [
+        "Han Jiao",
+        "Lei Zhao",
+        "Wei Xing"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.01444.pdf",
+      "abstract": "Constructing photo-realistic Free-Viewpoint Videos (FVVs) of dynamic scenes\nfrom multi-view videos remains a challenging endeavor. Despite the remarkable\nadvancements achieved by current neural rendering techniques, these methods\ngenerally require complete video sequences for offline training and are not\ncapable of real-time rendering. To address these constraints, we introduce\n3DGStream, a method designed for efficient FVV streaming of real-world dynamic\nscenes. Our method achieves fast on-the-fly per-frame reconstruction within 12\nseconds and real-time rendering at 200 FPS. Specifically, we utilize 3D\nGaussians (3DGs) to represent the scene. Instead of the na\\\"ive approach of\ndirectly optimizing 3DGs per-frame, we employ a compact Neural Transformation\nCache (NTC) to model the translations and rotations of 3DGs, markedly reducing\nthe training time and storage required for each FVV frame. Furthermore, we\npropose an adaptive 3DG addition strategy to handle emerging objects in dynamic\nscenes. Experiments demonstrate that 3DGStream achieves competitive performance\nin terms of rendering speed, image quality, training time, and model storage\nwhen compared with state-of-the-art methods.",
+      "upvotes": 4
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "date": "2024-03-03",
+  "papers": [
+    {
+      "title": "StarCoder 2 and The Stack v2: The Next Generation",
+      "url": "https://huggingface.co/papers/2402.19173",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2402.19173.pdf",
+      "abstract": "The BigCode project, an open-scientific collaboration focused on the\nresponsible development of Large Language Models for Code (Code LLMs),\nintroduces StarCoder2. In partnership with Software Heritage (SWH), we build\nThe Stack v2 on top of the digital commons of their source code archive.\nAlongside the SWH repositories spanning 619 programming languages, we carefully\nselect other high-quality data sources, such as GitHub pull requests, Kaggle\nnotebooks, and code documentation. This results in a training set that is 4x\nlarger than the first StarCoder dataset. We train StarCoder2 models with 3B,\n7B, and 15B parameters on 3.3 to 4.3 trillion tokens and thoroughly evaluate\nthem on a comprehensive set of Code LLM benchmarks. We find that our small\nmodel, StarCoder2-3B, outperforms other Code LLMs of similar size on most\nbenchmarks, and also outperforms StarCoderBase-15B. Our large model,\nStarCoder2- 15B, significantly outperforms other models of comparable size. In\naddition, it matches or outperforms CodeLlama-34B, a model more than twice its\nsize. Although DeepSeekCoder- 33B is the best-performing model at code\ncompletion for high-resource languages, we find that StarCoder2-15B outperforms\nit on math and code reasoning benchmarks, as well as several low-resource\nlanguages. We make the model weights available under an OpenRAIL license and\nensure full transparency regarding the training data by releasing the SoftWare\nHeritage persistent IDentifiers (SWHIDs) of the source code data.",
+      "upvotes": 136
+    },
+    {
+      "title": "Griffin: Mixing Gated Linear Recurrences with Local Attention for Efficient Language Models",
+      "url": "https://huggingface.co/papers/2402.19427",
+      "authors": [
+        "Soham De",
+        "Samuel L. Smith",
+        "Anushan Fernando",
+        "George Cristian-Muraru",
+        "Ruba Haroun",
+        "Leonard Berrada",
+        "Yutian Chen",
+        "Guillaume Desjardins",
+        "Arnaud Doucet",
+        "David Budden",
+        "Yee Whye Teh",
+        "Nando De Freitas"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.19427.pdf",
+      "abstract": "Recurrent neural networks (RNNs) have fast inference and scale efficiently on\nlong sequences, but they are difficult to train and hard to scale. We propose\nHawk, an RNN with gated linear recurrences, and Griffin, a hybrid model that\nmixes gated linear recurrences with local attention. Hawk exceeds the reported\nperformance of Mamba on downstream tasks, while Griffin matches the performance\nof Llama-2 despite being trained on over 6 times fewer tokens. We also show\nthat Griffin can extrapolate on sequences significantly longer than those seen\nduring training. Our models match the hardware efficiency of Transformers\nduring training, and during inference they have lower latency and significantly\nhigher throughput. We scale Griffin up to 14B parameters, and explain how to\nshard our models for efficient distributed training.",
+      "upvotes": 52
+    },
+    {
+      "title": "Beyond Language Models: Byte Models are Digital World Simulators",
+      "url": "https://huggingface.co/papers/2402.19155",
+      "authors": [
+        "Shangda Wu",
+        "Rui Wang",
+        "Xiaobing Li",
+        "Maosong Sun"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.19155.pdf",
+      "abstract": "Traditional deep learning often overlooks bytes, the basic units of the\ndigital world, where all forms of information and operations are encoded and\nmanipulated in binary format. Inspired by the success of next token prediction\nin natural language processing, we introduce bGPT, a model with next byte\nprediction to simulate the digital world. bGPT matches specialized models in\nperformance across various modalities, including text, audio, and images, and\noffers new possibilities for predicting, simulating, and diagnosing algorithm\nor hardware behaviour. It has almost flawlessly replicated the process of\nconverting symbolic music data, achieving a low error rate of 0.0011 bits per\nbyte in converting ABC notation to MIDI format. In addition, bGPT demonstrates\nexceptional capabilities in simulating CPU behaviour, with an accuracy\nexceeding 99.99% in executing various operations. Leveraging next byte\nprediction, models like bGPT can directly learn from vast binary data,\neffectively simulating the intricate patterns of the digital world.",
+      "upvotes": 49
+    },
+    {
+      "title": "Panda-70M: Captioning 70M Videos with Multiple Cross-Modality Teachers",
+      "url": "https://huggingface.co/papers/2402.19479",
+      "authors": [
+        "Hsiang-wei Chao",
+        "Yuwei Fang",
+        "Ming-Hsuan Yang",
+        "Sergey Tulyakov"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.19479.pdf",
+      "abstract": "The quality of the data and annotation upper-bounds the quality of a\ndownstream model. While there exist large text corpora and image-text pairs,\nhigh-quality video-text data is much harder to collect. First of all, manual\nlabeling is more time-consuming, as it requires an annotator to watch an entire\nvideo. Second, videos have a temporal dimension, consisting of several scenes\nstacked together, and showing multiple actions. Accordingly, to establish a\nvideo dataset with high-quality captions, we propose an automatic approach\nleveraging multimodal inputs, such as textual video description, subtitles, and\nindividual video frames. Specifically, we curate 3.8M high-resolution videos\nfrom the publicly available HD-VILA-100M dataset. We then split them into\nsemantically consistent video clips, and apply multiple cross-modality teacher\nmodels to obtain captions for each video. Next, we finetune a retrieval model\non a small subset where the best caption of each video is manually selected and\nthen employ the model in the whole dataset to select the best caption as the\nannotation. In this way, we get 70M videos paired with high-quality text\ncaptions. We dub the dataset as Panda-70M. We show the value of the proposed\ndataset on three downstream tasks: video captioning, video and text retrieval,\nand text-driven video generation. The models trained on the proposed data score\nsubstantially better on the majority of metrics across all the tasks.",
+      "upvotes": 32
+    },
+    {
+      "title": "Humanoid Locomotion as Next Token Prediction",
+      "url": "https://huggingface.co/papers/2402.19469",
+      "authors": [
+        "Ilija Radosavovic",
+        "Bike Zhang",
+        "Sarthak Kamat",
+        "Koushil Sreenath"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.19469.pdf",
+      "abstract": "We cast real-world humanoid control as a next token prediction problem, akin\nto predicting the next word in language. Our model is a causal transformer\ntrained via autoregressive prediction of sensorimotor trajectories. To account\nfor the multi-modal nature of the data, we perform prediction in a\nmodality-aligned way, and for each input token predict the next token from the\nsame modality. This general formulation enables us to leverage data with\nmissing modalities, like video trajectories without actions. We train our model\non a collection of simulated trajectories coming from prior neural network\npolicies, model-based controllers, motion capture data, and YouTube videos of\nhumans. We show that our model enables a full-sized humanoid to walk in San\nFrancisco zero-shot. Our model can transfer to the real world even when trained\non only 27 hours of walking data, and can generalize to commands not seen\nduring training like walking backward. These findings suggest a promising path\ntoward learning challenging real-world control tasks by generative modeling of\nsensorimotor trajectories.",
+      "upvotes": 26
+    },
+    {
+      "title": "MOSAIC: A Modular System for Assistive and Interactive Cooking",
+      "url": "https://huggingface.co/papers/2402.18796",
+      "authors": [
+        "Rahma Abdullah",
+        "Atiksh Bhardwaj",
+        "Kelly Y Chen",
+        "Xinyi Fan",
+        "Aditya Kompella"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.18796.pdf",
+      "abstract": "We present MOSAIC, a modular architecture for home robots to perform complex\ncollaborative tasks, such as cooking with everyday users. MOSAIC tightly\ncollaborates with humans, interacts with users using natural language,\ncoordinates multiple robots, and manages an open vocabulary of everyday\nobjects. At its core, MOSAIC employs modularity: it leverages multiple\nlarge-scale pre-trained models for general tasks like language and image\nrecognition, while using streamlined modules designed for task-specific\ncontrol. We extensively evaluate MOSAIC on 60 end-to-end trials where two\nrobots collaborate with a human user to cook a combination of 6 recipes. We\nalso extensively test individual modules with 180 episodes of visuomotor\npicking, 60 episodes of human motion forecasting, and 46 online user\nevaluations of the task planner. We show that MOSAIC is able to efficiently\ncollaborate with humans by running the overall system end-to-end with a real\nhuman user, completing 68.3% (41/60) collaborative cooking trials of 6\ndifferent recipes with a subtask completion rate of 91.6%. Finally, we discuss\nthe limitations of the current system and exciting open challenges in this\ndomain. The project's website is at https://portal-cornell.github.io/MOSAIC/",
+      "upvotes": 23
+    },
+    {
+      "title": "DistriFusion: Distributed Parallel Inference for High-Resolution Diffusion Models",
+      "url": "https://huggingface.co/papers/2402.19481",
+      "authors": [
+        "Kai Li",
+        "Song Han"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.19481.pdf",
+      "abstract": "Diffusion models have achieved great success in synthesizing high-quality\nimages. However, generating high-resolution images with diffusion models is\nstill challenging due to the enormous computational costs, resulting in a\nprohibitive latency for interactive applications. In this paper, we propose\nDistriFusion to tackle this problem by leveraging parallelism across multiple\nGPUs. Our method splits the model input into multiple patches and assigns each\npatch to a GPU. However, na\\\"{\\i}vely implementing such an algorithm breaks the\ninteraction between patches and loses fidelity, while incorporating such an\ninteraction will incur tremendous communication overhead. To overcome this\ndilemma, we observe the high similarity between the input from adjacent\ndiffusion steps and propose displaced patch parallelism, which takes advantage\nof the sequential nature of the diffusion process by reusing the pre-computed\nfeature maps from the previous timestep to provide context for the current\nstep. Therefore, our method supports asynchronous communication, which can be\npipelined by computation. Extensive experiments show that our method can be\napplied to recent Stable Diffusion XL with no quality degradation and achieve\nup to a 6.1times speedup on eight NVIDIA A100s compared to one. Our code is\npublicly available at https://github.com/mit-han-lab/distrifuser.",
+      "upvotes": 20
+    },
+    {
+      "title": "Simple linear attention language models balance the recall-throughput tradeoff",
+      "url": "https://huggingface.co/papers/2402.18668",
+      "authors": [
+        "Michael Zhang",
+        "Dylan Zinsley",
+        "Atri Rudra",
+        "Christopher Ré"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.18668.pdf",
+      "abstract": "Recent work has shown that attention-based language models excel at recall,\nthe ability to ground generations in tokens previously seen in context.\nHowever, the efficiency of attention-based models is bottle-necked during\ninference by the KV-cache's aggressive memory consumption. In this work, we\nexplore whether we can improve language model efficiency (e.g. by reducing\nmemory consumption) without compromising on recall. By applying experiments and\ntheory to a broad set of architectures, we identify a key tradeoff between a\nmodel's state size and recall ability. We show that efficient alternatives to\nattention (e.g. H3, Mamba, RWKV) maintain a fixed-size recurrent state, but\nstruggle at recall. We propose BASED a simple architecture combining linear and\nsliding window attention. By varying BASED window size and linear attention\nfeature dimension, we can dial the state size and traverse the pareto frontier\nof the recall-memory tradeoff curve, recovering the full quality of attention\non one end and the small state size of attention-alternatives on the other. We\ntrain language models up to 1.3b parameters and show that BASED matches the\nstrongest sub-quadratic models (e.g. Mamba) in perplexity and outperforms them\non real-world recall-intensive tasks by 6.22 accuracy points. Implementations\nof linear attention are often less efficient than optimized standard attention\nimplementations. To make BASED competitive, we develop IO-aware algorithms that\nenable 24x higher throughput on language generation than FlashAttention-2, when\ngenerating 1024 tokens using 1.3b parameter models. Code for this work is\nprovided at: https://github.com/HazyResearch/based.",
+      "upvotes": 18
+    },
+    {
+      "title": "Priority Sampling of Large Language Models for Compilers",
+      "url": "https://huggingface.co/papers/2402.18734",
+      "authors": [
+        "Volker Seeker",
+        "Hugh Leather"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.18734.pdf",
+      "abstract": "Large language models show great potential in generating and optimizing code.\nWidely used sampling methods such as Nucleus Sampling increase the diversity of\ngeneration but often produce repeated samples for low temperatures and\nincoherent samples for high temperatures. Furthermore, the temperature\ncoefficient has to be tuned for each task, limiting its usability. We present\nPriority Sampling, a simple and deterministic sampling technique that produces\nunique samples ordered by the model's confidence. Each new sample expands the\nunexpanded token with the highest probability in the augmented search tree.\nAdditionally, Priority Sampling supports generation based on regular expression\nthat provides a controllable and structured exploration process. Priority\nSampling outperforms Nucleus Sampling for any number of samples, boosting the\nperformance of the original model from 2.87% to 5% improvement over -Oz.\nMoreover, it outperforms the autotuner used for the generation of labels for\nthe training of the original model in just 30 samples.",
+      "upvotes": 16
+    },
+    {
+      "title": "Trajectory Consistency Distillation",
+      "url": "https://huggingface.co/papers/2402.19159",
+      "authors": [
+        "Chaoyue Wang",
+        "Changxing Ding",
+        "Dacheng Tao",
+        "Tat-Jen Cham"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.19159.pdf",
+      "abstract": "Latent Consistency Model (LCM) extends the Consistency Model to the latent\nspace and leverages the guided consistency distillation technique to achieve\nimpressive performance in accelerating text-to-image synthesis. However, we\nobserved that LCM struggles to generate images with both clarity and detailed\nintricacy. To address this limitation, we initially delve into and elucidate\nthe underlying causes. Our investigation identifies that the primary issue\nstems from errors in three distinct areas. Consequently, we introduce\nTrajectory Consistency Distillation (TCD), which encompasses trajectory\nconsistency function and strategic stochastic sampling. The trajectory\nconsistency function diminishes the distillation errors by broadening the scope\nof the self-consistency boundary condition and endowing the TCD with the\nability to accurately trace the entire trajectory of the Probability Flow ODE.\nAdditionally, strategic stochastic sampling is specifically designed to\ncircumvent the accumulated errors inherent in multi-step consistency sampling,\nwhich is meticulously tailored to complement the TCD model. Experiments\ndemonstrate that TCD not only significantly enhances image quality at low NFEs\nbut also yields more detailed results compared to the teacher model at high\nNFEs.",
+      "upvotes": 14
+    },
+    {
+      "title": "ViewFusion: Towards Multi-View Consistency via Interpolated Denoising",
+      "url": "https://huggingface.co/papers/2402.18842",
+      "authors": [
+        "Xianghui Yang",
+        "Yan Zuo",
+        "Sameera Ramasinghe",
+        "Loris Bazzani",
+        "Gil Avraham",
+        "Anton van den Hengel"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.18842.pdf",
+      "abstract": "Novel-view synthesis through diffusion models has demonstrated remarkable\npotential for generating diverse and high-quality images. Yet, the independent\nprocess of image generation in these prevailing methods leads to challenges in\nmaintaining multiple-view consistency. To address this, we introduce\nViewFusion, a novel, training-free algorithm that can be seamlessly integrated\ninto existing pre-trained diffusion models. Our approach adopts an\nauto-regressive method that implicitly leverages previously generated views as\ncontext for the next view generation, ensuring robust multi-view consistency\nduring the novel-view generation process. Through a diffusion process that\nfuses known-view information via interpolated denoising, our framework\nsuccessfully extends single-view conditioned models to work in multiple-view\nconditional settings without any additional fine-tuning. Extensive experimental\nresults demonstrate the effectiveness of ViewFusion in generating consistent\nand detailed novel views.",
+      "upvotes": 13
+    }
+  ]
+}

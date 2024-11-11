@@ -1,0 +1,111 @@
+{
+  "date": "2024-04-30",
+  "papers": [
+    {
+      "title": "Replacing Judges with Juries: Evaluating LLM Generations with a Panel of Diverse Models",
+      "url": "https://huggingface.co/papers/2404.18796",
+      "authors": [
+        "Patrick Lewis"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.18796.pdf",
+      "abstract": "As Large Language Models (LLMs) have become more advanced, they have outpaced\nour abilities to accurately evaluate their quality. Not only is finding data to\nadequately probe particular model properties difficult, but evaluating the\ncorrectness of a model's freeform generation alone is a challenge. To address\nthis, many evaluations now rely on using LLMs themselves as judges to score the\nquality of outputs from other LLMs. Evaluations most commonly use a single\nlarge model like GPT4. While this method has grown in popularity, it is costly,\nhas been shown to introduce intramodel bias, and in this work, we find that\nvery large models are often unnecessary. We propose instead to evaluate models\nusing a Panel of LLm evaluators (PoLL). Across three distinct judge settings\nand spanning six different datasets, we find that using a PoLL composed of a\nlarger number of smaller models outperforms a single large judge, exhibits less\nintra-model bias due to its composition of disjoint model families, and does so\nwhile being over seven times less expensive.",
+      "upvotes": 68
+    },
+    {
+      "title": "Kangaroo: Lossless Self-Speculative Decoding via Double Early Exiting",
+      "url": "https://huggingface.co/papers/2404.18911",
+      "authors": [
+        "Zhenhua Liu",
+        "Yunsheng Ni",
+        "Kai Han"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.18911.pdf",
+      "abstract": "Speculative decoding has demonstrated its effectiveness in accelerating the\ninference of large language models while maintaining a consistent sampling\ndistribution. However, the conventional approach of training a separate draft\nmodel to achieve a satisfactory token acceptance rate can be costly. Drawing\ninspiration from early exiting, we propose a novel self-speculative decoding\nframework Kangaroo, which uses a fixed shallow sub-network as a\nself-draft model, with the remaining layers serving as the larger target model.\nWe train a lightweight and efficient adapter module on top of the sub-network\nto bridge the gap between the sub-network and the full model's representation\nability. It is noteworthy that the inference latency of the self-draft model\nmay no longer be negligible compared to the large model, necessitating\nstrategies to increase the token acceptance rate while minimizing the drafting\nsteps of the small model. To address this challenge, we introduce an additional\nearly exiting mechanism for generating draft tokens. Specifically, we halt the\nsmall model's subsequent prediction during the drafting phase once the\nconfidence level for the current token falls below a certain threshold.\nExtensive experiments on the Spec-Bench demonstrate the effectiveness of\nKangaroo. Under single-sequence verification, Kangaroo achieves speedups up to\n1.68times on Spec-Bench, outperforming Medusa-1 with 88.7\\% fewer additional\nparameters (67M compared to 591M). The code for Kangaroo is available at\nhttps://github.com/Equationliu/Kangaroo.",
+      "upvotes": 29
+    },
+    {
+      "title": "Capabilities of Gemini Models in Medicine",
+      "url": "https://huggingface.co/papers/2404.18416",
+      "authors": [
+        "Khaled Saab",
+        "Tao Tu",
+        "Wei-Hung Weng",
+        "Ryutaro Tanno",
+        "David Stutz",
+        "Ellery Wulczyn",
+        "Fan Zhang",
+        "Tim Strother",
+        "Chunjong Park",
+        "Elahe Vedadi",
+        "Juanma Zambrano Chaves",
+        "Yong Cheng",
+        "David G. T. Barrett",
+        "Cathy Cheung",
+        "Anil Palepu",
+        "Daniel McDuff"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.18416.pdf",
+      "abstract": "Excellence in a wide variety of medical applications poses considerable\nchallenges for AI, requiring advanced reasoning, access to up-to-date medical\nknowledge and understanding of complex multimodal data. Gemini models, with\nstrong general capabilities in multimodal and long-context reasoning, offer\nexciting possibilities in medicine. Building on these core strengths of Gemini,\nwe introduce Med-Gemini, a family of highly capable multimodal models that are\nspecialized in medicine with the ability to seamlessly use web search, and that\ncan be efficiently tailored to novel modalities using custom encoders. We\nevaluate Med-Gemini on 14 medical benchmarks, establishing new state-of-the-art\n(SoTA) performance on 10 of them, and surpass the GPT-4 model family on every\nbenchmark where a direct comparison is viable, often by a wide margin. On the\npopular MedQA (USMLE) benchmark, our best-performing Med-Gemini model achieves\nSoTA performance of 91.1% accuracy, using a novel uncertainty-guided search\nstrategy. On 7 multimodal benchmarks including NEJM Image Challenges and MMMU\n(health & medicine), Med-Gemini improves over GPT-4V by an average relative\nmargin of 44.5%. We demonstrate the effectiveness of Med-Gemini's long-context\ncapabilities through SoTA performance on a needle-in-a-haystack retrieval task\nfrom long de-identified health records and medical video question answering,\nsurpassing prior bespoke methods using only in-context learning. Finally,\nMed-Gemini's performance suggests real-world utility by surpassing human\nexperts on tasks such as medical text summarization, alongside demonstrations\nof promising potential for multimodal medical dialogue, medical research and\neducation. Taken together, our results offer compelling evidence for\nMed-Gemini's potential, although further rigorous evaluation will be crucial\nbefore real-world deployment in this safety-critical domain.",
+      "upvotes": 23
+    },
+    {
+      "title": "LEGENT: Open Platform for Embodied Agents",
+      "url": "https://huggingface.co/papers/2404.18243",
+      "authors": [
+        "An Liu",
+        "Pengkai Li",
+        "Lei Shi",
+        "Zhiyuan Liu",
+        "Maosong Sun"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.18243.pdf",
+      "abstract": "Despite advancements in Large Language Models (LLMs) and Large Multimodal\nModels (LMMs), their integration into language-grounded, human-like embodied\nagents remains incomplete, hindering complex real-life task performance in\nphysical environments. Existing integrations often feature limited open\nsourcing, challenging collective progress in this field. We introduce LEGENT,\nan open, scalable platform for developing embodied agents using LLMs and LMMs.\nLEGENT offers a dual approach: a rich, interactive 3D environment with\ncommunicable and actionable agents, paired with a user-friendly interface, and\na sophisticated data generation pipeline utilizing advanced algorithms to\nexploit supervision from simulated worlds at scale. In our experiments, an\nembryonic vision-language-action model trained on LEGENT-generated data\nsurpasses GPT-4V in embodied tasks, showcasing promising generalization\ncapabilities.",
+      "upvotes": 21
+    },
+    {
+      "title": "BlenderAlchemy: Editing 3D Graphics with Vision-Language Models",
+      "url": "https://huggingface.co/papers/2404.17672",
+      "authors": [
+        "Leonidas Guibas"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.17672.pdf",
+      "abstract": "Graphics design is important for various applications, including movie\nproduction and game design. To create a high-quality scene, designers usually\nneed to spend hours in software like Blender, in which they might need to\ninterleave and repeat operations, such as connecting material nodes, hundreds\nof times. Moreover, slightly different design goals may require completely\ndifferent sequences, making automation difficult. In this paper, we propose a\nsystem that leverages Vision-Language Models (VLMs), like GPT-4V, to\nintelligently search the design action space to arrive at an answer that can\nsatisfy a user's intent. Specifically, we design a vision-based edit generator\nand state evaluator to work together to find the correct sequence of actions to\nachieve the goal. Inspired by the role of visual imagination in the human\ndesign process, we supplement the visual reasoning capabilities of VLMs with\n\"imagined\" reference images from image-generation models, providing visual\ngrounding of abstract language descriptions. In this paper, we provide\nempirical evidence suggesting our system can produce simple but tedious Blender\nediting sequences for tasks such as editing procedural materials from text\nand/or reference images, as well as adjusting lighting configurations for\nproduct renderings in complex scenes.",
+      "upvotes": 18
+    },
+    {
+      "title": "Stylus: Automatic Adapter Selection for Diffusion Models",
+      "url": "https://huggingface.co/papers/2404.18928",
+      "authors": [
+        "Yanping Huang",
+        "Zhifeng Chen",
+        "Ion Stoica"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.18928.pdf",
+      "abstract": "Beyond scaling base models with more data or parameters, fine-tuned adapters\nprovide an alternative way to generate high fidelity, custom images at reduced\ncosts. As such, adapters have been widely adopted by open-source communities,\naccumulating a database of over 100K adapters-most of which are highly\ncustomized with insufficient descriptions. This paper explores the problem of\nmatching the prompt to a set of relevant adapters, built on recent work that\nhighlight the performance gains of composing adapters. We introduce Stylus,\nwhich efficiently selects and automatically composes task-specific adapters\nbased on a prompt's keywords. Stylus outlines a three-stage approach that first\nsummarizes adapters with improved descriptions and embeddings, retrieves\nrelevant adapters, and then further assembles adapters based on prompts'\nkeywords by checking how well they fit the prompt. To evaluate Stylus, we\ndeveloped StylusDocs, a curated dataset featuring 75K adapters with\npre-computed adapter embeddings. In our evaluation on popular Stable Diffusion\ncheckpoints, Stylus achieves greater CLIP-FID Pareto efficiency and is twice as\npreferred, with humans and multimodal models as evaluators, over the base\nmodel. See stylus-diffusion.github.io for more.",
+      "upvotes": 14
+    },
+    {
+      "title": "Ag2Manip: Learning Novel Manipulation Skills with Agent-Agnostic Visual and Action Representations",
+      "url": "https://huggingface.co/papers/2404.17521",
+      "authors": [
+        "Shu Wang",
+        "Yixin Zhu",
+        "Song-Chun Zhu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.17521.pdf",
+      "abstract": "Autonomous robotic systems capable of learning novel manipulation tasks are\npoised to transform industries from manufacturing to service automation.\nHowever, modern methods (e.g., VIP and R3M) still face significant hurdles,\nnotably the domain gap among robotic embodiments and the sparsity of successful\ntask executions within specific action spaces, resulting in misaligned and\nambiguous task representations. We introduce Ag2Manip (Agent-Agnostic\nrepresentations for Manipulation), a framework aimed at surmounting these\nchallenges through two key innovations: a novel agent-agnostic visual\nrepresentation derived from human manipulation videos, with the specifics of\nembodiments obscured to enhance generalizability; and an agent-agnostic action\nrepresentation abstracting a robot's kinematics to a universal agent proxy,\nemphasizing crucial interactions between end-effector and object. Ag2Manip's\nempirical validation across simulated benchmarks like FrankaKitchen, ManiSkill,\nand PartManip shows a 325% increase in performance, achieved without\ndomain-specific demonstrations. Ablation studies underline the essential\ncontributions of the visual and action representations to this success.\nExtending our evaluations to the real world, Ag2Manip significantly improves\nimitation learning success rates from 50% to 77.5%, demonstrating its\neffectiveness and generalizability across both simulated and physical\nenvironments.",
+      "upvotes": 12
+    },
+    {
+      "title": "DressCode: Autoregressively Sewing and Generating Garments from Text Guidance",
+      "url": "https://huggingface.co/papers/2401.16465",
+      "authors": [
+        "Kaixin Yao",
+        "Lan Xu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.16465.pdf",
+      "abstract": "Apparel's significant role in human appearance underscores the importance of\ngarment digitalization for digital human creation. Recent advances in 3D\ncontent creation are pivotal for digital human creation. Nonetheless, garment\ngeneration from text guidance is still nascent. We introduce a text-driven 3D\ngarment generation framework, DressCode, which aims to democratize design for\nnovices and offer immense potential in fashion design, virtual try-on, and\ndigital human creation. For our framework, we first introduce SewingGPT, a\nGPT-based architecture integrating cross-attention with text-conditioned\nembedding to generate sewing patterns with text guidance. We also tailored a\npre-trained Stable Diffusion for high-quality, tile-based PBR texture\ngeneration. By leveraging a large language model, our framework generates\nCG-friendly garments through natural language interaction. Our method also\nfacilitates pattern completion and texture editing, simplifying the process for\ndesigners by user-friendly interaction. With comprehensive evaluations and\ncomparisons with other state-of-the-art methods, our method showcases the best\nquality and alignment with input prompts. User studies further validate our\nhigh-quality rendering results, highlighting its practical utility and\npotential in production settings.",
+      "upvotes": 11
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "date": "2024-06-02",
+  "papers": [
+    {
+      "title": "Jina CLIP: Your CLIP Model Is Also Your Text Retriever",
+      "url": "https://huggingface.co/papers/2405.20204",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2405.20204.pdf",
+      "abstract": "Contrastive Language-Image Pretraining (CLIP) is widely used to train models\nto align images and texts in a common embedding space by mapping them to\nfixed-sized vectors. These models are key to multimodal information retrieval\nand related tasks. However, CLIP models generally underperform in text-only\ntasks compared to specialized text models. This creates inefficiencies for\ninformation retrieval systems that keep separate embeddings and models for\ntext-only and multimodal tasks. We propose a novel, multi-task contrastive\ntraining method to address this issue, which we use to train the jina-clip-v1\nmodel to achieve the state-of-the-art performance on both text-image and\ntext-text retrieval tasks.",
+      "upvotes": 32
+    },
+    {
+      "title": "Similarity is Not All You Need: Endowing Retrieval Augmented Generation with Multi Layered Thoughts",
+      "url": "https://huggingface.co/papers/2405.19893",
+      "authors": [
+        "Chunjing Gan",
+        "Dan Yang",
+        "Binbin Hu",
+        "Yue Shen",
+        "Lin Ju",
+        "Zhiqiang Zhang",
+        "Jinjie Gu",
+        "Jun Zhou"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.19893.pdf",
+      "abstract": "In recent years, large language models (LLMs) have made remarkable\nachievements in various domains. However, the untimeliness and cost of\nknowledge updates coupled with hallucination issues of LLMs have curtailed\ntheir applications in knowledge intensive tasks, where retrieval augmented\ngeneration (RAG) can be of help. Nevertheless, existing retrieval augmented\nmodels typically use similarity as a bridge between queries and documents and\nfollow a retrieve then read procedure. In this work, we argue that similarity\nis not always the panacea and totally relying on similarity would sometimes\ndegrade the performance of retrieval augmented generation. To this end, we\npropose MetRag, a Multi layEred Thoughts enhanced Retrieval Augmented\nGeneration framework. To begin with, beyond existing similarity oriented\nthought, we embrace a small scale utility model that draws supervision from an\nLLM for utility oriented thought and further come up with a smarter model by\ncomprehensively combining the similarity and utility oriented thoughts.\nFurthermore, given the fact that the retrieved document set tends to be huge\nand using them in isolation makes it difficult to capture the commonalities and\ncharacteristics among them, we propose to make an LLM as a task adaptive\nsummarizer to endow retrieval augmented generation with compactness-oriented\nthought. Finally, with multi layered thoughts from the precedent stages, an LLM\nis called for knowledge augmented generation. Extensive experiments on\nknowledge-intensive tasks have demonstrated the superiority of MetRag.",
+      "upvotes": 29
+    },
+    {
+      "title": "MotionLLM: Understanding Human Behaviors from Human Motions and Videos",
+      "url": "https://huggingface.co/papers/2405.20340",
+      "authors": [
+        "Ailing Zeng",
+        "Hao Zhang",
+        "Lei Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.20340.pdf",
+      "abstract": "This study delves into the realm of multi-modality (i.e., video and motion\nmodalities) human behavior understanding by leveraging the powerful\ncapabilities of Large Language Models (LLMs). Diverging from recent LLMs\ndesigned for video-only or motion-only understanding, we argue that\nunderstanding human behavior necessitates joint modeling from both videos and\nmotion sequences (e.g., SMPL sequences) to capture nuanced body part dynamics\nand semantics effectively. In light of this, we present MotionLLM, a\nstraightforward yet effective framework for human motion understanding,\ncaptioning, and reasoning. Specifically, MotionLLM adopts a unified\nvideo-motion training strategy that leverages the complementary advantages of\nexisting coarse video-text data and fine-grained motion-text data to glean rich\nspatial-temporal insights. Furthermore, we collect a substantial dataset,\nMoVid, comprising diverse videos, motions, captions, and instructions.\nAdditionally, we propose the MoVid-Bench, with carefully manual annotations,\nfor better evaluation of human behavior understanding on video and motion.\nExtensive experiments show the superiority of MotionLLM in the caption,\nspatial-temporal comprehension, and reasoning ability.",
+      "upvotes": 19
+    },
+    {
+      "title": "Xwin-LM: Strong and Scalable Alignment Practice for LLMs",
+      "url": "https://huggingface.co/papers/2405.20335",
+      "authors": [
+        "Zheng Zhang",
+        "Gaofeng Meng",
+        "Han Hu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.20335.pdf",
+      "abstract": "In this work, we present Xwin-LM, a comprehensive suite of alignment\nmethodologies for large language models (LLMs). This suite encompasses several\nkey techniques, including supervised finetuning (SFT), reward modeling (RM),\nrejection sampling finetuning (RS), and direct preference optimization (DPO).\nThe key components are as follows: (1) Xwin-LM-SFT, models initially finetuned\nwith high-quality instruction data; (2) Xwin-Pair, a large-scale, multi-turn\npreference dataset meticulously annotated using GPT-4; (3) Xwin-RM, reward\nmodels trained on Xwin-Pair, developed at scales of 7B, 13B, and 70B\nparameters; (4) Xwin-Set, a multiwise preference dataset in which each prompt\nis linked to 64 unique responses generated by Xwin-LM-SFT and scored by\nXwin-RM; (5) Xwin-LM-RS, models finetuned with the highest-scoring responses\nfrom Xwin-Set; (6) Xwin-LM-DPO, models further optimized on Xwin-Set using the\nDPO algorithm. Our evaluations on AlpacaEval and MT-bench demonstrate\nconsistent and significant improvements across the pipeline, demonstrating the\nstrength and scalability of Xwin-LM. The repository\nhttps://github.com/Xwin-LM/Xwin-LM will be continually updated to foster\ncommunity research.",
+      "upvotes": 17
+    },
+    {
+      "title": "DITTO-2: Distilled Diffusion Inference-Time T-Optimization for Music Generation",
+      "url": "https://huggingface.co/papers/2405.20289",
+      "authors": [
+        "Julian McAuley",
+        "Taylor Berg-Kirkpatrick"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.20289.pdf",
+      "abstract": "Controllable music generation methods are critical for human-centered\nAI-based music creation, but are currently limited by speed, quality, and\ncontrol design trade-offs. Diffusion Inference-Time T-optimization (DITTO), in\nparticular, offers state-of-the-art results, but is over 10x slower than\nreal-time, limiting practical use. We propose Distilled Diffusion\nInference-Time T -Optimization (or DITTO-2), a new method to speed up\ninference-time optimization-based control and unlock faster-than-real-time\ngeneration for a wide-variety of applications such as music inpainting,\noutpainting, intensity, melody, and musical structure control. Our method works\nby (1) distilling a pre-trained diffusion model for fast sampling via an\nefficient, modified consistency or consistency trajectory distillation process\n(2) performing inference-time optimization using our distilled model with\none-step sampling as an efficient surrogate optimization task and (3) running a\nfinal multi-step sampling generation (decoding) using our estimated noise\nlatents for best-quality, fast, controllable generation. Through thorough\nevaluation, we find our method not only speeds up generation over 10-20x, but\nsimultaneously improves control adherence and generation quality all at once.\nFurthermore, we apply our approach to a new application of maximizing text\nadherence (CLAP score) and show we can convert an unconditional diffusion model\nwithout text inputs into a model that yields state-of-the-art text control.\nSound examples can be found at https://ditto-music.github.io/ditto2/.",
+      "upvotes": 10
+    },
+    {
+      "title": "MOFA-Video: Controllable Image Animation via Generative Motion Field Adaptions in Frozen Image-to-Video Diffusion Model",
+      "url": "https://huggingface.co/papers/2405.20222",
+      "authors": [
+        "Yong Zhang",
+        "Ying Shan",
+        "Yinqiang Zheng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.20222.pdf",
+      "abstract": "We present MOFA-Video, an advanced controllable image animation method that\ngenerates video from the given image using various additional controllable\nsignals (such as human landmarks reference, manual trajectories, and another\neven provided video) or their combinations. This is different from previous\nmethods which only can work on a specific motion domain or show weak control\nabilities with diffusion prior. To achieve our goal, we design several\ndomain-aware motion field adapters (\\ie, MOFA-Adapters) to control the\ngenerated motions in the video generation pipeline. For MOFA-Adapters, we\nconsider the temporal motion consistency of the video and generate the dense\nmotion flow from the given sparse control conditions first, and then, the\nmulti-scale features of the given image are wrapped as a guided feature for\nstable video diffusion generation. We naively train two motion adapters for the\nmanual trajectories and the human landmarks individually since they both\ncontain sparse information about the control. After training, the MOFA-Adapters\nin different domains can also work together for more controllable video\ngeneration.",
+      "upvotes": 10
+    },
+    {
+      "title": "PLA4D: Pixel-Level Alignments for Text-to-4D Gaussian Splatting",
+      "url": "https://huggingface.co/papers/2405.19957",
+      "authors": [
+        "Yi Yang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.19957.pdf",
+      "abstract": "As text-conditioned diffusion models (DMs) achieve breakthroughs in image,\nvideo, and 3D generation, the research community's focus has shifted to the\nmore challenging task of text-to-4D synthesis, which introduces a temporal\ndimension to generate dynamic 3D objects. In this context, we identify Score\nDistillation Sampling (SDS), a widely used technique for text-to-3D synthesis,\nas a significant hindrance to text-to-4D performance due to its Janus-faced and\ntexture-unrealistic problems coupled with high computational costs. In this\npaper, we propose Pixel-Level Alignments for\nText-to-4D Gaussian Splatting (PLA4D), a novel method that\nutilizes text-to-video frames as explicit pixel alignment targets to generate\nstatic 3D objects and inject motion into them. Specifically, we introduce Focal\nAlignment to calibrate camera poses for rendering and GS-Mesh Contrastive\nLearning to distill geometry priors from rendered image contrasts at the pixel\nlevel. Additionally, we develop Motion Alignment using a deformation network to\ndrive changes in Gaussians and implement Reference Refinement for smooth 4D\nobject surfaces. These techniques enable 4D Gaussian Splatting to align\ngeometry, texture, and motion with generated videos at the pixel level.\nCompared to previous methods, PLA4D produces synthesized outputs with better\ntexture details in less time and effectively mitigates the Janus-faced problem.\nPLA4D is fully implemented using open-source models, offering an accessible,\nuser-friendly, and promising direction for 4D digital content creation. Our\nproject page:\nhttps://github.com/MiaoQiaowei/PLA4D.github.io{https://github.com/MiaoQiaowei/PLA4D.github.io}.",
+      "upvotes": 9
+    },
+    {
+      "title": "GECO: Generative Image-to-3D within a SECOnd",
+      "url": "https://huggingface.co/papers/2405.20327",
+      "authors": [
+        "Lingjie Liu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.20327.pdf",
+      "abstract": "3D generation has seen remarkable progress in recent years. Existing\ntechniques, such as score distillation methods, produce notable results but\nrequire extensive per-scene optimization, impacting time efficiency.\nAlternatively, reconstruction-based approaches prioritize efficiency but\ncompromise quality due to their limited handling of uncertainty. We introduce\nGECO, a novel method for high-quality 3D generative modeling that operates\nwithin a second. Our approach addresses the prevalent issues of uncertainty and\ninefficiency in current methods through a two-stage approach. In the initial\nstage, we train a single-step multi-view generative model with score\ndistillation. Then, a second-stage distillation is applied to address the\nchallenge of view inconsistency from the multi-view prediction. This two-stage\nprocess ensures a balanced approach to 3D generation, optimizing both quality\nand efficiency. Our comprehensive experiments demonstrate that GECO achieves\nhigh-quality image-to-3D generation with an unprecedented level of efficiency.",
+      "upvotes": 9
+    },
+    {
+      "title": "DevEval: A Manually-Annotated Code Generation Benchmark Aligned with Real-World Code Repositories",
+      "url": "https://huggingface.co/papers/2405.19856",
+      "authors": [
+        "Jia Li",
+        "Yunfei Zhao",
+        "Yongmin Li",
+        "Huanyu Liu",
+        "Hao Zhu",
+        "Lecheng Wang",
+        "Kaibo Liu",
+        "Zheng Fang",
+        "Lanshen Wang",
+        "Jiazheng Ding",
+        "Zhi Jin"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.19856.pdf",
+      "abstract": "How to evaluate the coding abilities of Large Language Models (LLMs) remains\nan open question. We find that existing benchmarks are poorly aligned with\nreal-world code repositories and are insufficient to evaluate the coding\nabilities of LLMs.\n  To address the knowledge gap, we propose a new benchmark named DevEval, which\nhas three advances. (1) DevEval aligns with real-world repositories in multiple\ndimensions, e.g., code distributions and dependency distributions. (2) DevEval\nis annotated by 13 developers and contains comprehensive annotations (e.g.,\nrequirements, original repositories, reference code, and reference\ndependencies). (3) DevEval comprises 1,874 testing samples from 117\nrepositories, covering 10 popular domains (e.g., Internet, Database). Based on\nDevEval, we propose repository-level code generation and evaluate 8 popular\nLLMs on DevEval (e.g., gpt-4, gpt-3.5, StarCoder 2, DeepSeek Coder, CodeLLaMa).\nOur experiments reveal these LLMs' coding abilities in real-world code\nrepositories. For example, in our experiments, the highest Pass@1 of\ngpt-4-turbo is only 53.04%. We also analyze LLMs' failed cases and summarize\ntheir shortcomings. We hope DevEval can facilitate the development of LLMs in\nreal code repositories. DevEval, prompts, and LLMs' predictions have been\nreleased.",
+      "upvotes": 7
+    },
+    {
+      "title": "Parrot: Efficient Serving of LLM-based Applications with Semantic Variable",
+      "url": "https://huggingface.co/papers/2405.19888",
+      "authors": [
+        "Yuqing Yang",
+        "Fan Yang",
+        "Chen Chen",
+        "Lili Qiu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.19888.pdf",
+      "abstract": "The rise of large language models (LLMs) has enabled LLM-based applications\n(a.k.a. AI agents or co-pilots), a new software paradigm that combines the\nstrength of LLM and conventional software. Diverse LLM applications from\ndifferent tenants could design complex workflows using multiple LLM requests to\naccomplish one task. However, they have to use the over-simplified\nrequest-level API provided by today's public LLM services, losing essential\napplication-level information. Public LLM services have to blindly optimize\nindividual LLM requests, leading to sub-optimal end-to-end performance of LLM\napplications.\n  This paper introduces Parrot, an LLM service system that focuses on the\nend-to-end experience of LLM-based applications. Parrot proposes Semantic\nVariable, a unified abstraction to expose application-level knowledge to public\nLLM services. A Semantic Variable annotates an input/output variable in the\nprompt of a request, and creates the data pipeline when connecting multiple LLM\nrequests, providing a natural way to program LLM applications. Exposing\nSemantic Variables to the public LLM service allows it to perform conventional\ndata flow analysis to uncover the correlation across multiple LLM requests.\nThis correlation opens a brand-new optimization space for the end-to-end\nperformance of LLM-based applications. Extensive evaluations demonstrate that\nParrot can achieve up to an order-of-magnitude improvement for popular and\npractical use cases of LLM applications.",
+      "upvotes": 5
+    },
+    {
+      "title": "DeMamba: AI-Generated Video Detection on Million-Scale GenVideo Benchmark",
+      "url": "https://huggingface.co/papers/2405.19707",
+      "authors": [
+        "Yan Hong",
+        "Zizheng Huang",
+        "Zhangxuan Gu",
+        "Jun Lan",
+        "Huijia Zhu",
+        "Jianfu Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.19707.pdf",
+      "abstract": "Recently, video generation techniques have advanced rapidly. Given the\npopularity of video content on social media platforms, these models intensify\nconcerns about the spread of fake information. Therefore, there is a growing\ndemand for detectors capable of distinguishing between fake AI-generated videos\nand mitigating the potential harm caused by fake information. However, the lack\nof large-scale datasets from the most advanced video generators poses a barrier\nto the development of such detectors. To address this gap, we introduce the\nfirst AI-generated video detection dataset, GenVideo. It features the following\ncharacteristics: (1) a large volume of videos, including over one million\nAI-generated and real videos collected; (2) a rich diversity of generated\ncontent and methodologies, covering a broad spectrum of video categories and\ngeneration techniques. We conducted extensive studies of the dataset and\nproposed two evaluation methods tailored for real-world-like scenarios to\nassess the detectors' performance: the cross-generator video classification\ntask assesses the generalizability of trained detectors on generators; the\ndegraded video classification task evaluates the robustness of detectors to\nhandle videos that have degraded in quality during dissemination. Moreover, we\nintroduced a plug-and-play module, named Detail Mamba (DeMamba), designed to\nenhance the detectors by identifying AI-generated videos through the analysis\nof inconsistencies in temporal and spatial dimensions. Our extensive\nexperiments demonstrate DeMamba's superior generalizability and robustness on\nGenVideo compared to existing detectors. We believe that the GenVideo dataset\nand the DeMamba module will significantly advance the field of AI-generated\nvideo detection. Our code and dataset will be aviliable at\nhttps://github.com/chenhaoxing/DeMamba.",
+      "upvotes": 4
+    }
+  ]
+}

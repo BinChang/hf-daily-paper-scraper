@@ -1,0 +1,66 @@
+{
+  "date": "2024-05-16",
+  "papers": [
+    {
+      "title": "ALPINE: Unveiling the Planning Capability of Autoregressive Learning in Language Models",
+      "url": "https://huggingface.co/papers/2405.09220",
+      "authors": [
+        "Siwei Wang",
+        "Yifei Shen",
+        "Shi Feng",
+        "Haoran Sun",
+        "Shang-Hua Teng",
+        "Wei Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.09220.pdf",
+      "abstract": "In this paper, we present the findings of our Project ALPINE which stands for\n``Autoregressive Learning for Planning In NEtworks.\" Project ALPINE initiates a\ntheoretical investigation into the development of planning capabilities in\nTransformer-based language models through their autoregressive learning\nmechanisms, aiming to identify any potential limitations in their planning\nabilities. We abstract planning as a network path-finding task where the\nobjective is to generate a valid path from a specified source node to a\ndesignated target node. In terms of expressiveness, we show that the\nTransformer is capable of executing path-finding by embedding the adjacency and\nreachability matrices within its weights. Our theoretical analysis of the\ngradient-based learning dynamic of the Transformer reveals that the Transformer\nis capable of learning both the adjacency matrix and a limited form of the\nreachability matrix. These theoretical insights are then validated through\nexperiments, which demonstrate that the Transformer indeed learns the adjacency\nmatrix and an incomplete reachability matrix, which aligns with the predictions\nmade in our theoretical analysis. Additionally, when applying our methodology\nto a real-world planning benchmark, called Blocksworld, our observations remain\nconsistent. Our theoretical and empirical analyses further unveil a potential\nlimitation of Transformer in path-finding: it cannot identify reachability\nrelationships through transitivity, and thus would fail when path concatenation\nis needed to generate a path. In summary, our findings shed new light on how\nthe internal mechanisms of autoregressive learning enable planning in networks.\nThis study may contribute to our understanding of the general planning\ncapabilities in other related domains.",
+      "upvotes": 24
+    },
+    {
+      "title": "Xmodel-VLM: A Simple Baseline for Multimodal Vision Language Model",
+      "url": "https://huggingface.co/papers/2405.09215",
+      "authors": [
+        "Yang Liu",
+        "Langping He",
+        "Ling Jiang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.09215.pdf",
+      "abstract": "We introduce Xmodel-VLM, a cutting-edge multimodal vision language model. It\nis designed for efficient deployment on consumer GPU servers. Our work directly\nconfronts a pivotal industry issue by grappling with the prohibitive service\ncosts that hinder the broad adoption of large-scale multimodal systems. Through\nrigorous training, we have developed a 1B-scale language model from the ground\nup, employing the LLaVA paradigm for modal alignment. The result, which we call\nXmodel-VLM, is a lightweight yet powerful multimodal vision language model.\nExtensive testing across numerous classic multimodal benchmarks has revealed\nthat despite its smaller size and faster execution, Xmodel-VLM delivers\nperformance comparable to that of larger models. Our model checkpoints and code\nare publicly available on GitHub at https://github.com/XiaoduoAILab/XmodelVLM.",
+      "upvotes": 18
+    },
+    {
+      "title": "Naturalistic Music Decoding from EEG Data via Latent Diffusion Models",
+      "url": "https://huggingface.co/papers/2405.09062",
+      "authors": [
+        "Natalia Polouliakh",
+        "Hiroaki Kitano",
+        "Akima Connelly",
+        "Emanuele Rodolà",
+        "Taketo Akama"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.09062.pdf",
+      "abstract": "In this article, we explore the potential of using latent diffusion models, a\nfamily of powerful generative models, for the task of reconstructing\nnaturalistic music from electroencephalogram (EEG) recordings. Unlike simpler\nmusic with limited timbres, such as MIDI-generated tunes or monophonic pieces,\nthe focus here is on intricate music featuring a diverse array of instruments,\nvoices, and effects, rich in harmonics and timbre. This study represents an\ninitial foray into achieving general music reconstruction of high-quality using\nnon-invasive EEG data, employing an end-to-end training approach directly on\nraw data without the need for manual pre-processing and channel selection. We\ntrain our models on the public NMED-T dataset and perform quantitative\nevaluation proposing neural embedding-based metrics. We additionally perform\nsong classification based on the generated tracks. Our work contributes to the\nongoing research in neural decoding and brain-computer interfaces, offering\ninsights into the feasibility of using EEG data for complex auditory\ninformation reconstruction.",
+      "upvotes": 9
+    },
+    {
+      "title": "BEHAVIOR Vision Suite: Customizable Dataset Generation via Simulation",
+      "url": "https://huggingface.co/papers/2405.09546",
+      "authors": [
+        "Yihe Tang",
+        "Wensi Ai",
+        "Josiah Wong",
+        "Sanjana Srivastava",
+        "Sharon Lee",
+        "Shengxin Zha",
+        "Laurent Itti",
+        "Roberto Martín-Martín",
+        "Miao Liu",
+        "Ruohan Zhang",
+        "Li Fei-Fei"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.09546.pdf",
+      "abstract": "The systematic evaluation and understanding of computer vision models under\nvarying conditions require large amounts of data with comprehensive and\ncustomized labels, which real-world vision datasets rarely satisfy. While\ncurrent synthetic data generators offer a promising alternative, particularly\nfor embodied AI tasks, they often fall short for computer vision tasks due to\nlow asset and rendering quality, limited diversity, and unrealistic physical\nproperties. We introduce the BEHAVIOR Vision Suite (BVS), a set of tools and\nassets to generate fully customized synthetic data for systematic evaluation of\ncomputer vision models, based on the newly developed embodied AI benchmark,\nBEHAVIOR-1K. BVS supports a large number of adjustable parameters at the scene\nlevel (e.g., lighting, object placement), the object level (e.g., joint\nconfiguration, attributes such as \"filled\" and \"folded\"), and the camera level\n(e.g., field of view, focal length). Researchers can arbitrarily vary these\nparameters during data generation to perform controlled experiments. We\nshowcase three example application scenarios: systematically evaluating the\nrobustness of models across different continuous axes of domain shift,\nevaluating scene understanding models on the same set of images, and training\nand evaluating simulation-to-real transfer for a novel vision task: unary and\nbinary state prediction. Project website:\nhttps://behavior-vision-suite.github.io/",
+      "upvotes": 9
+    }
+  ]
+}

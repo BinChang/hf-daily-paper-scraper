@@ -1,0 +1,172 @@
+{
+  "date": "2024-05-30",
+  "papers": [
+    {
+      "title": "MAP-Neo: Highly Capable and Transparent Bilingual Large Language Model Series",
+      "url": "https://huggingface.co/papers/2405.19327",
+      "authors": [
+        "Chou Leuang Yu",
+        "Danny Pan",
+        "Jie Liu",
+        "Qunshu Lin",
+        "Raven Yuan",
+        "Wei Pang",
+        "Ziyang Ma",
+        "Bill Lin",
+        "Huan Yang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.19327.pdf",
+      "abstract": "Large Language Models (LLMs) have made great strides in recent years to\nachieve unprecedented performance across different tasks. However, due to\ncommercial interest, the most competitive models like GPT, Gemini, and Claude\nhave been gated behind proprietary interfaces without disclosing the training\ndetails. Recently, many institutions have open-sourced several strong LLMs like\nLLaMA-3, comparable to existing closed-source LLMs. However, only the model's\nweights are provided with most details (e.g., intermediate checkpoints,\npre-training corpus, and training code, etc.) being undisclosed. To improve the\ntransparency of LLMs, the research community has formed to open-source truly\nopen LLMs (e.g., Pythia, Amber, OLMo), where more details (e.g., pre-training\ncorpus and training code) are being provided. These models have greatly\nadvanced the scientific study of these large models including their strengths,\nweaknesses, biases and risks. However, we observe that the existing truly open\nLLMs on reasoning, knowledge, and coding tasks are still inferior to existing\nstate-of-the-art LLMs with similar model sizes. To this end, we open-source\nMAP-Neo, a highly capable and transparent bilingual language model with 7B\nparameters trained from scratch on 4.5T high-quality tokens. Our MAP-Neo is the\nfirst fully open-sourced bilingual LLM with comparable performance compared to\nexisting state-of-the-art LLMs. Moreover, we open-source all details to\nreproduce our MAP-Neo, where the cleaned pre-training corpus, data cleaning\npipeline, checkpoints, and well-optimized training/evaluation framework are\nprovided. Finally, we hope our MAP-Neo will enhance and strengthen the open\nresearch community and inspire more innovations and creativities to facilitate\nthe further improvements of LLMs.",
+      "upvotes": 46
+    },
+    {
+      "title": "T2V-Turbo: Breaking the Quality Bottleneck of Video Consistency Model with Mixed Reward Feedback",
+      "url": "https://huggingface.co/papers/2405.18750",
+      "authors": [
+        "Tsu-Jui Fu",
+        "Xinyi Wang",
+        "Sugato Basu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.18750.pdf",
+      "abstract": "Diffusion-based text-to-video (T2V) models have achieved significant success\nbut continue to be hampered by the slow sampling speed of their iterative\nsampling processes. To address the challenge, consistency models have been\nproposed to facilitate fast inference, albeit at the cost of sample quality. In\nthis work, we aim to break the quality bottleneck of a video consistency model\n(VCM) to achieve both fast and high-quality video generation. We\nintroduce T2V-Turbo, which integrates feedback from a mixture of differentiable\nreward models into the consistency distillation (CD) process of a pre-trained\nT2V model. Notably, we directly optimize rewards associated with single-step\ngenerations that arise naturally from computing the CD loss, effectively\nbypassing the memory constraints imposed by backpropagating gradients through\nan iterative sampling process. Remarkably, the 4-step generations from our\nT2V-Turbo achieve the highest total score on VBench, even surpassing Gen-2 and\nPika. We further conduct human evaluations to corroborate the results,\nvalidating that the 4-step generations from our T2V-Turbo are preferred over\nthe 50-step DDIM samples from their teacher models, representing more than a\ntenfold acceleration while improving video generation quality.",
+      "upvotes": 20
+    },
+    {
+      "title": "LLMs achieve adult human performance on higher-order theory of mind tasks",
+      "url": "https://huggingface.co/papers/2405.18870",
+      "authors": [
+        "Winnie Street",
+        "John Oliver Siy",
+        "Geoff Keeling",
+        "Adrien Baranes",
+        "Benjamin Barnett",
+        "Michael McKibben",
+        "Alison Lentz",
+        "Blaise Aguera y Arcas",
+        "Robin I. M. Dunbar"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.18870.pdf",
+      "abstract": "This paper examines the extent to which large language models (LLMs) have\ndeveloped higher-order theory of mind (ToM); the human ability to reason about\nmultiple mental and emotional states in a recursive manner (e.g. I think that\nyou believe that she knows). This paper builds on prior work by introducing a\nhandwritten test suite -- Multi-Order Theory of Mind Q&A -- and using it to\ncompare the performance of five LLMs to a newly gathered adult human benchmark.\nWe find that GPT-4 and Flan-PaLM reach adult-level and near adult-level\nperformance on ToM tasks overall, and that GPT-4 exceeds adult performance on\n6th order inferences. Our results suggest that there is an interplay between\nmodel size and finetuning for the realisation of ToM abilities, and that the\nbest-performing LLMs have developed a generalised capacity for ToM. Given the\nrole that higher-order ToM plays in a wide range of cooperative and competitive\nhuman behaviours, these findings have significant implications for user-facing\nLLM applications.",
+      "upvotes": 16
+    },
+    {
+      "title": "Self-Exploring Language Models: Active Preference Elicitation for Online Alignment",
+      "url": "https://huggingface.co/papers/2405.19332",
+      "authors": [
+        "Hiteshi Sharma"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.19332.pdf",
+      "abstract": "Preference optimization, particularly through Reinforcement Learning from\nHuman Feedback (RLHF), has achieved significant success in aligning Large\nLanguage Models (LLMs) to adhere to human intentions. Unlike offline alignment\nwith a fixed dataset, online feedback collection from humans or AI on model\ngenerations typically leads to more capable reward models and better-aligned\nLLMs through an iterative process. However, achieving a globally accurate\nreward model requires systematic exploration to generate diverse responses that\nspan the vast space of natural language. Random sampling from standard\nreward-maximizing LLMs alone is insufficient to fulfill this requirement. To\naddress this issue, we propose a bilevel objective optimistically biased\ntowards potentially high-reward responses to actively explore\nout-of-distribution regions. By solving the inner-level problem with the\nreparameterized reward function, the resulting algorithm, named Self-Exploring\nLanguage Models (SELM), eliminates the need for a separate RM and iteratively\nupdates the LLM with a straightforward objective. Compared to Direct Preference\nOptimization (DPO), the SELM objective reduces indiscriminate favor of unseen\nextrapolations and enhances exploration efficiency. Our experimental results\ndemonstrate that when finetuned on Zephyr-7B-SFT and Llama-3-8B-Instruct\nmodels, SELM significantly boosts the performance on instruction-following\nbenchmarks such as MT-Bench and AlpacaEval 2.0, as well as various standard\nacademic benchmarks in different settings. Our code and models are available at\nhttps://github.com/shenao-zhang/SELM.",
+      "upvotes": 15
+    },
+    {
+      "title": "Offline Regularised Reinforcement Learning for Large Language Models Alignment",
+      "url": "https://huggingface.co/papers/2405.19107",
+      "authors": [
+        "Yunhao Tang",
+        "Daniel Guo",
+        "Daniele Calandriello",
+        "Mohammad Gheshlaghi Azar",
+        "Bernardo Avila Pires",
+        "Will Ellsworth",
+        "Aliaksei Severyn",
+        "Jonathan Mallinson",
+        "Lior Shani",
+        "Gil Shamir",
+        "Rishabh Joshi",
+        "Remi Munos",
+        "Bilal Piot"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.19107.pdf",
+      "abstract": "The dominant framework for alignment of large language models (LLM), whether\nthrough reinforcement learning from human feedback or direct preference\noptimisation, is to learn from preference data. This involves building datasets\nwhere each element is a quadruplet composed of a prompt, two independent\nresponses (completions of the prompt) and a human preference between the two\nindependent responses, yielding a preferred and a dis-preferred response. Such\ndata is typically scarce and expensive to collect. On the other hand,\nsingle-trajectory datasets where each element is a triplet composed of a\nprompt, a response and a human feedback is naturally more abundant. The\ncanonical element of such datasets is for instance an LLM's response to a\nuser's prompt followed by a user's feedback such as a thumbs-up/down.\nConsequently, in this work, we propose DRO, or Direct Reward\nOptimisation, as a framework and associated algorithms that do not require\npairwise preferences. DRO uses a simple mean-squared objective that can be\nimplemented in various ways. We validate our findings empirically, using T5\nencoder-decoder language models, and show DRO's performance over selected\nbaselines such as Kahneman-Tversky Optimization (KTO). Thus, we confirm that\nDRO is a simple and empirically compelling method for single-trajectory policy\noptimisation.",
+      "upvotes": 13
+    },
+    {
+      "title": "Nearest Neighbor Speculative Decoding for LLM Generation and Attribution",
+      "url": "https://huggingface.co/papers/2405.19325",
+      "authors": [
+        "Jimmy Lin",
+        "Wen-tau Yih"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.19325.pdf",
+      "abstract": "Large language models (LLMs) often hallucinate and lack the ability to\nprovide attribution for their generations. Semi-parametric LMs, such as kNN-LM,\napproach these limitations by refining the output of an LM for a given prompt\nusing its nearest neighbor matches in a non-parametric data store. However,\nthese models often exhibit slow inference speeds and produce non-fluent texts.\nIn this paper, we introduce Nearest Neighbor Speculative Decoding (NEST), a\nnovel semi-parametric language modeling approach that is capable of\nincorporating real-world text spans of arbitrary length into the LM generations\nand providing attribution to their sources. NEST performs token-level retrieval\nat each inference step to compute a semi-parametric mixture distribution and\nidentify promising span continuations in a corpus. It then uses an approximate\nspeculative decoding procedure that accepts a prefix of the retrieved span or\ngenerates a new token. NEST significantly enhances the generation quality and\nattribution rate of the base LM across a variety of knowledge-intensive tasks,\nsurpassing the conventional kNN-LM method and performing competitively with\nin-context retrieval augmentation. In addition, NEST substantially improves the\ngeneration speed, achieving a 1.8x speedup in inference time when applied to\nLlama-2-Chat 70B.",
+      "upvotes": 13
+    },
+    {
+      "title": "EasyAnimate: A High-Performance Long Video Generation Method based on Transformer Architecture",
+      "url": "https://huggingface.co/papers/2405.18991",
+      "authors": [
+        "Jiaqi Xu",
+        "Bo Liu",
+        "MengLi Cheng",
+        "Xing Shi",
+        "Jun Huang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.18991.pdf",
+      "abstract": "This paper presents EasyAnimate, an advanced method for video generation that\nleverages the power of transformer architecture for high-performance outcomes.\nWe have expanded the DiT framework originally designed for 2D image synthesis\nto accommodate the complexities of 3D video generation by incorporating a\nmotion module block. It is used to capture temporal dynamics, thereby ensuring\nthe production of consistent frames and seamless motion transitions. The motion\nmodule can be adapted to various DiT baseline methods to generate video with\ndifferent styles. It can also generate videos with different frame rates and\nresolutions during both training and inference phases, suitable for both images\nand videos. Moreover, we introduce slice VAE, a novel approach to condense the\ntemporal axis, facilitating the generation of long duration videos. Currently,\nEasyAnimate exhibits the proficiency to generate videos with 144 frames. We\nprovide a holistic ecosystem for video production based on DiT, encompassing\naspects such as data pre-processing, VAE training, DiT models training (both\nthe baseline model and LoRA model), and end-to-end video inference. Code is\navailable at: https://github.com/aigc-apps/EasyAnimate. We are continuously\nworking to enhance the performance of our method.",
+      "upvotes": 12
+    },
+    {
+      "title": "Zipper: A Multi-Tower Decoder Architecture for Fusing Modalities",
+      "url": "https://huggingface.co/papers/2405.18669",
+      "authors": [
+        "Vicky Zayats",
+        "Peter Chen",
+        "Melissa Merrari",
+        "Dirk Padfield"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.18669.pdf",
+      "abstract": "Integrating multiple generative foundation models, especially those trained\non different modalities, into something greater than the sum of its parts poses\nsignificant challenges. Two key hurdles are the availability of aligned data\n(concepts that contain similar meaning but is expressed differently in\ndifferent modalities), and effectively leveraging unimodal representations in\ncross-domain generative tasks, without compromising their original unimodal\ncapabilities.\n  We propose Zipper, a multi-tower decoder architecture that addresses these\nconcerns by using cross-attention to flexibly compose multimodal generative\nmodels from independently pre-trained unimodal decoders. In our experiments\nfusing speech and text modalities, we show the proposed architecture performs\nvery competitively in scenarios with limited aligned text-speech data. We also\nshowcase the flexibility of our model to selectively maintain unimodal (e.g.,\ntext-to-text generation) generation performance by freezing the corresponding\nmodal tower (e.g. text). In cross-modal tasks such as automatic speech\nrecognition (ASR) where the output modality is text, we show that freezing the\ntext backbone results in negligible performance degradation. In cross-modal\ntasks such as text-to-speech generation (TTS) where the output modality is\nspeech, we show that using a pre-trained speech backbone results in superior\nperformance to the baseline.",
+      "upvotes": 11
+    },
+    {
+      "title": "NPGA: Neural Parametric Gaussian Avatars",
+      "url": "https://huggingface.co/papers/2405.19331",
+      "authors": [
+        "Martin Rünz",
+        "Lourdes Agapito",
+        "Matthias Nießner"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.19331.pdf",
+      "abstract": "The creation of high-fidelity, digital versions of human heads is an\nimportant stepping stone in the process of further integrating virtual\ncomponents into our everyday lives. Constructing such avatars is a challenging\nresearch problem, due to a high demand for photo-realism and real-time\nrendering performance. In this work, we propose Neural Parametric Gaussian\nAvatars (NPGA), a data-driven approach to create high-fidelity, controllable\navatars from multi-view video recordings. We build our method around 3D\nGaussian Splatting for its highly efficient rendering and to inherit the\ntopological flexibility of point clouds. In contrast to previous work, we\ncondition our avatars' dynamics on the rich expression space of neural\nparametric head models (NPHM), instead of mesh-based 3DMMs. To this end, we\ndistill the backward deformation field of our underlying NPHM into forward\ndeformations which are compatible with rasterization-based rendering. All\nremaining fine-scale, expression-dependent details are learned from the\nmulti-view videos. To increase the representational capacity of our avatars, we\naugment the canonical Gaussian point cloud using per-primitive latent features\nwhich govern its dynamic behavior. To regularize this increased dynamic\nexpressivity, we propose Laplacian terms on the latent features and predicted\ndynamics. We evaluate our method on the public NeRSemble dataset, demonstrating\nthat NPGA significantly outperforms the previous state-of-the-art avatars on\nthe self-reenactment task by 2.6 PSNR. Furthermore, we demonstrate accurate\nanimation capabilities from real-world monocular videos.",
+      "upvotes": 10
+    },
+    {
+      "title": "SoundCTM: Uniting Score-based and Consistency Models for Text-to-Sound Generation",
+      "url": "https://huggingface.co/papers/2405.18503",
+      "authors": [
+        "Chieh-Hsin Lai",
+        "Zhi Zhong",
+        "Yuki Mitsufuji"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.18503.pdf",
+      "abstract": "Sound content is an indispensable element for multimedia works such as video\ngames, music, and films. Recent high-quality diffusion-based sound generation\nmodels can serve as valuable tools for the creators. However, despite producing\nhigh-quality sounds, these models often suffer from slow inference speeds. This\ndrawback burdens creators, who typically refine their sounds through trial and\nerror to align them with their artistic intentions. To address this issue, we\nintroduce Sound Consistency Trajectory Models (SoundCTM). Our model enables\nflexible transitioning between high-quality 1-step sound generation and\nsuperior sound quality through multi-step generation. This allows creators to\ninitially control sounds with 1-step samples before refining them through\nmulti-step generation. While CTM fundamentally achieves flexible 1-step and\nmulti-step generation, its impressive performance heavily depends on an\nadditional pretrained feature extractor and an adversarial loss, which are\nexpensive to train and not always available in other domains. Thus, we reframe\nCTM's training framework and introduce a novel feature distance by utilizing\nthe teacher's network for a distillation loss. Additionally, while distilling\nclassifier-free guided trajectories, we train conditional and unconditional\nstudent models simultaneously and interpolate between these models during\ninference. We also propose training-free controllable frameworks for SoundCTM,\nleveraging its flexible sampling capability. SoundCTM achieves both promising\n1-step and multi-step real-time sound generation without using any extra\noff-the-shelf networks. Furthermore, we demonstrate SoundCTM's capability of\ncontrollable sound generation in a training-free manner.",
+      "upvotes": 9
+    },
+    {
+      "title": "Value-Incentivized Preference Optimization: A Unified Approach to Online and Offline RLHF",
+      "url": "https://huggingface.co/papers/2405.19320",
+      "authors": [
+        "Jincheng Mei",
+        "Katayoon Goshvadi",
+        "Sherry Yang",
+        "Dale Schuurmans",
+        "Yuejie Chi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.19320.pdf",
+      "abstract": "Reinforcement learning from human feedback (RLHF) has demonstrated great\npromise in aligning large language models (LLMs) with human preference.\nDepending on the availability of preference data, both online and offline RLHF\nare active areas of investigation. A key bottleneck is understanding how to\nincorporate uncertainty estimation in the reward function learned from the\npreference data for RLHF, regardless of how the preference data is collected.\nWhile the principles of optimism or pessimism under uncertainty are\nwell-established in standard reinforcement learning (RL), a\npractically-implementable and theoretically-grounded form amenable to large\nlanguage models is not yet available, as standard techniques for constructing\nconfidence intervals become intractable under arbitrary policy\nparameterizations.\n  In this paper, we introduce a unified approach to online and offline RLHF --\nvalue-incentivized preference optimization (VPO) -- which regularizes the\nmaximum-likelihood estimate of the reward function with the corresponding value\nfunction, modulated by a sign to indicate whether the optimism or\npessimism is chosen. VPO also directly optimizes the policy with implicit\nreward modeling, and therefore shares a simpler RLHF pipeline similar to direct\npreference optimization. Theoretical guarantees of VPO are provided for both\nonline and offline settings, matching the rates of their standard RL\ncounterparts. Moreover, experiments on text summarization and dialog verify the\npracticality and effectiveness of VPO.",
+      "upvotes": 9
+    },
+    {
+      "title": "Atlas3D: Physically Constrained Self-Supporting Text-to-3D for Simulation and Fabrication",
+      "url": "https://huggingface.co/papers/2405.18515",
+      "authors": [
+        "Xuan Li",
+        "Ying Nian Wu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.18515.pdf",
+      "abstract": "Existing diffusion-based text-to-3D generation methods primarily focus on\nproducing visually realistic shapes and appearances, often neglecting the\nphysical constraints necessary for downstream tasks. Generated models\nfrequently fail to maintain balance when placed in physics-based simulations or\n3D printed. This balance is crucial for satisfying user design intentions in\ninteractive gaming, embodied AI, and robotics, where stable models are needed\nfor reliable interaction. Additionally, stable models ensure that 3D-printed\nobjects, such as figurines for home decoration, can stand on their own without\nrequiring additional supports. To fill this gap, we introduce Atlas3D, an\nautomatic and easy-to-implement method that enhances existing Score\nDistillation Sampling (SDS)-based text-to-3D tools. Atlas3D ensures the\ngeneration of self-supporting 3D models that adhere to physical laws of\nstability under gravity, contact, and friction. Our approach combines a novel\ndifferentiable simulation-based loss function with physically inspired\nregularization, serving as either a refinement or a post-processing module for\nexisting frameworks. We verify Atlas3D's efficacy through extensive generation\ntasks and validate the resulting 3D models in both simulated and real-world\nenvironments.",
+      "upvotes": 7
+    }
+  ]
+}

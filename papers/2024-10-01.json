@@ -1,0 +1,153 @@
+{
+  "date": "2024-10-01",
+  "papers": [
+    {
+      "title": "MM1.5: Methods, Analysis & Insights from Multimodal LLM Fine-tuning",
+      "url": "https://huggingface.co/papers/2409.20566",
+      "authors": [
+        "Forrest Huang",
+        "Bowen Zhang",
+        "Sam Dodge",
+        "Zirui Wang",
+        "Afshin Dehghan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.20566.pdf",
+      "abstract": "We present MM1.5, a new family of multimodal large language models (MLLMs)\ndesigned to enhance capabilities in text-rich image understanding, visual\nreferring and grounding, and multi-image reasoning. Building upon the MM1\narchitecture, MM1.5 adopts a data-centric approach to model training,\nsystematically exploring the impact of diverse data mixtures across the entire\nmodel training lifecycle. This includes high-quality OCR data and synthetic\ncaptions for continual pre-training, as well as an optimized visual\ninstruction-tuning data mixture for supervised fine-tuning. Our models range\nfrom 1B to 30B parameters, encompassing both dense and mixture-of-experts (MoE)\nvariants, and demonstrate that careful data curation and training strategies\ncan yield strong performance even at small scales (1B and 3B). Additionally, we\nintroduce two specialized variants: MM1.5-Video, designed for video\nunderstanding, and MM1.5-UI, tailored for mobile UI understanding. Through\nextensive empirical studies and ablations, we provide detailed insights into\nthe training processes and decisions that inform our final designs, offering\nvaluable guidance for future research in MLLM development.",
+      "upvotes": 51
+    },
+    {
+      "title": "Ruler: A Model-Agnostic Method to Control Generated Length for Large Language Models",
+      "url": "https://huggingface.co/papers/2409.18943",
+      "authors": [
+        "Yunshui Li",
+        "Ziqiang Liu",
+        "yuelin bai",
+        "Run Luo",
+        "Min Yang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.18943.pdf",
+      "abstract": "The instruction-following ability of large language models enables humans to\ninteract with AI agents in a natural way. However, when required to generate\nresponses of a specific length, large language models often struggle to meet\nusers' needs due to their inherent difficulty in accurately perceiving\nnumerical constraints. To explore the ability of large language models to\ncontrol the length of generated responses, we propose the Target Length\nGeneration Task (TLG) and design two metrics, Precise Match (PM) and Flexible\nMatch (FM) to evaluate the model's performance in adhering to specified\nresponse lengths. Furthermore, we introduce a novel, model-agnostic approach\ncalled Ruler, which employs Meta Length Tokens (MLTs) to enhance the\ninstruction-following ability of large language models under length-constrained\ninstructions. Specifically, Ruler equips LLMs with the ability to generate\nresponses of a specified length based on length constraints within the\ninstructions. Moreover, Ruler can automatically generate appropriate MLT when\nlength constraints are not explicitly provided, demonstrating excellent\nversatility and generalization. Comprehensive experiments show the\neffectiveness of Ruler across different LLMs on Target Length Generation Task,\ne.g., at All Level 27.97 average gain on PM, 29.57 average gain on FM. In\naddition, we conduct extensive ablation experiments to further substantiate the\nefficacy and generalization of Ruler. Our code and data is available at\nhttps://github.com/Geaming2002/Ruler.",
+      "upvotes": 26
+    },
+    {
+      "title": "Hyper-Connections",
+      "url": "https://huggingface.co/papers/2409.19606",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2409.19606.pdf",
+      "abstract": "We present hyper-connections, a simple yet effective method that can serve as\nan alternative to residual connections. This approach specifically addresses\ncommon drawbacks observed in residual connection variants, such as the seesaw\neffect between gradient vanishing and representation collapse. Theoretically,\nhyper-connections allow the network to adjust the strength of connections\nbetween features at different depths and dynamically rearrange layers. We\nconduct experiments focusing on the pre-training of large language models,\nincluding dense and sparse models, where hyper-connections show significant\nperformance improvements over residual connections. Additional experiments\nconducted on vision tasks also demonstrate similar improvements. We anticipate\nthat this method will be broadly applicable and beneficial across a wide range\nof AI problems.",
+      "upvotes": 19
+    },
+    {
+      "title": "DiaSynth -- Synthetic Dialogue Generation Framework",
+      "url": "https://huggingface.co/papers/2409.19020",
+      "authors": [
+        "Tushar Pranav",
+        "Eng Siong Chng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.19020.pdf",
+      "abstract": "The scarcity of domain specific dialogue datasets across various domains,\nfrom academic topics to everyday conversations, limits the development of\ndialogue systems for various applications. Existing research is often\nconstrained either by dialogue datasets that are too general or by niche domain\ndialogue datasets whose scale does not match the required scale for training\ndialogue systems. To address this gap, we introduce DiaSynth - a synthetic\ndialogue generation framework capable of generating high quality, contextually\nrich dialogues across a wide range of domains. Our approach differs from\nexisting frameworks by dynamically generating dialogues that incorporate\nsimulated personas, subtopics, and diverse conversational characteristics,\nusing a Large Language Model (LLM) with Chain of Thought (CoT) reasoning to\ncreate contextually rich, domain-specific dialogues that closely mimic natural\nhuman interactions. DiaSynth produces tailored dialogues that emulate realistic\nconversations. We perform our experiments by generating synthetic data using\ndifferent LLMs and few-shot examples from DialogSum and SAMSum. The pretrained\nlanguage models fine-tuned on the synthetic data outperform the base models by\n16.47%, while the comparison between models fine-tuned on in-domain data and\nsynthetic data shows that the synthetic data is able to capture 90.48% of the\ndistribution of the in-domain data. The quality of the data generated also\nscales with the size of LLMs. These results validate DiaSynth's potential as a\nrobust alternative to traditional data collection methods.",
+      "upvotes": 19
+    },
+    {
+      "title": "Cottention: Linear Transformers With Cosine Attention",
+      "url": "https://huggingface.co/papers/2409.18747",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2409.18747.pdf",
+      "abstract": "Attention mechanisms, particularly softmax attention, have been instrumental\nin the success of transformer-based models such as GPT. However, the quadratic\nmemory complexity of softmax attention with respect to sequence length poses\nsignificant challenges for processing longer sequences. We introduce\nCottention, a novel attention mechanism that replaces the softmax operation\nwith cosine similarity. By leveraging the properties of cosine similarity and\nrearranging the attention equation, Cottention achieves native linear memory\ncomplexity with respect to sequence length, making it inherently more\nmemory-efficient than softmax attention. We demonstrate that Cottention can be\nreformulated as a recurrent neural network (RNN) with a finite hidden state,\nallowing for constant memory usage during inference. We evaluate Cottention on\nboth the bidirectional BERT and causal GPT tasks, demonstrating comparable\nperformance to softmax attention while significantly reducing memory\nrequirements. To ensure efficient computation, we develop a custom CUDA kernel\nfor Cottention. Our results show that Cottention is a promising alternative to\nsoftmax attention, enabling the processing of longer sequences without\nsacrificing performance, due to its native linear memory complexity and ability\nto maintain a constant memory footprint during inference.",
+      "upvotes": 15
+    },
+    {
+      "title": "UniAff: A Unified Representation of Affordances for Tool Usage and Articulation with Vision-Language Models",
+      "url": "https://huggingface.co/papers/2409.20551",
+      "authors": [
+        "Xibin Yuan",
+        "Ce Hao",
+        "Xin Li",
+        "Haonan Chang",
+        "Junbo Wang",
+        "Liu Liu",
+        "Hongsheng Li",
+        "Peng Gao",
+        "Cewu Lu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.20551.pdf",
+      "abstract": "Previous studies on robotic manipulation are based on a limited understanding\nof the underlying 3D motion constraints and affordances. To address these\nchallenges, we propose a comprehensive paradigm, termed UniAff, that integrates\n3D object-centric manipulation and task understanding in a unified formulation.\nSpecifically, we constructed a dataset labeled with manipulation-related key\nattributes, comprising 900 articulated objects from 19 categories and 600 tools\nfrom 12 categories. Furthermore, we leverage MLLMs to infer object-centric\nrepresentations for manipulation tasks, including affordance recognition and\nreasoning about 3D motion constraints. Comprehensive experiments in both\nsimulation and real-world settings indicate that UniAff significantly improves\nthe generalization of robotic manipulation for tools and articulated objects.\nWe hope that UniAff will serve as a general baseline for unified robotic\nmanipulation tasks in the future. Images, videos, dataset, and code are\npublished on the project website at:https://sites.google.com/view/uni-aff/home",
+      "upvotes": 13
+    },
+    {
+      "title": "Scaling Proprioceptive-Visual Learning with Heterogeneous Pre-trained Transformers",
+      "url": "https://huggingface.co/papers/2409.20537",
+      "authors": [
+        "Jialiang Zhao",
+        "Kaiming He"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.20537.pdf",
+      "abstract": "One of the roadblocks for training generalist robotic models today is\nheterogeneity. Previous robot learning methods often collect data to train with\none specific embodiment for one task, which is expensive and prone to\noverfitting. This work studies the problem of learning policy representations\nthrough heterogeneous pre-training on robot data across different embodiments\nand tasks at scale. We propose Heterogeneous Pre-trained Transformers (HPT),\nwhich pre-train a large, shareable trunk of a policy neural network to learn a\ntask and embodiment agnostic shared representation. This general architecture\naligns the specific proprioception and vision inputs from distinct embodiments\nto a short sequence of tokens and then processes such tokens to map to control\nrobots for different tasks. Leveraging the recent large-scale multi-embodiment\nreal-world robotic datasets as well as simulation, deployed robots, and human\nvideo datasets, we investigate pre-training policies across heterogeneity. We\nconduct experiments to investigate the scaling behaviors of training\nobjectives, to the extent of 52 datasets. HPTs outperform several baselines and\nenhance the fine-tuned policy performance by over 20% on unseen tasks in\nmultiple simulator benchmarks and real-world settings. See the project website\n(https://liruiw.github.io/hpt/) for code and videos.",
+      "upvotes": 12
+    },
+    {
+      "title": "Image Copy Detection for Diffusion Models",
+      "url": "https://huggingface.co/papers/2409.19952",
+      "authors": [
+        "Yifan Sun",
+        "Zhentao Tan",
+        "Yi Yang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.19952.pdf",
+      "abstract": "Images produced by diffusion models are increasingly popular in digital\nartwork and visual marketing. However, such generated images might replicate\ncontent from existing ones and pose the challenge of content originality.\nExisting Image Copy Detection (ICD) models, though accurate in detecting\nhand-crafted replicas, overlook the challenge from diffusion models. This\nmotivates us to introduce ICDiff, the first ICD specialized for diffusion\nmodels. To this end, we construct a Diffusion-Replication (D-Rep) dataset and\ncorrespondingly propose a novel deep embedding method. D-Rep uses a\nstate-of-the-art diffusion model (Stable Diffusion V1.5) to generate 40, 000\nimage-replica pairs, which are manually annotated into 6 replication levels\nranging from 0 (no replication) to 5 (total replication). Our method,\nPDF-Embedding, transforms the replication level of each image-replica pair into\na probability density function (PDF) as the supervision signal. The intuition\nis that the probability of neighboring replication levels should be continuous\nand smooth. Experimental results show that PDF-Embedding surpasses\nprotocol-driven methods and non-PDF choices on the D-Rep test set. Moreover, by\nutilizing PDF-Embedding, we find that the replication ratios of well-known\ndiffusion models against an open-source gallery range from 10% to 20%.",
+      "upvotes": 12
+    },
+    {
+      "title": "Coffee-Gym: An Environment for Evaluating and Improving Natural Language Feedback on Erroneous Code",
+      "url": "https://huggingface.co/papers/2409.19715",
+      "authors": [
+        "Dongjin Kang",
+        "Seonghyeon Bae",
+        "Seung-won Hwang",
+        "Jinyoung Yeo"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.19715.pdf",
+      "abstract": "This paper presents Coffee-Gym, a comprehensive RL environment for training\nmodels that provide feedback on code editing. Coffee-Gym includes two major\ncomponents: (1) Coffee, a dataset containing humans' code edit traces for\ncoding questions and machine-written feedback for editing erroneous code; (2)\nCoffeeEval, a reward function that faithfully reflects the helpfulness of\nfeedback by assessing the performance of the revised code in unit tests. With\nthem, Coffee-Gym addresses the unavailability of high-quality datasets for\ntraining feedback models with RL, and provides more accurate rewards than the\nSOTA reward model (i.e., GPT-4). By applying Coffee-Gym, we elicit feedback\nmodels that outperform baselines in enhancing open-source code LLMs' code\nediting, making them comparable with closed-source LLMs. We make the dataset\nand the model checkpoint publicly available.",
+      "upvotes": 8
+    },
+    {
+      "title": "Can Models Learn Skill Composition from Examples?",
+      "url": "https://huggingface.co/papers/2409.19808",
+      "authors": [
+        "Haoyu Zhao",
+        "Simran Kaur",
+        "Anirudh Goyal",
+        "Sanjeev Arora"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.19808.pdf",
+      "abstract": "As large language models (LLMs) become increasingly advanced, their ability\nto exhibit compositional generalization -- the capacity to combine learned\nskills in novel ways not encountered during training -- has garnered\nsignificant attention. This type of generalization, particularly in scenarios\nbeyond training data, is also of great interest in the study of AI safety and\nalignment. A recent study introduced the SKILL-MIX evaluation, where models are\ntasked with composing a short paragraph demonstrating the use of a specified\nk-tuple of language skills. While small models struggled with composing even\nwith k=3, larger models like GPT-4 performed reasonably well with k=5 and\n6.\n  In this paper, we employ a setup akin to SKILL-MIX to evaluate the capacity\nof smaller models to learn compositional generalization from examples.\nUtilizing a diverse set of language skills -- including rhetorical, literary,\nreasoning, theory of mind, and common sense -- GPT-4 was used to generate text\nsamples that exhibit random subsets of k skills. Subsequent fine-tuning of 7B\nand 13B parameter models on these combined skill texts, for increasing values\nof k, revealed the following findings: (1) Training on combinations of k=2\nand 3 skills results in noticeable improvements in the ability to compose\ntexts with k=4 and 5 skills, despite models never having seen such examples\nduring training. (2) When skill categories are split into training and held-out\ngroups, models significantly improve at composing texts with held-out skills\nduring testing despite having only seen training skills during fine-tuning,\nillustrating the efficacy of the training approach even with previously unseen\nskills. This study also suggests that incorporating skill-rich (potentially\nsynthetic) text into training can substantially enhance the compositional\ncapabilities of models.",
+      "upvotes": 8
+    },
+    {
+      "title": "Visual Question Decomposition on Multimodal Large Language Models",
+      "url": "https://huggingface.co/papers/2409.19339",
+      "authors": [
+        "Jianzhe Liu",
+        "Zhen Han",
+        "Bailan He",
+        "Volker Tresp",
+        "Zhiqiang Xu",
+        "Jindong Gu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.19339.pdf",
+      "abstract": "Question decomposition has emerged as an effective strategy for prompting\nLarge Language Models (LLMs) to answer complex questions. However, while\nexisting methods primarily focus on unimodal language models, the question\ndecomposition capability of Multimodal Large Language Models (MLLMs) has yet to\nbe explored. To this end, this paper explores visual question decomposition on\nMLLMs. Specifically, we introduce a systematic evaluation framework including a\ndataset and several evaluation criteria to assess the quality of the decomposed\nsub-questions, revealing that existing MLLMs struggle to produce high-quality\nsub-questions. To address this limitation, we propose a specific finetuning\ndataset, DecoVQA+, for enhancing the model's question decomposition capability.\nAiming at enabling models to perform appropriate selective decomposition, we\npropose an efficient finetuning pipeline. The finetuning pipeline consists of\nour proposed dataset and a training objective for selective decomposition.\nFinetuned MLLMs demonstrate significant improvements in the quality of\nsub-questions and the policy of selective question decomposition. Additionally,\nthe models also achieve higher accuracy with selective decomposition on VQA\nbenchmark datasets.",
+      "upvotes": 7
+    },
+    {
+      "title": "IDEAW: Robust Neural Audio Watermarking with Invertible Dual-Embedding",
+      "url": "https://huggingface.co/papers/2409.19627",
+      "authors": [
+        "Jing Xiao",
+        "Jianzong Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.19627.pdf",
+      "abstract": "The audio watermarking technique embeds messages into audio and accurately\nextracts messages from the watermarked audio. Traditional methods develop\nalgorithms based on expert experience to embed watermarks into the time-domain\nor transform-domain of signals. With the development of deep neural networks,\ndeep learning-based neural audio watermarking has emerged. Compared to\ntraditional algorithms, neural audio watermarking achieves better robustness by\nconsidering various attacks during training. However, current neural\nwatermarking methods suffer from low capacity and unsatisfactory\nimperceptibility. Additionally, the issue of watermark locating, which is\nextremely important and even more pronounced in neural audio watermarking, has\nnot been adequately studied. In this paper, we design a dual-embedding\nwatermarking model for efficient locating. We also consider the impact of the\nattack layer on the invertible neural network in robustness training, improving\nthe model to enhance both its reasonableness and stability. Experiments show\nthat the proposed model, IDEAW, can withstand various attacks with higher\ncapacity and more efficient locating ability compared to existing methods.",
+      "upvotes": 1
+    }
+  ]
+}

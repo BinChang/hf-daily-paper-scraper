@@ -1,0 +1,114 @@
+{
+  "date": "2024-01-17",
+  "papers": [
+    {
+      "title": "InstantID: Zero-shot Identity-Preserving Generation in Seconds",
+      "url": "https://huggingface.co/papers/2401.07519",
+      "authors": [
+        "Xu Bai",
+        "Zekui Qin"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.07519.pdf",
+      "abstract": "There has been significant progress in personalized image synthesis with\nmethods such as Textual Inversion, DreamBooth, and LoRA. Yet, their real-world\napplicability is hindered by high storage demands, lengthy fine-tuning\nprocesses, and the need for multiple reference images. Conversely, existing ID\nembedding-based methods, while requiring only a single forward inference, face\nchallenges: they either necessitate extensive fine-tuning across numerous model\nparameters, lack compatibility with community pre-trained models, or fail to\nmaintain high face fidelity. Addressing these limitations, we introduce\nInstantID, a powerful diffusion model-based solution. Our plug-and-play module\nadeptly handles image personalization in various styles using just a single\nfacial image, while ensuring high fidelity. To achieve this, we design a novel\nIdentityNet by imposing strong semantic and weak spatial conditions,\nintegrating facial and landmark images with textual prompts to steer the image\ngeneration. InstantID demonstrates exceptional performance and efficiency,\nproving highly beneficial in real-world applications where identity\npreservation is paramount. Moreover, our work seamlessly integrates with\npopular pre-trained text-to-image diffusion models like SD1.5 and SDXL, serving\nas an adaptable plugin. Our codes and pre-trained checkpoints will be available\nat https://github.com/InstantID/InstantID.",
+      "upvotes": 52
+    },
+    {
+      "title": "Scalable Pre-training of Large Autoregressive Image Models",
+      "url": "https://huggingface.co/papers/2401.08541",
+      "authors": [
+        "Shuangfei Zhai",
+        "Armand Joulin"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.08541.pdf",
+      "abstract": "This paper introduces AIM, a collection of vision models pre-trained with an\nautoregressive objective. These models are inspired by their textual\ncounterparts, i.e., Large Language Models (LLMs), and exhibit similar scaling\nproperties. Specifically, we highlight two key findings: (1) the performance of\nthe visual features scale with both the model capacity and the quantity of\ndata, (2) the value of the objective function correlates with the performance\nof the model on downstream tasks. We illustrate the practical implication of\nthese findings by pre-training a 7 billion parameter AIM on 2 billion images,\nthat achieves 84.0% on ImageNet-1k with a frozen trunk. Interestingly, even at\nthis scale, we observe no sign of saturation in performance, suggesting that\nAIM potentially represents a new frontier for training large-scale vision\nmodels. The pre-training of AIM is similar to the pre-training of LLMs, and\ndoes not require any image-specific strategy to stabilize the training at\nscale.",
+      "upvotes": 36
+    },
+    {
+      "title": "Contrastive Preference Optimization: Pushing the Boundaries of LLM Performance in Machine Translation",
+      "url": "https://huggingface.co/papers/2401.08417",
+      "authors": [
+        "Weiting Tan",
+        "Lingfeng Shen",
+        "Benjamin Van Durme"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.08417.pdf",
+      "abstract": "Moderate-sized large language models (LLMs) -- those with 7B or 13B\nparameters -- exhibit promising machine translation (MT) performance. However,\neven the top-performing 13B LLM-based translation models, like ALMA, does not\nmatch the performance of state-of-the-art conventional encoder-decoder\ntranslation models or larger-scale LLMs such as GPT-4. In this study, we bridge\nthis performance gap. We first assess the shortcomings of supervised\nfine-tuning for LLMs in the MT task, emphasizing the quality issues present in\nthe reference data, despite being human-generated. Then, in contrast to SFT\nwhich mimics reference translations, we introduce Contrastive Preference\nOptimization (CPO), a novel approach that trains models to avoid generating\nadequate but not perfect translations. Applying CPO to ALMA models with only\n22K parallel sentences and 12M parameters yields significant improvements. The\nresulting model, called ALMA-R, can match or exceed the performance of the WMT\ncompetition winners and GPT-4 on WMT'21, WMT'22 and WMT'23 test datasets.",
+      "upvotes": 33
+    },
+    {
+      "title": "E^2-LLM: Efficient and Extreme Length Extension of Large Language Models",
+      "url": "https://huggingface.co/papers/2401.06951",
+      "authors": [
+        "Yuanxing Zhang",
+        "Yu Zhang",
+        "Jiakai Wang",
+        "Haoran Que",
+        "Wenbo Su",
+        "Tiezheng Ge",
+        "Bo Zheng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.06951.pdf",
+      "abstract": "Typically, training LLMs with long context sizes is computationally\nexpensive, requiring extensive training hours and GPU resources. Existing\nlong-context extension methods usually need additional training procedures to\nsupport corresponding long-context windows, where the long-context training\ndata (e.g., 32k) is needed, and high GPU training costs are assumed. To address\nthe aforementioned issues, we propose an Efficient and Extreme length extension\nmethod for Large Language Models, called E 2 -LLM, with only one training\nprocedure and dramatically reduced computation cost, which also removes the\nneed to collect long-context data. Concretely, first, the training data of our\nE 2 -LLM only requires a short length (e.g., 4k), which reduces the tuning cost\ngreatly. Second, the training procedure on the short training context window is\nperformed only once time, and we can support different evaluation context\nwindows at inference. Third, in E 2 - LLM, based on RoPE position embeddings,\nwe introduce two different augmentation methods on the scale and position index\nparameters for different samples in training. It aims to make the model more\nrobust to the different relative differences when directly interpolating the\narbitrary context length at inference. Comprehensive experimental results on\nmultiple benchmark datasets demonstrate the effectiveness of our E 2 -LLM on\nchallenging long-context tasks.",
+      "upvotes": 25
+    },
+    {
+      "title": "Tuning Language Models by Proxy",
+      "url": "https://huggingface.co/papers/2401.08565",
+      "authors": [
+        "Yulia Tsvetkov",
+        "Noah A. Smith"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.08565.pdf",
+      "abstract": "Despite the general capabilities of large pretrained language models, they\nconsistently benefit from further adaptation to better achieve desired\nbehaviors. However, tuning these models has become increasingly\nresource-intensive, or impossible when model weights are private. We introduce\nproxy-tuning, a lightweight decoding-time algorithm that operates on top of\nblack-box LMs to achieve the result of directly tuning the model, but by\naccessing only its prediction over the output vocabulary. Our method instead\ntunes a smaller LM, then applies the difference between the predictions of the\nsmall tuned and untuned LMs to shift the original predictions of the base model\nin the direction of tuning, while retaining the benefits of larger scale\npretraining. In experiments, when we apply proxy-tuning to Llama2-70B using\nproxies of only 7B size, we can close 88% of the gap between Llama2-70B and its\ntruly-tuned chat version, when evaluated across knowledge, reasoning, and\nsafety benchmarks. Interestingly, when tested on TruthfulQA, proxy-tuned models\nare actually more truthful than directly tuned models, possibly because\ndecoding-time guidance better retains the model's factual knowledge. We then\ndemonstrate the generality of proxy-tuning by applying it for domain adaptation\non code, and task-specific finetuning on question-answering and math problems.\nOur work demonstrates the promise of using small tuned LMs to efficiently\ncustomize large, potentially proprietary LMs through decoding-time guidance.",
+      "upvotes": 21
+    },
+    {
+      "title": "Extending LLMs' Context Window with 100 Samples",
+      "url": "https://huggingface.co/papers/2401.07004",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2401.07004.pdf",
+      "abstract": "Large Language Models (LLMs) are known to have limited extrapolation ability\nbeyond their pre-trained context window, constraining their application in\ndownstream tasks with lengthy inputs. Recent studies have sought to extend\nLLMs' context window by modifying rotary position embedding (RoPE), a popular\nposition encoding method adopted by well-known LLMs such as LLaMA, PaLM, and\nGPT-NeoX. However, prior works like Position Interpolation (PI) and YaRN are\nresource-intensive and lack comparative experiments to assess their\napplicability. In this work, we identify the inherent need for LLMs' attention\nentropy (i.e. the information entropy of attention scores) to maintain\nstability and introduce a novel extension to RoPE which combines adjusting\nRoPE's base frequency and scaling the attention logits to help LLMs efficiently\nadapt to a larger context window. We validate the superiority of our method in\nboth fine-tuning performance and robustness across different context window\nsizes on various context-demanding tasks. Notably, our method extends the\ncontext window of LLaMA-2-7B-Chat to 16,384 with only 100 samples and 6\ntraining steps, showcasing extraordinary efficiency. Finally, we also explore\nhow data compositions and training curricula affect context window extension\nfor specific downstream tasks, suggesting fine-tuning LLMs with lengthy\nconversations as a good starting point. We release our code and SFT data at\nhttps://github.com/GAIR-NLP/Entropy-ABF.",
+      "upvotes": 15
+    },
+    {
+      "title": "Towards A Better Metric for Text-to-Video Generation",
+      "url": "https://huggingface.co/papers/2401.07781",
+      "authors": [
+        "Guian Fang",
+        "Weisi Lin",
+        "Wynne Hsu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.07781.pdf",
+      "abstract": "Generative models have demonstrated remarkable capability in synthesizing\nhigh-quality text, images, and videos. For video generation, contemporary\ntext-to-video models exhibit impressive capabilities, crafting visually\nstunning videos. Nonetheless, evaluating such videos poses significant\nchallenges. Current research predominantly employs automated metrics such as\nFVD, IS, and CLIP Score. However, these metrics provide an incomplete analysis,\nparticularly in the temporal assessment of video content, thus rendering them\nunreliable indicators of true video quality. Furthermore, while user studies\nhave the potential to reflect human perception accurately, they are hampered by\ntheir time-intensive and laborious nature, with outcomes that are often tainted\nby subjective bias. In this paper, we investigate the limitations inherent in\nexisting metrics and introduce a novel evaluation pipeline, the Text-to-Video\nScore (T2VScore). This metric integrates two pivotal criteria: (1) Text-Video\nAlignment, which scrutinizes the fidelity of the video in representing the\ngiven text description, and (2) Video Quality, which evaluates the video's\noverall production caliber with a mixture of experts. Moreover, to evaluate the\nproposed metrics and facilitate future improvements on them, we present the\nTVGE dataset, collecting human judgements of 2,543 text-to-video generated\nvideos on the two criteria. Experiments on the TVGE dataset demonstrate the\nsuperiority of the proposed T2VScore on offering a better metric for\ntext-to-video generation.",
+      "upvotes": 14
+    },
+    {
+      "title": "Quantum Denoising Diffusion Models",
+      "url": "https://huggingface.co/papers/2401.07049",
+      "authors": [
+        "Jonas Stein",
+        "Sebastian Zielinski",
+        "Björn Ommer",
+        "Claudia Linnhoff-Popien"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.07049.pdf",
+      "abstract": "In recent years, machine learning models like DALL-E, Craiyon, and Stable\nDiffusion have gained significant attention for their ability to generate\nhigh-resolution images from concise descriptions. Concurrently, quantum\ncomputing is showing promising advances, especially with quantum machine\nlearning which capitalizes on quantum mechanics to meet the increasing\ncomputational requirements of traditional machine learning algorithms. This\npaper explores the integration of quantum machine learning and variational\nquantum circuits to augment the efficacy of diffusion-based image generation\nmodels. Specifically, we address two challenges of classical diffusion models:\ntheir low sampling speed and the extensive parameter requirements. We introduce\ntwo quantum diffusion models and benchmark their capabilities against their\nclassical counterparts using MNIST digits, Fashion MNIST, and CIFAR-10. Our\nmodels surpass the classical models with similar parameter counts in terms of\nperformance metrics FID, SSIM, and PSNR. Moreover, we introduce a consistency\nmodel unitary single sampling architecture that combines the diffusion\nprocedure into a single step, enabling a fast one-step image generation.",
+      "upvotes": 12
+    },
+    {
+      "title": "HexaGen3D: StableDiffusion is just one step away from Fast and Diverse Text-to-3D Generation",
+      "url": "https://huggingface.co/papers/2401.07727",
+      "authors": [
+        "Antoine Mercier",
+        "Mahesh Reddy",
+        "Rajeev Yasarla",
+        "Hong Cai",
+        "Fatih Porikli",
+        "Guillaume Berger"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.07727.pdf",
+      "abstract": "Despite the latest remarkable advances in generative modeling, efficient\ngeneration of high-quality 3D assets from textual prompts remains a difficult\ntask. A key challenge lies in data scarcity: the most extensive 3D datasets\nencompass merely millions of assets, while their 2D counterparts contain\nbillions of text-image pairs. To address this, we propose a novel approach\nwhich harnesses the power of large, pretrained 2D diffusion models. More\nspecifically, our approach, HexaGen3D, fine-tunes a pretrained text-to-image\nmodel to jointly predict 6 orthographic projections and the corresponding\nlatent triplane. We then decode these latents to generate a textured mesh.\nHexaGen3D does not require per-sample optimization, and can infer high-quality\nand diverse objects from textual prompts in 7 seconds, offering significantly\nbetter quality-to-latency trade-offs when comparing to existing approaches.\nFurthermore, HexaGen3D demonstrates strong generalization to new objects or\ncompositions.",
+      "upvotes": 9
+    }
+  ]
+}

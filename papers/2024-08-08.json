@@ -1,0 +1,147 @@
+{
+  "date": "2024-08-08",
+  "papers": [
+    {
+      "title": "EXAONE 3.0 7.8B Instruction Tuned Language Model",
+      "url": "https://huggingface.co/papers/2408.03541",
+      "authors": [
+        "LG AI Research",
+        "Soyoung An",
+        "Kyunghoon Bae",
+        "Yemuk Choi",
+        "Yeonjung Hong",
+        "Gerrard Jeongwon Jo",
+        "Jiyeon Jung",
+        "Yountae Jung",
+        "Soyeon Kim"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.03541.pdf",
+      "abstract": "We introduce EXAONE 3.0 instruction-tuned language model, the first open\nmodel in the family of Large Language Models (LLMs) developed by LG AI\nResearch. Among different model sizes, we publicly release the 7.8B\ninstruction-tuned model to promote open research and innovations. Through\nextensive evaluations across a wide range of public and in-house benchmarks,\nEXAONE 3.0 demonstrates highly competitive real-world performance with\ninstruction-following capability against other state-of-the-art open models of\nsimilar size. Our comparative analysis shows that EXAONE 3.0 excels\nparticularly in Korean, while achieving compelling performance across general\ntasks and complex reasoning. With its strong real-world effectiveness and\nbilingual proficiency, we hope that EXAONE keeps contributing to advancements\nin Expert AI. Our EXAONE 3.0 instruction-tuned model is available at\nhttps://huggingface.co/LGAI-EXAONE/EXAONE-3.0-7.8B-Instruct",
+      "upvotes": 34
+    },
+    {
+      "title": "Optimus-1: Hybrid Multimodal Memory Empowered Agents Excel in Long-Horizon Tasks",
+      "url": "https://huggingface.co/papers/2408.03615",
+      "authors": [
+        "Dongmei Jiang",
+        "Liqiang Nie"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.03615.pdf",
+      "abstract": "Building a general-purpose agent is a long-standing vision in the field of\nartificial intelligence. Existing agents have made remarkable progress in many\ndomains, yet they still struggle to complete long-horizon tasks in an open\nworld. We attribute this to the lack of necessary world knowledge and\nmultimodal experience that can guide agents through a variety of long-horizon\ntasks. In this paper, we propose a Hybrid Multimodal Memory module to address\nthe above challenges. It 1) transforms knowledge into Hierarchical Directed\nKnowledge Graph that allows agents to explicitly represent and learn world\nknowledge, and 2) summarises historical information into Abstracted Multimodal\nExperience Pool that provide agents with rich references for in-context\nlearning. On top of the Hybrid Multimodal Memory module, a multimodal agent,\nOptimus-1, is constructed with dedicated Knowledge-guided Planner and\nExperience-Driven Reflector, contributing to a better planning and reflection\nin the face of long-horizon tasks in Minecraft. Extensive experimental results\nshow that Optimus-1 significantly outperforms all existing agents on\nchallenging long-horizon task benchmarks, and exhibits near human-level\nperformance on many tasks. In addition, we introduce various Multimodal Large\nLanguage Models (MLLMs) as the backbone of Optimus-1. Experimental results show\nthat Optimus-1 exhibits strong generalization with the help of the Hybrid\nMultimodal Memory module, outperforming the GPT-4V baseline on many tasks.",
+      "upvotes": 30
+    },
+    {
+      "title": "Achieving Human Level Competitive Robot Table Tennis",
+      "url": "https://huggingface.co/papers/2408.03906",
+      "authors": [
+        "David B. D'Ambrosio",
+        "Laura Graesser",
+        "Atil Iscen",
+        "Heni Ben Amor",
+        "Barney J. Reed",
+        "Krista Reymann",
+        "Leila Takayama",
+        "Yuval Tassa",
+        "Krzysztof Choromanski",
+        "Deepali Jain",
+        "Natasha Jaques",
+        "Satoshi Kataoka",
+        "Nevena Lazic",
+        "Reza Mahjourian",
+        "Sherry Moore",
+        "Kenneth Oslund",
+        "Anish Shankar"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.03906.pdf",
+      "abstract": "Achieving human-level speed and performance on real world tasks is a north\nstar for the robotics research community. This work takes a step towards that\ngoal and presents the first learned robot agent that reaches amateur\nhuman-level performance in competitive table tennis. Table tennis is a\nphysically demanding sport which requires human players to undergo years of\ntraining to achieve an advanced level of proficiency. In this paper, we\ncontribute (1) a hierarchical and modular policy architecture consisting of (i)\nlow level controllers with their detailed skill descriptors which model the\nagent's capabilities and help to bridge the sim-to-real gap and (ii) a high\nlevel controller that chooses the low level skills, (2) techniques for enabling\nzero-shot sim-to-real including an iterative approach to defining the task\ndistribution that is grounded in the real-world and defines an automatic\ncurriculum, and (3) real time adaptation to unseen opponents. Policy\nperformance was assessed through 29 robot vs. human matches of which the robot\nwon 45% (13/29). All humans were unseen players and their skill level varied\nfrom beginner to tournament level. Whilst the robot lost all matches vs. the\nmost advanced players it won 100% matches vs. beginners and 55% matches vs.\nintermediate players, demonstrating solidly amateur human-level performance.\nVideos of the matches can be viewed at\nhttps://sites.google.com/view/competitive-robot-table-tennis",
+      "upvotes": 26
+    },
+    {
+      "title": "WalledEval: A Comprehensive Safety Evaluation Toolkit for Large Language Models",
+      "url": "https://huggingface.co/papers/2408.03837",
+      "authors": [
+        "Hugo Maximus Lim",
+        "Yu Xin Teoh",
+        "Jia Hng Koh",
+        "Dar Win Liew"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.03837.pdf",
+      "abstract": "WalledEval is a comprehensive AI safety testing toolkit designed to evaluate\nlarge language models (LLMs). It accommodates a diverse range of models,\nincluding both open-weight and API-based ones, and features over 35 safety\nbenchmarks covering areas such as multilingual safety, exaggerated safety, and\nprompt injections. The framework supports both LLM and judge benchmarking, and\nincorporates custom mutators to test safety against various text-style\nmutations such as future tense and paraphrasing. Additionally, WalledEval\nintroduces WalledGuard, a new, small and performant content moderation tool,\nand SGXSTest, a benchmark for assessing exaggerated safety in cultural\ncontexts. We make WalledEval publicly available at\nhttps://github.com/walledai/walledevalA.",
+      "upvotes": 17
+    },
+    {
+      "title": "CodexGraph: Bridging Large Language Models and Code Repositories via Code Graph Databases",
+      "url": "https://huggingface.co/papers/2408.03910",
+      "authors": [
+        "Bo Lan",
+        "Yang Liu",
+        "Zhicheng Zhang",
+        "Fei Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.03910.pdf",
+      "abstract": "Large Language Models (LLMs) excel in stand-alone code tasks like HumanEval\nand MBPP, but struggle with handling entire code repositories. This challenge\nhas prompted research on enhancing LLM-codebase interaction at a repository\nscale. Current solutions rely on similarity-based retrieval or manual tools and\nAPIs, each with notable drawbacks. Similarity-based retrieval often has low\nrecall in complex tasks, while manual tools and APIs are typically\ntask-specific and require expert knowledge, reducing their generalizability\nacross diverse code tasks and real-world applications. To mitigate these\nlimitations, we introduce \\framework, a system that integrates LLM agents with\ngraph database interfaces extracted from code repositories. By leveraging the\nstructural properties of graph databases and the flexibility of the graph query\nlanguage, \\framework enables the LLM agent to construct and execute queries,\nallowing for precise, code structure-aware context retrieval and code\nnavigation. We assess \\framework using three benchmarks: CrossCodeEval,\nSWE-bench, and EvoCodeBench. Additionally, we develop five real-world coding\napplications. With a unified graph database schema, \\framework demonstrates\ncompetitive performance and potential in both academic and real-world\nenvironments, showcasing its versatility and efficacy in software engineering.\nOur application demo:\nhttps://github.com/modelscope/modelscope-agent/tree/master/apps/codexgraph_agent.",
+      "upvotes": 15
+    },
+    {
+      "title": "Openstory++: A Large-scale Dataset and Benchmark for Instance-aware Open-domain Visual Storytelling",
+      "url": "https://huggingface.co/papers/2408.03695",
+      "authors": [
+        "Jinjin Cao",
+        "Zhiyang Chen",
+        "Yiyang Zhang",
+        "Qi Liu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.03695.pdf",
+      "abstract": "Recent image generation models excel at creating high-quality images from\nbrief captions. However, they fail to maintain consistency of multiple\ninstances across images when encountering lengthy contexts. This inconsistency\nis largely due to in existing training datasets the absence of granular\ninstance feature labeling in existing training datasets. To tackle these\nissues, we introduce Openstory++, a large-scale dataset combining additional\ninstance-level annotations with both images and text. Furthermore, we develop a\ntraining methodology that emphasizes entity-centric image-text generation,\nensuring that the models learn to effectively interweave visual and textual\ninformation. Specifically, Openstory++ streamlines the process of keyframe\nextraction from open-domain videos, employing vision-language models to\ngenerate captions that are then polished by a large language model for\nnarrative continuity. It surpasses previous datasets by offering a more\nexpansive open-domain resource, which incorporates automated captioning,\nhigh-resolution imagery tailored for instance count, and extensive frame\nsequences for temporal consistency. Additionally, we present Cohere-Bench, a\npioneering benchmark framework for evaluating the image generation tasks when\nlong multimodal context is provided, including the ability to keep the\nbackground, style, instances in the given context coherent. Compared to\nexisting benchmarks, our work fills critical gaps in multi-modal generation,\npropelling the development of models that can adeptly generate and interpret\ncomplex narratives in open-domain environments. Experiments conducted within\nCohere-Bench confirm the superiority of Openstory++ in nurturing high-quality\nvisual storytelling models, enhancing their ability to address open-domain\ngeneration tasks. More details can be found at https://openstorypp.github.io/",
+      "upvotes": 12
+    },
+    {
+      "title": "Speech-MASSIVE: A Multilingual Speech Dataset for SLU and Beyond",
+      "url": "https://huggingface.co/papers/2408.03900",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2408.03900.pdf",
+      "abstract": "We present Speech-MASSIVE, a multilingual Spoken Language Understanding (SLU)\ndataset comprising the speech counterpart for a portion of the MASSIVE textual\ncorpus. Speech-MASSIVE covers 12 languages from different families and inherits\nfrom MASSIVE the annotations for the intent prediction and slot-filling tasks.\nOur extension is prompted by the scarcity of massively multilingual SLU\ndatasets and the growing need for versatile speech datasets to assess\nfoundation models (LLMs, speech encoders) across languages and tasks. We\nprovide a multimodal, multitask, multilingual dataset and report SLU baselines\nusing both cascaded and end-to-end architectures in various training scenarios\n(zero-shot, few-shot, and full fine-tune). Furthermore, we demonstrate the\nsuitability of Speech-MASSIVE for benchmarking other tasks such as speech\ntranscription, language identification, and speech translation. The dataset,\nmodels, and code are publicly available at:\nhttps://github.com/hlt-mt/Speech-MASSIVE",
+      "upvotes": 9
+    },
+    {
+      "title": "Compact 3D Gaussian Splatting for Static and Dynamic Radiance Fields",
+      "url": "https://huggingface.co/papers/2408.03822",
+      "authors": [
+        "Daniel Rho",
+        "Jong Hwan Ko"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.03822.pdf",
+      "abstract": "3D Gaussian splatting (3DGS) has recently emerged as an alternative\nrepresentation that leverages a 3D Gaussian-based representation and introduces\nan approximated volumetric rendering, achieving very fast rendering speed and\npromising image quality. Furthermore, subsequent studies have successfully\nextended 3DGS to dynamic 3D scenes, demonstrating its wide range of\napplications. However, a significant drawback arises as 3DGS and its following\nmethods entail a substantial number of Gaussians to maintain the high fidelity\nof the rendered images, which requires a large amount of memory and storage. To\naddress this critical issue, we place a specific emphasis on two key\nobjectives: reducing the number of Gaussian points without sacrificing\nperformance and compressing the Gaussian attributes, such as view-dependent\ncolor and covariance. To this end, we propose a learnable mask strategy that\nsignificantly reduces the number of Gaussians while preserving high\nperformance. In addition, we propose a compact but effective representation of\nview-dependent color by employing a grid-based neural field rather than relying\non spherical harmonics. Finally, we learn codebooks to compactly represent the\ngeometric and temporal attributes by residual vector quantization. With model\ncompression techniques such as quantization and entropy coding, we consistently\nshow over 25x reduced storage and enhanced rendering speed compared to 3DGS for\nstatic scenes, while maintaining the quality of the scene representation. For\ndynamic scenes, our approach achieves more than 12x storage efficiency and\nretains a high-quality reconstruction compared to the existing state-of-the-art\nmethods. Our work provides a comprehensive framework for 3D scene\nrepresentation, achieving high performance, fast training, compactness, and\nreal-time rendering. Our project page is available at\nhttps://maincold2.github.io/c3dgs/.",
+      "upvotes": 9
+    },
+    {
+      "title": "RayGauss: Volumetric Gaussian-Based Ray Casting for Photorealistic Novel View Synthesis",
+      "url": "https://huggingface.co/papers/2408.03356",
+      "authors": [
+        "Jean-Emmanuel Deschaud",
+        "Alexis Paljic"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.03356.pdf",
+      "abstract": "Differentiable volumetric rendering-based methods made significant progress\nin novel view synthesis. On one hand, innovative methods have replaced the\nNeural Radiance Fields (NeRF) network with locally parameterized structures,\nenabling high-quality renderings in a reasonable time. On the other hand,\napproaches have used differentiable splatting instead of NeRF's ray casting to\noptimize radiance fields rapidly using Gaussian kernels, allowing for fine\nadaptation to the scene. However, differentiable ray casting of irregularly\nspaced kernels has been scarcely explored, while splatting, despite enabling\nfast rendering times, is susceptible to clearly visible artifacts.\n  Our work closes this gap by providing a physically consistent formulation of\nthe emitted radiance c and density {\\sigma}, decomposed with Gaussian functions\nassociated with Spherical Gaussians/Harmonics for all-frequency colorimetric\nrepresentation. We also introduce a method enabling differentiable ray casting\nof irregularly distributed Gaussians using an algorithm that integrates\nradiance fields slab by slab and leverages a BVH structure. This allows our\napproach to finely adapt to the scene while avoiding splatting artifacts. As a\nresult, we achieve superior rendering quality compared to the state-of-the-art\nwhile maintaining reasonable training times and achieving inference speeds of\n25 FPS on the Blender dataset. Project page with videos and code:\nhttps://raygauss.github.io/",
+      "upvotes": 8
+    },
+    {
+      "title": "Fast Sprite Decomposition from Animated Graphics",
+      "url": "https://huggingface.co/papers/2408.03923",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2408.03923.pdf",
+      "abstract": "This paper presents an approach to decomposing animated graphics into\nsprites, a set of basic elements or layers. Our approach builds on the\noptimization of sprite parameters to fit the raster video. For efficiency, we\nassume static textures for sprites to reduce the search space while preventing\nartifacts using a texture prior model. To further speed up the optimization, we\nintroduce the initialization of the sprite parameters utilizing a pre-trained\nvideo object segmentation model and user input of single frame annotations. For\nour study, we construct the Crello Animation dataset from an online design\nservice and define quantitative metrics to measure the quality of the extracted\nsprites. Experiments show that our method significantly outperforms baselines\nfor similar decomposition tasks in terms of the quality/efficiency tradeoff.",
+      "upvotes": 7
+    },
+    {
+      "title": "Facing the Music: Tackling Singing Voice Separation in Cinematic Audio Source Separation",
+      "url": "https://huggingface.co/papers/2408.03588",
+      "authors": [
+        "Iroro Orife"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.03588.pdf",
+      "abstract": "Cinematic audio source separation (CASS) is a fairly new subtask of audio\nsource separation. A typical setup of CASS is a three-stem problem, with the\naim of separating the mixture into the dialogue stem (DX), music stem (MX), and\neffects stem (FX). In practice, however, several edge cases exist as some sound\nsources do not fit neatly in either of these three stems, necessitating the use\nof additional auxiliary stems in production. One very common edge case is the\nsinging voice in film audio, which may belong in either the DX or MX, depending\nheavily on the cinematic context. In this work, we demonstrate a very\nstraightforward extension of the dedicated-decoder Bandit and query-based\nsingle-decoder Banquet models to a four-stem problem, treating non-musical\ndialogue, instrumental music, singing voice, and effects as separate stems.\nInterestingly, the query-based Banquet model outperformed the dedicated-decoder\nBandit model. We hypothesized that this is due to a better feature alignment at\nthe bottleneck as enforced by the band-agnostic FiLM layer. Dataset and model\nimplementation will be made available at\nhttps://github.com/kwatcharasupat/source-separation-landing.",
+      "upvotes": 6
+    }
+  ]
+}

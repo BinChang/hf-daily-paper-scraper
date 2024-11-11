@@ -1,0 +1,88 @@
+{
+  "date": "2024-01-01",
+  "papers": [
+    {
+      "title": "LARP: Language-Agent Role Play for Open-World Games",
+      "url": "https://huggingface.co/papers/2312.17653",
+      "authors": [
+        "Ming Yan",
+        "Ruihao Li",
+        "Hao Zhang",
+        "Ji Yan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2312.17653.pdf",
+      "abstract": "Language agents have shown impressive problem-solving skills within defined\nsettings and brief timelines. Yet, with the ever-evolving complexities of\nopen-world simulations, there's a pressing need for agents that can flexibly\nadapt to complex environments and consistently maintain a long-term memory to\nensure coherent actions. To bridge the gap between language agents and\nopen-world games, we introduce Language Agent for Role-Playing (LARP), which\nincludes a cognitive architecture that encompasses memory processing and a\ndecision-making assistant, an environment interaction module with a\nfeedback-driven learnable action space, and a postprocessing method that\npromotes the alignment of various personalities. The LARP framework refines\ninteractions between users and agents, predefined with unique backgrounds and\npersonalities, ultimately enhancing the gaming experience in open-world\ncontexts. Furthermore, it highlights the diverse uses of language models in a\nrange of areas such as entertainment, education, and various simulation\nscenarios. The project page is released at https://miao-ai-lab.github.io/LARP/.",
+      "upvotes": 30
+    },
+    {
+      "title": "FlowVid: Taming Imperfect Optical Flows for Consistent Video-to-Video Synthesis",
+      "url": "https://huggingface.co/papers/2312.17681",
+      "authors": [
+        "Bichen Wu",
+        "Jialiang Wang",
+        "Licheng Yu",
+        "Kunpeng Li",
+        "Yinan Zhao",
+        "Ishan Misra",
+        "Jia-Bin Huang",
+        "Peizhao Zhang",
+        "Peter Vajda",
+        "Diana Marculescu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2312.17681.pdf",
+      "abstract": "Diffusion models have transformed the image-to-image (I2I) synthesis and are\nnow permeating into videos. However, the advancement of video-to-video (V2V)\nsynthesis has been hampered by the challenge of maintaining temporal\nconsistency across video frames. This paper proposes a consistent V2V synthesis\nframework by jointly leveraging spatial conditions and temporal optical flow\nclues within the source video. Contrary to prior methods that strictly adhere\nto optical flow, our approach harnesses its benefits while handling the\nimperfection in flow estimation. We encode the optical flow via warping from\nthe first frame and serve it as a supplementary reference in the diffusion\nmodel. This enables our model for video synthesis by editing the first frame\nwith any prevalent I2I models and then propagating edits to successive frames.\nOur V2V model, FlowVid, demonstrates remarkable properties: (1) Flexibility:\nFlowVid works seamlessly with existing I2I models, facilitating various\nmodifications, including stylization, object swaps, and local edits. (2)\nEfficiency: Generation of a 4-second video with 30 FPS and 512x512 resolution\ntakes only 1.5 minutes, which is 3.1x, 7.2x, and 10.5x faster than CoDeF,\nRerender, and TokenFlow, respectively. (3) High-quality: In user studies, our\nFlowVid is preferred 45.7% of the time, outperforming CoDeF (3.5%), Rerender\n(10.2%), and TokenFlow (40.4%).",
+      "upvotes": 18
+    },
+    {
+      "title": "Learning Vision from Models Rivals Learning Vision from Data",
+      "url": "https://huggingface.co/papers/2312.17742",
+      "authors": [
+        "Lijie Fan",
+        "Kaifeng Chen",
+        "Dina Katabi",
+        "Dilip Krishnan",
+        "Phillip Isola"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2312.17742.pdf",
+      "abstract": "We introduce SynCLR, a novel approach for learning visual representations\nexclusively from synthetic images and synthetic captions, without any real\ndata. We synthesize a large dataset of image captions using LLMs, then use an\noff-the-shelf text-to-image model to generate multiple images corresponding to\neach synthetic caption. We perform visual representation learning on these\nsynthetic images via contrastive learning, treating images sharing the same\ncaption as positive pairs. The resulting representations transfer well to many\ndownstream tasks, competing favorably with other general-purpose visual\nrepresentation learners such as CLIP and DINO v2 in image classification tasks.\nFurthermore, in dense prediction tasks such as semantic segmentation, SynCLR\noutperforms previous self-supervised methods by a significant margin, e.g.,\nimproving over MAE and iBOT by 6.2 and 4.3 mIoU on ADE20k for ViT-B/16.",
+      "upvotes": 15
+    },
+    {
+      "title": "PanGu-$π$: Enhancing Language Model Architectures via Nonlinearity Compensation",
+      "url": "https://huggingface.co/papers/2312.17276",
+      "authors": [
+        "Yunhe Wang",
+        "Hanting Chen",
+        "Yehui Tang",
+        "Tianyu Guo",
+        "Ying Nie",
+        "Xutao Wang",
+        "Hailin Hu",
+        "Zheyuan Bai",
+        "Yun Wang",
+        "Zhicheng Liu",
+        "Jianyuan Guo",
+        "Sinan Zeng",
+        "Yinchen Zhang",
+        "Qinghua Xu",
+        "Qun Liu",
+        "Jun Yao",
+        "Chao Xu",
+        "Dacheng Tao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2312.17276.pdf",
+      "abstract": "The recent trend of large language models (LLMs) is to increase the scale of\nboth model size (\\aka the number of parameters) and dataset to achieve better\ngenerative ability, which is definitely proved by a lot of work such as the\nfamous GPT and Llama. However, large models often involve massive computational\ncosts, and practical applications cannot afford such high prices. However, the\nmethod of constructing a strong model architecture for LLMs is rarely\ndiscussed. We first analyze the state-of-the-art language model architectures\nand observe the feature collapse problem. Based on the theoretical analysis, we\npropose that the nonlinearity is also very important for language models, which\nis usually studied in convolutional neural networks for vision tasks. The\nseries informed activation function is then introduced with tiny calculations\nthat can be ignored, and an augmented shortcut is further used to enhance the\nmodel nonlinearity. We then demonstrate that the proposed approach is\nsignificantly effective for enhancing the model nonlinearity through carefully\ndesigned ablations; thus, we present a new efficient model architecture for\nestablishing modern, namely, PanGu-pi. Experiments are then conducted using\nthe same dataset and training strategy to compare PanGu-pi with\nstate-of-the-art LLMs. The results show that PanGu-pi-7B can achieve a\ncomparable performance to that of benchmarks with about 10\\% inference\nspeed-up, and PanGu-pi-1B can achieve state-of-the-art performance in terms\nof accuracy and efficiency. In addition, we have deployed PanGu-pi-7B in the\nhigh-value domains of finance and law, developing an LLM named YunShan for\npractical application. The results show that YunShan can surpass other models\nwith similar scales on benchmarks.",
+      "upvotes": 15
+    },
+    {
+      "title": "Gemini in Reasoning: Unveiling Commonsense in Multimodal Large Language Models",
+      "url": "https://huggingface.co/papers/2312.17661",
+      "authors": [
+        "Yun Zhao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2312.17661.pdf",
+      "abstract": "The burgeoning interest in Multimodal Large Language Models (MLLMs), such as\nOpenAI's GPT-4V(ision), has significantly impacted both academic and industrial\nrealms. These models enhance Large Language Models (LLMs) with advanced visual\nunderstanding capabilities, facilitating their application in a variety of\nmultimodal tasks. Recently, Google introduced Gemini, a cutting-edge MLLM\ndesigned specifically for multimodal integration. Despite its advancements,\npreliminary benchmarks indicate that Gemini lags behind GPT models in\ncommonsense reasoning tasks. However, this assessment, based on a limited\ndataset (i.e., HellaSWAG), does not fully capture Gemini's authentic\ncommonsense reasoning potential. To address this gap, our study undertakes a\nthorough evaluation of Gemini's performance in complex reasoning tasks that\nnecessitate the integration of commonsense knowledge across modalities. We\ncarry out a comprehensive analysis of 12 commonsense reasoning datasets,\nranging from general to domain-specific tasks. This includes 11 datasets\nfocused solely on language, as well as one that incorporates multimodal\nelements. Our experiments across four LLMs and two MLLMs demonstrate Gemini's\ncompetitive commonsense reasoning capabilities. Additionally, we identify\ncommon challenges faced by current LLMs and MLLMs in addressing commonsense\nproblems, underscoring the need for further advancements in enhancing the\ncommonsense reasoning abilities of these models.",
+      "upvotes": 13
+    }
+  ]
+}

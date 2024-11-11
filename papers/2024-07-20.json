@@ -1,0 +1,237 @@
+{
+  "date": "2024-07-20",
+  "papers": [
+    {
+      "title": "Scaling Laws with Vocabulary: Larger Models Deserve Larger Vocabularies",
+      "url": "https://huggingface.co/papers/2407.13623",
+      "authors": [
+        "Chaofan Tao",
+        "Niklas Muennighoff",
+        "Zhongwei Wan",
+        "Ping Luo",
+        "Min Lin",
+        "Ngai Wong"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.13623.pdf",
+      "abstract": "Research on scaling large language models (LLMs) has primarily focused on\nmodel parameters and training data size, overlooking the role of vocabulary\nsize. % Intuitively, larger vocabularies enable more efficient tokenization by\nrepresenting sentences with fewer tokens, but they also increase the risk of\nunder-fitting representations for rare tokens. We investigate how vocabulary\nsize impacts LLM scaling laws by training models ranging from 33M to 3B\nparameters on up to 500B characters with various vocabulary configurations. We\npropose three complementary approaches for predicting the compute-optimal\nvocabulary size: IsoFLOPs analysis, derivative estimation, and parametric fit\nof the loss function. Our approaches converge on the same result that the\noptimal vocabulary size depends on the available compute budget and that larger\nmodels deserve larger vocabularies. However, most LLMs use too small vocabulary\nsizes. For example, we predict that the optimal vocabulary size of Llama2-70B\nshould have been at least 216K, 7 times larger than its vocabulary of 32K. We\nvalidate our predictions empirically by training models with 3B parameters\nacross different FLOPs budgets. Adopting our predicted optimal vocabulary size\nconsistently improves downstream performance over commonly used vocabulary\nsizes. By increasing the vocabulary size from the conventional 32K to 43K, we\nimprove performance on ARC-Challenge from 29.1 to 32.0 with the same 2.3e21\nFLOPs. Our work emphasizes the necessity of jointly considering model\nparameters and vocabulary size for efficient scaling.",
+      "upvotes": 52
+    },
+    {
+      "title": "Scaling Retrieval-Based Language Models with a Trillion-Token Datastore",
+      "url": "https://huggingface.co/papers/2407.12854",
+      "authors": [
+        "Jacqueline He",
+        "Weijia Shi",
+        "Tim Dettmers",
+        "Sewon Min",
+        "Luke Zettlemoyer",
+        "Pang Wei Koh"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.12854.pdf",
+      "abstract": "Scaling laws with respect to the amount of training data and the number of\nparameters allow us to predict the cost-benefit trade-offs of pretraining\nlanguage models (LMs) in different configurations. In this paper, we consider\nanother dimension of scaling: the amount of data available at inference time.\nSpecifically, we find that increasing the size of the datastore used by a\nretrieval-based LM monotonically improves language modeling and several\ndownstream tasks without obvious saturation, such that a smaller model\naugmented with a large datastore outperforms a larger LM-only model on\nknowledge-intensive tasks. By plotting compute-optimal scaling curves with\nvaried datastore, model, and pretraining data sizes, we show that using larger\ndatastores can significantly improve model performance for the same training\ncompute budget. We carry out our study by constructing a 1.4 trillion-token\ndatastore named MassiveDS, which is the largest and the most diverse\nopen-sourced datastore for retrieval-based LMs to date, and designing an\nefficient pipeline for studying datastore scaling in a computationally\naccessible manner. Finally, we analyze the effect of improving the retriever,\ndatastore quality filtering, and other design choices on our observed scaling\ntrends. Overall, our results show that datastore size should be considered as\nan integral part of LM efficiency and performance trade-offs. To facilitate\nfuture research, we open-source our datastore and code at\nhttps://github.com/RulinShao/retrieval-scaling.",
+      "upvotes": 29
+    },
+    {
+      "title": "Scaling Granite Code Models to 128K Context",
+      "url": "https://huggingface.co/papers/2407.13739",
+      "authors": [
+        "Leonid Karlinsky",
+        "Aditya Prasad",
+        "Saptha Surendran",
+        "Shanmukha Guttula",
+        "Hima Patel",
+        "Parameswaran Selvam",
+        "Xuan-Hong Dang",
+        "Yan Koyfman",
+        "Rogerio Feris",
+        "Nirmit Desai",
+        "David D. Cox",
+        "Ruchir Puri"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.13739.pdf",
+      "abstract": "This paper introduces long-context Granite code models that support effective\ncontext windows of up to 128K tokens. Our solution for scaling context length\nof Granite 3B/8B code models from 2K/4K to 128K consists of a light-weight\ncontinual pretraining by gradually increasing its RoPE base frequency with\nrepository-level file packing and length-upsampled long-context data.\nAdditionally, we also release instruction-tuned models with long-context\nsupport which are derived by further finetuning the long context base models on\na mix of permissively licensed short and long-context instruction-response\npairs. While comparing to the original short-context Granite code models, our\nlong-context models achieve significant improvements on long-context tasks\nwithout any noticeable performance degradation on regular code completion\nbenchmarks (e.g., HumanEval). We release all our long-context Granite code\nmodels under an Apache 2.0 license for both research and commercial use.",
+      "upvotes": 19
+    },
+    {
+      "title": "Shape of Motion: 4D Reconstruction from a Single Video",
+      "url": "https://huggingface.co/papers/2407.13764",
+      "authors": [
+        "Qianqian Wang",
+        "Hang Gao",
+        "Jake Austin",
+        "Zhengqi Li",
+        "Angjoo Kanazawa"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.13764.pdf",
+      "abstract": "Monocular dynamic reconstruction is a challenging and long-standing vision\nproblem due to the highly ill-posed nature of the task. Existing approaches are\nlimited in that they either depend on templates, are effective only in\nquasi-static scenes, or fail to model 3D motion explicitly. In this work, we\nintroduce a method capable of reconstructing generic dynamic scenes, featuring\nexplicit, full-sequence-long 3D motion, from casually captured monocular\nvideos. We tackle the under-constrained nature of the problem with two key\ninsights: First, we exploit the low-dimensional structure of 3D motion by\nrepresenting scene motion with a compact set of SE3 motion bases. Each point's\nmotion is expressed as a linear combination of these bases, facilitating soft\ndecomposition of the scene into multiple rigidly-moving groups. Second, we\nutilize a comprehensive set of data-driven priors, including monocular depth\nmaps and long-range 2D tracks, and devise a method to effectively consolidate\nthese noisy supervisory signals, resulting in a globally consistent\nrepresentation of the dynamic scene. Experiments show that our method achieves\nstate-of-the-art performance for both long-range 3D/2D motion estimation and\nnovel view synthesis on dynamic scenes. Project Page:\nhttps://shape-of-motion.github.io/",
+      "upvotes": 19
+    },
+    {
+      "title": "Streetscapes: Large-scale Consistent Street View Generation Using Autoregressive Video Diffusion",
+      "url": "https://huggingface.co/papers/2407.13759",
+      "authors": [
+        "Richard Tucker",
+        "Zhengqi Li",
+        "Leonidas Guibas",
+        "Noah Snavely",
+        "Gordon Wetzstein"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.13759.pdf",
+      "abstract": "We present a method for generating Streetscapes-long sequences of views\nthrough an on-the-fly synthesized city-scale scene. Our generation is\nconditioned by language input (e.g., city name, weather), as well as an\nunderlying map/layout hosting the desired trajectory. Compared to recent models\nfor video generation or 3D view synthesis, our method can scale to much\nlonger-range camera trajectories, spanning several city blocks, while\nmaintaining visual quality and consistency. To achieve this goal, we build on\nrecent work on video diffusion, used within an autoregressive framework that\ncan easily scale to long sequences. In particular, we introduce a new temporal\nimputation method that prevents our autoregressive approach from drifting from\nthe distribution of realistic city imagery. We train our Streetscapes system on\na compelling source of data-posed imagery from Google Street View, along with\ncontextual map data-which allows users to generate city views conditioned on\nany desired city layout, with controllable camera poses. Please see more\nresults at our project page at https://boyangdeng.com/streetscapes.",
+      "upvotes": 17
+    },
+    {
+      "title": "Understanding Reference Policies in Direct Preference Optimization",
+      "url": "https://huggingface.co/papers/2407.13709",
+      "authors": [
+        "Pengfei Liu",
+        "Arman Cohan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.13709.pdf",
+      "abstract": "Direct Preference Optimization (DPO) has become a widely used training method\nfor the instruction fine-tuning of large language models (LLMs). In this work,\nwe explore an under-investigated aspect of DPO - its dependency on the\nreference model or policy. Such reference policies, typically instantiated as\nthe model to be further fine-tuned, are important since they can impose an\nupper limit on DPO's effectiveness. Therefore, we address three related\nresearch questions in this work. First, we explore the optimal strength of the\nKL-divergence constraint in DPO, which penalizes deviations from the reference\npolicy, and find that DPO is sensitive to this strength. Next, we examine the\nnecessity of reference policies for instruction fine-tuning by providing both\ntheoretical and empirical comparisons between DPO and related learning\nobjectives, demonstrating DPO's superiority. Additionally, we investigate\nwhether DPO benefits from stronger reference policies, finding that a stronger\nreference policy can lead to improved performance, but only when it is similar\nto the model being fine-tuned. Our findings highlight the confounding role of\nreference policies in DPO and offer insights for best practices, while also\nidentifying open research questions for future studies.",
+      "upvotes": 16
+    },
+    {
+      "title": "Benchmarking Trustworthiness of Multimodal Large Language Models: A Comprehensive Study",
+      "url": "https://huggingface.co/papers/2406.07057",
+      "authors": [
+        "Yitong Sun",
+        "Chang Liu",
+        "Zhe Zhao",
+        "Yifan Wang",
+        "Huanran Chen",
+        "Xiao Yang",
+        "Xingxing Wei",
+        "Hang Su",
+        "Yinpeng Dong",
+        "Jun Zhu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.07057.pdf",
+      "abstract": "Despite the superior capabilities of Multimodal Large Language Models (MLLMs)\nacross diverse tasks, they still face significant trustworthiness challenges.\nYet, current literature on the assessment of trustworthy MLLMs remains limited,\nlacking a holistic evaluation to offer thorough insights into future\nimprovements. In this work, we establish MultiTrust, the first comprehensive\nand unified benchmark on the trustworthiness of MLLMs across five primary\naspects: truthfulness, safety, robustness, fairness, and privacy. Our benchmark\nemploys a rigorous evaluation strategy that addresses both multimodal risks and\ncross-modal impacts, encompassing 32 diverse tasks with self-curated datasets.\nExtensive experiments with 21 modern MLLMs reveal some previously unexplored\ntrustworthiness issues and risks, highlighting the complexities introduced by\nthe multimodality and underscoring the necessity for advanced methodologies to\nenhance their reliability. For instance, typical proprietary models still\nstruggle with the perception of visually confusing images and are vulnerable to\nmultimodal jailbreaking and adversarial attacks; MLLMs are more inclined to\ndisclose privacy in text and reveal ideological and cultural biases even when\npaired with irrelevant images in inference, indicating that the multimodality\namplifies the internal risks from base LLMs. Additionally, we release a\nscalable toolbox for standardized trustworthiness research, aiming to\nfacilitate future advancements in this important field. Code and resources are\npublicly available at: https://multi-trust.github.io/.",
+      "upvotes": 15
+    },
+    {
+      "title": "CLAY: A Controllable Large-scale Generative Model for Creating High-quality 3D Assets",
+      "url": "https://huggingface.co/papers/2406.13897",
+      "authors": [
+        "Ziyu Wang",
+        "Qixuan Zhang",
+        "Qiwei Qiu",
+        "Anqi Pang",
+        "Haoran Jiang",
+        "Wei Yang",
+        "Lan Xu",
+        "Jingyi Yu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.13897.pdf",
+      "abstract": "In the realm of digital creativity, our potential to craft intricate 3D\nworlds from imagination is often hampered by the limitations of existing\ndigital tools, which demand extensive expertise and efforts. To narrow this\ndisparity, we introduce CLAY, a 3D geometry and material generator designed to\neffortlessly transform human imagination into intricate 3D digital structures.\nCLAY supports classic text or image inputs as well as 3D-aware controls from\ndiverse primitives (multi-view images, voxels, bounding boxes, point clouds,\nimplicit representations, etc). At its core is a large-scale generative model\ncomposed of a multi-resolution Variational Autoencoder (VAE) and a minimalistic\nlatent Diffusion Transformer (DiT), to extract rich 3D priors directly from a\ndiverse range of 3D geometries. Specifically, it adopts neural fields to\nrepresent continuous and complete surfaces and uses a geometry generative\nmodule with pure transformer blocks in latent space. We present a progressive\ntraining scheme to train CLAY on an ultra large 3D model dataset obtained\nthrough a carefully designed processing pipeline, resulting in a 3D native\ngeometry generator with 1.5 billion parameters. For appearance generation, CLAY\nsets out to produce physically-based rendering (PBR) textures by employing a\nmulti-view material diffusion model that can generate 2K resolution textures\nwith diffuse, roughness, and metallic modalities. We demonstrate using CLAY for\na range of controllable 3D asset creations, from sketchy conceptual designs to\nproduction ready assets with intricate details. Even first time users can\neasily use CLAY to bring their vivid 3D imaginations to life, unleashing\nunlimited creativity.",
+      "upvotes": 12
+    },
+    {
+      "title": "Attention Overflow: Language Model Input Blur during Long-Context Missing Items Recommendation",
+      "url": "https://huggingface.co/papers/2407.13481",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2407.13481.pdf",
+      "abstract": "Large language models (LLMs) can suggest missing elements from items listed\nin a prompt, which can be used for list completion or recommendations based on\nusers' history. However, their performance degrades when presented with too\nmany items, as they start to suggest items already included in the input list.\nThis occurs at around 100 items for mid-2024 flagship LLMs. We evaluate this\nphenomenon on both synthetic problems (e.g., finding missing numbers in a given\nrange of shuffled integers) and realistic movie recommendation scenarios. We\nrefer to this issue as attention overflow, as preventing repetition\nrequires attending to all items simultaneously. Although iterative loops can\nmitigate this problem, their costs increase with the repetition rate, affecting\nthe language models' ability to derive novelty from lengthy inputs.",
+      "upvotes": 9
+    },
+    {
+      "title": "BRIGHT: A Realistic and Challenging Benchmark for Reasoning-Intensive Retrieval",
+      "url": "https://huggingface.co/papers/2407.12883",
+      "authors": [
+        "Howard Yen",
+        "Mengzhou Xia",
+        "Weijia Shi",
+        "Niklas Muennighoff",
+        "Han-yu Wang",
+        "Haisu Liu",
+        "Quan Shi",
+        "Zachary S. Siegel",
+        "Michael Tang",
+        "Ruoxi Sun",
+        "Jinsung Yoon",
+        "Sercan O. Arik",
+        "Danqi Chen",
+        "Tao Yu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.12883.pdf",
+      "abstract": "Existing retrieval benchmarks primarily consist of information-seeking\nqueries (e.g., aggregated questions from search engines) where keyword or\nsemantic-based retrieval is usually sufficient. However, many complex\nreal-world queries require in-depth reasoning to identify relevant documents\nthat go beyond surface form matching. For example, finding documentation for a\ncoding question requires understanding the logic and syntax of the functions\ninvolved. To better benchmark retrieval on such challenging queries, we\nintroduce BRIGHT, the first text retrieval benchmark that requires intensive\nreasoning to retrieve relevant documents. BRIGHT is constructed from the 1,398\nreal-world queries collected from diverse domains (such as economics,\npsychology, robotics, software engineering, earth sciences, etc.), sourced from\nnaturally occurring or carefully curated human data. Extensive evaluation\nreveals that even state-of-the-art retrieval models perform poorly on BRIGHT.\nThe leading model on the MTEB leaderboard [38 ], which achieves a score of 59.0\nnDCG@10,2 produces a score of nDCG@10 of 18.0 on BRIGHT. We further demonstrate\nthat augmenting queries with Chain-of-Thought reasoning generated by large\nlanguage models (LLMs) improves performance by up to 12.2 points. Moreover,\nBRIGHT is robust against data leakage during pretraining of the benchmarked\nmodels as we validate by showing similar performance even when documents from\nthe benchmark are included in the training data. We believe that BRIGHT paves\nthe way for future research on retrieval systems in more realistic and\nchallenging settings. Our code and data are available at\nhttps://brightbenchmark.github.io.",
+      "upvotes": 8
+    },
+    {
+      "title": "CodeV: Empowering LLMs for Verilog Generation through Multi-Level Summarization",
+      "url": "https://huggingface.co/papers/2407.10424",
+      "authors": [
+        "Di Huang",
+        "Chongxiao Li",
+        "Pengwei Jin",
+        "Ziyuan Nan",
+        "Tianyun Ma",
+        "Lei Qi",
+        "Yansong Pan",
+        "Zhenxing Zhang",
+        "Rui Zhang",
+        "Xishan Zhang",
+        "Zidong Du",
+        "Qi Guo",
+        "Xing Hu",
+        "Yunji Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.10424.pdf",
+      "abstract": "The increasing complexity and high costs associated with modern processor\ndesign have led to a surge in demand for processor design automation.\nInstruction-tuned large language models (LLMs) have demonstrated remarkable\nperformance in automatically generating code for general-purpose programming\nlanguages like Python. However, these methods fail on hardware description\nlanguages (HDLs) like Verilog due to the scarcity of high-quality instruction\ntuning data, as even advanced LLMs like GPT-3.5 exhibit limited performance on\nVerilog generation. Regarding this issue, we observe that (1) Verilog code\ncollected from the real world has higher quality than those generated by LLMs.\n(2) LLMs like GPT-3.5 excel in summarizing Verilog code rather than generating\nit. Based on these observations, this paper introduces CodeV, a series of\nopen-source instruction-tuned Verilog generation LLMs. Instead of generating\ndescriptions first and then getting the corresponding code from advanced LLMs,\nwe prompt the LLM with Verilog code and let the LLM generate the corresponding\nnatural language description by multi-level summarization. Experimental results\nshow that CodeV relatively surpasses the previous open-source SOTA by 14.4%\n(BetterV in VerilogEval) and 11.3% (RTLCoder in RTLLM) respectively, and also\nrelatively outperforms previous commercial SOTA GPT-4 by 22.1% in VerilogEval.",
+      "upvotes": 6
+    },
+    {
+      "title": "Retrieval-Enhanced Machine Learning: Synthesis and Opportunities",
+      "url": "https://huggingface.co/papers/2407.12982",
+      "authors": [
+        "Alireza Salemi",
+        "Hamed Zamani"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.12982.pdf",
+      "abstract": "In the field of language modeling, models augmented with retrieval components\nhave emerged as a promising solution to address several challenges faced in the\nnatural language processing (NLP) field, including knowledge grounding,\ninterpretability, and scalability. Despite the primary focus on NLP, we posit\nthat the paradigm of retrieval-enhancement can be extended to a broader\nspectrum of machine learning (ML) such as computer vision, time series\nprediction, and computational biology. Therefore, this work introduces a formal\nframework of this paradigm, Retrieval-Enhanced Machine Learning (REML), by\nsynthesizing the literature in various domains in ML with consistent notations\nwhich is missing from the current literature. Also, we found that while a\nnumber of studies employ retrieval components to augment their models, there is\na lack of integration with foundational Information Retrieval (IR) research. We\nbridge this gap between the seminal IR research and contemporary REML studies\nby investigating each component that comprises the REML framework. Ultimately,\nthe goal of this work is to equip researchers across various disciplines with a\ncomprehensive, formally structured framework of retrieval-enhanced models,\nthereby fostering interdisciplinary future research.",
+      "upvotes": 5
+    },
+    {
+      "title": "A Comparative Study on Automatic Coding of Medical Letters with Explainability",
+      "url": "https://huggingface.co/papers/2407.13638",
+      "authors": [
+        "Jamie Glen",
+        "Lifeng Han",
+        "Paul Rayson",
+        "Goran Nenadic"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.13638.pdf",
+      "abstract": "This study aims to explore the implementation of Natural Language Processing\n(NLP) and machine learning (ML) techniques to automate the coding of medical\nletters with visualised explainability and light-weighted local computer\nsettings. Currently in clinical settings, coding is a manual process that\ninvolves assigning codes to each condition, procedure, and medication in a\npatient's paperwork (e.g., 56265001 heart disease using SNOMED CT code). There\nare preliminary research on automatic coding in this field using\nstate-of-the-art ML models; however, due to the complexity and size of the\nmodels, the real-world deployment is not achieved. To further facilitate the\npossibility of automatic coding practice, we explore some solutions in a local\ncomputer setting; in addition, we explore the function of explainability for\ntransparency of AI models. We used the publicly available MIMIC-III database\nand the HAN/HLAN network models for ICD code prediction purposes. We also\nexperimented with the mapping between ICD and SNOMED CT knowledge bases. In our\nexperiments, the models provided useful information for 97.98\\% of codes. The\nresult of this investigation can shed some light on implementing automatic\nclinical coding in practice, such as in hospital settings, on the local\ncomputers used by clinicians , project page\nhttps://github.com/Glenj01/Medical-Coding.",
+      "upvotes": 5
+    },
+    {
+      "title": "Benchmark Agreement Testing Done Right: A Guide for LLM Benchmark Evaluation",
+      "url": "https://huggingface.co/papers/2407.13696",
+      "authors": [
+        "Ariel Gera",
+        "Ofir Arviv",
+        "Asaf Yehudai",
+        "Elron Bandel",
+        "Eyal Shnarch",
+        "Michal Shmueli-Scheuer",
+        "Leshem Choshen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.13696.pdf",
+      "abstract": "Recent advancements in Language Models (LMs) have catalyzed the creation of\nmultiple benchmarks, designed to assess these models' general capabilities. A\ncrucial task, however, is assessing the validity of the benchmarks themselves.\nThis is most commonly done via Benchmark Agreement Testing (BAT), where new\nbenchmarks are validated against established ones using some agreement metric\n(e.g., rank correlation). Despite the crucial role of BAT for benchmark\nbuilders and consumers, there are no standardized procedures for such agreement\ntesting. This deficiency can lead to invalid conclusions, fostering mistrust in\nbenchmarks and upending the ability to properly choose the appropriate\nbenchmark to use. By analyzing over 40 prominent benchmarks, we demonstrate how\nsome overlooked methodological choices can significantly influence BAT results,\npotentially undermining the validity of conclusions. To address these\ninconsistencies, we propose a set of best practices for BAT and demonstrate how\nutilizing these methodologies greatly improves BAT robustness and validity. To\nfoster adoption and facilitate future research,, we introduce BenchBench, a\npython package for BAT, and release the BenchBench-leaderboard, a\nmeta-benchmark designed to evaluate benchmarks using their peers. Our findings\nunderscore the necessity for standardized BAT, ensuring the robustness and\nvalidity of benchmark evaluations in the evolving landscape of language model\nresearch.\n  BenchBench Package: https://github.com/IBM/BenchBench\n  Leaderboard: https://huggingface.co/spaces/per/BenchBench",
+      "upvotes": 5
+    },
+    {
+      "title": "PM-LLM-Benchmark: Evaluating Large Language Models on Process Mining Tasks",
+      "url": "https://huggingface.co/papers/2407.13244",
+      "authors": [
+        "Alessandro Berti",
+        "Humam Kourani",
+        "Wil M. P. van der Aalst"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.13244.pdf",
+      "abstract": "Large Language Models (LLMs) have the potential to semi-automate some process\nmining (PM) analyses. While commercial models are already adequate for many\nanalytics tasks, the competitive level of open-source LLMs in PM tasks is\nunknown. In this paper, we propose PM-LLM-Benchmark, the first comprehensive\nbenchmark for PM focusing on domain knowledge (process-mining-specific and\nprocess-specific) and on different implementation strategies. We focus also on\nthe challenges in creating such a benchmark, related to the public availability\nof the data and on evaluation biases by the LLMs. Overall, we observe that most\nof the considered LLMs can perform some process mining tasks at a satisfactory\nlevel, but tiny models that would run on edge devices are still inadequate. We\nalso conclude that while the proposed benchmark is useful for identifying LLMs\nthat are adequate for process mining tasks, further research is needed to\novercome the evaluation biases and perform a more thorough ranking of the\ncompetitive LLMs.",
+      "upvotes": 2
+    }
+  ]
+}

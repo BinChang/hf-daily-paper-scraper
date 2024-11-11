@@ -1,0 +1,193 @@
+{
+  "date": "2024-02-20",
+  "papers": [
+    {
+      "title": "FinTral: A Family of GPT-4 Level Multimodal Financial Large Language Models",
+      "url": "https://huggingface.co/papers/2402.10986",
+      "authors": [
+        "Hasan Cavusoglu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.10986.pdf",
+      "abstract": "We introduce FinTral, a suite of state-of-the-art multimodal large language\nmodels (LLMs) built upon the Mistral-7b model and tailored for financial\nanalysis. FinTral integrates textual, numerical, tabular, and image data. We\nenhance FinTral with domain-specific pretraining, instruction fine-tuning, and\nRLAIF training by exploiting a large collection of textual and visual datasets\nwe curate for this work. We also introduce an extensive benchmark featuring\nnine tasks and 25 datasets for evaluation, including hallucinations in the\nfinancial domain. Our FinTral model trained with direct preference optimization\nemploying advanced Tools and Retrieval methods, dubbed FinTral-DPO-T&R,\ndemonstrates an exceptional zero-shot performance. It outperforms ChatGPT-3.5\nin all tasks and surpasses GPT-4 in five out of nine tasks, marking a\nsignificant advancement in AI-driven financial technology. We also demonstrate\nthat FinTral has the potential to excel in real-time analysis and\ndecision-making in diverse financial contexts.",
+      "upvotes": 76
+    },
+    {
+      "title": "FiT: Flexible Vision Transformer for Diffusion Model",
+      "url": "https://huggingface.co/papers/2402.12376",
+      "authors": [
+        "Wanli Ouyang",
+        "Lei Bai"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.12376.pdf",
+      "abstract": "Nature is infinitely resolution-free. In the context of this reality,\nexisting diffusion models, such as Diffusion Transformers, often face\nchallenges when processing image resolutions outside of their trained domain.\nTo overcome this limitation, we present the Flexible Vision Transformer (FiT),\na transformer architecture specifically designed for generating images with\nunrestricted resolutions and aspect ratios. Unlike traditional methods that\nperceive images as static-resolution grids, FiT conceptualizes images as\nsequences of dynamically-sized tokens. This perspective enables a flexible\ntraining strategy that effortlessly adapts to diverse aspect ratios during both\ntraining and inference phases, thus promoting resolution generalization and\neliminating biases induced by image cropping. Enhanced by a meticulously\nadjusted network structure and the integration of training-free extrapolation\ntechniques, FiT exhibits remarkable flexibility in resolution extrapolation\ngeneration. Comprehensive experiments demonstrate the exceptional performance\nof FiT across a broad range of resolutions, showcasing its effectiveness both\nwithin and beyond its training resolution distribution. Repository available at\nhttps://github.com/whlzy/FiT.",
+      "upvotes": 48
+    },
+    {
+      "title": "Speculative Streaming: Fast LLM Inference without Auxiliary Models",
+      "url": "https://huggingface.co/papers/2402.11131",
+      "authors": [
+        "Mohammad Rastegari"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.11131.pdf",
+      "abstract": "Speculative decoding is a prominent technique to speed up the inference of a\nlarge target language model based on predictions of an auxiliary draft model.\nWhile effective, in application-specific settings, it often involves\nfine-tuning both draft and target models to achieve high acceptance rates. As\nthe number of downstream tasks grows, these draft models add significant\ncomplexity to inference systems. We propose Speculative Streaming, a\nsingle-model speculative decoding method that fuses drafting into the target\nmodel by changing the fine-tuning objective from next token prediction to\nfuture n-gram prediction. Speculative Streaming speeds up decoding by 1.8 -\n3.1X in a diverse set of tasks, such as Summarization, Structured Queries, and\nMeaning Representation, without sacrificing generation quality. Additionally,\nSpeculative Streaming is parameter-efficient. It achieves on-par/higher\nspeed-ups than Medusa-style architectures while using ~10000X fewer extra\nparameters, making it well-suited for resource-constrained devices.",
+      "upvotes": 41
+    },
+    {
+      "title": "AnyGPT: Unified Multimodal LLM with Discrete Sequence Modeling",
+      "url": "https://huggingface.co/papers/2402.12226",
+      "authors": [
+        "Junqi Dai",
+        "Jiasheng Ye",
+        "Yunhua Zhou",
+        "Zhigeng Liu",
+        "Hang Yan",
+        "Tao Gui",
+        "Yugang Jiang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.12226.pdf",
+      "abstract": "We introduce AnyGPT, an any-to-any multimodal language model that utilizes\ndiscrete representations for the unified processing of various modalities,\nincluding speech, text, images, and music. AnyGPT can be trained stably without\nany alterations to the current large language model (LLM) architecture or\ntraining paradigms. Instead, it relies exclusively on data-level preprocessing,\nfacilitating the seamless integration of new modalities into LLMs, akin to the\nincorporation of new languages. We build a multimodal text-centric dataset for\nmultimodal alignment pre-training. Utilizing generative models, we synthesize\nthe first large-scale any-to-any multimodal instruction dataset. It consists of\n108k samples of multi-turn conversations that intricately interweave various\nmodalities, thus equipping the model to handle arbitrary combinations of\nmultimodal inputs and outputs. Experimental results demonstrate that AnyGPT is\ncapable of facilitating any-to-any multimodal conversation while achieving\nperformance comparable to specialized models across all modalities, proving\nthat discrete representations can effectively and conveniently unify multiple\nmodalities within a language model. Demos are shown in\nhttps://junzhan2000.github.io/AnyGPT.github.io/",
+      "upvotes": 40
+    },
+    {
+      "title": "OneBit: Towards Extremely Low-bit Large Language Models",
+      "url": "https://huggingface.co/papers/2402.11295",
+      "authors": [
+        "Xu Han",
+        "Shuo Wang",
+        "Zhiyuan Liu",
+        "Weidong Liu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.11295.pdf",
+      "abstract": "Model quantification uses low bit-width values to represent the weight\nmatrices of models, which is a promising approach to reduce both storage and\ncomputational overheads of deploying highly anticipated LLMs. However, existing\nquantization methods suffer severe performance degradation when the bit-width\nis extremely reduced, and thus focus on utilizing 4-bit or 8-bit values to\nquantize models. This paper boldly quantizes the weight matrices of LLMs to\n1-bit, paving the way for the extremely low bit-width deployment of LLMs. For\nthis target, we introduce a 1-bit quantization-aware training (QAT) framework\nnamed OneBit, including a novel 1-bit parameter representation method to better\nquantize LLMs as well as an effective parameter initialization method based on\nmatrix decomposition to improve the convergence speed of the QAT framework.\nSufficient experimental results indicate that OneBit achieves good performance\n(at least 83% of the non-quantized performance) with robust training processes\nwhen only using 1-bit weight matrices.",
+      "upvotes": 22
+    },
+    {
+      "title": "Learning to Learn Faster from Human Feedback with Language Model Predictive Control",
+      "url": "https://huggingface.co/papers/2402.11450",
+      "authors": [
+        "Wenhao Yu",
+        "Maria Attarian",
+        "Maria Bauza",
+        "Matthew Bennice",
+        "Chuyuan Kelly Fu",
+        "Nimrod Gileadi",
+        "Marissa Giustina",
+        "Leonard Hasenclever",
+        "Jan Humplik",
+        "Jasmine Hsu",
+        "Ben Jyenis",
+        "Chase Kew",
+        "Tsang-Wei Edward Lee"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.11450.pdf",
+      "abstract": "Large language models (LLMs) have been shown to exhibit a wide range of\ncapabilities, such as writing robot code from language commands -- enabling\nnon-experts to direct robot behaviors, modify them based on feedback, or\ncompose them to perform new tasks. However, these capabilities (driven by\nin-context learning) are limited to short-term interactions, where users'\nfeedback remains relevant for only as long as it fits within the context size\nof the LLM, and can be forgotten over longer interactions. In this work, we\ninvestigate fine-tuning the robot code-writing LLMs, to remember their\nin-context interactions and improve their teachability i.e., how efficiently\nthey adapt to human inputs (measured by average number of corrections before\nthe user considers the task successful). Our key observation is that when\nhuman-robot interactions are formulated as a partially observable Markov\ndecision process (in which human language inputs are observations, and robot\ncode outputs are actions), then training an LLM to complete previous\ninteractions can be viewed as training a transition dynamics model -- that can\nbe combined with classic robotics techniques such as model predictive control\n(MPC) to discover shorter paths to success. This gives rise to Language Model\nPredictive Control (LMPC), a framework that fine-tunes PaLM 2 to improve its\nteachability on 78 tasks across 5 robot embodiments -- improving non-expert\nteaching success rates of unseen tasks by 26.9% while reducing the average\nnumber of human corrections from 2.4 to 1.9. Experiments show that LMPC also\nproduces strong meta-learners, improving the success rate of in-context\nlearning new tasks on unseen robot embodiments and APIs by 31.5%. See videos,\ncode, and demos at: https://robot-teaching.github.io/.",
+      "upvotes": 20
+    },
+    {
+      "title": "CoLLaVO: Crayon Large Language and Vision mOdel",
+      "url": "https://huggingface.co/papers/2402.11248",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2402.11248.pdf",
+      "abstract": "The remarkable success of Large Language Models (LLMs) and instruction tuning\ndrives the evolution of Vision Language Models (VLMs) towards a versatile\ngeneral-purpose model. Yet, it remains unexplored whether current VLMs\ngenuinely possess quality object-level image understanding capabilities\ndetermined from 'what objects are in the image?' or 'which object corresponds\nto a specified bounding box?'. Our findings reveal that the image understanding\ncapabilities of current VLMs are strongly correlated with their zero-shot\nperformance on Vision Language (VL) tasks. This suggests that prioritizing\nbasic image understanding is crucial for VLMs to excel at VL tasks. To enhance\nobject-level image understanding, we propose Crayon Large Language and Vision\nmOdel (CoLLaVO), which incorporates instruction tuning with crayon prompt as a\nnew visual prompt tuning scheme based on panoptic color maps. Furthermore, we\npresent a learning strategy of Dual QLoRA to preserve object-level image\nunderstanding without forgetting it during visual instruction tuning, thereby\nachieving a significant leap in zero-shot numerous VL benchmarks.",
+      "upvotes": 18
+    },
+    {
+      "title": "Reformatted Alignment",
+      "url": "https://huggingface.co/papers/2402.12219",
+      "authors": [
+        "Xuefeng Li",
+        "Haoyang Zou",
+        "Jiewen Hu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.12219.pdf",
+      "abstract": "The quality of finetuning data is crucial for aligning large language models\n(LLMs) with human values. Current methods to improve data quality are either\nlabor-intensive or prone to factual errors caused by LLM hallucinations. This\npaper explores elevating the quality of existing instruction data to better\nalign with human values, introducing a simple and effective approach named\nReAlign, which reformats the responses of instruction data into a format that\nbetter aligns with pre-established criteria and the collated evidence. This\napproach minimizes human annotation, hallucination, and the difficulty in\nscaling, remaining orthogonal to existing alignment techniques. Experimentally,\nReAlign significantly boosts the general alignment ability, math reasoning,\nfactuality, and readability of the LLMs.\n  Encouragingly, without introducing any additional data or advanced training\ntechniques, and merely by reformatting the response, LLaMA-2-13B's mathematical\nreasoning ability on GSM8K can be improved from 46.77% to 56.63% in accuracy.\nAdditionally, a mere 5% of ReAlign data yields a 67% boost in general alignment\nability measured by the Alpaca dataset. This work highlights the need for\nfurther research into the science and mechanistic interpretability of LLMs. We\nhave made the associated code and data publicly accessible to support future\nstudies at https://github.com/GAIR-NLP/ReAlign.",
+      "upvotes": 15
+    },
+    {
+      "title": "LongAgent: Scaling Language Models to 128k Context through Multi-Agent Collaboration",
+      "url": "https://huggingface.co/papers/2402.11550",
+      "authors": [
+        "Jun Zhao",
+        "Can Zu",
+        "Hao Xu",
+        "Yi Lu",
+        "Tao Gui",
+        "Qi Zhang",
+        "Xuanjing Huang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.11550.pdf",
+      "abstract": "Large language models (LLMs) have demonstrated impressive performance in\nunderstanding language and executing complex reasoning tasks. However, LLMs\nwith long context windows have been notorious for their expensive training\ncosts and high inference latency. Even the most advanced models such as GPT-4\nand Claude2 often make mistakes when processing inputs of over 100k tokens, a\nphenomenon also known as lost in the middle. In this paper, we propose\nLongAgent, a method based on multi-agent collaboration, which scales\nLLMs (e.g., LLaMA) to a context of 128K and demonstrates potential superiority\nin long-text processing compared to GPT-4. In LongAgent, a leader is\nresponsible for understanding user intent and directing team members to acquire\ninformation from documents. Due to members' hallucinations, it is non-trivial\nfor a leader to obtain accurate information from the responses of dozens to\nhundreds of members. To address this, we develop an inter-member\ncommunication mechanism to resolve response conflicts caused by hallucinations\nthrough information sharing. Our experimental results indicate that\nLongAgent offers a promising alternative for long-text processing. The\nagent team instantiated with LLaMA-7B achieves significant improvements in\ntasks such as 128k-long text retrieval, multi-hop question answering, compared\nto GPT-4.",
+      "upvotes": 15
+    },
+    {
+      "title": "GLoRe: When, Where, and How to Improve LLM Reasoning via Global and Local Refinements",
+      "url": "https://huggingface.co/papers/2402.10963",
+      "authors": [
+        "Christoforus Nalmpantis",
+        "Jane Dwivedi-Yu",
+        "Maksym Zhuravinskyi",
+        "Eric Hambro",
+        "Roberta Railneau"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.10963.pdf",
+      "abstract": "State-of-the-art language models can exhibit impressive reasoning refinement\ncapabilities on math, science or coding tasks. However, recent work\ndemonstrates that even the best models struggle to identify when and\nwhere to refine without access to external feedback. Outcome-based Reward\nModels (ORMs), trained to predict correctness of the final answer\nindicating when to refine, offer one convenient solution for deciding when to\nrefine. Process Based Reward Models (PRMs), trained to predict\ncorrectness of intermediate steps, can then be used to indicate where to\nrefine. But they are expensive to train, requiring extensive human annotations.\nIn this paper, we propose Stepwise ORMs (SORMs) which are trained,\nonly on synthetic data, to approximate the expected future reward of the\noptimal policy or V^{star}. More specifically, SORMs are trained to predict\nthe correctness of the final answer when sampling the current policy many times\n(rather than only once as in the case of ORMs). Our experiments show that SORMs\ncan more accurately detect incorrect reasoning steps compared to ORMs, thus\nimproving downstream accuracy when doing refinements. We then train\nglobal refinement models, which take only the question and a draft\nsolution as input and predict a corrected solution, and local\nrefinement models which also take as input a critique indicating the location\nof the first reasoning error. We generate training data for both models\nsynthetically by reusing data used to train the SORM. We find combining global\nand local refinements, using the ORM as a reranker, significantly outperforms\neither one individually, as well as a best of three sample baseline. With this\nstrategy we can improve the accuracy of a LLaMA-2 13B model (already fine-tuned\nwith RL) on GSM8K from 53\\% to 65\\% when greedily sampled.",
+      "upvotes": 9
+    },
+    {
+      "title": "DiLightNet: Fine-grained Lighting Control for Diffusion-based Image Generation",
+      "url": "https://huggingface.co/papers/2402.11929",
+      "authors": [
+        "Yue Dong",
+        "Pieter Peers",
+        "Youkang Kong",
+        "Hongzhi Wu",
+        "Xin Tong"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.11929.pdf",
+      "abstract": "This paper presents a novel method for exerting fine-grained lighting control\nduring text-driven diffusion-based image generation. While existing diffusion\nmodels already have the ability to generate images under any lighting\ncondition, without additional guidance these models tend to correlate image\ncontent and lighting. Moreover, text prompts lack the necessary expressional\npower to describe detailed lighting setups. To provide the content creator with\nfine-grained control over the lighting during image generation, we augment the\ntext-prompt with detailed lighting information in the form of radiance hints,\ni.e., visualizations of the scene geometry with a homogeneous canonical\nmaterial under the target lighting. However, the scene geometry needed to\nproduce the radiance hints is unknown. Our key observation is that we only need\nto guide the diffusion process, hence exact radiance hints are not necessary;\nwe only need to point the diffusion model in the right direction. Based on this\nobservation, we introduce a three stage method for controlling the lighting\nduring image generation. In the first stage, we leverage a standard pretrained\ndiffusion model to generate a provisional image under uncontrolled lighting.\nNext, in the second stage, we resynthesize and refine the foreground object in\nthe generated image by passing the target lighting to a refined diffusion\nmodel, named DiLightNet, using radiance hints computed on a coarse shape of the\nforeground object inferred from the provisional image. To retain the texture\ndetails, we multiply the radiance hints with a neural encoding of the\nprovisional synthesized image before passing it to DiLightNet. Finally, in the\nthird stage, we resynthesize the background to be consistent with the lighting\non the foreground object. We demonstrate and validate our lighting controlled\ndiffusion model on a variety of text prompts and lighting conditions.",
+      "upvotes": 9
+    },
+    {
+      "title": "Binary Opacity Grids: Capturing Fine Geometric Detail for Mesh-Based View Synthesis",
+      "url": "https://huggingface.co/papers/2402.12377",
+      "authors": [
+        "Stephan Garbin",
+        "Pratul P. Srinivasan",
+        "Richard Szeliski",
+        "Ben Mildenhall",
+        "Jonathan T. Barron"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.12377.pdf",
+      "abstract": "While surface-based view synthesis algorithms are appealing due to their low\ncomputational requirements, they often struggle to reproduce thin structures.\nIn contrast, more expensive methods that model the scene's geometry as a\nvolumetric density field (e.g. NeRF) excel at reconstructing fine geometric\ndetail. However, density fields often represent geometry in a \"fuzzy\" manner,\nwhich hinders exact localization of the surface. In this work, we modify\ndensity fields to encourage them to converge towards surfaces, without\ncompromising their ability to reconstruct thin structures. First, we employ a\ndiscrete opacity grid representation instead of a continuous density field,\nwhich allows opacity values to discontinuously transition from zero to one at\nthe surface. Second, we anti-alias by casting multiple rays per pixel, which\nallows occlusion boundaries and subpixel structures to be modelled without\nusing semi-transparent voxels. Third, we minimize the binary entropy of the\nopacity values, which facilitates the extraction of surface geometry by\nencouraging opacity values to binarize towards the end of training. Lastly, we\ndevelop a fusion-based meshing strategy followed by mesh simplification and\nappearance model fitting. The compact meshes produced by our model can be\nrendered in real-time on mobile devices and achieve significantly higher view\nsynthesis quality compared to existing mesh-based approaches.",
+      "upvotes": 8
+    },
+    {
+      "title": "Vision-Flan: Scaling Human-Labeled Tasks in Visual Instruction Tuning",
+      "url": "https://huggingface.co/papers/2402.11690",
+      "authors": [
+        "Ying Shen",
+        "Di Jin",
+        "Lifu Huang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.11690.pdf",
+      "abstract": "Despite vision-language models' (VLMs) remarkable capabilities as versatile\nvisual assistants, two substantial challenges persist within the existing VLM\nframeworks: (1) lacking task diversity in pretraining and visual instruction\ntuning, and (2) annotation error and bias in GPT-4 synthesized instruction\ntuning data. Both challenges lead to issues such as poor generalizability,\nhallucination, and catastrophic forgetting. To address these challenges, we\nconstruct Vision-Flan, the most diverse publicly available visual instruction\ntuning dataset to date, comprising 187 diverse tasks and 1,664,261 instances\nsourced from academic datasets, and each task is accompanied by an\nexpert-written instruction. In addition, we propose a two-stage instruction\ntuning framework, in which VLMs are firstly finetuned on Vision-Flan and\nfurther tuned on GPT-4 synthesized data. We find this two-stage tuning\nframework significantly outperforms the traditional single-stage visual\ninstruction tuning framework and achieves the state-of-the-art performance\nacross a wide range of multi-modal evaluation benchmarks. Finally, we conduct\nin-depth analyses to understand visual instruction tuning and our findings\nreveal that: (1) GPT-4 synthesized data does not substantially enhance VLMs'\ncapabilities but rather modulates the model's responses to human-preferred\nformats; (2) A minimal quantity (e.g., 1,000) of GPT-4 synthesized data can\neffectively align VLM responses with human-preference; (3) Visual instruction\ntuning mainly helps large-language models (LLMs) to understand visual features.",
+      "upvotes": 7
+    },
+    {
+      "title": "Pushing Auto-regressive Models for 3D Shape Generation at Capacity and Scalability",
+      "url": "https://huggingface.co/papers/2402.12225",
+      "authors": [
+        "Xuelin Qian",
+        "Yu Wang",
+        "Yinda Zhang",
+        "Xiangyang Xue",
+        "Tiejun Huang",
+        "Yunsheng Wu",
+        "Yanwei Fu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.12225.pdf",
+      "abstract": "Auto-regressive models have achieved impressive results in 2D image\ngeneration by modeling joint distributions in grid space. In this paper, we\nextend auto-regressive models to 3D domains, and seek a stronger ability of 3D\nshape generation by improving auto-regressive models at capacity and\nscalability simultaneously. Firstly, we leverage an ensemble of publicly\navailable 3D datasets to facilitate the training of large-scale models. It\nconsists of a comprehensive collection of approximately 900,000 objects, with\nmultiple properties of meshes, points, voxels, rendered images, and text\ncaptions. This diverse labeled dataset, termed Objaverse-Mix, empowers our\nmodel to learn from a wide range of object variations. However, directly\napplying 3D auto-regression encounters critical challenges of high\ncomputational demands on volumetric grids and ambiguous auto-regressive order\nalong grid dimensions, resulting in inferior quality of 3D shapes. To this end,\nwe then present a novel framework Argus3D in terms of capacity. Concretely, our\napproach introduces discrete representation learning based on a latent vector\ninstead of volumetric grids, which not only reduces computational costs but\nalso preserves essential geometric details by learning the joint distributions\nin a more tractable order. The capacity of conditional generation can thus be\nrealized by simply concatenating various conditioning inputs to the latent\nvector, such as point clouds, categories, images, and texts. In addition,\nthanks to the simplicity of our model architecture, we naturally scale up our\napproach to a larger model with an impressive 3.6 billion parameters, further\nenhancing the quality of versatile 3D generation. Extensive experiments on four\ngeneration tasks demonstrate that Argus3D can synthesize diverse and faithful\nshapes across multiple categories, achieving remarkable performance.",
+      "upvotes": 6
+    }
+  ]
+}

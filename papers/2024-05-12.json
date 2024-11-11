@@ -1,0 +1,92 @@
+{
+  "date": "2024-05-12",
+  "papers": [
+    {
+      "title": "LoRA Land: 310 Fine-tuned LLMs that Rival GPT-4, A Technical Report",
+      "url": "https://huggingface.co/papers/2405.00732",
+      "authors": [
+        "Devvret Rishi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.00732.pdf",
+      "abstract": "Low Rank Adaptation (LoRA) has emerged as one of the most widely adopted\nmethods for Parameter Efficient Fine-Tuning (PEFT) of Large Language Models\n(LLMs). LoRA reduces the number of trainable parameters and memory usage while\nachieving comparable performance to full fine-tuning. We aim to assess the\nviability of training and serving LLMs fine-tuned with LoRA in real-world\napplications. First, we measure the quality of LLMs fine-tuned with quantized\nlow rank adapters across 10 base models and 31 tasks for a total of 310 models.\nWe find that 4-bit LoRA fine-tuned models outperform base models by 34 points\nand GPT-4 by 10 points on average. Second, we investigate the most effective\nbase models for fine-tuning and assess the correlative and predictive\ncapacities of task complexity heuristics in forecasting the outcomes of\nfine-tuning. Finally, we evaluate the latency and concurrency capabilities of\nLoRAX, an open-source Multi-LoRA inference server that facilitates the\ndeployment of multiple LoRA fine-tuned models on a single GPU using shared base\nmodel weights and dynamic adapter loading. LoRAX powers LoRA Land, a web\napplication that hosts 25 LoRA fine-tuned Mistral-7B LLMs on a single NVIDIA\nA100 GPU with 80GB memory. LoRA Land highlights the quality and\ncost-effectiveness of employing multiple specialized LLMs over a single,\ngeneral-purpose LLM.",
+      "upvotes": 118
+    },
+    {
+      "title": "Prometheus 2: An Open Source Language Model Specialized in Evaluating Other Language Models",
+      "url": "https://huggingface.co/papers/2405.01535",
+      "authors": [
+        "Jamin Shin",
+        "Moontae Lee",
+        "Kyungjae Lee"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.01535.pdf",
+      "abstract": "Proprietary LMs such as GPT-4 are often employed to assess the quality of\nresponses from various LMs. However, concerns including transparency,\ncontrollability, and affordability strongly motivate the development of\nopen-source LMs specialized in evaluations. On the other hand, existing open\nevaluator LMs exhibit critical shortcomings: 1) they issue scores that\nsignificantly diverge from those assigned by humans, and 2) they lack the\nflexibility to perform both direct assessment and pairwise ranking, the two\nmost prevalent forms of assessment. Additionally, they do not possess the\nability to evaluate based on custom evaluation criteria, focusing instead on\ngeneral attributes like helpfulness and harmlessness. To address these issues,\nwe introduce Prometheus 2, a more powerful evaluator LM than its predecessor\nthat closely mirrors human and GPT-4 judgements. Moreover, it is capable of\nprocessing both direct assessment and pair-wise ranking formats grouped with a\nuser-defined evaluation criteria. On four direct assessment benchmarks and four\npairwise ranking benchmarks, Prometheus 2 scores the highest correlation and\nagreement with humans and proprietary LM judges among all tested open evaluator\nLMs. Our models, code, and data are all publicly available at\nhttps://github.com/prometheus-eval/prometheus-eval.",
+      "upvotes": 116
+    },
+    {
+      "title": "WildChat: 1M ChatGPT Interaction Logs in the Wild",
+      "url": "https://huggingface.co/papers/2405.01470",
+      "authors": [
+        "Xiang Ren",
+        "Claire Cardie"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.01470.pdf",
+      "abstract": "Chatbots such as GPT-4 and ChatGPT are now serving millions of users. Despite\ntheir widespread use, there remains a lack of public datasets showcasing how\nthese tools are used by a population of users in practice. To bridge this gap,\nwe offered free access to ChatGPT for online users in exchange for their\naffirmative, consensual opt-in to anonymously collect their chat transcripts\nand request headers. From this, we compiled WildChat, a corpus of 1 million\nuser-ChatGPT conversations, which consists of over 2.5 million interaction\nturns. We compare WildChat with other popular user-chatbot interaction\ndatasets, and find that our dataset offers the most diverse user prompts,\ncontains the largest number of languages, and presents the richest variety of\npotentially toxic use-cases for researchers to study. In addition to\ntimestamped chat transcripts, we enrich the dataset with demographic data,\nincluding state, country, and hashed IP addresses, alongside request headers.\nThis augmentation allows for more detailed analysis of user behaviors across\ndifferent geographical regions and temporal dimensions. Finally, because it\ncaptures a broad range of use cases, we demonstrate the dataset's potential\nutility in fine-tuning instruction-following models. WildChat is released at\nhttps://wildchat.allen.ai under AI2 ImpACT Licenses.",
+      "upvotes": 59
+    },
+    {
+      "title": "StoryDiffusion: Consistent Self-Attention for Long-Range Image and Video Generation",
+      "url": "https://huggingface.co/papers/2405.01434",
+      "authors": [
+        "Jiashi Feng",
+        "Qibin Hou"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.01434.pdf",
+      "abstract": "For recent diffusion-based generative models, maintaining consistent content\nacross a series of generated images, especially those containing subjects and\ncomplex details, presents a significant challenge. In this paper, we propose a\nnew way of self-attention calculation, termed Consistent Self-Attention, that\nsignificantly boosts the consistency between the generated images and augments\nprevalent pretrained diffusion-based text-to-image models in a zero-shot\nmanner. To extend our method to long-range video generation, we further\nintroduce a novel semantic space temporal motion prediction module, named\nSemantic Motion Predictor. It is trained to estimate the motion conditions\nbetween two provided images in the semantic spaces. This module converts the\ngenerated sequence of images into videos with smooth transitions and consistent\nsubjects that are significantly more stable than the modules based on latent\nspaces only, especially in the context of long video generation. By merging\nthese two novel components, our framework, referred to as StoryDiffusion, can\ndescribe a text-based story with consistent images or videos encompassing a\nrich variety of contents. The proposed StoryDiffusion encompasses pioneering\nexplorations in visual story generation with the presentation of images and\nvideos, which we hope could inspire more research from the aspect of\narchitectural modifications. Our code is made publicly available at\nhttps://github.com/HVision-NKU/StoryDiffusion.",
+      "upvotes": 52
+    },
+    {
+      "title": "NeMo-Aligner: Scalable Toolkit for Efficient Model Alignment",
+      "url": "https://huggingface.co/papers/2405.01481",
+      "authors": [
+        "Yi Dong",
+        "Markel Sanz Ausin",
+        "Ashwath Aithal"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.01481.pdf",
+      "abstract": "Aligning Large Language Models (LLMs) with human values and preferences is\nessential for making them helpful and safe. However, building efficient tools\nto perform alignment can be challenging, especially for the largest and most\ncompetent LLMs which often contain tens or hundreds of billions of parameters.\nWe create NeMo-Aligner, a toolkit for model alignment that can efficiently\nscale to using hundreds of GPUs for training. NeMo-Aligner comes with highly\noptimized and scalable implementations for major paradigms of model alignment\nsuch as: Reinforcement Learning from Human Feedback (RLHF), Direct Preference\nOptimization (DPO), SteerLM, and Self-Play Fine-Tuning (SPIN). Additionally,\nour toolkit supports running most of the alignment techniques in a Parameter\nEfficient Fine-Tuning (PEFT) setting. NeMo-Aligner is designed for\nextensibility, allowing support for other alignment techniques with minimal\neffort. It is open-sourced with Apache 2.0 License and we invite community\ncontributions at https://github.com/NVIDIA/NeMo-Aligner",
+      "upvotes": 25
+    },
+    {
+      "title": "FLAME: Factuality-Aware Alignment for Large Language Models",
+      "url": "https://huggingface.co/papers/2405.01525",
+      "authors": [
+        "Wenhan Xiong",
+        "Jimmy Lin",
+        "Wen-tau Yih"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.01525.pdf",
+      "abstract": "Alignment is a standard procedure to fine-tune pre-trained large language\nmodels (LLMs) to follow natural language instructions and serve as helpful AI\nassistants. We have observed, however, that the conventional alignment process\nfails to enhance the factual accuracy of LLMs, and often leads to the\ngeneration of more false facts (i.e. hallucination). In this paper, we study\nhow to make the LLM alignment process more factual, by first identifying\nfactors that lead to hallucination in both alignment steps:\\ supervised\nfine-tuning (SFT) and reinforcement learning (RL). In particular, we find that\ntraining the LLM on new knowledge or unfamiliar texts can encourage\nhallucination. This makes SFT less factual as it trains on human labeled data\nthat may be novel to the LLM. Furthermore, reward functions used in standard RL\ncan also encourage hallucination, because it guides the LLM to provide more\nhelpful responses on a diverse set of instructions, often preferring longer and\nmore detailed responses. Based on these observations, we propose\nfactuality-aware alignment, comprised of factuality-aware SFT and\nfactuality-aware RL through direct preference optimization. Experiments show\nthat our proposed factuality-aware alignment guides LLMs to output more factual\nresponses while maintaining instruction-following capability.",
+      "upvotes": 24
+    },
+    {
+      "title": "Customizing Text-to-Image Models with a Single Image Pair",
+      "url": "https://huggingface.co/papers/2405.01536",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2405.01536.pdf",
+      "abstract": "Art reinterpretation is the practice of creating a variation of a reference\nwork, making a paired artwork that exhibits a distinct artistic style. We ask\nif such an image pair can be used to customize a generative model to capture\nthe demonstrated stylistic difference. We propose Pair Customization, a new\ncustomization method that learns stylistic difference from a single image pair\nand then applies the acquired style to the generation process. Unlike existing\nmethods that learn to mimic a single concept from a collection of images, our\nmethod captures the stylistic difference between paired images. This allows us\nto apply a stylistic change without overfitting to the specific image content\nin the examples. To address this new task, we employ a joint optimization\nmethod that explicitly separates the style and content into distinct LoRA\nweight spaces. We optimize these style and content weights to reproduce the\nstyle and content images while encouraging their orthogonality. During\ninference, we modify the diffusion process via a new style guidance based on\nour learned weights. Both qualitative and quantitative experiments show that\nour method can effectively learn style while avoiding overfitting to image\ncontent, highlighting the potential of modeling such stylistic differences from\na single image pair.",
+      "upvotes": 18
+    },
+    {
+      "title": "LLM-AD: Large Language Model based Audio Description System",
+      "url": "https://huggingface.co/papers/2405.00983",
+      "authors": [
+        "Peng Chu",
+        "Jiang Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.00983.pdf",
+      "abstract": "The development of Audio Description (AD) has been a pivotal step forward in\nmaking video content more accessible and inclusive. Traditionally, AD\nproduction has demanded a considerable amount of skilled labor, while existing\nautomated approaches still necessitate extensive training to integrate\nmultimodal inputs and tailor the output from a captioning style to an AD style.\nIn this paper, we introduce an automated AD generation pipeline that harnesses\nthe potent multimodal and instruction-following capacities of GPT-4V(ision).\nNotably, our methodology employs readily available components, eliminating the\nneed for additional training. It produces ADs that not only comply with\nestablished natural language AD production standards but also maintain\ncontextually consistent character information across frames, courtesy of a\ntracking-based character recognition module. A thorough analysis on the MAD\ndataset reveals that our approach achieves a performance on par with\nlearning-based methods in automated AD production, as substantiated by a CIDEr\nscore of 20.5.",
+      "upvotes": 16
+    }
+  ]
+}

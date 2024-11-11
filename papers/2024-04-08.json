@@ -1,0 +1,155 @@
+{
+  "date": "2024-04-08",
+  "papers": [
+    {
+      "title": "Direct Nash Optimization: Teaching Language Models to Self-Improve with General Preferences",
+      "url": "https://huggingface.co/papers/2404.03715",
+      "authors": [
+        "Ching-An Cheng",
+        "Arindam Mitra",
+        "Michael Santacroce",
+        "Ahmed Awadallah",
+        "Tengyang Xie"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.03715.pdf",
+      "abstract": "This paper studies post-training large language models (LLMs) using\npreference feedback from a powerful oracle to help a model iteratively improve\nover itself. The typical approach for post-training LLMs involves Reinforcement\nLearning from Human Feedback (RLHF), which traditionally separates reward\nlearning and subsequent policy optimization. However, such a reward\nmaximization approach is limited by the nature of \"point-wise\" rewards (such as\nBradley-Terry model), which fails to express complex intransitive or cyclic\npreference relations. While advances on RLHF show reward learning and policy\noptimization can be merged into a single contrastive objective for stability,\nthey yet still remain tethered to the reward maximization framework. Recently,\na new wave of research sidesteps the reward maximization presumptions in favor\nof directly optimizing over \"pair-wise\" or general preferences. In this paper,\nwe introduce Direct Nash Optimization (DNO), a provable and scalable algorithm\nthat marries the simplicity and stability of contrastive learning with\ntheoretical generality from optimizing general preferences. Because DNO is a\nbatched on-policy algorithm using a regression-based objective, its\nimplementation is straightforward and efficient. Moreover, DNO enjoys monotonic\nimprovement across iterations that help it improve even over a strong teacher\n(such as GPT-4). In our experiments, a resulting 7B parameter Orca-2.5 model\naligned by DNO achieves the state-of-the-art win-rate against GPT-4-Turbo of\n33% on AlpacaEval 2.0 (even after controlling for response length), an absolute\ngain of 26% (7% to 33%) over the initializing model. It outperforms models with\nfar more parameters, including Mistral Large, Self-Rewarding LM (70B\nparameters), and older versions of GPT-4.",
+      "upvotes": 60
+    },
+    {
+      "title": "No \"Zero-Shot\" Without Exponential Data: Pretraining Concept Frequency Determines Multimodal Model Performance",
+      "url": "https://huggingface.co/papers/2404.04125",
+      "authors": [
+        "Philip H. S. Torr",
+        "Adel Bibi",
+        "Samuel Albanie",
+        "Matthias Bethge"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.04125.pdf",
+      "abstract": "Web-crawled pretraining datasets underlie the impressive \"zero-shot\"\nevaluation performance of multimodal models, such as CLIP for\nclassification/retrieval and Stable-Diffusion for image generation. However, it\nis unclear how meaningful the notion of \"zero-shot\" generalization is for such\nmultimodal models, as it is not known to what extent their pretraining datasets\nencompass the downstream concepts targeted for during \"zero-shot\" evaluation.\nIn this work, we ask: How is the performance of multimodal models on downstream\nconcepts influenced by the frequency of these concepts in their pretraining\ndatasets? We comprehensively investigate this question across 34 models and\nfive standard pretraining datasets (CC-3M, CC-12M, YFCC-15M, LAION-400M,\nLAION-Aesthetics), generating over 300GB of data artifacts. We consistently\nfind that, far from exhibiting \"zero-shot\" generalization, multimodal models\nrequire exponentially more data to achieve linear improvements in downstream\n\"zero-shot\" performance, following a sample inefficient log-linear scaling\ntrend. This trend persists even when controlling for sample-level similarity\nbetween pretraining and downstream datasets, and testing on purely synthetic\ndata distributions. Furthermore, upon benchmarking models on long-tailed data\nsampled based on our analysis, we demonstrate that multimodal models across the\nboard perform poorly. We contribute this long-tail test set as the \"Let it\nWag!\" benchmark to further research in this direction. Taken together, our\nstudy reveals an exponential need for training data which implies that the key\nto \"zero-shot\" generalization capabilities under large-scale training paradigms\nremains to be found.",
+      "upvotes": 27
+    },
+    {
+      "title": "CantTalkAboutThis: Aligning Language Models to Stay on Topic in Dialogues",
+      "url": "https://huggingface.co/papers/2404.03820",
+      "authors": [
+        "Makesh Narsimhan Sreedhar",
+        "Shaona Ghosh",
+        "Christopher Parisien"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.03820.pdf",
+      "abstract": "Recent advancements in instruction-tuning datasets have predominantly focused\non specific tasks like mathematical or logical reasoning. There has been a\nnotable gap in data designed for aligning language models to maintain topic\nrelevance in conversations - a critical aspect for deploying chatbots to\nproduction. We introduce the CantTalkAboutThis dataset to help language models\nremain focused on the subject at hand during task-oriented interactions. It\nconsists of synthetic dialogues on a wide range of conversation topics from\ndifferent domains. These dialogues are interspersed with distractor turns that\nintentionally divert the chatbot from the predefined topic. Fine-tuning\nlanguage models on this dataset helps make them resilient to deviating from the\nrole assigned and improves their ability to maintain topical coherence compared\nto general-purpose instruction-tuned LLMs like GPT-4-turbo and\nMixtral-Instruct. Additionally, preliminary observations suggest that training\nmodels on this dataset also enhance their performance on fine-grained\ninstruction following tasks.",
+      "upvotes": 24
+    },
+    {
+      "title": "AutoWebGLM: Bootstrap And Reinforce A Large Language Model-based Web Navigating Agent",
+      "url": "https://huggingface.co/papers/2404.03648",
+      "authors": [
+        "Hanyu Lai",
+        "Iat Long Iong",
+        "Shuntian Yao",
+        "Yuxuan Chen",
+        "Pengbo Shen",
+        "Hao Yu",
+        "Hanchen Zhang",
+        "Xiaohan Zhang",
+        "Yuxiao Dong",
+        "Jie Tang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.03648.pdf",
+      "abstract": "Large language models (LLMs) have fueled many intelligent agent tasks, such\nas web navigation -- but most existing agents perform far from satisfying in\nreal-world webpages due to three factors: (1) the versatility of actions on\nwebpages, (2) HTML text exceeding model processing capacity, and (3) the\ncomplexity of decision-making due to the open-domain nature of web. In light of\nthe challenge, we develop AutoWebGLM, a GPT-4-outperforming automated web\nnavigation agent built upon ChatGLM3-6B. Inspired by human browsing patterns,\nwe design an HTML simplification algorithm to represent webpages, preserving\nvital information succinctly. We employ a hybrid human-AI method to build web\nbrowsing data for curriculum training. Then, we bootstrap the model by\nreinforcement learning and rejection sampling to further facilitate webpage\ncomprehension, browser operations, and efficient task decomposition by itself.\nFor testing, we establish a bilingual benchmark -- AutoWebBench -- for\nreal-world web browsing tasks. We evaluate AutoWebGLM across diverse web\nnavigation benchmarks, revealing its improvements but also underlying\nchallenges to tackle real environments. Related code, model, and data will be\nreleased at https://github.com/THUDM/AutoWebGLM.",
+      "upvotes": 24
+    },
+    {
+      "title": "Stream of Search (SoS): Learning to Search in Language",
+      "url": "https://huggingface.co/papers/2404.03683",
+      "authors": [
+        "Denise Lee",
+        "Gabriel Grand",
+        "Muxin Liu",
+        "Winson Cheng",
+        "Archit Sharma",
+        "Noah D. Goodman"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.03683.pdf",
+      "abstract": "Language models are rarely shown fruitful mistakes while training. They then\nstruggle to look beyond the next token, suffering from a snowballing of errors\nand struggling to predict the consequence of their actions several steps ahead.\nIn this paper, we show how language models can be taught to search by\nrepresenting the process of search in language, as a flattened string -- a\nstream of search (SoS). We propose a unified language for search that captures\nan array of different symbolic search strategies. We demonstrate our approach\nusing the simple yet difficult game of Countdown, where the goal is to combine\ninput numbers with arithmetic operations to reach a target number. We pretrain\na transformer-based language model from scratch on a dataset of streams of\nsearch generated by heuristic solvers. We find that SoS pretraining increases\nsearch accuracy by 25% over models trained to predict only the optimal search\ntrajectory. We further finetune this model with two policy improvement methods:\nAdvantage-Induced Policy Alignment (APA) and Self-Taught Reasoner (STaR). The\nfinetuned SoS models solve 36% of previously unsolved problems, including\nproblems that cannot be solved by any of the heuristic solvers. Our results\nindicate that language models can learn to solve problems via search,\nself-improve to flexibly use different search strategies, and potentially\ndiscover new ones.",
+      "upvotes": 23
+    },
+    {
+      "title": "Social Skill Training with Large Language Models",
+      "url": "https://huggingface.co/papers/2404.04204",
+      "authors": [
+        "Diyi Yang",
+        "Caleb Ziems",
+        "Omar Shaikh",
+        "Michael S. Bernstein",
+        "John Mitchell"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.04204.pdf",
+      "abstract": "People rely on social skills like conflict resolution to communicate\neffectively and to thrive in both work and personal life. However, practice\nenvironments for social skills are typically out of reach for most people. How\ncan we make social skill training more available, accessible, and inviting?\nDrawing upon interdisciplinary research from communication and psychology, this\nperspective paper identifies social skill barriers to enter specialized fields.\nThen we present a solution that leverages large language models for social\nskill training via a generic framework. Our AI Partner, AI Mentor framework\nmerges experiential learning with realistic practice and tailored feedback.\nThis work ultimately calls for cross-disciplinary innovation to address the\nbroader implications for workforce development and social equality.",
+      "upvotes": 15
+    },
+    {
+      "title": "RL for Consistency Models: Faster Reward Guided Text-to-Image Generation",
+      "url": "https://huggingface.co/papers/2404.03673",
+      "authors": [
+        "Jonathan D. Chang",
+        "Yiyi Zhang",
+        "Kianté Brantley",
+        "Wen Sun"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.03673.pdf",
+      "abstract": "Reinforcement learning (RL) has improved guided image generation with\ndiffusion models by directly optimizing rewards that capture image quality,\naesthetics, and instruction following capabilities. However, the resulting\ngenerative policies inherit the same iterative sampling process of diffusion\nmodels that causes slow generation. To overcome this limitation, consistency\nmodels proposed learning a new class of generative models that directly map\nnoise to data, resulting in a model that can generate an image in as few as one\nsampling iteration. In this work, to optimize text-to-image generative models\nfor task specific rewards and enable fast training and inference, we propose a\nframework for fine-tuning consistency models via RL. Our framework, called\nReinforcement Learning for Consistency Model (RLCM), frames the iterative\ninference process of a consistency model as an RL procedure. RLCM improves upon\nRL fine-tuned diffusion models on text-to-image generation capabilities and\ntrades computation during inference time for sample quality. Experimentally, we\nshow that RLCM can adapt text-to-image consistency models to objectives that\nare challenging to express with prompting, such as image compressibility, and\nthose derived from human feedback, such as aesthetic quality. Comparing to RL\nfinetuned diffusion models, RLCM trains significantly faster, improves the\nquality of the generation measured under the reward objectives, and speeds up\nthe inference procedure by generating high quality images with as few as two\ninference steps. Our code is available at https://rlcm.owenoertell.com",
+      "upvotes": 14
+    },
+    {
+      "title": "Chinese Tiny LLM: Pretraining a Chinese-Centric Large Language Model",
+      "url": "https://huggingface.co/papers/2404.04167",
+      "authors": [
+        "Xinrun Du",
+        "Zhouliang Yu",
+        "Songyang Gao",
+        "Ding Pan",
+        "Yuyang Cheng",
+        "Ziyang Ma",
+        "Ruibin Yuan",
+        "Xingwei Qu",
+        "Jiaheng Liu",
+        "Xinchen Luo",
+        "Guorui Zhou",
+        "Binhang Yuan",
+        "Wenhu Chen",
+        "Jie Fu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.04167.pdf",
+      "abstract": "In this study, we introduce CT-LLM, a 2B large language model (LLM) that\nillustrates a pivotal shift towards prioritizing the Chinese language in\ndeveloping LLMs. Uniquely initiated from scratch, CT-LLM diverges from the\nconventional methodology by primarily incorporating Chinese textual data,\nutilizing an extensive corpus of 1,200 billion tokens, including 800 billion\nChinese tokens, 300 billion English tokens, and 100 billion code tokens. This\nstrategic composition facilitates the model's exceptional proficiency in\nunderstanding and processing Chinese, a capability further enhanced through\nalignment techniques. Demonstrating remarkable performance on the CHC-Bench,\nCT-LLM excels in Chinese language tasks, and showcases its adeptness in English\nthrough SFT. This research challenges the prevailing paradigm of training LLMs\npredominantly on English corpora and then adapting them to other languages,\nbroadening the horizons for LLM training methodologies. By open-sourcing the\nfull process of training a Chinese LLM, including a detailed data processing\nprocedure with the obtained Massive Appropriate Pretraining Chinese Corpus\n(MAP-CC), a well-chosen multidisciplinary Chinese Hard Case Benchmark\n(CHC-Bench), and the 2B-size Chinese Tiny LLM (CT-LLM), we aim to foster\nfurther exploration and innovation in both academia and industry, paving the\nway for more inclusive and versatile language models.",
+      "upvotes": 12
+    },
+    {
+      "title": "Robust Gaussian Splatting",
+      "url": "https://huggingface.co/papers/2404.04211",
+      "authors": [
+        "François Darmon",
+        "Lorenzo Porzi",
+        "Samuel Rota-Bulò",
+        "Peter Kontschieder"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.04211.pdf",
+      "abstract": "In this paper, we address common error sources for 3D Gaussian Splatting\n(3DGS) including blur, imperfect camera poses, and color inconsistencies, with\nthe goal of improving its robustness for practical applications like\nreconstructions from handheld phone captures. Our main contribution involves\nmodeling motion blur as a Gaussian distribution over camera poses, allowing us\nto address both camera pose refinement and motion blur correction in a unified\nway. Additionally, we propose mechanisms for defocus blur compensation and for\naddressing color in-consistencies caused by ambient light, shadows, or due to\ncamera-related factors like varying white balancing settings. Our proposed\nsolutions integrate in a seamless way with the 3DGS formulation while\nmaintaining its benefits in terms of training efficiency and rendering speed.\nWe experimentally validate our contributions on relevant benchmark datasets\nincluding Scannet++ and Deblur-NeRF, obtaining state-of-the-art results and\nthus consistent improvements over relevant baselines.",
+      "upvotes": 8
+    },
+    {
+      "title": "Sigma: Siamese Mamba Network for Multi-Modal Semantic Segmentation",
+      "url": "https://huggingface.co/papers/2404.04256",
+      "authors": [
+        "Zifu Wan",
+        "Yuhao Wang",
+        "Silong Yong",
+        "Pingping Zhang",
+        "Katia Sycara"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.04256.pdf",
+      "abstract": "Multi-modal semantic segmentation significantly enhances AI agents'\nperception and scene understanding, especially under adverse conditions like\nlow-light or overexposed environments. Leveraging additional modalities\n(X-modality) like thermal and depth alongside traditional RGB provides\ncomplementary information, enabling more robust and reliable segmentation. In\nthis work, we introduce Sigma, a Siamese Mamba network for multi-modal semantic\nsegmentation, utilizing the Selective Structured State Space Model, Mamba.\nUnlike conventional methods that rely on CNNs, with their limited local\nreceptive fields, or Vision Transformers (ViTs), which offer global receptive\nfields at the cost of quadratic complexity, our model achieves global receptive\nfields coverage with linear complexity. By employing a Siamese encoder and\ninnovating a Mamba fusion mechanism, we effectively select essential\ninformation from different modalities. A decoder is then developed to enhance\nthe channel-wise modeling ability of the model. Our method, Sigma, is\nrigorously evaluated on both RGB-Thermal and RGB-Depth segmentation tasks,\ndemonstrating its superiority and marking the first successful application of\nState Space Models (SSMs) in multi-modal perception tasks. Code is available at\nhttps://github.com/zifuwan/Sigma.",
+      "upvotes": 5
+    }
+  ]
+}

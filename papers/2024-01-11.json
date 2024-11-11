@@ -1,0 +1,103 @@
+{
+  "date": "2024-01-11",
+  "papers": [
+    {
+      "title": "PIXART-δ: Fast and Controllable Image Generation with Latent Consistency Models",
+      "url": "https://huggingface.co/papers/2401.05252",
+      "authors": [
+        "Yue Wu",
+        "Ping Luo"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.05252.pdf",
+      "abstract": "This technical report introduces PIXART-{\\delta}, a text-to-image synthesis\nframework that integrates the Latent Consistency Model (LCM) and ControlNet\ninto the advanced PIXART-{\\alpha} model. PIXART-{\\alpha} is recognized for its\nability to generate high-quality images of 1024px resolution through a\nremarkably efficient training process. The integration of LCM in\nPIXART-{\\delta} significantly accelerates the inference speed, enabling the\nproduction of high-quality images in just 2-4 steps. Notably, PIXART-{\\delta}\nachieves a breakthrough 0.5 seconds for generating 1024x1024 pixel images,\nmarking a 7x improvement over the PIXART-{\\alpha}. Additionally,\nPIXART-{\\delta} is designed to be efficiently trainable on 32GB V100 GPUs\nwithin a single day. With its 8-bit inference capability (von Platen et al.,\n2023), PIXART-{\\delta} can synthesize 1024px images within 8GB GPU memory\nconstraints, greatly enhancing its usability and accessibility. Furthermore,\nincorporating a ControlNet-like module enables fine-grained control over\ntext-to-image diffusion models. We introduce a novel ControlNet-Transformer\narchitecture, specifically tailored for Transformers, achieving explicit\ncontrollability alongside high-quality image generation. As a state-of-the-art,\nopen-source image generation model, PIXART-{\\delta} offers a promising\nalternative to the Stable Diffusion family of models, contributing\nsignificantly to text-to-image synthesis.",
+      "upvotes": 47
+    },
+    {
+      "title": "InseRF: Text-Driven Generative Object Insertion in Neural 3D Scenes",
+      "url": "https://huggingface.co/papers/2401.05335",
+      "authors": [
+        "Mohamad Shahbazi",
+        "Edo Collins",
+        "Luc Van Gool",
+        "Federico Tombari"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.05335.pdf",
+      "abstract": "We introduce InseRF, a novel method for generative object insertion in the\nNeRF reconstructions of 3D scenes. Based on a user-provided textual description\nand a 2D bounding box in a reference viewpoint, InseRF generates new objects in\n3D scenes. Recently, methods for 3D scene editing have been profoundly\ntransformed, owing to the use of strong priors of text-to-image diffusion\nmodels in 3D generative modeling. Existing methods are mostly effective in\nediting 3D scenes via style and appearance changes or removing existing\nobjects. Generating new objects, however, remains a challenge for such methods,\nwhich we address in this study. Specifically, we propose grounding the 3D\nobject insertion to a 2D object insertion in a reference view of the scene. The\n2D edit is then lifted to 3D using a single-view object reconstruction method.\nThe reconstructed object is then inserted into the scene, guided by the priors\nof monocular depth estimation methods. We evaluate our method on various 3D\nscenes and provide an in-depth analysis of the proposed components. Our\nexperiments with generative insertion of objects in several 3D scenes indicate\nthe effectiveness of our method compared to the existing methods. InseRF is\ncapable of controllable and 3D-consistent object insertion without requiring\nexplicit 3D information as input. Please visit our project page at\nhttps://mohamad-shahbazi.github.io/inserf.",
+      "upvotes": 27
+    },
+    {
+      "title": "URHand: Universal Relightable Hands",
+      "url": "https://huggingface.co/papers/2401.05334",
+      "authors": [
+        "Gyeongsik Moon",
+        "Kaiwen Guo",
+        "Chen Cao",
+        "Stanislav Pidhorskyi",
+        "Tomas Simon",
+        "Rohan Joshi",
+        "Yuan Dong",
+        "Yichen Xu",
+        "Bernardo Pires",
+        "He Wen",
+        "Lucas Evans",
+        "Bo Peng",
+        "Julia Buffalini",
+        "Autumn Trimble",
+        "Kevyn McPhail",
+        "Melissa Schoeller",
+        "Shoou-I Yu",
+        "Javier Romero",
+        "Michael Zollhöfer",
+        "Yaser Sheikh"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.05334.pdf",
+      "abstract": "Existing photorealistic relightable hand models require extensive\nidentity-specific observations in different views, poses, and illuminations,\nand face challenges in generalizing to natural illuminations and novel\nidentities. To bridge this gap, we present URHand, the first universal\nrelightable hand model that generalizes across viewpoints, poses,\nilluminations, and identities. Our model allows few-shot personalization using\nimages captured with a mobile phone, and is ready to be photorealistically\nrendered under novel illuminations. To simplify the personalization process\nwhile retaining photorealism, we build a powerful universal relightable prior\nbased on neural relighting from multi-view images of hands captured in a light\nstage with hundreds of identities. The key challenge is scaling the\ncross-identity training while maintaining personalized fidelity and sharp\ndetails without compromising generalization under natural illuminations. To\nthis end, we propose a spatially varying linear lighting model as the neural\nrenderer that takes physics-inspired shading as input feature. By removing\nnon-linear activations and bias, our specifically designed lighting model\nexplicitly keeps the linearity of light transport. This enables single-stage\ntraining from light-stage data while generalizing to real-time rendering under\narbitrary continuous illuminations across diverse identities. In addition, we\nintroduce the joint learning of a physically based model and our neural\nrelighting model, which further improves fidelity and generalization. Extensive\nexperiments show that our approach achieves superior performance over existing\nmethods in terms of both quality and generalizability. We also demonstrate\nquick personalization of URHand from a short phone scan of an unseen identity.",
+      "upvotes": 22
+    },
+    {
+      "title": "The Impact of Reasoning Step Length on Large Language Models",
+      "url": "https://huggingface.co/papers/2401.04925",
+      "authors": [
+        "Qinkai Yu",
+        "Dong shu",
+        "Haiyan Zhao",
+        "Mengnan Du"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.04925.pdf",
+      "abstract": "Chain of Thought (CoT) is significant in improving the reasoning abilities of\nlarge language models (LLMs). However, the correlation between the\neffectiveness of CoT and the length of reasoning steps in prompts remains\nlargely unknown. To shed light on this, we have conducted several empirical\nexperiments to explore the relations. Specifically, we design experiments that\nexpand and compress the rationale reasoning steps within CoT demonstrations,\nwhile keeping all other factors constant. We have the following key findings.\nFirst, the results indicate that lengthening the reasoning steps in prompts,\neven without adding new information into the prompt, considerably enhances\nLLMs' reasoning abilities across multiple datasets. Alternatively, shortening\nthe reasoning steps, even while preserving the key information, significantly\ndiminishes the reasoning abilities of models. This finding highlights the\nimportance of the number of steps in CoT prompts and provides practical\nguidance to make better use of LLMs' potential in complex problem-solving\nscenarios. Second, we also investigated the relationship between the\nperformance of CoT and the rationales used in demonstrations. Surprisingly, the\nresult shows that even incorrect rationales can yield favorable outcomes if\nthey maintain the requisite length of inference. Third, we observed that the\nadvantages of increasing reasoning steps are task-dependent: simpler tasks\nrequire fewer steps, whereas complex tasks gain significantly from longer\ninference sequences.",
+      "upvotes": 16
+    },
+    {
+      "title": "Bootstrapping LLM-based Task-Oriented Dialogue Agents via Self-Talk",
+      "url": "https://huggingface.co/papers/2401.05033",
+      "authors": [
+        "Justin Sun",
+        "Xibin Gao",
+        "Yi Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.05033.pdf",
+      "abstract": "Large language models (LLMs) are powerful dialogue agents, but specializing\nthem towards fulfilling a specific function can be challenging. Instructing\ntuning, i.e. tuning models on instruction and sample responses generated by\nhumans (Ouyang et al., 2022), has proven as an effective method to do so, yet\nrequires a number of data samples that a) might not be available or b) costly\nto generate. Furthermore, this cost increases when the goal is to make the LLM\nfollow a specific workflow within a dialogue instead of single instructions.\nInspired by the self-play technique in reinforcement learning and the use of\nLLMs to simulate human agents, we propose a more effective method for data\ncollection through LLMs engaging in a conversation in various roles. This\napproach generates a training data via \"self-talk\" of LLMs that can be refined\nand utilized for supervised fine-tuning. We introduce an automated way to\nmeasure the (partial) success of a dialogue. This metric is used to filter the\ngenerated conversational data that is fed back in LLM for training. Based on\nour automated and human evaluations of conversation quality, we demonstrate\nthat such self-talk data improves results. In addition, we examine the various\ncharacteristics that showcase the quality of generated dialogues and how they\ncan be connected to their potential utility as training data.",
+      "upvotes": 16
+    },
+    {
+      "title": "ANIM-400K: A Large-Scale Dataset for Automated End-To-End Dubbing of Video",
+      "url": "https://huggingface.co/papers/2401.05314",
+      "authors": [
+        "Kevin Cai"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.05314.pdf",
+      "abstract": "The Internet's wealth of content, with up to 60% published in English,\nstarkly contrasts the global population, where only 18.8% are English speakers,\nand just 5.1% consider it their native language, leading to disparities in\nonline information access. Unfortunately, automated processes for dubbing of\nvideo - replacing the audio track of a video with a translated alternative -\nremains a complex and challenging task due to pipelines, necessitating precise\ntiming, facial movement synchronization, and prosody matching. While end-to-end\ndubbing offers a solution, data scarcity continues to impede the progress of\nboth end-to-end and pipeline-based methods. In this work, we introduce\nAnim-400K, a comprehensive dataset of over 425K aligned animated video segments\nin Japanese and English supporting various video-related tasks, including\nautomated dubbing, simultaneous translation, guided video summarization, and\ngenre/theme/style classification. Our dataset is made publicly available for\nresearch purposes at https://github.com/davidmchan/Anim400K.",
+      "upvotes": 9
+    },
+    {
+      "title": "Score Distillation Sampling with Learned Manifold Corrective",
+      "url": "https://huggingface.co/papers/2401.05293",
+      "authors": [
+        "Cristian Sminchisescu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.05293.pdf",
+      "abstract": "Score Distillation Sampling (SDS) is a recent but already widely popular\nmethod that relies on an image diffusion model to control optimization problems\nusing text prompts. In this paper, we conduct an in-depth analysis of the SDS\nloss function, identify an inherent problem with its formulation, and propose a\nsurprisingly easy but effective fix. Specifically, we decompose the loss into\ndifferent factors and isolate the component responsible for noisy gradients. In\nthe original formulation, high text guidance is used to account for the noise,\nleading to unwanted side effects. Instead, we train a shallow network mimicking\nthe timestep-dependent denoising deficiency of the image diffusion model in\norder to effectively factor it out. We demonstrate the versatility and the\neffectiveness of our novel loss formulation through several qualitative and\nquantitative experiments, including optimization-based image synthesis and\nediting, zero-shot image translation network training, and text-to-3D\nsynthesis.",
+      "upvotes": 8
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "date": "2024-06-05",
+  "papers": [
+    {
+      "title": "To Believe or Not to Believe Your LLM",
+      "url": "https://huggingface.co/papers/2406.02543",
+      "authors": [
+        "Yasin Abbasi Yadkori",
+        "Ilja Kuzborskij",
+        "András György",
+        "Csaba Szepesvári"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.02543.pdf",
+      "abstract": "We explore uncertainty quantification in large language models (LLMs), with\nthe goal to identify when uncertainty in responses given a query is large. We\nsimultaneously consider both epistemic and aleatoric uncertainties, where the\nformer comes from the lack of knowledge about the ground truth (such as about\nfacts or the language), and the latter comes from irreducible randomness (such\nas multiple possible answers). In particular, we derive an\ninformation-theoretic metric that allows to reliably detect when only epistemic\nuncertainty is large, in which case the output of the model is unreliable. This\ncondition can be computed based solely on the output of the model obtained\nsimply by some special iterative prompting based on the previous responses.\nSuch quantification, for instance, allows to detect hallucinations (cases when\nepistemic uncertainty is high) in both single- and multi-answer responses. This\nis in contrast to many standard uncertainty quantification strategies (such as\nthresholding the log-likelihood of a response) where hallucinations in the\nmulti-answer case cannot be detected. We conduct a series of experiments which\ndemonstrate the advantage of our formulation. Further, our investigations shed\nsome light on how the probabilities assigned to a given output by an LLM can be\namplified by iterative prompting, which might be of independent interest.",
+      "upvotes": 31
+    },
+    {
+      "title": "Seed-TTS: A Family of High-Quality Versatile Speech Generation Models",
+      "url": "https://huggingface.co/papers/2406.02430",
+      "authors": [
+        "Jiawei Chen",
+        "Jitong Chen",
+        "Zhuo Chen",
+        "Ziyi Chen",
+        "Jian Cong",
+        "Lelai Deng",
+        "Chuang Ding",
+        "Lu Gao",
+        "Mingqing Gong",
+        "Qingqing Huang",
+        "Zhiying Huang",
+        "Dongya Jia",
+        "Chumin Li",
+        "Feiya Li",
+        "Hui Li",
+        "Jiaxin Li",
+        "Xiaoyang Li",
+        "Xingxing Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.02430.pdf",
+      "abstract": "We introduce Seed-TTS, a family of large-scale autoregressive text-to-speech\n(TTS) models capable of generating speech that is virtually indistinguishable\nfrom human speech. Seed-TTS serves as a foundation model for speech generation\nand excels in speech in-context learning, achieving performance in speaker\nsimilarity and naturalness that matches ground truth human speech in both\nobjective and subjective evaluations. With fine-tuning, we achieve even higher\nsubjective scores across these metrics. Seed-TTS offers superior\ncontrollability over various speech attributes such as emotion and is capable\nof generating highly expressive and diverse speech for speakers in the wild.\nFurthermore, we propose a self-distillation method for speech factorization, as\nwell as a reinforcement learning approach to enhance model robustness, speaker\nsimilarity, and controllability. We additionally present a non-autoregressive\n(NAR) variant of the Seed-TTS model, named Seed-TTS_DiT, which\nutilizes a fully diffusion-based architecture. Unlike previous NAR-based TTS\nsystems, Seed-TTS_DiT does not depend on pre-estimated phoneme\ndurations and performs speech generation through end-to-end processing. We\ndemonstrate that this variant achieves comparable performance to the language\nmodel-based variant and showcase its effectiveness in speech editing. We\nencourage readers to listen to demos at\nhttps://bytedancespeech.github.io/seedtts_tech_report.",
+      "upvotes": 29
+    },
+    {
+      "title": "Self-Improving Robust Preference Optimization",
+      "url": "https://huggingface.co/papers/2406.01660",
+      "authors": [
+        "Matthieu Geist",
+        "Oilvier Pietquin",
+        "Mohammad Gheshlaghi Azar"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.01660.pdf",
+      "abstract": "Both online and offline RLHF methods such as PPO and DPO have been extremely\nsuccessful in aligning AI with human preferences. Despite their success, the\nexisting methods suffer from a fundamental problem that their optimal solution\nis highly task-dependent (i.e., not robust to out-of-distribution (OOD) tasks).\nHere we address this challenge by proposing Self-Improving Robust Preference\nOptimization SRPO, a practical and mathematically principled offline RLHF\nframework that is completely robust to the changes in the task. The key idea of\nSRPO is to cast the problem of learning from human preferences as a\nself-improvement process, which can be mathematically expressed in terms of a\nmin-max objective that aims at joint optimization of self-improvement policy\nand the generative policy in an adversarial fashion. The solution for this\noptimization problem is independent of the training task and thus it is robust\nto its changes. We then show that this objective can be re-expressed in the\nform of a non-adversarial offline loss which can be optimized using standard\nsupervised optimization techniques at scale without any need for reward model\nand online inference. We show the effectiveness of SRPO in terms of AI Win-Rate\n(WR) against human (GOLD) completions. In particular, when SRPO is evaluated on\nthe OOD XSUM dataset, it outperforms the celebrated DPO by a clear margin of\n15% after 5 self-revisions, achieving WR of 90%.",
+      "upvotes": 18
+    },
+    {
+      "title": "Guiding a Diffusion Model with a Bad Version of Itself",
+      "url": "https://huggingface.co/papers/2406.02507",
+      "authors": [
+        "Jaakko Lehtinen",
+        "Timo Aila",
+        "Samuli Laine"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.02507.pdf",
+      "abstract": "The primary axes of interest in image-generating diffusion models are image\nquality, the amount of variation in the results, and how well the results align\nwith a given condition, e.g., a class label or a text prompt. The popular\nclassifier-free guidance approach uses an unconditional model to guide a\nconditional model, leading to simultaneously better prompt alignment and\nhigher-quality images at the cost of reduced variation. These effects seem\ninherently entangled, and thus hard to control. We make the surprising\nobservation that it is possible to obtain disentangled control over image\nquality without compromising the amount of variation by guiding generation\nusing a smaller, less-trained version of the model itself rather than an\nunconditional model. This leads to significant improvements in ImageNet\ngeneration, setting record FIDs of 1.01 for 64x64 and 1.25 for 512x512, using\npublicly available networks. Furthermore, the method is also applicable to\nunconditional diffusion models, drastically improving their quality.",
+      "upvotes": 15
+    },
+    {
+      "title": "I4VGen: Image as Stepping Stone for Text-to-Video Generation",
+      "url": "https://huggingface.co/papers/2406.02230",
+      "authors": [
+        "Jinlin Liu",
+        "Di Huang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.02230.pdf",
+      "abstract": "Text-to-video generation has lagged behind text-to-image synthesis in quality\nand diversity due to the complexity of spatio-temporal modeling and limited\nvideo-text datasets. This paper presents I4VGen, a training-free and\nplug-and-play video diffusion inference framework, which enhances text-to-video\ngeneration by leveraging robust image techniques. Specifically, following\ntext-to-image-to-video, I4VGen decomposes the text-to-video generation into two\nstages: anchor image synthesis and anchor image-guided video synthesis.\nCorrespondingly, a well-designed generation-selection pipeline is employed to\nachieve visually-realistic and semantically-faithful anchor image, and an\ninnovative Noise-Invariant Video Score Distillation Sampling is incorporated to\nanimate the image to a dynamic video, followed by a video regeneration process\nto refine the video. This inference strategy effectively mitigates the\nprevalent issue of non-zero terminal signal-to-noise ratio. Extensive\nevaluations show that I4VGen not only produces videos with higher visual\nrealism and textual fidelity but also integrates seamlessly into existing\nimage-to-video diffusion models, thereby improving overall video quality.",
+      "upvotes": 15
+    },
+    {
+      "title": "RoboCasa: Large-Scale Simulation of Everyday Tasks for Generalist Robots",
+      "url": "https://huggingface.co/papers/2406.02523",
+      "authors": [
+        "Soroush Nasiriany",
+        "Adeet Parikh",
+        "Aaron Lo",
+        "Abhishek Joshi",
+        "Yuke Zhu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.02523.pdf",
+      "abstract": "Recent advancements in Artificial Intelligence (AI) have largely been\npropelled by scaling. In Robotics, scaling is hindered by the lack of access to\nmassive robot datasets. We advocate using realistic physical simulation as a\nmeans to scale environments, tasks, and datasets for robot learning methods. We\npresent RoboCasa, a large-scale simulation framework for training generalist\nrobots in everyday environments. RoboCasa features realistic and diverse scenes\nfocusing on kitchen environments. We provide thousands of 3D assets across over\n150 object categories and dozens of interactable furniture and appliances. We\nenrich the realism and diversity of our simulation with generative AI tools,\nsuch as object assets from text-to-3D models and environment textures from\ntext-to-image models. We design a set of 100 tasks for systematic evaluation,\nincluding composite tasks generated by the guidance of large language models.\nTo facilitate learning, we provide high-quality human demonstrations and\nintegrate automated trajectory generation methods to substantially enlarge our\ndatasets with minimal human burden. Our experiments show a clear scaling trend\nin using synthetically generated robot data for large-scale imitation learning\nand show great promise in harnessing simulation data in real-world tasks.\nVideos and open-source code are available at https://robocasa.ai/",
+      "upvotes": 9
+    },
+    {
+      "title": "V-Express: Conditional Dropout for Progressive Training of Portrait Video Generation",
+      "url": "https://huggingface.co/papers/2406.02511",
+      "authors": [
+        "Cong Wang",
+        "Kuan Tian",
+        "Jun Zhang",
+        "Yonghang Guan",
+        "Feng Luo",
+        "Fei Shen",
+        "Qing Gu",
+        "Xiao Han",
+        "Wei Yang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.02511.pdf",
+      "abstract": "In the field of portrait video generation, the use of single images to\ngenerate portrait videos has become increasingly prevalent. A common approach\ninvolves leveraging generative models to enhance adapters for controlled\ngeneration. However, control signals (e.g., text, audio, reference image, pose,\ndepth map, etc.) can vary in strength. Among these, weaker conditions often\nstruggle to be effective due to interference from stronger conditions, posing a\nchallenge in balancing these conditions. In our work on portrait video\ngeneration, we identified audio signals as particularly weak, often\novershadowed by stronger signals such as facial pose and reference image.\nHowever, direct training with weak signals often leads to difficulties in\nconvergence. To address this, we propose V-Express, a simple method that\nbalances different control signals through the progressive training and the\nconditional dropout operation. Our method gradually enables effective control\nby weak conditions, thereby achieving generation capabilities that\nsimultaneously take into account the facial pose, reference image, and audio.\nThe experimental results demonstrate that our method can effectively generate\nportrait videos controlled by audio. Furthermore, a potential solution is\nprovided for the simultaneous and effective use of conditions of varying\nstrengths.",
+      "upvotes": 8
+    },
+    {
+      "title": "CamCo: Camera-Controllable 3D-Consistent Image-to-Video Generation",
+      "url": "https://huggingface.co/papers/2406.02509",
+      "authors": [
+        "Jan Kautz",
+        "Zhangyang Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.02509.pdf",
+      "abstract": "Recently video diffusion models have emerged as expressive generative tools\nfor high-quality video content creation readily available to general users.\nHowever, these models often do not offer precise control over camera poses for\nvideo generation, limiting the expression of cinematic language and user\ncontrol. To address this issue, we introduce CamCo, which allows fine-grained\nCamera pose Control for image-to-video generation. We equip a pre-trained\nimage-to-video generator with accurately parameterized camera pose input using\nPl\\\"ucker coordinates. To enhance 3D consistency in the videos produced, we\nintegrate an epipolar attention module in each attention block that enforces\nepipolar constraints to the feature maps. Additionally, we fine-tune CamCo on\nreal-world videos with camera poses estimated through structure-from-motion\nalgorithms to better synthesize object motion. Our experiments show that CamCo\nsignificantly improves 3D consistency and camera control capabilities compared\nto previous models while effectively generating plausible object motion.\nProject page: https://ir1d.github.io/CamCo/",
+      "upvotes": 8
+    }
+  ]
+}

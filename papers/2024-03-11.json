@@ -1,0 +1,118 @@
+{
+  "date": "2024-03-11",
+  "papers": [
+    {
+      "title": "Gemini 1.5: Unlocking multimodal understanding across millions of tokens of context",
+      "url": "https://huggingface.co/papers/2403.05530",
+      "authors": [
+        "Denis Teplyashin",
+        "Dmitry Lepikhin",
+        "Timothy Lillicrap",
+        "Radu Soricut",
+        "Angeliki Lazaridou",
+        "Orhan Firat",
+        "Julian Schrittwieser",
+        "Ioannis Antonoglou",
+        "Rohan Anil",
+        "Sebastian Borgeaud",
+        "Katie Millican",
+        "Ethan Dyer",
+        "Mia Glaese",
+        "Thibault Sottiaux",
+        "Benjamin Lee",
+        "Fabio Viola",
+        "Malcolm Reynolds",
+        "Yuanzhong Xu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.05530.pdf",
+      "abstract": "In this report, we present the latest model of the Gemini family, Gemini 1.5\nPro, a highly compute-efficient multimodal mixture-of-experts model capable of\nrecalling and reasoning over fine-grained information from millions of tokens\nof context, including multiple long documents and hours of video and audio.\nGemini 1.5 Pro achieves near-perfect recall on long-context retrieval tasks\nacross modalities, improves the state-of-the-art in long-document QA,\nlong-video QA and long-context ASR, and matches or surpasses Gemini 1.0 Ultra's\nstate-of-the-art performance across a broad set of benchmarks. Studying the\nlimits of Gemini 1.5 Pro's long-context ability, we find continued improvement\nin next-token prediction and near-perfect retrieval (>99%) up to at least 10M\ntokens, a generational leap over existing models such as Claude 2.1 (200k) and\nGPT-4 Turbo (128k). Finally, we highlight surprising new capabilities of large\nlanguage models at the frontier; when given a grammar manual for Kalamang, a\nlanguage with fewer than 200 speakers worldwide, the model learns to translate\nEnglish to Kalamang at a similar level to a person who learned from the same\ncontent.",
+      "upvotes": 60
+    },
+    {
+      "title": "ELLA: Equip Diffusion Models with LLM for Enhanced Semantic Alignment",
+      "url": "https://huggingface.co/papers/2403.05135",
+      "authors": [
+        "Bin Fu",
+        "Pei Cheng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.05135.pdf",
+      "abstract": "Diffusion models have demonstrated remarkable performance in the domain of\ntext-to-image generation. However, most widely used models still employ CLIP as\ntheir text encoder, which constrains their ability to comprehend dense prompts,\nencompassing multiple objects, detailed attributes, complex relationships,\nlong-text alignment, etc. In this paper, we introduce an Efficient Large\nLanguage Model Adapter, termed ELLA, which equips text-to-image diffusion\nmodels with powerful Large Language Models (LLM) to enhance text alignment\nwithout training of either U-Net or LLM. To seamlessly bridge two pre-trained\nmodels, we investigate a range of semantic alignment connector designs and\npropose a novel module, the Timestep-Aware Semantic Connector (TSC), which\ndynamically extracts timestep-dependent conditions from LLM. Our approach\nadapts semantic features at different stages of the denoising process,\nassisting diffusion models in interpreting lengthy and intricate prompts over\nsampling timesteps. Additionally, ELLA can be readily incorporated with\ncommunity models and tools to improve their prompt-following capabilities. To\nassess text-to-image models in dense prompt following, we introduce Dense\nPrompt Graph Benchmark (DPG-Bench), a challenging benchmark consisting of 1K\ndense prompts. Extensive experiments demonstrate the superiority of ELLA in\ndense prompt following compared to state-of-the-art methods, particularly in\nmultiple object compositions involving diverse attributes and relationships.",
+      "upvotes": 42
+    },
+    {
+      "title": "DeepSeek-VL: Towards Real-World Vision-Language Understanding",
+      "url": "https://huggingface.co/papers/2403.05525",
+      "authors": [
+        "Haoyu Lu",
+        "Kai Dong",
+        "Jingxiang Sun",
+        "Zhuoshu Li",
+        "Chengqi Deng",
+        "Hanwei Xu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.05525.pdf",
+      "abstract": "We present DeepSeek-VL, an open-source Vision-Language (VL) Model designed\nfor real-world vision and language understanding applications. Our approach is\nstructured around three key dimensions:\n  We strive to ensure our data is diverse, scalable, and extensively covers\nreal-world scenarios including web screenshots, PDFs, OCR, charts, and\nknowledge-based content, aiming for a comprehensive representation of practical\ncontexts. Further, we create a use case taxonomy from real user scenarios and\nconstruct an instruction tuning dataset accordingly. The fine-tuning with this\ndataset substantially improves the model's user experience in practical\napplications. Considering efficiency and the demands of most real-world\nscenarios, DeepSeek-VL incorporates a hybrid vision encoder that efficiently\nprocesses high-resolution images (1024 x 1024), while maintaining a relatively\nlow computational overhead. This design choice ensures the model's ability to\ncapture critical semantic and detailed information across various visual tasks.\nWe posit that a proficient Vision-Language Model should, foremost, possess\nstrong language abilities. To ensure the preservation of LLM capabilities\nduring pretraining, we investigate an effective VL pretraining strategy by\nintegrating LLM training from the beginning and carefully managing the\ncompetitive dynamics observed between vision and language modalities.\n  The DeepSeek-VL family (both 1.3B and 7B models) showcases superior user\nexperiences as a vision-language chatbot in real-world applications, achieving\nstate-of-the-art or competitive performance across a wide range of\nvisual-language benchmarks at the same model size while maintaining robust\nperformance on language-centric benchmarks. We have made both 1.3B and 7B\nmodels publicly accessible to foster innovations based on this foundation\nmodel.",
+      "upvotes": 39
+    },
+    {
+      "title": "CogView3: Finer and Faster Text-to-Image Generation via Relay Diffusion",
+      "url": "https://huggingface.co/papers/2403.05121",
+      "authors": [
+        "Zhuoyi Yang",
+        "Weihan Wang",
+        "Jidong Chen",
+        "Xiaotao Gu",
+        "Ming Ding"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.05121.pdf",
+      "abstract": "Recent advancements in text-to-image generative systems have been largely\ndriven by diffusion models. However, single-stage text-to-image diffusion\nmodels still face challenges, in terms of computational efficiency and the\nrefinement of image details. To tackle the issue, we propose CogView3, an\ninnovative cascaded framework that enhances the performance of text-to-image\ndiffusion. CogView3 is the first model implementing relay diffusion in the\nrealm of text-to-image generation, executing the task by first creating\nlow-resolution images and subsequently applying relay-based super-resolution.\nThis methodology not only results in competitive text-to-image outputs but also\ngreatly reduces both training and inference costs. Our experimental results\ndemonstrate that CogView3 outperforms SDXL, the current state-of-the-art\nopen-source text-to-image diffusion model, by 77.0\\% in human evaluations, all\nwhile requiring only about 1/2 of the inference time. The distilled variant of\nCogView3 achieves comparable performance while only utilizing 1/10 of the\ninference time by SDXL.",
+      "upvotes": 22
+    },
+    {
+      "title": "Personalized Audiobook Recommendations at Spotify Through Graph Neural Networks",
+      "url": "https://huggingface.co/papers/2403.05185",
+      "authors": [
+        "Paul Gigioli",
+        "Alice Wang",
+        "Ang Li",
+        "Laura Kim",
+        "Shawn Lin",
+        "Vladan Radosavljevic",
+        "Sandeep Ghael",
+        "David Nyhan",
+        "Hugues Bouchard",
+        "Mounia Lalmas-Roelleke",
+        "Andreas Damianou"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.05185.pdf",
+      "abstract": "In the ever-evolving digital audio landscape, Spotify, well-known for its\nmusic and talk content, has recently introduced audiobooks to its vast user\nbase. While promising, this move presents significant challenges for\npersonalized recommendations. Unlike music and podcasts, audiobooks, initially\navailable for a fee, cannot be easily skimmed before purchase, posing higher\nstakes for the relevance of recommendations. Furthermore, introducing a new\ncontent type into an existing platform confronts extreme data sparsity, as most\nusers are unfamiliar with this new content type. Lastly, recommending content\nto millions of users requires the model to react fast and be scalable. To\naddress these challenges, we leverage podcast and music user preferences and\nintroduce 2T-HGNN, a scalable recommendation system comprising Heterogeneous\nGraph Neural Networks (HGNNs) and a Two Tower (2T) model. This novel approach\nuncovers nuanced item relationships while ensuring low latency and complexity.\nWe decouple users from the HGNN graph and propose an innovative multi-link\nneighbor sampler. These choices, together with the 2T component, significantly\nreduce the complexity of the HGNN model. Empirical evaluations involving\nmillions of users show significant improvement in the quality of personalized\nrecommendations, resulting in a +46% increase in new audiobooks start rate and\na +23% boost in streaming rates. Intriguingly, our model's impact extends\nbeyond audiobooks, benefiting established products like podcasts.",
+      "upvotes": 20
+    },
+    {
+      "title": "CRM: Single Image to 3D Textured Mesh with Convolutional Reconstruction Model",
+      "url": "https://huggingface.co/papers/2403.05034",
+      "authors": [
+        "Yifei Chen",
+        "Dajiang Yu",
+        "Hang Su",
+        "Jun Zhu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.05034.pdf",
+      "abstract": "Feed-forward 3D generative models like the Large Reconstruction Model (LRM)\nhave demonstrated exceptional generation speed. However, the transformer-based\nmethods do not leverage the geometric priors of the triplane component in their\narchitecture, often leading to sub-optimal quality given the limited size of 3D\ndata and slow training. In this work, we present the Convolutional\nReconstruction Model (CRM), a high-fidelity feed-forward single image-to-3D\ngenerative model. Recognizing the limitations posed by sparse 3D data, we\nhighlight the necessity of integrating geometric priors into network design.\nCRM builds on the key observation that the visualization of triplane exhibits\nspatial correspondence of six orthographic images. First, it generates six\northographic view images from a single input image, then feeds these images\ninto a convolutional U-Net, leveraging its strong pixel-level alignment\ncapabilities and significant bandwidth to create a high-resolution triplane.\nCRM further employs Flexicubes as geometric representation, facilitating direct\nend-to-end optimization on textured meshes. Overall, our model delivers a\nhigh-fidelity textured mesh from an image in just 10 seconds, without any\ntest-time optimization.",
+      "upvotes": 20
+    },
+    {
+      "title": "VideoElevator: Elevating Video Generation Quality with Versatile Text-to-Image Diffusion Models",
+      "url": "https://huggingface.co/papers/2403.05438",
+      "authors": [
+        "Zheng Hui",
+        "Xuansong Xie",
+        "Xiangyang Ji",
+        "Wangmeng Zuo"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.05438.pdf",
+      "abstract": "Text-to-image diffusion models (T2I) have demonstrated unprecedented\ncapabilities in creating realistic and aesthetic images. On the contrary,\ntext-to-video diffusion models (T2V) still lag far behind in frame quality and\ntext alignment, owing to insufficient quality and quantity of training videos.\nIn this paper, we introduce VideoElevator, a training-free and plug-and-play\nmethod, which elevates the performance of T2V using superior capabilities of\nT2I. Different from conventional T2V sampling (i.e., temporal and spatial\nmodeling), VideoElevator explicitly decomposes each sampling step into temporal\nmotion refining and spatial quality elevating. Specifically, temporal motion\nrefining uses encapsulated T2V to enhance temporal consistency, followed by\ninverting to the noise distribution required by T2I. Then, spatial quality\nelevating harnesses inflated T2I to directly predict less noisy latent, adding\nmore photo-realistic details. We have conducted experiments in extensive\nprompts under the combination of various T2V and T2I. The results show that\nVideoElevator not only improves the performance of T2V baselines with\nfoundational T2I, but also facilitates stylistic video synthesis with\npersonalized T2I. Our code is available at\nhttps://github.com/YBYBZhang/VideoElevator.",
+      "upvotes": 18
+    }
+  ]
+}

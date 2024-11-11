@@ -1,0 +1,160 @@
+{
+  "date": "2024-05-27",
+  "papers": [
+    {
+      "title": "Meteor: Mamba-based Traversal of Rationale for Large Language and Vision Models",
+      "url": "https://huggingface.co/papers/2405.15574",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2405.15574.pdf",
+      "abstract": "The rapid development of large language and vision models (LLVMs) has been\ndriven by advances in visual instruction tuning. Recently, open-source LLVMs\nhave curated high-quality visual instruction tuning datasets and utilized\nadditional vision encoders or multiple computer vision models in order to\nnarrow the performance gap with powerful closed-source LLVMs. These\nadvancements are attributed to multifaceted information required for diverse\ncapabilities, including fundamental image understanding, real-world knowledge\nabout common-sense and non-object concepts (e.g., charts, diagrams, symbols,\nsigns, and math problems), and step-by-step procedures for solving complex\nquestions. Drawing from the multifaceted information, we present a new\nefficient LLVM, Mamba-based traversal of rationales (Meteor), which leverages\nmultifaceted rationale to enhance understanding and answering capabilities. To\nembed lengthy rationales containing abundant information, we employ the Mamba\narchitecture, capable of processing sequential data with linear time\ncomplexity. We introduce a new concept of traversal of rationale that\nfacilitates efficient embedding of rationale. Subsequently, the backbone\nmultimodal language model (MLM) is trained to generate answers with the aid of\nrationale. Through these steps, Meteor achieves significant improvements in\nvision language performances across multiple evaluation benchmarks requiring\ndiverse capabilities, without scaling up the model size or employing additional\nvision encoders and computer vision models.",
+      "upvotes": 53
+    },
+    {
+      "title": "ConvLLaVA: Hierarchical Backbones as Visual Encoder for Large Multimodal Models",
+      "url": "https://huggingface.co/papers/2405.15738",
+      "authors": [
+        "Ziming Wang",
+        "Jiale Yuan",
+        "Yuan Gao",
+        "Jun Song",
+        "Shiji Song",
+        "Gao Huang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.15738.pdf",
+      "abstract": "High-resolution Large Multimodal Models (LMMs) encounter the challenges of\nexcessive visual tokens and quadratic visual complexity. Current\nhigh-resolution LMMs address the quadratic complexity while still generating\nexcessive visual tokens. However, the redundancy in visual tokens is the key\nproblem as it leads to more substantial compute. To mitigate this issue, we\npropose ConvLLaVA, which employs ConvNeXt, a hierarchical backbone, as the\nvisual encoder of LMM to replace Vision Transformer (ViT). ConvLLaVA compresses\nhigh-resolution images into information-rich visual features, effectively\npreventing the generation of excessive visual tokens. To enhance the\ncapabilities of ConvLLaVA, we propose two critical optimizations. Since the\nlow-resolution pretrained ConvNeXt underperforms when directly applied on high\nresolution, we update it to bridge the gap. Moreover, since ConvNeXt's original\ncompression ratio is inadequate for much higher resolution inputs, we train a\nsuccessive stage to further compress the visual tokens, thereby reducing\nredundancy. These optimizations enable ConvLLaVA to support inputs of 1536x1536\nresolution generating only 576 visual tokens, capable of handling images of\narbitrary aspect ratios. Experimental results demonstrate that our method\nachieves competitive performance with state-of-the-art models on mainstream\nbenchmarks. The ConvLLaVA model series are publicly available at\nhttps://github.com/alibaba/conv-llava.",
+      "upvotes": 43
+    },
+    {
+      "title": "Grokked Transformers are Implicit Reasoners: A Mechanistic Journey to the Edge of Generalization",
+      "url": "https://huggingface.co/papers/2405.15071",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2405.15071.pdf",
+      "abstract": "We study whether transformers can learn to implicitly reason over parametric\nknowledge, a skill that even the most capable language models struggle with.\nFocusing on two representative reasoning types, composition and comparison, we\nconsistently find that transformers can learn implicit reasoning, but only\nthrough grokking, i.e., extended training far beyond overfitting. The levels of\ngeneralization also vary across reasoning types: when faced with\nout-of-distribution examples, transformers fail to systematically generalize\nfor composition but succeed for comparison. We delve into the model's internals\nthroughout training, conducting analytical experiments that reveal: 1) the\nmechanism behind grokking, such as the formation of the generalizing circuit\nand its relation to the relative efficiency of generalizing and memorizing\ncircuits, and 2) the connection between systematicity and the configuration of\nthe generalizing circuit. Our findings guide data and training setup to better\ninduce implicit reasoning and suggest potential improvements to the transformer\narchitecture, such as encouraging cross-layer knowledge sharing. Furthermore,\nwe demonstrate that for a challenging reasoning task with a large search space,\nGPT-4-Turbo and Gemini-1.5-Pro based on non-parametric memory fail badly\nregardless of prompting styles or retrieval augmentation, while a fully grokked\ntransformer can achieve near-perfect accuracy, showcasing the power of\nparametric memory for complex reasoning.",
+      "upvotes": 37
+    },
+    {
+      "title": "Aya 23: Open Weight Releases to Further Multilingual Progress",
+      "url": "https://huggingface.co/papers/2405.15032",
+      "authors": [
+        "Dwarak Talupuru",
+        "Hangyu Lin",
+        "Phil Blunsom"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.15032.pdf",
+      "abstract": "This technical report introduces Aya 23, a family of multilingual language\nmodels. Aya 23 builds on the recent release of the Aya model (\\\"Ust\\\"un et al.,\n2024), focusing on pairing a highly performant pre-trained model with the\nrecently released Aya collection (Singh et al., 2024). The result is a powerful\nmultilingual large language model serving 23 languages, expanding state-of-art\nlanguage modeling capabilities to approximately half of the world's population.\nThe Aya model covered 101 languages whereas Aya 23 is an experiment in depth vs\nbreadth, exploring the impact of allocating more capacity to fewer languages\nthat are included during pre-training. Aya 23 outperforms both previous\nmassively multilingual models like Aya 101 for the languages it covers, as well\nas widely used models like Gemma, Mistral and Mixtral on an extensive range of\ndiscriminative and generative tasks. We release the open weights for both the\n8B and 35B models as part of our continued commitment for expanding access to\nmultilingual progress.",
+      "upvotes": 26
+    },
+    {
+      "title": "Stacking Your Transformers: A Closer Look at Model Growth for Efficient LLM Pre-Training",
+      "url": "https://huggingface.co/papers/2405.15319",
+      "authors": [
+        "Zihan Qiu",
+        "Reynold Cheng",
+        "Yike Guo"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.15319.pdf",
+      "abstract": "LLMs are computationally expensive to pre-train due to their large scale.\nModel growth emerges as a promising approach by leveraging smaller models to\naccelerate the training of larger ones. However, the viability of these model\ngrowth methods in efficient LLM pre-training remains underexplored. This work\nidentifies three critical textit{O}bstacles: (O1)\nlack of comprehensive evaluation, (O2) untested viability for\nscaling, and (O3) lack of empirical guidelines. To tackle\nO1, we summarize existing approaches into four atomic growth\noperators and systematically evaluate them in a standardized LLM pre-training\nsetting. Our findings reveal that a depthwise stacking operator, called\nG_{stack}, exhibits remarkable acceleration in training, leading to\ndecreased loss and improved overall performance on eight standard NLP\nbenchmarks compared to strong baselines. Motivated by these promising results,\nwe conduct extensive experiments to delve deeper into G_{stack} to\naddress O2 and O3. For O2 (untested\nscalability), our study shows that G_{stack} is scalable and\nconsistently performs well, with experiments up to 7B LLMs after growth and\npre-training LLMs with 750B tokens. For example, compared to a conventionally\ntrained 7B model using 300B tokens, our G_{stack} model converges to\nthe same loss with 194B tokens, resulting in a 54.6\\% speedup. We further\naddress O3 (lack of empirical guidelines) by formalizing guidelines\nto determine growth timing and growth factor for G_{stack}, making it\npractical in general LLM pre-training. We also provide in-depth discussions and\ncomprehensive ablation studies of G_{stack}. Our code and pre-trained\nmodel are available at\nhttps://llm-stacking.github.io/{https://llm-stacking.github.io/}.",
+      "upvotes": 25
+    },
+    {
+      "title": "AutoCoder: Enhancing Code Large Language Model with \\textsc{AIEV-Instruct}",
+      "url": "https://huggingface.co/papers/2405.14906",
+      "authors": [
+        "Yuchen Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.14906.pdf",
+      "abstract": "We introduce AutoCoder, the first Large Language Model to surpass GPT-4 Turbo\n(April 2024) and GPT-4o in pass@1 on the Human Eval benchmark test\n(90.9% vs. 90.2%). In addition, AutoCoder offers a more\nversatile code interpreter compared to GPT-4 Turbo and GPT-4o. It's code\ninterpreter can install external packages instead of limiting to built-in\npackages. AutoCoder's training data is a multi-turn dialogue dataset created by\na system combining agent interaction and external code execution verification,\na method we term \\textsc{AIEV-Instruct} (Instruction Tuning with\nAgent-Interaction and Execution-Verified). Compared to previous large-scale\ncode dataset generation methods, AIEV-Instruct reduces dependence on\nproprietary large models and provides execution-validated code dataset. The\ncode and the demo video is available in\nhttps://github.com/bin123apple/AutoCoder.",
+      "upvotes": 23
+    },
+    {
+      "title": "The Road Less Scheduled",
+      "url": "https://huggingface.co/papers/2405.15682",
+      "authors": [
+        "Xingyu",
+        "Yang",
+        "Harsh Mehta",
+        "Ahmed Khaled"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.15682.pdf",
+      "abstract": "Existing learning rate schedules that do not require specification of the\noptimization stopping step T are greatly out-performed by learning rate\nschedules that depend on T. We propose an approach that avoids the need for\nthis stopping time by eschewing the use of schedules entirely, while exhibiting\nstate-of-the-art performance compared to schedules across a wide family of\nproblems ranging from convex problems to large-scale deep learning problems.\nOur Schedule-Free approach introduces no additional hyper-parameters over\nstandard optimizers with momentum. Our method is a direct consequence of a new\ntheory we develop that unifies scheduling and iterate averaging. An open source\nimplementation of our method is available\n(https://github.com/facebookresearch/schedule_free).",
+      "upvotes": 20
+    },
+    {
+      "title": "CraftsMan: High-fidelity Mesh Generation with 3D Native Generation and Interactive Geometry Refiner",
+      "url": "https://huggingface.co/papers/2405.14979",
+      "authors": [
+        "Jiarui Liu",
+        "Ping Tan",
+        "Xiaoxiao Long"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.14979.pdf",
+      "abstract": "We present a novel generative 3D modeling system, coined CraftsMan, which can\ngenerate high-fidelity 3D geometries with highly varied shapes, regular mesh\ntopologies, and detailed surfaces, and, notably, allows for refining the\ngeometry in an interactive manner. Despite the significant advancements in 3D\ngeneration, existing methods still struggle with lengthy optimization\nprocesses, irregular mesh topologies, noisy surfaces, and difficulties in\naccommodating user edits, consequently impeding their widespread adoption and\nimplementation in 3D modeling software. Our work is inspired by the craftsman,\nwho usually roughs out the holistic figure of the work first and elaborates the\nsurface details subsequently. Specifically, we employ a 3D native diffusion\nmodel, which operates on latent space learned from latent set-based 3D\nrepresentations, to generate coarse geometries with regular mesh topology in\nseconds. In particular, this process takes as input a text prompt or a\nreference image and leverages a powerful multi-view (MV) diffusion model to\ngenerate multiple views of the coarse geometry, which are fed into our\nMV-conditioned 3D diffusion model for generating the 3D geometry, significantly\nimproving robustness and generalizability. Following that, a normal-based\ngeometry refiner is used to significantly enhance the surface details. This\nrefinement can be performed automatically, or interactively with user-supplied\nedits. Extensive experiments demonstrate that our method achieves high efficacy\nin producing superior-quality 3D assets compared to existing methods. HomePage:\nhttps://craftsman3d.github.io/, Code: https://github.com/wyysf-98/CraftsMan",
+      "upvotes": 15
+    },
+    {
+      "title": "Automatic Data Curation for Self-Supervised Learning: A Clustering-Based Approach",
+      "url": "https://huggingface.co/papers/2405.15613",
+      "authors": [
+        "Huy V. Vo",
+        "Vasil Khalidov",
+        "Camille Couprie",
+        "Maxime Oquab",
+        "Armand Joulin",
+        "Hervé Jégou",
+        "Piotr Bojanowski"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.15613.pdf",
+      "abstract": "Self-supervised features are the cornerstone of modern machine learning\nsystems. They are typically pre-trained on data collections whose construction\nand curation typically require extensive human effort. This manual process has\nsome limitations similar to those encountered in supervised learning, e.g., the\ncrowd-sourced selection of data is costly and time-consuming, preventing\nscaling the dataset size. In this work, we consider the problem of automatic\ncuration of high-quality datasets for self-supervised pre-training. We posit\nthat such datasets should be large, diverse and balanced, and propose a\nclustering-based approach for building ones satisfying all these criteria. Our\nmethod involves successive and hierarchical applications of k-means on a\nlarge and diverse data repository to obtain clusters that distribute uniformly\namong data concepts, followed by a hierarchical, balanced sampling step from\nthese clusters. Extensive experiments on three different data domains including\nweb-based images, satellite images and text show that features trained on our\nautomatically curated datasets outperform those trained on uncurated data while\nbeing on par or better than ones trained on manually curated data.",
+      "upvotes": 13
+    },
+    {
+      "title": "iVideoGPT: Interactive VideoGPTs are Scalable World Models",
+      "url": "https://huggingface.co/papers/2405.15223",
+      "authors": [
+        "Xu He",
+        "Dong Li",
+        "Jianye Hao",
+        "Mingsheng Long"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.15223.pdf",
+      "abstract": "World models empower model-based agents to interactively explore, reason, and\nplan within imagined environments for real-world decision-making. However, the\nhigh demand for interactivity poses challenges in harnessing recent\nadvancements in video generative models for developing world models at scale.\nThis work introduces Interactive VideoGPT (iVideoGPT), a scalable\nautoregressive transformer framework that integrates multimodal signals--visual\nobservations, actions, and rewards--into a sequence of tokens, facilitating an\ninteractive experience of agents via next-token prediction. iVideoGPT features\na novel compressive tokenization technique that efficiently discretizes\nhigh-dimensional visual observations. Leveraging its scalable architecture, we\nare able to pre-train iVideoGPT on millions of human and robotic manipulation\ntrajectories, establishing a versatile foundation that is adaptable to serve as\ninteractive world models for a wide range of downstream tasks. These include\naction-conditioned video prediction, visual planning, and model-based\nreinforcement learning, where iVideoGPT achieves competitive performance\ncompared with state-of-the-art methods. Our work advances the development of\ninteractive general world models, bridging the gap between generative video\nmodels and practical model-based reinforcement learning applications.",
+      "upvotes": 12
+    },
+    {
+      "title": "Denoising LM: Pushing the Limits of Error Correction Models for Speech Recognition",
+      "url": "https://huggingface.co/papers/2405.15216",
+      "authors": [
+        "Tatiana Likhomanenko",
+        "Erik McDermott",
+        "Ronan Collobert"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.15216.pdf",
+      "abstract": "Language models (LMs) have long been used to improve results of automatic\nspeech recognition (ASR) systems, but they are unaware of the errors that ASR\nsystems make. Error correction models are designed to fix ASR errors, however,\nthey showed little improvement over traditional LMs mainly due to the lack of\nsupervised training data. In this paper, we present Denoising LM (DLM), which\nis a scaled error correction model trained with vast amounts of\nsynthetic data, significantly exceeding prior attempts meanwhile achieving new\nstate-of-the-art ASR performance. We use text-to-speech (TTS) systems to\nsynthesize audio, which is fed into an ASR system to produce noisy hypotheses,\nwhich are then paired with the original texts to train the DLM. DLM has several\nkey ingredients: (i) up-scaled model and data; (ii) usage of\nmulti-speaker TTS systems; (iii) combination of multiple noise augmentation\nstrategies; and (iv) new decoding techniques. With a Transformer-CTC ASR, DLM\nachieves 1.5% word error rate (WER) on test-clean and 3.3% WER on\ntest-other on Librispeech, which to our knowledge are the best\nreported numbers in the setting where no external audio data are used and even\nmatch self-supervised methods which use external audio data. Furthermore, a\nsingle DLM is applicable to different ASRs, and greatly surpassing the\nperformance of conventional LM based beam-search rescoring. These results\nindicate that properly investigated error correction models have the potential\nto replace conventional LMs, holding the key to a new level of accuracy in ASR\nsystems.",
+      "upvotes": 12
+    },
+    {
+      "title": "Data Mixing Made Efficient: A Bivariate Scaling Law for Language Model Pretraining",
+      "url": "https://huggingface.co/papers/2405.14908",
+      "authors": [
+        "Ce Ge",
+        "Zhijian Ma",
+        "Yaliang Li",
+        "Bolin Ding"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.14908.pdf",
+      "abstract": "Large language models exhibit exceptional generalization capabilities,\nprimarily attributed to the utilization of diversely sourced data. However,\nconventional practices in integrating this diverse data heavily rely on\nheuristic schemes, lacking theoretical guidance. This research tackles these\nlimitations by investigating strategies based on low-cost proxies for data\nmixtures, with the aim of streamlining data curation to enhance training\nefficiency. Specifically, we propose a unified scaling law, termed BiMix, which\naccurately models the bivariate scaling behaviors of both data quantity and\nmixing proportions. We conduct systematic experiments and provide empirical\nevidence for the predictive power and fundamental principles of BiMix. Notably,\nour findings reveal that entropy-driven training-free data mixtures can achieve\ncomparable or even better performance than more resource-intensive methods. We\nhope that our quantitative insights can shed light on further judicious\nresearch and development in cost-effective language modeling.",
+      "upvotes": 11
+    },
+    {
+      "title": "HDR-GS: Efficient High Dynamic Range Novel View Synthesis at 1000x Speed via Gaussian Splatting",
+      "url": "https://huggingface.co/papers/2405.15125",
+      "authors": [
+        "Yuanhao Cai",
+        "Alan Yuille"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.15125.pdf",
+      "abstract": "High dynamic range (HDR) novel view synthesis (NVS) aims to create\nphotorealistic images from novel viewpoints using HDR imaging techniques. The\nrendered HDR images capture a wider range of brightness levels containing more\ndetails of the scene than normal low dynamic range (LDR) images. Existing HDR\nNVS methods are mainly based on NeRF. They suffer from long training time and\nslow inference speed. In this paper, we propose a new framework, High Dynamic\nRange Gaussian Splatting (HDR-GS), which can efficiently render novel HDR views\nand reconstruct LDR images with a user input exposure time. Specifically, we\ndesign a Dual Dynamic Range (DDR) Gaussian point cloud model that uses\nspherical harmonics to fit HDR color and employs an MLP-based tone-mapper to\nrender LDR color. The HDR and LDR colors are then fed into two Parallel\nDifferentiable Rasterization (PDR) processes to reconstruct HDR and LDR views.\nTo establish the data foundation for the research of 3D Gaussian\nsplatting-based methods in HDR NVS, we recalibrate the camera parameters and\ncompute the initial positions for Gaussian point clouds. Experiments\ndemonstrate that our HDR-GS surpasses the state-of-the-art NeRF-based method by\n3.84 and 1.91 dB on LDR and HDR NVS while enjoying 1000x inference speed and\nonly requiring 6.3% training time.",
+      "upvotes": 5
+    }
+  ]
+}

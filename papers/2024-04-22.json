@@ -1,0 +1,95 @@
+{
+  "date": "2024-04-22",
+  "papers": [
+    {
+      "title": "AutoCrawler: A Progressive Understanding Web Agent for Web Crawler Generation",
+      "url": "https://huggingface.co/papers/2404.12753",
+      "authors": [
+        "Yanghua Xiao",
+        "Liqian Wen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.12753.pdf",
+      "abstract": "Web automation is a significant technique that accomplishes complicated web\ntasks by automating common web actions, enhancing operational efficiency, and\nreducing the need for manual intervention. Traditional methods, such as\nwrappers, suffer from limited adaptability and scalability when faced with a\nnew website. On the other hand, generative agents empowered by large language\nmodels (LLMs) exhibit poor performance and reusability in open-world scenarios.\nIn this work, we introduce a crawler generation task for vertical information\nweb pages and the paradigm of combining LLMs with crawlers, which helps\ncrawlers handle diverse and changing web environments more efficiently. We\npropose AutoCrawler, a two-stage framework that leverages the hierarchical\nstructure of HTML for progressive understanding. Through top-down and step-back\noperations, AutoCrawler can learn from erroneous actions and continuously prune\nHTML for better action generation. We conduct comprehensive experiments with\nmultiple LLMs and demonstrate the effectiveness of our framework. Resources of\nthis paper can be found at https://github.com/EZ-hwh/AutoCrawler",
+      "upvotes": 41
+    },
+    {
+      "title": "Groma: Localized Visual Tokenization for Grounding Multimodal Large Language Models",
+      "url": "https://huggingface.co/papers/2404.13013",
+      "authors": [
+        "Jiannan Wu",
+        "Xiaojuan Qi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.13013.pdf",
+      "abstract": "We introduce Groma, a Multimodal Large Language Model (MLLM) with grounded\nand fine-grained visual perception ability. Beyond holistic image\nunderstanding, Groma is adept at region-level tasks such as region captioning\nand visual grounding. Such capabilities are built upon a localized visual\ntokenization mechanism, where an image input is decomposed into regions of\ninterest and subsequently encoded into region tokens. By integrating region\ntokens into user instructions and model responses, we seamlessly enable Groma\nto understand user-specified region inputs and ground its textual output to\nimages. Besides, to enhance the grounded chat ability of Groma, we curate a\nvisually grounded instruction dataset by leveraging the powerful GPT-4V and\nvisual prompting techniques. Compared with MLLMs that rely on the language\nmodel or external module for localization, Groma consistently demonstrates\nsuperior performances in standard referring and grounding benchmarks,\nhighlighting the advantages of embedding localization into image tokenization.\nProject page: https://groma-mllm.github.io/.",
+      "upvotes": 30
+    },
+    {
+      "title": "TextSquare: Scaling up Text-Centric Visual Instruction Tuning",
+      "url": "https://huggingface.co/papers/2404.12803",
+      "authors": [
+        "Shu Wei",
+        "Binghong Wu",
+        "Qi Liu",
+        "Hao Feng",
+        "Yang Li",
+        "Siqi Wang",
+        "Lei Liao",
+        "Wei Shi",
+        "Yuliang Liu",
+        "Hao Liu",
+        "Yuan Xie",
+        "Can Huang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.12803.pdf",
+      "abstract": "Text-centric visual question answering (VQA) has made great strides with the\ndevelopment of Multimodal Large Language Models (MLLMs), yet open-source models\nstill fall short of leading models like GPT4V and Gemini, partly due to a lack\nof extensive, high-quality instruction tuning data. To this end, we introduce a\nnew approach for creating a massive, high-quality instruction-tuning dataset,\nSquare-10M, which is generated using closed-source MLLMs. The data construction\nprocess, termed Square, consists of four steps: Self-Questioning, Answering,\nReasoning, and Evaluation. Our experiments with Square-10M led to three key\nfindings: 1) Our model, TextSquare, considerably surpasses open-source previous\nstate-of-the-art Text-centric MLLMs and sets a new standard on OCRBench(62.2%).\nIt even outperforms top-tier models like GPT4V and Gemini in 6 of 10\ntext-centric benchmarks. 2) Additionally, we demonstrate the critical role of\nVQA reasoning data in offering comprehensive contextual insights for specific\nquestions. This not only improves accuracy but also significantly mitigates\nhallucinations. Specifically, TextSquare scores an average of 75.1% across four\ngeneral VQA and hallucination evaluation datasets, outperforming previous\nstate-of-the-art models. 3) Notably, the phenomenon observed in scaling\ntext-centric VQA datasets reveals a vivid pattern: the exponential increase of\ninstruction tuning data volume is directly proportional to the improvement in\nmodel performance, thereby validating the necessity of the dataset scale and\nthe high quality of Square-10M.",
+      "upvotes": 29
+    },
+    {
+      "title": "PhysDreamer: Physics-Based Interaction with 3D Objects via Video Generation",
+      "url": "https://huggingface.co/papers/2404.13026",
+      "authors": [
+        "Hong-Xing Yu",
+        "Changxi Zheng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.13026.pdf",
+      "abstract": "Realistic object interactions are crucial for creating immersive virtual\nexperiences, yet synthesizing realistic 3D object dynamics in response to novel\ninteractions remains a significant challenge. Unlike unconditional or\ntext-conditioned dynamics generation, action-conditioned dynamics requires\nperceiving the physical material properties of objects and grounding the 3D\nmotion prediction on these properties, such as object stiffness. However,\nestimating physical material properties is an open problem due to the lack of\nmaterial ground-truth data, as measuring these properties for real objects is\nhighly difficult. We present PhysDreamer, a physics-based approach that endows\nstatic 3D objects with interactive dynamics by leveraging the object dynamics\npriors learned by video generation models. By distilling these priors,\nPhysDreamer enables the synthesis of realistic object responses to novel\ninteractions, such as external forces or agent manipulations. We demonstrate\nour approach on diverse examples of elastic objects and evaluate the realism of\nthe synthesized interactions through a user study. PhysDreamer takes a step\ntowards more engaging and realistic virtual experiences by enabling static 3D\nobjects to dynamically respond to interactive stimuli in a physically plausible\nmanner. See our project page at https://physdreamer.github.io/.",
+      "upvotes": 23
+    },
+    {
+      "title": "LLM-R2: A Large Language Model Enhanced Rule-based Rewrite System for Boosting Query Efficiency",
+      "url": "https://huggingface.co/papers/2404.12872",
+      "authors": [
+        "Huiming Wang",
+        "Gao Cong"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.12872.pdf",
+      "abstract": "Query rewrite, which aims to generate more efficient queries by altering a\nSQL query's structure without changing the query result, has been an important\nresearch problem. In order to maintain equivalence between the rewritten query\nand the original one during rewriting, traditional query rewrite methods always\nrewrite the queries following certain rewrite rules. However, some problems\nstill remain. Firstly, existing methods of finding the optimal choice or\nsequence of rewrite rules are still limited and the process always costs a lot\nof resources. Methods involving discovering new rewrite rules typically require\ncomplicated proofs of structural logic or extensive user interactions.\nSecondly, current query rewrite methods usually rely highly on DBMS cost\nestimators which are often not accurate. In this paper, we address these\nproblems by proposing a novel method of query rewrite named LLM-R2, adopting a\nlarge language model (LLM) to propose possible rewrite rules for a database\nrewrite system. To further improve the inference ability of LLM in recommending\nrewrite rules, we train a contrastive model by curriculum to learn query\nrepresentations and select effective query demonstrations for the LLM.\nExperimental results have shown that our method can significantly improve the\nquery execution efficiency and outperform the baseline methods. In addition,\nour method enjoys high robustness across different datasets.",
+      "upvotes": 11
+    },
+    {
+      "title": "Does Gaussian Splatting need SFM Initialization?",
+      "url": "https://huggingface.co/papers/2404.12547",
+      "authors": [
+        "Yalda Foroutan",
+        "Daniel Rebain",
+        "Andrea Tagliasacchi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.12547.pdf",
+      "abstract": "3D Gaussian Splatting has recently been embraced as a versatile and effective\nmethod for scene reconstruction and novel view synthesis, owing to its\nhigh-quality results and compatibility with hardware rasterization. Despite its\nadvantages, Gaussian Splatting's reliance on high-quality point cloud\ninitialization by Structure-from-Motion (SFM) algorithms is a significant\nlimitation to be overcome. To this end, we investigate various initialization\nstrategies for Gaussian Splatting and delve into how volumetric reconstructions\nfrom Neural Radiance Fields (NeRF) can be utilized to bypass the dependency on\nSFM data. Our findings demonstrate that random initialization can perform much\nbetter if carefully designed and that by employing a combination of improved\ninitialization strategies and structure distillation from low-cost NeRF models,\nit is possible to achieve equivalent results, or at times even superior, to\nthose obtained from SFM initialization.",
+      "upvotes": 8
+    },
+    {
+      "title": "How Far Can We Go with Practical Function-Level Program Repair?",
+      "url": "https://huggingface.co/papers/2404.12833",
+      "authors": [
+        "Fanchu Kong",
+        "Mingyuan Wu",
+        "Haotian Zhang",
+        "Yuqun Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.12833.pdf",
+      "abstract": "Recently, multiple Automated Program Repair (APR) techniques based on Large\nLanguage Models (LLMs) have been proposed to enhance the repair performance.\nWhile these techniques mainly focus on the single-line or hunk-level repair,\nthey face significant challenges in real-world application due to the limited\nrepair task scope and costly statement-level fault localization. However, the\nmore practical function-level APR, which broadens the scope of APR task to fix\nentire buggy functions and requires only cost-efficient function-level fault\nlocalization, remains underexplored. In this paper, we conduct the first\ncomprehensive study of LLM-based function-level APR including investigating the\neffect of the few-shot learning mechanism and the auxiliary repair-relevant\ninformation. Specifically, we adopt six widely-studied LLMs and construct a\nbenchmark in both the Defects4J 1.2 and 2.0 datasets. Our study demonstrates\nthat LLMs with zero-shot learning are already powerful function-level APR\ntechniques, while applying the few-shot learning mechanism leads to disparate\nrepair performance. Moreover, we find that directly applying the auxiliary\nrepair-relevant information to LLMs significantly increases function-level\nrepair performance. Inspired by our findings, we propose an LLM-based\nfunction-level APR technique, namely SRepair, which adopts a dual-LLM framework\nto leverage the power of the auxiliary repair-relevant information for\nadvancing the repair performance. The evaluation results demonstrate that\nSRepair can correctly fix 300 single-function bugs in the Defects4J dataset,\nlargely surpassing all previous APR techniques by at least 85%, without the\nneed for the costly statement-level fault location information. Furthermore,\nSRepair successfully fixes 32 multi-function bugs in the Defects4J dataset,\nwhich is the first time achieved by any APR technique ever to our best\nknowledge.",
+      "upvotes": 6
+    }
+  ]
+}

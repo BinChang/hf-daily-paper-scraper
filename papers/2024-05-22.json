@@ -1,0 +1,75 @@
+{
+  "date": "2024-05-22",
+  "papers": [
+    {
+      "title": "Your Transformer is Secretly Linear",
+      "url": "https://huggingface.co/papers/2405.12250",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2405.12250.pdf",
+      "abstract": "This paper reveals a novel linear characteristic exclusive to transformer\ndecoders, including models such as GPT, LLaMA, OPT, BLOOM and others. We\nanalyze embedding transformations between sequential layers, uncovering a\nnear-perfect linear relationship (Procrustes similarity score of 0.99).\nHowever, linearity decreases when the residual component is removed due to a\nconsistently low output norm of the transformer layer. Our experiments show\nthat removing or linearly approximating some of the most linear blocks of\ntransformers does not affect significantly the loss or model performance.\nMoreover, in our pretraining experiments on smaller models we introduce a\ncosine-similarity-based regularization, aimed at reducing layer linearity. This\nregularization improves performance metrics on benchmarks like Tiny Stories and\nSuperGLUE and as well successfully decreases the linearity of the models. This\nstudy challenges the existing understanding of transformer architectures,\nsuggesting that their operation may be more linear than previously assumed.",
+      "upvotes": 150
+    },
+    {
+      "title": "Reducing Transformer Key-Value Cache Size with Cross-Layer Attention",
+      "url": "https://huggingface.co/papers/2405.12981",
+      "authors": [
+        "William Brandon",
+        "Aniruddha Nrusimha",
+        "Jonathan Ragan Kelly"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.12981.pdf",
+      "abstract": "Key-value (KV) caching plays an essential role in accelerating decoding for\ntransformer-based autoregressive large language models (LLMs). However, the\namount of memory required to store the KV cache can become prohibitive at long\nsequence lengths and large batch sizes. Since the invention of the transformer,\ntwo of the most effective interventions discovered for reducing the size of the\nKV cache have been Multi-Query Attention (MQA) and its generalization,\nGrouped-Query Attention (GQA). MQA and GQA both modify the design of the\nattention block so that multiple query heads can share a single key/value head,\nreducing the number of distinct key/value heads by a large factor while only\nminimally degrading accuracy. In this paper, we show that it is possible to\ntake Multi-Query Attention a step further by also sharing key and value heads\nbetween adjacent layers, yielding a new attention design we call Cross-Layer\nAttention (CLA). With CLA, we find that it is possible to reduce the size of\nthe KV cache by another 2x while maintaining nearly the same accuracy as\nunmodified MQA. In experiments training 1B- and 3B-parameter models from\nscratch, we demonstrate that CLA provides a Pareto improvement over the\nmemory/accuracy tradeoffs which are possible with traditional MQA, enabling\ninference with longer sequence lengths and larger batch sizes than would\notherwise be possible",
+      "upvotes": 28
+    },
+    {
+      "title": "Diffusion for World Modeling: Visual Details Matter in Atari",
+      "url": "https://huggingface.co/papers/2405.12399",
+      "authors": [
+        "Anssi Kanervisto",
+        "Amos Storkey"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.12399.pdf",
+      "abstract": "World models constitute a promising approach for training reinforcement\nlearning agents in a safe and sample-efficient manner. Recent world models\npredominantly operate on sequences of discrete latent variables to model\nenvironment dynamics. However, this compression into a compact discrete\nrepresentation may ignore visual details that are important for reinforcement\nlearning. Concurrently, diffusion models have become a dominant approach for\nimage generation, challenging well-established methods modeling discrete\nlatents. Motivated by this paradigm shift, we introduce DIAMOND (DIffusion As a\nModel Of eNvironment Dreams), a reinforcement learning agent trained in a\ndiffusion world model. We analyze the key design choices that are required to\nmake diffusion suitable for world modeling, and demonstrate how improved visual\ndetails can lead to improved agent performance. DIAMOND achieves a mean human\nnormalized score of 1.46 on the competitive Atari 100k benchmark; a new best\nfor agents trained entirely within a world model. To foster future research on\ndiffusion for world modeling, we release our code, agents and playable world\nmodels at https://github.com/eloialonso/diamond.",
+      "upvotes": 27
+    },
+    {
+      "title": "Face Adapter for Pre-Trained Diffusion Models with Fine-Grained ID and Attribute Control",
+      "url": "https://huggingface.co/papers/2405.12970",
+      "authors": [
+        "Yue Han",
+        "Xu Chen",
+        "Wei Li",
+        "Jiangning Zhang",
+        "Chengjie Wang",
+        "Yong Liu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.12970.pdf",
+      "abstract": "Current face reenactment and swapping methods mainly rely on GAN frameworks,\nbut recent focus has shifted to pre-trained diffusion models for their superior\ngeneration capabilities. However, training these models is resource-intensive,\nand the results have not yet achieved satisfactory performance levels. To\naddress this issue, we introduce Face-Adapter, an efficient and effective\nadapter designed for high-precision and high-fidelity face editing for\npre-trained diffusion models. We observe that both face reenactment/swapping\ntasks essentially involve combinations of target structure, ID and attribute.\nWe aim to sufficiently decouple the control of these factors to achieve both\ntasks in one model. Specifically, our method contains: 1) A Spatial Condition\nGenerator that provides precise landmarks and background; 2) A Plug-and-play\nIdentity Encoder that transfers face embeddings to the text space by a\ntransformer decoder. 3) An Attribute Controller that integrates spatial\nconditions and detailed attributes. Face-Adapter achieves comparable or even\nsuperior performance in terms of motion control precision, ID retention\ncapability, and generation quality compared to fully fine-tuned face\nreenactment/swapping models. Additionally, Face-Adapter seamlessly integrates\nwith various StableDiffusion models.",
+      "upvotes": 22
+    },
+    {
+      "title": "OmniGlue: Generalizable Feature Matching with Foundation Model Guidance",
+      "url": "https://huggingface.co/papers/2405.12979",
+      "authors": [
+        "Bingyi Cao",
+        "Qixing Huang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.12979.pdf",
+      "abstract": "The image matching field has been witnessing a continuous emergence of novel\nlearnable feature matching techniques, with ever-improving performance on\nconventional benchmarks. However, our investigation shows that despite these\ngains, their potential for real-world applications is restricted by their\nlimited generalization capabilities to novel image domains. In this paper, we\nintroduce OmniGlue, the first learnable image matcher that is designed with\ngeneralization as a core principle. OmniGlue leverages broad knowledge from a\nvision foundation model to guide the feature matching process, boosting\ngeneralization to domains not seen at training time. Additionally, we propose a\nnovel keypoint position-guided attention mechanism which disentangles spatial\nand appearance information, leading to enhanced matching descriptors. We\nperform comprehensive experiments on a suite of 7 datasets with varied image\ndomains, including scene-level, object-centric and aerial images. OmniGlue's\nnovel components lead to relative gains on unseen domains of 20.9% with\nrespect to a directly comparable reference model, while also outperforming the\nrecent LightGlue method by 9.5% relatively.Code and model can be found at\nhttps://hwjiang1510.github.io/OmniGlue",
+      "upvotes": 9
+    },
+    {
+      "title": "Personalized Residuals for Concept-Driven Text-to-Image Generation",
+      "url": "https://huggingface.co/papers/2405.12978",
+      "authors": [
+        "Matthew Fisher",
+        "James Hays",
+        "Nicholas Kolkin",
+        "Yuchen Liu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.12978.pdf",
+      "abstract": "We present personalized residuals and localized attention-guided sampling for\nefficient concept-driven generation using text-to-image diffusion models. Our\nmethod first represents concepts by freezing the weights of a pretrained\ntext-conditioned diffusion model and learning low-rank residuals for a small\nsubset of the model's layers. The residual-based approach then directly enables\napplication of our proposed sampling technique, which applies the learned\nresiduals only in areas where the concept is localized via cross-attention and\napplies the original diffusion weights in all other regions. Localized sampling\ntherefore combines the learned identity of the concept with the existing\ngenerative prior of the underlying diffusion model. We show that personalized\nresiduals effectively capture the identity of a concept in ~3 minutes on a\nsingle GPU without the use of regularization images and with fewer parameters\nthan previous models, and localized sampling allows using the original model as\nstrong prior for large parts of the image.",
+      "upvotes": 9
+    }
+  ]
+}

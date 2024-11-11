@@ -1,0 +1,157 @@
+{
+  "date": "2024-09-23",
+  "papers": [
+    {
+      "title": "Imagine yourself: Tuning-Free Personalized Image Generation",
+      "url": "https://huggingface.co/papers/2409.13346",
+      "authors": [
+        "Alireza Zareian",
+        "Li Chen",
+        "Ankit Jain",
+        "Ning Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.13346.pdf",
+      "abstract": "Diffusion models have demonstrated remarkable efficacy across various\nimage-to-image tasks. In this research, we introduce Imagine yourself, a\nstate-of-the-art model designed for personalized image generation. Unlike\nconventional tuning-based personalization techniques, Imagine yourself operates\nas a tuning-free model, enabling all users to leverage a shared framework\nwithout individualized adjustments. Moreover, previous work met challenges\nbalancing identity preservation, following complex prompts and preserving good\nvisual quality, resulting in models having strong copy-paste effect of the\nreference images. Thus, they can hardly generate images following prompts that\nrequire significant changes to the reference image, \\eg, changing facial\nexpression, head and body poses, and the diversity of the generated images is\nlow. To address these limitations, our proposed method introduces 1) a new\nsynthetic paired data generation mechanism to encourage image diversity, 2) a\nfully parallel attention architecture with three text encoders and a fully\ntrainable vision encoder to improve the text faithfulness, and 3) a novel\ncoarse-to-fine multi-stage finetuning methodology that gradually pushes the\nboundary of visual quality. Our study demonstrates that Imagine yourself\nsurpasses the state-of-the-art personalization model, exhibiting superior\ncapabilities in identity preservation, visual quality, and text alignment. This\nmodel establishes a robust foundation for various personalization applications.\nHuman evaluation results validate the model's SOTA superiority across all\naspects (identity preservation, text faithfulness, and visual appeal) compared\nto the previous personalization models.",
+      "upvotes": 67
+    },
+    {
+      "title": "YesBut: A High-Quality Annotated Multimodal Dataset for evaluating Satire Comprehension capability of Vision-Language Models",
+      "url": "https://huggingface.co/papers/2409.13592",
+      "authors": [
+        "Ashish Patwa",
+        "Ankit Raj",
+        "Niloy Ganguly"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.13592.pdf",
+      "abstract": "Understanding satire and humor is a challenging task for even current\nVision-Language models. In this paper, we propose the challenging tasks of\nSatirical Image Detection (detecting whether an image is satirical),\nUnderstanding (generating the reason behind the image being satirical), and\nCompletion (given one half of the image, selecting the other half from 2 given\noptions, such that the complete image is satirical) and release a high-quality\ndataset YesBut, consisting of 2547 images, 1084 satirical and 1463\nnon-satirical, containing different artistic styles, to evaluate those tasks.\nEach satirical image in the dataset depicts a normal scenario, along with a\nconflicting scenario which is funny or ironic. Despite the success of current\nVision-Language Models on multimodal tasks such as Visual QA and Image\nCaptioning, our benchmarking experiments show that such models perform poorly\non the proposed tasks on the YesBut Dataset in Zero-Shot Settings w.r.t both\nautomated as well as human evaluation. Additionally, we release a dataset of\n119 real, satirical photographs for further research. The dataset and code are\navailable at https://github.com/abhi1nandy2/yesbut_dataset.",
+      "upvotes": 48
+    },
+    {
+      "title": "Prithvi WxC: Foundation Model for Weather and Climate",
+      "url": "https://huggingface.co/papers/2409.13598",
+      "authors": [
+        "Shraddha Singh",
+        "Aman Gupta",
+        "Arlindo Da Silva",
+        "Jorge Luis Guevara Diaz",
+        "Amy Lin",
+        "Aditi Sheshadri",
+        "Udaysankar Nair"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.13598.pdf",
+      "abstract": "Triggered by the realization that AI emulators can rival the performance of\ntraditional numerical weather prediction models running on HPC systems, there\nis now an increasing number of large AI models that address use cases such as\nforecasting, downscaling, or nowcasting. While the parallel developments in the\nAI literature focus on foundation models -- models that can be effectively\ntuned to address multiple, different use cases -- the developments on the\nweather and climate side largely focus on single-use cases with particular\nemphasis on mid-range forecasting. We close this gap by introducing Prithvi\nWxC, a 2.3 billion parameter foundation model developed using 160 variables\nfrom the Modern-Era Retrospective Analysis for Research and Applications,\nVersion 2 (MERRA-2). Prithvi WxC employs an encoder-decoder-based architecture,\nincorporating concepts from various recent transformer models to effectively\ncapture both regional and global dependencies in the input data. The model has\nbeen designed to accommodate large token counts to model weather phenomena in\ndifferent topologies at fine resolutions. Furthermore, it is trained with a\nmixed objective that combines the paradigms of masked reconstruction with\nforecasting. We test the model on a set of challenging downstream tasks namely:\nAutoregressive rollout forecasting, Downscaling, Gravity wave flux\nparameterization, and Extreme events estimation. The pretrained model with 2.3\nbillion parameters, along with the associated fine-tuning workflows, has been\npublicly released as an open-source contribution via Hugging Face.",
+      "upvotes": 37
+    },
+    {
+      "title": "MuCodec: Ultra Low-Bitrate Music Codec",
+      "url": "https://huggingface.co/papers/2409.13216",
+      "authors": [
+        "Jianwei Yu",
+        "Wei Tan",
+        "Rongzhi Gu",
+        "Zhiwei Lin"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.13216.pdf",
+      "abstract": "Music codecs are a vital aspect of audio codec research, and ultra\nlow-bitrate compression holds significant importance for music transmission and\ngeneration. Due to the complexity of music backgrounds and the richness of\nvocals, solely relying on modeling semantic or acoustic information cannot\neffectively reconstruct music with both vocals and backgrounds. To address this\nissue, we propose MuCodec, specifically targeting music compression and\nreconstruction tasks at ultra low bitrates. MuCodec employs MuEncoder to\nextract both acoustic and semantic features, discretizes them with RVQ, and\nobtains Mel-VAE features via flow-matching. The music is then reconstructed\nusing a pre-trained MEL-VAE decoder and HiFi-GAN. MuCodec can reconstruct\nhigh-fidelity music at ultra low (0.35kbps) or high bitrates (1.35kbps),\nachieving the best results to date in both subjective and objective metrics.\nCode and Demo: https://xuyaoxun.github.io/MuCodec_demo/.",
+      "upvotes": 22
+    },
+    {
+      "title": "Fact, Fetch, and Reason: A Unified Evaluation of Retrieval-Augmented Generation",
+      "url": "https://huggingface.co/papers/2409.12941",
+      "authors": [
+        "Anhad Mohananey",
+        "Adam Stambler",
+        "Shyam Upadhyay",
+        "Manaal Faruqui"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.12941.pdf",
+      "abstract": "Large Language Models (LLMs) have demonstrated significant performance\nimprovements across various cognitive tasks. An emerging application is using\nLLMs to enhance retrieval-augmented generation (RAG) capabilities. These\nsystems require LLMs to understand user queries, retrieve relevant information,\nand synthesize coherent and accurate responses. Given the increasing real-world\ndeployment of such systems, comprehensive evaluation becomes crucial. To this\nend, we propose FRAMES (Factuality, Retrieval, And reasoning MEasurement Set),\na high-quality evaluation dataset designed to test LLMs' ability to provide\nfactual responses, assess retrieval capabilities, and evaluate the reasoning\nrequired to generate final answers. While previous work has provided datasets\nand benchmarks to evaluate these abilities in isolation, FRAMES offers a\nunified framework that provides a clearer picture of LLM performance in\nend-to-end RAG scenarios. Our dataset comprises challenging multi-hop questions\nthat require the integration of information from multiple sources. We present\nbaseline results demonstrating that even state-of-the-art LLMs struggle with\nthis task, achieving 0.40 accuracy with no retrieval. The accuracy is\nsignificantly improved with our proposed multi-step retrieval pipeline,\nachieving an accuracy of 0.66 (>50% improvement). We hope our work will help\nbridge evaluation gaps and assist in developing more robust and capable RAG\nsystems.",
+      "upvotes": 21
+    },
+    {
+      "title": "Portrait Video Editing Empowered by Multimodal Generative Priors",
+      "url": "https://huggingface.co/papers/2409.13591",
+      "authors": [
+        "Xuan Gao",
+        "Haiyao Xiao",
+        "Chenglai Zhong",
+        "Juyong Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.13591.pdf",
+      "abstract": "We introduce PortraitGen, a powerful portrait video editing method that\nachieves consistent and expressive stylization with multimodal prompts.\nTraditional portrait video editing methods often struggle with 3D and temporal\nconsistency, and typically lack in rendering quality and efficiency. To address\nthese issues, we lift the portrait video frames to a unified dynamic 3D\nGaussian field, which ensures structural and temporal coherence across frames.\nFurthermore, we design a novel Neural Gaussian Texture mechanism that not only\nenables sophisticated style editing but also achieves rendering speed over\n100FPS. Our approach incorporates multimodal inputs through knowledge distilled\nfrom large-scale 2D generative models. Our system also incorporates expression\nsimilarity guidance and a face-aware portrait editing module, effectively\nmitigating degradation issues associated with iterative dataset updates.\nExtensive experiments demonstrate the temporal consistency, editing efficiency,\nand superior rendering quality of our method. The broad applicability of the\nproposed approach is demonstrated through various applications, including\ntext-driven editing, image-driven editing, and relighting, highlighting its\ngreat potential to advance the field of video editing. Demo videos and released\ncode are provided in our project page: https://ustc3dv.github.io/PortraitGen/",
+      "upvotes": 15
+    },
+    {
+      "title": "Colorful Diffuse Intrinsic Image Decomposition in the Wild",
+      "url": "https://huggingface.co/papers/2409.13690",
+      "authors": [
+        "Yağız Aksoy"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.13690.pdf",
+      "abstract": "Intrinsic image decomposition aims to separate the surface reflectance and\nthe effects from the illumination given a single photograph. Due to the\ncomplexity of the problem, most prior works assume a single-color illumination\nand a Lambertian world, which limits their use in illumination-aware image\nediting applications. In this work, we separate an input image into its diffuse\nalbedo, colorful diffuse shading, and specular residual components. We arrive\nat our result by gradually removing first the single-color illumination and\nthen the Lambertian-world assumptions. We show that by dividing the problem\ninto easier sub-problems, in-the-wild colorful diffuse shading estimation can\nbe achieved despite the limited ground-truth datasets. Our extended intrinsic\nmodel enables illumination-aware analysis of photographs and can be used for\nimage editing applications such as specularity removal and per-pixel white\nbalancing.",
+      "upvotes": 12
+    },
+    {
+      "title": "V^3: Viewing Volumetric Videos on Mobiles via Streamable 2D Dynamic Gaussians",
+      "url": "https://huggingface.co/papers/2409.13648",
+      "authors": [
+        "Zhirui Zhang",
+        "Kaixin Yao",
+        "Siyuan Xie",
+        "Lan Xu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.13648.pdf",
+      "abstract": "Experiencing high-fidelity volumetric video as seamlessly as 2D videos is a\nlong-held dream. However, current dynamic 3DGS methods, despite their high\nrendering quality, face challenges in streaming on mobile devices due to\ncomputational and bandwidth constraints. In this paper, we introduce\nV3(Viewing Volumetric Videos), a novel approach that enables\nhigh-quality mobile rendering through the streaming of dynamic Gaussians. Our\nkey innovation is to view dynamic 3DGS as 2D videos, facilitating the use of\nhardware video codecs. Additionally, we propose a two-stage training strategy\nto reduce storage requirements with rapid training speed. The first stage\nemploys hash encoding and shallow MLP to learn motion, then reduces the number\nof Gaussians through pruning to meet the streaming requirements, while the\nsecond stage fine tunes other Gaussian attributes using residual entropy loss\nand temporal loss to improve temporal continuity. This strategy, which\ndisentangles motion and appearance, maintains high rendering quality with\ncompact storage requirements. Meanwhile, we designed a multi-platform player to\ndecode and render 2D Gaussian videos. Extensive experiments demonstrate the\neffectiveness of V3, outperforming other methods by enabling\nhigh-quality rendering and streaming on common devices, which is unseen before.\nAs the first to stream dynamic Gaussians on mobile devices, our companion\nplayer offers users an unprecedented volumetric video experience, including\nsmooth scrolling and instant sharing. Our project page with source code is\navailable at https://authoritywang.github.io/v3/.",
+      "upvotes": 9
+    },
+    {
+      "title": "Minstrel: Structural Prompt Generation with Multi-Agents Coordination for Non-AI Experts",
+      "url": "https://huggingface.co/papers/2409.13449",
+      "authors": [
+        "Yuanzhong Liu",
+        "Xiaoyu Liang",
+        "Yijie Huang",
+        "Daling Wang",
+        "Xiaocui Yang",
+        "Sijia Shen",
+        "Shi Feng",
+        "Xiaoming Zhang",
+        "Chaofeng Guan",
+        "Yifei Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.13449.pdf",
+      "abstract": "LLMs have demonstrated commendable performance across diverse domains.\nNevertheless, formulating high-quality prompts to assist them in their work\nposes a challenge for non-AI experts. Existing research in prompt engineering\nsuggests somewhat scattered optimization principles and designs empirically\ndependent prompt optimizers. Unfortunately, these endeavors lack a structural\ndesign, incurring high learning costs and it is not conducive to the iterative\nupdating of prompts, especially for non-AI experts. Inspired by structured\nreusable programming languages, we propose LangGPT, a structural prompt design\nframework. Furthermore, we introduce Minstrel, a multi-generative agent system\nwith reflection to automate the generation of structural prompts. Experiments\nand the case study illustrate that structural prompts generated by Minstrel or\nwritten manually significantly enhance the performance of LLMs. Furthermore, we\nanalyze the ease of use of structural prompts through a user survey in our\nonline community.",
+      "upvotes": 8
+    },
+    {
+      "title": "Temporally Aligned Audio for Video with Autoregression",
+      "url": "https://huggingface.co/papers/2409.13689",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2409.13689.pdf",
+      "abstract": "We introduce V-AURA, the first autoregressive model to achieve high temporal\nalignment and relevance in video-to-audio generation. V-AURA uses a\nhigh-framerate visual feature extractor and a cross-modal audio-visual feature\nfusion strategy to capture fine-grained visual motion events and ensure precise\ntemporal alignment. Additionally, we propose VisualSound, a benchmark dataset\nwith high audio-visual relevance. VisualSound is based on VGGSound, a video\ndataset consisting of in-the-wild samples extracted from YouTube. During the\ncuration, we remove samples where auditory events are not aligned with the\nvisual ones. V-AURA outperforms current state-of-the-art models in temporal\nalignment and semantic relevance while maintaining comparable audio quality.\nCode, samples, VisualSound and models are available at\nhttps://v-aura.notion.site",
+      "upvotes": 7
+    },
+    {
+      "title": "Hackphyr: A Local Fine-Tuned LLM Agent for Network Security Environments",
+      "url": "https://huggingface.co/papers/2409.11276",
+      "authors": [
+        "Carlos Catania",
+        "Sebastian Garcia"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.11276.pdf",
+      "abstract": "Large Language Models (LLMs) have shown remarkable potential across various\ndomains, including cybersecurity. Using commercial cloud-based LLMs may be\nundesirable due to privacy concerns, costs, and network connectivity\nconstraints. In this paper, we present Hackphyr, a locally fine-tuned LLM to be\nused as a red-team agent within network security environments. Our fine-tuned 7\nbillion parameter model can run on a single GPU card and achieves performance\ncomparable with much larger and more powerful commercial models such as GPT-4.\nHackphyr clearly outperforms other models, including GPT-3.5-turbo, and\nbaselines, such as Q-learning agents in complex, previously unseen scenarios.\nTo achieve this performance, we generated a new task-specific cybersecurity\ndataset to enhance the base model's capabilities. Finally, we conducted a\ncomprehensive analysis of the agents' behaviors that provides insights into the\nplanning abilities and potential shortcomings of such agents, contributing to\nthe broader understanding of LLM-based agents in cybersecurity contexts",
+      "upvotes": 6
+    },
+    {
+      "title": "LLM-Agent-UMF: LLM-based Agent Unified Modeling Framework for Seamless Integration of Multi Active/Passive Core-Agents",
+      "url": "https://huggingface.co/papers/2409.11393",
+      "authors": [
+        "Hana Chaari",
+        "Ines Belhaj"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.11393.pdf",
+      "abstract": "The integration of tools in LLM-based agents overcame the difficulties of\nstandalone LLMs and traditional agents' limited capabilities. However, the\nconjunction of these technologies and the proposed enhancements in several\nstate-of-the-art works followed a non-unified software architecture resulting\nin a lack of modularity. Indeed, they focused mainly on functionalities and\noverlooked the definition of the component's boundaries within the agent. This\ncaused terminological and architectural ambiguities between researchers which\nwe addressed in this paper by proposing a unified framework that establishes a\nclear foundation for LLM-based agents' development from both functional and\nsoftware architectural perspectives.\n  Our framework, LLM-Agent-UMF (LLM-based Agent Unified Modeling Framework),\nclearly distinguishes between the different components of an agent, setting\nLLMs, and tools apart from a newly introduced element: the core-agent, playing\nthe role of the central coordinator of the agent which comprises five modules:\nplanning, memory, profile, action, and security, the latter often neglected in\nprevious works. Differences in the internal structure of core-agents led us to\nclassify them into a taxonomy of passive and active types. Based on this, we\nproposed different multi-core agent architectures combining unique\ncharacteristics of various individual agents.\n  For evaluation purposes, we applied this framework to a selection of\nstate-of-the-art agents, thereby demonstrating its alignment with their\nfunctionalities and clarifying the overlooked architectural aspects. Moreover,\nwe thoroughly assessed four of our proposed architectures by integrating\ndistinctive agents into hybrid active/passive core-agents' systems. This\nanalysis provided clear insights into potential improvements and highlighted\nthe challenges involved in the combination of specific agents.",
+      "upvotes": 2
+    }
+  ]
+}

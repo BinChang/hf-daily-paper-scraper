@@ -1,0 +1,154 @@
+{
+  "date": "2024-02-27",
+  "papers": [
+    {
+      "title": "ChatMusician: Understanding and Generating Music Intrinsically with LLM",
+      "url": "https://huggingface.co/papers/2402.16153",
+      "authors": [
+        "Zeyue Tian",
+        "Shangda Wu",
+        "Yuhang Wu",
+        "Cong Liu",
+        "Ziya Zhou",
+        "Ziyang Ma",
+        "Ziyu Wang",
+        "Qin Liu",
+        "Yiming Liang",
+        "Xiaowei Chi",
+        "Pengfei Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.16153.pdf",
+      "abstract": "While Large Language Models (LLMs) demonstrate impressive capabilities in\ntext generation, we find that their ability has yet to be generalized to music,\nhumanity's creative language. We introduce ChatMusician, an open-source LLM\nthat integrates intrinsic musical abilities. It is based on continual\npre-training and finetuning LLaMA2 on a text-compatible music representation,\nABC notation, and the music is treated as a second language. ChatMusician can\nunderstand and generate music with a pure text tokenizer without any external\nmulti-modal neural structures or tokenizers. Interestingly, endowing musical\nabilities does not harm language abilities, even achieving a slightly higher\nMMLU score. Our model is capable of composing well-structured, full-length\nmusic, conditioned on texts, chords, melodies, motifs, musical forms, etc,\nsurpassing GPT-4 baseline. On our meticulously curated college-level music\nunderstanding benchmark, MusicTheoryBench, ChatMusician surpasses LLaMA2 and\nGPT-3.5 on zero-shot setting by a noticeable margin. Our work reveals that LLMs\ncan be an excellent compressor for music, but there remains significant\nterritory to be conquered. We release our 4B token music-language corpora\nMusicPile, the collected MusicTheoryBench, code, model and demo in GitHub.",
+      "upvotes": 56
+    },
+    {
+      "title": "Nemotron-4 15B Technical Report",
+      "url": "https://huggingface.co/papers/2402.16819",
+      "authors": [
+        "Dan Su",
+        "Chen Zhu",
+        "Osvald Nitski",
+        "Annika Brundyn",
+        "Jiaxuan You",
+        "John Kamalu",
+        "Patrick LeGresley",
+        "Jared Casper"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.16819.pdf",
+      "abstract": "We introduce Nemotron-4 15B, a 15-billion-parameter large multilingual\nlanguage model trained on 8 trillion text tokens. Nemotron-4 15B demonstrates\nstrong performance when assessed on English, multilingual, and coding tasks: it\noutperforms all existing similarly-sized open models on 4 out of 7 downstream\nevaluation areas and achieves competitive performance to the leading open\nmodels in the remaining ones. Specifically, Nemotron-4 15B exhibits the best\nmultilingual capabilities of all similarly-sized models, even outperforming\nmodels over four times larger and those explicitly specialized for multilingual\ntasks.",
+      "upvotes": 42
+    },
+    {
+      "title": "FuseChat: Knowledge Fusion of Chat Models",
+      "url": "https://huggingface.co/papers/2402.16107",
+      "authors": [
+        "Longguang Zhong",
+        "Wei Bi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.16107.pdf",
+      "abstract": "While training large language models (LLMs) from scratch can indeed lead to\nmodels with distinct capabilities and strengths, this approach incurs\nsubstantial costs and may lead to potential redundancy in competencies. An\nalternative strategy is to combine existing LLMs into a more robust LLM,\nthereby diminishing the necessity for expensive pre-training. However, due to\nthe diverse architectures of LLMs, direct parameter blending proves to be\nunfeasible. Recently, FuseLLM introduced the concept of knowledge\nfusion to transfer the collective knowledge of multiple structurally varied\nLLMs into a target LLM through lightweight continual training. In this report,\nwe extend the scalability and flexibility of the FuseLLM framework to\nrealize the fusion of chat LLMs, resulting in FuseChat.\nFuseChat comprises two main stages. Firstly, we undertake knowledge\nfusion for structurally and scale-varied source LLMs to derive multiple target\nLLMs of identical structure and size via lightweight fine-tuning. Then, these\ntarget LLMs are merged within the parameter space, wherein we propose a novel\nmethod for determining the merging weights based on the variation ratio of\nparameter matrices before and after fine-tuning. We validate our approach using\nthree prominent chat LLMs with diverse architectures and scales, namely\nNH2-Mixtral-8x7B, NH2-Solar-10.7B, and\nOpenChat-3.5-7B. Experimental results spanning various chat domains\ndemonstrate the superiority of \\textsc{FuseChat-7B} across a broad\nspectrum of chat LLMs at 7B and 34B scales, even surpassing GPT-3.5\n(March) and approaching Mixtral-8x7B-Instruct. Our code, model\nweights, and data are openly accessible at\nhttps://github.com/fanqiwan/FuseLLM.",
+      "upvotes": 36
+    },
+    {
+      "title": "MegaScale: Scaling Large Language Model Training to More Than 10,000 GPUs",
+      "url": "https://huggingface.co/papers/2402.15627",
+      "authors": [
+        "Ziheng Jiang",
+        "Haibin Lin",
+        "Qi Huang",
+        "Yangrui Chen",
+        "Zhi Zhang",
+        "Yanghua Peng",
+        "Xiang Li",
+        "Cong Xie",
+        "Shibiao Nong",
+        "Yulu Jia",
+        "Sun He",
+        "Hongmin Chen",
+        "Zhihao Bai",
+        "Qi Hou",
+        "Shipeng Yan",
+        "Ding Zhou",
+        "Yiyao Sheng",
+        "Zhuo Jiang",
+        "Haohan Xu",
+        "Haoran Wei",
+        "Zhang Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.15627.pdf",
+      "abstract": "We present the design, implementation and engineering experience in building\nand deploying MegaScale, a production system for training large language models\n(LLMs) at the scale of more than 10,000 GPUs. Training LLMs at this scale\nbrings unprecedented challenges to training efficiency and stability. We take a\nfull-stack approach that co-designs the algorithmic and system components\nacross model block and optimizer design, computation and communication\noverlapping, operator optimization, data pipeline, and network performance\ntuning. Maintaining high efficiency throughout the training process (i.e.,\nstability) is an important consideration in production given the long extent of\nLLM training jobs. Many hard stability issues only emerge at large scale, and\nin-depth observability is the key to address them. We develop a set of\ndiagnosis tools to monitor system components and events deep in the stack,\nidentify root causes, and derive effective techniques to achieve fault\ntolerance and mitigate stragglers. MegaScale achieves 55.2% Model FLOPs\nUtilization (MFU) when training a 175B LLM model on 12,288 GPUs, improving the\nMFU by 1.34x compared to Megatron-LM. We share our operational experience in\nidentifying and fixing failures and stragglers. We hope by articulating the\nproblems and sharing our experience from a systems perspective, this work can\ninspire future LLM systems research.",
+      "upvotes": 34
+    },
+    {
+      "title": "Multi-LoRA Composition for Image Generation",
+      "url": "https://huggingface.co/papers/2402.16843",
+      "authors": [
+        "Yizhu Jiao",
+        "Jiawei Han"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.16843.pdf",
+      "abstract": "Low-Rank Adaptation (LoRA) is extensively utilized in text-to-image models\nfor the accurate rendition of specific elements like distinct characters or\nunique styles in generated images. Nonetheless, existing methods face\nchallenges in effectively composing multiple LoRAs, especially as the number of\nLoRAs to be integrated grows, thus hindering the creation of complex imagery.\nIn this paper, we study multi-LoRA composition through a decoding-centric\nperspective. We present two training-free methods: LoRA Switch, which\nalternates between different LoRAs at each denoising step, and LoRA Composite,\nwhich simultaneously incorporates all LoRAs to guide more cohesive image\nsynthesis. To evaluate the proposed approaches, we establish ComposLoRA, a new\ncomprehensive testbed as part of this research. It features a diverse range of\nLoRA categories with 480 composition sets. Utilizing an evaluation framework\nbased on GPT-4V, our findings demonstrate a clear improvement in performance\nwith our methods over the prevalent baseline, particularly evident when\nincreasing the number of LoRAs in a composition.",
+      "upvotes": 28
+    },
+    {
+      "title": "StructLM: Towards Building Generalist Models for Structured Knowledge Grounding",
+      "url": "https://huggingface.co/papers/2402.16671",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2402.16671.pdf",
+      "abstract": "Structured data sources, such as tables, graphs, and databases, are\nubiquitous knowledge sources. Despite the demonstrated capabilities of large\nlanguage models (LLMs) on plain text, their proficiency in interpreting and\nutilizing structured data remains limited. Our investigation reveals a notable\ndeficiency in LLMs' ability to process structured data, e.g., ChatGPT lags\nbehind state-of-the-art (SoTA) model by an average of 35%. To augment the\nStructured Knowledge Grounding (SKG) capabilities in LLMs, we have developed a\ncomprehensive instruction tuning dataset comprising 1.1 million examples.\nUtilizing this dataset, we train a series of models, referred to as StructLM,\nbased on the Code-LLaMA architecture, ranging from 7B to 34B parameters. Our\nStructLM series surpasses task-specific models on 14 out of 18 evaluated\ndatasets and establishes new SoTA achievements on 7 SKG tasks. Furthermore,\nStructLM demonstrates exceptional generalization across 6 novel SKG tasks.\nContrary to expectations, we observe that scaling model size offers marginal\nbenefits, with StructLM-34B showing only slight improvements over StructLM-7B.\nThis suggests that structured knowledge grounding is still a challenging task\nand requires more innovative design to push to a new level.",
+      "upvotes": 26
+    },
+    {
+      "title": "Do Large Language Models Latently Perform Multi-Hop Reasoning?",
+      "url": "https://huggingface.co/papers/2402.16837",
+      "authors": [
+        "Elena Gribovskaya",
+        "Nora Kassner",
+        "Sebastian Riedel"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.16837.pdf",
+      "abstract": "We study whether Large Language Models (LLMs) latently perform multi-hop\nreasoning with complex prompts such as \"The mother of the singer of\n'Superstition' is\". We look for evidence of a latent reasoning pathway where an\nLLM (1) latently identifies \"the singer of 'Superstition'\" as Stevie Wonder,\nthe bridge entity, and (2) uses its knowledge of Stevie Wonder's mother to\ncomplete the prompt. We analyze these two hops individually and consider their\nco-occurrence as indicative of latent multi-hop reasoning. For the first hop,\nwe test if changing the prompt to indirectly mention the bridge entity instead\nof any other entity increases the LLM's internal recall of the bridge entity.\nFor the second hop, we test if increasing this recall causes the LLM to better\nutilize what it knows about the bridge entity. We find strong evidence of\nlatent multi-hop reasoning for the prompts of certain relation types, with the\nreasoning pathway used in more than 80% of the prompts. However, the\nutilization is highly contextual, varying across different types of prompts.\nAlso, on average, the evidence for the second hop and the full multi-hop\ntraversal is rather moderate and only substantial for the first hop. Moreover,\nwe find a clear scaling trend with increasing model size for the first hop of\nreasoning but not for the second hop. Our experimental findings suggest\npotential challenges and opportunities for future development and applications\nof LLMs.",
+      "upvotes": 24
+    },
+    {
+      "title": "MobiLlama: Towards Accurate and Lightweight Fully Transparent GPT",
+      "url": "https://huggingface.co/papers/2402.16840",
+      "authors": [
+        "Salman Khan",
+        "Rao M. Anwer",
+        "Fahad Shahbaz Khan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.16840.pdf",
+      "abstract": "\"Bigger the better\" has been the predominant trend in recent Large Language\nModels (LLMs) development. However, LLMs do not suit well for scenarios that\nrequire on-device processing, energy efficiency, low memory footprint, and\nresponse efficiency. These requisites are crucial for privacy, security, and\nsustainable deployment. This paper explores the \"less is more\" paradigm by\naddressing the challenge of designing accurate yet efficient Small Language\nModels (SLMs) for resource constrained devices. Our primary contribution is the\nintroduction of an accurate and fully transparent open-source 0.5 billion\n(0.5B) parameter SLM, named MobiLlama, catering to the specific needs of\nresource-constrained computing with an emphasis on enhanced performance with\nreduced resource demands. MobiLlama is a SLM design that initiates from a\nlarger model and applies a careful parameter sharing scheme to reduce both the\npre-training and the deployment cost. Our work strives to not only bridge the\ngap in open-source SLMs but also ensures full transparency, where complete\ntraining data pipeline, training code, model weights, and over 300 checkpoints\nalong with evaluation codes is available at :\nhttps://github.com/mbzuai-oryx/MobiLlama.",
+      "upvotes": 23
+    },
+    {
+      "title": "Towards Open-ended Visual Quality Comparison",
+      "url": "https://huggingface.co/papers/2402.16641",
+      "authors": [
+        "Wenxiu Sun",
+        "Qiong Yan",
+        "Xiaohong Liu",
+        "Shiqi Wang",
+        "Weisi Lin"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.16641.pdf",
+      "abstract": "Comparative settings (e.g. pairwise choice, listwise ranking) have been\nadopted by a wide range of subjective studies for image quality assessment\n(IQA), as it inherently standardizes the evaluation criteria across different\nobservers and offer more clear-cut responses. In this work, we extend the edge\nof emerging large multi-modality models (LMMs) to further advance visual\nquality comparison into open-ended settings, that 1) can respond to open-range\nquestions on quality comparison; 2) can provide detailed reasonings beyond\ndirect answers. To this end, we propose the Co-Instruct. To train this\nfirst-of-its-kind open-source open-ended visual quality comparer, we collect\nthe Co-Instruct-562K dataset, from two sources: (a) LMM-merged single image\nquality description, (b) GPT-4V \"teacher\" responses on unlabeled data.\nFurthermore, to better evaluate this setting, we propose the MICBench, the\nfirst benchmark on multi-image comparison for LMMs. We demonstrate that\nCo-Instruct not only achieves 30% higher superior accuracy than\nstate-of-the-art open-source LMMs, but also outperforms GPT-4V (its teacher),\non both existing related benchmarks and the proposed MICBench. Our model is\npublished at https://huggingface.co/q-future/co-instruct.",
+      "upvotes": 16
+    },
+    {
+      "title": "Rainbow Teaming: Open-Ended Generation of Diverse Adversarial Prompts",
+      "url": "https://huggingface.co/papers/2402.16822",
+      "authors": [
+        "Eric Hambro",
+        "Manish Bhatt",
+        "Jack Parker-Holder",
+        "Jakob Foerster",
+        "Tim Rocktäschel"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.16822.pdf",
+      "abstract": "As large language models (LLMs) become increasingly prevalent across many\nreal-world applications, understanding and enhancing their robustness to user\ninputs is of paramount importance. Existing methods for identifying adversarial\nprompts tend to focus on specific domains, lack diversity, or require extensive\nhuman annotations. To address these limitations, we present Rainbow Teaming, a\nnovel approach for producing a diverse collection of adversarial prompts.\nRainbow Teaming casts adversarial prompt generation as a quality-diversity\nproblem, and uses open-ended search to generate prompts that are both effective\nand diverse. It can uncover a model's vulnerabilities across a broad range of\ndomains including, in this paper, safety, question answering, and\ncybersecurity. We also demonstrate that fine-tuning on synthetic data generated\nby Rainbow Teaming improves the safety of state-of-the-art LLMs without hurting\ntheir general capabilities and helpfulness, paving the path to open-ended\nself-improvement.",
+      "upvotes": 15
+    }
+  ]
+}

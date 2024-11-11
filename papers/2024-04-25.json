@@ -1,0 +1,121 @@
+{
+  "date": "2024-04-25",
+  "papers": [
+    {
+      "title": "CatLIP: CLIP-level Visual Recognition Accuracy with 2.7x Faster Pre-training on Web-scale Image-Text Data",
+      "url": "https://huggingface.co/papers/2404.15653",
+      "authors": [
+        "Oncel Tuzel"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.15653.pdf",
+      "abstract": "Contrastive learning has emerged as a transformative method for learning\neffective visual representations through the alignment of image and text\nembeddings. However, pairwise similarity computation in contrastive loss\nbetween image and text pairs poses computational challenges. This paper\npresents a novel weakly supervised pre-training of vision models on web-scale\nimage-text data. The proposed method reframes pre-training on image-text data\nas a classification task. Consequently, it eliminates the need for pairwise\nsimilarity computations in contrastive loss, achieving a remarkable 2.7times\nacceleration in training speed compared to contrastive learning on web-scale\ndata. Through extensive experiments spanning diverse vision tasks, including\ndetection and segmentation, we demonstrate that the proposed method maintains\nhigh representation quality. Our source code along with pre-trained model\nweights and training recipes is available at\nhttps://github.com/apple/corenet.",
+      "upvotes": 26
+    },
+    {
+      "title": "PuLID: Pure and Lightning ID Customization via Contrastive Alignment",
+      "url": "https://huggingface.co/papers/2404.16022",
+      "authors": [
+        "Zinan Guo",
+        "Lang Chen",
+        "Qian He"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.16022.pdf",
+      "abstract": "We propose Pure and Lightning ID customization (PuLID), a novel tuning-free\nID customization method for text-to-image generation. By incorporating a\nLightning T2I branch with a standard diffusion one, PuLID introduces both\ncontrastive alignment loss and accurate ID loss, minimizing disruption to the\noriginal model and ensuring high ID fidelity. Experiments show that PuLID\nachieves superior performance in both ID fidelity and editability. Another\nattractive property of PuLID is that the image elements (e.g., background,\nlighting, composition, and style) before and after the ID insertion are kept as\nconsistent as possible. Codes and models will be available at\nhttps://github.com/ToTheBeginning/PuLID",
+      "upvotes": 19
+    },
+    {
+      "title": "MoDE: CLIP Data Experts via Clustering",
+      "url": "https://huggingface.co/papers/2404.16030",
+      "authors": [
+        "Po-Yao Huang",
+        "Luke Zettlemoyer",
+        "Wen-Tau Yih",
+        "Hu Xu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.16030.pdf",
+      "abstract": "The success of contrastive language-image pretraining (CLIP) relies on the\nsupervision from the pairing between images and captions, which tends to be\nnoisy in web-crawled data. We present Mixture of Data Experts (MoDE) and learn\na system of CLIP data experts via clustering. Each data expert is trained on\none data cluster, being less sensitive to false negative noises in other\nclusters. At inference time, we ensemble their outputs by applying weights\ndetermined through the correlation between task metadata and cluster\nconditions. To estimate the correlation precisely, the samples in one cluster\nshould be semantically similar, but the number of data experts should still be\nreasonable for training and inference. As such, we consider the ontology in\nhuman language and propose to use fine-grained cluster centers to represent\neach data expert at a coarse-grained level. Experimental studies show that four\nCLIP data experts on ViT-B/16 outperform the ViT-L/14 by OpenAI CLIP and\nOpenCLIP on zero-shot image classification but with less (<35\\%) training\ncost. Meanwhile, MoDE can train all data expert asynchronously and can flexibly\ninclude new data experts. The code is available at\nhttps://github.com/facebookresearch/MetaCLIP/tree/main/mode.",
+      "upvotes": 12
+    },
+    {
+      "title": "ID-Aligner: Enhancing Identity-Preserving Text-to-Image Generation with Reward Feedback Learning",
+      "url": "https://huggingface.co/papers/2404.15449",
+      "authors": [
+        "Jiacheng Zhang",
+        "Hefeng Wu",
+        "Liang Lin"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.15449.pdf",
+      "abstract": "The rapid development of diffusion models has triggered diverse applications.\nIdentity-preserving text-to-image generation (ID-T2I) particularly has received\nsignificant attention due to its wide range of application scenarios like AI\nportrait and advertising. While existing ID-T2I methods have demonstrated\nimpressive results, several key challenges remain: (1) It is hard to maintain\nthe identity characteristics of reference portraits accurately, (2) The\ngenerated images lack aesthetic appeal especially while enforcing identity\nretention, and (3) There is a limitation that cannot be compatible with\nLoRA-based and Adapter-based methods simultaneously. To address these issues,\nwe present ID-Aligner, a general feedback learning framework to\nenhance ID-T2I performance. To resolve identity features lost, we introduce\nidentity consistency reward fine-tuning to utilize the feedback from face\ndetection and recognition models to improve generated identity preservation.\nFurthermore, we propose identity aesthetic reward fine-tuning leveraging\nrewards from human-annotated preference data and automatically constructed\nfeedback on character structure generation to provide aesthetic tuning signals.\nThanks to its universal feedback fine-tuning framework, our method can be\nreadily applied to both LoRA and Adapter models, achieving consistent\nperformance gains. Extensive experiments on SD1.5 and SDXL diffusion models\nvalidate the effectiveness of our approach. Project Page:\n\\url{https://idaligner.github.io/}",
+      "upvotes": 11
+    },
+    {
+      "title": "Editable Image Elements for Controllable Synthesis",
+      "url": "https://huggingface.co/papers/2404.16029",
+      "authors": [
+        "Richard Zhang",
+        "Eli Shechtman",
+        "Nuno Vasconcelos",
+        "Xiaolong Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.16029.pdf",
+      "abstract": "Diffusion models have made significant advances in text-guided synthesis\ntasks. However, editing user-provided images remains challenging, as the high\ndimensional noise input space of diffusion models is not naturally suited for\nimage inversion or spatial editing. In this work, we propose an image\nrepresentation that promotes spatial editing of input images using a diffusion\nmodel. Concretely, we learn to encode an input into \"image elements\" that can\nfaithfully reconstruct an input image. These elements can be intuitively edited\nby a user, and are decoded by a diffusion model into realistic images. We show\nthe effectiveness of our representation on various image editing tasks, such as\nobject resizing, rearrangement, dragging, de-occlusion, removal, variation, and\nimage composition. Project page:\nhttps://jitengmu.github.io/Editable_Image_Elements/",
+      "upvotes": 10
+    },
+    {
+      "title": "MotionMaster: Training-free Camera Motion Transfer For Video Generation",
+      "url": "https://huggingface.co/papers/2404.15789",
+      "authors": [
+        "Teng Hu",
+        "Jiangning Zhang",
+        "Ran Yi",
+        "Yating Wang",
+        "Hongrui Huang",
+        "Jieyu Weng",
+        "Yabiao Wang",
+        "Lizhuang Ma"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.15789.pdf",
+      "abstract": "The emergence of diffusion models has greatly propelled the progress in image\nand video generation. Recently, some efforts have been made in controllable\nvideo generation, including text-to-video generation and video motion control,\namong which camera motion control is an important topic. However, existing\ncamera motion control methods rely on training a temporal camera module, and\nnecessitate substantial computation resources due to the large amount of\nparameters in video generation models. Moreover, existing methods pre-define\ncamera motion types during training, which limits their flexibility in camera\ncontrol. Therefore, to reduce training costs and achieve flexible camera\ncontrol, we propose COMD, a novel training-free video motion transfer model,\nwhich disentangles camera motions and object motions in source videos and\ntransfers the extracted camera motions to new videos. We first propose a\none-shot camera motion disentanglement method to extract camera motion from a\nsingle source video, which separates the moving objects from the background and\nestimates the camera motion in the moving objects region based on the motion in\nthe background by solving a Poisson equation. Furthermore, we propose a\nfew-shot camera motion disentanglement method to extract the common camera\nmotion from multiple videos with similar camera motions, which employs a\nwindow-based clustering technique to extract the common features in temporal\nattention maps of multiple videos. Finally, we propose a motion combination\nmethod to combine different types of camera motions together, enabling our\nmodel a more controllable and flexible camera control. Extensive experiments\ndemonstrate that our training-free approach can effectively decouple\ncamera-object motion and apply the decoupled camera motion to a wide range of\ncontrollable video generation tasks, achieving flexible and diverse camera\nmotion control.",
+      "upvotes": 10
+    },
+    {
+      "title": "MaGGIe: Masked Guided Gradual Human Instance Matting",
+      "url": "https://huggingface.co/papers/2404.16035",
+      "authors": [
+        "Seoung Wug Oh",
+        "Abhinav Shrivastava"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.16035.pdf",
+      "abstract": "Human matting is a foundation task in image and video processing, where human\nforeground pixels are extracted from the input. Prior works either improve the\naccuracy by additional guidance or improve the temporal consistency of a single\ninstance across frames. We propose a new framework MaGGIe, Masked Guided\nGradual Human Instance Matting, which predicts alpha mattes progressively for\neach human instances while maintaining the computational cost, precision, and\nconsistency. Our method leverages modern architectures, including transformer\nattention and sparse convolution, to output all instance mattes simultaneously\nwithout exploding memory and latency. Although keeping constant inference costs\nin the multiple-instance scenario, our framework achieves robust and versatile\nperformance on our proposed synthesized benchmarks. With the higher quality\nimage and video matting benchmarks, the novel multi-instance synthesis approach\nfrom publicly available sources is introduced to increase the generalization of\nmodels in real-world scenarios.",
+      "upvotes": 8
+    },
+    {
+      "title": "BASS: Batched Attention-optimized Speculative Sampling",
+      "url": "https://huggingface.co/papers/2404.15778",
+      "authors": [
+        "Haifeng Qian",
+        "Sungsoo Ha",
+        "Mingyue Shang",
+        "Sanjay Krishna Gouda",
+        "Ramesh Nallapati",
+        "Sudipta Sengupta",
+        "Xiaofei Ma",
+        "Anoop Deoras"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.15778.pdf",
+      "abstract": "Speculative decoding has emerged as a powerful method to improve latency and\nthroughput in hosting large language models. However, most existing\nimplementations focus on generating a single sequence. Real-world generative AI\napplications often require multiple responses and how to perform speculative\ndecoding in a batched setting while preserving its latency benefits poses\nnon-trivial challenges. This paper describes a system of batched speculative\ndecoding that sets a new state of the art in multi-sequence generation latency\nand that demonstrates superior GPU utilization as well as quality of\ngenerations within a time budget. For example, for a 7.8B-size model on a\nsingle A100 GPU and with a batch size of 8, each sequence is generated at an\naverage speed of 5.8ms per token, the overall throughput being 1.1K tokens per\nsecond. These results represent state-of-the-art latency and a 2.15X speed-up\nover optimized regular decoding. Within a time budget that regular decoding\ndoes not finish, our system is able to generate sequences with HumanEval\nPass@First of 43% and Pass@All of 61%, far exceeding what's feasible with\nsingle-sequence speculative decoding. Our peak GPU utilization during decoding\nreaches as high as 15.8%, more than 3X the highest of that of regular decoding\nand around 10X of single-sequence speculative decoding.",
+      "upvotes": 8
+    },
+    {
+      "title": "XC-Cache: Cross-Attending to Cached Context for Efficient LLM Inference",
+      "url": "https://huggingface.co/papers/2404.15420",
+      "authors": [
+        "Pierre-André Noël",
+        "Christopher Pal"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.15420.pdf",
+      "abstract": "In-context learning (ICL) approaches typically leverage prompting to\ncondition decoder-only language model generation on reference information.\nJust-in-time processing of a context is inefficient due to the quadratic cost\nof self-attention operations, and caching is desirable. However, caching\ntransformer states can easily require almost as much space as the model\nparameters. When the right context isn't known in advance, caching ICL can be\nchallenging. This work addresses these limitations by introducing models that,\ninspired by the encoder-decoder architecture, use cross-attention to condition\ngeneration on reference text without the prompt. More precisely, we leverage\npre-trained decoder-only models and only train a small number of added layers.\nWe use Question-Answering (QA) as a testbed to evaluate the ability of our\nmodels to perform conditional generation and observe that they outperform ICL,\nare comparable to fine-tuned prompted LLMs, and drastically reduce the space\nfootprint relative to standard KV caching by two orders of magnitude.",
+      "upvotes": 7
+    }
+  ]
+}

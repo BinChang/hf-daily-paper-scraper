@@ -1,0 +1,149 @@
+{
+  "date": "2024-02-02",
+  "papers": [
+    {
+      "title": "OLMo: Accelerating the Science of Language Models",
+      "url": "https://huggingface.co/papers/2402.00838",
+      "authors": [
+        "Pete Walsh",
+        "Rodney Kinney",
+        "Shane Arora",
+        "David Atkinson",
+        "Jennifer Dumas",
+        "William Merrill"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.00838.pdf",
+      "abstract": "Language models (LMs) have become ubiquitous in both NLP research and in\ncommercial product offerings. As their commercial importance has surged, the\nmost powerful models have become closed off, gated behind proprietary\ninterfaces, with important details of their training data, architectures, and\ndevelopment undisclosed. Given the importance of these details in\nscientifically studying these models, including their biases and potential\nrisks, we believe it is essential for the research community to have access to\npowerful, truly open LMs. To this end, this technical report details the first\nrelease of OLMo, a state-of-the-art, truly Open Language Model and its\nframework to build and study the science of language modeling. Unlike most\nprior efforts that have only released model weights and inference code, we\nrelease OLMo and the whole framework, including training data and training and\nevaluation code. We hope this release will empower and strengthen the open\nresearch community and inspire a new wave of innovation.",
+      "upvotes": 80
+    },
+    {
+      "title": "Dolma: an Open Corpus of Three Trillion Tokens for Language Model Pretraining Research",
+      "url": "https://huggingface.co/papers/2402.00159",
+      "authors": [
+        "Rodney Kinney",
+        "David Atkinson",
+        "Jennifer Dumas",
+        "Li Lucy"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.00159.pdf",
+      "abstract": "Language models have become a critical technology to tackling a wide range of\nnatural language processing tasks, yet many details about how the\nbest-performing language models were developed are not reported. In particular,\ninformation about their pretraining corpora is seldom discussed: commercial\nlanguage models rarely provide any information about their data; even open\nmodels rarely release datasets they are trained on, or an exact recipe to\nreproduce them. As a result, it is challenging to conduct certain threads of\nlanguage modeling research, such as understanding how training data impacts\nmodel capabilities and shapes their limitations. To facilitate open research on\nlanguage model pretraining, we release Dolma, a three trillion tokens English\ncorpus, built from a diverse mixture of web content, scientific papers, code,\npublic-domain books, social media, and encyclopedic materials. In addition, we\nopen source our data curation toolkit to enable further experimentation and\nreproduction of our work. In this report, we document Dolma, including its\ndesign principles, details about its construction, and a summary of its\ncontents. We interleave this report with analyses and experimental results from\ntraining language models on intermediate states of Dolma to share what we have\nlearned about important data curation practices, including the role of content\nor quality filters, deduplication, and multi-source mixing. Dolma has been used\nto train OLMo, a state-of-the-art, open language model and framework designed\nto build and study the science of language modeling.",
+      "upvotes": 59
+    },
+    {
+      "title": "CroissantLLM: A Truly Bilingual French-English Language Model",
+      "url": "https://huggingface.co/papers/2402.00786",
+      "authors": [
+        "Caio Corro",
+        "Pedro Martins",
+        "André Martins",
+        "Céline Hudelot"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.00786.pdf",
+      "abstract": "We introduce CroissantLLM, a 1.3B language model pretrained on a set of 3T\nEnglish and French tokens, to bring to the research and industrial community a\nhigh-performance, fully open-sourced bilingual model that runs swiftly on\nconsumer-grade local hardware. To that end, we pioneer the approach of training\nan intrinsically bilingual model with a 1:1 English-to-French pretraining data\nratio, a custom tokenizer, and bilingual finetuning datasets. We release the\ntraining dataset, notably containing a French split with manually curated,\nhigh-quality, and varied data sources. To assess performance outside of\nEnglish, we craft a novel benchmark, FrenchBench, consisting of an array of\nclassification and generation tasks, covering various orthogonal aspects of\nmodel performance in the French Language. Additionally, rooted in transparency\nand to foster further Large Language Model research, we release codebases, and\ndozens of checkpoints across various model sizes, training data distributions,\nand training steps, as well as fine-tuned Chat models, and strong translation\nmodels. We evaluate our model through the FMTI framework, and validate 81 % of\nthe transparency criteria, far beyond the scores of even most open initiatives.\nThis work enriches the NLP landscape, breaking away from previous\nEnglish-centric work in order to strengthen our understanding of\nmultilinguality in language models.",
+      "upvotes": 25
+    },
+    {
+      "title": "Can Large Language Models Understand Context?",
+      "url": "https://huggingface.co/papers/2402.00858",
+      "authors": [
+        "Yilun Zhu",
+        "Joel Ruben Antony Moniz",
+        "Shruti Bhargava",
+        "Dhivya Piraviperumal",
+        "Site Li",
+        "Yuan Zhang",
+        "Hong Yu",
+        "Bo-Hsiang Tseng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.00858.pdf",
+      "abstract": "Understanding context is key to understanding human language, an ability\nwhich Large Language Models (LLMs) have been increasingly seen to demonstrate\nto an impressive extent. However, though the evaluation of LLMs encompasses\nvarious domains within the realm of Natural Language Processing, limited\nattention has been paid to probing their linguistic capability of understanding\ncontextual features. This paper introduces a context understanding benchmark by\nadapting existing datasets to suit the evaluation of generative models. This\nbenchmark comprises of four distinct tasks and nine datasets, all featuring\nprompts designed to assess the models' ability to understand context. First, we\nevaluate the performance of LLMs under the in-context learning pretraining\nscenario. Experimental results indicate that pre-trained dense models struggle\nwith understanding more nuanced contextual features when compared to\nstate-of-the-art fine-tuned models. Second, as LLM compression holds growing\nsignificance in both research and real-world applications, we assess the\ncontext understanding of quantized models under in-context-learning settings.\nWe find that 3-bit post-training quantization leads to varying degrees of\nperformance reduction on our benchmark. We conduct an extensive analysis of\nthese scenarios to substantiate our experimental results.",
+      "upvotes": 21
+    },
+    {
+      "title": "Efficient Exploration for LLMs",
+      "url": "https://huggingface.co/papers/2402.00396",
+      "authors": [
+        "Vikranth Dwaracherla",
+        "Seyed Mohammad Asghari",
+        "Botao Hao",
+        "Benjamin Van Roy"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.00396.pdf",
+      "abstract": "We present evidence of substantial benefit from efficient exploration in\ngathering human feedback to improve large language models. In our experiments,\nan agent sequentially generates queries while fitting a reward model to the\nfeedback received. Our best-performing agent generates queries using double\nThompson sampling, with uncertainty represented by an epistemic neural network.\nOur results demonstrate that efficient exploration enables high levels of\nperformance with far fewer queries. Further, both uncertainty estimation and\nthe choice of exploration scheme play critical roles.",
+      "upvotes": 21
+    },
+    {
+      "title": "AnimateLCM: Accelerating the Animation of Personalized Diffusion Models and Adapters with Decoupled Consistency Learning",
+      "url": "https://huggingface.co/papers/2402.00769",
+      "authors": [
+        "Xiaoyu Shi",
+        "Yu Liu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.00769.pdf",
+      "abstract": "Video diffusion models has been gaining increasing attention for its ability\nto produce videos that are both coherent and of high fidelity. However, the\niterative denoising process makes it computationally intensive and\ntime-consuming, thus limiting its applications. Inspired by the Consistency\nModel (CM) that distills pretrained image diffusion models to accelerate the\nsampling with minimal steps and its successful extension Latent Consistency\nModel (LCM) on conditional image generation, we propose AnimateLCM, allowing\nfor high-fidelity video generation within minimal steps. Instead of directly\nconducting consistency learning on the raw video dataset, we propose a\ndecoupled consistency learning strategy that decouples the distillation of\nimage generation priors and motion generation priors, which improves the\ntraining efficiency and enhance the generation visual quality. Additionally, to\nenable the combination of plug-and-play adapters in stable diffusion community\nto achieve various functions (e.g., ControlNet for controllable generation). we\npropose an efficient strategy to adapt existing adapters to our distilled\ntext-conditioned video consistency model or train adapters from scratch without\nharming the sampling speed. We validate the proposed strategy in\nimage-conditioned video generation and layout-conditioned video generation, all\nachieving top-performing results. Experimental results validate the\neffectiveness of our proposed method. Code and weights will be made public.\nMore details are available at https://github.com/G-U-N/AnimateLCM.",
+      "upvotes": 20
+    },
+    {
+      "title": "SymbolicAI: A framework for logic-based approaches combining generative models and solvers",
+      "url": "https://huggingface.co/papers/2402.00854",
+      "authors": [
+        "Markus Holzleitner",
+        "Werner Zellinger",
+        "Sepp Hochreiter"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.00854.pdf",
+      "abstract": "We introduce SymbolicAI, a versatile and modular framework employing a\nlogic-based approach to concept learning and flow management in generative\nprocesses. SymbolicAI enables the seamless integration of generative models\nwith a diverse range of solvers by treating large language models (LLMs) as\nsemantic parsers that execute tasks based on both natural and formal language\ninstructions, thus bridging the gap between symbolic reasoning and generative\nAI. We leverage probabilistic programming principles to tackle complex tasks,\nand utilize differentiable and classical programming paradigms with their\nrespective strengths. The framework introduces a set of polymorphic,\ncompositional, and self-referential operations for data stream manipulation,\naligning LLM outputs with user objectives. As a result, we can transition\nbetween the capabilities of various foundation models endowed with zero- and\nfew-shot learning capabilities and specialized, fine-tuned models or solvers\nproficient in addressing specific problems. In turn, the framework facilitates\nthe creation and evaluation of explainable computational graphs. We conclude by\nintroducing a quality measure and its empirical score for evaluating these\ncomputational graphs, and propose a benchmark that compares various\nstate-of-the-art LLMs across a set of complex workflows. We refer to the\nempirical score as the \"Vector Embedding for Relational Trajectory Evaluation\nthrough Cross-similarity\", or VERTEX score for short. The framework codebase\nand benchmark are linked below.",
+      "upvotes": 19
+    },
+    {
+      "title": "Machine Unlearning for Image-to-Image Generative Models",
+      "url": "https://huggingface.co/papers/2402.00351",
+      "authors": [
+        "Hsiang Hsu",
+        "Chun-Fu",
+        "Chen",
+        "Radu Marculescu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.00351.pdf",
+      "abstract": "Machine unlearning has emerged as a new paradigm to deliberately forget data\nsamples from a given model in order to adhere to stringent regulations.\nHowever, existing machine unlearning methods have been primarily focused on\nclassification models, leaving the landscape of unlearning for generative\nmodels relatively unexplored. This paper serves as a bridge, addressing the gap\nby providing a unifying framework of machine unlearning for image-to-image\ngenerative models. Within this framework, we propose a\ncomputationally-efficient algorithm, underpinned by rigorous theoretical\nanalysis, that demonstrates negligible performance degradation on the retain\nsamples, while effectively removing the information from the forget samples.\nEmpirical studies on two large-scale datasets, ImageNet-1K and Places-365,\nfurther show that our algorithm does not rely on the availability of the retain\nsamples, which further complies with data retention policy. To our best\nknowledge, this work is the first that represents systemic, theoretical,\nempirical explorations of machine unlearning specifically tailored for\nimage-to-image generative models. Our code is available at\nhttps://github.com/jpmorganchase/l2l-generator-unlearning.",
+      "upvotes": 12
+    },
+    {
+      "title": "Transforming and Combining Rewards for Aligning Large Language Models",
+      "url": "https://huggingface.co/papers/2402.00742",
+      "authors": [
+        "Zihao Wang",
+        "Jacob Eisenstein",
+        "Alex D'Amour",
+        "Victor Veitch"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.00742.pdf",
+      "abstract": "A common approach for aligning language models to human preferences is to\nfirst learn a reward model from preference data, and then use this reward model\nto update the language model. We study two closely related problems that arise\nin this approach. First, any monotone transformation of the reward model\npreserves preference ranking; is there a choice that is ``better'' than others?\nSecond, we often wish to align language models to multiple properties: how\nshould we combine multiple reward models? Using a probabilistic interpretation\nof the alignment procedure, we identify a natural choice for transformation for\n(the common case of) rewards learned from Bradley-Terry preference models. This\nderived transformation has two important properties. First, it emphasizes\nimproving poorly-performing outputs, rather than outputs that already score\nwell. This mitigates both underfitting (where some prompts are not improved)\nand reward hacking (where the model learns to exploit misspecification of the\nreward model). Second, it enables principled aggregation of rewards by linking\nsummation to logical conjunction: the sum of transformed rewards corresponds to\nthe probability that the output is ``good'' in all measured properties, in a\nsense we make precise. Experiments aligning language models to be both helpful\nand harmless using RLHF show substantial improvements over the baseline\n(non-transformed) approach.",
+      "upvotes": 11
+    },
+    {
+      "title": "AToM: Amortized Text-to-Mesh using 2D Diffusion",
+      "url": "https://huggingface.co/papers/2402.00867",
+      "authors": [
+        "Yuwei Fang",
+        "Bernard Ghanem",
+        "Kfir Aberman",
+        "Sergey Tulyakov"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.00867.pdf",
+      "abstract": "We introduce Amortized Text-to-Mesh (AToM), a feed-forward text-to-mesh\nframework optimized across multiple text prompts simultaneously. In contrast to\nexisting text-to-3D methods that often entail time-consuming per-prompt\noptimization and commonly output representations other than polygonal meshes,\nAToM directly generates high-quality textured meshes in less than 1 second with\naround 10 times reduction in the training cost, and generalizes to unseen\nprompts. Our key idea is a novel triplane-based text-to-mesh architecture with\na two-stage amortized optimization strategy that ensures stable training and\nenables scalability. Through extensive experiments on various prompt\nbenchmarks, AToM significantly outperforms state-of-the-art amortized\napproaches with over 4 times higher accuracy (in DF415 dataset) and produces\nmore distinguishable and higher-quality 3D outputs. AToM demonstrates strong\ngeneralizability, offering finegrained 3D assets for unseen interpolated\nprompts without further optimization during inference, unlike per-prompt\nsolutions.",
+      "upvotes": 10
+    },
+    {
+      "title": "EE-Tuning: An Economical yet Scalable Solution for Tuning Early-Exit Large Language Models",
+      "url": "https://huggingface.co/papers/2402.00518",
+      "authors": [
+        "Yaliang Li",
+        "Bolin Ding"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.00518.pdf",
+      "abstract": "This work introduces EE-Tuning, a lightweight and economical solution to\ntraining/tuning early-exit large language models (LLMs). In contrast to the\ncommon approach of full-parameter pre-training, EE-Tuning augments any\npre-trained (and possibly fine-tuned) standard LLM with additional early-exit\nlayers that are tuned in a parameter-efficient manner, which requires\nsignificantly less computational resources and training data. Our\nimplementation of EE-Tuning achieves outstanding training efficiency via\nextensive performance optimizations, as well as scalability due to its full\ncompatibility with 3D parallelism. Results of systematic experiments validate\nthe efficacy of EE-Tuning, confirming that effective early-exit LLM inference\ncan be achieved with a limited training budget. In hope of making early-exit\nLLMs accessible to the community, we release the source code of our\nimplementation of EE-Tuning at https://github.com/pan-x-c/EE-LLM.",
+      "upvotes": 3
+    }
+  ]
+}

@@ -1,0 +1,301 @@
+{
+  "date": "2024-10-15",
+  "papers": [
+    {
+      "title": "LOKI: A Comprehensive Synthetic Data Detection Benchmark using Large Multimodal Models",
+      "url": "https://huggingface.co/papers/2410.09732",
+      "authors": [
+        "Junan Zhang",
+        "Honglin Lin",
+        "Zihao Wang",
+        "Tong Wu",
+        "Zhizheng Wu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.09732.pdf",
+      "abstract": "With the rapid development of AI-generated content, the future internet may\nbe inundated with synthetic data, making the discrimination of authentic and\ncredible multimodal data increasingly challenging. Synthetic data detection has\nthus garnered widespread attention, and the performance of large multimodal\nmodels (LMMs) in this task has attracted significant interest. LMMs can provide\nnatural language explanations for their authenticity judgments, enhancing the\nexplainability of synthetic content detection. Simultaneously, the task of\ndistinguishing between real and synthetic data effectively tests the\nperception, knowledge, and reasoning capabilities of LMMs. In response, we\nintroduce LOKI, a novel benchmark designed to evaluate the ability of LMMs to\ndetect synthetic data across multiple modalities. LOKI encompasses video,\nimage, 3D, text, and audio modalities, comprising 18K carefully curated\nquestions across 26 subcategories with clear difficulty levels. The benchmark\nincludes coarse-grained judgment and multiple-choice questions, as well as\nfine-grained anomaly selection and explanation tasks, allowing for a\ncomprehensive analysis of LMMs. We evaluated 22 open-source LMMs and 6\nclosed-source models on LOKI, highlighting their potential as synthetic data\ndetectors and also revealing some limitations in the development of LMM\ncapabilities. More information about LOKI can be found at\nhttps://opendatalab.github.io/LOKI/",
+      "upvotes": 54
+    },
+    {
+      "title": "Animate-X: Universal Character Image Animation with Enhanced Motion Representation",
+      "url": "https://huggingface.co/papers/2410.10306",
+      "authors": [
+        "Xiang Wang",
+        "Ruobing Zheng",
+        "Jingdong Chen",
+        "Ming Yang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.10306.pdf",
+      "abstract": "Character image animation, which generates high-quality videos from a\nreference image and target pose sequence, has seen significant progress in\nrecent years. However, most existing methods only apply to human figures, which\nusually do not generalize well on anthropomorphic characters commonly used in\nindustries like gaming and entertainment. Our in-depth analysis suggests to\nattribute this limitation to their insufficient modeling of motion, which is\nunable to comprehend the movement pattern of the driving video, thus imposing a\npose sequence rigidly onto the target character. To this end, this paper\nproposes Animate-X, a universal animation framework based on LDM for various\ncharacter types (collectively named X), including anthropomorphic characters.\nTo enhance motion representation, we introduce the Pose Indicator, which\ncaptures comprehensive motion pattern from the driving video through both\nimplicit and explicit manner. The former leverages CLIP visual features of a\ndriving video to extract its gist of motion, like the overall movement pattern\nand temporal relations among motions, while the latter strengthens the\ngeneralization of LDM by simulating possible inputs in advance that may arise\nduring inference. Moreover, we introduce a new Animated Anthropomorphic\nBenchmark (A^2Bench) to evaluate the performance of Animate-X on universal and\nwidely applicable animation images. Extensive experiments demonstrate the\nsuperiority and effectiveness of Animate-X compared to state-of-the-art\nmethods.",
+      "upvotes": 51
+    },
+    {
+      "title": "MMIE: Massive Multimodal Interleaved Comprehension Benchmark for Large Vision-Language Models",
+      "url": "https://huggingface.co/papers/2410.10139",
+      "authors": [
+        "Yiyang Zhou",
+        "Mingyu Ding"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.10139.pdf",
+      "abstract": "Interleaved multimodal comprehension and generation, enabling models to\nproduce and interpret both images and text in arbitrary sequences, have become\na pivotal area in multimodal learning. Despite significant advancements, the\nevaluation of this capability remains insufficient. Existing benchmarks suffer\nfrom limitations in data scale, scope, and evaluation depth, while current\nevaluation metrics are often costly or biased, lacking in reliability for\npractical applications. To address these challenges, we introduce MMIE, a\nlarge-scale knowledge-intensive benchmark for evaluating interleaved multimodal\ncomprehension and generation in Large Vision-Language Models (LVLMs). MMIE\ncomprises 20K meticulously curated multimodal queries, spanning 3 categories,\n12 fields, and 102 subfields, including mathematics, coding, physics,\nliterature, health, and arts. It supports both interleaved inputs and outputs,\noffering a mix of multiple-choice and open-ended question formats to evaluate\ndiverse competencies. Moreover, we propose a reliable automated evaluation\nmetric, leveraging a scoring model fine-tuned with human-annotated data and\nsystematic evaluation criteria, aimed at reducing bias and improving evaluation\naccuracy. Extensive experiments demonstrate the effectiveness of our benchmark\nand metrics in providing a comprehensive evaluation of interleaved LVLMs.\nSpecifically, we evaluate eight LVLMs, revealing that even the best models show\nsignificant room for improvement, with most achieving only moderate results. We\nbelieve MMIE will drive further advancements in the development of interleaved\nLVLMs. We publicly release our benchmark and code in\nhttps://mmie-bench.github.io/.",
+      "upvotes": 50
+    },
+    {
+      "title": "Toward General Instruction-Following Alignment for Retrieval-Augmented Generation",
+      "url": "https://huggingface.co/papers/2410.09584",
+      "authors": [
+        "Xiaoshuai Song",
+        "Runqi Qiao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.09584.pdf",
+      "abstract": "Following natural instructions is crucial for the effective application of\nRetrieval-Augmented Generation (RAG) systems. Despite recent advancements in\nLarge Language Models (LLMs), research on assessing and improving\ninstruction-following (IF) alignment within the RAG domain remains limited. To\naddress this issue, we propose VIF-RAG, the first automated, scalable, and\nverifiable synthetic pipeline for instruction-following alignment in RAG\nsystems. We start by manually crafting a minimal set of atomic instructions\n(<100) and developing combination rules to synthesize and verify complex\ninstructions for a seed set. We then use supervised models for instruction\nrewriting while simultaneously generating code to automate the verification of\ninstruction quality via a Python executor. Finally, we integrate these\ninstructions with extensive RAG and general data samples, scaling up to a\nhigh-quality VIF-RAG-QA dataset (>100k) through automated processes. To further\nbridge the gap in instruction-following auto-evaluation for RAG systems, we\nintroduce FollowRAG Benchmark, which includes approximately 3K test samples,\ncovering 22 categories of general instruction constraints and four\nknowledge-intensive QA datasets. Due to its robust pipeline design, FollowRAG\ncan seamlessly integrate with different RAG benchmarks. Using FollowRAG and\neight widely-used IF and foundational abilities benchmarks for LLMs, we\ndemonstrate that VIF-RAG markedly enhances LLM performance across a broad range\nof general instruction constraints while effectively leveraging its\ncapabilities in RAG scenarios. Further analysis offers practical insights for\nachieving IF alignment in RAG systems. Our code and datasets are released at\nhttps://FollowRAG.github.io.",
+      "upvotes": 45
+    },
+    {
+      "title": "MEGA-Bench: Scaling Multimodal Evaluation to over 500 Real-World Tasks",
+      "url": "https://huggingface.co/papers/2410.10563",
+      "authors": [
+        "Kai Wang",
+        "Yubo Wang",
+        "Wang Zhu",
+        "Xuan He"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.10563.pdf",
+      "abstract": "We present MEGA-Bench, an evaluation suite that scales multimodal evaluation\nto over 500 real-world tasks, to address the highly heterogeneous daily use\ncases of end users. Our objective is to optimize for a set of high-quality data\nsamples that cover a highly diverse and rich set of multimodal tasks, while\nenabling cost-effective and accurate model evaluation. In particular, we\ncollected 505 realistic tasks encompassing over 8,000 samples from 16 expert\nannotators to extensively cover the multimodal task space. Instead of unifying\nthese problems into standard multi-choice questions (like MMMU, MMBench, and\nMMT-Bench), we embrace a wide range of output formats like numbers, phrases,\ncode, \\LaTeX, coordinates, JSON, free-form, etc. To accommodate these formats,\nwe developed over 40 metrics to evaluate these tasks. Unlike existing\nbenchmarks, MEGA-Bench offers a fine-grained capability report across multiple\ndimensions (e.g., application, input type, output format, skill), allowing\nusers to interact with and visualize model capabilities in depth. We evaluate a\nwide variety of frontier vision-language models on MEGA-Bench to understand\ntheir capabilities across these dimensions.",
+      "upvotes": 37
+    },
+    {
+      "title": "Semantic Image Inversion and Editing using Rectified Stochastic Differential Equations",
+      "url": "https://huggingface.co/papers/2410.10792",
+      "authors": [
+        "Constantine Caramanis",
+        "Sanjay Shakkottai",
+        "Wen-Sheng Chu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.10792.pdf",
+      "abstract": "Generative models transform random noise into images; their inversion aims to\ntransform images back to structured noise for recovery and editing. This paper\naddresses two key tasks: (i) inversion and (ii) editing of a real image using\nstochastic equivalents of rectified flow models (such as Flux). Although\nDiffusion Models (DMs) have recently dominated the field of generative modeling\nfor images, their inversion presents faithfulness and editability challenges\ndue to nonlinearities in drift and diffusion. Existing state-of-the-art DM\ninversion approaches rely on training of additional parameters or test-time\noptimization of latent variables; both are expensive in practice. Rectified\nFlows (RFs) offer a promising alternative to diffusion models, yet their\ninversion has been underexplored. We propose RF inversion using dynamic optimal\ncontrol derived via a linear quadratic regulator. We prove that the resulting\nvector field is equivalent to a rectified stochastic differential equation.\nAdditionally, we extend our framework to design a stochastic sampler for Flux.\nOur inversion method allows for state-of-the-art performance in zero-shot\ninversion and editing, outperforming prior works in stroke-to-image synthesis\nand semantic image editing, with large-scale human evaluations confirming user\npreference.",
+      "upvotes": 26
+    },
+    {
+      "title": "Omni-MATH: A Universal Olympiad Level Mathematic Benchmark For Large Language Models",
+      "url": "https://huggingface.co/papers/2410.07985",
+      "authors": [
+        "Zhe Yang",
+        "Runxin Xu",
+        "Lei Sha",
+        "Yichang Zhang",
+        "Xuancheng Ren",
+        "Tianyu Liu",
+        "Baobao Chang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.07985.pdf",
+      "abstract": "Recent advancements in large language models (LLMs) have led to significant\nbreakthroughs in mathematical reasoning capabilities. However, existing\nbenchmarks like GSM8K or MATH are now being solved with high accuracy (e.g.,\nOpenAI o1 achieves 94.8% on MATH dataset), indicating their inadequacy for\ntruly challenging these models. To bridge this gap, we propose a comprehensive\nand challenging benchmark specifically designed to assess LLMs' mathematical\nreasoning at the Olympiad level. Unlike existing Olympiad-related benchmarks,\nour dataset focuses exclusively on mathematics and comprises a vast collection\nof 4428 competition-level problems with rigorous human annotation. These\nproblems are meticulously categorized into over 33 sub-domains and span more\nthan 10 distinct difficulty levels, enabling a holistic assessment of model\nperformance in Olympiad-mathematical reasoning. Furthermore, we conducted an\nin-depth analysis based on this benchmark. Our experimental results show that\neven the most advanced models, OpenAI o1-mini and OpenAI o1-preview, struggle\nwith highly challenging Olympiad-level problems, with 60.54% and 52.55%\naccuracy, highlighting significant challenges in Olympiad-level mathematical\nreasoning.",
+      "upvotes": 26
+    },
+    {
+      "title": "LiveXiv -- A Multi-Modal Live Benchmark Based on Arxiv Papers Content",
+      "url": "https://huggingface.co/papers/2410.10783",
+      "authors": [
+        "Felipe Maia Polo",
+        "Sivan Doveh",
+        "M. Jehanzeb Mirza",
+        "Leshem Chosen",
+        "Mikhail Yurochkin",
+        "Yuekai Sun",
+        "Assaf Arbelle",
+        "Leonid Karlinsky",
+        "Raja Giryes"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.10783.pdf",
+      "abstract": "The large-scale training of multi-modal models on data scraped from the web\nhas shown outstanding utility in infusing these models with the required world\nknowledge to perform effectively on multiple downstream tasks. However, one\ndownside of scraping data from the web can be the potential sacrifice of the\nbenchmarks on which the abilities of these models are often evaluated. To\nsafeguard against test data contamination and to truly test the abilities of\nthese foundation models we propose LiveXiv: A scalable evolving live benchmark\nbased on scientific ArXiv papers. LiveXiv accesses domain-specific manuscripts\nat any given timestamp and proposes to automatically generate visual\nquestion-answer pairs (VQA). This is done without any human-in-the-loop, using\nthe multi-modal content in the manuscripts, like graphs, charts, and tables.\nMoreover, we introduce an efficient evaluation approach that estimates the\nperformance of all models on the evolving benchmark using evaluations of only a\nsubset of models. This significantly reduces the overall evaluation cost. We\nbenchmark multiple open and proprietary Large Multi-modal Models (LMMs) on the\nfirst version of our benchmark, showing its challenging nature and exposing the\nmodels true abilities, avoiding contamination. Lastly, in our commitment to\nhigh quality, we have collected and evaluated a manually verified subset. By\ncomparing its overall results to our automatic annotations, we have found that\nthe performance variance is indeed minimal (<2.5%). Our dataset is available\nonline on HuggingFace, and our code will be available here.",
+      "upvotes": 25
+    },
+    {
+      "title": "Cavia: Camera-controllable Multi-view Video Diffusion with View-Integrated Attention",
+      "url": "https://huggingface.co/papers/2410.10774",
+      "authors": [
+        "Yifan Jiang",
+        "Chen Huang",
+        "Liangchen Song",
+        "Thorsten Gernoth",
+        "Liangliang Cao",
+        "Zhangyang Wang",
+        "Hao Tang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.10774.pdf",
+      "abstract": "In recent years there have been remarkable breakthroughs in image-to-video\ngeneration. However, the 3D consistency and camera controllability of generated\nframes have remained unsolved. Recent studies have attempted to incorporate\ncamera control into the generation process, but their results are often limited\nto simple trajectories or lack the ability to generate consistent videos from\nmultiple distinct camera paths for the same scene. To address these\nlimitations, we introduce Cavia, a novel framework for camera-controllable,\nmulti-view video generation, capable of converting an input image into multiple\nspatiotemporally consistent videos. Our framework extends the spatial and\ntemporal attention modules into view-integrated attention modules, improving\nboth viewpoint and temporal consistency. This flexible design allows for joint\ntraining with diverse curated data sources, including scene-level static\nvideos, object-level synthetic multi-view dynamic videos, and real-world\nmonocular dynamic videos. To our best knowledge, Cavia is the first of its kind\nthat allows the user to precisely specify camera motion while obtaining object\nmotion. Extensive experiments demonstrate that Cavia surpasses state-of-the-art\nmethods in terms of geometric consistency and perceptual quality. Project Page:\nhttps://ir1d.github.io/Cavia/",
+      "upvotes": 23
+    },
+    {
+      "title": "VisRAG: Vision-based Retrieval-augmented Generation on Multi-modality Documents",
+      "url": "https://huggingface.co/papers/2410.10594",
+      "authors": [
+        "Junhao Ran",
+        "Yukun Yan",
+        "Zhenghao Liu",
+        "Shuo Wang",
+        "Xu Han",
+        "Zhiyuan Liu",
+        "Maosong Sun"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.10594.pdf",
+      "abstract": "Retrieval-augmented generation (RAG) is an effective technique that enables\nlarge language models (LLMs) to utilize external knowledge sources for\ngeneration. However, current RAG systems are solely based on text, rendering it\nimpossible to utilize vision information like layout and images that play\ncrucial roles in real-world multi-modality documents. In this paper, we\nintroduce VisRAG, which tackles this issue by establishing a vision-language\nmodel (VLM)-based RAG pipeline. In this pipeline, instead of first parsing the\ndocument to obtain text, the document is directly embedded using a VLM as an\nimage and then retrieved to enhance the generation of a VLM. Compared to\ntraditional text-based RAG, VisRAG maximizes the retention and utilization of\nthe data information in the original documents, eliminating the information\nloss introduced during the parsing process. We collect both open-source and\nsynthetic data to train the retriever in VisRAG and explore a variety of\ngeneration methods. Experiments demonstrate that VisRAG outperforms traditional\nRAG in both the retrieval and generation stages, achieving a 25--39\\%\nend-to-end performance gain over traditional text-based RAG pipeline. Further\nanalysis reveals that VisRAG is effective in utilizing training data and\ndemonstrates strong generalization capability, positioning it as a promising\nsolution for RAG on multi-modality documents. Our code and data are available\nat https://github.com/openbmb/visrag .",
+      "upvotes": 22
+    },
+    {
+      "title": "TemporalBench: Benchmarking Fine-grained Temporal Understanding for Multimodal Video Models",
+      "url": "https://huggingface.co/papers/2410.10818",
+      "authors": [
+        "Reuben Tan",
+        "Jianrui Zhang",
+        "Fangrui Zhu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.10818.pdf",
+      "abstract": "Understanding fine-grained temporal dynamics is crucial for multimodal video\ncomprehension and generation. Due to the lack of fine-grained temporal\nannotations, existing video benchmarks mostly resemble static image benchmarks\nand are incompetent at evaluating models for temporal understanding. In this\npaper, we introduce TemporalBench, a new benchmark dedicated to evaluating\nfine-grained temporal understanding in videos. TemporalBench consists of ~10K\nvideo question-answer pairs, derived from ~2K high-quality human annotations\ndetailing the temporal dynamics in video clips. As a result, our benchmark\nprovides a unique testbed for evaluating various temporal understanding and\nreasoning abilities such as action frequency, motion magnitude, event order,\netc. Moreover, it enables evaluations on various tasks like both video question\nanswering and captioning, both short and long video understanding, as well as\ndifferent models such as multimodal video embedding models and text generation\nmodels. Results show that state-of-the-art models like GPT-4o achieve only\n38.5% question answering accuracy on TemporalBench, demonstrating a significant\ngap (~30%) between humans and AI in temporal understanding. Furthermore, we\nnotice a critical pitfall for multi-choice QA where LLMs can detect the subtle\nchanges in negative captions and find a centralized description as a cue for\nits prediction, where we propose Multiple Binary Accuracy (MBA) to correct such\nbias. We hope that TemporalBench can foster research on improving models'\ntemporal reasoning capabilities. Both dataset and evaluation code will be made\navailable.",
+      "upvotes": 14
+    },
+    {
+      "title": "Rethinking Data Selection at Scale: Random Selection is Almost All You Need",
+      "url": "https://huggingface.co/papers/2410.09335",
+      "authors": [
+        "Kai Dang",
+        "An Yang",
+        "Yuan Tian",
+        "Yi Chang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.09335.pdf",
+      "abstract": "Supervised fine-tuning (SFT) is crucial for aligning Large Language Models\n(LLMs) with human instructions. The primary goal during SFT is to select a\nsmall yet representative subset of training data from the larger pool, such\nthat fine-tuning with this subset achieves results comparable to or even\nexceeding those obtained using the entire dataset. However, most existing data\nselection techniques are designed for small-scale data pools, which fail to\nmeet the demands of real-world SFT scenarios. In this paper, we replicated\nseveral self-scoring methods those that do not rely on external model\nassistance on two million scale datasets, and found that nearly all methods\nstruggled to significantly outperform random selection when dealing with such\nlarge-scale data pools. Moreover, our comparisons suggest that, during SFT,\ndiversity in data selection is more critical than simply focusing on high\nquality data. We also analyzed the limitations of several current approaches,\nexplaining why they perform poorly on large-scale datasets and why they are\nunsuitable for such contexts. Finally, we found that filtering data by token\nlength offers a stable and efficient method for improving results. This\napproach, particularly when training on long text data, proves highly\nbeneficial for relatively weaker base models, such as Llama3.",
+      "upvotes": 14
+    },
+    {
+      "title": "Thinking LLMs: General Instruction Following with Thought Generation",
+      "url": "https://huggingface.co/papers/2410.10630",
+      "authors": [
+        "Tianhao Wu",
+        "Janice Lan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.10630.pdf",
+      "abstract": "LLMs are typically trained to answer user questions or follow instructions\nsimilarly to how human experts respond. However, in the standard alignment\nframework they lack the basic ability of explicit thinking before answering.\nThinking is important for complex questions that require reasoning and planning\n-- but can be applied to any task. We propose a training method for equipping\nexisting LLMs with such thinking abilities for general instruction following\nwithout use of additional human data. We achieve this by an iterative search\nand optimization procedure that explores the space of possible thought\ngenerations, allowing the model to learn how to think without direct\nsupervision. For each instruction, the thought candidates are scored using a\njudge model to evaluate their responses only, and then optimized via preference\noptimization. We show that this procedure leads to superior performance on\nAlpacaEval and Arena-Hard, and shows gains from thinking on non-reasoning\ncategories such as marketing, health and general knowledge, in addition to more\ntraditional reasoning & problem-solving tasks.",
+      "upvotes": 9
+    },
+    {
+      "title": "LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory",
+      "url": "https://huggingface.co/papers/2410.10813",
+      "authors": [
+        "Hongwei Wang",
+        "Dong Yu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.10813.pdf",
+      "abstract": "Recent large language model (LLM)-driven chat assistant systems have\nintegrated memory components to track user-assistant chat histories, enabling\nmore accurate and personalized responses. However, their long-term memory\ncapabilities in sustained interactions remain underexplored. This paper\nintroduces LongMemEval, a comprehensive benchmark designed to evaluate five\ncore long-term memory abilities of chat assistants: information extraction,\nmulti-session reasoning, temporal reasoning, knowledge updates, and abstention.\nWith 500 meticulously curated questions embedded within freely scalable\nuser-assistant chat histories, LongMemEval presents a significant challenge to\nexisting long-term memory systems, with commercial chat assistants and\nlong-context LLMs showing 30% accuracy drop on memorizing information across\nsustained interactions. We then present a unified framework that breaks down\nthe long-term memory design into four design choices across the indexing,\nretrieval, and reading stages. Built upon key experimental insights, we propose\nseveral memory designs including session decomposition for optimizing value\ngranularity, fact-augmented key expansion for enhancing the index structure,\nand time-aware query expansion for refining the search scope. Experiment\nresults show that these optimizations greatly improve both memory recall and\ndownstream question answering on LongMemEval. Overall, our study provides\nvaluable resources and guidance for advancing the long-term memory capabilities\nof LLM-based chat assistants, paving the way toward more personalized and\nreliable conversational AI.",
+      "upvotes": 9
+    },
+    {
+      "title": "MMCOMPOSITION: Revisiting the Compositionality of Pre-trained Vision-Language Models",
+      "url": "https://huggingface.co/papers/2410.09733",
+      "authors": [
+        "Liangliang Cao",
+        "Zhengyuan Yang",
+        "Hangfeng He",
+        "Chenliang Xu",
+        "Jiebo Luo"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.09733.pdf",
+      "abstract": "The advent of large Vision-Language Models (VLMs) has significantly advanced\nmultimodal understanding, enabling more sophisticated and accurate integration\nof visual and textual information across various tasks, including image and\nvideo captioning, visual question answering, and cross-modal retrieval. Despite\nVLMs' superior capabilities, researchers lack a comprehensive understanding of\ntheir compositionality -- the ability to understand and produce novel\ncombinations of known visual and textual components. Prior benchmarks provide\nonly a relatively rough compositionality evaluation from the perspectives of\nobjects, relations, and attributes while neglecting deeper reasoning about\nobject interactions, counting, and complex compositions. However,\ncompositionality is a critical ability that facilitates coherent reasoning and\nunderstanding across modalities for VLMs. To address this limitation, we\npropose MMCOMPOSITION, a novel human-annotated benchmark for comprehensively\nand accurately evaluating VLMs' compositionality. Our proposed benchmark serves\nas a complement to these earlier works. With MMCOMPOSITION, we can quantify and\nexplore the compositionality of the mainstream VLMs. Surprisingly, we find\nGPT-4o's compositionality inferior to the best open-source model, and we\nanalyze the underlying reasons. Our experimental analysis reveals the\nlimitations of VLMs in fine-grained compositional perception and reasoning, and\npoints to areas for improvement in VLM design and training. Resources available\nat: https://hanghuacs.github.io/MMComposition/",
+      "upvotes": 8
+    },
+    {
+      "title": "Tree of Problems: Improving structured problem solving with compositionality",
+      "url": "https://huggingface.co/papers/2410.06634",
+      "authors": [
+        "Armel Zebaze"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.06634.pdf",
+      "abstract": "Large Language Models (LLMs) have demonstrated remarkable performance across\nmultiple tasks through in-context learning. For complex reasoning tasks that\nrequire step-by-step thinking, Chain-of-Thought (CoT) prompting has given\nimpressive results, especially when combined with self-consistency.\nNonetheless, some tasks remain particularly difficult for LLMs to solve. Tree\nof Thoughts (ToT) and Graph of Thoughts (GoT) emerged as alternatives, dividing\nthe complex problem into paths of subproblems. In this paper, we propose Tree\nof Problems (ToP), a simpler version of ToT, which we hypothesise can work\nbetter for complex tasks that can be divided into identical subtasks. Our\nempirical results show that our approach outperforms ToT and GoT, and in\naddition performs better than CoT on complex reasoning tasks. All code for this\npaper is publicly available here:\nhttps://github.com/ArmelRandy/tree-of-problems.",
+      "upvotes": 8
+    },
+    {
+      "title": "DuoAttention: Efficient Long-Context LLM Inference with Retrieval and Streaming Heads",
+      "url": "https://huggingface.co/papers/2410.10819",
+      "authors": [
+        "Jingwei Zuo",
+        "Junxian Guo",
+        "Shang Yang",
+        "Haotian Tang",
+        "Yao Fu",
+        "Song Han"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.10819.pdf",
+      "abstract": "Deploying long-context large language models (LLMs) is essential but poses\nsignificant computational and memory challenges. Caching all Key and Value (KV)\nstates across all attention heads consumes substantial memory. Existing KV\ncache pruning methods either damage the long-context capabilities of LLMs or\noffer only limited efficiency improvements. In this paper, we identify that\nonly a fraction of attention heads, a.k.a, Retrieval Heads, are critical for\nprocessing long contexts and require full attention across all tokens. In\ncontrast, all other heads, which primarily focus on recent tokens and attention\nsinks--referred to as Streaming Heads--do not require full attention. Based on\nthis insight, we introduce DuoAttention, a framework that only applies a full\nKV cache to retrieval heads while using a light-weight, constant-length KV\ncache for streaming heads, which reduces both LLM's decoding and pre-filling\nmemory and latency without compromising its long-context abilities.\nDuoAttention uses a lightweight, optimization-based algorithm with synthetic\ndata to identify retrieval heads accurately. Our method significantly reduces\nlong-context inference memory by up to 2.55x for MHA and 1.67x for GQA models\nwhile speeding up decoding by up to 2.18x and 1.50x and accelerating\npre-filling by up to 1.73x and 1.63x for MHA and GQA models, respectively, with\nminimal accuracy loss compared to full attention. Notably, combined with\nquantization, DuoAttention enables Llama-3-8B decoding with 3.3 million context\nlength on a single A100 GPU. Code is provided in\nhttps://github.com/mit-han-lab/duo-attention.",
+      "upvotes": 6
+    },
+    {
+      "title": "Generalizable Humanoid Manipulation with Improved 3D Diffusion Policies",
+      "url": "https://huggingface.co/papers/2410.10803",
+      "authors": [
+        "Wenhao Wang",
+        "Tianyi Chen",
+        "Ying Yuan",
+        "Xue Bin Peng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.10803.pdf",
+      "abstract": "Humanoid robots capable of autonomous operation in diverse environments have\nlong been a goal for roboticists. However, autonomous manipulation by humanoid\nrobots has largely been restricted to one specific scene, primarily due to the\ndifficulty of acquiring generalizable skills. Recent advances in 3D visuomotor\npolicies, such as the 3D Diffusion Policy (DP3), have shown promise in\nextending these capabilities to wilder environments. However, 3D visuomotor\npolicies often rely on camera calibration and point-cloud segmentation, which\npresent challenges for deployment on mobile robots like humanoids. In this\nwork, we introduce the Improved 3D Diffusion Policy (iDP3), a novel 3D\nvisuomotor policy that eliminates these constraints by leveraging egocentric 3D\nvisual representations. We demonstrate that iDP3 enables a full-sized humanoid\nrobot to autonomously perform skills in diverse real-world scenarios, using\nonly data collected in the lab. Videos are available at:\nhttps://humanoid-manipulation.github.io",
+      "upvotes": 6
+    },
+    {
+      "title": "The Same But Different: Structural Similarities and Differences in Multilingual Language Modeling",
+      "url": "https://huggingface.co/papers/2410.09223",
+      "authors": [
+        "Carsten Eickhoff",
+        "Ellie Pavlick"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.09223.pdf",
+      "abstract": "We employ new tools from mechanistic interpretability in order to ask whether\nthe internal structure of large language models (LLMs) shows correspondence to\nthe linguistic structures which underlie the languages on which they are\ntrained. In particular, we ask (1) when two languages employ the same\nmorphosyntactic processes, do LLMs handle them using shared internal circuitry?\nand (2) when two languages require different morphosyntactic processes, do LLMs\nhandle them using different internal circuitry? Using English and Chinese\nmultilingual and monolingual models, we analyze the internal circuitry involved\nin two tasks. We find evidence that models employ the same circuit to handle\nthe same syntactic process independently of the language in which it occurs,\nand that this is the case even for monolingual models trained completely\nindependently. Moreover, we show that multilingual models employ\nlanguage-specific components (attention heads and feed-forward networks) when\nneeded to handle linguistic processes (e.g., morphological marking) that only\nexist in some languages. Together, our results provide new insights into how\nLLMs trade off between exploiting common structures and preserving linguistic\ndifferences when tasked with modeling multiple languages simultaneously.",
+      "upvotes": 5
+    },
+    {
+      "title": "TVBench: Redesigning Video-Language Evaluation",
+      "url": "https://huggingface.co/papers/2410.07752",
+      "authors": [
+        "Manuel Mucientes",
+        "Cees G. M. Snoek"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.07752.pdf",
+      "abstract": "Large language models have demonstrated impressive performance when\nintegrated with vision models even enabling video understanding. However,\nevaluating these video models presents its own unique challenges, for which\nseveral benchmarks have been proposed. In this paper, we show that the\ncurrently most used video-language benchmarks can be solved without requiring\nmuch temporal reasoning. We identified three main issues in existing datasets:\n(i) static information from single frames is often sufficient to solve the\ntasks (ii) the text of the questions and candidate answers is overly\ninformative, allowing models to answer correctly without relying on any visual\ninput (iii) world knowledge alone can answer many of the questions, making the\nbenchmarks a test of knowledge replication rather than visual reasoning. In\naddition, we found that open-ended question-answering benchmarks for video\nunderstanding suffer from similar issues while the automatic evaluation process\nwith LLMs is unreliable, making it an unsuitable alternative. As a solution, we\npropose TVBench, a novel open-source video multiple-choice question-answering\nbenchmark, and demonstrate through extensive evaluations that it requires a\nhigh level of temporal understanding. Surprisingly, we find that most recent\nstate-of-the-art video-language models perform similarly to random performance\non TVBench, with only Gemini-Pro and Tarsier clearly surpassing this baseline.",
+      "upvotes": 5
+    },
+    {
+      "title": "ReLU's Revival: On the Entropic Overload in Normalization-Free Large Language Models",
+      "url": "https://huggingface.co/papers/2410.09637",
+      "authors": [
+        "Brandon Reagen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.09637.pdf",
+      "abstract": "LayerNorm is a critical component in modern large language models (LLMs) for\nstabilizing training and ensuring smooth optimization. However, it introduces\nsignificant challenges in mechanistic interpretability, outlier feature\nsuppression, faithful signal propagation, and computational and communication\ncomplexity of private inference. This work explores desirable activation\nfunctions in normalization-free decoder-only LLMs. Contrary to the conventional\npreference for the GELU in transformer-based models, our empirical findings\ndemonstrate an {\\em opposite trend} -- ReLU significantly outperforms GELU in\nLayerNorm-free models, leading to an {\\bf 8.2\\%} perplexity improvement. We\ndiscover a key issue with GELU, where early layers experience entropic\noverload, leading to the under-utilization of the representational capacity of\nattention heads. This highlights that smoother activations like GELU are {\\em\nill-suited} for LayerNorm-free architectures, whereas ReLU's geometrical\nproperties -- specialization in input space and intra-class selectivity -- lead\nto improved learning dynamics and better information retention in the absence\nof LayerNorm. This study offers key insights for optimizing transformer\narchitectures where LayerNorm introduces significant challenges.",
+      "upvotes": 3
+    },
+    {
+      "title": "Latent Action Pretraining from Videos",
+      "url": "https://huggingface.co/papers/2410.11758",
+      "authors": [
+        "Seonghyeon Ye",
+        "Joel Jang",
+        "Byeongguk Jeon",
+        "Sejune Joo",
+        "Jianwei Yang",
+        "Baolin Peng",
+        "Ajay Mandlekar",
+        "Reuben Tan",
+        "Yu-Wei Chao",
+        "Bill Yuchen Lin",
+        "Lars Liden",
+        "Kimin Lee",
+        "Jianfeng Gao",
+        "Luke Zettlemoyer",
+        "Dieter Fox",
+        "Minjoon Seo"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.11758.pdf",
+      "abstract": "We introduce Latent Action Pretraining for general Action models (LAPA), an\nunsupervised method for pretraining Vision-Language-Action (VLA) models without\nground-truth robot action labels. Existing Vision-Language-Action models\nrequire action labels typically collected by human teleoperators during\npretraining, which significantly limits possible data sources and scale. In\nthis work, we propose a method to learn from internet-scale videos that do not\nhave robot action labels. We first train an action quantization model\nleveraging VQ-VAE-based objective to learn discrete latent actions between\nimage frames, then pretrain a latent VLA model to predict these latent actions\nfrom observations and task descriptions, and finally finetune the VLA on\nsmall-scale robot manipulation data to map from latent to robot actions.\nExperimental results demonstrate that our method significantly outperforms\nexisting techniques that train robot manipulation policies from large-scale\nvideos. Furthermore, it outperforms the state-of-the-art VLA model trained with\nrobotic action labels on real-world manipulation tasks that require language\nconditioning, generalization to unseen objects, and semantic generalization to\nunseen instructions. Training only on human manipulation videos also shows\npositive transfer, opening up the potential for leveraging web-scale data for\nrobotics foundation model.",
+      "upvotes": 2
+    }
+  ]
+}

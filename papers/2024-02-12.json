@@ -1,0 +1,165 @@
+{
+  "date": "2024-02-12",
+  "papers": [
+    {
+      "title": "Aya Dataset: An Open-Access Collection for Multilingual Instruction Tuning",
+      "url": "https://huggingface.co/papers/2402.06619",
+      "authors": [
+        "Joseph Wilson",
+        "Marina Machado",
+        "Luisa Souza Moura",
+        "Dominik Krzemiński",
+        "Hakimeh Fadaei"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.06619.pdf",
+      "abstract": "Datasets are foundational to many breakthroughs in modern artificial\nintelligence. Many recent achievements in the space of natural language\nprocessing (NLP) can be attributed to the finetuning of pre-trained models on a\ndiverse set of tasks that enables a large language model (LLM) to respond to\ninstructions. Instruction fine-tuning (IFT) requires specifically constructed\nand annotated datasets. However, existing datasets are almost all in the\nEnglish language. In this work, our primary goal is to bridge the language gap\nby building a human-curated instruction-following dataset spanning 65\nlanguages. We worked with fluent speakers of languages from around the world to\ncollect natural instances of instructions and completions. Furthermore, we\ncreate the most extensive multilingual collection to date, comprising 513\nmillion instances through templating and translating existing datasets across\n114 languages. In total, we contribute four key resources: we develop and\nopen-source the Aya Annotation Platform, the Aya Dataset, the Aya Collection,\nand the Aya Evaluation Suite. The Aya initiative also serves as a valuable case\nstudy in participatory research, involving collaborators from 119 countries. We\nsee this as a valuable framework for future research collaborations that aim to\nbridge gaps in resources.",
+      "upvotes": 54
+    },
+    {
+      "title": "InternLM-Math: Open Math Large Language Models Toward Verifiable Reasoning",
+      "url": "https://huggingface.co/papers/2402.06332",
+      "authors": [
+        "Zhaoye Fei",
+        "Ziyi Wang",
+        "Yudong Wang",
+        "Zijian Wu",
+        "Shuaibin Li",
+        "Hongwei Liu",
+        "Hang Yan",
+        "Jiayu Wang",
+        "Kai Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.06332.pdf",
+      "abstract": "The math abilities of large language models can represent their abstract\nreasoning ability. In this paper, we introduce and open-source our math\nreasoning LLMs InternLM-Math which is continue pre-trained from InternLM2. We\nunify chain-of-thought reasoning, reward modeling, formal reasoning, data\naugmentation, and code interpreter in a unified seq2seq format and supervise\nour model to be a versatile math reasoner, verifier, prover, and augmenter.\nThese abilities can be used to develop the next math LLMs or self-iteration.\nInternLM-Math obtains open-sourced state-of-the-art performance under the\nsetting of in-context learning, supervised fine-tuning, and code-assisted\nreasoning in various informal and formal benchmarks including GSM8K, MATH,\nHungary math exam, MathBench-ZH, and MiniF2F. Our pre-trained model achieves\n30.3 on the MiniF2F test set without fine-tuning. We further explore how to use\nLEAN to solve math problems and study its performance under the setting of\nmulti-task learning which shows the possibility of using LEAN as a unified\nplatform for solving and proving in math. Our models, codes, and data are\nreleased at https://github.com/InternLM/InternLM-Math.",
+      "upvotes": 18
+    },
+    {
+      "title": "HeadStudio: Text to Animatable Head Avatars with 3D Gaussian Splatting",
+      "url": "https://huggingface.co/papers/2402.06149",
+      "authors": [
+        "Yi Yang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.06149.pdf",
+      "abstract": "Creating digital avatars from textual prompts has long been a desirable yet\nchallenging task. Despite the promising outcomes obtained through 2D diffusion\npriors in recent works, current methods face challenges in achieving\nhigh-quality and animated avatars effectively. In this paper, we present\nHeadStudio, a novel framework that utilizes 3D Gaussian splatting to\ngenerate realistic and animated avatars from text prompts. Our method drives 3D\nGaussians semantically to create a flexible and achievable appearance through\nthe intermediate FLAME representation. Specifically, we incorporate the FLAME\ninto both 3D representation and score distillation: 1) FLAME-based 3D Gaussian\nsplatting, driving 3D Gaussian points by rigging each point to a FLAME mesh. 2)\nFLAME-based score distillation sampling, utilizing FLAME-based fine-grained\ncontrol signal to guide score distillation from the text prompt. Extensive\nexperiments demonstrate the efficacy of HeadStudio in generating animatable\navatars from textual prompts, exhibiting visually appealing appearances. The\navatars are capable of rendering high-quality real-time (geq 40 fps) novel\nviews at a resolution of 1024. They can be smoothly controlled by real-world\nspeech and video. We hope that HeadStudio can advance digital avatar creation\nand that the present method can widely be applied across various domains.",
+      "upvotes": 17
+    },
+    {
+      "title": "Keyframer: Empowering Animation Design using Large Language Models",
+      "url": "https://huggingface.co/papers/2402.06071",
+      "authors": [
+        "Ruijia Cheng",
+        "Jeffrey Nichols"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.06071.pdf",
+      "abstract": "Large language models (LLMs) have the potential to impact a wide range of\ncreative domains, but the application of LLMs to animation is underexplored and\npresents novel challenges such as how users might effectively describe motion\nin natural language. In this paper, we present Keyframer, a design tool for\nanimating static images (SVGs) with natural language. Informed by interviews\nwith professional animation designers and engineers, Keyframer supports\nexploration and refinement of animations through the combination of prompting\nand direct editing of generated output. The system also enables users to\nrequest design variants, supporting comparison and ideation. Through a user\nstudy with 13 participants, we contribute a characterization of user prompting\nstrategies, including a taxonomy of semantic prompt types for describing motion\nand a 'decomposed' prompting style where users continually adapt their goals in\nresponse to generated output.We share how direct editing along with prompting\nenables iteration beyond one-shot prompting interfaces common in generative\ntools today. Through this work, we propose how LLMs might empower a range of\naudiences to engage with animation creation.",
+      "upvotes": 13
+    },
+    {
+      "title": "ViGoR: Improving Visual Grounding of Large Vision Language Models with Fine-Grained Reward Modeling",
+      "url": "https://huggingface.co/papers/2402.06118",
+      "authors": [
+        "Weifeng Chen",
+        "Xiong Zhou",
+        "Qixing Huang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.06118.pdf",
+      "abstract": "By combining natural language understanding and the generation capabilities\nand breadth of knowledge of large language models with image perception, recent\nlarge vision language models (LVLMs) have shown unprecedented reasoning\ncapabilities in the real world. However, the generated text often suffers from\ninaccurate grounding in the visual input, resulting in errors such as\nhallucinating nonexistent scene elements, missing significant parts of the\nscene, and inferring incorrect attributes and relationships between objects. To\naddress these issues, we introduce a novel framework, ViGoR (Visual Grounding\nThrough Fine-Grained Reward Modeling) that utilizes fine-grained reward\nmodeling to significantly enhance the visual grounding of LVLMs over\npre-trained baselines. This improvement is efficiently achieved using much\ncheaper human evaluations instead of full supervisions, as well as automated\nmethods. We show the effectiveness of our approach through numerous metrics on\nseveral benchmarks. Additionally, we construct a comprehensive and challenging\ndataset specifically designed to validate the visual grounding capabilities of\nLVLMs. Finally, we plan to release our human annotation comprising\napproximately 16,000 images and generated text pairs with fine-grained\nevaluations to contribute to related research in the community.",
+      "upvotes": 13
+    },
+    {
+      "title": "MusicMagus: Zero-Shot Text-to-Music Editing via Diffusion Models",
+      "url": "https://huggingface.co/papers/2402.06178",
+      "authors": [
+        "Gus Xia",
+        "Marco Martínez",
+        "Wei-Hsiang Liao",
+        "Yuki Mitsufuji"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.06178.pdf",
+      "abstract": "Recent advances in text-to-music generation models have opened new avenues in\nmusical creativity. However, music generation usually involves iterative\nrefinements, and how to edit the generated music remains a significant\nchallenge. This paper introduces a novel approach to the editing of music\ngenerated by such models, enabling the modification of specific attributes,\nsuch as genre, mood and instrument, while maintaining other aspects unchanged.\nOur method transforms text editing to latent space manipulation while\nadding an extra constraint to enforce consistency. It seamlessly integrates\nwith existing pretrained text-to-music diffusion models without requiring\nadditional training. Experimental results demonstrate superior performance over\nboth zero-shot and certain supervised baselines in style and timbre transfer\nevaluations. Additionally, we showcase the practical applicability of our\napproach in real-world music editing scenarios.",
+      "upvotes": 13
+    },
+    {
+      "title": "Model Editing with Canonical Examples",
+      "url": "https://huggingface.co/papers/2402.06155",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2402.06155.pdf",
+      "abstract": "We introduce model editing with canonical examples, a setting in which (1) a\nsingle learning example is provided per desired behavior, (2) evaluation is\nperformed exclusively out-of-distribution, and (3) deviation from an initial\nmodel is strictly limited. A canonical example is a simple instance of good\nbehavior, e.g., The capital of Mauritius is Port Louis) or bad behavior, e.g.,\nAn aspect of researchers is coldhearted). The evaluation set contains more\ncomplex examples of each behavior (like a paragraph in which the capital of\nMauritius is called for.) We create three datasets and modify three more for\nmodel editing with canonical examples, covering knowledge-intensive\nimprovements, social bias mitigation, and syntactic edge cases. In our\nexperiments on Pythia language models, we find that LoRA outperforms full\nfinetuning and MEMIT. We then turn to the Backpack language model architecture\nbecause it is intended to enable targeted improvement. The Backpack defines a\nlarge bank of sense vectors--a decomposition of the different uses of each\nword--which are weighted and summed to form the output logits of the model. We\npropose sense finetuning, which selects and finetunes a few (approx 10)\nsense vectors for each canonical example, and find that it outperforms other\nfinetuning methods, e.g., 4.8% improvement vs 0.3%. Finally, we improve\nGPT-J-6B by an inference-time ensemble with just the changes from sense\nfinetuning of a 35x smaller Backpack, in one setting outperforming editing\nGPT-J itself (4.1% vs 1.0%).",
+      "upvotes": 11
+    },
+    {
+      "title": "SubGen: Token Generation in Sublinear Time and Memory",
+      "url": "https://huggingface.co/papers/2402.06082",
+      "authors": [
+        "Amir Zandieh",
+        "Vahab Mirrokni"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.06082.pdf",
+      "abstract": "Despite the significant success of large language models (LLMs), their\nextensive memory requirements pose challenges for deploying them in\nlong-context token generation. The substantial memory footprint of LLM decoders\narises from the necessity to store all previous tokens in the attention module,\na requirement imposed by key-value (KV) caching. In this work, our focus is on\ndeveloping an efficient compression technique for the KV cache. Empirical\nevidence indicates a significant clustering tendency within key embeddings in\nthe attention module. Building on this key insight, we have devised a novel\ncaching method with sublinear complexity, employing online clustering on key\ntokens and online ell_2 sampling on values. The result is a provably\naccurate and efficient attention decoding algorithm, termed SubGen. Not only\ndoes this algorithm ensure a sublinear memory footprint and sublinear time\ncomplexity, but we also establish a tight error bound for our approach.\nEmpirical evaluations on long-context question-answering tasks demonstrate that\nSubGen significantly outperforms existing and state-of-the-art KV cache\ncompression methods in terms of performance and efficiency.",
+      "upvotes": 10
+    },
+    {
+      "title": "Animated Stickers: Bringing Stickers to Life with Video Diffusion",
+      "url": "https://huggingface.co/papers/2402.06088",
+      "authors": [
+        "David Yan",
+        "Dingkang Wang",
+        "Ankit Ramchandani",
+        "Miao Liu",
+        "Albert Pumarola",
+        "Lawrence Chen",
+        "Guan Pang",
+        "Ali Thabet",
+        "Amy Bearman"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.06088.pdf",
+      "abstract": "We introduce animated stickers, a video diffusion model which generates an\nanimation conditioned on a text prompt and static sticker image. Our model is\nbuilt on top of the state-of-the-art Emu text-to-image model, with the addition\nof temporal layers to model motion. Due to the domain gap, i.e. differences in\nvisual and motion style, a model which performed well on generating natural\nvideos can no longer generate vivid videos when applied to stickers. To bridge\nthis gap, we employ a two-stage finetuning pipeline: first with weakly\nin-domain data, followed by human-in-the-loop (HITL) strategy which we term\nensemble-of-teachers. It distills the best qualities of multiple teachers into\na smaller student model. We show that this strategy allows us to specifically\ntarget improvements to motion quality while maintaining the style from the\nstatic image. With inference optimizations, our model is able to generate an\neight-frame video with high-quality, interesting, and relevant motion in under\none second.",
+      "upvotes": 9
+    },
+    {
+      "title": "Premier-TACO: Pretraining Multitask Representation via Temporal Action-Driven Contrastive Loss",
+      "url": "https://huggingface.co/papers/2402.06187",
+      "authors": [
+        "Shuang Ma",
+        "Hal Daumé III",
+        "Praveen Palanisamy",
+        "Kalyan Shankar Basu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.06187.pdf",
+      "abstract": "We present Premier-TACO, a multitask feature representation learning approach\ndesigned to improve few-shot policy learning efficiency in sequential\ndecision-making tasks. Premier-TACO leverages a subset of multitask offline\ndatasets for pretraining a general feature representation, which captures\ncritical environmental dynamics and is fine-tuned using minimal expert\ndemonstrations. It advances the temporal action contrastive learning (TACO)\nobjective, known for state-of-the-art results in visual control tasks, by\nincorporating a novel negative example sampling strategy. This strategy is\ncrucial in significantly boosting TACO's computational efficiency, making\nlarge-scale multitask offline pretraining feasible. Our extensive empirical\nevaluation in a diverse set of continuous control benchmarks including Deepmind\nControl Suite, MetaWorld, and LIBERO demonstrate Premier-TACO's effectiveness\nin pretraining visual representations, significantly enhancing few-shot\nimitation learning of novel tasks. Our code, pretraining data, as well as\npretrained model checkpoints will be released at\nhttps://github.com/PremierTACO/premier-taco.",
+      "upvotes": 9
+    },
+    {
+      "title": "DeAL: Decoding-time Alignment for Large Language Models",
+      "url": "https://huggingface.co/papers/2402.06147",
+      "authors": [
+        "James Y. Huang",
+        "Daniele Bonadiman",
+        "Arshit Gupta",
+        "Nikolaos Pappas",
+        "Saab Mansour",
+        "Katrin Kirchoff",
+        "Dan Roth"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.06147.pdf",
+      "abstract": "Large Language Models (LLMs) are nowadays expected to generate content\naligned with human preferences. Current work focuses on alignment at model\ntraining time, through techniques such as Reinforcement Learning with Human\nFeedback (RLHF). However, it is unclear if such methods are an effective choice\nto teach alignment objectives to the model. First, the inability to incorporate\nmultiple, custom rewards and reliance on a model developer's view of universal\nand static principles are key limitations. Second, the residual gaps in model\ntraining and the reliability of such approaches are also questionable (e.g.\nsusceptibility to jail-breaking even after safety training). To address these,\nwe propose DeAL, a framework that allows the user to customize reward functions\nand enables Decoding-time Alignment of LLMs (DeAL). At its core, we view\ndecoding as a heuristic-guided search process and facilitate the use of a wide\nvariety of alignment objectives. Our experiments with programmatic constraints\nsuch as keyword and length constraints (studied widely in the pre-LLM era) and\nabstract objectives such as harmlessness and helpfulness (proposed in the\npost-LLM era) show that we can DeAL with fine-grained trade-offs, improve\nadherence to alignment objectives, and address residual gaps in LLMs. Lastly,\nwhile DeAL can be effectively paired with RLHF and prompting techniques, its\ngenerality makes decoding slower, an optimization we leave for future work.",
+      "upvotes": 7
+    },
+    {
+      "title": "Real-World Fluid Directed Rigid Body Control via Deep Reinforcement Learning",
+      "url": "https://huggingface.co/papers/2402.06102",
+      "authors": [
+        "Michael Neunert",
+        "Francesco Romano",
+        "Abbas Abdolmaleki",
+        "Arunkumar Byravan",
+        "Markus Wulfmeier",
+        "Martin Riedmiller",
+        "Jonas Buchli"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.06102.pdf",
+      "abstract": "Recent advances in real-world applications of reinforcement learning (RL)\nhave relied on the ability to accurately simulate systems at scale. However,\ndomains such as fluid dynamical systems exhibit complex dynamic phenomena that\nare hard to simulate at high integration rates, limiting the direct application\nof modern deep RL algorithms to often expensive or safety critical hardware. In\nthis work, we introduce \"Box o Flows\", a novel benchtop experimental control\nsystem for systematically evaluating RL algorithms in dynamic real-world\nscenarios. We describe the key components of the Box o Flows, and through a\nseries of experiments demonstrate how state-of-the-art model-free RL algorithms\ncan synthesize a variety of complex behaviors via simple reward specifications.\nFurthermore, we explore the role of offline RL in data-efficient hypothesis\ntesting by reusing past experiences. We believe that the insights gained from\nthis preliminary study and the availability of systems like the Box o Flows\nsupport the way forward for developing systematic RL algorithms that can be\ngenerally applied to complex, dynamical systems. Supplementary material and\nvideos of experiments are available at\nhttps://sites.google.com/view/box-o-flows/home.",
+      "upvotes": 4
+    }
+  ]
+}

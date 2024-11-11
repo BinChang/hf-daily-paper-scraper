@@ -1,0 +1,204 @@
+{
+  "date": "2024-10-30",
+  "papers": [
+    {
+      "title": "CLEAR: Character Unlearning in Textual and Visual Modalities",
+      "url": "https://huggingface.co/papers/2410.18057",
+      "authors": [
+        "Dmitrii Korzh",
+        "Alexey Zhavoronkin",
+        "Boris Mikheev",
+        "Denis Bobkov",
+        "Aibek Alanov",
+        "Ivan Oseledets"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.18057.pdf",
+      "abstract": "Machine Unlearning (MU) is critical for enhancing privacy and security in\ndeep learning models, particularly in large multimodal language models (MLLMs),\nby removing specific private or hazardous information. While MU has made\nsignificant progress in textual and visual modalities, multimodal unlearning\n(MMU) remains significantly underexplored, partially due to the absence of a\nsuitable open-source benchmark. To address this, we introduce CLEAR, a new\nbenchmark designed to evaluate MMU methods. CLEAR contains 200 fictitious\nindividuals and 3,700 images linked with corresponding question-answer pairs,\nenabling a thorough evaluation across modalities. We assess 10 MU methods,\nadapting them for MMU, and highlight new challenges specific to multimodal\nforgetting. We also demonstrate that simple ell_1 regularization on LoRA\nweights significantly mitigates catastrophic forgetting, preserving model\nperformance on retained data. The dataset is available at\nhttps://huggingface.co/datasets/therem/CLEAR",
+      "upvotes": 198
+    },
+    {
+      "title": "AutoKaggle: A Multi-Agent Framework for Autonomous Data Science Competitions",
+      "url": "https://huggingface.co/papers/2410.20424",
+      "authors": [
+        "Ziming Li",
+        "Qianbo Zang",
+        "David Ma",
+        "Jiawei Guo",
+        "Yue Wang",
+        "Jian Yang",
+        "Jiaheng Liu",
+        "Wanjun Zhong",
+        "Wangchunshu Zhou",
+        "Wenhao Huang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.20424.pdf",
+      "abstract": "Data science tasks involving tabular data present complex challenges that\nrequire sophisticated problem-solving approaches. We propose AutoKaggle, a\npowerful and user-centric framework that assists data scientists in completing\ndaily data pipelines through a collaborative multi-agent system. AutoKaggle\nimplements an iterative development process that combines code execution,\ndebugging, and comprehensive unit testing to ensure code correctness and logic\nconsistency. The framework offers highly customizable workflows, allowing users\nto intervene at each phase, thus integrating automated intelligence with human\nexpertise. Our universal data science toolkit, comprising validated functions\nfor data cleaning, feature engineering, and modeling, forms the foundation of\nthis solution, enhancing productivity by streamlining common tasks. We selected\n8 Kaggle competitions to simulate data processing workflows in real-world\napplication scenarios. Evaluation results demonstrate that AutoKaggle achieves\na validation submission rate of 0.85 and a comprehensive score of 0.82 in\ntypical data science pipelines, fully proving its effectiveness and\npracticality in handling complex data science tasks.",
+      "upvotes": 36
+    },
+    {
+      "title": "SocialGPT: Prompting LLMs for Social Relation Reasoning via Greedy Segment Optimization",
+      "url": "https://huggingface.co/papers/2410.21411",
+      "authors": [
+        "Jiawei Zhou",
+        "Donglai Wei",
+        "Chuang Gan",
+        "Hanspeter Pfister"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.21411.pdf",
+      "abstract": "Social relation reasoning aims to identify relation categories such as\nfriends, spouses, and colleagues from images. While current methods adopt the\nparadigm of training a dedicated network end-to-end using labeled image data,\nthey are limited in terms of generalizability and interpretability. To address\nthese issues, we first present a simple yet well-crafted framework named\n{\\name}, which combines the perception capability of Vision Foundation Models\n(VFMs) and the reasoning capability of Large Language Models (LLMs) within a\nmodular framework, providing a strong baseline for social relation recognition.\nSpecifically, we instruct VFMs to translate image content into a textual social\nstory, and then utilize LLMs for text-based reasoning. {\\name} introduces\nsystematic design principles to adapt VFMs and LLMs separately and bridge their\ngaps. Without additional model training, it achieves competitive zero-shot\nresults on two databases while offering interpretable answers, as LLMs can\ngenerate language-based explanations for the decisions. The manual prompt\ndesign process for LLMs at the reasoning phase is tedious and an automated\nprompt optimization method is desired. As we essentially convert a visual\nclassification task into a generative task of LLMs, automatic prompt\noptimization encounters a unique long prompt optimization issue. To address\nthis issue, we further propose the Greedy Segment Prompt Optimization (GSPO),\nwhich performs a greedy search by utilizing gradient information at the segment\nlevel. Experimental results show that GSPO significantly improves performance,\nand our method also generalizes to different image styles. The code is\navailable at https://github.com/Mengzibin/SocialGPT.",
+      "upvotes": 19
+    },
+    {
+      "title": "OpenWebVoyager: Building Multimodal Web Agents via Iterative Real-World Exploration, Feedback and Optimization",
+      "url": "https://huggingface.co/papers/2410.19609",
+      "authors": [
+        "Hongliang He",
+        "Wenlin Yao",
+        "Kaixin Ma",
+        "Wenhao Yu",
+        "Hongming Zhang",
+        "Tianqing Fang",
+        "Zhenzhong Lan",
+        "Dong Yu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.19609.pdf",
+      "abstract": "The rapid development of large language and multimodal models has sparked\nsignificant interest in using proprietary models, such as GPT-4o, to develop\nautonomous agents capable of handling real-world scenarios like web navigation.\nAlthough recent open-source efforts have tried to equip agents with the ability\nto explore environments and continuously improve over time, they are building\ntext-only agents in synthetic environments where the reward signals are clearly\ndefined. Such agents struggle to generalize to realistic settings that require\nmultimodal perception abilities and lack ground-truth signals. In this paper,\nwe introduce an open-source framework designed to facilitate the development of\nmultimodal web agent that can autonomously conduct real-world exploration and\nimprove itself. We first train the base model with imitation learning to gain\nthe basic abilities. We then let the agent explore the open web and collect\nfeedback on its trajectories. After that, it further improves its policy by\nlearning from well-performing trajectories judged by another general-purpose\nmodel. This exploration-feedback-optimization cycle can continue for several\niterations. Experimental results show that our web agent successfully improves\nitself after each iteration, demonstrating strong performance across multiple\ntest sets.",
+      "upvotes": 14
+    },
+    {
+      "title": "Flow-DPO: Improving LLM Mathematical Reasoning through Online Multi-Agent Learning",
+      "url": "https://huggingface.co/papers/2410.22304",
+      "authors": [
+        "Paul Mineiro"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.22304.pdf",
+      "abstract": "Mathematical reasoning is a crucial capability for Large Language Models\n(LLMs), yet generating detailed and accurate reasoning traces remains a\nsignificant challenge. This paper introduces a novel approach to produce\nhigh-quality reasoning traces for LLM fine-tuning using online learning\nFlows. Our method employs an incremental output production Flow, where\ncomponent LLMs collaboratively construct solutions through iterative\ncommunication. We train the Flow using online Direct Preference Optimization\n(DPO) learning with rollouts, generating DPO pairs for each training example\nand updating models in real-time. We directly compare the quality of reasoning\ntraces generated by our method with those produced through direct model\ninference, demonstrating the effectiveness of our approach in improving LLM\nperformance in mathematical reasoning tasks.",
+      "upvotes": 14
+    },
+    {
+      "title": "Can Language Models Replace Programmers? REPOCOD Says 'Not Yet'",
+      "url": "https://huggingface.co/papers/2410.21647",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2410.21647.pdf",
+      "abstract": "Large language models (LLMs) have shown remarkable ability in code generation\nwith more than 90 pass@1 in solving Python coding problems in HumanEval and\nMBPP. Such high accuracy leads to the question: can LLMs replace human\nprogrammers? Existing manual crafted, simple, or single-line code generation\nbenchmarks cannot answer this question due to their gap with real-world\nsoftware development. To answer this question, we propose REPOCOD, a code\ngeneration benchmark with 980 problems collected from 11 popular real-world\nprojects, with more than 58% of them requiring file-level or repository-level\ncontext information. In addition, REPOCOD has the longest average canonical\nsolution length (331.6 tokens) and the highest average cyclomatic complexity\n(9.00) compared to existing benchmarks. In our evaluations on ten LLMs, none of\nthe models can achieve more than 30 pass@1 on REPOCOD, disclosing the necessity\nof building stronger LLMs that can help developers in real-world software\ndevelopment.",
+      "upvotes": 12
+    },
+    {
+      "title": "Task Vectors are Cross-Modal",
+      "url": "https://huggingface.co/papers/2410.22330",
+      "authors": [
+        "Trevor Darrell",
+        "Amir Bar"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.22330.pdf",
+      "abstract": "We investigate the internal representations of vision-and-language models\n(VLMs) and how they encode task representations. We consider tasks specified\nthrough examples or instructions, using either text or image inputs.\nSurprisingly, we find that conceptually similar tasks are mapped to similar\ntask vector representations, regardless of how they are specified. Our findings\nsuggest that to output answers, tokens in VLMs undergo three distinct phases:\ninput, task, and answer, a process which is consistent across different\nmodalities and specifications. The task vectors we identify in VLMs are general\nenough to be derived in one modality (e.g., text) and transferred to another\n(e.g., image). Additionally, we find that ensembling exemplar and instruction\nbased task vectors produce better task representations. Taken together, these\ninsights shed light on the underlying mechanisms of VLMs, particularly their\nability to represent tasks in a shared manner across different modalities and\ntask specifications. Project page:\nhttps://task-vectors-are-cross-modal.github.io.",
+      "upvotes": 10
+    },
+    {
+      "title": "Precise and Dexterous Robotic Manipulation via Human-in-the-Loop Reinforcement Learning",
+      "url": "https://huggingface.co/papers/2410.21845",
+      "authors": [
+        "Jeffrey Wu",
+        "Sergey Levine"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.21845.pdf",
+      "abstract": "Reinforcement learning (RL) holds great promise for enabling autonomous\nacquisition of complex robotic manipulation skills, but realizing this\npotential in real-world settings has been challenging. We present a\nhuman-in-the-loop vision-based RL system that demonstrates impressive\nperformance on a diverse set of dexterous manipulation tasks, including dynamic\nmanipulation, precision assembly, and dual-arm coordination. Our approach\nintegrates demonstrations and human corrections, efficient RL algorithms, and\nother system-level design choices to learn policies that achieve near-perfect\nsuccess rates and fast cycle times within just 1 to 2.5 hours of training. We\nshow that our method significantly outperforms imitation learning baselines and\nprior RL approaches, with an average 2x improvement in success rate and 1.8x\nfaster execution. Through extensive experiments and analysis, we provide\ninsights into the effectiveness of our approach, demonstrating how it learns\nrobust, adaptive policies for both reactive and predictive control strategies.\nOur results suggest that RL can indeed learn a wide range of complex\nvision-based manipulation policies directly in the real world within practical\ntraining times. We hope this work will inspire a new generation of learned\nrobotic manipulation techniques, benefiting both industrial applications and\nresearch advancements. Videos and code are available at our project website\nhttps://hil-serl.github.io/.",
+      "upvotes": 10
+    },
+    {
+      "title": "Mind Your Step (by Step): Chain-of-Thought can Reduce Performance on Tasks where Thinking Makes Humans Worse",
+      "url": "https://huggingface.co/papers/2410.21333",
+      "authors": [
+        "Ryan Liu",
+        "Jiayi Geng",
+        "Addison J. Wu",
+        "Ilia Sucholutsky",
+        "Tania Lombrozo",
+        "Thomas L. Griffiths"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.21333.pdf",
+      "abstract": "Chain-of-thought (CoT) prompting has become a widely used strategy for\nworking with large language and multimodal models. While CoT has been shown to\nimprove performance across many tasks, determining the settings in which it is\neffective remains an ongoing effort. In particular, it is still an open\nquestion in what settings CoT systematically reduces model performance. In this\npaper, we seek to identify the characteristics of tasks where CoT reduces\nperformance by drawing inspiration from cognitive psychology, looking at cases\nwhere (i) verbal thinking or deliberation hurts performance in humans, and (ii)\nthe constraints governing human performance generalize to language models.\nThree such cases are implicit statistical learning, visual recognition, and\nclassifying with patterns containing exceptions. In extensive experiments\nacross all three settings, we find that a diverse collection of\nstate-of-the-art models exhibit significant drop-offs in performance (e.g., up\nto 36.3% absolute accuracy for OpenAI o1-preview compared to GPT-4o) when using\ninference-time reasoning compared to zero-shot counterparts. We also identify\nthree tasks that satisfy condition (i) but not (ii), and find that while verbal\nthinking reduces human performance in these tasks, CoT retains or increases\nmodel performance. Overall, our results show that while there is not an exact\nparallel between the cognitive processes of models and those of humans,\nconsidering cases where thinking has negative consequences for human\nperformance can help us identify settings where it negatively impacts models.\nBy connecting the literature on human deliberation with evaluations of CoT, we\noffer a new tool that can be used in understanding the impact of prompt choices\nand inference-time reasoning.",
+      "upvotes": 9
+    },
+    {
+      "title": "Robots Pre-train Robots: Manipulation-Centric Robotic Representation from Large-Scale Robot Dataset",
+      "url": "https://huggingface.co/papers/2410.22325",
+      "authors": [
+        "Guangqi Jiang",
+        "Yifei Sun",
+        "Tao Huang",
+        "Huanyu Li",
+        "Yongyuan Liang",
+        "Huazhe Xu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.22325.pdf",
+      "abstract": "The pre-training of visual representations has enhanced the efficiency of\nrobot learning. Due to the lack of large-scale in-domain robotic datasets,\nprior works utilize in-the-wild human videos to pre-train robotic visual\nrepresentation. Despite their promising results, representations from human\nvideos are inevitably subject to distribution shifts and lack the dynamics\ninformation crucial for task completion. We first evaluate various pre-trained\nrepresentations in terms of their correlation to the downstream robotic\nmanipulation tasks (i.e., manipulation centricity). Interestingly, we find that\nthe \"manipulation centricity\" is a strong indicator of success rates when\napplied to downstream tasks. Drawing from these findings, we propose\nManipulation Centric Representation (MCR), a foundation representation learning\nframework capturing both visual features and the dynamics information such as\nactions and proprioceptions of manipulation tasks to improve manipulation\ncentricity. Specifically, we pre-train a visual encoder on the DROID robotic\ndataset and leverage motion-relevant data such as robot proprioceptive states\nand actions. We introduce a novel contrastive loss that aligns visual\nobservations with the robot's proprioceptive state-action dynamics, combined\nwith a behavior cloning (BC)-like actor loss to predict actions during\npre-training, along with a time contrastive loss. Empirical results across 4\nsimulation domains with 20 tasks verify that MCR outperforms the strongest\nbaseline method by 14.8%. Moreover, MCR boosts the performance of\ndata-efficient learning with a UR5e arm on 3 real-world tasks by 76.9%. Project\nwebsite: https://robots-pretrain-robots.github.io/.",
+      "upvotes": 9
+    },
+    {
+      "title": "ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference",
+      "url": "https://huggingface.co/papers/2410.21465",
+      "authors": [
+        "Li-Wen Chang",
+        "Wenlei Bao",
+        "Size Zheng",
+        "Ningxin Zheng",
+        "Xin Liu",
+        "Harry Dong",
+        "Yuejie Chi",
+        "Beidi Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.21465.pdf",
+      "abstract": "With the widespread deployment of long-context large language models (LLMs),\nthere has been a growing demand for efficient support of high-throughput\ninference. However, as the key-value (KV) cache expands with the sequence\nlength, the increasing memory footprint and the need to access it for each\ntoken generation both result in low throughput when serving long-context LLMs.\nWhile various dynamic sparse attention methods have been proposed to speed up\ninference while maintaining generation quality, they either fail to\nsufficiently reduce GPU memory consumption or introduce significant decoding\nlatency by offloading the KV cache to the CPU. We present ShadowKV, a\nhigh-throughput long-context LLM inference system that stores the low-rank key\ncache and offloads the value cache to reduce the memory footprint for larger\nbatch sizes and longer sequences. To minimize decoding latency, ShadowKV\nemploys an accurate KV selection strategy that reconstructs minimal sparse KV\npairs on-the-fly. By evaluating ShadowKV on a broad range of benchmarks,\nincluding RULER, LongBench, and Needle In A Haystack, and models like\nLlama-3.1-8B, Llama-3-8B-1M, GLM-4-9B-1M, Yi-9B-200K, Phi-3-Mini-128K, and\nQwen2-7B-128K, we demonstrate that it can support up to 6times larger batch\nsizes and boost throughput by up to 3.04times on an A100 GPU without\nsacrificing accuracy, even surpassing the performance achievable with infinite\nbatch size under the assumption of infinite GPU memory. The code is available\nat https://github.com/bytedance/ShadowKV.",
+      "upvotes": 9
+    },
+    {
+      "title": "Zero-Shot Dense Retrieval with Embeddings from Relevance Feedback",
+      "url": "https://huggingface.co/papers/2410.21242",
+      "authors": [
+        "Nour Jedidi",
+        "Leslie Shing",
+        "James Glass"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.21242.pdf",
+      "abstract": "Building effective dense retrieval systems remains difficult when relevance\nsupervision is not available. Recent work has looked to overcome this challenge\nby using a Large Language Model (LLM) to generate hypothetical documents that\ncan be used to find the closest real document. However, this approach relies\nsolely on the LLM to have domain-specific knowledge relevant to the query,\nwhich may not be practical. Furthermore, generating hypothetical documents can\nbe inefficient as it requires the LLM to generate a large number of tokens for\neach query. To address these challenges, we introduce Real Document Embeddings\nfrom Relevance Feedback (ReDE-RF). Inspired by relevance feedback, ReDE-RF\nproposes to re-frame hypothetical document generation as a relevance estimation\ntask, using an LLM to select which documents should be used for nearest\nneighbor search. Through this re-framing, the LLM no longer needs\ndomain-specific knowledge but only needs to judge what is relevant.\nAdditionally, relevance estimation only requires the LLM to output a single\ntoken, thereby improving search latency. Our experiments show that ReDE-RF\nconsistently surpasses state-of-the-art zero-shot dense retrieval methods\nacross a wide range of low-resource retrieval datasets while also making\nsignificant improvements in latency per-query.",
+      "upvotes": 6
+    },
+    {
+      "title": "Accelerating Direct Preference Optimization with Prefix Sharing",
+      "url": "https://huggingface.co/papers/2410.20305",
+      "authors": [
+        "Sumanth Hegde"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.20305.pdf",
+      "abstract": "Offline paired preference optimization algorithms have become a popular\napproach for fine-tuning on preference data, outperforming traditional\nsupervised fine-tuning in various tasks. However, traditional implementations\noften involve redundant computations, especially for tasks with long shared\nprompts. We introduce prefix sharing for preference tuning, a novel technique\nthat processes chosen and rejected responses as one sequence with a shared\nprefix. To prevent cross-response contamination, we use a custom block-sparse\nattention mask. Our method achieves 1.1-1.5times improvement in training\nthroughput on popular DPO datasets, without any effect on convergence. When\ncombined with sequence packing, we observe consistent 1.3-1.6times\nspeedups, benefiting even datasets with smaller sequence lengths. While we\nfocus on Direct Preference Optimization (DPO), our approach is applicable to\nother paired preference tuning methods. By enhancing computational efficiency,\nour work contributes to making preference-based fine-tuning more accessible for\na wider range of applications and model sizes. We open-source our code at\nhttps://github.com/frankxwang/dpo-prefix-sharing.",
+      "upvotes": 5
+    },
+    {
+      "title": "RARe: Retrieval Augmented Retrieval with In-Context Examples",
+      "url": "https://huggingface.co/papers/2410.20088",
+      "authors": [
+        "Yoonsang Lee",
+        "Sujay Sanghavi",
+        "Eunsol Choi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.20088.pdf",
+      "abstract": "We investigate whether in-context examples, widely used in decoder-only\nlanguage models (LLMs), can improve embedding model performance in retrieval\ntasks. Unlike in LLMs, naively prepending in-context examples (query-document\npairs) to the target query at inference time does not work out of the box. We\nintroduce a simple approach to enable retrievers to use in-context examples.\nOur approach, RARe, finetunes a pre-trained model with in-context examples\nwhose query is semantically similar to the target query. This can be applied to\nadapt various base architectures (i.e., decoder-only language models, retriever\nmodels) and consistently achieves performance gains of up to +2.72% nDCG across\nvarious open-domain retrieval datasets (BeIR, RAR-b). In particular, we find\nRARe exhibits stronger out-of-domain generalization compared to models using\nqueries without in-context examples, similar to what is seen for in-context\nlearning in LLMs. We further provide analysis on the design choices of\nin-context example augmentation and lay the foundation for future work in this\nspace.",
+      "upvotes": 5
+    },
+    {
+      "title": "Measuring memorization through probabilistic discoverable extraction",
+      "url": "https://huggingface.co/papers/2410.19482",
+      "authors": [
+        "Jamie Hayes",
+        "Marika Swanberg",
+        "Harsh Chaudhari",
+        "Itay Yona",
+        "Ilia Shumailov"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.19482.pdf",
+      "abstract": "Large language models (LLMs) are susceptible to memorizing training data,\nraising concerns due to the potential extraction of sensitive information.\nCurrent methods to measure memorization rates of LLMs, primarily discoverable\nextraction (Carlini et al., 2022), rely on single-sequence greedy sampling,\npotentially underestimating the true extent of memorization. This paper\nintroduces a probabilistic relaxation of discoverable extraction that\nquantifies the probability of extracting a target sequence within a set of\ngenerated samples, considering various sampling schemes and multiple attempts.\nThis approach addresses the limitations of reporting memorization rates through\ndiscoverable extraction by accounting for the probabilistic nature of LLMs and\nuser interaction patterns. Our experiments demonstrate that this probabilistic\nmeasure can reveal cases of higher memorization rates compared to rates found\nthrough discoverable extraction. We further investigate the impact of different\nsampling schemes on extractability, providing a more comprehensive and\nrealistic assessment of LLM memorization and its associated risks. Our\ncontributions include a new probabilistic memorization definition, empirical\nevidence of its effectiveness, and a thorough evaluation across different\nmodels, sizes, sampling schemes, and training data repetitions.",
+      "upvotes": 4
+    }
+  ]
+}

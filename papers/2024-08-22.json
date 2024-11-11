@@ -1,0 +1,177 @@
+{
+  "date": "2024-08-22",
+  "papers": [
+    {
+      "title": "TWLV-I: Analysis and Insights from Holistic Evaluation on Video Foundation Models",
+      "url": "https://huggingface.co/papers/2408.11318",
+      "authors": [
+        "Jin-Young Kim",
+        "Kyungjune Baek",
+        "Jihwan Kim",
+        "Hyojun Go",
+        "Seongsu Ha",
+        "Seokjin Han",
+        "Jiho Jang",
+        "Raehyuk Jung",
+        "Daewoo Kim",
+        "GeunOh Kim",
+        "JongMok Kim",
+        "Jongseok Kim",
+        "Junwan Kim",
+        "Soonwoo Kwon",
+        "Jangwon Lee",
+        "Seungjoon Park",
+        "Minjoon Seo",
+        "Jay Suh",
+        "Jaehyuk Yi",
+        "Aiden Lee"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.11318.pdf",
+      "abstract": "In this work, we discuss evaluating video foundation models in a fair and\nrobust manner. Unlike language or image foundation models, many video\nfoundation models are evaluated with differing parameters (such as sampling\nrate, number of frames, pretraining steps, etc.), making fair and robust\ncomparisons challenging. Therefore, we present a carefully designed evaluation\nframework for measuring two core capabilities of video comprehension:\nappearance and motion understanding. Our findings reveal that existing video\nfoundation models, whether text-supervised like UMT or InternVideo2, or\nself-supervised like V-JEPA, exhibit limitations in at least one of these\ncapabilities. As an alternative, we introduce TWLV-I, a new video foundation\nmodel that constructs robust visual representations for both motion- and\nappearance-based videos. Based on the average top-1 accuracy of linear probing\non five action recognition benchmarks, pretrained only on publicly accessible\ndatasets, our model shows a 4.6%p improvement compared to V-JEPA (ViT-L) and a\n7.7%p improvement compared to UMT (ViT-L). Even when compared to much larger\nmodels, our model demonstrates a 7.2%p improvement compared to DFN (ViT-H), a\n2.7%p improvement compared to V-JEPA~(ViT-H) and a 2.8%p improvement compared\nto InternVideo2 (ViT-g). We provide embedding vectors obtained by TWLV-I from\nvideos of several commonly used video benchmarks, along with evaluation source\ncode that can directly utilize these embeddings. The code is available on\n\"https://github.com/twelvelabs-io/video-embeddings-evaluation-framework\".",
+      "upvotes": 54
+    },
+    {
+      "title": "LLM Pruning and Distillation in Practice: The Minitron Approach",
+      "url": "https://huggingface.co/papers/2408.11796",
+      "authors": [
+        "Sharath Turuvekere Sreenivas",
+        "Jan Kautz"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.11796.pdf",
+      "abstract": "We present a comprehensive report on compressing the Llama 3.1 8B and Mistral\nNeMo 12B models to 4B and 8B parameters, respectively, using pruning and\ndistillation. We explore two distinct pruning strategies: (1) depth pruning and\n(2) joint hidden/attention/MLP (width) pruning, and evaluate the results on\ncommon benchmarks from the LM Evaluation Harness. The models are then aligned\nwith NeMo Aligner and tested in instruct-tuned versions. This approach produces\na compelling 4B model from Llama 3.1 8B and a state-of-the-art\nMistral-NeMo-Minitron-8B (MN-Minitron-8B for brevity) model from Mistral NeMo\n12B. We found that with no access to the original data, it is beneficial to\nslightly fine-tune teacher models on the distillation dataset. We open-source\nour base model weights on Hugging Face with a permissive license.",
+      "upvotes": 53
+    },
+    {
+      "title": "FocusLLM: Scaling LLM's Context by Parallel Decoding",
+      "url": "https://huggingface.co/papers/2408.11745",
+      "authors": [
+        "Zhenyu Li",
+        "Yike Zhang",
+        "Tengyu Pan",
+        "Yutao Sun",
+        "Zhichao Duan",
+        "Junjie Fang",
+        "Rong Han",
+        "Zixuan Wang",
+        "Jianyong Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.11745.pdf",
+      "abstract": "Empowering LLMs with the ability to utilize useful information from a long\ncontext is crucial for many downstream applications. However, achieving long\ncontext lengths with the conventional transformer architecture requires\nsubstantial training and inference resources. In this paper, we present\nFocusLLM, a framework designed to extend the context length of any decoder-only\nLLM, enabling the model to focus on relevant information from very long\nsequences. FocusLLM processes long text inputs by dividing them into chunks\nbased on the model's original context length to alleviate the issue of\nattention distraction. Then, it appends the local context to each chunk as a\nprompt to extract essential information from each chunk based on a novel\nparallel decoding mechanism, and ultimately integrates the extracted\ninformation into the local context. FocusLLM stands out for great training\nefficiency and versatility: trained with an 8K input length with much less\ntraining cost than previous methods, FocusLLM exhibits superior performance\nacross downstream long-context tasks and maintains strong language modeling\nability when handling extensive long texts, even up to 400K tokens. Our code is\navailable at https://github.com/leezythu/FocusLLM.",
+      "upvotes": 23
+    },
+    {
+      "title": "TrackGo: A Flexible and Efficient Method for Controllable Video Generation",
+      "url": "https://huggingface.co/papers/2408.11475",
+      "authors": [
+        "Haitao Zhou",
+        "Chuang Wang",
+        "Rui Nie",
+        "Jinxiao Lin",
+        "Dongdong Yu",
+        "Qian Yu",
+        "Changhu Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.11475.pdf",
+      "abstract": "Recent years have seen substantial progress in diffusion-based controllable\nvideo generation. However, achieving precise control in complex scenarios,\nincluding fine-grained object parts, sophisticated motion trajectories, and\ncoherent background movement, remains a challenge. In this paper, we introduce\nTrackGo, a novel approach that leverages free-form masks and arrows for\nconditional video generation. This method offers users with a flexible and\nprecise mechanism for manipulating video content. We also propose the\nTrackAdapter for control implementation, an efficient and lightweight adapter\ndesigned to be seamlessly integrated into the temporal self-attention layers of\na pretrained video generation model. This design leverages our observation that\nthe attention map of these layers can accurately activate regions corresponding\nto motion in videos. Our experimental results demonstrate that our new\napproach, enhanced by the TrackAdapter, achieves state-of-the-art performance\non key metrics such as FVD, FID, and ObjMC scores. The project page of TrackGo\ncan be found at: https://zhtjtcz.github.io/TrackGo-Page/",
+      "upvotes": 16
+    },
+    {
+      "title": "GRAB: A Challenging GRaph Analysis Benchmark for Large Multimodal Models",
+      "url": "https://huggingface.co/papers/2408.11817",
+      "authors": [
+        "Kai Han",
+        "Samuel Albanie"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.11817.pdf",
+      "abstract": "Large multimodal models (LMMs) have exhibited proficiencies across many\nvisual tasks. Although numerous well-known benchmarks exist to evaluate model\nperformance, they increasingly have insufficient headroom. As such, there is a\npressing need for a new generation of benchmarks challenging enough for the\nnext generation of LMMs. One area that LMMs show potential is graph analysis,\nspecifically, the tasks an analyst might typically perform when interpreting\nfigures such as estimating the mean, intercepts or correlations of functions\nand data series. In this work, we introduce GRAB, a graph analysis benchmark,\nfit for current and future frontier LMMs. Our benchmark is entirely synthetic,\nensuring high-quality, noise-free questions. GRAB is comprised of 2170\nquestions, covering four tasks and 23 graph properties. We evaluate 20 LMMs on\nGRAB, finding it to be a challenging benchmark, with the highest performing\nmodel attaining a score of just 21.7%. Finally, we conduct various ablations to\ninvestigate where the models succeed and struggle. We release GRAB to encourage\nprogress in this important, growing domain.",
+      "upvotes": 7
+    },
+    {
+      "title": "FRAP: Faithful and Realistic Text-to-Image Generation with Adaptive Prompt Weighting",
+      "url": "https://huggingface.co/papers/2408.11706",
+      "authors": [
+        "Negar Hassanpour",
+        "Mohammad Salameh",
+        "Mohan Sai Singamsetti",
+        "Fengyu Sun",
+        "Wei Lu",
+        "Di Niu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.11706.pdf",
+      "abstract": "Text-to-image (T2I) diffusion models have demonstrated impressive\ncapabilities in generating high-quality images given a text prompt. However,\nensuring the prompt-image alignment remains a considerable challenge, i.e.,\ngenerating images that faithfully align with the prompt's semantics. Recent\nworks attempt to improve the faithfulness by optimizing the latent code, which\npotentially could cause the latent code to go out-of-distribution and thus\nproduce unrealistic images. In this paper, we propose FRAP, a simple, yet\neffective approach based on adaptively adjusting the per-token prompt weights\nto improve prompt-image alignment and authenticity of the generated images. We\ndesign an online algorithm to adaptively update each token's weight\ncoefficient, which is achieved by minimizing a unified objective function that\nencourages object presence and the binding of object-modifier pairs. Through\nextensive evaluations, we show FRAP generates images with significantly higher\nprompt-image alignment to prompts from complex datasets, while having a lower\naverage latency compared to recent latent code optimization methods, e.g., 4\nseconds faster than D&B on the COCO-Subject dataset. Furthermore, through\nvisual comparisons and evaluation on the CLIP-IQA-Real metric, we show that\nFRAP not only improves prompt-image alignment but also generates more authentic\nimages with realistic appearances. We also explore combining FRAP with prompt\nrewriting LLM to recover their degraded prompt-image alignment, where we\nobserve improvements in both prompt-image alignment and image quality.",
+      "upvotes": 5
+    },
+    {
+      "title": "Out-of-Distribution Detection with Attention Head Masking for Multimodal Document Classification",
+      "url": "https://huggingface.co/papers/2408.11237",
+      "authors": [
+        "Christos Constantinou",
+        "Georgios Ioannides",
+        "Edwin Simpson"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.11237.pdf",
+      "abstract": "Detecting out-of-distribution (OOD) data is crucial in machine learning\napplications to mitigate the risk of model overconfidence, thereby enhancing\nthe reliability and safety of deployed systems. The majority of existing OOD\ndetection methods predominantly address uni-modal inputs, such as images or\ntexts. In the context of multi-modal documents, there is a notable lack of\nextensive research on the performance of these methods, which have primarily\nbeen developed with a focus on computer vision tasks. We propose a novel\nmethodology termed as attention head masking (AHM) for multi-modal OOD tasks in\ndocument classification systems. Our empirical results demonstrate that the\nproposed AHM method outperforms all state-of-the-art approaches and\nsignificantly decreases the false positive rate (FPR) compared to existing\nsolutions up to 7.5\\%. This methodology generalizes well to multi-modal data,\nsuch as documents, where visual and textual information are modeled under the\nsame Transformer architecture. To address the scarcity of high-quality publicly\navailable document datasets and encourage further research on OOD detection for\ndocuments, we introduce FinanceDocs, a new document AI dataset. Our code and\ndataset are publicly available.",
+      "upvotes": 4
+    },
+    {
+      "title": "Iterative Object Count Optimization for Text-to-image Diffusion Models",
+      "url": "https://huggingface.co/papers/2408.11721",
+      "authors": [
+        "Oz Zafar",
+        "Lior Wolf",
+        "Idan Schwartz"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.11721.pdf",
+      "abstract": "We address a persistent challenge in text-to-image models: accurately\ngenerating a specified number of objects. Current models, which learn from\nimage-text pairs, inherently struggle with counting, as training data cannot\ndepict every possible number of objects for any given object. To solve this, we\npropose optimizing the generated image based on a counting loss derived from a\ncounting model that aggregates an object\\'s potential. Employing an\nout-of-the-box counting model is challenging for two reasons: first, the model\nrequires a scaling hyperparameter for the potential aggregation that varies\ndepending on the viewpoint of the objects, and second, classifier guidance\ntechniques require modified models that operate on noisy intermediate diffusion\nsteps. To address these challenges, we propose an iterated online training mode\nthat improves the accuracy of inferred images while altering the text\nconditioning embedding and dynamically adjusting hyperparameters. Our method\noffers three key advantages: (i) it can consider non-derivable counting\ntechniques based on detection models, (ii) it is a zero-shot plug-and-play\nsolution facilitating rapid changes to the counting techniques and image\ngeneration methods, and (iii) the optimized counting token can be reused to\ngenerate accurate images without additional optimization. We evaluate the\ngeneration of various objects and show significant improvements in accuracy.\nThe project page is available at https://ozzafar.github.io/count_token.",
+      "upvotes": 4
+    },
+    {
+      "title": "Scaling Cross-Embodied Learning: One Policy for Manipulation, Navigation, Locomotion and Aviation",
+      "url": "https://huggingface.co/papers/2408.11812",
+      "authors": [
+        "Ria Doshi",
+        "Homer Walke",
+        "Oier Mees",
+        "Sudeep Dasari",
+        "Sergey Levine"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.11812.pdf",
+      "abstract": "Modern machine learning systems rely on large datasets to attain broad\ngeneralization, and this often poses a challenge in robot learning, where each\nrobotic platform and task might have only a small dataset. By training a single\npolicy across many different kinds of robots, a robot learning method can\nleverage much broader and more diverse datasets, which in turn can lead to\nbetter generalization and robustness. However, training a single policy on\nmulti-robot data is challenging because robots can have widely varying sensors,\nactuators, and control frequencies. We propose CrossFormer, a scalable and\nflexible transformer-based policy that can consume data from any embodiment. We\ntrain CrossFormer on the largest and most diverse dataset to date, 900K\ntrajectories across 20 different robot embodiments. We demonstrate that the\nsame network weights can control vastly different robots, including single and\ndual arm manipulation systems, wheeled robots, quadcopters, and quadrupeds.\nUnlike prior work, our model does not require manual alignment of the\nobservation or action spaces. Extensive experiments in the real world show that\nour method matches the performance of specialist policies tailored for each\nembodiment, while also significantly outperforming the prior state of the art\nin cross-embodiment learning.",
+      "upvotes": 4
+    },
+    {
+      "title": "Backward-Compatible Aligned Representations via an Orthogonal Transformation Layer",
+      "url": "https://huggingface.co/papers/2408.08793",
+      "authors": [
+        "Simone Ricci",
+        "Federico Pernici",
+        "Alberto Del Bimbo"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.08793.pdf",
+      "abstract": "Visual retrieval systems face significant challenges when updating models\nwith improved representations due to misalignment between the old and new\nrepresentations. The costly and resource-intensive backfilling process involves\nrecalculating feature vectors for images in the gallery set whenever a new\nmodel is introduced. To address this, prior research has explored\nbackward-compatible training methods that enable direct comparisons between new\nand old representations without backfilling. Despite these advancements,\nachieving a balance between backward compatibility and the performance of\nindependently trained models remains an open problem. In this paper, we address\nit by expanding the representation space with additional dimensions and\nlearning an orthogonal transformation to achieve compatibility with old models\nand, at the same time, integrate new information. This transformation preserves\nthe original feature space's geometry, ensuring that our model aligns with\nprevious versions while also learning new data. Our Orthogonal Compatible\nAligned (OCA) approach eliminates the need for re-indexing during model updates\nand ensures that features can be compared directly across different model\nupdates without additional mapping functions. Experimental results on CIFAR-100\nand ImageNet-1k demonstrate that our method not only maintains compatibility\nwith previous models but also achieves state-of-the-art accuracy, outperforming\nseveral existing methods.",
+      "upvotes": 4
+    },
+    {
+      "title": "Unboxing Occupational Bias: Grounded Debiasing LLMs with U.S. Labor Data",
+      "url": "https://huggingface.co/papers/2408.11247",
+      "authors": [
+        "Manas Gaur"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.11247.pdf",
+      "abstract": "Large Language Models (LLMs) are prone to inheriting and amplifying societal\nbiases embedded within their training data, potentially reinforcing harmful\nstereotypes related to gender, occupation, and other sensitive categories. This\nissue becomes particularly problematic as biased LLMs can have far-reaching\nconsequences, leading to unfair practices and exacerbating social inequalities\nacross various domains, such as recruitment, online content moderation, or even\nthe criminal justice system. Although prior research has focused on detecting\nbias in LLMs using specialized datasets designed to highlight intrinsic biases,\nthere has been a notable lack of investigation into how these findings\ncorrelate with authoritative datasets, such as those from the U.S. National\nBureau of Labor Statistics (NBLS). To address this gap, we conduct empirical\nresearch that evaluates LLMs in a ``bias-out-of-the-box\" setting, analyzing how\nthe generated outputs compare with the distributions found in NBLS data.\nFurthermore, we propose a straightforward yet effective debiasing mechanism\nthat directly incorporates NBLS instances to mitigate bias within LLMs. Our\nstudy spans seven different LLMs, including instructable, base, and\nmixture-of-expert models, and reveals significant levels of bias that are often\noverlooked by existing bias detection techniques. Importantly, our debiasing\nmethod, which does not rely on external datasets, demonstrates a substantial\nreduction in bias scores, highlighting the efficacy of our approach in creating\nfairer and more reliable LLMs.",
+      "upvotes": 3
+    },
+    {
+      "title": "Expanding FLORES+ Benchmark for more Low-Resource Settings: Portuguese-Emakhuwa Machine Translation Evaluation",
+      "url": "https://huggingface.co/papers/2408.11457",
+      "authors": [
+        "Felermino D. M. Antonio Ali",
+        "Henrique Lopes Cardoso",
+        "Rui Sousa-Silva"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.11457.pdf",
+      "abstract": "As part of the Open Language Data Initiative shared tasks, we have expanded\nthe FLORES+ evaluation set to include Emakhuwa, a low-resource language widely\nspoken in Mozambique. We translated the dev and devtest sets from Portuguese\ninto Emakhuwa, and we detail the translation process and quality assurance\nmeasures used. Our methodology involved various quality checks, including\npost-editing and adequacy assessments. The resulting datasets consist of\nmultiple reference sentences for each source. We present baseline results from\ntraining a Neural Machine Translation system and fine-tuning existing\nmultilingual translation models. Our findings suggest that spelling\ninconsistencies remain a challenge in Emakhuwa. Additionally, the baseline\nmodels underperformed on this evaluation set, underscoring the necessity for\nfurther research to enhance machine translation quality for Emakhuwa. The data\nis publicly available at https://huggingface.co/datasets/LIACC/Emakhuwa-FLORES.",
+      "upvotes": 2
+    }
+  ]
+}

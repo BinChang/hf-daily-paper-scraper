@@ -1,0 +1,112 @@
+{
+  "date": "2024-09-13",
+  "papers": [
+    {
+      "title": "DSBench: How Far Are Data Science Agents to Becoming Data Science Experts?",
+      "url": "https://huggingface.co/papers/2409.07703",
+      "authors": [
+        "Dong Yu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.07703.pdf",
+      "abstract": "Large Language Models (LLMs) and Large Vision-Language Models (LVLMs) have\ndemonstrated impressive language/vision reasoning abilities, igniting the\nrecent trend of building agents for targeted applications such as shopping\nassistants or AI software engineers. Recently, many data science benchmarks\nhave been proposed to investigate their performance in the data science domain.\nHowever, existing data science benchmarks still fall short when compared to\nreal-world data science applications due to their simplified settings. To\nbridge this gap, we introduce DSBench, a comprehensive benchmark designed to\nevaluate data science agents with realistic tasks. This benchmark includes 466\ndata analysis tasks and 74 data modeling tasks, sourced from Eloquence and\nKaggle competitions. DSBench offers a realistic setting by encompassing long\ncontexts, multimodal task backgrounds, reasoning with large data files and\nmulti-table structures, and performing end-to-end data modeling tasks. Our\nevaluation of state-of-the-art LLMs, LVLMs, and agents shows that they struggle\nwith most tasks, with the best agent solving only 34.12% of data analysis tasks\nand achieving a 34.74% Relative Performance Gap (RPG). These findings\nunderscore the need for further advancements in developing more practical,\nintelligent, and autonomous data science agents.",
+      "upvotes": 66
+    },
+    {
+      "title": "Can LLMs Generate Novel Research Ideas? A Large-Scale Human Study with 100+ NLP Researchers",
+      "url": "https://huggingface.co/papers/2409.04109",
+      "authors": [
+        "Diyi Yang",
+        "Tatsunori Hashimoto"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.04109.pdf",
+      "abstract": "Recent advancements in large language models (LLMs) have sparked optimism\nabout their potential to accelerate scientific discovery, with a growing number\nof works proposing research agents that autonomously generate and validate new\nideas. Despite this, no evaluations have shown that LLM systems can take the\nvery first step of producing novel, expert-level ideas, let alone perform the\nentire research process. We address this by establishing an experimental design\nthat evaluates research idea generation while controlling for confounders and\nperforms the first head-to-head comparison between expert NLP researchers and\nan LLM ideation agent. By recruiting over 100 NLP researchers to write novel\nideas and blind reviews of both LLM and human ideas, we obtain the first\nstatistically significant conclusion on current LLM capabilities for research\nideation: we find LLM-generated ideas are judged as more novel (p < 0.05) than\nhuman expert ideas while being judged slightly weaker on feasibility. Studying\nour agent baselines closely, we identify open problems in building and\nevaluating research agents, including failures of LLM self-evaluation and their\nlack of diversity in generation. Finally, we acknowledge that human judgements\nof novelty can be difficult, even by experts, and propose an end-to-end study\ndesign which recruits researchers to execute these ideas into full projects,\nenabling us to study whether these novelty and feasibility judgements result in\nmeaningful differences in research outcome.",
+      "upvotes": 43
+    },
+    {
+      "title": "Windows Agent Arena: Evaluating Multi-Modal OS Agents at Scale",
+      "url": "https://huggingface.co/papers/2409.08264",
+      "authors": [
+        "Dan Zhao",
+        "Dillon Dupont",
+        "Zack Hui"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.08264.pdf",
+      "abstract": "Large language models (LLMs) show remarkable potential to act as computer\nagents, enhancing human productivity and software accessibility in multi-modal\ntasks that require planning and reasoning. However, measuring agent performance\nin realistic environments remains a challenge since: (i) most benchmarks are\nlimited to specific modalities or domains (e.g. text-only, web navigation, Q&A,\ncoding) and (ii) full benchmark evaluations are slow (on order of magnitude of\ndays) given the multi-step sequential nature of tasks. To address these\nchallenges, we introduce the Windows Agent Arena: a reproducible, general\nenvironment focusing exclusively on the Windows operating system (OS) where\nagents can operate freely within a real Windows OS and use the same wide range\nof applications, tools, and web browsers available to human users when solving\ntasks. We adapt the OSWorld framework (Xie et al., 2024) to create 150+ diverse\nWindows tasks across representative domains that require agent abilities in\nplanning, screen understanding, and tool usage. Our benchmark is scalable and\ncan be seamlessly parallelized in Azure for a full benchmark evaluation in as\nlittle as 20 minutes. To demonstrate Windows Agent Arena's capabilities, we\nalso introduce a new multi-modal agent, Navi. Our agent achieves a success rate\nof 19.5% in the Windows domain, compared to 74.5% performance of an unassisted\nhuman. Navi also demonstrates strong performance on another popular web-based\nbenchmark, Mind2Web. We offer extensive quantitative and qualitative analysis\nof Navi's performance, and provide insights into the opportunities for future\nresearch in agent development and data generation using Windows Agent Arena.\n  Webpage: https://microsoft.github.io/WindowsAgentArena\n  Code: https://github.com/microsoft/WindowsAgentArena",
+      "upvotes": 43
+    },
+    {
+      "title": "IFAdapter: Instance Feature Control for Grounded Text-to-Image Generation",
+      "url": "https://huggingface.co/papers/2409.08240",
+      "authors": [
+        "Bing Ma",
+        "Kai Ma"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.08240.pdf",
+      "abstract": "While Text-to-Image (T2I) diffusion models excel at generating visually\nappealing images of individual instances, they struggle to accurately position\nand control the features generation of multiple instances. The Layout-to-Image\n(L2I) task was introduced to address the positioning challenges by\nincorporating bounding boxes as spatial control signals, but it still falls\nshort in generating precise instance features. In response, we propose the\nInstance Feature Generation (IFG) task, which aims to ensure both positional\naccuracy and feature fidelity in generated instances. To address the IFG task,\nwe introduce the Instance Feature Adapter (IFAdapter). The IFAdapter enhances\nfeature depiction by incorporating additional appearance tokens and utilizing\nan Instance Semantic Map to align instance-level features with spatial\nlocations. The IFAdapter guides the diffusion process as a plug-and-play\nmodule, making it adaptable to various community models. For evaluation, we\ncontribute an IFG benchmark and develop a verification pipeline to objectively\ncompare models' abilities to generate instances with accurate positioning and\nfeatures. Experimental results demonstrate that IFAdapter outperforms other\nmodels in both quantitative and qualitative evaluations.",
+      "upvotes": 17
+    },
+    {
+      "title": "Source2Synth: Synthetic Data Generation and Curation Grounded in Real Data Sources",
+      "url": "https://huggingface.co/papers/2409.08239",
+      "authors": [
+        "Alisia Lupidi",
+        "Jane Dwivedi-Yu",
+        "Jakob Foerster"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.08239.pdf",
+      "abstract": "Large Language Models still struggle in challenging scenarios that leverage\nstructured data, complex reasoning, or tool usage. In this paper, we propose\nSource2Synth: a new method that can be used for teaching LLMs new skills\nwithout relying on costly human annotations. Source2Synth takes as input a\ncustom data source and produces synthetic data points with intermediate\nreasoning steps grounded in real-world sources. Source2Synth improves the\ndataset quality by discarding low-quality generations based on their\nanswerability. We demonstrate the generality of this approach by applying it to\ntwo challenging domains: we test reasoning abilities in multi-hop question\nanswering (MHQA), and tool usage in tabular question answering (TQA). Our\nmethod improves performance by 25.51% for TQA on WikiSQL and 22.57% for MHQA on\nHotPotQA compared to the fine-tuned baselines.",
+      "upvotes": 16
+    },
+    {
+      "title": "TextBoost: Towards One-Shot Personalization of Text-to-Image Models via Fine-tuning Text Encoder",
+      "url": "https://huggingface.co/papers/2409.08248",
+      "authors": [
+        "Hyunjung Shim"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.08248.pdf",
+      "abstract": "Recent breakthroughs in text-to-image models have opened up promising\nresearch avenues in personalized image generation, enabling users to create\ndiverse images of a specific subject using natural language prompts. However,\nexisting methods often suffer from performance degradation when given only a\nsingle reference image. They tend to overfit the input, producing highly\nsimilar outputs regardless of the text prompt. This paper addresses the\nchallenge of one-shot personalization by mitigating overfitting, enabling the\ncreation of controllable images through text prompts. Specifically, we propose\na selective fine-tuning strategy that focuses on the text encoder. Furthermore,\nwe introduce three key techniques to enhance personalization performance: (1)\naugmentation tokens to encourage feature disentanglement and alleviate\noverfitting, (2) a knowledge-preservation loss to reduce language drift and\npromote generalizability across diverse prompts, and (3) SNR-weighted sampling\nfor efficient training. Extensive experiments demonstrate that our approach\nefficiently generates high-quality, diverse images using only a single\nreference image while significantly reducing memory and storage requirements.",
+      "upvotes": 13
+    },
+    {
+      "title": "PiTe: Pixel-Temporal Alignment for Large Video-Language Model",
+      "url": "https://huggingface.co/papers/2409.07239",
+      "authors": [
+        "Yang Liu",
+        "Pengxiang Ding",
+        "Min Zhang",
+        "Han Zhao",
+        "Donglin Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.07239.pdf",
+      "abstract": "Fueled by the Large Language Models (LLMs) wave, Large Visual-Language Models\n(LVLMs) have emerged as a pivotal advancement, bridging the gap between image\nand text. However, video making it challenging for LVLMs to perform adequately\ndue to the complexity of the relationship between language and spatial-temporal\ndata structure. Recent Large Video-Language Models (LVidLMs) align feature of\nstatic visual data like image into latent space of language feature, by general\nmulti-modal tasks to leverage abilities of LLMs sufficiently. In this paper, we\nexplore fine-grained alignment approach via object trajectory for different\nmodalities across both spatial and temporal dimensions simultaneously. Thus, we\npropose a novel LVidLM by trajectory-guided Pixel-Temporal Alignment, dubbed\nPiTe, that exhibits promising applicable model property. To achieve\nfine-grained video-language alignment, we curate a multi-modal pre-training\ndataset PiTe-143k, the dataset provision of moving trajectories in pixel level\nfor all individual objects, that appear and mention in the video and caption\nboth, by our automatic annotation pipeline. Meanwhile, PiTe demonstrates\nastounding capabilities on myriad video-related multi-modal tasks through beat\nthe state-of-the-art methods by a large margin.",
+      "upvotes": 11
+    },
+    {
+      "title": "DreamHOI: Subject-Driven Generation of 3D Human-Object Interactions with Diffusion Priors",
+      "url": "https://huggingface.co/papers/2409.08278",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2409.08278.pdf",
+      "abstract": "We present DreamHOI, a novel method for zero-shot synthesis of human-object\ninteractions (HOIs), enabling a 3D human model to realistically interact with\nany given object based on a textual description. This task is complicated by\nthe varying categories and geometries of real-world objects and the scarcity of\ndatasets encompassing diverse HOIs. To circumvent the need for extensive data,\nwe leverage text-to-image diffusion models trained on billions of image-caption\npairs. We optimize the articulation of a skinned human mesh using Score\nDistillation Sampling (SDS) gradients obtained from these models, which predict\nimage-space edits. However, directly backpropagating image-space gradients into\ncomplex articulation parameters is ineffective due to the local nature of such\ngradients. To overcome this, we introduce a dual implicit-explicit\nrepresentation of a skinned mesh, combining (implicit) neural radiance fields\n(NeRFs) with (explicit) skeleton-driven mesh articulation. During optimization,\nwe transition between implicit and explicit forms, grounding the NeRF\ngeneration while refining the mesh articulation. We validate our approach\nthrough extensive experiments, demonstrating its effectiveness in generating\nrealistic HOIs.",
+      "upvotes": 10
+    },
+    {
+      "title": "FlashSplat: 2D to 3D Gaussian Splatting Segmentation Solved Optimally",
+      "url": "https://huggingface.co/papers/2409.08270",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2409.08270.pdf",
+      "abstract": "This study addresses the challenge of accurately segmenting 3D Gaussian\nSplatting from 2D masks. Conventional methods often rely on iterative gradient\ndescent to assign each Gaussian a unique label, leading to lengthy optimization\nand sub-optimal solutions. Instead, we propose a straightforward yet globally\noptimal solver for 3D-GS segmentation. The core insight of our method is that,\nwith a reconstructed 3D-GS scene, the rendering of the 2D masks is essentially\na linear function with respect to the labels of each Gaussian. As such, the\noptimal label assignment can be solved via linear programming in closed form.\nThis solution capitalizes on the alpha blending characteristic of the splatting\nprocess for single step optimization. By incorporating the background bias in\nour objective function, our method shows superior robustness in 3D segmentation\nagainst noises. Remarkably, our optimization completes within 30 seconds, about\n50times faster than the best existing methods. Extensive experiments\ndemonstrate the efficiency and robustness of our method in segmenting various\nscenes, and its superior performance in downstream tasks such as object removal\nand inpainting. Demos and code will be available at\nhttps://github.com/florinshen/FlashSplat.",
+      "upvotes": 9
+    },
+    {
+      "title": "Can OOD Object Detectors Learn from Foundation Models?",
+      "url": "https://huggingface.co/papers/2409.05162",
+      "authors": [
+        "Yingxian Chen",
+        "Xiaojuan Qi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.05162.pdf",
+      "abstract": "Out-of-distribution (OOD) object detection is a challenging task due to the\nabsence of open-set OOD data. Inspired by recent advancements in text-to-image\ngenerative models, such as Stable Diffusion, we study the potential of\ngenerative models trained on large-scale open-set data to synthesize OOD\nsamples, thereby enhancing OOD object detection. We introduce SyncOOD, a simple\ndata curation method that capitalizes on the capabilities of large foundation\nmodels to automatically extract meaningful OOD data from text-to-image\ngenerative models. This offers the model access to open-world knowledge\nencapsulated within off-the-shelf foundation models. The synthetic OOD samples\nare then employed to augment the training of a lightweight, plug-and-play OOD\ndetector, thus effectively optimizing the in-distribution (ID)/OOD decision\nboundaries. Extensive experiments across multiple benchmarks demonstrate that\nSyncOOD significantly outperforms existing methods, establishing new\nstate-of-the-art performance with minimal synthetic data usage.",
+      "upvotes": 6
+    }
+  ]
+}

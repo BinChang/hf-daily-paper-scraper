@@ -1,0 +1,109 @@
+{
+  "date": "2024-07-31",
+  "papers": [
+    {
+      "title": "Meltemi: The first open Large Language Model for Greek",
+      "url": "https://huggingface.co/papers/2407.20743",
+      "authors": [
+        "Vassilis Papavasileiou",
+        "Athanasios Katsamanis"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.20743.pdf",
+      "abstract": "We describe the development and capabilities of Meltemi 7B, the first open\nLarge Language Model for the Greek language. Meltemi 7B has 7 billion\nparameters and is trained on a 40 billion token Greek corpus. For the\ndevelopment of Meltemi 7B, we adapt Mistral, by continuous pretraining on the\nGreek Corpus. Meltemi 7B contains up-to-date information up to September 2023.\nFurthermore, we have translated and curated a Greek instruction corpus, which\nhas been used for the instruction-tuning of a chat model, named Meltemi 7B\nInstruct. Special care has been given to the alignment and the removal of toxic\ncontent for the Meltemi 7B Instruct. The developed models are evaluated on a\nbroad set of collected evaluation corpora, and examples of prompts and\nresponses are presented. Both Meltemi 7B and Meltemi 7B Instruct are available\nat https://huggingface.co/ilsp under the Apache 2.0 license.",
+      "upvotes": 67
+    },
+    {
+      "title": "A Large Encoder-Decoder Family of Foundation Models For Chemical Language",
+      "url": "https://huggingface.co/papers/2407.20267",
+      "authors": [
+        "Renato Cerqueira",
+        "Kristin Schmidt"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.20267.pdf",
+      "abstract": "Large-scale pre-training methodologies for chemical language models represent\na breakthrough in cheminformatics. These methods excel in tasks such as\nproperty prediction and molecule generation by learning contextualized\nrepresentations of input tokens through self-supervised learning on large\nunlabeled corpora. Typically, this involves pre-training on unlabeled data\nfollowed by fine-tuning on specific tasks, reducing dependence on annotated\ndatasets and broadening chemical language representation understanding. This\npaper introduces a large encoder-decoder chemical foundation models pre-trained\non a curated dataset of 91 million SMILES samples sourced from PubChem, which\nis equivalent to 4 billion of molecular tokens. The proposed foundation model\nsupports different complex tasks, including quantum property prediction, and\noffer flexibility with two main variants (289M and 8times289M). Our\nexperiments across multiple benchmark datasets validate the capacity of the\nproposed model in providing state-of-the-art results for different tasks. We\nalso provide a preliminary assessment of the compositionality of the embedding\nspace as a prerequisite for the reasoning tasks. We demonstrate that the\nproduced latent space is separable compared to the state-of-the-art with\nfew-shot learning capabilities.",
+      "upvotes": 31
+    },
+    {
+      "title": "ThinK: Thinner Key Cache by Query-Driven Pruning",
+      "url": "https://huggingface.co/papers/2407.21018",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2407.21018.pdf",
+      "abstract": "Large Language Models (LLMs) have revolutionized the field of natural\nlanguage processing, achieving unprecedented performance across a variety of\napplications by leveraging increased model sizes and sequence lengths. However,\nthe associated rise in computational and memory costs poses significant\nchallenges, particularly in managing long sequences due to the quadratic\ncomplexity of the transformer attention mechanism. This paper focuses on the\nlong-context scenario, addressing the inefficiencies in KV cache memory\nconsumption during inference. Unlike existing approaches that optimize the\nmemory based on the sequence lengths, we uncover that the channel dimension of\nthe KV cache exhibits significant redundancy, characterized by unbalanced\nmagnitude distribution and low-rank structure in attention weights. Based on\nthese observations, we propose ThinK, a novel query-dependent KV cache pruning\nmethod designed to minimize attention weight loss while selectively pruning the\nleast significant channels. Our approach not only maintains or enhances model\naccuracy but also achieves a reduction in memory costs by over 20% compared\nwith vanilla KV cache eviction methods. Extensive evaluations on the LLaMA3 and\nMistral models across various long-sequence datasets confirm the efficacy of\nThinK, setting a new precedent for efficient LLM deployment without\ncompromising performance. We also outline the potential of extending our method\nto value cache pruning, demonstrating ThinK's versatility and broad\napplicability in reducing both memory and computational overheads.",
+      "upvotes": 30
+    },
+    {
+      "title": "Adapting Safe-for-Work Classifier for Malaysian Language Text: Enhancing Alignment in LLM-Ops Framework",
+      "url": "https://huggingface.co/papers/2407.20729",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2407.20729.pdf",
+      "abstract": "As large language models (LLMs) become increasingly integrated into\noperational workflows (LLM-Ops), there is a pressing need for effective\nguardrails to ensure safe and aligned interactions, including the ability to\ndetect potentially unsafe or inappropriate content across languages. However,\nexisting safe-for-work classifiers are primarily focused on English text. To\naddress this gap for the Malaysian language, we present a novel safe-for-work\ntext classifier tailored specifically for Malaysian language content. By\ncurating and annotating a first-of-its-kind dataset of Malaysian text spanning\nmultiple content categories, we trained a classification model capable of\nidentifying potentially unsafe material using state-of-the-art natural language\nprocessing techniques. This work represents an important step in enabling safer\ninteractions and content filtering to mitigate potential risks and ensure\nresponsible deployment of LLMs. To maximize accessibility and promote further\nresearch towards enhancing alignment in LLM-Ops for the Malaysian context, the\nmodel is publicly released at\nhttps://huggingface.co/malaysia-ai/malaysian-sfw-classifier.",
+      "upvotes": 25
+    },
+    {
+      "title": "Knesset-DictaBERT: A Hebrew Language Model for Parliamentary Proceedings",
+      "url": "https://huggingface.co/papers/2407.20581",
+      "authors": [
+        "Shuly Wintner"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.20581.pdf",
+      "abstract": "We present Knesset-DictaBERT, a large Hebrew language model fine-tuned on the\nKnesset Corpus, which comprises Israeli parliamentary proceedings. The model is\nbased on the DictaBERT architecture and demonstrates significant improvements\nin understanding parliamentary language according to the MLM task. We provide a\ndetailed evaluation of the model's performance, showing improvements in\nperplexity and accuracy over the baseline DictaBERT model.",
+      "upvotes": 23
+    },
+    {
+      "title": "Diffusion Augmented Agents: A Framework for Efficient Exploration and Transfer Learning",
+      "url": "https://huggingface.co/papers/2407.20798",
+      "authors": [
+        "Leonard Hasenclever",
+        "Jan Humplik",
+        "Arunkumar Byravan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.20798.pdf",
+      "abstract": "We introduce Diffusion Augmented Agents (DAAG), a novel framework that\nleverages large language models, vision language models, and diffusion models\nto improve sample efficiency and transfer learning in reinforcement learning\nfor embodied agents. DAAG hindsight relabels the agent's past experience by\nusing diffusion models to transform videos in a temporally and geometrically\nconsistent way to align with target instructions with a technique we call\nHindsight Experience Augmentation. A large language model orchestrates this\nautonomous process without requiring human supervision, making it well-suited\nfor lifelong learning scenarios. The framework reduces the amount of\nreward-labeled data needed to 1) finetune a vision language model that acts as\na reward detector, and 2) train RL agents on new tasks. We demonstrate the\nsample efficiency gains of DAAG in simulated robotics environments involving\nmanipulation and navigation. Our results show that DAAG improves learning of\nreward detectors, transferring past experience, and acquiring new tasks - key\nabilities for developing efficient lifelong learning agents. Supplementary\nmaterial and visualizations are available on our website\nhttps://sites.google.com/view/diffusion-augmented-agents/",
+      "upvotes": 23
+    },
+    {
+      "title": "Matting by Generation",
+      "url": "https://huggingface.co/papers/2407.21017",
+      "authors": [
+        "Zhixiang Wang",
+        "Baiang Li",
+        "Yung-Yu Chuang",
+        "Shin'ichi Satoh"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.21017.pdf",
+      "abstract": "This paper introduces an innovative approach for image matting that redefines\nthe traditional regression-based task as a generative modeling challenge. Our\nmethod harnesses the capabilities of latent diffusion models, enriched with\nextensive pre-trained knowledge, to regularize the matting process. We present\nnovel architectural innovations that empower our model to produce mattes with\nsuperior resolution and detail. The proposed method is versatile and can\nperform both guidance-free and guidance-based image matting, accommodating a\nvariety of additional cues. Our comprehensive evaluation across three benchmark\ndatasets demonstrates the superior performance of our approach, both\nquantitatively and qualitatively. The results not only reflect our method's\nrobust effectiveness but also highlight its ability to generate visually\ncompelling mattes that approach photorealistic quality. The project page for\nthis paper is available at\nhttps://lightchaserx.github.io/matting-by-generation/",
+      "upvotes": 22
+    },
+    {
+      "title": "Harvesting Textual and Structured Data from the HAL Publication Repository",
+      "url": "https://huggingface.co/papers/2407.20595",
+      "authors": [
+        "Guillaume Vimont",
+        "Laurent Romary"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.20595.pdf",
+      "abstract": "HAL (Hyper Articles en Ligne) is the French national publication repository,\nused by most higher education and research organizations for their open science\npolicy. As a digital library, it is a rich repository of scholarly documents,\nbut its potential for advanced research has been underutilized. We present\nHALvest, a unique dataset that bridges the gap between citation networks and\nthe full text of papers submitted on HAL. We craft our dataset by filtering HAL\nfor scholarly publications, resulting in approximately 700,000 documents,\nspanning 34 languages across 13 identified domains, suitable for language model\ntraining, and yielding approximately 16.5 billion tokens (with 8 billion in\nFrench and 7 billion in English, the most represented languages). We transform\nthe metadata of each paper into a citation network, producing a directed\nheterogeneous graph. This graph includes uniquely identified authors on HAL, as\nwell as all open submitted papers, and their citations. We provide a baseline\nfor authorship attribution using the dataset, implement a range of\nstate-of-the-art models in graph representation learning for link prediction,\nand discuss the usefulness of our generated knowledge graph structure.",
+      "upvotes": 21
+    },
+    {
+      "title": "JaColBERTv2.5: Optimising Multi-Vector Retrievers to Create State-of-the-Art Japanese Retrievers with Constrained Resources",
+      "url": "https://huggingface.co/papers/2407.20750",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2407.20750.pdf",
+      "abstract": "Neural Information Retrieval has advanced rapidly in high-resource languages,\nbut progress in lower-resource ones such as Japanese has been hindered by data\nscarcity, among other challenges. Consequently, multilingual models have\ndominated Japanese retrieval, despite their computational inefficiencies and\ninability to capture linguistic nuances. While recent multi-vector monolingual\nmodels like JaColBERT have narrowed this gap, they still lag behind\nmultilingual methods in large-scale evaluations. This work addresses the\nsuboptimal training methods of multi-vector retrievers in lower-resource\nsettings, focusing on Japanese. We systematically evaluate and improve key\naspects of the inference and training settings of JaColBERT, and more broadly,\nmulti-vector models. We further enhance performance through a novel checkpoint\nmerging step, showcasing it to be an effective way of combining the benefits of\nfine-tuning with the generalization capabilities of the original checkpoint.\nBuilding on our analysis, we introduce a novel training recipe, resulting in\nthe JaColBERTv2.5 model. JaColBERTv2.5, with only 110 million parameters and\ntrained in under 15 hours on 4 A100 GPUs, significantly outperforms all\nexisting methods across all common benchmarks, reaching an average score of\n0.754, significantly above the previous best of 0.720. To support future\nresearch, we make our final models, intermediate checkpoints and all data used\npublicly available.",
+      "upvotes": 21
+    },
+    {
+      "title": "Futga: Towards Fine-grained Music Understanding through Temporally-enhanced Generative Augmentation",
+      "url": "https://huggingface.co/papers/2407.20445",
+      "authors": [
+        "Jiaheng Dai",
+        "Carol Chen",
+        "Julian McAuley"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.20445.pdf",
+      "abstract": "Existing music captioning methods are limited to generating concise global\ndescriptions of short music clips, which fail to capture fine-grained musical\ncharacteristics and time-aware musical changes. To address these limitations,\nwe propose FUTGA, a model equipped with fined-grained music understanding\ncapabilities through learning from generative augmentation with temporal\ncompositions. We leverage existing music caption datasets and large language\nmodels (LLMs) to synthesize fine-grained music captions with structural\ndescriptions and time boundaries for full-length songs. Augmented by the\nproposed synthetic dataset, FUTGA is enabled to identify the music's temporal\nchanges at key transition points and their musical functions, as well as\ngenerate detailed descriptions for each music segment. We further introduce a\nfull-length music caption dataset generated by FUTGA, as the augmentation of\nthe MusicCaps and the Song Describer datasets. We evaluate the automatically\ngenerated captions on several downstream tasks, including music generation and\nretrieval. The experiments demonstrate the quality of the generated captions\nand the better performance in various downstream tasks achieved by the proposed\nmusic captioning approach. Our code and datasets can be found in\nhttps://huggingface.co/JoshuaW1997/FUTGA{blue{https://huggingface.co/JoshuaW1997/FUTGA}}.",
+      "upvotes": 20
+    }
+  ]
+}

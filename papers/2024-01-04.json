@@ -1,0 +1,171 @@
+{
+  "date": "2024-01-04",
+  "papers": [
+    {
+      "title": "aMUSEd: An Open MUSE Reproduction",
+      "url": "https://huggingface.co/papers/2401.01808",
+      "authors": [
+        "William Berman",
+        "Robin Rombach"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.01808.pdf",
+      "abstract": "We present aMUSEd, an open-source, lightweight masked image model (MIM) for\ntext-to-image generation based on MUSE. With 10 percent of MUSE's parameters,\naMUSEd is focused on fast image generation. We believe MIM is under-explored\ncompared to latent diffusion, the prevailing approach for text-to-image\ngeneration. Compared to latent diffusion, MIM requires fewer inference steps\nand is more interpretable. Additionally, MIM can be fine-tuned to learn\nadditional styles with only a single image. We hope to encourage further\nexploration of MIM by demonstrating its effectiveness on large-scale\ntext-to-image generation and releasing reproducible training code. We also\nrelease checkpoints for two models which directly produce images at 256x256 and\n512x512 resolutions.",
+      "upvotes": 28
+    },
+    {
+      "title": "From Audio to Photoreal Embodiment: Synthesizing Humans in Conversations",
+      "url": "https://huggingface.co/papers/2401.01885",
+      "authors": [
+        "Evonne Ng",
+        "Javier Romero",
+        "Timur Bagautdinov",
+        "Shaojie Bai",
+        "Trevor Darrell",
+        "Angjoo Kanazawa",
+        "Alexander Richard"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.01885.pdf",
+      "abstract": "We present a framework for generating full-bodied photorealistic avatars that\ngesture according to the conversational dynamics of a dyadic interaction. Given\nspeech audio, we output multiple possibilities of gestural motion for an\nindividual, including face, body, and hands. The key behind our method is in\ncombining the benefits of sample diversity from vector quantization with the\nhigh-frequency details obtained through diffusion to generate more dynamic,\nexpressive motion. We visualize the generated motion using highly\nphotorealistic avatars that can express crucial nuances in gestures (e.g.\nsneers and smirks). To facilitate this line of research, we introduce a\nfirst-of-its-kind multi-view conversational dataset that allows for\nphotorealistic reconstruction. Experiments show our model generates appropriate\nand diverse gestures, outperforming both diffusion- and VQ-only methods.\nFurthermore, our perceptual evaluation highlights the importance of\nphotorealism (vs. meshes) in accurately assessing subtle motion details in\nconversational gestures. Code and dataset available online.",
+      "upvotes": 27
+    },
+    {
+      "title": "GPT-4V(ision) is a Generalist Web Agent, if Grounded",
+      "url": "https://huggingface.co/papers/2401.01614",
+      "authors": [
+        "Jihyung Kil",
+        "Huan Sun"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.01614.pdf",
+      "abstract": "The recent development on large multimodal models (LMMs), especially\nGPT-4V(ision) and Gemini, has been quickly expanding the capability boundaries\nof multimodal models beyond traditional tasks like image captioning and visual\nquestion answering. In this work, we explore the potential of LMMs like GPT-4V\nas a generalist web agent that can follow natural language instructions to\ncomplete tasks on any given website. We propose SEEACT, a generalist web agent\nthat harnesses the power of LMMs for integrated visual understanding and acting\non the web. We evaluate on the recent MIND2WEB benchmark. In addition to\nstandard offline evaluation on cached websites, we enable a new online\nevaluation setting by developing a tool that allows running web agents on live\nwebsites. We show that GPT-4V presents a great potential for web agents - it\ncan successfully complete 50% of the tasks on live websites if we manually\nground its textual plans into actions on the websites. This substantially\noutperforms text-only LLMs like GPT-4 or smaller models (FLAN-T5 and BLIP-2)\nspecifically fine-tuned for web agents. However, grounding still remains a\nmajor challenge. Existing LMM grounding strategies like set-of-mark prompting\nturns out not effective for web agents, and the best grounding strategy we\ndevelop in this paper leverages both the HTML text and visuals. Yet, there is\nstill a substantial gap with oracle grounding, leaving ample room for further\nimprovement.",
+      "upvotes": 21
+    },
+    {
+      "title": "Image Sculpting: Precise Object Editing with 3D Geometry Control",
+      "url": "https://huggingface.co/papers/2401.01702",
+      "authors": [
+        "Sainan Liu",
+        "Daniele Panozzo",
+        "Saining Xie"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.01702.pdf",
+      "abstract": "We present Image Sculpting, a new framework for editing 2D images by\nincorporating tools from 3D geometry and graphics. This approach differs\nmarkedly from existing methods, which are confined to 2D spaces and typically\nrely on textual instructions, leading to ambiguity and limited control. Image\nSculpting converts 2D objects into 3D, enabling direct interaction with their\n3D geometry. Post-editing, these objects are re-rendered into 2D, merging into\nthe original image to produce high-fidelity results through a coarse-to-fine\nenhancement process. The framework supports precise, quantifiable, and\nphysically-plausible editing options such as pose editing, rotation,\ntranslation, 3D composition, carving, and serial addition. It marks an initial\nstep towards combining the creative freedom of generative models with the\nprecision of graphics pipelines.",
+      "upvotes": 18
+    },
+    {
+      "title": "Moonshot: Towards Controllable Video Generation and Editing with Multimodal Conditions",
+      "url": "https://huggingface.co/papers/2401.01827",
+      "authors": [
+        "David Junhao Zhang",
+        "Hung Le",
+        "Mike Zheng Shou",
+        "Caiming Xiong",
+        "Doyen Sahoo"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.01827.pdf",
+      "abstract": "Most existing video diffusion models (VDMs) are limited to mere text\nconditions. Thereby, they are usually lacking in control over visual appearance\nand geometry structure of the generated videos. This work presents Moonshot, a\nnew video generation model that conditions simultaneously on multimodal inputs\nof image and text. The model builts upon a core module, called multimodal video\nblock (MVB), which consists of conventional spatialtemporal layers for\nrepresenting video features, and a decoupled cross-attention layer to address\nimage and text inputs for appearance conditioning. In addition, we carefully\ndesign the model architecture such that it can optionally integrate with\npre-trained image ControlNet modules for geometry visual conditions, without\nneeding of extra training overhead as opposed to prior methods. Experiments\nshow that with versatile multimodal conditioning mechanisms, Moonshot\ndemonstrates significant improvement on visual quality and temporal consistency\ncompared to existing models. In addition, the model can be easily repurposed\nfor a variety of generative applications, such as personalized video\ngeneration, image animation and video editing, unveiling its potential to serve\nas a fundamental architecture for controllable video generation. Models will be\nmade public on https://github.com/salesforce/LAVIS.",
+      "upvotes": 15
+    },
+    {
+      "title": "SIGNeRF: Scene Integrated Generation for Neural Radiance Fields",
+      "url": "https://huggingface.co/papers/2401.01647",
+      "authors": [
+        "Andreas Engelhardt",
+        "Hendrik Lensch"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.01647.pdf",
+      "abstract": "Advances in image diffusion models have recently led to notable improvements\nin the generation of high-quality images. In combination with Neural Radiance\nFields (NeRFs), they enabled new opportunities in 3D generation. However, most\ngenerative 3D approaches are object-centric and applying them to editing\nexisting photorealistic scenes is not trivial. We propose SIGNeRF, a novel\napproach for fast and controllable NeRF scene editing and scene-integrated\nobject generation. A new generative update strategy ensures 3D consistency\nacross the edited images, without requiring iterative optimization. We find\nthat depth-conditioned diffusion models inherently possess the capability to\ngenerate 3D consistent views by requesting a grid of images instead of single\nviews. Based on these insights, we introduce a multi-view reference sheet of\nmodified images. Our method updates an image collection consistently based on\nthe reference sheet and refines the original NeRF with the newly generated\nimage set in one go. By exploiting the depth conditioning mechanism of the\nimage diffusion model, we gain fine control over the spatial location of the\nedit and enforce shape guidance by a selected region or an external mesh.",
+      "upvotes": 12
+    },
+    {
+      "title": "Multilingual Instruction Tuning With Just a Pinch of Multilinguality",
+      "url": "https://huggingface.co/papers/2401.01854",
+      "authors": [
+        "Jonathan Herzig",
+        "Roee Aharoni",
+        "Idan Szpektor",
+        "Reut Tsarfaty",
+        "Matan Eyal"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.01854.pdf",
+      "abstract": "As instruction-tuned large language models (LLMs) gain global adoption, their\nability to follow instructions in multiple languages becomes increasingly\ncrucial. One promising approach is cross-lingual transfer, where a model\nacquires specific functionality on some language by finetuning on another\nlanguage. In this work, we investigate how multilinguality during instruction\ntuning of a multilingual LLM affects instruction-following across languages. We\nfirst show that many languages transfer some instruction-following capabilities\nto other languages from even monolingual tuning. Furthermore, we find that only\n40 multilingual examples in an English tuning set substantially improve\nmultilingual instruction-following, both in seen and unseen languages during\ntuning. In general, we observe that models tuned on multilingual mixtures\nexhibit comparable or superior performance in several languages compared to\nmonolingually tuned models, despite training on 10x fewer examples in those\nlanguages. Finally, we find that increasing the number of languages in the\ninstruction tuning set from 1 to only 2, 3, or 4 increases cross-lingual\ngeneralization. Our results suggest that building massively multilingual\ninstruction-tuned models can be done with only a very small set of multilingual\ninstruction-responses.",
+      "upvotes": 10
+    },
+    {
+      "title": "A Vision Check-up for Language Models",
+      "url": "https://huggingface.co/papers/2401.01862",
+      "authors": [
+        "Tamar Rott Shaham",
+        "Stephanie Fu",
+        "Adrian Rodriguez-Munoz",
+        "Shivam Duggal",
+        "Phillip Isola",
+        "Antonio Torralba"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.01862.pdf",
+      "abstract": "What does learning to model relationships between strings teach large\nlanguage models (LLMs) about the visual world? We systematically evaluate LLMs'\nabilities to generate and recognize an assortment of visual concepts of\nincreasing complexity and then demonstrate how a preliminary visual\nrepresentation learning system can be trained using models of text. As language\nmodels lack the ability to consume or output visual information as pixels, we\nuse code to represent images in our study. Although LLM-generated images do not\nlook like natural images, results on image generation and the ability of models\nto correct these generated images indicate that precise modeling of strings can\nteach language models about numerous aspects of the visual world. Furthermore,\nexperiments on self-supervised visual representation learning, utilizing images\ngenerated with text models, highlight the potential to train vision models\ncapable of making semantic assessments of natural images using just LLMs.",
+      "upvotes": 9
+    },
+    {
+      "title": "Incremental FastPitch: Chunk-based High Quality Text to Speech",
+      "url": "https://huggingface.co/papers/2401.01755",
+      "authors": [
+        "Muyang Du",
+        "Chuan Liu",
+        "Junjie Lai"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.01755.pdf",
+      "abstract": "Parallel text-to-speech models have been widely applied for real-time speech\nsynthesis, and they offer more controllability and a much faster synthesis\nprocess compared with conventional auto-regressive models. Although parallel\nmodels have benefits in many aspects, they become naturally unfit for\nincremental synthesis due to their fully parallel architecture such as\ntransformer. In this work, we propose Incremental FastPitch, a novel FastPitch\nvariant capable of incrementally producing high-quality Mel chunks by improving\nthe architecture with chunk-based FFT blocks, training with receptive-field\nconstrained chunk attention masks, and inference with fixed size past model\nstates. Experimental results show that our proposal can produce speech quality\ncomparable to the parallel FastPitch, with a significant lower latency that\nallows even lower response time for real-time speech applications.",
+      "upvotes": 8
+    },
+    {
+      "title": "CoMoSVC: Consistency Model-based Singing Voice Conversion",
+      "url": "https://huggingface.co/papers/2401.01792",
+      "authors": [
+        "Yiwen Lu",
+        "Zhen Ye",
+        "Qifeng Liu",
+        "Yike Guo"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.01792.pdf",
+      "abstract": "The diffusion-based Singing Voice Conversion (SVC) methods have achieved\nremarkable performances, producing natural audios with high similarity to the\ntarget timbre. However, the iterative sampling process results in slow\ninference speed, and acceleration thus becomes crucial. In this paper, we\npropose CoMoSVC, a consistency model-based SVC method, which aims to achieve\nboth high-quality generation and high-speed sampling. A diffusion-based teacher\nmodel is first specially designed for SVC, and a student model is further\ndistilled under self-consistency properties to achieve one-step sampling.\nExperiments on a single NVIDIA GTX4090 GPU reveal that although CoMoSVC has a\nsignificantly faster inference speed than the state-of-the-art (SOTA)\ndiffusion-based SVC system, it still achieves comparable or superior conversion\nperformance based on both subjective and objective metrics. Audio samples and\ncodes are available at https://comosvc.github.io/.",
+      "upvotes": 8
+    },
+    {
+      "title": "Efficient Hybrid Zoom using Camera Fusion on Mobile Phones",
+      "url": "https://huggingface.co/papers/2401.01461",
+      "authors": [
+        "Xiaotong Wu",
+        "Wei-Sheng Lai",
+        "YiChang Shih",
+        "Charles Herrmann",
+        "Michael Krainin",
+        "Deqing Sun",
+        "Chia-Kai Liang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.01461.pdf",
+      "abstract": "DSLR cameras can achieve multiple zoom levels via shifting lens distances or\nswapping lens types. However, these techniques are not possible on smartphone\ndevices due to space constraints. Most smartphone manufacturers adopt a hybrid\nzoom system: commonly a Wide (W) camera at a low zoom level and a Telephoto (T)\ncamera at a high zoom level. To simulate zoom levels between W and T, these\nsystems crop and digitally upsample images from W, leading to significant\ndetail loss. In this paper, we propose an efficient system for hybrid zoom\nsuper-resolution on mobile devices, which captures a synchronous pair of W and\nT shots and leverages machine learning models to align and transfer details\nfrom T to W. We further develop an adaptive blending method that accounts for\ndepth-of-field mismatches, scene occlusion, flow uncertainty, and alignment\nerrors. To minimize the domain gap, we design a dual-phone camera rig to\ncapture real-world inputs and ground-truths for supervised training. Our method\ngenerates a 12-megapixel image in 500ms on a mobile platform and compares\nfavorably against state-of-the-art methods under extensive evaluation on\nreal-world scenarios.",
+      "upvotes": 7
+    },
+    {
+      "title": "WordArt Designer API: User-Driven Artistic Typography Synthesis with Large Language Models on ModelScope",
+      "url": "https://huggingface.co/papers/2401.01699",
+      "authors": [
+        "Jun-Yan He",
+        "Zhi-Qi Cheng",
+        "Chenyang Li",
+        "Jingdong Sun",
+        "Wangmeng Xiang",
+        "Yusen Hu",
+        "Xianhui Lin",
+        "Zengke Jin",
+        "Bin Luo",
+        "Yifeng Geng",
+        "Xuansong Xie",
+        "Jingren Zhou"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.01699.pdf",
+      "abstract": "This paper introduces the WordArt Designer API, a novel framework for\nuser-driven artistic typography synthesis utilizing Large Language Models\n(LLMs) on ModelScope. We address the challenge of simplifying artistic\ntypography for non-professionals by offering a dynamic, adaptive, and\ncomputationally efficient alternative to traditional rigid templates. Our\napproach leverages the power of LLMs to understand and interpret user input,\nfacilitating a more intuitive design process. We demonstrate through various\ncase studies how users can articulate their aesthetic preferences and\nfunctional requirements, which the system then translates into unique and\ncreative typographic designs. Our evaluations indicate significant improvements\nin user satisfaction, design flexibility, and creative expression over existing\nsystems. The WordArt Designer API not only democratizes the art of typography\nbut also opens up new possibilities for personalized digital communication and\ndesign.",
+      "upvotes": 6
+    }
+  ]
+}

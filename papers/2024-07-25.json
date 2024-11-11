@@ -1,0 +1,163 @@
+{
+  "date": "2024-07-25",
+  "papers": [
+    {
+      "title": "OpenDevin: An Open Platform for AI Software Developers as Generalist Agents",
+      "url": "https://huggingface.co/papers/2407.16741",
+      "authors": [
+        "Fuqiang Li",
+        "Ren Ma",
+        "Mingzhang Zheng",
+        "Yizhe Zhang",
+        "Robert Brennan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.16741.pdf",
+      "abstract": "Software is one of the most powerful tools that we humans have at our\ndisposal; it allows a skilled programmer to interact with the world in complex\nand profound ways. At the same time, thanks to improvements in large language\nmodels (LLMs), there has also been a rapid development in AI agents that\ninteract with and affect change in their surrounding environments. In this\npaper, we introduce OpenDevin, a platform for the development of powerful and\nflexible AI agents that interact with the world in similar ways to those of a\nhuman developer: by writing code, interacting with a command line, and browsing\nthe web. We describe how the platform allows for the implementation of new\nagents, safe interaction with sandboxed environments for code execution,\ncoordination between multiple agents, and incorporation of evaluation\nbenchmarks. Based on our currently incorporated benchmarks, we perform an\nevaluation of agents over 15 challenging tasks, including software engineering\n(e.g., SWE-Bench) and web browsing (e.g., WebArena), among others. Released\nunder the permissive MIT license, OpenDevin is a community project spanning\nacademia and industry with more than 1.3K contributions from over 160\ncontributors and will improve going forward.",
+      "upvotes": 68
+    },
+    {
+      "title": "$VILA^2$: VILA Augmented VILA",
+      "url": "https://huggingface.co/papers/2407.17453",
+      "authors": [
+        "Marco Pavone"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.17453.pdf",
+      "abstract": "Visual language models (VLMs) have rapidly progressed, driven by the success\nof large language models (LLMs). While model architectures and training\ninfrastructures advance rapidly, data curation remains under-explored. When\ndata quantity and quality become a bottleneck, existing work either directly\ncrawls more raw data from the Internet that does not have a guarantee of data\nquality or distills from black-box commercial models (e.g., GPT-4V / Gemini)\ncausing the performance upper bounded by that model. In this work, we introduce\na novel approach that includes a self-augment step and a specialist-augment\nstep to iteratively improve data quality and model performance. In the\nself-augment step, a VLM recaptions its own pretraining data to enhance data\nquality, and then retrains from scratch using this refined dataset to improve\nmodel performance. This process can iterate for several rounds. Once\nself-augmentation saturates, we employ several specialist VLMs finetuned from\nthe self-augmented VLM with domain-specific expertise, to further infuse\nspecialist knowledge into the generalist VLM through task-oriented recaptioning\nand retraining. With the combined self-augmented and specialist-augmented\ntraining, we introduce VILA^2 (VILA-augmented-VILA), a VLM family that\nconsistently improves the accuracy on a wide range of tasks over prior art, and\nachieves new state-of-the-art results on MMMU leaderboard among open-sourced\nmodels.",
+      "upvotes": 38
+    },
+    {
+      "title": "HumanVid: Demystifying Training Data for Camera-controllable Human Image Animation",
+      "url": "https://huggingface.co/papers/2407.17438",
+      "authors": [
+        "Yixuan Li",
+        "Yuwei Guo",
+        "Wenran Liu",
+        "Kai Chen",
+        "Tianfan Xue"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.17438.pdf",
+      "abstract": "Human image animation involves generating videos from a character photo,\nallowing user control and unlocking potential for video and movie production.\nWhile recent approaches yield impressive results using high-quality training\ndata, the inaccessibility of these datasets hampers fair and transparent\nbenchmarking. Moreover, these approaches prioritize 2D human motion and\noverlook the significance of camera motions in videos, leading to limited\ncontrol and unstable video generation.To demystify the training data, we\npresent HumanVid, the first large-scale high-quality dataset tailored for human\nimage animation, which combines crafted real-world and synthetic data. For the\nreal-world data, we compile a vast collection of copyright-free real-world\nvideos from the internet. Through a carefully designed rule-based filtering\nstrategy, we ensure the inclusion of high-quality videos, resulting in a\ncollection of 20K human-centric videos in 1080P resolution. Human and camera\nmotion annotation is accomplished using a 2D pose estimator and a SLAM-based\nmethod. For the synthetic data, we gather 2,300 copyright-free 3D avatar assets\nto augment existing available 3D assets. Notably, we introduce a rule-based\ncamera trajectory generation method, enabling the synthetic pipeline to\nincorporate diverse and precise camera motion annotation, which can rarely be\nfound in real-world data. To verify the effectiveness of HumanVid, we establish\na baseline model named CamAnimate, short for Camera-controllable Human\nAnimation, that considers both human and camera motions as conditions. Through\nextensive experimentation, we demonstrate that such simple baseline training on\nour HumanVid achieves state-of-the-art performance in controlling both human\npose and camera motions, setting a new benchmark. Code and data will be\npublicly available at https://github.com/zhenzhiwang/HumanVid/.",
+      "upvotes": 23
+    },
+    {
+      "title": "DDK: Distilling Domain Knowledge for Efficient Large Language Models",
+      "url": "https://huggingface.co/papers/2407.16154",
+      "authors": [
+        "Chenchen Zhang",
+        "Jinyang Guo",
+        "Yuanxing Zhang",
+        "Haoran Que",
+        "Ken Deng",
+        "Jiakai Wang",
+        "Congnan Liu",
+        "Wenbo Su",
+        "Jiamang Wang",
+        "Lin Qu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.16154.pdf",
+      "abstract": "Despite the advanced intelligence abilities of large language models (LLMs)\nin various applications, they still face significant computational and storage\ndemands. Knowledge Distillation (KD) has emerged as an effective strategy to\nimprove the performance of a smaller LLM (i.e., the student model) by\ntransferring knowledge from a high-performing LLM (i.e., the teacher model).\nPrevailing techniques in LLM distillation typically use a black-box model API\nto generate high-quality pretrained and aligned datasets, or utilize white-box\ndistillation by altering the loss function to better transfer knowledge from\nthe teacher LLM. However, these methods ignore the knowledge differences\nbetween the student and teacher LLMs across domains. This results in excessive\nfocus on domains with minimal performance gaps and insufficient attention to\ndomains with large gaps, reducing overall performance. In this paper, we\nintroduce a new LLM distillation framework called DDK, which dynamically\nadjusts the composition of the distillation dataset in a smooth manner\naccording to the domain performance differences between the teacher and student\nmodels, making the distillation process more stable and effective. Extensive\nevaluations show that DDK significantly improves the performance of student\nmodels, outperforming both continuously pretrained baselines and existing\nknowledge distillation methods by a large margin.",
+      "upvotes": 20
+    },
+    {
+      "title": "PERSONA: A Reproducible Testbed for Pluralistic Alignment",
+      "url": "https://huggingface.co/papers/2407.17387",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2407.17387.pdf",
+      "abstract": "The rapid advancement of language models (LMs) necessitates robust alignment\nwith diverse user values. However, current preference optimization approaches\noften fail to capture the plurality of user opinions, instead reinforcing\nmajority viewpoints and marginalizing minority perspectives. We introduce\nPERSONA, a reproducible test bed designed to evaluate and improve pluralistic\nalignment of LMs. We procedurally generate diverse user profiles from US census\ndata, resulting in 1,586 synthetic personas with varied demographic and\nidiosyncratic attributes. We then generate a large-scale evaluation dataset\ncontaining 3,868 prompts and 317,200 feedback pairs obtained from our synthetic\npersonas. Leveraging this dataset, we systematically evaluate LM capabilities\nin role-playing diverse users, verified through human judges, and the\nestablishment of both a benchmark, PERSONA Bench, for pluralistic alignment\napproaches as well as an extensive dataset to create new and future benchmarks.\nThe full dataset and benchmarks are available here:\nhttps://www.synthlabs.ai/research/persona.",
+      "upvotes": 17
+    },
+    {
+      "title": "Longhorn: State Space Models are Amortized Online Learners",
+      "url": "https://huggingface.co/papers/2407.14207",
+      "authors": [
+        "Rui Wang",
+        "Yihao Feng",
+        "Peter Stone",
+        "Qiang Liu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.14207.pdf",
+      "abstract": "The most fundamental capability of modern AI methods such as Large Language\nModels (LLMs) is the ability to predict the next token in a long sequence of\ntokens, known as ``sequence modeling.\" Although the Transformers model is the\ncurrent dominant approach to sequence modeling, its quadratic computational\ncost with respect to sequence length is a significant drawback. State-space\nmodels (SSMs) offer a promising alternative due to their linear decoding\nefficiency and high parallelizability during training. However, existing SSMs\noften rely on seemingly ad hoc linear recurrence designs. In this work, we\nexplore SSM design through the lens of online learning, conceptualizing SSMs as\nmeta-modules for specific online learning problems. This approach links SSM\ndesign to formulating precise online learning objectives, with state transition\nrules derived from optimizing these objectives. Based on this insight, we\nintroduce a novel deep SSM architecture based on the implicit update for\noptimizing an online regression objective. Our experimental results show that\nour models outperform state-of-the-art SSMs, including the Mamba model, on\nstandard sequence modeling benchmarks and language modeling tasks.",
+      "upvotes": 16
+    },
+    {
+      "title": "SV4D: Dynamic 3D Content Generation with Multi-Frame and Multi-View Consistency",
+      "url": "https://huggingface.co/papers/2407.17470",
+      "authors": [
+        "Huaizu Jiang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.17470.pdf",
+      "abstract": "We present Stable Video 4D (SV4D), a latent video diffusion model for\nmulti-frame and multi-view consistent dynamic 3D content generation. Unlike\nprevious methods that rely on separately trained generative models for video\ngeneration and novel view synthesis, we design a unified diffusion model to\ngenerate novel view videos of dynamic 3D objects. Specifically, given a\nmonocular reference video, SV4D generates novel views for each video frame that\nare temporally consistent. We then use the generated novel view videos to\noptimize an implicit 4D representation (dynamic NeRF) efficiently, without the\nneed for cumbersome SDS-based optimization used in most prior works. To train\nour unified novel view video generation model, we curated a dynamic 3D object\ndataset from the existing Objaverse dataset. Extensive experimental results on\nmultiple datasets and user studies demonstrate SV4D's state-of-the-art\nperformance on novel-view video synthesis as well as 4D generation compared to\nprior works.",
+      "upvotes": 14
+    },
+    {
+      "title": "Learning to Manipulate Anywhere: A Visual Generalizable Framework For Reinforcement Learning",
+      "url": "https://huggingface.co/papers/2407.15815",
+      "authors": [
+        "Tianming Wei"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.15815.pdf",
+      "abstract": "Can we endow visuomotor robots with generalization capabilities to operate in\ndiverse open-world scenarios? In this paper, we propose Maniwhere, a\ngeneralizable framework tailored for visual reinforcement learning, enabling\nthe trained robot policies to generalize across a combination of multiple\nvisual disturbance types. Specifically, we introduce a multi-view\nrepresentation learning approach fused with Spatial Transformer Network (STN)\nmodule to capture shared semantic information and correspondences among\ndifferent viewpoints. In addition, we employ a curriculum-based randomization\nand augmentation approach to stabilize the RL training process and strengthen\nthe visual generalization ability. To exhibit the effectiveness of Maniwhere,\nwe meticulously design 8 tasks encompassing articulate objects, bi-manual, and\ndexterous hand manipulation tasks, demonstrating Maniwhere's strong visual\ngeneralization and sim2real transfer abilities across 3 hardware platforms. Our\nexperiments show that Maniwhere significantly outperforms existing\nstate-of-the-art methods. Videos are provided at\nhttps://gemcollector.github.io/maniwhere/.",
+      "upvotes": 13
+    },
+    {
+      "title": "MOMAland: A Set of Benchmarks for Multi-Objective Multi-Agent Reinforcement Learning",
+      "url": "https://huggingface.co/papers/2407.16312",
+      "authors": [
+        "Gao Peng",
+        "Hendrik Baier",
+        "Diederik M. Roijers",
+        "Jordan K. Terry",
+        "El-Ghazali Talbi",
+        "Grégoire Danoy",
+        "Ann Nowé"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.16312.pdf",
+      "abstract": "Many challenging tasks such as managing traffic systems, electricity grids,\nor supply chains involve complex decision-making processes that must balance\nmultiple conflicting objectives and coordinate the actions of various\nindependent decision-makers (DMs). One perspective for formalising and\naddressing such tasks is multi-objective multi-agent reinforcement learning\n(MOMARL). MOMARL broadens reinforcement learning (RL) to problems with multiple\nagents each needing to consider multiple objectives in their learning process.\nIn reinforcement learning research, benchmarks are crucial in facilitating\nprogress, evaluation, and reproducibility. The significance of benchmarks is\nunderscored by the existence of numerous benchmark frameworks developed for\nvarious RL paradigms, including single-agent RL (e.g., Gymnasium), multi-agent\nRL (e.g., PettingZoo), and single-agent multi-objective RL (e.g.,\nMO-Gymnasium). To support the advancement of the MOMARL field, we introduce\nMOMAland, the first collection of standardised environments for multi-objective\nmulti-agent reinforcement learning. MOMAland addresses the need for\ncomprehensive benchmarking in this emerging field, offering over 10 diverse\nenvironments that vary in the number of agents, state representations, reward\nstructures, and utility considerations. To provide strong baselines for future\nresearch, MOMAland also includes algorithms capable of learning policies in\nsuch settings.",
+      "upvotes": 12
+    },
+    {
+      "title": "ViPer: Visual Personalization of Generative Models via Individual Preference Learning",
+      "url": "https://huggingface.co/papers/2407.17365",
+      "authors": [
+        "Mahdi Shafiei",
+        "Teresa Yeo"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.17365.pdf",
+      "abstract": "Different users find different images generated for the same prompt\ndesirable. This gives rise to personalized image generation which involves\ncreating images aligned with an individual's visual preference. Current\ngenerative models are, however, unpersonalized, as they are tuned to produce\noutputs that appeal to a broad audience. Using them to generate images aligned\nwith individual users relies on iterative manual prompt engineering by the user\nwhich is inefficient and undesirable. We propose to personalize the image\ngeneration process by first capturing the generic preferences of the user in a\none-time process by inviting them to comment on a small selection of images,\nexplaining why they like or dislike each. Based on these comments, we infer a\nuser's structured liked and disliked visual attributes, i.e., their visual\npreference, using a large language model. These attributes are used to guide a\ntext-to-image model toward producing images that are tuned towards the\nindividual user's visual preference. Through a series of user studies and large\nlanguage model guided evaluations, we demonstrate that the proposed method\nresults in generations that are well aligned with individual users' visual\npreferences.",
+      "upvotes": 11
+    },
+    {
+      "title": "Scalify: scale propagation for efficient low-precision LLM training",
+      "url": "https://huggingface.co/papers/2407.17353",
+      "authors": [
+        "Carlo Luschi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.17353.pdf",
+      "abstract": "Low-precision formats such as float8 have been introduced in machine learning\naccelerated hardware to improve computational efficiency for large language\nmodels training and inference. Nevertheless, adoption by the ML community has\nbeen slowed down by the complex, and sometimes brittle, techniques required to\nmatch higher precision training accuracy. In this work, we present Scalify, a\nend-to-end scale propagation paradigm for computational graphs, generalizing\nand formalizing existing tensor scaling methods. Experiment results show that\nScalify supports out-of-the-box float8 matrix multiplication and gradients\nrepresentation, as well as float16 optimizer state storage. Our JAX\nimplementation of Scalify is open-sourced at\nhttps://github.com/graphcore-research/jax-scalify",
+      "upvotes": 11
+    },
+    {
+      "title": "DistilDIRE: A Small, Fast, Cheap and Lightweight Diffusion Synthesized Deepfake Detection",
+      "url": "https://huggingface.co/papers/2406.00856",
+      "authors": [
+        "Changyeon Lee",
+        "Oren Etzioni"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.00856.pdf",
+      "abstract": "A dramatic influx of diffusion-generated images has marked recent years,\nposing unique challenges to current detection technologies. While the task of\nidentifying these images falls under binary classification, a seemingly\nstraightforward category, the computational load is significant when employing\nthe \"reconstruction then compare\" technique. This approach, known as DIRE\n(Diffusion Reconstruction Error), not only identifies diffusion-generated\nimages but also detects those produced by GANs, highlighting the technique's\nbroad applicability. To address the computational challenges and improve\nefficiency, we propose distilling the knowledge embedded in diffusion models to\ndevelop rapid deepfake detection models. Our approach, aimed at creating a\nsmall, fast, cheap, and lightweight diffusion synthesized deepfake detector,\nmaintains robust performance while significantly reducing operational demands.\nMaintaining performance, our experimental results indicate an inference speed\n3.2 times faster than the existing DIRE framework. This advance not only\nenhances the practicality of deploying these systems in real-world settings but\nalso paves the way for future research endeavors that seek to leverage\ndiffusion model knowledge.",
+      "upvotes": 9
+    },
+    {
+      "title": "DreamCar: Leveraging Car-specific Prior for in-the-wild 3D Car Reconstruction",
+      "url": "https://huggingface.co/papers/2407.16988",
+      "authors": [
+        "Ming Lu",
+        "Tianqing Zhu",
+        "Xin Yu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.16988.pdf",
+      "abstract": "Self-driving industries usually employ professional artists to build\nexquisite 3D cars. However, it is expensive to craft large-scale digital\nassets. Since there are already numerous datasets available that contain a vast\nnumber of images of cars, we focus on reconstructing high-quality 3D car models\nfrom these datasets. However, these datasets only contain one side of cars in\nthe forward-moving scene. We try to use the existing generative models to\nprovide more supervision information, but they struggle to generalize well in\ncars since they are trained on synthetic datasets not car-specific. In\naddition, The reconstructed 3D car texture misaligns due to a large error in\ncamera pose estimation when dealing with in-the-wild images. These restrictions\nmake it challenging for previous methods to reconstruct complete 3D cars. To\naddress these problems, we propose a novel method, named DreamCar, which can\nreconstruct high-quality 3D cars given a few images even a single image. To\ngeneralize the generative model, we collect a car dataset, named Car360, with\nover 5,600 vehicles. With this dataset, we make the generative model more\nrobust to cars. We use this generative prior specific to the car to guide its\nreconstruction via Score Distillation Sampling. To further complement the\nsupervision information, we utilize the geometric and appearance symmetry of\ncars. Finally, we propose a pose optimization method that rectifies poses to\ntackle texture misalignment. Extensive experiments demonstrate that our method\nsignificantly outperforms existing methods in reconstructing high-quality 3D\ncars. https://xiaobiaodu.github.io/dreamcar-project/{Our code is\navailable.}",
+      "upvotes": 7
+    }
+  ]
+}

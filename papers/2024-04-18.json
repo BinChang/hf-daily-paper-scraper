@@ -1,0 +1,60 @@
+{
+  "date": "2024-04-18",
+  "papers": [
+    {
+      "title": "Reka Core, Flash, and Edge: A Series of Powerful Multimodal Language Models",
+      "url": "https://huggingface.co/papers/2404.12387",
+      "authors": [
+        "Aitor Ormazabal",
+        "Donovan Ong",
+        "Eric Chen",
+        "Eugenie Lamprecht",
+        "Hai Pham",
+        "Matthew Henderson",
+        "Nishant Relan",
+        "Qi Liu",
+        "Ren Chen",
+        "Samuel Phua",
+        "Yazheng Yang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.12387.pdf",
+      "abstract": "We introduce Reka Core, Flash, and Edge, a series of powerful multimodal\nlanguage models trained from scratch by Reka. Reka models are able to process\nand reason with text, images, video, and audio inputs. This technical report\ndiscusses details of training some of these models and provides comprehensive\nevaluation results. We show that Reka Edge and Reka Flash are not only\nstate-of-the-art but also outperform many much larger models, delivering\noutsized values for their respective compute class. Meanwhile, our most capable\nand largest model, Reka Core, approaches the best frontier models on both\nautomatic evaluations and blind human evaluations. On image question answering\nbenchmarks (e.g. MMMU, VQAv2), Core performs competitively to GPT4-V.\nMeanwhile, on multimodal chat, Core ranks as the second most preferred model\nunder a blind third-party human evaluation setup, outperforming other models\nsuch as Claude 3 Opus. On text benchmarks, Core not only performs competitively\nto other frontier models on a set of well-established benchmarks (e.g. MMLU,\nGSM8K) but also outperforms GPT4-0613 on human evaluation. On video question\nanswering (Perception-Test), Core outperforms Gemini Ultra. Models are shipped\nin production at http://chat.reka.ai . A showcase of non cherry picked\nqualitative examples can also be found at http://showcase.reka.ai .",
+      "upvotes": 38
+    },
+    {
+      "title": "BLINK: Multimodal Large Language Models Can See but Not Perceive",
+      "url": "https://huggingface.co/papers/2404.12390",
+      "authors": [
+        "Bangzheng Li",
+        "Yu Feng",
+        "Haoyu Wang",
+        "Xudong Lin",
+        "Dan Roth",
+        "Noah A. Smith",
+        "Ranjay Krishna"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.12390.pdf",
+      "abstract": "We introduce Blink, a new benchmark for multimodal language models (LLMs)\nthat focuses on core visual perception abilities not found in other\nevaluations. Most of the Blink tasks can be solved by humans \"within a blink\"\n(e.g., relative depth estimation, visual correspondence, forensics detection,\nand multi-view reasoning). However, we find these perception-demanding tasks\ncast significant challenges for current multimodal LLMs because they resist\nmediation through natural language. Blink reformats 14 classic computer vision\ntasks into 3,807 multiple-choice questions, paired with single or multiple\nimages and visual prompting. While humans get 95.70% accuracy on average, Blink\nis surprisingly challenging for existing multimodal LLMs: even the\nbest-performing GPT-4V and Gemini achieve accuracies of 51.26% and 45.72%, only\n13.17% and 7.63% higher than random guessing, indicating that such perception\nabilities have not \"emerged\" yet in recent multimodal LLMs. Our analysis also\nhighlights that specialist CV models could solve these problems much better,\nsuggesting potential pathways for future improvements. We believe Blink will\nstimulate the community to help multimodal LLMs catch up with human-level\nvisual perception.",
+      "upvotes": 24
+    },
+    {
+      "title": "AniClipart: Clipart Animation with Text-to-Video Priors",
+      "url": "https://huggingface.co/papers/2404.12347",
+      "authors": [
+        "Ronghuan Wu",
+        "Kede Ma"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.12347.pdf",
+      "abstract": "Clipart, a pre-made graphic art form, offers a convenient and efficient way\nof illustrating visual content. Traditional workflows to convert static clipart\nimages into motion sequences are laborious and time-consuming, involving\nnumerous intricate steps like rigging, key animation and in-betweening. Recent\nadvancements in text-to-video generation hold great potential in resolving this\nproblem. Nevertheless, direct application of text-to-video generation models\noften struggles to retain the visual identity of clipart images or generate\ncartoon-style motions, resulting in unsatisfactory animation outcomes. In this\npaper, we introduce AniClipart, a system that transforms static clipart images\ninto high-quality motion sequences guided by text-to-video priors. To generate\ncartoon-style and smooth motion, we first define B\\'{e}zier curves over\nkeypoints of the clipart image as a form of motion regularization. We then\nalign the motion trajectories of the keypoints with the provided text prompt by\noptimizing the Video Score Distillation Sampling (VSDS) loss, which encodes\nadequate knowledge of natural motion within a pretrained text-to-video\ndiffusion model. With a differentiable As-Rigid-As-Possible shape deformation\nalgorithm, our method can be end-to-end optimized while maintaining deformation\nrigidity. Experimental results show that the proposed AniClipart consistently\noutperforms existing image-to-video generation models, in terms of text-video\nalignment, visual identity preservation, and motion consistency. Furthermore,\nwe showcase the versatility of AniClipart by adapting it to generate a broader\narray of animation formats, such as layered animation, which allows topological\nchanges.",
+      "upvotes": 12
+    },
+    {
+      "title": "OpenBezoar: Small, Cost-Effective and Open Models Trained on Mixes of Instruction Data",
+      "url": "https://huggingface.co/papers/2404.12195",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2404.12195.pdf",
+      "abstract": "Instruction fine-tuning pretrained LLMs for diverse downstream tasks has\ndemonstrated remarkable success and has captured the interest of both academics\nand practitioners. To ensure such fine-tuned LLMs align with human preferences,\ntechniques such as RLHF and DPO have emerged. At the same time, there is\nincreasing interest in smaller parameter counts for models. In this work, using\nOpenLLaMA 3Bv2 as a base model, we describe the recipe used to fine-tune the\nOpenBezoar family of models. In this recipe: We first generate synthetic\ninstruction fine-tuning data using an open and commercially non-restrictive\ninstruction fine-tuned variant of the Falcon-40B model under three schemes\nbased on: LaMini-LM, WizardLM/Evol-Instruct (with databricks-dolly-15k as a\nseed dataset) and Orca (with the Flan Collection as a seed dataset), then\nfilter these generations using GPT-4 as a human proxy. We then perform\ncost-effective QLoRA-based supervised fine-tuning sequentially with each\nscheme. The resulting checkpoint is further fine-tuned with a subset of the\nHH-RLHF dataset to minimize distribution shift prior to using the DPO loss to\nobtain the final checkpoint. Evaluation is done with the LM Eval Harness\ntasks/metrics as well as on MT-Bench using the \"LLM-as-a-judge\" framework with\nClaude 2.1, with the finding that the final checkpoint,\n\"OpenBezoar-HH-RLHF-DPO\", demonstrates superior performance over many models at\nthe 3B parameter scale, even outperforming the top model in one of the\ncategories on the Huggingface Open LLM Leaderboard. We release\n\"OpenBezoar-SFT\", \"OpenBezoar-HH-RLHF-SFT\", \"OpenBezoar-HH-RLHF-DPO\"\ncheckpoints, alongside our generated datasets on HuggingFace at\nhttps://huggingface.co/collections/SurgeGlobal/open-bezoar-6620a24923e12127e9e2b9cc\nand our codebase at\nhttps://bitbucket.org/paladinanalytics/workspace/projects/OP.",
+      "upvotes": 11
+    }
+  ]
+}

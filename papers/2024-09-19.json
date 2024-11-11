@@ -1,0 +1,233 @@
+{
+  "date": "2024-09-19",
+  "papers": [
+    {
+      "title": "Qwen2.5-Coder Technical Report",
+      "url": "https://huggingface.co/papers/2409.12186",
+      "authors": [
+        "Tianyu Liu",
+        "Bowen Yu",
+        "Kai Dang",
+        "Xuancheng Ren"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.12186.pdf",
+      "abstract": "In this report, we introduce the Qwen2.5-Coder series, a significant upgrade\nfrom its predecessor, CodeQwen1.5. This series includes two models:\nQwen2.5-Coder-1.5B and Qwen2.5-Coder-7B. As a code-specific model,\nQwen2.5-Coder is built upon the Qwen2.5 architecture and continues pretrained\non a vast corpus of over 5.5 trillion tokens. Through meticulous data cleaning,\nscalable synthetic data generation, and balanced data mixing, Qwen2.5-Coder\ndemonstrates impressive code generation capabilities while retaining general\nversatility. The model has been evaluated on a wide range of code-related\ntasks, achieving state-of-the-art (SOTA) performance across more than 10\nbenchmarks, including code generation, completion, reasoning, and repair,\nconsistently outperforming larger models of the same model size. We believe\nthat the release of the Qwen2.5-Coder series will not only push the boundaries\nof research in code intelligence but also, through its permissive licensing,\nencourage broader adoption by developers in real-world applications.",
+      "upvotes": 128
+    },
+    {
+      "title": "Qwen2-VL: Enhancing Vision-Language Model's Perception of the World at Any Resolution",
+      "url": "https://huggingface.co/papers/2409.12191",
+      "authors": [
+        "Peng Wang",
+        "Shijie Wang",
+        "Zhihao Fan",
+        "Xuejing Liu",
+        "Jialin Wang",
+        "Yang Fan",
+        "Kai Dang",
+        "Xuancheng Ren"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.12191.pdf",
+      "abstract": "We present the Qwen2-VL Series, an advanced upgrade of the previous Qwen-VL\nmodels that redefines the conventional predetermined-resolution approach in\nvisual processing. Qwen2-VL introduces the Naive Dynamic Resolution mechanism,\nwhich enables the model to dynamically process images of varying resolutions\ninto different numbers of visual tokens. This approach allows the model to\ngenerate more efficient and accurate visual representations, closely aligning\nwith human perceptual processes. The model also integrates Multimodal Rotary\nPosition Embedding (M-RoPE), facilitating the effective fusion of positional\ninformation across text, images, and videos. We employ a unified paradigm for\nprocessing both images and videos, enhancing the model's visual perception\ncapabilities. To explore the potential of large multimodal models, Qwen2-VL\ninvestigates the scaling laws for large vision-language models (LVLMs). By\nscaling both the model size-with versions at 2B, 8B, and 72B parameters-and the\namount of training data, the Qwen2-VL Series achieves highly competitive\nperformance. Notably, the Qwen2-VL-72B model achieves results comparable to\nleading models such as GPT-4o and Claude3.5-Sonnet across various multimodal\nbenchmarks, outperforming other generalist models. Code is available at\nhttps://github.com/QwenLM/Qwen2-VL.",
+      "upvotes": 73
+    },
+    {
+      "title": "A Controlled Study on Long Context Extension and Generalization in LLMs",
+      "url": "https://huggingface.co/papers/2409.12181",
+      "authors": [
+        "Yi Lu",
+        "Jing Nathan Yan",
+        "Siyu Ren"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.12181.pdf",
+      "abstract": "Broad textual understanding and in-context learning require language models\nthat utilize full document contexts. Due to the implementation challenges\nassociated with directly training long-context models, many methods have been\nproposed for extending models to handle long contexts. However, owing to\ndifferences in data and model classes, it has been challenging to compare these\napproaches, leading to uncertainty as to how to evaluate long-context\nperformance and whether it differs from standard evaluation. We implement a\ncontrolled protocol for extension methods with a standardized evaluation,\nutilizing consistent base models and extension data. Our study yields several\ninsights into long-context behavior. First, we reaffirm the critical role of\nperplexity as a general-purpose performance indicator even in longer-context\ntasks. Second, we find that current approximate attention methods\nsystematically underperform across long-context tasks. Finally, we confirm that\nexact fine-tuning based methods are generally effective within the range of\ntheir extension, whereas extrapolation remains challenging. All codebases,\nmodels, and checkpoints will be made available open-source, promoting\ntransparency and facilitating further research in this critical area of AI\ndevelopment.",
+      "upvotes": 43
+    },
+    {
+      "title": "To CoT or not to CoT? Chain-of-thought helps mainly on math and symbolic reasoning",
+      "url": "https://huggingface.co/papers/2409.12183",
+      "authors": [
+        "Xi Ye"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.12183.pdf",
+      "abstract": "Chain-of-thought (CoT) via prompting is the de facto method for eliciting\nreasoning capabilities from large language models (LLMs). But for what kinds of\ntasks is this extra ``thinking'' really helpful? To analyze this, we conducted\na quantitative meta-analysis covering over 100 papers using CoT and ran our own\nevaluations of 20 datasets across 14 models. Our results show that CoT gives\nstrong performance benefits primarily on tasks involving math or logic, with\nmuch smaller gains on other types of tasks. On MMLU, directly generating the\nanswer without CoT leads to almost identical accuracy as CoT unless the\nquestion or model's response contains an equals sign, indicating symbolic\noperations and reasoning. Following this finding, we analyze the behavior of\nCoT on these problems by separating planning and execution and comparing\nagainst tool-augmented LLMs. Much of CoT's gain comes from improving symbolic\nexecution, but it underperforms relative to using a symbolic solver. Our\nresults indicate that CoT can be applied selectively, maintaining performance\nwhile saving inference costs. Furthermore, they suggest a need to move beyond\nprompt-based CoT to new paradigms that better leverage intermediate computation\nacross the whole range of LLM applications.",
+      "upvotes": 36
+    },
+    {
+      "title": "LLMs + Persona-Plug = Personalized LLMs",
+      "url": "https://huggingface.co/papers/2409.11901",
+      "authors": [
+        "Xiaochi Wei",
+        "Erxue Min",
+        "Yu Lu",
+        "Shuaiqiang Wang",
+        "Dawei Yin"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.11901.pdf",
+      "abstract": "Personalization plays a critical role in numerous language tasks and\napplications, since users with the same requirements may prefer diverse outputs\nbased on their individual interests. This has led to the development of various\npersonalized approaches aimed at adapting large language models (LLMs) to\ngenerate customized outputs aligned with user preferences. Some of them involve\nfine-tuning a unique personalized LLM for each user, which is too expensive for\nwidespread application. Alternative approaches introduce personalization\ninformation in a plug-and-play manner by retrieving the user's relevant\nhistorical texts as demonstrations. However, this retrieval-based strategy may\nbreak the continuity of the user history and fail to capture the user's overall\nstyles and patterns, hence leading to sub-optimal performance. To address these\nchallenges, we propose a novel personalized LLM model, . It constructs a\nuser-specific embedding for each individual by modeling all her historical\ncontexts through a lightweight plug-in user embedder module. By attaching this\nembedding to the task input, LLMs can better understand and capture user habits\nand preferences, thereby producing more personalized outputs without tuning\ntheir own parameters. Extensive experiments on various tasks in the language\nmodel personalization (LaMP) benchmark demonstrate that the proposed model\nsignificantly outperforms existing personalized LLM approaches.",
+      "upvotes": 30
+    },
+    {
+      "title": "Preference Tuning with Human Feedback on Language, Speech, and Vision Tasks: A Survey",
+      "url": "https://huggingface.co/papers/2409.11564",
+      "authors": [
+        "David D. Yao",
+        "Shi-Xiong Zhang",
+        "Sambit Sahu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.11564.pdf",
+      "abstract": "Preference tuning is a crucial process for aligning deep generative models\nwith human preferences. This survey offers a thorough overview of recent\nadvancements in preference tuning and the integration of human feedback. The\npaper is organized into three main sections: 1) introduction and preliminaries:\nan introduction to reinforcement learning frameworks, preference tuning tasks,\nmodels, and datasets across various modalities: language, speech, and vision,\nas well as different policy approaches, 2) in-depth examination of each\npreference tuning approach: a detailed analysis of the methods used in\npreference tuning, and 3) applications, discussion, and future directions: an\nexploration of the applications of preference tuning in downstream tasks,\nincluding evaluation methods for different modalities, and an outlook on future\nresearch directions. Our objective is to present the latest methodologies in\npreference tuning and model alignment, enhancing the understanding of this\nfield for researchers and practitioners. We hope to encourage further\nengagement and innovation in this area.",
+      "upvotes": 19
+    },
+    {
+      "title": "GRIN: GRadient-INformed MoE",
+      "url": "https://huggingface.co/papers/2409.12136",
+      "authors": [
+        "Chenruidong Zhang",
+        "Hany Awadalla"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.12136.pdf",
+      "abstract": "Mixture-of-Experts (MoE) models scale more effectively than dense models due\nto sparse computation through expert routing, selectively activating only a\nsmall subset of expert modules. However, sparse computation challenges\ntraditional training practices, as discrete expert routing hinders standard\nbackpropagation and thus gradient-based optimization, which are the cornerstone\nof deep learning. To better pursue the scaling power of MoE, we introduce GRIN\n(GRadient-INformed MoE training), which incorporates sparse gradient estimation\nfor expert routing and configures model parallelism to avoid token dropping.\nApplying GRIN to autoregressive language modeling, we develop a top-2\n16times3.8B MoE model. Our model, with only 6.6B activated parameters,\noutperforms a 7B dense model and matches the performance of a 14B dense model\ntrained on the same data. Extensive evaluations across diverse tasks\ndemonstrate the potential of GRIN to significantly enhance MoE efficacy,\nachieving 79.4 on MMLU, 83.7 on HellaSwag, 74.4 on HumanEval, and 58.9 on MATH.",
+      "upvotes": 14
+    },
+    {
+      "title": "Takin: A Cohort of Superior Quality Zero-shot Speech Generation Models",
+      "url": "https://huggingface.co/papers/2409.12139",
+      "authors": [
+        "EverestAI",
+        "Yuan Feng",
+        "Laipeng He",
+        "Tianwei He",
+        "Wendi He",
+        "Bin Lin",
+        "Pengfei Tan",
+        "Chengwei Tian",
+        "Chen Wang",
+        "Zhicheng Wang",
+        "Ruoye Xie",
+        "Jingjing Yin",
+        "Jixun Yao",
+        "Quanlei Yan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.12139.pdf",
+      "abstract": "With the advent of the big data and large language model era, zero-shot\npersonalized rapid customization has emerged as a significant trend. In this\nreport, we introduce Takin AudioLLM, a series of techniques and models, mainly\nincluding Takin TTS, Takin VC, and Takin Morphing, specifically designed for\naudiobook production. These models are capable of zero-shot speech production,\ngenerating high-quality speech that is nearly indistinguishable from real human\nspeech and facilitating individuals to customize the speech content according\nto their own needs. Specifically, we first introduce Takin TTS, a neural codec\nlanguage model that builds upon an enhanced neural speech codec and a\nmulti-task training framework, capable of generating high-fidelity natural\nspeech in a zero-shot way. For Takin VC, we advocate an effective content and\ntimbre joint modeling approach to improve the speaker similarity, while\nadvocating for a conditional flow matching based decoder to further enhance its\nnaturalness and expressiveness. Last, we propose the Takin Morphing system with\nhighly decoupled and advanced timbre and prosody modeling approaches, which\nenables individuals to customize speech production with their preferred timbre\nand prosody in a precise and controllable manner. Extensive experiments\nvalidate the effectiveness and robustness of our Takin AudioLLM series models.\nFor detailed demos, please refer to https://takinaudiollm.github.io.",
+      "upvotes": 11
+    },
+    {
+      "title": "SoloAudio: Target Sound Extraction with Language-oriented Audio Diffusion Transformer",
+      "url": "https://huggingface.co/papers/2409.08425",
+      "authors": [
+        "Yen-Ju Lu",
+        "Karan Thakkar",
+        "Mounya Elhilali",
+        "Najim Dehak"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.08425.pdf",
+      "abstract": "In this paper, we introduce SoloAudio, a novel diffusion-based generative\nmodel for target sound extraction (TSE). Our approach trains latent diffusion\nmodels on audio, replacing the previous U-Net backbone with a skip-connected\nTransformer that operates on latent features. SoloAudio supports both\naudio-oriented and language-oriented TSE by utilizing a CLAP model as the\nfeature extractor for target sounds. Furthermore, SoloAudio leverages synthetic\naudio generated by state-of-the-art text-to-audio models for training,\ndemonstrating strong generalization to out-of-domain data and unseen sound\nevents. We evaluate this approach on the FSD Kaggle 2018 mixture dataset and\nreal data from AudioSet, where SoloAudio achieves the state-of-the-art results\non both in-domain and out-of-domain data, and exhibits impressive zero-shot and\nfew-shot capabilities. Source code and demos are released.",
+      "upvotes": 9
+    },
+    {
+      "title": "Vista3D: Unravel the 3D Darkside of a Single Image",
+      "url": "https://huggingface.co/papers/2409.12193",
+      "authors": [
+        "Michael Bi Mi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.12193.pdf",
+      "abstract": "We embark on the age-old quest: unveiling the hidden dimensions of objects\nfrom mere glimpses of their visible parts. To address this, we present Vista3D,\na framework that realizes swift and consistent 3D generation within a mere 5\nminutes. At the heart of Vista3D lies a two-phase approach: the coarse phase\nand the fine phase. In the coarse phase, we rapidly generate initial geometry\nwith Gaussian Splatting from a single image. In the fine phase, we extract a\nSigned Distance Function (SDF) directly from learned Gaussian Splatting,\noptimizing it with a differentiable isosurface representation. Furthermore, it\nelevates the quality of generation by using a disentangled representation with\ntwo independent implicit functions to capture both visible and obscured aspects\nof objects. Additionally, it harmonizes gradients from 2D diffusion prior with\n3D-aware diffusion priors by angular diffusion prior composition. Through\nextensive evaluation, we demonstrate that Vista3D effectively sustains a\nbalance between the consistency and diversity of the generated 3D objects.\nDemos and code will be available at https://github.com/florinshen/Vista3D.",
+      "upvotes": 9
+    },
+    {
+      "title": "Towards Diverse and Efficient Audio Captioning via Diffusion Models",
+      "url": "https://huggingface.co/papers/2409.09401",
+      "authors": [
+        "Manjie Xu",
+        "Xinyi Tu",
+        "Yong Ren",
+        "Ruibo Fu",
+        "Wei Liang",
+        "Dong Yu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.09401.pdf",
+      "abstract": "We introduce Diffusion-based Audio Captioning (DAC), a non-autoregressive\ndiffusion model tailored for diverse and efficient audio captioning. Although\nexisting captioning models relying on language backbones have achieved\nremarkable success in various captioning tasks, their insufficient performance\nin terms of generation speed and diversity impede progress in audio\nunderstanding and multimedia applications. Our diffusion-based framework offers\nunique advantages stemming from its inherent stochasticity and holistic context\nmodeling in captioning. Through rigorous evaluation, we demonstrate that DAC\nnot only achieves SOTA performance levels compared to existing benchmarks in\nthe caption quality, but also significantly outperforms them in terms of\ngeneration speed and diversity. The success of DAC illustrates that text\ngeneration can also be seamlessly integrated with audio and visual generation\ntasks using a diffusion backbone, paving the way for a unified, audio-related\ngenerative model across different modalities.",
+      "upvotes": 6
+    },
+    {
+      "title": "RoMath: A Mathematical Reasoning Benchmark in Romanian",
+      "url": "https://huggingface.co/papers/2409.11074",
+      "authors": [
+        "Adrian Cosma",
+        "Ana-Maria Bucur",
+        "Emilian Radoi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.11074.pdf",
+      "abstract": "Mathematics has long been conveyed through natural language, primarily for\nhuman understanding. With the rise of mechanized mathematics and proof\nassistants, there is a growing need to understand informal mathematical text,\nyet most existing benchmarks focus solely on English, overlooking other\nlanguages. This paper introduces RoMath, a Romanian mathematical reasoning\nbenchmark suite comprising three datasets: RoMath-Baccalaureate,\nRoMath-Competitions and RoMath-Synthetic, which cover a range of mathematical\ndomains and difficulty levels, aiming to improve non-English language models\nand promote multilingual AI development. By focusing on Romanian, a\nlow-resource language with unique linguistic features, RoMath addresses the\nlimitations of Anglo-centric models and emphasizes the need for dedicated\nresources beyond simple automatic translation. We benchmark several open-weight\nlanguage models, highlighting the importance of creating resources for\nunderrepresented languages. We make the code and dataset available.",
+      "upvotes": 3
+    },
+    {
+      "title": "Putting Data at the Centre of Offline Multi-Agent Reinforcement Learning",
+      "url": "https://huggingface.co/papers/2409.12001",
+      "authors": [
+        "Jonathan P. Shock"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.12001.pdf",
+      "abstract": "Offline multi-agent reinforcement learning (MARL) is an exciting direction of\nresearch that uses static datasets to find optimal control policies for\nmulti-agent systems. Though the field is by definition data-driven, efforts\nhave thus far neglected data in their drive to achieve state-of-the-art\nresults. We first substantiate this claim by surveying the literature, showing\nhow the majority of works generate their own datasets without consistent\nmethodology and provide sparse information about the characteristics of these\ndatasets. We then show why neglecting the nature of the data is problematic,\nthrough salient examples of how tightly algorithmic performance is coupled to\nthe dataset used, necessitating a common foundation for experiments in the\nfield. In response, we take a big step towards improving data usage and data\nawareness in offline MARL, with three key contributions: (1) a clear guideline\nfor generating novel datasets; (2) a standardisation of over 80 existing\ndatasets, hosted in a publicly available repository, using a consistent storage\nformat and easy-to-use API; and (3) a suite of analysis tools that allow us to\nunderstand these datasets better, aiding further development.",
+      "upvotes": 3
+    },
+    {
+      "title": "CORE-Bench: Fostering the Credibility of Published Research Through a Computational Reproducibility Agent Benchmark",
+      "url": "https://huggingface.co/papers/2409.11363",
+      "authors": [
+        "Zachary S. Siegel",
+        "Sayash Kapoor",
+        "Nitya Nagdir",
+        "Benedikt Stroebl",
+        "Arvind Narayanan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.11363.pdf",
+      "abstract": "AI agents have the potential to aid users on a variety of consequential\ntasks, including conducting scientific research. To spur the development of\nuseful agents, we need benchmarks that are challenging, but more crucially,\ndirectly correspond to real-world tasks of interest. This paper introduces such\na benchmark, designed to measure the accuracy of AI agents in tackling a\ncrucial yet surprisingly challenging aspect of scientific research:\ncomputational reproducibility. This task, fundamental to the scientific\nprocess, involves reproducing the results of a study using the provided code\nand data. We introduce CORE-Bench (Computational Reproducibility Agent\nBenchmark), a benchmark consisting of 270 tasks based on 90 scientific papers\nacross three disciplines (computer science, social science, and medicine).\nTasks in CORE-Bench consist of three difficulty levels and include both\nlanguage-only and vision-language tasks. We provide an evaluation system to\nmeasure the accuracy of agents in a fast and parallelizable way, saving days of\nevaluation time for each run compared to a sequential implementation. We\nevaluated two baseline agents: the general-purpose AutoGPT and a task-specific\nagent called CORE-Agent. We tested both variants using two underlying language\nmodels: GPT-4o and GPT-4o-mini. The best agent achieved an accuracy of 21% on\nthe hardest task, showing the vast scope for improvement in automating routine\nscientific tasks. Having agents that can reproduce existing work is a necessary\nstep towards building agents that can conduct novel research and could verify\nand improve the performance of other research agents. We hope that CORE-Bench\ncan improve the state of reproducibility and spur the development of future\nresearch agents.",
+      "upvotes": 2
+    },
+    {
+      "title": "fMRI-3D: A Comprehensive Dataset for Enhancing fMRI-based 3D Reconstruction",
+      "url": "https://huggingface.co/papers/2409.11315",
+      "authors": [
+        "Jianxiong Gao",
+        "Yuqian Fu",
+        "Yun Wang",
+        "Xuelin Qian",
+        "Jianfeng Feng",
+        "Yanwei Fu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.11315.pdf",
+      "abstract": "Reconstructing 3D visuals from functional Magnetic Resonance Imaging (fMRI)\ndata, introduced as Recon3DMind in our conference work, is of significant\ninterest to both cognitive neuroscience and computer vision. To advance this\ntask, we present the fMRI-3D dataset, which includes data from 15 participants\nand showcases a total of 4768 3D objects. The dataset comprises two components:\nfMRI-Shape, previously introduced and accessible at\nhttps://huggingface.co/datasets/Fudan-fMRI/fMRI-Shape, and fMRI-Objaverse,\nproposed in this paper and available at\nhttps://huggingface.co/datasets/Fudan-fMRI/fMRI-Objaverse. fMRI-Objaverse\nincludes data from 5 subjects, 4 of whom are also part of the Core set in\nfMRI-Shape, with each subject viewing 3142 3D objects across 117 categories,\nall accompanied by text captions. This significantly enhances the diversity and\npotential applications of the dataset. Additionally, we propose MinD-3D, a\nnovel framework designed to decode 3D visual information from fMRI signals. The\nframework first extracts and aggregates features from fMRI data using a\nneuro-fusion encoder, then employs a feature-bridge diffusion model to generate\nvisual features, and finally reconstructs the 3D object using a generative\ntransformer decoder. We establish new benchmarks by designing metrics at both\nsemantic and structural levels to evaluate model performance. Furthermore, we\nassess our model's effectiveness in an Out-of-Distribution setting and analyze\nthe attribution of the extracted features and the visual ROIs in fMRI signals.\nOur experiments demonstrate that MinD-3D not only reconstructs 3D objects with\nhigh semantic and spatial accuracy but also deepens our understanding of how\nhuman brain processes 3D visual information. Project page at:\nhttps://jianxgao.github.io/MinD-3D.",
+      "upvotes": 2
+    },
+    {
+      "title": "BERT-VBD: Vietnamese Multi-Document Summarization Framework",
+      "url": "https://huggingface.co/papers/2409.12134",
+      "authors": [
+        "Tuan-Cuong Vuong",
+        "Trang Mai Xuan",
+        "Thien Van Luong"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.12134.pdf",
+      "abstract": "In tackling the challenge of Multi-Document Summarization (MDS), numerous\nmethods have been proposed, spanning both extractive and abstractive\nsummarization techniques. However, each approach has its own limitations,\nmaking it less effective to rely solely on either one. An emerging and\npromising strategy involves a synergistic fusion of extractive and abstractive\nsummarization methods. Despite the plethora of studies in this domain, research\non the combined methodology remains scarce, particularly in the context of\nVietnamese language processing. This paper presents a novel Vietnamese MDS\nframework leveraging a two-component pipeline architecture that integrates\nextractive and abstractive techniques. The first component employs an\nextractive approach to identify key sentences within each document. This is\nachieved by a modification of the pre-trained BERT network, which derives\nsemantically meaningful phrase embeddings using siamese and triplet network\nstructures. The second component utilizes the VBD-LLaMA2-7B-50b model for\nabstractive summarization, ultimately generating the final summary document.\nOur proposed framework demonstrates a positive performance, attaining ROUGE-2\nscores of 39.6% on the VN-MDS dataset and outperforming the state-of-the-art\nbaselines.",
+      "upvotes": 1
+    },
+    {
+      "title": "Measuring Human and AI Values based on Generative Psychometrics with Large Language Models",
+      "url": "https://huggingface.co/papers/2409.12106",
+      "authors": [
+        "Haoran Ye",
+        "Yuhang Xie",
+        "Yuanyi Ren",
+        "Hanjun Fang",
+        "Xin Zhang",
+        "Guojie Song"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.12106.pdf",
+      "abstract": "Human values and their measurement are long-standing interdisciplinary\ninquiry. Recent advances in AI have sparked renewed interest in this area, with\nlarge language models (LLMs) emerging as both tools and subjects of value\nmeasurement. This work introduces Generative Psychometrics for Values (GPV), an\nLLM-based, data-driven value measurement paradigm, theoretically grounded in\ntext-revealed selective perceptions. We begin by fine-tuning an LLM for\naccurate perception-level value measurement and verifying the capability of\nLLMs to parse texts into perceptions, forming the core of the GPV pipeline.\nApplying GPV to human-authored blogs, we demonstrate its stability, validity,\nand superiority over prior psychological tools. Then, extending GPV to LLM\nvalue measurement, we advance the current art with 1) a psychometric\nmethodology that measures LLM values based on their scalable and free-form\noutputs, enabling context-specific measurement; 2) a comparative analysis of\nmeasurement paradigms, indicating response biases of prior methods; and 3) an\nattempt to bridge LLM values and their safety, revealing the predictive power\nof different value systems and the impacts of various values on LLM safety.\nThrough interdisciplinary efforts, we aim to leverage AI for next-generation\npsychometrics and psychometrics for value-aligned AI.",
+      "upvotes": 1
+    }
+  ]
+}

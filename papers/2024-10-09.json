@@ -1,0 +1,173 @@
+{
+  "date": "2024-10-09",
+  "papers": [
+    {
+      "title": "LongGenBench: Long-context Generation Benchmark",
+      "url": "https://huggingface.co/papers/2410.04199",
+      "authors": [
+        "Peijie Dong"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.04199.pdf",
+      "abstract": "Current long-context benchmarks primarily focus on retrieval-based tests,\nrequiring Large Language Models (LLMs) to locate specific information within\nextensive input contexts, such as the needle-in-a-haystack (NIAH) benchmark.\nLong-context generation refers to the ability of a language model to generate\ncoherent and contextually accurate text that spans across lengthy passages or\ndocuments. While recent studies show strong performance on NIAH and other\nretrieval-based long-context benchmarks, there is a significant lack of\nbenchmarks for evaluating long-context generation capabilities. To bridge this\ngap and offer a comprehensive assessment, we introduce a synthetic benchmark,\nLongGenBench, which allows for flexible configurations of customized generation\ncontext lengths. LongGenBench advances beyond traditional benchmarks by\nredesigning the format of questions and necessitating that LLMs respond with a\nsingle, cohesive long-context answer. Upon extensive evaluation using\nLongGenBench, we observe that: (1) both API accessed and open source models\nexhibit performance degradation in long-context generation scenarios, ranging\nfrom 1.2% to 47.1%; (2) different series of LLMs exhibit varying trends of\nperformance degradation, with the Gemini-1.5-Flash model showing the least\ndegradation among API accessed models, and the Qwen2 series exhibiting the\nleast degradation in LongGenBench among open source models.",
+      "upvotes": 17
+    },
+    {
+      "title": "$\\textbf{Only-IF}$:Revealing the Decisive Effect of Instruction Diversity on Generalization",
+      "url": "https://huggingface.co/papers/2410.04717",
+      "authors": [
+        "Justin Wang",
+        "Francois Charton"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.04717.pdf",
+      "abstract": "Understanding and accurately following instructions is critical for large\nlanguage models (LLMs) to be effective across diverse tasks. In this work, we\nrigorously examine the key factors that enable models to generalize to unseen\ninstructions, providing insights to guide the collection of data for\ninstruction-tuning. Through controlled experiments, inspired by the\nTuring-complete Markov algorithm, we demonstrate that such generalization\nonly emerges when training data is diversified enough across\nsemantic domains. Our findings also reveal that merely diversifying within\nlimited domains fails to ensure robust generalization. In contrast,\ncross-domain data diversification, even under constrained data budgets,\nsignificantly enhances a model's adaptability. We further extend our analysis\nto real-world scenarios, including fine-tuning of\n$textbf{specialist} and textbf{generalist}$ models.\nIn both cases, we demonstrate that 1) better performance can be achieved by\nincreasing the diversity of an established dataset while keeping the data size\nconstant, and 2) when scaling up the data, diversifying the semantics of\ninstructions is more effective than simply increasing the quantity of similar\ndata. Our research provides important insights for dataset collation,\nparticularly when optimizing model performance by expanding training data for\nboth specialist and generalist scenarios. We show that careful consideration of\ndata diversification is key: training specialist models with data extending\nbeyond their core domain leads to significant performance improvements, while\ngeneralist models benefit from diverse data mixtures that enhance their overall\ninstruction-following capabilities across a wide range of applications. Our\nresults highlight the critical role of strategic diversification and offer\nclear guidelines for improving data quality.",
+      "upvotes": 17
+    },
+    {
+      "title": "A Spark of Vision-Language Intelligence: 2-Dimensional Autoregressive Transformer for Efficient Finegrained Image Generation",
+      "url": "https://huggingface.co/papers/2410.01912",
+      "authors": [
+        "Sinan Tan",
+        "Weichu Xie",
+        "Haozhe Zhao",
+        "Yichi Zhang",
+        "Tianyu Liu",
+        "Baobao Chang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.01912.pdf",
+      "abstract": "This work tackles the information loss bottleneck of vector-quantization (VQ)\nautoregressive image generation by introducing a novel model architecture\ncalled the 2-Dimensional Autoregression (DnD) Transformer. The DnD-Transformer\npredicts more codes for an image by introducing a new autoregression direction,\nmodel depth, along with the sequence length direction. Compared to\ntraditional 1D autoregression and previous work utilizing similar 2D image\ndecomposition such as RQ-Transformer, the DnD-Transformer is an end-to-end\nmodel that can generate higher quality images with the same backbone model size\nand sequence length, opening a new optimization perspective for autoregressive\nimage generation. Furthermore, our experiments reveal that the\nDnD-Transformer's potential extends beyond generating natural images. It can\neven generate images with rich text and graphical elements in a self-supervised\nmanner, demonstrating an understanding of these combined modalities. This has\nnot been previously demonstrated for popular vision generative models such as\ndiffusion models, showing a spark of vision-language intelligence when trained\nsolely on images. Code, datasets and models are open at\nhttps://github.com/chenllliang/DnD-Transformer.",
+      "upvotes": 13
+    },
+    {
+      "title": "RevisEval: Improving LLM-as-a-Judge via Response-Adapted References",
+      "url": "https://huggingface.co/papers/2410.05193",
+      "authors": [
+        "Chuhan Wu",
+        "Liangyou Li",
+        "Yasheng Wang",
+        "Xin Jiang",
+        "Ruiming Tang",
+        "Chen Ma"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.05193.pdf",
+      "abstract": "With significant efforts in recent studies, LLM-as-a-Judge has become a\ncost-effective alternative to human evaluation for assessing the text\ngeneration quality in a wide range of tasks. However, there still remains a\nreliability gap between LLM-as-a-Judge and human evaluation. One important\nreason is the lack of guided oracles in the evaluation process. Motivated by\nthe role of reference pervasively used in classic text evaluation, we introduce\nRevisEval, a novel text generation evaluation paradigm via the response-adapted\nreferences. RevisEval is driven by the key observation that an ideal reference\nshould maintain the necessary relevance to the response to be evaluated.\nSpecifically, RevisEval leverages the text revision capabilities of large\nlanguage models (LLMs) to adaptively revise the response, then treat the\nrevised text as the reference (response-adapted reference) for the subsequent\nevaluation. Extensive experiments demonstrate that RevisEval outperforms\ntraditional reference-free and reference-based evaluation paradigms that use\nLLM-as-a-Judge across NLG tasks and open-ended instruction-following tasks.\nMore importantly, our response-adapted references can further boost the\nclassical text metrics, e.g., BLEU and BERTScore, compared to traditional\nreferences and even rival the LLM-as-a-Judge. A detailed analysis is also\nconducted to confirm RevisEval's effectiveness in bias reduction, the impact of\ninference cost, and reference relevance.",
+      "upvotes": 12
+    },
+    {
+      "title": "DOTS: Learning to Reason Dynamically in LLMs via Optimal Reasoning Trajectories Search",
+      "url": "https://huggingface.co/papers/2410.03864",
+      "authors": [
+        "Wenlin Yao",
+        "Haitao Mi",
+        "Dian Yu",
+        "Ziyu Yao",
+        "Dong Yu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.03864.pdf",
+      "abstract": "Enhancing the capability of large language models (LLMs) in reasoning has\ngained significant attention in recent years. Previous studies have\ndemonstrated the effectiveness of various prompting strategies in aiding LLMs\nin reasoning (called \"reasoning actions\"), such as step-by-step thinking,\nreflecting before answering, solving with programs, and their combinations.\nHowever, these approaches often applied static, predefined reasoning actions\nuniformly to all questions, without considering the specific characteristics of\neach question or the capability of the task-solving LLM. In this paper, we\npropose DOTS, an approach enabling LLMs to reason dynamically via optimal\nreasoning trajectory search, tailored to the specific characteristics of each\nquestion and the inherent capability of the task-solving LLM. Our approach\ninvolves three key steps: i) defining atomic reasoning action modules that can\nbe composed into various reasoning action trajectories; ii) searching for the\noptimal action trajectory for each training question through iterative\nexploration and evaluation for the specific task-solving LLM; and iii) using\nthe collected optimal trajectories to train an LLM to plan for the reasoning\ntrajectories of unseen questions. In particular, we propose two learning\nparadigms, i.e., fine-tuning an external LLM as a planner to guide the\ntask-solving LLM, or directly fine-tuning the task-solving LLM with an\ninternalized capability for reasoning actions planning. Our experiments across\neight reasoning tasks show that our method consistently outperforms static\nreasoning techniques and the vanilla instruction tuning approach. Further\nanalysis reveals that our method enables LLMs to adjust their computation based\non problem complexity, allocating deeper thinking and reasoning to harder\nproblems.",
+      "upvotes": 10
+    },
+    {
+      "title": "Inference Scaling for Long-Context Retrieval Augmented Generation",
+      "url": "https://huggingface.co/papers/2410.04343",
+      "authors": [
+        "Honglei Zhuang",
+        "Aijun Bai",
+        "Kai Hui",
+        "Rolf Jagerman",
+        "Hansi Zeng",
+        "Zhen Qin",
+        "Dong Wang",
+        "Xuanhui Wang",
+        "Michael Bendersky"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.04343.pdf",
+      "abstract": "The scaling of inference computation has unlocked the potential of\nlong-context large language models (LLMs) across diverse settings. For\nknowledge-intensive tasks, the increased compute is often allocated to\nincorporate more external knowledge. However, without effectively utilizing\nsuch knowledge, solely expanding context does not always enhance performance.\nIn this work, we investigate inference scaling for retrieval augmented\ngeneration (RAG), exploring strategies beyond simply increasing the quantity of\nknowledge. We focus on two inference scaling strategies: in-context learning\nand iterative prompting. These strategies provide additional flexibility to\nscale test-time computation (e.g., by increasing retrieved documents or\ngeneration steps), thereby enhancing LLMs' ability to effectively acquire and\nutilize contextual information. We address two key questions: (1) How does RAG\nperformance benefit from the scaling of inference computation when optimally\nconfigured? (2) Can we predict the optimal test-time compute allocation for a\ngiven budget by modeling the relationship between RAG performance and inference\nparameters? Our observations reveal that increasing inference computation leads\nto nearly linear gains in RAG performance when optimally allocated, a\nrelationship we describe as the inference scaling laws for RAG. Building on\nthis, we further develop the computation allocation model to estimate RAG\nperformance across different inference configurations. The model predicts\noptimal inference parameters under various computation constraints, which align\nclosely with the experimental results. By applying these optimal\nconfigurations, we demonstrate that scaling inference compute on long-context\nLLMs achieves up to 58.9% gains on benchmark datasets compared to standard RAG.",
+      "upvotes": 9
+    },
+    {
+      "title": "$ε$-VAE: Denoising as Visual Decoding",
+      "url": "https://huggingface.co/papers/2410.04081",
+      "authors": [
+        "Sanghyun Woo",
+        "Ziyu Wan",
+        "Yandong Li",
+        "Han Zhang",
+        "Boqing Gong",
+        "Hartwig Adam",
+        "Xuhui Jia",
+        "Ting Liu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.04081.pdf",
+      "abstract": "In generative modeling, tokenization simplifies complex data into compact,\nstructured representations, creating a more efficient, learnable space. For\nhigh-dimensional visual data, it reduces redundancy and emphasizes key features\nfor high-quality generation. Current visual tokenization methods rely on a\ntraditional autoencoder framework, where the encoder compresses data into\nlatent representations, and the decoder reconstructs the original input. In\nthis work, we offer a new perspective by proposing denoising as decoding,\nshifting from single-step reconstruction to iterative refinement. Specifically,\nwe replace the decoder with a diffusion process that iteratively refines noise\nto recover the original image, guided by the latents provided by the encoder.\nWe evaluate our approach by assessing both reconstruction (rFID) and generation\nquality (FID), comparing it to state-of-the-art autoencoding approach. We hope\nthis work offers new insights into integrating iterative generation and\nautoencoding for improved compression and generation.",
+      "upvotes": 7
+    },
+    {
+      "title": "ControlAR: Controllable Image Generation with Autoregressive Models",
+      "url": "https://huggingface.co/papers/2410.02705",
+      "authors": [
+        "Zongming Li",
+        "Longjin Ran"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.02705.pdf",
+      "abstract": "Autoregressive (AR) models have reformulated image generation as next-token\nprediction, demonstrating remarkable potential and emerging as strong\ncompetitors to diffusion models. However, control-to-image generation, akin to\nControlNet, remains largely unexplored within AR models. Although a natural\napproach, inspired by advancements in Large Language Models, is to tokenize\ncontrol images into tokens and prefill them into the autoregressive model\nbefore decoding image tokens, it still falls short in generation quality\ncompared to ControlNet and suffers from inefficiency. To this end, we introduce\nControlAR, an efficient and effective framework for integrating spatial\ncontrols into autoregressive image generation models. Firstly, we explore\ncontrol encoding for AR models and propose a lightweight control encoder to\ntransform spatial inputs (e.g., canny edges or depth maps) into control tokens.\nThen ControlAR exploits the conditional decoding method to generate the next\nimage token conditioned on the per-token fusion between control and image\ntokens, similar to positional encodings. Compared to prefilling tokens, using\nconditional decoding significantly strengthens the control capability of AR\nmodels but also maintains the model's efficiency. Furthermore, the proposed\nControlAR surprisingly empowers AR models with arbitrary-resolution image\ngeneration via conditional decoding and specific controls. Extensive\nexperiments can demonstrate the controllability of the proposed ControlAR for\nthe autoregressive control-to-image generation across diverse inputs, including\nedges, depths, and segmentation masks. Furthermore, both quantitative and\nqualitative results indicate that ControlAR surpasses previous state-of-the-art\ncontrollable diffusion models, e.g., ControlNet++. Code, models, and demo will\nsoon be available at https://github.com/hustvl/ControlAR.",
+      "upvotes": 7
+    },
+    {
+      "title": "Hyper-multi-step: The Truth Behind Difficult Long-context Tasks",
+      "url": "https://huggingface.co/papers/2410.04422",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2410.04422.pdf",
+      "abstract": "Long-context language models (LCLM), characterized by their extensive context\nwindow, is becoming increasingly popular. Meanwhile, many long-context\nbenchmarks present challenging tasks that even the most advanced LCLMs struggle\nto complete. However, the underlying sources of various challenging\nlong-context tasks have seldom been studied. To bridge this gap, we conduct\nexperiments to indicate their difficulty stems primarily from two basic issues:\n\"multi-matching retrieval,\" which requires the simultaneous retrieval of\nmultiple items, and \"logic-based retrieval,\" which necessitates logical\njudgment within retrieval criteria. These two problems, while seemingly\nstraightforward, actually exceed the capabilities of LCLMs because they are\nproven to be hyper-multi-step (demanding numerous steps to solve) in nature.\nThis finding could explain why LLMs struggle with more advanced long-context\ntasks, providing a more accurate perspective for rethinking solutions for them.",
+      "upvotes": 7
+    },
+    {
+      "title": "TidalDecode: Fast and Accurate LLM Decoding with Position Persistent Sparse Attention",
+      "url": "https://huggingface.co/papers/2410.05076",
+      "authors": [
+        "Lijie Yang",
+        "Zhuofu Chen",
+        "Zikun Li",
+        "Zhihao Jia"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.05076.pdf",
+      "abstract": "Large language models (LLMs) have driven significant advancements across\ndiverse NLP tasks, with long-context models gaining prominence for handling\nextended inputs. However, the expanding key-value (KV) cache size required by\nTransformer architectures intensifies the memory constraints, particularly\nduring the decoding phase, creating a significant bottleneck. Existing sparse\nattention mechanisms designed to address this bottleneck have two limitations:\n(1) they often fail to reliably identify the most relevant tokens for\nattention, and (2) they overlook the spatial coherence of token selection\nacross consecutive Transformer layers, which can lead to performance\ndegradation and substantial overhead in token selection. This paper introduces\nTidalDecode, a simple yet effective algorithm and system for fast and accurate\nLLM decoding through position persistent sparse attention. TidalDecode\nleverages the spatial coherence of tokens selected by existing sparse attention\nmethods and introduces a few token selection layers that perform full attention\nto identify the tokens with the highest attention scores, while all other\nlayers perform sparse attention with the pre-selected tokens. This design\nenables TidalDecode to substantially reduce the overhead of token selection for\nsparse attention without sacrificing the quality of the generated results.\nEvaluation on a diverse set of LLMs and tasks shows that TidalDecode closely\nmatches the generative performance of full attention methods while reducing the\nLLM decoding latency by up to 2.1x.",
+      "upvotes": 6
+    },
+    {
+      "title": "Grounded-VideoLLM: Sharpening Fine-grained Temporal Grounding in Video Large Language Models",
+      "url": "https://huggingface.co/papers/2410.03290",
+      "authors": [
+        "Yixin Cao",
+        "Weifeng Ge",
+        "Lifu Huang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.03290.pdf",
+      "abstract": "Video Large Language Models (Video-LLMs) have demonstrated remarkable\ncapabilities in coarse-grained video understanding, however, they struggle with\nfine-grained temporal grounding. In this paper, we introduce Grounded-VideoLLM,\na novel Video-LLM adept at perceiving and reasoning over specific video moments\nin a fine-grained manner. We identify that current Video-LLMs have limitations\nfor fine-grained video understanding since they lack effective temporal\nmodeling and timestamp representation. In light of this, we sharpen our model\nby incorporating (1) an additional temporal stream to encode the relationships\nbetween frames and (2) discrete temporal tokens enriched with specific time\nknowledge to represent timestamps. To optimize the training of\nGrounded-VideoLLM, we employ a multi-stage training scheme, beginning with\nsimple video-captioning tasks and progressively introducing video temporal\ngrounding tasks of increasing complexity. To further enhance\nGrounded-VideoLLM's temporal reasoning capability, we also curate a grounded\nVideoQA dataset by an automatic annotation pipeline. Extensive experiments\ndemonstrate that Grounded-VideoLLM not only excels in fine-grained grounding\ntasks such as temporal sentence grounding, dense video captioning, and grounded\nVideoQA, but also shows great potential as a versatile video assistant for\ngeneral video understanding.",
+      "upvotes": 6
+    },
+    {
+      "title": "MA-RLHF: Reinforcement Learning from Human Feedback with Macro Actions",
+      "url": "https://huggingface.co/papers/2410.02743",
+      "authors": [
+        "Haoran Sun",
+        "Huang Fang",
+        "Yu Sun",
+        "Hua Wu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.02743.pdf",
+      "abstract": "Reinforcement learning from human feedback (RLHF) has demonstrated\neffectiveness in aligning large language models (LLMs) with human preferences.\nHowever, token-level RLHF suffers from the credit assignment problem over long\nsequences, where delayed rewards make it challenging for the model to discern\nwhich actions contributed to successful outcomes. This hinders learning\nefficiency and slows convergence. In this paper, we propose MA-RLHF, a simple\nyet effective RLHF framework that incorporates macro actions -- sequences of\ntokens or higher-level language constructs -- into the learning process. By\noperating at this higher level of abstraction, our approach reduces the\ntemporal distance between actions and rewards, facilitating faster and more\naccurate credit assignment. This results in more stable policy gradient\nestimates and enhances learning efficiency within each episode, all without\nincreasing computational complexity during training or inference. We validate\nour approach through extensive experiments across various model sizes and\ntasks, including text summarization, dialogue generation, question answering,\nand program synthesis. Our method achieves substantial performance improvements\nover standard RLHF, with performance gains of up to 30% in text summarization\nand code generation, 18% in dialogue, and 8% in question answering tasks.\nNotably, our approach reaches parity with vanilla RLHF 1.7x to 2x faster in\nterms of training time and continues to outperform it with further training. We\nwill make our code and data publicly available at\nhttps://github.com/ernie-research/MA-RLHF .",
+      "upvotes": 5
+    },
+    {
+      "title": "EBES: Easy Benchmarking for Event Sequences",
+      "url": "https://huggingface.co/papers/2410.03399",
+      "authors": [
+        "Igor Udovichenko",
+        "Evgeny Burnaev"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.03399.pdf",
+      "abstract": "Event sequences, characterized by irregular sampling intervals and a mix of\ncategorical and numerical features, are common data structures in various\nreal-world domains such as healthcare, finance, and user interaction logs.\nDespite advances in temporal data modeling techniques, there is no standardized\nbenchmarks for evaluating their performance on event sequences. This\ncomplicates result comparison across different papers due to varying evaluation\nprotocols, potentially misleading progress in this field. We introduce EBES, a\ncomprehensive benchmarking tool with standardized evaluation scenarios and\nprotocols, focusing on regression and classification problems with\nsequence-level targets. Our library simplifies benchmarking, dataset addition,\nand method integration through a unified interface. It includes a novel\nsynthetic dataset and provides preprocessed real-world datasets, including the\nlargest publicly available banking dataset. Our results provide an in-depth\nanalysis of datasets, identifying some as unsuitable for model comparison. We\ninvestigate the importance of modeling temporal and sequential components, as\nwell as the robustness and scaling properties of the models. These findings\nhighlight potential directions for future research. Our benchmark aim is to\nfacilitate reproducible research, expediting progress and increasing real-world\nimpacts.",
+      "upvotes": 4
+    }
+  ]
+}

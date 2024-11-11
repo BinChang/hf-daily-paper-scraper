@@ -1,0 +1,112 @@
+{
+  "date": "2024-03-07",
+  "papers": [
+    {
+      "title": "GaLore: Memory-Efficient LLM Training by Gradient Low-Rank Projection",
+      "url": "https://huggingface.co/papers/2403.03507",
+      "authors": [
+        "Zhangyang Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.03507.pdf",
+      "abstract": "Training Large Language Models (LLMs) presents significant memory challenges,\npredominantly due to the growing size of weights and optimizer states. Common\nmemory-reduction approaches, such as low-rank adaptation (LoRA), add a\ntrainable low-rank matrix to the frozen pre-trained weight in each layer,\nreducing trainable parameters and optimizer states. However, such approaches\ntypically underperform training with full-rank weights in both pre-training and\nfine-tuning stages since they limit the parameter search to a low-rank subspace\nand alter the training dynamics, and further, may require full-rank warm start.\nIn this work, we propose Gradient Low-Rank Projection (GaLore), a training\nstrategy that allows full-parameter learning but is more memory-efficient than\ncommon low-rank adaptation methods such as LoRA. Our approach reduces memory\nusage by up to 65.5% in optimizer states while maintaining both efficiency and\nperformance for pre-training on LLaMA 1B and 7B architectures with C4 dataset\nwith up to 19.7B tokens, and on fine-tuning RoBERTa on GLUE tasks. Our 8-bit\nGaLore further reduces optimizer memory by up to 82.5% and total training\nmemory by 63.3%, compared to a BF16 baseline. Notably, we demonstrate, for the\nfirst time, the feasibility of pre-training a 7B model on consumer GPUs with\n24GB memory (e.g., NVIDIA RTX 4090) without model parallel, checkpointing, or\noffloading strategies.",
+      "upvotes": 182
+    },
+    {
+      "title": "SaulLM-7B: A pioneering Large Language Model for Law",
+      "url": "https://huggingface.co/papers/2403.03883",
+      "authors": [
+        "Telmo Pessoa Pires",
+        "Caio Corro",
+        "Fabrizio Esposito"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.03883.pdf",
+      "abstract": "In this paper, we introduce SaulLM-7B, a large language model (LLM) tailored\nfor the legal domain. With 7 billion parameters, SaulLM-7B is the first LLM\ndesigned explicitly for legal text comprehension and generation. Leveraging the\nMistral 7B architecture as its foundation, SaulLM-7B is trained on an English\nlegal corpus of over 30 billion tokens. SaulLM-7B exhibits state-of-the-art\nproficiency in understanding and processing legal documents. Additionally, we\npresent a novel instructional fine-tuning method that leverages legal datasets\nto further enhance SaulLM-7B's performance in legal tasks. SaulLM-7B is\nreleased under the CC-BY-SA-4.0 License.",
+      "upvotes": 75
+    },
+    {
+      "title": "ShortGPT: Layers in Large Language Models are More Redundant Than You Expect",
+      "url": "https://huggingface.co/papers/2403.03853",
+      "authors": [
+        "Xin Men",
+        "Mingyu Xu",
+        "Qingyu Zhang",
+        "Hongyu Lin",
+        "Yaojie Lu",
+        "Xianpei Han",
+        "Weipeng Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.03853.pdf",
+      "abstract": "As Large Language Models (LLMs) continue to advance in performance, their\nsize has escalated significantly, with current LLMs containing billions or even\ntrillions of parameters. However, in this study, we discovered that many layers\nof LLMs exhibit high similarity, and some layers play a negligible role in\nnetwork functionality. Based on this observation, we define a metric called\nBlock Influence (BI) to gauge the significance of each layer in LLMs. We then\npropose a straightforward pruning approach: layer removal, in which we directly\ndelete the redundant layers in LLMs based on their BI scores. Experiments\ndemonstrate that our method, which we call ShortGPT, significantly outperforms\nprevious state-of-the-art (SOTA) methods in model pruning. Moreover, ShortGPT\nis orthogonal to quantization-like methods, enabling further reduction in\nparameters and computation. The ability to achieve better results through\nsimple layer removal, as opposed to more complex pruning techniques, suggests a\nhigh degree of redundancy in the model architecture.",
+      "upvotes": 62
+    },
+    {
+      "title": "Learning to Decode Collaboratively with Multiple Language Models",
+      "url": "https://huggingface.co/papers/2403.03870",
+      "authors": [
+        "Bailin Wang",
+        "Yoon Kim"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.03870.pdf",
+      "abstract": "We propose a method to teach multiple large language models (LLM) to\ncollaborate by interleaving their generations at the token level. We model the\ndecision of which LLM generates the next token as a latent variable. By\noptimizing the marginal likelihood of a training set under our latent variable\nmodel, the base LLM automatically learns when to generate itself and when to\ncall on one of the ``assistant'' language models to generate, all without\ndirect supervision. Token-level collaboration during decoding allows for a\nfusion of each model's expertise in a manner tailored to the specific task at\nhand. Our collaborative decoding is especially useful in cross-domain settings\nwhere a generalist base LLM learns to invoke domain expert models. On\ninstruction-following, domain-specific QA, and reasoning tasks, we show that\nthe performance of the joint system exceeds that of the individual models.\nThrough qualitative analysis of the learned latent decisions, we show models\ntrained with our method exhibit several interesting collaboration patterns,\ne.g., template-filling. Our code is available at\nhttps://github.com/clinicalml/co-llm.",
+      "upvotes": 18
+    },
+    {
+      "title": "Enhancing Vision-Language Pre-training with Rich Supervisions",
+      "url": "https://huggingface.co/papers/2403.03346",
+      "authors": [
+        "Yuan Gao",
+        "Pengkai Zhu",
+        "Edouard Belval",
+        "Oren Nuriel",
+        "Srikar Appalaraju",
+        "Shabnam Ghadar",
+        "Vijay Mahadevan",
+        "Zhuowen Tu",
+        "Stefano Soatto"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.03346.pdf",
+      "abstract": "We propose Strongly Supervised pre-training with ScreenShots (S4) - a novel\npre-training paradigm for Vision-Language Models using data from large-scale\nweb screenshot rendering. Using web screenshots unlocks a treasure trove of\nvisual and textual cues that are not present in using image-text pairs. In S4,\nwe leverage the inherent tree-structured hierarchy of HTML elements and the\nspatial localization to carefully design 10 pre-training tasks with large scale\nannotated data. These tasks resemble downstream tasks across different domains\nand the annotations are cheap to obtain. We demonstrate that, compared to\ncurrent screenshot pre-training objectives, our innovative pre-training method\nsignificantly enhances performance of image-to-text model in nine varied and\npopular downstream tasks - up to 76.1% improvements on Table Detection, and at\nleast 1% on Widget Captioning.",
+      "upvotes": 14
+    },
+    {
+      "title": "Stop Regressing: Training Value Functions via Classification for Scalable Deep RL",
+      "url": "https://huggingface.co/papers/2403.03950",
+      "authors": [
+        "Jordi Orbay",
+        "Ted Xiao",
+        "Alex Irpan",
+        "Sergey Levine"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.03950.pdf",
+      "abstract": "Value functions are a central component of deep reinforcement learning (RL).\nThese functions, parameterized by neural networks, are trained using a mean\nsquared error regression objective to match bootstrapped target values.\nHowever, scaling value-based RL methods that use regression to large networks,\nsuch as high-capacity Transformers, has proven challenging. This difficulty is\nin stark contrast to supervised learning: by leveraging a cross-entropy\nclassification loss, supervised methods have scaled reliably to massive\nnetworks. Observing this discrepancy, in this paper, we investigate whether the\nscalability of deep RL can also be improved simply by using classification in\nplace of regression for training value functions. We demonstrate that value\nfunctions trained with categorical cross-entropy significantly improves\nperformance and scalability in a variety of domains. These include: single-task\nRL on Atari 2600 games with SoftMoEs, multi-task RL on Atari with large-scale\nResNets, robotic manipulation with Q-transformers, playing Chess without\nsearch, and a language-agent Wordle task with high-capacity Transformers,\nachieving state-of-the-art results on these domains. Through careful analysis,\nwe show that the benefits of categorical cross-entropy primarily stem from its\nability to mitigate issues inherent to value-based RL, such as noisy targets\nand non-stationarity. Overall, we argue that a simple shift to training value\nfunctions with categorical cross-entropy can yield substantial improvements in\nthe scalability of deep RL at little-to-no cost.",
+      "upvotes": 13
+    },
+    {
+      "title": "3D Diffusion Policy",
+      "url": "https://huggingface.co/papers/2403.03954",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2403.03954.pdf",
+      "abstract": "Imitation learning provides an efficient way to teach robots dexterous\nskills; however, learning complex skills robustly and generalizablely usually\nconsumes large amounts of human demonstrations. To tackle this challenging\nproblem, we present 3D Diffusion Policy (DP3), a novel visual imitation\nlearning approach that incorporates the power of 3D visual representations into\ndiffusion policies, a class of conditional action generative models. The core\ndesign of DP3 is the utilization of a compact 3D visual representation,\nextracted from sparse point clouds with an efficient point encoder. In our\nexperiments involving 72 simulation tasks, DP3 successfully handles most tasks\nwith just 10 demonstrations and surpasses baselines with a 55.3% relative\nimprovement. In 4 real robot tasks, DP3 demonstrates precise control with a\nhigh success rate of 85%, given only 40 demonstrations of each task, and shows\nexcellent generalization abilities in diverse aspects, including space,\nviewpoint, appearance, and instance. Interestingly, in real robot experiments,\nDP3 rarely violates safety requirements, in contrast to baseline methods which\nfrequently do, necessitating human intervention. Our extensive evaluation\nhighlights the critical importance of 3D representations in real-world robot\nlearning. Videos, code, and data are available on\nhttps://3d-diffusion-policy.github.io .",
+      "upvotes": 11
+    },
+    {
+      "title": "Caduceus: Bi-Directional Equivariant Long-Range DNA Sequence Modeling",
+      "url": "https://huggingface.co/papers/2403.03234",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2403.03234.pdf",
+      "abstract": "Large-scale sequence modeling has sparked rapid advances that now extend into\nbiology and genomics. However, modeling genomic sequences introduces challenges\nsuch as the need to model long-range token interactions, the effects of\nupstream and downstream regions of the genome, and the reverse complementarity\n(RC) of DNA. Here, we propose an architecture motivated by these challenges\nthat builds off the long-range Mamba block, and extends it to a BiMamba\ncomponent that supports bi-directionality, and to a MambaDNA block that\nadditionally supports RC equivariance. We use MambaDNA as the basis of\nCaduceus, the first family of RC equivariant bi-directional long-range DNA\nlanguage models, and we introduce pre-training and fine-tuning strategies that\nyield Caduceus DNA foundation models. Caduceus outperforms previous long-range\nmodels on downstream benchmarks; on a challenging long-range variant effect\nprediction task, Caduceus exceeds the performance of 10x larger models that do\nnot leverage bi-directionality or equivariance.",
+      "upvotes": 11
+    },
+    {
+      "title": "Backtracing: Retrieving the Cause of the Query",
+      "url": "https://huggingface.co/papers/2403.03956",
+      "authors": [
+        "Pawan Wirawarn",
+        "Noah Goodman"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.03956.pdf",
+      "abstract": "Many online content portals allow users to ask questions to supplement their\nunderstanding (e.g., of lectures). While information retrieval (IR) systems may\nprovide answers for such user queries, they do not directly assist content\ncreators -- such as lecturers who want to improve their content -- identify\nsegments that _caused_ a user to ask those questions. We introduce the task of\nbacktracing, in which systems retrieve the text segment that most likely caused\na user query. We formalize three real-world domains for which backtracing is\nimportant in improving content delivery and communication: understanding the\ncause of (a) student confusion in the Lecture domain, (b) reader curiosity in\nthe News Article domain, and (c) user emotion in the Conversation domain. We\nevaluate the zero-shot performance of popular information retrieval methods and\nlanguage modeling methods, including bi-encoder, re-ranking and\nlikelihood-based methods and ChatGPT. While traditional IR systems retrieve\nsemantically relevant information (e.g., details on \"projection matrices\" for a\nquery \"does projecting multiple times still lead to the same point?\"), they\noften miss the causally relevant context (e.g., the lecturer states \"projecting\ntwice gets me the same answer as one projection\"). Our results show that there\nis room for improvement on backtracing and it requires new retrieval\napproaches. We hope our benchmark serves to improve future retrieval systems\nfor backtracing, spawning systems that refine content generation and identify\nlinguistic triggers influencing user queries. Our code and data are\nopen-sourced: https://github.com/rosewang2008/backtracing.",
+      "upvotes": 10
+    }
+  ]
+}

@@ -1,0 +1,301 @@
+{
+  "date": "2024-06-25",
+  "papers": [
+    {
+      "title": "Cambrian-1: A Fully Open, Vision-Centric Exploration of Multimodal LLMs",
+      "url": "https://huggingface.co/papers/2406.16860",
+      "authors": [
+        "Shengbang Tong",
+        "Sai Charitha Akula",
+        "Rob Fergus"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.16860.pdf",
+      "abstract": "We introduce Cambrian-1, a family of multimodal LLMs (MLLMs) designed with a\nvision-centric approach. While stronger language models can enhance multimodal\ncapabilities, the design choices for vision components are often insufficiently\nexplored and disconnected from visual representation learning research. This\ngap hinders accurate sensory grounding in real-world scenarios. Our study uses\nLLMs and visual instruction tuning as an interface to evaluate various visual\nrepresentations, offering new insights into different models and architectures\n-- self-supervised, strongly supervised, or combinations thereof -- based on\nexperiments with over 20 vision encoders. We critically examine existing MLLM\nbenchmarks, addressing the difficulties involved in consolidating and\ninterpreting results from various tasks, and introduce a new vision-centric\nbenchmark, CV-Bench. To further improve visual grounding, we propose the\nSpatial Vision Aggregator (SVA), a dynamic and spatially-aware connector that\nintegrates high-resolution vision features with LLMs while reducing the number\nof tokens. Additionally, we discuss the curation of high-quality visual\ninstruction-tuning data from publicly available sources, emphasizing the\nimportance of data source balancing and distribution ratio. Collectively,\nCambrian-1 not only achieves state-of-the-art performance but also serves as a\ncomprehensive, open cookbook for instruction-tuned MLLMs. We provide model\nweights, code, supporting tools, datasets, and detailed instruction-tuning and\nevaluation recipes. We hope our release will inspire and accelerate\nadvancements in multimodal systems and visual representation learning.",
+      "upvotes": 57
+    },
+    {
+      "title": "DreamBench++: A Human-Aligned Benchmark for Personalized Image Generation",
+      "url": "https://huggingface.co/papers/2406.16855",
+      "authors": [
+        "Chunrui Han",
+        "Zheng Ge",
+        "Xiangyu Zhang",
+        "Shu-Tao Xia"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.16855.pdf",
+      "abstract": "Personalized image generation holds great promise in assisting humans in\neveryday work and life due to its impressive function in creatively generating\npersonalized content. However, current evaluations either are automated but\nmisalign with humans or require human evaluations that are time-consuming and\nexpensive. In this work, we present DreamBench++, a human-aligned benchmark\nautomated by advanced multimodal GPT models. Specifically, we systematically\ndesign the prompts to let GPT be both human-aligned and self-aligned, empowered\nwith task reinforcement. Further, we construct a comprehensive dataset\ncomprising diverse images and prompts. By benchmarking 7 modern generative\nmodels, we demonstrate that DreamBench++ results in significantly more\nhuman-aligned evaluation, helping boost the community with innovative findings.",
+      "upvotes": 54
+    },
+    {
+      "title": "BigCodeBench: Benchmarking Code Generation with Diverse Function Calls and Complex Instructions",
+      "url": "https://huggingface.co/papers/2406.15877",
+      "authors": [
+        "Han Hu",
+        "Ratnadira Widyasari",
+        "Chen Gong",
+        "Thong Hoang",
+        "Ming Xu",
+        "Prateek Yadav",
+        "Naman Jain",
+        "Alex Gu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.15877.pdf",
+      "abstract": "Automated software engineering has been greatly empowered by the recent\nadvances in Large Language Models (LLMs) for programming. While current\nbenchmarks have shown that LLMs can perform various software engineering tasks\nlike human developers, the majority of their evaluations are limited to short\nand self-contained algorithmic tasks. Solving challenging and practical\nprogramming tasks requires the capability of utilizing diverse function calls\nas tools to efficiently implement functionalities like data analysis and web\ndevelopment. In addition, using multiple tools to solve a task needs\ncompositional reasoning by accurately understanding complex instructions.\nFulfilling both of these characteristics can pose a great challenge for LLMs.\nTo assess how well LLMs can solve challenging and practical programming tasks,\nwe introduce Bench, a benchmark that challenges LLMs to invoke multiple\nfunction calls as tools from 139 libraries and 7 domains for 1,140 fine-grained\nprogramming tasks. To evaluate LLMs rigorously, each programming task\nencompasses 5.6 test cases with an average branch coverage of 99%. In addition,\nwe propose a natural-language-oriented variant of Bench, Benchi, that\nautomatically transforms the original docstrings into short instructions only\nwith essential information. Our extensive evaluation of 60 LLMs shows that LLMs\nare not yet capable of following complex instructions to use function calls\nprecisely, with scores up to 60%, significantly lower than the human\nperformance of 97%. The results underscore the need for further advancements in\nthis area.",
+      "upvotes": 45
+    },
+    {
+      "title": "Evaluating D-MERIT of Partial-annotation on Information Retrieval",
+      "url": "https://huggingface.co/papers/2406.16048",
+      "authors": [
+        "Guy Kushilevitz",
+        "Yoav Goldberg"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.16048.pdf",
+      "abstract": "Retrieval models are often evaluated on partially-annotated datasets. Each\nquery is mapped to a few relevant texts and the remaining corpus is assumed to\nbe irrelevant. As a result, models that successfully retrieve false negatives\nare punished in evaluation. Unfortunately, completely annotating all texts for\nevery query is not resource efficient. In this work, we show that using\npartially-annotated datasets in evaluation can paint a distorted picture. We\ncurate D-MERIT, a passage retrieval evaluation set from Wikipedia, aspiring to\ncontain all relevant passages for each query. Queries describe a group (e.g.,\n``journals about linguistics'') and relevant passages are evidence that\nentities belong to the group (e.g., a passage indicating that Language is a\njournal about linguistics). We show that evaluating on a dataset containing\nannotations for only a subset of the relevant passages might result in\nmisleading ranking of the retrieval systems and that as more relevant texts are\nincluded in the evaluation set, the rankings converge. We propose our dataset\nas a resource for evaluation and our study as a recommendation for balance\nbetween resource-efficiency and reliable evaluation when annotating evaluation\nsets for text retrieval.",
+      "upvotes": 34
+    },
+    {
+      "title": "Long Context Transfer from Language to Vision",
+      "url": "https://huggingface.co/papers/2406.16852",
+      "authors": [
+        "Guangtao Zeng",
+        "Ziyue Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.16852.pdf",
+      "abstract": "Video sequences offer valuable temporal information, but existing large\nmultimodal models (LMMs) fall short in understanding extremely long videos.\nMany works address this by reducing the number of visual tokens using visual\nresamplers. Alternatively, in this paper, we approach this problem from the\nperspective of the language model. By simply extrapolating the context length\nof the language backbone, we enable LMMs to comprehend orders of magnitude more\nvisual tokens without any video training. We call this phenomenon long context\ntransfer and carefully ablate its properties. To effectively measure LMMs'\nability to generalize to long contexts in the vision modality, we develop\nV-NIAH (Visual Needle-In-A-Haystack), a purely synthetic long vision benchmark\ninspired by the language model's NIAH test. Our proposed Long Video Assistant\n(LongVA) can process 2000 frames or over 200K visual tokens without additional\ncomplexities. With its extended context length, LongVA achieves\nstate-of-the-art performance on Video-MME among 7B-scale models by densely\nsampling more input frames. Our work is open-sourced at\nhttps://github.com/EvolvingLMMs-Lab/LongVA.",
+      "upvotes": 32
+    },
+    {
+      "title": "Video-Infinity: Distributed Long Video Generation",
+      "url": "https://huggingface.co/papers/2406.16260",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2406.16260.pdf",
+      "abstract": "Diffusion models have recently achieved remarkable results for video\ngeneration. Despite the encouraging performances, the generated videos are\ntypically constrained to a small number of frames, resulting in clips lasting\nmerely a few seconds. The primary challenges in producing longer videos include\nthe substantial memory requirements and the extended processing time required\non a single GPU. A straightforward solution would be to split the workload\nacross multiple GPUs, which, however, leads to two issues: (1) ensuring all\nGPUs communicate effectively to share timing and context information, and (2)\nmodifying existing video diffusion models, which are usually trained on short\nsequences, to create longer videos without additional training. To tackle\nthese, in this paper we introduce Video-Infinity, a distributed inference\npipeline that enables parallel processing across multiple GPUs for long-form\nvideo generation. Specifically, we propose two coherent mechanisms: Clip\nparallelism and Dual-scope attention. Clip parallelism optimizes the gathering\nand sharing of context information across GPUs which minimizes communication\noverhead, while Dual-scope attention modulates the temporal self-attention to\nbalance local and global contexts efficiently across the devices. Together, the\ntwo mechanisms join forces to distribute the workload and enable the fast\ngeneration of long videos. Under an 8 x Nvidia 6000 Ada GPU (48G) setup, our\nmethod generates videos up to 2,300 frames in approximately 5 minutes, enabling\nlong video generation at a speed 100 times faster than the prior methods.",
+      "upvotes": 28
+    },
+    {
+      "title": "VideoHallucer: Evaluating Intrinsic and Extrinsic Hallucinations in Large Video-Language Models",
+      "url": "https://huggingface.co/papers/2406.16338",
+      "authors": [
+        "Dongyan Zhao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.16338.pdf",
+      "abstract": "Recent advancements in Multimodal Large Language Models (MLLMs) have extended\ntheir capabilities to video understanding. Yet, these models are often plagued\nby \"hallucinations\", where irrelevant or nonsensical content is generated,\ndeviating from the actual video context. This work introduces VideoHallucer,\nthe first comprehensive benchmark for hallucination detection in large\nvideo-language models (LVLMs). VideoHallucer categorizes hallucinations into\ntwo main types: intrinsic and extrinsic, offering further subcategories for\ndetailed analysis, including object-relation, temporal, semantic detail,\nextrinsic factual, and extrinsic non-factual hallucinations. We adopt an\nadversarial binary VideoQA method for comprehensive evaluation, where pairs of\nbasic and hallucinated questions are crafted strategically. By evaluating\neleven LVLMs on VideoHallucer, we reveal that i) the majority of current models\nexhibit significant issues with hallucinations; ii) while scaling datasets and\nparameters improves models' ability to detect basic visual cues and\ncounterfactuals, it provides limited benefit for detecting extrinsic factual\nhallucinations; iii) existing models are more adept at detecting facts than\nidentifying hallucinations. As a byproduct, these analyses further instruct the\ndevelopment of our self-PEP framework, achieving an average of 5.38%\nimprovement in hallucination resistance across all model architectures.",
+      "upvotes": 25
+    },
+    {
+      "title": "WARP: On the Benefits of Weight Averaged Rewarded Policies",
+      "url": "https://huggingface.co/papers/2406.16768",
+      "authors": [
+        "Nino Vieillard",
+        "Sertan Girgin",
+        "Olivier Bachem"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.16768.pdf",
+      "abstract": "Reinforcement learning from human feedback (RLHF) aligns large language\nmodels (LLMs) by encouraging their generations to have high rewards, using a\nreward model trained on human preferences. To prevent the forgetting of\npre-trained knowledge, RLHF usually incorporates a KL regularization; this\nforces the policy to remain close to its supervised fine-tuned initialization,\nthough it hinders the reward optimization. To tackle the trade-off between KL\nand reward, in this paper we introduce a novel alignment strategy named Weight\nAveraged Rewarded Policies (WARP). WARP merges policies in the weight space at\nthree distinct stages. First, it uses the exponential moving average of the\npolicy as a dynamic anchor in the KL regularization. Second, it applies\nspherical interpolation to merge independently fine-tuned policies into a new\nenhanced one. Third, it linearly interpolates between this merged model and the\ninitialization, to recover features from pre-training. This procedure is then\napplied iteratively, with each iteration's final model used as an advanced\ninitialization for the next, progressively refining the KL-reward Pareto front,\nachieving superior rewards at fixed KL. Experiments with GEMMA policies\nvalidate that WARP improves their quality and alignment, outperforming other\nopen-source LLMs.",
+      "upvotes": 22
+    },
+    {
+      "title": "Scaling Laws for Linear Complexity Language Models",
+      "url": "https://huggingface.co/papers/2406.16690",
+      "authors": [
+        "Dong Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.16690.pdf",
+      "abstract": "The interest in linear complexity models for large language models is on the\nrise, although their scaling capacity remains uncertain. In this study, we\npresent the scaling laws for linear complexity language models to establish a\nfoundation for their scalability. Specifically, we examine the scaling\nbehaviors of three efficient linear architectures. These include TNL, a linear\nattention model with data-independent decay; HGRN2, a linear RNN with\ndata-dependent decay; and cosFormer2, a linear attention model without decay.\nWe also include LLaMA as a baseline architecture for softmax attention for\ncomparison. These models were trained with six variants, ranging from 70M to 7B\nparameters on a 300B-token corpus, and evaluated with a total of 1,376\nintermediate checkpoints on various downstream tasks. These tasks include\nvalidation loss, commonsense reasoning, and information retrieval and\ngeneration. The study reveals that existing linear complexity language models\nexhibit similar scaling capabilities as conventional transformer-based models\nwhile also demonstrating superior linguistic proficiency and knowledge\nretention.",
+      "upvotes": 22
+    },
+    {
+      "title": "Efficient Continual Pre-training by Mitigating the Stability Gap",
+      "url": "https://huggingface.co/papers/2406.14833",
+      "authors": [
+        "Huishuai Zhang",
+        "Dongyan Zhao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.14833.pdf",
+      "abstract": "Continual pre-training has increasingly become the predominant approach for\nadapting Large Language Models (LLMs) to new domains. This process involves\nupdating the pre-trained LLM with a corpus from a new domain, resulting in a\nshift in the training distribution. To study the behavior of LLMs during this\nshift, we measured the model's performance throughout the continual\npre-training process. we observed a temporary performance drop at the\nbeginning, followed by a recovery phase, a phenomenon known as the \"stability\ngap,\" previously noted in vision models classifying new classes. To address\nthis issue and enhance LLM performance within a fixed compute budget, we\npropose three effective strategies: (1) Continually pre-training the LLM on a\nsubset with a proper size for multiple epochs, resulting in faster performance\nrecovery than pre-training the LLM on a large corpus in a single epoch; (2)\nPre-training the LLM only on high-quality sub-corpus, which rapidly boosts\ndomain performance; and (3) Using a data mixture similar to the pre-training\ndata to reduce distribution gap. We conduct various experiments on Llama-family\nmodels to validate the effectiveness of our strategies in both medical\ncontinual pre-training and instruction tuning. For example, our strategies\nimprove the average medical task performance of the OpenLlama-3B model from\n36.2% to 40.7% with only 40% of the original training budget and enhance the\naverage general task performance without causing forgetting. Furthermore, we\napply our strategies to the Llama-3-8B model. The resulting model,\nLlama-3-Physician, achieves the best medical performance among current\nopen-source models, and performs comparably to or even better than GPT-4 on\nseveral medical benchmarks. We release our models at\nhttps://huggingface.co/YiDuo1999/Llama-3-Physician-8B-Instruct.",
+      "upvotes": 19
+    },
+    {
+      "title": "Towards Fast Multilingual LLM Inference: Speculative Decoding and Specialized Drafters",
+      "url": "https://huggingface.co/papers/2406.16758",
+      "authors": [
+        "Hongseok Jeung",
+        "Se-Young Yun"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.16758.pdf",
+      "abstract": "Large language models (LLMs) have revolutionized natural language processing\nand broadened their applicability across diverse commercial applications.\nHowever, the deployment of these models is constrained by high inference time\nin multilingual settings. To mitigate this challenge, this paper explores a\ntraining recipe of an assistant model in speculative decoding, which are\nleveraged to draft and-then its future tokens are verified by the target LLM.\nWe show that language-specific draft models, optimized through a targeted\npretrain-and-finetune strategy, substantially brings a speedup of inference\ntime compared to the previous methods. We validate these models across various\nlanguages in inference time, out-of-domain speedup, and GPT-4o evaluation.",
+      "upvotes": 19
+    },
+    {
+      "title": "Sparser is Faster and Less is More: Efficient Sparse Attention for Long-Range Transformers",
+      "url": "https://huggingface.co/papers/2406.16747",
+      "authors": [
+        "Kewei Tu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.16747.pdf",
+      "abstract": "Accommodating long sequences efficiently in autoregressive Transformers,\nespecially within an extended context window, poses significant challenges due\nto the quadratic computational complexity and substantial KV memory\nrequirements inherent in self-attention mechanisms. In this work, we introduce\nSPARSEK Attention, a novel sparse attention mechanism designed to overcome\nthese computational and memory obstacles while maintaining performance. Our\napproach integrates a scoring network and a differentiable top-k mask operator,\nSPARSEK, to select a constant number of KV pairs for each query, thereby\nenabling gradient-based optimization. As a result, SPARSEK Attention offers\nlinear time complexity and constant memory footprint during generation.\nExperimental results reveal that SPARSEK Attention outperforms previous sparse\nattention methods and provides significant speed improvements during both\ntraining and inference, particularly in language modeling and downstream tasks.\nFurthermore, our method can be seamlessly integrated into pre-trained Large\nLanguage Models (LLMs) with minimal fine-tuning, offering a practical solution\nfor effectively managing long-range dependencies in diverse applications.",
+      "upvotes": 17
+    },
+    {
+      "title": "Beyond the Turn-Based Game: Enabling Real-Time Conversations with Duplex Models",
+      "url": "https://huggingface.co/papers/2406.15718",
+      "authors": [
+        "Xu Han",
+        "Zihang Xu",
+        "Yuanwei Xu",
+        "Maosong Sun"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.15718.pdf",
+      "abstract": "As large language models (LLMs) increasingly permeate daily lives, there is a\ngrowing demand for real-time interactions that mirror human conversations.\nTraditional turn-based chat systems driven by LLMs prevent users from verbally\ninteracting with the system while it is generating responses. To overcome these\nlimitations, we adapt existing LLMs to duplex models so that these\nLLMs can listen for users while generating output and dynamically adjust\nthemselves to provide users with instant feedback. % such as in response to\ninterruptions. Specifically, we divide the queries and responses of\nconversations into several time slices and then adopt a\ntime-division-multiplexing (TDM) encoding-decoding strategy to\npseudo-simultaneously process these slices. Furthermore, to make LLMs\nproficient enough to handle real-time conversations, we build a fine-tuning\ndataset consisting of alternating time slices of queries and responses as well\nas covering typical feedback types in instantaneous interactions. Our\nexperiments show that although the queries and responses of conversations are\nsegmented into incomplete slices for processing, LLMs can preserve their\noriginal performance on standard benchmarks with a few fine-tuning steps on our\ndataset. Automatic and human evaluation indicate that duplex models make\nuser-AI interactions more natural and human-like, and greatly improve user\nsatisfaction compared to vanilla LLMs. Our duplex model and dataset will be\nreleased.",
+      "upvotes": 14
+    },
+    {
+      "title": "Semantic Entropy Probes: Robust and Cheap Hallucination Detection in LLMs",
+      "url": "https://huggingface.co/papers/2406.15927",
+      "authors": [
+        "Muhammed Razzak",
+        "Yarin Gal"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.15927.pdf",
+      "abstract": "We propose semantic entropy probes (SEPs), a cheap and reliable method for\nuncertainty quantification in Large Language Models (LLMs). Hallucinations,\nwhich are plausible-sounding but factually incorrect and arbitrary model\ngenerations, present a major challenge to the practical adoption of LLMs.\nRecent work by Farquhar et al. (2024) proposes semantic entropy (SE), which can\ndetect hallucinations by estimating uncertainty in the space semantic meaning\nfor a set of model generations. However, the 5-to-10-fold increase in\ncomputation cost associated with SE computation hinders practical adoption. To\naddress this, we propose SEPs, which directly approximate SE from the hidden\nstates of a single generation. SEPs are simple to train and do not require\nsampling multiple model generations at test time, reducing the overhead of\nsemantic uncertainty quantification to almost zero. We show that SEPs retain\nhigh performance for hallucination detection and generalize better to\nout-of-distribution data than previous probing methods that directly predict\nmodel accuracy. Our results across models and tasks suggest that model hidden\nstates capture SE, and our ablation studies give further insights into the\ntoken positions and model layers for which this is the case.",
+      "upvotes": 13
+    },
+    {
+      "title": "Preference Tuning For Toxicity Mitigation Generalizes Across Languages",
+      "url": "https://huggingface.co/papers/2406.16235",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2406.16235.pdf",
+      "abstract": "Detoxifying multilingual Large Language Models (LLMs) has become crucial due\nto their increasing global use. In this work, we explore zero-shot\ncross-lingual generalization of preference tuning in detoxifying LLMs. Unlike\nprevious studies that show limited cross-lingual generalization for other\nsafety tasks, we demonstrate that Direct Preference Optimization (DPO) training\nwith only English data can significantly reduce toxicity in multilingual\nopen-ended generations. For example, the probability of mGPT-1.3B generating\ntoxic continuations drops from 46.8% to 3.9% across 17 different languages\nafter training. Our results also extend to other multilingual LLMs, such as\nBLOOM, Llama3, and Aya-23. Using mechanistic interpretability tools like causal\nintervention and activation analysis, we identified the dual multilinguality\nproperty of MLP layers in LLMs, which explains the cross-lingual generalization\nof DPO. Finally, we show that bilingual sentence retrieval can predict the\ncross-lingual transferability of DPO preference tuning.",
+      "upvotes": 11
+    },
+    {
+      "title": "Confidence Regulation Neurons in Language Models",
+      "url": "https://huggingface.co/papers/2406.16254",
+      "authors": [
+        "Ben Wu",
+        "Mrinmaya Sachan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.16254.pdf",
+      "abstract": "Despite their widespread use, the mechanisms by which large language models\n(LLMs) represent and regulate uncertainty in next-token predictions remain\nlargely unexplored. This study investigates two critical components believed to\ninfluence this uncertainty: the recently discovered entropy neurons and a new\nset of components that we term token frequency neurons. Entropy neurons are\ncharacterized by an unusually high weight norm and influence the final layer\nnormalization (LayerNorm) scale to effectively scale down the logits. Our work\nshows that entropy neurons operate by writing onto an unembedding null space,\nallowing them to impact the residual stream norm with minimal direct effect on\nthe logits themselves. We observe the presence of entropy neurons across a\nrange of models, up to 7 billion parameters. On the other hand, token frequency\nneurons, which we discover and describe here for the first time, boost or\nsuppress each token's logit proportionally to its log frequency, thereby\nshifting the output distribution towards or away from the unigram distribution.\nFinally, we present a detailed case study where entropy neurons actively manage\nconfidence in the setting of induction, i.e. detecting and continuing repeated\nsubsequences.",
+      "upvotes": 10
+    },
+    {
+      "title": "AutoDetect: Towards a Unified Framework for Automated Weakness Detection in Large Language Models",
+      "url": "https://huggingface.co/papers/2406.16714",
+      "authors": [
+        "Xiaotao Gu",
+        "Pei Ke",
+        "Minlie Huang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.16714.pdf",
+      "abstract": "Although Large Language Models (LLMs) are becoming increasingly powerful,\nthey still exhibit significant but subtle weaknesses, such as mistakes in\ninstruction-following or coding tasks. As these unexpected errors could lead to\nsevere consequences in practical deployments, it is crucial to investigate the\nlimitations within LLMs systematically. Traditional benchmarking approaches\ncannot thoroughly pinpoint specific model deficiencies, while manual\ninspections are costly and not scalable. In this paper, we introduce a unified\nframework, AutoDetect, to automatically expose weaknesses in LLMs across\nvarious tasks. Inspired by the educational assessment process that measures\nstudents' learning outcomes, AutoDetect consists of three LLM-powered agents:\nExaminer, Questioner, and Assessor. The collaboration among these three agents\nis designed to realize comprehensive and in-depth weakness identification. Our\nframework demonstrates significant success in uncovering flaws, with an\nidentification success rate exceeding 30% in prominent models such as ChatGPT\nand Claude. More importantly, these identified weaknesses can guide specific\nmodel improvements, proving more effective than untargeted data augmentation\nmethods like Self-Instruct. Our approach has led to substantial enhancements in\npopular LLMs, including the Llama series and Mistral-7b, boosting their\nperformance by over 10% across several benchmarks. Code and data are publicly\navailable at https://github.com/thu-coai/AutoDetect.",
+      "upvotes": 10
+    },
+    {
+      "title": "How Many Parameters Does it Take to Change a Light Bulb? Evaluating Performance in Self-Play of Conversational Games as a Function of Model Characteristics",
+      "url": "https://huggingface.co/papers/2406.14051",
+      "authors": [
+        "Jonathan Jordan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.14051.pdf",
+      "abstract": "What makes a good Large Language Model (LLM)? That it performs well on the\nrelevant benchmarks -- which hopefully measure, with some validity, the\npresence of capabilities that are also challenged in real application. But what\nmakes the model perform well? What gives a model its abilities? We take a\nrecently introduced type of benchmark that is meant to challenge capabilities\nin a goal-directed, agentive context through self-play of conversational games,\nand analyse how performance develops as a function of model characteristics\nlike number of parameters, or type of training. We find that while there is a\nclear relationship between number of parameters and performance, there is still\na wide spread of performance points within a given size bracket, which is to be\naccounted for by training parameters such as fine-tuning data quality and\nmethod. From a more practical angle, we also find a certain degree of\nunpredictability about performance across access methods, possible due to\nunexposed sampling parameters, and a, very welcome, performance stability\nagainst at least moderate weight quantisation during inference.",
+      "upvotes": 9
+    },
+    {
+      "title": "ClotheDreamer: Text-Guided Garment Generation with 3D Gaussians",
+      "url": "https://huggingface.co/papers/2406.16815",
+      "authors": [
+        "Shijie Zhang",
+        "Jinkun Hao",
+        "Dongjin Huang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.16815.pdf",
+      "abstract": "High-fidelity 3D garment synthesis from text is desirable yet challenging for\ndigital avatar creation. Recent diffusion-based approaches via Score\nDistillation Sampling (SDS) have enabled new possibilities but either\nintricately couple with human body or struggle to reuse. We introduce\nClotheDreamer, a 3D Gaussian-based method for generating wearable,\nproduction-ready 3D garment assets from text prompts. We propose a novel\nrepresentation Disentangled Clothe Gaussian Splatting (DCGS) to enable separate\noptimization. DCGS represents clothed avatar as one Gaussian model but freezes\nbody Gaussian splats. To enhance quality and completeness, we incorporate\nbidirectional SDS to supervise clothed avatar and garment RGBD renderings\nrespectively with pose conditions and propose a new pruning strategy for loose\nclothing. Our approach can also support custom clothing templates as input.\nBenefiting from our design, the synthetic 3D garment can be easily applied to\nvirtual try-on and support physically accurate animation. Extensive experiments\nshowcase our method's superior and competitive performance. Our project page is\nat https://ggxxii.github.io/clothedreamer.",
+      "upvotes": 7
+    },
+    {
+      "title": "Found in the Middle: Calibrating Positional Attention Bias Improves Long Context Utilization",
+      "url": "https://huggingface.co/papers/2406.16008",
+      "authors": [
+        "Chun-Liang Li",
+        "Zifeng Wang",
+        "Long T. Le",
+        "Abhishek Kumar",
+        "James Glass",
+        "Alexander Ratner",
+        "Ranjay Krishna",
+        "Tomas Pfister"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.16008.pdf",
+      "abstract": "Large language models (LLMs), even when specifically trained to process long\ninput contexts, struggle to capture relevant information located in the middle\nof their input. This phenomenon has been known as the lost-in-the-middle\nproblem. In this work, we make three contributions. First, we set out to\nunderstand the factors that cause this phenomenon. In doing so, we establish a\nconnection between lost-in-the-middle to LLMs' intrinsic attention bias: LLMs\nexhibit a U-shaped attention bias where the tokens at the beginning and at the\nend of its input receive higher attention, regardless of their relevance.\nSecond, we mitigate this positional bias through a calibration mechanism,\nfound-in-the-middle, that allows the model to attend to contexts faithfully\naccording to their relevance, even though when they are in the middle. Third,\nwe show found-in-the-middle not only achieves better performance in locating\nrelevant information within a long context, but also eventually leads to\nimproved retrieval-augmented generation (RAG) performance across various tasks,\noutperforming existing methods by up to 15 percentage points. These findings\nopen up future directions in understanding LLM attention bias and its potential\nconsequences.",
+      "upvotes": 6
+    },
+    {
+      "title": "IRASim: Learning Interactive Real-Robot Action Simulators",
+      "url": "https://huggingface.co/papers/2406.14540",
+      "authors": [
+        "Song Guo",
+        "Yuxiao Liu",
+        "Chilam Cheang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.14540.pdf",
+      "abstract": "Scalable robot learning in the real world is limited by the cost and safety\nissues of real robots. In addition, rolling out robot trajectories in the real\nworld can be time-consuming and labor-intensive. In this paper, we propose to\nlearn an interactive real-robot action simulator as an alternative. We\nintroduce a novel method, IRASim, which leverages the power of generative\nmodels to generate extremely realistic videos of a robot arm that executes a\ngiven action trajectory, starting from an initial given frame. To validate the\neffectiveness of our method, we create a new benchmark, IRASim Benchmark, based\non three real-robot datasets and perform extensive experiments on the\nbenchmark. Results show that IRASim outperforms all the baseline methods and is\nmore preferable in human evaluations. We hope that IRASim can serve as an\neffective and scalable approach to enhance robot learning in the real world. To\npromote research for generative real-robot action simulators, we open-source\ncode, benchmark, and checkpoints at https: //gen-irasim.github.io.",
+      "upvotes": 6
+    },
+    {
+      "title": "Can Few-shot Work in Long-Context? Recycling the Context to Generate Demonstrations",
+      "url": "https://huggingface.co/papers/2406.13632",
+      "authors": [
+        "Arie Cattan",
+        "Alex Fabrikant",
+        "Jonathan Herzig",
+        "Roee Aharoni",
+        "Hannah Rashkin",
+        "Dror Marcus",
+        "Avinatan Hassidim",
+        "Yossi Matias",
+        "Idan Szpektor",
+        "Avi Caciularu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.13632.pdf",
+      "abstract": "Despite recent advancements in Large Language Models (LLMs), their\nperformance on tasks involving long contexts remains sub-optimal. In-Context\nLearning (ICL) with few-shot examples may be an appealing solution to enhance\nLLM performance in this scenario; However, naively adding ICL examples with\nlong context introduces challenges, including substantial token overhead added\nfor each few-shot example and context mismatch between the demonstrations and\nthe target query. In this work, we propose to automatically generate few-shot\nexamples for long context QA tasks by recycling contexts. Specifically, given a\nlong input context (1-3k tokens) and a query, we generate additional\nquery-output pairs from the given context as few-shot examples, while\nintroducing the context only once. This ensures that the demonstrations are\nleveraging the same context as the target query while only adding a small\nnumber of tokens to the prompt. We further enhance each demonstration by\ninstructing the model to explicitly identify the relevant paragraphs before the\nanswer, which improves performance while providing fine-grained attribution to\nthe answer source. We apply our method on multiple LLMs and obtain substantial\nimprovements (+23\\% on average across models) on various QA datasets with long\ncontext, especially when the answer lies within the middle of the context.\nSurprisingly, despite introducing only single-hop ICL examples, LLMs also\nsuccessfully generalize to multi-hop long-context QA using our approach.",
+      "upvotes": 5
+    },
+    {
+      "title": "video-SALMONN: Speech-Enhanced Audio-Visual Large Language Models",
+      "url": "https://huggingface.co/papers/2406.15704",
+      "authors": [
+        "Wenyi Yu",
+        "Tian Tan",
+        "Wei Li",
+        "Lu Lu",
+        "Zejun Ma",
+        "Yuxuan Wang",
+        "Chao Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.15704.pdf",
+      "abstract": "Speech understanding as an element of the more generic video understanding\nusing audio-visual large language models (av-LLMs) is a crucial yet\nunderstudied aspect. This paper proposes video-SALMONN, a single end-to-end\nav-LLM for video processing, which can understand not only visual frame\nsequences, audio events and music, but speech as well. To obtain fine-grained\ntemporal information required by speech understanding, while keeping efficient\nfor other video elements, this paper proposes a novel multi-resolution causal\nQ-Former (MRC Q-Former) structure to connect pre-trained audio-visual encoders\nand the backbone large language model. Moreover, dedicated training approaches\nincluding the diversity loss and the unpaired audio-visual mixed training\nscheme are proposed to avoid frames or modality dominance. On the introduced\nspeech-audio-visual evaluation benchmark, video-SALMONN achieves more than 25\\%\nabsolute accuracy improvements on the video-QA task and over 30\\% absolute\naccuracy improvements on audio-visual QA tasks with human speech. In addition,\nvideo-SALMONN demonstrates remarkable video comprehension and reasoning\nabilities on tasks that are unprecedented by other av-LLMs. Our training code\nand model checkpoints are available at\n\\url{https://github.com/bytedance/SALMONN/}.",
+      "upvotes": 5
+    },
+    {
+      "title": "Repulsive Score Distillation for Diverse Sampling of Diffusion Models",
+      "url": "https://huggingface.co/papers/2406.16683",
+      "authors": [
+        "Morteza Mardani",
+        "Santiago Segarra"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.16683.pdf",
+      "abstract": "Score distillation sampling has been pivotal for integrating diffusion models\ninto generation of complex visuals. Despite impressive results it suffers from\nmode collapse and lack of diversity. To cope with this challenge, we leverage\nthe gradient flow interpretation of score distillation to propose Repulsive\nScore Distillation (RSD). In particular, we propose a variational framework\nbased on repulsion of an ensemble of particles that promotes diversity. Using a\nvariational approximation that incorporates a coupling among particles, the\nrepulsion appears as a simple regularization that allows interaction of\nparticles based on their relative pairwise similarity, measured e.g., via\nradial basis kernels. We design RSD for both unconstrained and constrained\nsampling scenarios. For constrained sampling we focus on inverse problems in\nthe latent space that leads to an augmented variational formulation, that\nstrikes a good balance between compute, quality and diversity. Our extensive\nexperiments for text-to-image generation, and inverse problems demonstrate that\nRSD achieves a superior trade-off between diversity and quality compared with\nstate-of-the-art alternatives.",
+      "upvotes": 4
+    },
+    {
+      "title": "OlympicArena Medal Ranks: Who Is the Most Intelligent AI So Far?",
+      "url": "https://huggingface.co/papers/2406.16772",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2406.16772.pdf",
+      "abstract": "In this report, we pose the following question: Who is the most intelligent\nAI model to date, as measured by the OlympicArena (an Olympic-level,\nmulti-discipline, multi-modal benchmark for superintelligent AI)? We\nspecifically focus on the most recently released models: Claude-3.5-Sonnet,\nGemini-1.5-Pro, and GPT-4o. For the first time, we propose using an Olympic\nmedal Table approach to rank AI models based on their comprehensive performance\nacross various disciplines. Empirical results reveal: (1) Claude-3.5-Sonnet\nshows highly competitive overall performance over GPT-4o, even surpassing\nGPT-4o on a few subjects (i.e., Physics, Chemistry, and Biology). (2)\nGemini-1.5-Pro and GPT-4V are ranked consecutively just behind GPT-4o and\nClaude-3.5-Sonnet, but with a clear performance gap between them. (3) The\nperformance of AI models from the open-source community significantly lags\nbehind these proprietary models. (4) The performance of these models on this\nbenchmark has been less than satisfactory, indicating that we still have a long\nway to go before achieving superintelligence. We remain committed to\ncontinuously tracking and evaluating the performance of the latest powerful\nmodels on this benchmark (available at\nhttps://github.com/GAIR-NLP/OlympicArena).",
+      "upvotes": 2
+    }
+  ]
+}

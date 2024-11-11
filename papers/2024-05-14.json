@@ -1,0 +1,123 @@
+{
+  "date": "2024-05-14",
+  "papers": [
+    {
+      "title": "What matters when building vision-language models?",
+      "url": "https://huggingface.co/papers/2405.02246",
+      "authors": [
+        "Matthieu Cord"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.02246.pdf",
+      "abstract": "The growing interest in vision-language models (VLMs) has been driven by\nimprovements in large language models and vision transformers. Despite the\nabundance of literature on this subject, we observe that critical decisions\nregarding the design of VLMs are often not justified. We argue that these\nunsupported decisions impede progress in the field by making it difficult to\nidentify which choices improve model performance. To address this issue, we\nconduct extensive experiments around pre-trained models, architecture choice,\ndata, and training methods. Our consolidation of findings includes the\ndevelopment of Idefics2, an efficient foundational VLM of 8 billion parameters.\nIdefics2 achieves state-of-the-art performance within its size category across\nvarious multimodal benchmarks, and is often on par with models four times its\nsize. We release the model (base, instructed, and chat) along with the datasets\ncreated for its training.",
+      "upvotes": 98
+    },
+    {
+      "title": "RLHF Workflow: From Reward Modeling to Online RLHF",
+      "url": "https://huggingface.co/papers/2405.07863",
+      "authors": [
+        "Han Zhao",
+        "Tong Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.07863.pdf",
+      "abstract": "We present the workflow of Online Iterative Reinforcement Learning from Human\nFeedback (RLHF) in this technical report, which is widely reported to\noutperform its offline counterpart by a large margin in the recent large\nlanguage model (LLM) literature. However, existing open-source RLHF projects\nare still largely confined to the offline learning setting. In this technical\nreport, we aim to fill in this gap and provide a detailed recipe that is easy\nto reproduce for online iterative RLHF. In particular, since online human\nfeedback is usually infeasible for open-source communities with limited\nresources, we start by constructing preference models using a diverse set of\nopen-source datasets and use the constructed proxy preference model to\napproximate human feedback. Then, we discuss the theoretical insights and\nalgorithmic principles behind online iterative RLHF, followed by a detailed\npractical implementation. Our trained LLM, SFR-Iterative-DPO-LLaMA-3-8B-R,\nachieves impressive performance on LLM chatbot benchmarks, including\nAlpacaEval-2, Arena-Hard, and MT-Bench, as well as other academic benchmarks\nsuch as HumanEval and TruthfulQA. We have shown that supervised fine-tuning\n(SFT) and iterative RLHF can obtain state-of-the-art performance with fully\nopen-source datasets. Further, we have made our models, curated datasets, and\ncomprehensive step-by-step code guidebooks publicly available. Please refer to\nhttps://github.com/RLHFlow/RLHF-Reward-Modeling and\nhttps://github.com/RLHFlow/Online-RLHF for more detailed information.",
+      "upvotes": 67
+    },
+    {
+      "title": "SUTRA: Scalable Multilingual Language Model Architecture",
+      "url": "https://huggingface.co/papers/2405.06694",
+      "authors": [
+        "Simon Gibbs"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.06694.pdf",
+      "abstract": "In this paper, we introduce SUTRA, multilingual Large Language Model\narchitecture capable of understanding, reasoning, and generating text in over\n50 languages. SUTRA's design uniquely decouples core conceptual understanding\nfrom language-specific processing, which facilitates scalable and efficient\nmultilingual alignment and learning. Employing a Mixture of Experts framework\nboth in language and concept processing, SUTRA demonstrates both computational\nefficiency and responsiveness. Through extensive evaluations, SUTRA is\ndemonstrated to surpass existing models like GPT-3.5, Llama2 by 20-30% on\nleading Massive Multitask Language Understanding (MMLU) benchmarks for\nmultilingual tasks. SUTRA models are also online LLMs that can use knowledge\nfrom the internet to provide hallucination-free, factual and up-to-date\nresponses while retaining their multilingual capabilities. Furthermore, we\nexplore the broader implications of its architecture for the future of\nmultilingual AI, highlighting its potential to democratize access to AI\ntechnology globally and to improve the equity and utility of AI in regions with\npredominantly non-English languages. Our findings suggest that SUTRA not only\nfills pivotal gaps in multilingual model capabilities but also establishes a\nnew benchmark for operational efficiency and scalability in AI applications.",
+      "upvotes": 37
+    },
+    {
+      "title": "SambaNova SN40L: Scaling the AI Memory Wall with Dataflow and Composition of Experts",
+      "url": "https://huggingface.co/papers/2405.07518",
+      "authors": [
+        "Darshan Gandhi",
+        "Yun Du",
+        "Angela Wang",
+        "Joshua Brot",
+        "Denis Sokolov",
+        "Apurv Vivek",
+        "Calvin Leung",
+        "Arjun Sabnis",
+        "David Jackson",
+        "Mark Luttrell",
+        "Manish K. Shah"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.07518.pdf",
+      "abstract": "Monolithic large language models (LLMs) like GPT-4 have paved the way for\nmodern generative AI applications. Training, serving, and maintaining\nmonolithic LLMs at scale, however, remains prohibitively expensive and\nchallenging. The disproportionate increase in compute-to-memory ratio of modern\nAI accelerators have created a memory wall, necessitating new methods to deploy\nAI. Composition of Experts (CoE) is an alternative modular approach that lowers\nthe cost and complexity of training and serving. However, this approach\npresents two key challenges when using conventional hardware: (1) without fused\noperations, smaller models have lower operational intensity, which makes high\nutilization more challenging to achieve; and (2) hosting a large number of\nmodels can be either prohibitively expensive or slow when dynamically switching\nbetween them.\n  In this paper, we describe how combining CoE, streaming dataflow, and a\nthree-tier memory system scales the AI memory wall. We describe Samba-CoE, a\nCoE system with 150 experts and a trillion total parameters. We deploy\nSamba-CoE on the SambaNova SN40L Reconfigurable Dataflow Unit (RDU) - a\ncommercial dataflow accelerator architecture that has been co-designed for\nenterprise inference and training applications. The chip introduces a new\nthree-tier memory system with on-chip distributed SRAM, on-package HBM, and\noff-package DDR DRAM. A dedicated inter-RDU network enables scaling up and out\nover multiple sockets. We demonstrate speedups ranging from 2x to 13x on\nvarious benchmarks running on eight RDU sockets compared with an unfused\nbaseline. We show that for CoE inference deployments, the 8-socket RDU Node\nreduces machine footprint by up to 19x, speeds up model switching time by 15x\nto 31x, and achieves an overall speedup of 3.7x over a DGX H100 and 6.6x over a\nDGX A100.",
+      "upvotes": 24
+    },
+    {
+      "title": "MS MARCO Web Search: a Large-scale Information-rich Web Dataset with Millions of Real Click Labels",
+      "url": "https://huggingface.co/papers/2405.07526",
+      "authors": [
+        "Qi Chen",
+        "Xiubo Geng",
+        "Carolyn Buractaon",
+        "Jingwen Lu",
+        "Kun Zhou",
+        "Paul Bennett",
+        "Nick Craswell",
+        "Fan Yang",
+        "Bryan Tower",
+        "Nikhil Rao",
+        "Anlei Dong",
+        "Zheng Liu",
+        "Mingqin Li",
+        "Zengzhong Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.07526.pdf",
+      "abstract": "Recent breakthroughs in large models have highlighted the critical\nsignificance of data scale, labels and modals. In this paper, we introduce MS\nMARCO Web Search, the first large-scale information-rich web dataset, featuring\nmillions of real clicked query-document labels. This dataset closely mimics\nreal-world web document and query distribution, provides rich information for\nvarious kinds of downstream tasks and encourages research in various areas,\nsuch as generic end-to-end neural indexer models, generic embedding models, and\nnext generation information access system with large language models. MS MARCO\nWeb Search offers a retrieval benchmark with three web retrieval challenge\ntasks that demand innovations in both machine learning and information\nretrieval system research domains. As the first dataset that meets large, real\nand rich data requirements, MS MARCO Web Search paves the way for future\nadvancements in AI and system research. MS MARCO Web Search dataset is\navailable at: https://github.com/microsoft/MS-MARCO-Web-Search.",
+      "upvotes": 17
+    },
+    {
+      "title": "Piccolo2: General Text Embedding with Multi-task Hybrid Loss Training",
+      "url": "https://huggingface.co/papers/2405.06932",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2405.06932.pdf",
+      "abstract": "In this report, we introduce Piccolo2, an embedding model that surpasses\nother models in the comprehensive evaluation over 6 tasks on CMTEB benchmark,\nsetting a new state-of-the-art. Piccolo2 primarily leverages an efficient\nmulti-task hybrid loss training approach, effectively harnessing textual data\nand labels from diverse downstream tasks. In addition, Piccolo2 scales up the\nembedding dimension and uses MRL training to support more flexible vector\ndimensions. The latest information of piccolo models can be accessed via:\nhttps://huggingface.co/sensenova/",
+      "upvotes": 16
+    },
+    {
+      "title": "LogoMotion: Visually Grounded Code Generation for Content-Aware Animation",
+      "url": "https://huggingface.co/papers/2405.07065",
+      "authors": [
+        "Rubaiat Habib Kazi",
+        "Matthew Fisher",
+        "Seth Walker"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.07065.pdf",
+      "abstract": "Animated logos are a compelling and ubiquitous way individuals and brands\nrepresent themselves online. Manually authoring these logos can require\nsignificant artistic skill and effort. To help novice designers animate logos,\ndesign tools currently offer templates and animation presets. However, these\nsolutions can be limited in their expressive range. Large language models have\nthe potential to help novice designers create animated logos by generating\nanimation code that is tailored to their content. In this paper, we introduce\nLogoMotion, an LLM-based system that takes in a layered document and generates\nanimated logos through visually-grounded program synthesis. We introduce\ntechniques to create an HTML representation of a canvas, identify primary and\nsecondary elements, synthesize animation code, and visually debug animation\nerrors. When compared with an industry standard tool, we find that LogoMotion\nproduces animations that are more content-aware and are on par in terms of\nquality. We conclude with a discussion of the implications of LLM-generated\nanimation for motion design.",
+      "upvotes": 16
+    },
+    {
+      "title": "Plot2Code: A Comprehensive Benchmark for Evaluating Multi-modal Large Language Models in Code Generation from Scientific Plots",
+      "url": "https://huggingface.co/papers/2405.07990",
+      "authors": [
+        "Ying Shan",
+        "Ping Luo"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.07990.pdf",
+      "abstract": "The remarkable progress of Multi-modal Large Language Models (MLLMs) has\nattracted significant attention due to their superior performance in visual\ncontexts. However, their capabilities in turning visual figure to executable\ncode, have not been evaluated thoroughly. To address this, we introduce\nPlot2Code, a comprehensive visual coding benchmark designed for a fair and\nin-depth assessment of MLLMs. We carefully collect 132 manually selected\nhigh-quality matplotlib plots across six plot types from publicly available\nmatplotlib galleries. For each plot, we carefully offer its source code, and an\ndescriptive instruction summarized by GPT-4. This approach enables Plot2Code to\nextensively evaluate MLLMs' code capabilities across various input modalities.\nFurthermore, we propose three automatic evaluation metrics, including code pass\nrate, text-match ratio, and GPT-4V overall rating, for a fine-grained\nassessment of the output code and rendered images. Instead of simply judging\npass or fail, we employ GPT-4V to make an overall judgement between the\ngenerated and reference images, which has been shown to be consistent with\nhuman evaluation. The evaluation results, which include analyses of 14 MLLMs\nsuch as the proprietary GPT-4V, Gemini-Pro, and the open-sourced Mini-Gemini,\nhighlight the substantial challenges presented by Plot2Code. With Plot2Code, we\nreveal that most existing MLLMs struggle with visual coding for text-dense\nplots, heavily relying on textual instruction. We hope that the evaluation\nresults from Plot2Code on visual coding will guide the future development of\nMLLMs. All data involved with Plot2Code are available at\nhttps://huggingface.co/datasets/TencentARC/Plot2Code.",
+      "upvotes": 16
+    },
+    {
+      "title": "Large Language Models as Planning Domain Generators",
+      "url": "https://huggingface.co/papers/2405.06650",
+      "authors": [
+        "Kavitha Srinivas",
+        "Junkyu Lee",
+        "Michael Katz",
+        "Shirin Sohrabi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.06650.pdf",
+      "abstract": "Developing domain models is one of the few remaining places that require\nmanual human labor in AI planning. Thus, in order to make planning more\naccessible, it is desirable to automate the process of domain model generation.\nTo this end, we investigate if large language models (LLMs) can be used to\ngenerate planning domain models from simple textual descriptions. Specifically,\nwe introduce a framework for automated evaluation of LLM-generated domains by\ncomparing the sets of plans for domain instances. Finally, we perform an\nempirical analysis of 7 large language models, including coding and chat models\nacross 9 different planning domains, and under three classes of natural\nlanguage domain descriptions. Our results indicate that LLMs, particularly\nthose with high parameter counts, exhibit a moderate level of proficiency in\ngenerating correct planning domains from natural language descriptions. Our\ncode is available at https://github.com/IBM/NL2PDDL.",
+      "upvotes": 9
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "date": "2024-02-07",
+  "papers": [
+    {
+      "title": "Self-Discover: Large Language Models Self-Compose Reasoning Structures",
+      "url": "https://huggingface.co/papers/2402.03620",
+      "authors": [
+        "Jay Pujara",
+        "Xiang Ren",
+        "Xinyun Chen",
+        "Heng-Tze Cheng",
+        "Quoc V. Le",
+        "Ed H. Chi",
+        "Swaroop Mishra",
+        "Huaixiu Steven Zheng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.03620.pdf",
+      "abstract": "We introduce SELF-DISCOVER, a general framework for LLMs to self-discover the\ntask-intrinsic reasoning structures to tackle complex reasoning problems that\nare challenging for typical prompting methods. Core to the framework is a\nself-discovery process where LLMs select multiple atomic reasoning modules such\nas critical thinking and step-by-step thinking, and compose them into an\nexplicit reasoning structure for LLMs to follow during decoding. SELF-DISCOVER\nsubstantially improves GPT-4 and PaLM 2's performance on challenging reasoning\nbenchmarks such as BigBench-Hard, grounded agent reasoning, and MATH, by as\nmuch as 32% compared to Chain of Thought (CoT). Furthermore, SELF-DISCOVER\noutperforms inference-intensive methods such as CoT-Self-Consistency by more\nthan 20%, while requiring 10-40x fewer inference compute. Finally, we show that\nthe self-discovered reasoning structures are universally applicable across\nmodel families: from PaLM 2-L to GPT-4, and from GPT-4 to Llama2, and share\ncommonalities with human reasoning patterns.",
+      "upvotes": 109
+    },
+    {
+      "title": "Can Mamba Learn How to Learn? A Comparative Study on In-Context Learning Tasks",
+      "url": "https://huggingface.co/papers/2402.04248",
+      "authors": [
+        "Jongho Park",
+        "Jaeseung Park",
+        "Nayoung Lee",
+        "Jaewoong Cho",
+        "Samet Oymak",
+        "Kangwook Lee"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.04248.pdf",
+      "abstract": "State-space models (SSMs), such as Mamba Gu & Dao (2034), have been proposed\nas alternatives to Transformer networks in language modeling, by incorporating\ngating, convolutions, and input-dependent token selection to mitigate the\nquadratic cost of multi-head attention. Although SSMs exhibit competitive\nperformance, their in-context learning (ICL) capabilities, a remarkable\nemergent property of modern language models that enables task execution without\nparameter optimization, remain underexplored compared to Transformers. In this\nstudy, we evaluate the ICL performance of SSMs, focusing on Mamba, against\nTransformer models across various tasks. Our results show that SSMs perform\ncomparably to Transformers in standard regression ICL tasks, while\noutperforming them in tasks like sparse parity learning. However, SSMs fall\nshort in tasks involving non-standard retrieval functionality. To address these\nlimitations, we introduce a hybrid model, \\variant, that combines Mamba with\nattention blocks, surpassing individual models in tasks where they struggle\nindependently. Our findings suggest that hybrid architectures offer promising\navenues for enhancing ICL in language models.",
+      "upvotes": 30
+    },
+    {
+      "title": "EVA-CLIP-18B: Scaling CLIP to 18 Billion Parameters",
+      "url": "https://huggingface.co/papers/2402.04252",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2402.04252.pdf",
+      "abstract": "Scaling up contrastive language-image pretraining (CLIP) is critical for\nempowering both vision and multimodal models. We present EVA-CLIP-18B, the\nlargest and most powerful open-source CLIP model to date, with 18-billion\nparameters. With only 6-billion training samples seen, EVA-CLIP-18B achieves an\nexceptional 80.7% zero-shot top-1 accuracy averaged across 27 widely recognized\nimage classification benchmarks, outperforming its forerunner EVA-CLIP\n(5-billion parameters) and other open-source CLIP models by a large margin.\nRemarkably, we observe a consistent performance improvement with the model size\nscaling of EVA-CLIP, despite maintaining a constant training dataset of\n2-billion image-text pairs from LAION-2B and COYO-700M. This dataset is openly\navailable and much smaller than the in-house datasets (e.g., DFN-5B, WebLI-10B)\nemployed in other state-of-the-art CLIP models. EVA-CLIP-18B demonstrates the\npotential of EVA-style weak-to-strong visual model scaling. With our model\nweights made publicly available, we hope to facilitate future research in\nvision and multimodal foundation models.",
+      "upvotes": 25
+    },
+    {
+      "title": "Scaling Laws for Downstream Task Performance of Large Language Models",
+      "url": "https://huggingface.co/papers/2402.04177",
+      "authors": [
+        "Natalia Ponomareva",
+        "Hussein Hazimeh",
+        "Dimitris Paparas",
+        "Sergei Vassilvitskii"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.04177.pdf",
+      "abstract": "Scaling laws provide important insights that can guide the design of large\nlanguage models (LLMs). Existing work has primarily focused on studying scaling\nlaws for pretraining (upstream) loss. However, in transfer learning settings,\nin which LLMs are pretrained on an unsupervised dataset and then finetuned on a\ndownstream task, we often also care about the downstream performance. In this\nwork, we study the scaling behavior in a transfer learning setting, where LLMs\nare finetuned for machine translation tasks. Specifically, we investigate how\nthe choice of the pretraining data and its size affect downstream performance\n(translation quality) as judged by two metrics: downstream cross-entropy and\nBLEU score. Our experiments indicate that the size of the finetuning dataset\nand the distribution alignment between the pretraining and downstream data\nsignificantly influence the scaling behavior. With sufficient alignment, both\ndownstream cross-entropy and BLEU score improve monotonically with more\npretraining data. In such cases, we show that it is possible to predict the\ndownstream BLEU score with good accuracy using a log-law. However, there are\nalso cases where moderate misalignment causes the BLEU score to fluctuate or\nget worse with more pretraining, whereas downstream cross-entropy monotonically\nimproves. By analyzing these observations, we provide new practical insights\nfor choosing appropriate pretraining data.",
+      "upvotes": 17
+    },
+    {
+      "title": "MusicRL: Aligning Music Generation to Human Preferences",
+      "url": "https://huggingface.co/papers/2402.04229",
+      "authors": [
+        "Geoffrey Cideron",
+        "Sertan Girgin",
+        "Mauro Verzetti",
+        "Damien Vincent",
+        "Matej Kastelic",
+        "Zalán Borsos",
+        "Brian McWilliams",
+        "Victor Ungureanu",
+        "Olivier Bachem",
+        "Olivier Pietquin",
+        "Matthieu Geist",
+        "Léonard Hussenot",
+        "Neil Zeghidour",
+        "Andrea Agostinelli"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.04229.pdf",
+      "abstract": "We propose MusicRL, the first music generation system finetuned from human\nfeedback. Appreciation of text-to-music models is particularly subjective since\nthe concept of musicality as well as the specific intention behind a caption\nare user-dependent (e.g. a caption such as \"upbeat work-out music\" can map to a\nretro guitar solo or a techno pop beat). Not only this makes supervised\ntraining of such models challenging, but it also calls for integrating\ncontinuous human feedback in their post-deployment finetuning. MusicRL is a\npretrained autoregressive MusicLM (Agostinelli et al., 2023) model of discrete\naudio tokens finetuned with reinforcement learning to maximise sequence-level\nrewards. We design reward functions related specifically to text-adherence and\naudio quality with the help from selected raters, and use those to finetune\nMusicLM into MusicRL-R. We deploy MusicLM to users and collect a substantial\ndataset comprising 300,000 pairwise preferences. Using Reinforcement Learning\nfrom Human Feedback (RLHF), we train MusicRL-U, the first text-to-music model\nthat incorporates human feedback at scale. Human evaluations show that both\nMusicRL-R and MusicRL-U are preferred to the baseline. Ultimately, MusicRL-RU\ncombines the two approaches and results in the best model according to human\nraters. Ablation studies shed light on the musical attributes influencing human\npreferences, indicating that text adherence and quality only account for a part\nof it. This underscores the prevalence of subjectivity in musical appreciation\nand calls for further involvement of human listeners in the finetuning of music\ngeneration models.",
+      "upvotes": 16
+    },
+    {
+      "title": "MobileVLM V2: Faster and Stronger Baseline for Vision Language Model",
+      "url": "https://huggingface.co/papers/2402.03766",
+      "authors": [
+        "Xiangxiang Chu",
+        "Limeng Qiao",
+        "Xinyu Zhang",
+        "Shuang Xu",
+        "Fei Wei",
+        "Yang Yang",
+        "Xiaofei Sun",
+        "Yiming Hu",
+        "Xinyang Lin",
+        "Chunhua Shen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.03766.pdf",
+      "abstract": "We introduce MobileVLM V2, a family of significantly improved vision language\nmodels upon MobileVLM, which proves that a delicate orchestration of novel\narchitectural design, an improved training scheme tailored for mobile VLMs, and\nrich high-quality dataset curation can substantially benefit VLMs' performance.\nSpecifically, MobileVLM V2 1.7B achieves better or on-par performance on\nstandard VLM benchmarks compared with much larger VLMs at the 3B scale.\nNotably, our 3B model outperforms a large variety of VLMs at the 7B+ scale. Our\nmodels will be released at https://github.com/Meituan-AutoML/MobileVLM .",
+      "upvotes": 12
+    },
+    {
+      "title": "Vision Superalignment: Weak-to-Strong Generalization for Vision Foundation Models",
+      "url": "https://huggingface.co/papers/2402.03749",
+      "authors": [
+        "Jianyuan Guo",
+        "Hanting Chen",
+        "Chengcheng Wang",
+        "Chang Xu",
+        "Yunhe Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.03749.pdf",
+      "abstract": "Recent advancements in large language models have sparked interest in their\nextraordinary and near-superhuman capabilities, leading researchers to explore\nmethods for evaluating and optimizing these abilities, which is called\nsuperalignment. In this context, our paper delves into the realm of vision\nfoundation models, focusing on the concept of weak-to-strong generalization,\nwhich involves using a weaker model to supervise a stronger one, aiming to\nenhance the latter's capabilities beyond the former's limits. We introduce a\nnovel and adaptively adjustable loss function for weak-to-strong supervision.\nOur comprehensive experiments span various scenarios, including few-shot\nlearning, transfer learning, noisy label learning, and common knowledge\ndistillation settings. The results are striking: our approach not only exceeds\nthe performance benchmarks set by strong-to-strong generalization but also\nsurpasses the outcomes of fine-tuning strong models with whole datasets. This\ncompelling evidence underscores the significant potential of weak-to-strong\ngeneralization, showcasing its capability to substantially elevate the\nperformance of vision foundation models. The code is available at\nhttps://github.com/ggjy/vision_weak_to_strong.",
+      "upvotes": 12
+    },
+    {
+      "title": "Multi-line AI-assisted Code Authoring",
+      "url": "https://huggingface.co/papers/2402.04141",
+      "authors": [
+        "Omer Dunay",
+        "Daniel Cheng",
+        "Parth Thakkar",
+        "Peter C Rigby",
+        "Andy Chiu",
+        "Imad Ahmad",
+        "Arun Ganesan",
+        "Chandra Maddila",
+        "Vijayaraghavan Murali",
+        "Ali Tayyebi",
+        "Nachiappan Nagappan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.04141.pdf",
+      "abstract": "CodeCompose is an AI-assisted code authoring tool powered by large language\nmodels (LLMs) that provides inline suggestions to 10's of thousands of\ndevelopers at Meta. In this paper, we present how we scaled the product from\ndisplaying single-line suggestions to multi-line suggestions. This evolution\nrequired us to overcome several unique challenges in improving the usability of\nthese suggestions for developers.\n  First, we discuss how multi-line suggestions can have a 'jarring' effect, as\nthe LLM's suggestions constantly move around the developer's existing code,\nwhich would otherwise result in decreased productivity and satisfaction.\n  Second, multi-line suggestions take significantly longer to generate; hence\nwe present several innovative investments we made to reduce the perceived\nlatency for users. These model-hosting optimizations sped up multi-line\nsuggestion latency by 2.5x.\n  Finally, we conduct experiments on 10's of thousands of engineers to\nunderstand how multi-line suggestions impact the user experience and contrast\nthis with single-line suggestions. Our experiments reveal that (i) multi-line\nsuggestions account for 42% of total characters accepted (despite only\naccounting for 16% for displayed suggestions) (ii) multi-line suggestions\nalmost doubled the percentage of keystrokes saved for users from 9% to 17%.\nMulti-line CodeCompose has been rolled out to all engineers at Meta, and less\nthan 1% of engineers have opted out of multi-line suggestions.",
+      "upvotes": 9
+    },
+    {
+      "title": "IMUSIC: IMU-based Facial Expression Capture",
+      "url": "https://huggingface.co/papers/2402.03944",
+      "authors": [
+        "Youjia Wang",
+        "Yiwen Wu",
+        "Ruiqian Li",
+        "Hengan Zhou",
+        "Hongyang Lin",
+        "Yingwenqi Jiang",
+        "Yingsheng Zhu",
+        "Guanpeng Long",
+        "Jingya Wang",
+        "Lan Xu",
+        "Jingyi Yu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.03944.pdf",
+      "abstract": "For facial motion capture and analysis, the dominated solutions are generally\nbased on visual cues, which cannot protect privacy and are vulnerable to\nocclusions. Inertial measurement units (IMUs) serve as potential rescues yet\nare mainly adopted for full-body motion capture. In this paper, we propose\nIMUSIC to fill the gap, a novel path for facial expression capture using purely\nIMU signals, significantly distant from previous visual solutions.The key\ndesign in our IMUSIC is a trilogy. We first design micro-IMUs to suit facial\ncapture, companion with an anatomy-driven IMU placement scheme. Then, we\ncontribute a novel IMU-ARKit dataset, which provides rich paired IMU/visual\nsignals for diverse facial expressions and performances. Such unique\nmulti-modality brings huge potential for future directions like IMU-based\nfacial behavior analysis. Moreover, utilizing IMU-ARKit, we introduce a strong\nbaseline approach to accurately predict facial blendshape parameters from\npurely IMU signals. Specifically, we tailor a Transformer diffusion model with\na two-stage training strategy for this novel tracking task. The IMUSIC\nframework empowers us to perform accurate facial capture in scenarios where\nvisual methods falter and simultaneously safeguard user privacy. We conduct\nextensive experiments about both the IMU configuration and technical components\nto validate the effectiveness of our IMUSIC approach. Notably, IMUSIC enables\nvarious potential and novel applications, i.e., privacy-protecting facial\ncapture, hybrid capture against occlusions, or detecting minute facial\nmovements that are often invisible through visual cues. We will release our\ndataset and implementations to enrich more possibilities of facial capture and\nanalysis in our community.",
+      "upvotes": 8
+    },
+    {
+      "title": "Diffusion World Model",
+      "url": "https://huggingface.co/papers/2402.03570",
+      "authors": [
+        "Amy Zhang",
+        "Yuandong Tian",
+        "Qinqing Zheng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.03570.pdf",
+      "abstract": "We introduce Diffusion World Model (DWM), a conditional diffusion model\ncapable of predicting multistep future states and rewards concurrently. As\nopposed to traditional one-step dynamics models, DWM offers long-horizon\npredictions in a single forward pass, eliminating the need for recursive\nquires. We integrate DWM into model-based value estimation, where the\nshort-term return is simulated by future trajectories sampled from DWM. In the\ncontext of offline reinforcement learning, DWM can be viewed as a conservative\nvalue regularization through generative modeling. Alternatively, it can be seen\nas a data source that enables offline Q-learning with synthetic data. Our\nexperiments on the D4RL dataset confirm the robustness of DWM to long-horizon\nsimulation. In terms of absolute performance, DWM significantly surpasses\none-step dynamics models with a 44% performance gain, and achieves\nstate-of-the-art performance.",
+      "upvotes": 7
+    },
+    {
+      "title": "CogCoM: Train Large Vision-Language Models Diving into Details through Chain of Manipulations",
+      "url": "https://huggingface.co/papers/2402.04236",
+      "authors": [
+        "Ji Qi",
+        "Ming Ding",
+        "Weihan Wang",
+        "Qingsong Lv",
+        "Wenyi Hong",
+        "Bin Xu",
+        "Lei Hou",
+        "Juanzi Li",
+        "Yuxiao Dong",
+        "Jie Tang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.04236.pdf",
+      "abstract": "Vision-Language Models (VLMs) have demonstrated their widespread viability\nthanks to extensive training in aligning visual instructions to answers.\nHowever, this conclusive alignment leads models to ignore critical visual\nreasoning, and further result in failures on meticulous visual problems and\nunfaithful responses. In this paper, we propose Chain of Manipulations, a\nmechanism that enables VLMs to solve problems with a series of manipulations,\nwhere each manipulation refers to an operation on the visual input, either from\nintrinsic abilities (e.g., grounding) acquired through prior training or from\nimitating human-like behaviors (e.g., zoom in). This mechanism encourages VLMs\nto generate faithful responses with evidential visual reasoning, and permits\nusers to trace error causes in the interpretable paths. We thus train CogCoM, a\ngeneral 17B VLM with a memory-based compatible architecture endowed this\nreasoning mechanism. Experiments show that our model achieves the\nstate-of-the-art performance across 8 benchmarks from 3 categories, and a\nlimited number of training steps with the data swiftly gains a competitive\nperformance. The code and data are publicly available at\nhttps://github.com/THUDM/CogCoM.",
+      "upvotes": 7
+    },
+    {
+      "title": "EscherNet: A Generative Model for Scalable View Synthesis",
+      "url": "https://huggingface.co/papers/2402.03908",
+      "authors": [
+        "Xiaoyang Lyu",
+        "Xiaojuan Qi",
+        "Andrew J. Davison"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.03908.pdf",
+      "abstract": "We introduce EscherNet, a multi-view conditioned diffusion model for view\nsynthesis. EscherNet learns implicit and generative 3D representations coupled\nwith a specialised camera positional encoding, allowing precise and continuous\nrelative control of the camera transformation between an arbitrary number of\nreference and target views. EscherNet offers exceptional generality,\nflexibility, and scalability in view synthesis -- it can generate more than 100\nconsistent target views simultaneously on a single consumer-grade GPU, despite\nbeing trained with a fixed number of 3 reference views to 3 target views. As a\nresult, EscherNet not only addresses zero-shot novel view synthesis, but also\nnaturally unifies single- and multi-image 3D reconstruction, combining these\ndiverse tasks into a single, cohesive framework. Our extensive experiments\ndemonstrate that EscherNet achieves state-of-the-art performance in multiple\nbenchmarks, even when compared to methods specifically tailored for each\nindividual problem. This remarkable versatility opens up new directions for\ndesigning scalable neural architectures for 3D vision. Project page:\nhttps://kxhit.github.io/EscherNet.",
+      "upvotes": 6
+    }
+  ]
+}

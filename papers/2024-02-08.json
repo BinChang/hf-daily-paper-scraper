@@ -1,0 +1,163 @@
+{
+  "date": "2024-02-08",
+  "papers": [
+    {
+      "title": "Grandmaster-Level Chess Without Search",
+      "url": "https://huggingface.co/papers/2402.04494",
+      "authors": [
+        "Grégoire Delétang",
+        "Jordi Grau-Moya",
+        "Li Kevin Wenliang",
+        "Elliot Catt",
+        "John Reid",
+        "Tim Genewein"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.04494.pdf",
+      "abstract": "The recent breakthrough successes in machine learning are mainly attributed\nto scale: namely large-scale attention-based architectures and datasets of\nunprecedented scale. This paper investigates the impact of training at scale\nfor chess. Unlike traditional chess engines that rely on complex heuristics,\nexplicit search, or a combination of both, we train a 270M parameter\ntransformer model with supervised learning on a dataset of 10 million chess\ngames. We annotate each board in the dataset with action-values provided by the\npowerful Stockfish 16 engine, leading to roughly 15 billion data points. Our\nlargest model reaches a Lichess blitz Elo of 2895 against humans, and\nsuccessfully solves a series of challenging chess puzzles, without any\ndomain-specific tweaks or explicit search algorithms. We also show that our\nmodel outperforms AlphaZero's policy and value networks (without MCTS) and\nGPT-3.5-turbo-instruct. A systematic investigation of model and dataset size\nshows that strong chess performance only arises at sufficient scale. To\nvalidate our results, we perform an extensive series of ablations of design\nchoices and hyperparameters.",
+      "upvotes": 67
+    },
+    {
+      "title": "BiLLM: Pushing the Limit of Post-Training Quantization for LLMs",
+      "url": "https://huggingface.co/papers/2402.04291",
+      "authors": [
+        "Yangdong Liu",
+        "Ying Li",
+        "Shiming Zhang",
+        "Xianglong Liu",
+        "Michele Magno",
+        "Xiaojuan Qi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.04291.pdf",
+      "abstract": "Pretrained large language models (LLMs) exhibit exceptional general language\nprocessing capabilities but come with significant demands on memory and\ncomputational resources. As a powerful compression technology, binarization can\nextremely reduce model weights to a mere 1 bit, lowering the expensive\ncomputation and memory requirements. However, existing quantization techniques\nfall short of maintaining LLM performance under ultra-low bit-widths. In\nresponse to this challenge, we present BiLLM, a groundbreaking 1-bit\npost-training quantization scheme tailored for pretrained LLMs. Based on the\nweight distribution of LLMs, BiLLM first identifies and structurally selects\nsalient weights, and minimizes the compression loss through an effective binary\nresidual approximation strategy. Moreover, considering the bell-shaped\ndistribution of the non-salient weights, we propose an optimal splitting search\nto group and binarize them accurately. BiLLM achieving for the first time\nhigh-accuracy inference (e.g. 8.41 perplexity on LLaMA2-70B) with only 1.08-bit\nweights across various LLMs families and evaluation metrics, outperforms SOTA\nquantization methods of LLM by significant margins. Moreover, BiLLM enables the\nbinarization process of the LLM with 7 billion weights within 0.5 hours on a\nsingle GPU, demonstrating satisfactory time efficiency.",
+      "upvotes": 48
+    },
+    {
+      "title": "ScreenAI: A Vision-Language Model for UI and Infographics Understanding",
+      "url": "https://huggingface.co/papers/2402.04615",
+      "authors": [
+        "Abhanshu Sharma"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.04615.pdf",
+      "abstract": "Screen user interfaces (UIs) and infographics, sharing similar visual\nlanguage and design principles, play important roles in human communication and\nhuman-machine interaction. We introduce ScreenAI, a vision-language model that\nspecializes in UI and infographics understanding. Our model improves upon the\nPaLI architecture with the flexible patching strategy of pix2struct and is\ntrained on a unique mixture of datasets. At the heart of this mixture is a\nnovel screen annotation task in which the model has to identify the type and\nlocation of UI elements. We use these text annotations to describe screens to\nLarge Language Models and automatically generate question-answering (QA), UI\nnavigation, and summarization training datasets at scale. We run ablation\nstudies to demonstrate the impact of these design choices. At only 5B\nparameters, ScreenAI achieves new state-of-the-artresults on UI- and\ninfographics-based tasks (Multi-page DocVQA, WebSRC, MoTIF and Widget\nCaptioning), and new best-in-class performance on others (Chart QA, DocVQA, and\nInfographicVQA) compared to models of similar size. Finally, we release three\nnew datasets: one focused on the screen annotation task and two others focused\non question answering.",
+      "upvotes": 38
+    },
+    {
+      "title": "Direct Language Model Alignment from Online AI Feedback",
+      "url": "https://huggingface.co/papers/2402.04792",
+      "authors": [
+        "Felipe Llinares",
+        "Thomas Mesnard",
+        "Yao Zhao",
+        "Bilal Piot"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.04792.pdf",
+      "abstract": "Direct alignment from preferences (DAP) methods, such as DPO, have recently\nemerged as efficient alternatives to reinforcement learning from human feedback\n(RLHF), that do not require a separate reward model. However, the preference\ndatasets used in DAP methods are usually collected ahead of training and never\nupdated, thus the feedback is purely offline. Moreover, responses in these\ndatasets are often sampled from a language model distinct from the one being\naligned, and since the model evolves over training, the alignment phase is\ninevitably off-policy. In this study, we posit that online feedback is key and\nimproves DAP methods. Our method, online AI feedback (OAIF), uses an LLM as\nannotator: on each training iteration, we sample two responses from the current\nmodel and prompt the LLM annotator to choose which one is preferred, thus\nproviding online feedback. Despite its simplicity, we demonstrate via human\nevaluation in several tasks that OAIF outperforms both offline DAP and RLHF\nmethods. We further show that the feedback leveraged in OAIF is easily\ncontrollable, via instruction prompts to the LLM annotator.",
+      "upvotes": 29
+    },
+    {
+      "title": "LGM: Large Multi-View Gaussian Model for High-Resolution 3D Content Creation",
+      "url": "https://huggingface.co/papers/2402.05054",
+      "authors": [
+        "Gang Zeng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.05054.pdf",
+      "abstract": "3D content creation has achieved significant progress in terms of both\nquality and speed. Although current feed-forward models can produce 3D objects\nin seconds, their resolution is constrained by the intensive computation\nrequired during training. In this paper, we introduce Large Multi-View Gaussian\nModel (LGM), a novel framework designed to generate high-resolution 3D models\nfrom text prompts or single-view images. Our key insights are two-fold: 1) 3D\nRepresentation: We propose multi-view Gaussian features as an efficient yet\npowerful representation, which can then be fused together for differentiable\nrendering. 2) 3D Backbone: We present an asymmetric U-Net as a high-throughput\nbackbone operating on multi-view images, which can be produced from text or\nsingle-view image input by leveraging multi-view diffusion models. Extensive\nexperiments demonstrate the high fidelity and efficiency of our approach.\nNotably, we maintain the fast speed to generate 3D objects within 5 seconds\nwhile boosting the training resolution to 512, thereby achieving\nhigh-resolution 3D content generation.",
+      "upvotes": 25
+    },
+    {
+      "title": "ConsistI2V: Enhancing Visual Consistency for Image-to-Video Generation",
+      "url": "https://huggingface.co/papers/2402.04324",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2402.04324.pdf",
+      "abstract": "Image-to-video (I2V) generation aims to use the initial frame (alongside a\ntext prompt) to create a video sequence. A grand challenge in I2V generation is\nto maintain visual consistency throughout the video: existing methods often\nstruggle to preserve the integrity of the subject, background, and style from\nthe first frame, as well as ensure a fluid and logical progression within the\nvideo narrative. To mitigate these issues, we propose ConsistI2V, a\ndiffusion-based method to enhance visual consistency for I2V generation.\nSpecifically, we introduce (1) spatiotemporal attention over the first frame to\nmaintain spatial and motion consistency, (2) noise initialization from the\nlow-frequency band of the first frame to enhance layout consistency. These two\napproaches enable ConsistI2V to generate highly consistent videos. We also\nextend the proposed approaches to show their potential to improve consistency\nin auto-regressive long video generation and camera motion control. To verify\nthe effectiveness of our method, we propose I2V-Bench, a comprehensive\nevaluation benchmark for I2V generation. Our automatic and human evaluation\nresults demonstrate the superiority of ConsistI2V over existing methods.",
+      "upvotes": 23
+    },
+    {
+      "title": "EfficientViT-SAM: Accelerated Segment Anything Model Without Performance Loss",
+      "url": "https://huggingface.co/papers/2402.05008",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2402.05008.pdf",
+      "abstract": "We present EfficientViT-SAM, a new family of accelerated segment anything\nmodels. We retain SAM's lightweight prompt encoder and mask decoder while\nreplacing the heavy image encoder with EfficientViT. For the training, we begin\nwith the knowledge distillation from the SAM-ViT-H image encoder to\nEfficientViT. Subsequently, we conduct end-to-end training on the SA-1B\ndataset. Benefiting from EfficientViT's efficiency and capacity,\nEfficientViT-SAM delivers 48.9x measured TensorRT speedup on A100 GPU over\nSAM-ViT-H without sacrificing performance. Our code and pre-trained models are\nreleased at https://github.com/mit-han-lab/efficientvit.",
+      "upvotes": 19
+    },
+    {
+      "title": "Hydragen: High-Throughput LLM Inference with Shared Prefixes",
+      "url": "https://huggingface.co/papers/2402.05099",
+      "authors": [
+        "Daniel Y. Fu",
+        "Christopher Ré"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.05099.pdf",
+      "abstract": "Transformer-based large language models (LLMs) are now deployed to hundreds\nof millions of users. LLM inference is commonly performed on batches of\nsequences that share a prefix, such as few-shot examples or a chatbot system\nprompt. Decoding in this large-batch setting can be bottlenecked by the\nattention operation, which reads large key-value (KV) caches from memory and\ncomputes inefficient matrix-vector products for every sequence in the batch. In\nthis work, we introduce Hydragen, a hardware-aware exact implementation of\nattention with shared prefixes. Hydragen computes attention over the shared\nprefix and unique suffixes separately. This decomposition enables efficient\nprefix attention by batching queries together across sequences, reducing\nredundant memory reads and enabling the use of hardware-friendly matrix\nmultiplications. Our method can improve end-to-end LLM throughput by up to 32x\nagainst competitive baselines, with speedup growing with the batch size and\nshared prefix length. Hydragen also enables the use of very long shared\ncontexts: with a high batch size, increasing the prefix length from 1K to 16K\ntokens decreases Hydragen throughput by less than 15%, while the throughput of\nbaselines drops by over 90%. Hydragen generalizes beyond simple prefix-suffix\ndecomposition and can be applied to tree-based prompt sharing patterns,\nallowing us to further reduce inference time on competitive programming\nproblems by 55%.",
+      "upvotes": 18
+    },
+    {
+      "title": "CodeIt: Self-Improving Language Models with Prioritized Hindsight Replay",
+      "url": "https://huggingface.co/papers/2402.04858",
+      "authors": [
+        "Auke Wiggers",
+        "Corrado Rainone",
+        "David Zhang",
+        "Taco Cohen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.04858.pdf",
+      "abstract": "Large language models are increasingly solving tasks that are commonly\nbelieved to require human-level reasoning ability. However, these models still\nperform very poorly on benchmarks of general intelligence such as the\nAbstraction and Reasoning Corpus (ARC). In this paper, we approach ARC as a\nprogramming-by-examples problem, and introduce a novel and scalable method for\nlanguage model self-improvement called Code Iteration (CodeIt). Our method\niterates between 1) program sampling and hindsight relabeling, and 2) learning\nfrom prioritized experience replay. By relabeling the goal of an episode (i.e.,\nthe target program output given input) to the realized output produced by the\nsampled program, our method effectively deals with the extreme sparsity of\nrewards in program synthesis. Applying CodeIt to the ARC dataset, we\ndemonstrate that prioritized hindsight replay, along with pre-training and\ndata-augmentation, leads to successful inter-task generalization. CodeIt is the\nfirst neuro-symbolic approach that scales to the full ARC evaluation dataset.\nOur method solves 15% of ARC evaluation tasks, achieving state-of-the-art\nperformance and outperforming existing neural and symbolic baselines.",
+      "upvotes": 14
+    },
+    {
+      "title": "The Hedgehog & the Porcupine: Expressive Linear Attentions with Softmax Mimicry",
+      "url": "https://huggingface.co/papers/2402.04347",
+      "authors": [
+        "Michael Zhang",
+        "Christopher Ré"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.04347.pdf",
+      "abstract": "Linear attentions have shown potential for improving Transformer efficiency,\nreducing attention's quadratic complexity to linear in sequence length. This\nholds exciting promise for (1) training linear Transformers from scratch, (2)\n\"finetuned-conversion\" of task-specific Transformers into linear versions that\nrecover task performance, and (3) \"pretrained-conversion\" of Transformers such\nas large language models into linear versions finetunable on downstream tasks.\nHowever, linear attentions often underperform standard softmax attention in\nquality. To close this performance gap, we find prior linear attentions lack\nkey properties of softmax attention tied to good performance: low-entropy (or\n\"spiky\") weights and dot-product monotonicity. We further observe surprisingly\nsimple feature maps that retain these properties and match softmax performance,\nbut are inefficient to compute in linear attention. We thus propose Hedgehog, a\nlearnable linear attention that retains the spiky and monotonic properties of\nsoftmax attention while maintaining linear complexity. Hedgehog uses simple\ntrainable MLPs to produce attention weights mimicking softmax attention.\nExperiments show Hedgehog recovers over 99% of standard Transformer quality in\ntrain-from-scratch and finetuned-conversion settings, outperforming prior\nlinear attentions up to 6 perplexity points on WikiText-103 with causal GPTs,\nand up to 8.7 GLUE score points on finetuned bidirectional BERTs. Hedgehog also\nenables pretrained-conversion. Converting a pretrained GPT-2 into a linear\nattention variant achieves state-of-the-art 16.7 perplexity on WikiText-103 for\n125M subquadratic decoder models. We finally turn a pretrained Llama-2 7B into\na viable linear attention Llama. With low-rank adaptation, Hedgehog-Llama2 7B\nachieves 28.1 higher ROUGE-1 points over the base standard attention model,\nwhere prior linear attentions lead to 16.5 point drops.",
+      "upvotes": 13
+    },
+    {
+      "title": "Fast Timing-Conditioned Latent Audio Diffusion",
+      "url": "https://huggingface.co/papers/2402.04825",
+      "authors": [
+        "Jordi Pons"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.04825.pdf",
+      "abstract": "Generating long-form 44.1kHz stereo audio from text prompts can be\ncomputationally demanding. Further, most previous works do not tackle that\nmusic and sound effects naturally vary in their duration. Our research focuses\non the efficient generation of long-form, variable-length stereo music and\nsounds at 44.1kHz using text prompts with a generative model. Stable Audio is\nbased on latent diffusion, with its latent defined by a fully-convolutional\nvariational autoencoder. It is conditioned on text prompts as well as timing\nembeddings, allowing for fine control over both the content and length of the\ngenerated music and sounds. Stable Audio is capable of rendering stereo signals\nof up to 95 sec at 44.1kHz in 8 sec on an A100 GPU. Despite its compute\nefficiency and fast inference, it is one of the best in two public\ntext-to-music and -audio benchmarks and, differently from state-of-the-art\nmodels, can generate music with structure and stereo sounds.",
+      "upvotes": 7
+    },
+    {
+      "title": "Fine-Tuned Language Models Generate Stable Inorganic Materials as Text",
+      "url": "https://huggingface.co/papers/2402.04379",
+      "authors": [
+        "Andrew Gordon Wilson",
+        "C. Lawrence Zitnick",
+        "Zachary Ulissi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.04379.pdf",
+      "abstract": "We propose fine-tuning large language models for generation of stable\nmaterials. While unorthodox, fine-tuning large language models on text-encoded\natomistic data is simple to implement yet reliable, with around 90% of sampled\nstructures obeying physical constraints on atom positions and charges. Using\nenergy above hull calculations from both learned ML potentials and\ngold-standard DFT calculations, we show that our strongest model (fine-tuned\nLLaMA-2 70B) can generate materials predicted to be metastable at about twice\nthe rate (49% vs 28%) of CDVAE, a competing diffusion model. Because of text\nprompting's inherent flexibility, our models can simultaneously be used for\nunconditional generation of stable material, infilling of partial structures\nand text-conditional generation. Finally, we show that language models' ability\nto capture key symmetries of crystal structures improves with model scale,\nsuggesting that the biases of pretrained LLMs are surprisingly well-suited for\natomistic data.",
+      "upvotes": 7
+    },
+    {
+      "title": "TP-Aware Dequantization",
+      "url": "https://huggingface.co/papers/2402.04925",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2402.04925.pdf",
+      "abstract": "In this paper, we present a novel method that reduces model inference latency\nduring distributed deployment of Large Language Models (LLMs). Our contribution\nis an optimized inference deployment scheme that address the current\nlimitations of state-of-the-art quantization kernels when used in conjunction\nwith Tensor Parallel (TP). Our method preserves data locality in GPU memory\naccess patterns and exploits a priori knowledge of TP to reduce global\ncommunication. We demonstrate an up to 1.81x speedup over existing methods for\nLlama-70B and up to 1.78x speedup for IBM WatsonX's Granite-20B MLP layer\nproblem sizes on A100 and H100 NVIDIA DGX Systems for a variety of TP settings.",
+      "upvotes": 3
+    },
+    {
+      "title": "Progressive Gradient Flow for Robust N:M Sparsity Training in Transformers",
+      "url": "https://huggingface.co/papers/2402.04744",
+      "authors": [
+        "Abhimanyu Rajeshkumar Bambhaniya",
+        "Suvinay Subramanian",
+        "Sheng-Chun Kao",
+        "Utku Evci",
+        "Tushar Krishna"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.04744.pdf",
+      "abstract": "N:M Structured sparsity has garnered significant interest as a result of\nrelatively modest overhead and improved efficiency. Additionally, this form of\nsparsity holds considerable appeal for reducing the memory footprint owing to\ntheir modest representation overhead. There have been efforts to develop\ntraining recipes for N:M structured sparsity, they primarily focus on\nlow-sparsity regions (sim50\\%). Nonetheless, performance of models trained\nusing these approaches tends to decline when confronted with high-sparsity\nregions (>80\\%). In this work, we study the effectiveness of existing sparse\ntraining recipes at high-sparsity regions and argue that these methods\nfail to sustain the model quality on par with low-sparsity regions. We\ndemonstrate that the significant factor contributing to this disparity is the\npresence of elevated levels of induced noise in the gradient magnitudes. To\nmitigate this undesirable effect, we employ decay mechanisms to progressively\nrestrict the flow of gradients towards pruned elements. Our approach improves\nthe model quality by up to 2% and 5% in vision and language models at\nhigh sparsity regime, respectively. We also evaluate the trade-off between\nmodel accuracy and training compute cost in terms of FLOPs. At iso-training\nFLOPs, our method yields better performance compared to conventional sparse\ntraining recipes, exhibiting an accuracy improvement of up to 2%. The source\ncode is available at\nhttps://github.com/abhibambhaniya/progressive_gradient_flow_nm_sparsity.",
+      "upvotes": 1
+    }
+  ]
+}

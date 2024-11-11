@@ -1,0 +1,126 @@
+{
+  "date": "2024-05-15",
+  "papers": [
+    {
+      "title": "Beyond Scaling Laws: Understanding Transformer Performance with Associative Memory",
+      "url": "https://huggingface.co/papers/2405.08707",
+      "authors": [
+        "Xueyan Niu",
+        "Lei Deng",
+        "Wei Han"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.08707.pdf",
+      "abstract": "Increasing the size of a Transformer model does not always lead to enhanced\nperformance. This phenomenon cannot be explained by the empirical scaling laws.\nFurthermore, improved generalization ability occurs as the model memorizes the\ntraining samples. We present a theoretical framework that sheds light on the\nmemorization process and performance dynamics of transformer-based language\nmodels. We model the behavior of Transformers with associative memories using\nHopfield networks, such that each transformer block effectively conducts an\napproximate nearest-neighbor search. Based on this, we design an energy\nfunction analogous to that in the modern continuous Hopfield network which\nprovides an insightful explanation for the attention mechanism. Using the\nmajorization-minimization technique, we construct a global energy function that\ncaptures the layered architecture of the Transformer. Under specific\nconditions, we show that the minimum achievable cross-entropy loss is bounded\nfrom below by a constant approximately equal to 1. We substantiate our\ntheoretical results by conducting experiments with GPT-2 on various data sizes,\nas well as training vanilla Transformers on a dataset of 2M tokens.",
+      "upvotes": 27
+    },
+    {
+      "title": "Coin3D: Controllable and Interactive 3D Assets Generation with Proxy-Guided Conditioning",
+      "url": "https://huggingface.co/papers/2405.08054",
+      "authors": [
+        "Wenqi Dong",
+        "Lin Ma",
+        "Xiao Liu",
+        "Liyuan Cui",
+        "Hujun Bao",
+        "Zhaopeng Cui"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.08054.pdf",
+      "abstract": "As humans, we aspire to create media content that is both freely willed and\nreadily controlled. Thanks to the prominent development of generative\ntechniques, we now can easily utilize 2D diffusion methods to synthesize images\ncontrolled by raw sketch or designated human poses, and even progressively\nedit/regenerate local regions with masked inpainting. However, similar\nworkflows in 3D modeling tasks are still unavailable due to the lack of\ncontrollability and efficiency in 3D generation. In this paper, we present a\nnovel controllable and interactive 3D assets modeling framework, named Coin3D.\nCoin3D allows users to control the 3D generation using a coarse geometry proxy\nassembled from basic shapes, and introduces an interactive generation workflow\nto support seamless local part editing while delivering responsive 3D object\npreviewing within a few seconds. To this end, we develop several techniques,\nincluding the 3D adapter that applies volumetric coarse shape control to the\ndiffusion model, proxy-bounded editing strategy for precise part editing,\nprogressive volume cache to support responsive preview, and volume-SDS to\nensure consistent mesh reconstruction. Extensive experiments of interactive\ngeneration and editing on diverse shape proxies demonstrate that our method\nachieves superior controllability and flexibility in the 3D assets generation\ntask.",
+      "upvotes": 21
+    },
+    {
+      "title": "Hunyuan-DiT: A Powerful Multi-Resolution Diffusion Transformer with Fine-Grained Chinese Understanding",
+      "url": "https://huggingface.co/papers/2405.08748",
+      "authors": [
+        "Zhimin Li",
+        "Jianwei Zhang",
+        "Qin Lin",
+        "Jiangfeng Xiong",
+        "Xinchi Deng",
+        "Yingfang Zhang",
+        "Zedong Xiao",
+        "Jiahao Li",
+        "Wenyue Li",
+        "Chen Zhang",
+        "Jianxiang Lu",
+        "Xiaoyan Yuan",
+        "Xiaoxiao Zheng",
+        "Yixuan Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.08748.pdf",
+      "abstract": "We present Hunyuan-DiT, a text-to-image diffusion transformer with\nfine-grained understanding of both English and Chinese. To construct\nHunyuan-DiT, we carefully design the transformer structure, text encoder, and\npositional encoding. We also build from scratch a whole data pipeline to update\nand evaluate data for iterative model optimization. For fine-grained language\nunderstanding, we train a Multimodal Large Language Model to refine the\ncaptions of the images. Finally, Hunyuan-DiT can perform multi-turn multimodal\ndialogue with users, generating and refining images according to the context.\nThrough our holistic human evaluation protocol with more than 50 professional\nhuman evaluators, Hunyuan-DiT sets a new state-of-the-art in Chinese-to-image\ngeneration compared with other open-source models. Code and pretrained models\nare publicly available at github.com/Tencent/HunyuanDiT",
+      "upvotes": 19
+    },
+    {
+      "title": "Understanding the performance gap between online and offline alignment algorithms",
+      "url": "https://huggingface.co/papers/2405.08448",
+      "authors": [
+        "Daniel Zhaohan Guo",
+        "Zeyu Zheng",
+        "Daniele Calandriello",
+        "Rémi Munos",
+        "Bernardo Ávila Pires",
+        "Yong Cheng",
+        "Will Dabney"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.08448.pdf",
+      "abstract": "Reinforcement learning from human feedback (RLHF) is the canonical framework\nfor large language model alignment. However, rising popularity in offline\nalignment algorithms challenge the need for on-policy sampling in RLHF. Within\nthe context of reward over-optimization, we start with an opening set of\nexperiments that demonstrate the clear advantage of online methods over offline\nmethods. This prompts us to investigate the causes to the performance\ndiscrepancy through a series of carefully designed experimental ablations. We\nshow empirically that hypotheses such as offline data coverage and data quality\nby itself cannot convincingly explain the performance difference. We also find\nthat while offline algorithms train policy to become good at pairwise\nclassification, it is worse at generations; in the meantime the policies\ntrained by online algorithms are good at generations while worse at pairwise\nclassification. This hints at a unique interplay between discriminative and\ngenerative capabilities, which is greatly impacted by the sampling process.\nLastly, we observe that the performance discrepancy persists for both\ncontrastive and non-contrastive loss functions, and appears not to be addressed\nby simply scaling up policy networks. Taken together, our study sheds light on\nthe pivotal role of on-policy sampling in AI alignment, and hints at certain\nfundamental challenges of offline alignment algorithms.",
+      "upvotes": 14
+    },
+    {
+      "title": "SpeechVerse: A Large-scale Generalizable Audio Language Model",
+      "url": "https://huggingface.co/papers/2405.08295",
+      "authors": [
+        "Nilaksh Das",
+        "Saket Dingliwal",
+        "David Huang",
+        "Jie Yuan",
+        "Monica Sunkara",
+        "Sundararajan Srinivasan",
+        "Kyu J Han",
+        "Katrin Kirchhoff"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.08295.pdf",
+      "abstract": "Large language models (LLMs) have shown incredible proficiency in performing\ntasks that require semantic understanding of natural language instructions.\nRecently, many works have further expanded this capability to perceive\nmultimodal audio and text inputs, but their capabilities are often limited to\nspecific fine-tuned tasks such as automatic speech recognition and translation.\nWe therefore develop SpeechVerse, a robust multi-task training and curriculum\nlearning framework that combines pre-trained speech and text foundation models\nvia a small set of learnable parameters, while keeping the pre-trained models\nfrozen during training. The models are instruction finetuned using continuous\nlatent representations extracted from the speech foundation model to achieve\noptimal zero-shot performance on a diverse range of speech processing tasks\nusing natural language instructions. We perform extensive benchmarking that\nincludes comparing our model performance against traditional baselines across\nseveral datasets and tasks. Furthermore, we evaluate the model's capability for\ngeneralized instruction following by testing on out-of-domain datasets, novel\nprompts, and unseen tasks. Our empirical experiments reveal that our multi-task\nSpeechVerse model is even superior to conventional task-specific baselines on 9\nout of the 11 tasks.",
+      "upvotes": 14
+    },
+    {
+      "title": "No Time to Waste: Squeeze Time into Channel for Mobile Video Understanding",
+      "url": "https://huggingface.co/papers/2405.08344",
+      "authors": [
+        "Yingjie Zhai"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.08344.pdf",
+      "abstract": "Current architectures for video understanding mainly build upon 3D\nconvolutional blocks or 2D convolutions with additional operations for temporal\nmodeling. However, these methods all regard the temporal axis as a separate\ndimension of the video sequence, which requires large computation and memory\nbudgets and thus limits their usage on mobile devices. In this paper, we\npropose to squeeze the time axis of a video sequence into the channel dimension\nand present a lightweight video recognition network, term as\nSqueezeTime, for mobile video understanding. To enhance the temporal\nmodeling capability of the proposed network, we design a Channel-Time Learning\n(CTL) Block to capture temporal dynamics of the sequence. This module has two\ncomplementary branches, in which one branch is for temporal importance learning\nand another branch with temporal position restoring capability is to enhance\ninter-temporal object modeling ability. The proposed SqueezeTime is much\nlightweight and fast with high accuracies for mobile video understanding.\nExtensive experiments on various video recognition and action detection\nbenchmarks, i.e., Kinetics400, Kinetics600, HMDB51, AVA2.1 and THUMOS14,\ndemonstrate the superiority of our model. For example, our SqueezeTime achieves\n+1.2% accuracy and +80% GPU throughput gain on Kinetics400 than prior\nmethods. Codes are publicly available at\nhttps://github.com/xinghaochen/SqueezeTime and\nhttps://github.com/mindspore-lab/models/tree/master/research/huawei-noah/SqueezeTime.",
+      "upvotes": 12
+    },
+    {
+      "title": "Compositional Text-to-Image Generation with Dense Blob Representations",
+      "url": "https://huggingface.co/papers/2405.08246",
+      "authors": [
+        "Chao Liu",
+        "Benjamin Eckart"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.08246.pdf",
+      "abstract": "Existing text-to-image models struggle to follow complex text prompts,\nraising the need for extra grounding inputs for better controllability. In this\nwork, we propose to decompose a scene into visual primitives - denoted as dense\nblob representations - that contain fine-grained details of the scene while\nbeing modular, human-interpretable, and easy-to-construct. Based on blob\nrepresentations, we develop a blob-grounded text-to-image diffusion model,\ntermed BlobGEN, for compositional generation. Particularly, we introduce a new\nmasked cross-attention module to disentangle the fusion between blob\nrepresentations and visual features. To leverage the compositionality of large\nlanguage models (LLMs), we introduce a new in-context learning approach to\ngenerate blob representations from text prompts. Our extensive experiments show\nthat BlobGEN achieves superior zero-shot generation quality and better\nlayout-guided controllability on MS-COCO. When augmented by LLMs, our method\nexhibits superior numerical and spatial correctness on compositional image\ngeneration benchmarks. Project page: https://blobgen-2d.github.io.",
+      "upvotes": 12
+    },
+    {
+      "title": "SpeechGuard: Exploring the Adversarial Robustness of Multimodal Large Language Models",
+      "url": "https://huggingface.co/papers/2405.08317",
+      "authors": [
+        "Anshu Bhatia",
+        "Nilaksh Das",
+        "Zejiang Hou",
+        "Goeric Huybrechts",
+        "Srikanth Vishnubhotla",
+        "Sundararajan Srinivasan",
+        "Kyu J Han",
+        "Katrin Kirchhoff"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.08317.pdf",
+      "abstract": "Integrated Speech and Large Language Models (SLMs) that can follow speech\ninstructions and generate relevant text responses have gained popularity\nlately. However, the safety and robustness of these models remains largely\nunclear. In this work, we investigate the potential vulnerabilities of such\ninstruction-following speech-language models to adversarial attacks and\njailbreaking. Specifically, we design algorithms that can generate adversarial\nexamples to jailbreak SLMs in both white-box and black-box attack settings\nwithout human involvement. Additionally, we propose countermeasures to thwart\nsuch jailbreaking attacks. Our models, trained on dialog data with speech\ninstructions, achieve state-of-the-art performance on spoken question-answering\ntask, scoring over 80% on both safety and helpfulness metrics. Despite safety\nguardrails, experiments on jailbreaking demonstrate the vulnerability of SLMs\nto adversarial perturbations and transfer attacks, with average attack success\nrates of 90% and 10% respectively when evaluated on a dataset of carefully\ndesigned harmful questions spanning 12 different toxic categories. However, we\ndemonstrate that our proposed countermeasures reduce the attack success\nsignificantly.",
+      "upvotes": 9
+    }
+  ]
+}

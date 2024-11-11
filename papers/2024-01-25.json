@@ -1,0 +1,90 @@
+{
+  "date": "2024-01-25",
+  "papers": [
+    {
+      "title": "Scaling Up to Excellence: Practicing Model Scaling for Photo-Realistic Image Restoration In the Wild",
+      "url": "https://huggingface.co/papers/2401.13627",
+      "authors": [
+        "Fanghua Yu",
+        "Jinjin Gu",
+        "Zheyuan Li",
+        "Xiangtao Kong",
+        "Yu Qiao",
+        "Chao Dong"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.13627.pdf",
+      "abstract": "We introduce SUPIR (Scaling-UP Image Restoration), a groundbreaking image\nrestoration method that harnesses generative prior and the power of model\nscaling up. Leveraging multi-modal techniques and advanced generative prior,\nSUPIR marks a significant advance in intelligent and realistic image\nrestoration. As a pivotal catalyst within SUPIR, model scaling dramatically\nenhances its capabilities and demonstrates new potential for image restoration.\nWe collect a dataset comprising 20 million high-resolution, high-quality images\nfor model training, each enriched with descriptive text annotations. SUPIR\nprovides the capability to restore images guided by textual prompts, broadening\nits application scope and potential. Moreover, we introduce negative-quality\nprompts to further improve perceptual quality. We also develop a\nrestoration-guided sampling method to suppress the fidelity issue encountered\nin generative-based restoration. Experiments demonstrate SUPIR's exceptional\nrestoration effects and its novel capacity to manipulate restoration through\ntextual prompts.",
+      "upvotes": 73
+    },
+    {
+      "title": "MambaByte: Token-free Selective State Space Model",
+      "url": "https://huggingface.co/papers/2401.13660",
+      "authors": [
+        "Jing Nathan Yan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.13660.pdf",
+      "abstract": "Token-free language models learn directly from raw bytes and remove the bias\nof subword tokenization. Operating on bytes, however, results in significantly\nlonger sequences, and standard autoregressive Transformers scale poorly in such\nsettings. We experiment with MambaByte, a token-free adaptation of the Mamba\nstate space model, trained autoregressively on byte sequences. Our experiments\nindicate the computational efficiency of MambaByte compared to other byte-level\nmodels. We also find MambaByte to be competitive with and even outperform\nstate-of-the-art subword Transformers. Furthermore, owing to linear scaling in\nlength, MambaByte benefits from fast inference compared to Transformers. Our\nfindings establish the viability of MambaByte in enabling token-free language\nmodeling.",
+      "upvotes": 51
+    },
+    {
+      "title": "MM-LLMs: Recent Advances in MultiModal Large Language Models",
+      "url": "https://huggingface.co/papers/2401.13601",
+      "authors": [
+        "Duzhen Zhang",
+        "Chenxing Li",
+        "Jiahua Dong",
+        "Chenhui Chu",
+        "Dong Yu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.13601.pdf",
+      "abstract": "In the past year, MultiModal Large Language Models (MM-LLMs) have undergone\nsubstantial advancements, augmenting off-the-shelf LLMs to support MM inputs or\noutputs via cost-effective training strategies. The resulting models not only\npreserve the inherent reasoning and decision-making capabilities of LLMs but\nalso empower a diverse range of MM tasks. In this paper, we provide a\ncomprehensive survey aimed at facilitating further research of MM-LLMs.\nSpecifically, we first outline general design formulations for model\narchitecture and training pipeline. Subsequently, we provide brief\nintroductions of 26 existing MM-LLMs, each characterized by its specific\nformulations. Additionally, we review the performance of MM-LLMs on mainstream\nbenchmarks and summarize key training recipes to enhance the potency of\nMM-LLMs. Lastly, we explore promising directions for MM-LLMs while concurrently\nmaintaining a real-time tracking website for the latest developments in the\nfield. We hope that this survey contributes to the ongoing advancement of the\nMM-LLMs domain.",
+      "upvotes": 45
+    },
+    {
+      "title": "MaLA-500: Massive Language Adaptation of Large Language Models",
+      "url": "https://huggingface.co/papers/2401.13303",
+      "authors": [
+        "Hinrich Schütze"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.13303.pdf",
+      "abstract": "Large language models have advanced the state of the art in natural language\nprocessing. However, their predominant design for English or a limited set of\nlanguages creates a substantial gap in their effectiveness for low-resource\nlanguages. To bridge this gap, we introduce MaLA-500, a novel large language\nmodel designed to cover an extensive range of 534 languages. To train MaLA-500,\nwe employ vocabulary extension and continued pretraining on LLaMA 2 with\nGlot500-c. Our experiments on SIB-200 show that MaLA-500 achieves\nstate-of-the-art in-context learning results. We release MaLA-500 at\nhttps://huggingface.co/MaLA-LM",
+      "upvotes": 11
+    },
+    {
+      "title": "SpacTor-T5: Pre-training T5 Models with Span Corruption and Replaced Token Detection",
+      "url": "https://huggingface.co/papers/2401.13160",
+      "authors": [
+        "Ke Ye",
+        "Afshin Rostamizadeh",
+        "Ayan Chakrabarti",
+        "Giulia DeSalvo",
+        "Lazaros Karydas",
+        "Gui Citovsky",
+        "Sanjiv Kumar"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.13160.pdf",
+      "abstract": "Pre-training large language models is known to be extremely resource\nintensive and often times inefficient, under-utilizing the information\nencapsulated in the training text sequences. In this paper, we present SpacTor,\na new training procedure consisting of (1) a hybrid objective combining span\ncorruption (SC) and token replacement detection (RTD), and (2) a two-stage\ncurriculum that optimizes the hybrid objective over the initial tau\niterations, then transitions to standard SC loss. We show empirically that the\neffectiveness of the hybrid objective is tied to the two-stage pre-training\nschedule, and provide extensive analysis on why this is the case. In our\nexperiments with encoder-decoder architectures (T5) on a variety of NLP tasks,\nSpacTor-T5 yields the same downstream performance as standard SC pre-training,\nwhile enabling a 50% reduction in pre-training iterations and 40% reduction in\ntotal FLOPs. Alternatively, given the same amount of computing budget, we find\nthat SpacTor results in significantly improved downstream benchmark\nperformance.",
+      "upvotes": 11
+    },
+    {
+      "title": "UNIMO-G: Unified Image Generation through Multimodal Conditional Diffusion",
+      "url": "https://huggingface.co/papers/2401.13388",
+      "authors": [
+        "Xue Xu",
+        "Jiachen Liu",
+        "Xinyan Xiao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.13388.pdf",
+      "abstract": "Existing text-to-image diffusion models primarily generate images from text\nprompts. However, the inherent conciseness of textual descriptions poses\nchallenges in faithfully synthesizing images with intricate details, such as\nspecific entities or scenes. This paper presents UNIMO-G, a simple\nmultimodal conditional diffusion framework that operates on multimodal prompts\nwith interleaved textual and visual inputs, which demonstrates a unified\nability for both text-driven and subject-driven image generation. UNIMO-G\ncomprises two core components: a Multimodal Large Language Model (MLLM) for\nencoding multimodal prompts, and a conditional denoising diffusion network for\ngenerating images based on the encoded multimodal input. We leverage a\ntwo-stage training strategy to effectively train the framework: firstly\npre-training on large-scale text-image pairs to develop conditional image\ngeneration capabilities, and then instruction tuning with multimodal prompts to\nachieve unified image generation proficiency. A well-designed data processing\npipeline involving language grounding and image segmentation is employed to\nconstruct multi-modal prompts. UNIMO-G excels in both text-to-image generation\nand zero-shot subject-driven synthesis, and is notably effective in generating\nhigh-fidelity images from complex multimodal prompts involving multiple image\nentities.",
+      "upvotes": 11
+    },
+    {
+      "title": "ConTextual: Evaluating Context-Sensitive Text-Rich Visual Reasoning in Large Multimodal Models",
+      "url": "https://huggingface.co/papers/2401.13311",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2401.13311.pdf",
+      "abstract": "Recent advancements in AI have led to the development of large multimodal\nmodels (LMMs) capable of processing complex tasks involving joint reasoning\nover text and visual content in the image (e.g., navigating maps in public\nplaces). This paper introduces ConTextual, a novel benchmark comprising\ninstructions designed explicitly to evaluate LMMs' ability to perform\ncontext-sensitive text-rich visual reasoning. ConTextual emphasizes diverse\nreal-world scenarios (e.g., time-reading, navigation, shopping and more)\ndemanding a deeper understanding of the interactions between textual and visual\nelements. Our findings reveal a significant performance gap of 30.8% between\nthe best-performing LMM, GPT-4V(ision), and human capabilities using human\nevaluation indicating substantial room for improvement in context-sensitive\ntext-rich visual reasoning. Notably, while GPT-4V excelled in abstract\ncategories like meme and quote interpretation, its overall performance still\nlagged behind humans. In addition to human evaluations, we also employed\nautomatic evaluation metrics using GPT-4, uncovering similar trends in\nperformance disparities. We also perform a fine-grained evaluation across\ndiverse visual contexts and provide qualitative analysis which provides a\nrobust framework for future advancements in the LMM design.\nhttps://con-textual.github.io/",
+      "upvotes": 10
+    }
+  ]
+}

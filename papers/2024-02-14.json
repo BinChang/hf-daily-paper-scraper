@@ -1,0 +1,175 @@
+{
+  "date": "2024-02-14",
+  "papers": [
+    {
+      "title": "BASE TTS: Lessons from building a billion-parameter Text-to-Speech model on 100K hours of data",
+      "url": "https://huggingface.co/papers/2402.08093",
+      "authors": [
+        "Mateusz Łajszczak",
+        "Fan Yang",
+        "Arnaud Joly",
+        "Álvaro Martín-Cortinas",
+        "Ammar Abbas",
+        "Alexis Moinet",
+        "Sri Karlapati",
+        "Ewa Muszyńska",
+        "Bartosz Putrycz",
+        "Soledad López Gambino",
+        "Kayeon Yoo",
+        "Elena Sokolova",
+        "Thomas Drugman"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.08093.pdf",
+      "abstract": "We introduce a text-to-speech (TTS) model called BASE TTS, which stands for\nBig Adaptive Streamable TTS with\nEmergent abilities. BASE TTS is the largest TTS model to-date,\ntrained on 100K hours of public domain speech data, achieving a new\nstate-of-the-art in speech naturalness. It deploys a 1-billion-parameter\nautoregressive Transformer that converts raw texts into discrete codes\n(\"speechcodes\") followed by a convolution-based decoder which converts these\nspeechcodes into waveforms in an incremental, streamable manner. Further, our\nspeechcodes are built using a novel speech tokenization technique that features\nspeaker ID disentanglement and compression with byte-pair encoding. Echoing the\nwidely-reported \"emergent abilities\" of large language models when trained on\nincreasing volume of data, we show that BASE TTS variants built with 10K+ hours\nand 500M+ parameters begin to demonstrate natural prosody on textually complex\nsentences. We design and share a specialized dataset to measure these emergent\nabilities for text-to-speech. We showcase state-of-the-art naturalness of BASE\nTTS by evaluating against baselines that include publicly available large-scale\ntext-to-speech systems: YourTTS, Bark and TortoiseTTS. Audio samples generated\nby the model can be heard at https://amazon-ltts-paper.com/.",
+      "upvotes": 54
+    },
+    {
+      "title": "World Model on Million-Length Video And Language With RingAttention",
+      "url": "https://huggingface.co/papers/2402.08268",
+      "authors": [
+        "Pieter Abbeel"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.08268.pdf",
+      "abstract": "Current language models fall short in understanding aspects of the world not\neasily described in words, and struggle with complex, long-form tasks. Video\nsequences offer valuable temporal information absent in language and static\nimages, making them attractive for joint modeling with language. Such models\ncould develop a understanding of both human textual knowledge and the physical\nworld, enabling broader AI capabilities for assisting humans. However, learning\nfrom millions of tokens of video and language sequences poses challenges due to\nmemory constraints, computational complexity, and limited datasets. To address\nthese challenges, we curate a large dataset of diverse videos and books,\nutilize the RingAttention technique to scalably train on long sequences, and\ngradually increase context size from 4K to 1M tokens. This paper makes the\nfollowing contributions: (a) Largest context size neural network: We train one\nof the largest context size transformers on long video and language sequences,\nsetting new benchmarks in difficult retrieval tasks and long video\nunderstanding. (b) Solutions for overcoming vision-language training\nchallenges, including using masked sequence packing for mixing different\nsequence lengths, loss weighting to balance language and vision, and\nmodel-generated QA dataset for long sequence chat. (c) A highly-optimized\nimplementation with RingAttention, masked sequence packing, and other key\nfeatures for training on millions-length multimodal sequences. (d) Fully\nopen-sourced a family of 7B parameter models capable of processing long text\ndocuments (LWM-Text, LWM-Text-Chat) and videos (LWM, LWM-Chat) of over 1M\ntokens. This work paves the way for training on massive datasets of long video\nand language to develop understanding of both human knowledge and the\nmultimodal world, and broader capabilities.",
+      "upvotes": 36
+    },
+    {
+      "title": "Mixtures of Experts Unlock Parameter Scaling for Deep RL",
+      "url": "https://huggingface.co/papers/2402.08609",
+      "authors": [
+        "Ghada Sokar",
+        "Timon Willi",
+        "Jakob Foerster",
+        "Gintare Karolina Dziugaite",
+        "Doina Precup"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.08609.pdf",
+      "abstract": "The recent rapid progress in (self) supervised learning models is in large\npart predicted by empirical scaling laws: a model's performance scales\nproportionally to its size. Analogous scaling laws remain elusive for\nreinforcement learning domains, however, where increasing the parameter count\nof a model often hurts its final performance. In this paper, we demonstrate\nthat incorporating Mixture-of-Expert (MoE) modules, and in particular Soft MoEs\n(Puigcerver et al., 2023), into value-based networks results in more\nparameter-scalable models, evidenced by substantial performance increases\nacross a variety of training regimes and model sizes. This work thus provides\nstrong empirical evidence towards developing scaling laws for reinforcement\nlearning.",
+      "upvotes": 34
+    },
+    {
+      "title": "Lumos : Empowering Multimodal LLMs with Scene Text Recognition",
+      "url": "https://huggingface.co/papers/2402.08017",
+      "authors": [
+        "Yichao Lu",
+        "Srihari Jayakumar",
+        "Mohsen Moslehpour",
+        "Abhay Harpale",
+        "Shicong Zhao",
+        "Longfang Zhao",
+        "Ankit Ramchandani",
+        "Xin Luna Dong",
+        "Anuj Kumar"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.08017.pdf",
+      "abstract": "We introduce Lumos, the first end-to-end multimodal question-answering system\nwith text understanding capabilities. At the core of Lumos is a Scene Text\nRecognition (STR) component that extracts text from first person point-of-view\nimages, the output of which is used to augment input to a Multimodal Large\nLanguage Model (MM-LLM). While building Lumos, we encountered numerous\nchallenges related to STR quality, overall latency, and model inference. In\nthis paper, we delve into those challenges, and discuss the system\narchitecture, design choices, and modeling techniques employed to overcome\nthese obstacles. We also provide a comprehensive evaluation for each component,\nshowcasing high quality and efficiency.",
+      "upvotes": 24
+    },
+    {
+      "title": "UFO: A UI-Focused Agent for Windows OS Interaction",
+      "url": "https://huggingface.co/papers/2402.07939",
+      "authors": [
+        "Liqun Li",
+        "Xu Zhang",
+        "Si Qin",
+        "Yu Kang",
+        "Qingwei Lin",
+        "Saravan Rajmohan",
+        "Dongmei Zhang",
+        "Qi Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.07939.pdf",
+      "abstract": "We introduce UFO, an innovative UI-Focused agent to fulfill user requests\ntailored to applications on Windows OS, harnessing the capabilities of\nGPT-Vision. UFO employs a dual-agent framework to meticulously observe and\nanalyze the graphical user interface (GUI) and control information of Windows\napplications. This enables the agent to seamlessly navigate and operate within\nindividual applications and across them to fulfill user requests, even when\nspanning multiple applications. The framework incorporates a control\ninteraction module, facilitating action grounding without human intervention\nand enabling fully automated execution. Consequently, UFO transforms arduous\nand time-consuming processes into simple tasks achievable solely through\nnatural language commands. We conducted testing of UFO across 9 popular Windows\napplications, encompassing a variety of scenarios reflective of users' daily\nusage. The results, derived from both quantitative metrics and real-case\nstudies, underscore the superior effectiveness of UFO in fulfilling user\nrequests. To the best of our knowledge, UFO stands as the first UI agent\nspecifically tailored for task completion within the Windows OS environment.\nThe open-source code for UFO is available on https://github.com/microsoft/UFO.",
+      "upvotes": 13
+    },
+    {
+      "title": "Graph Mamba: Towards Learning on Graphs with State Space Models",
+      "url": "https://huggingface.co/papers/2402.08678",
+      "authors": [
+        "Farnoosh Hashemi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.08678.pdf",
+      "abstract": "Graph Neural Networks (GNNs) have shown promising potential in graph\nrepresentation learning. The majority of GNNs define a local message-passing\nmechanism, propagating information over the graph by stacking multiple layers.\nThese methods, however, are known to suffer from two major limitations:\nover-squashing and poor capturing of long-range dependencies. Recently, Graph\nTransformers (GTs) emerged as a powerful alternative to Message-Passing Neural\nNetworks (MPNNs). GTs, however, have quadratic computational cost, lack\ninductive biases on graph structures, and rely on complex Positional/Structural\nEncodings (SE/PE). In this paper, we show that while Transformers, complex\nmessage-passing, and SE/PE are sufficient for good performance in practice,\nneither is necessary. Motivated by the recent success of State Space Models\n(SSMs), such as Mamba, we present Graph Mamba Networks (GMNs), a general\nframework for a new class of GNNs based on selective SSMs. We discuss and\ncategorize the new challenges when adopting SSMs to graph-structured data, and\npresent four required and one optional steps to design GMNs, where we choose\n(1) Neighborhood Tokenization, (2) Token Ordering, (3) Architecture of\nBidirectional Selective SSM Encoder, (4) Local Encoding, and dispensable (5) PE\nand SE. We further provide theoretical justification for the power of GMNs.\nExperiments demonstrate that despite much less computational cost, GMNs attain\nan outstanding performance in long-range, small-scale, large-scale, and\nheterophilic benchmark datasets.",
+      "upvotes": 13
+    },
+    {
+      "title": "IM-3D: Iterative Multiview Diffusion and Reconstruction for High-Quality 3D Generation",
+      "url": "https://huggingface.co/papers/2402.08682",
+      "authors": [
+        "Iro Laina",
+        "Christian Rupprecht",
+        "Natalia Neverova",
+        "Andrea Vedaldi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.08682.pdf",
+      "abstract": "Most text-to-3D generators build upon off-the-shelf text-to-image models\ntrained on billions of images. They use variants of Score Distillation Sampling\n(SDS), which is slow, somewhat unstable, and prone to artifacts. A mitigation\nis to fine-tune the 2D generator to be multi-view aware, which can help\ndistillation or can be combined with reconstruction networks to output 3D\nobjects directly. In this paper, we further explore the design space of\ntext-to-3D models. We significantly improve multi-view generation by\nconsidering video instead of image generators. Combined with a 3D\nreconstruction algorithm which, by using Gaussian splatting, can optimize a\nrobust image-based loss, we directly produce high-quality 3D outputs from the\ngenerated views. Our new method, IM-3D, reduces the number of evaluations of\nthe 2D generator network 10-100x, resulting in a much more efficient pipeline,\nbetter quality, fewer geometric inconsistencies, and higher yield of usable 3D\nassets.",
+      "upvotes": 12
+    },
+    {
+      "title": "ChatCell: Facilitating Single-Cell Analysis with Natural Language",
+      "url": "https://huggingface.co/papers/2402.08303",
+      "authors": [
+        "Mark Gerstein",
+        "Xiaohui Fan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.08303.pdf",
+      "abstract": "As Large Language Models (LLMs) rapidly evolve, their influence in science is\nbecoming increasingly prominent. The emerging capabilities of LLMs in task\ngeneralization and free-form dialogue can significantly advance fields like\nchemistry and biology. However, the field of single-cell biology, which forms\nthe foundational building blocks of living organisms, still faces several\nchallenges. High knowledge barriers and limited scalability in current methods\nrestrict the full exploitation of LLMs in mastering single-cell data, impeding\ndirect accessibility and rapid iteration. To this end, we introduce ChatCell,\nwhich signifies a paradigm shift by facilitating single-cell analysis with\nnatural language. Leveraging vocabulary adaptation and unified sequence\ngeneration, ChatCell has acquired profound expertise in single-cell biology and\nthe capability to accommodate a diverse range of analysis tasks. Extensive\nexperiments further demonstrate ChatCell's robust performance and potential to\ndeepen single-cell insights, paving the way for more accessible and intuitive\nexploration in this pivotal field. Our project homepage is available at\nhttps://zjunlp.github.io/project/ChatCell.",
+      "upvotes": 9
+    },
+    {
+      "title": "Learning Continuous 3D Words for Text-to-Image Generation",
+      "url": "https://huggingface.co/papers/2402.08654",
+      "authors": [
+        "Matthew Fisher",
+        "Radomir Mech",
+        "Niki Trigoni"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.08654.pdf",
+      "abstract": "Current controls over diffusion models (e.g., through text or ControlNet) for\nimage generation fall short in recognizing abstract, continuous attributes like\nillumination direction or non-rigid shape change. In this paper, we present an\napproach for allowing users of text-to-image models to have fine-grained\ncontrol of several attributes in an image. We do this by engineering special\nsets of input tokens that can be transformed in a continuous manner -- we call\nthem Continuous 3D Words. These attributes can, for example, be represented as\nsliders and applied jointly with text prompts for fine-grained control over\nimage generation. Given only a single mesh and a rendering engine, we show that\nour approach can be adopted to provide continuous user control over several\n3D-aware attributes, including time-of-day illumination, bird wing orientation,\ndollyzoom effect, and object poses. Our method is capable of conditioning image\ncreation with multiple Continuous 3D Words and text descriptions simultaneously\nwhile adding no overhead to the generative process. Project Page:\nhttps://ttchengab.github.io/continuous_3d_words",
+      "upvotes": 9
+    },
+    {
+      "title": "Vision-Based Hand Gesture Customization from a Single Demonstration",
+      "url": "https://huggingface.co/papers/2402.08420",
+      "authors": [
+        "Soroush Shahi",
+        "Cori Tymoszek Park",
+        "Richard Kang",
+        "Jun Gong",
+        "Abdelkareem Bedri",
+        "Gierad Laput"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.08420.pdf",
+      "abstract": "Hand gesture recognition is becoming a more prevalent mode of human-computer\ninteraction, especially as cameras proliferate across everyday devices. Despite\ncontinued progress in this field, gesture customization is often underexplored.\nCustomization is crucial since it enables users to define and demonstrate\ngestures that are more natural, memorable, and accessible. However,\ncustomization requires efficient usage of user-provided data. We introduce a\nmethod that enables users to easily design bespoke gestures with a monocular\ncamera from one demonstration. We employ transformers and meta-learning\ntechniques to address few-shot learning challenges. Unlike prior work, our\nmethod supports any combination of one-handed, two-handed, static, and dynamic\ngestures, including different viewpoints. We evaluated our customization method\nthrough a user study with 20 gestures collected from 21 participants, achieving\nup to 97% average recognition accuracy from one demonstration. Our work\nprovides a viable path for vision-based gesture customization, laying the\nfoundation for future advancements in this domain.",
+      "upvotes": 7
+    },
+    {
+      "title": "Tandem Transformers for Inference Efficient LLMs",
+      "url": "https://huggingface.co/papers/2402.08644",
+      "authors": [
+        "Aishwarya P S",
+        "Yashas Samaga",
+        "Toby Boyd",
+        "Sanjiv Kumar",
+        "Prateek Jain",
+        "Praneeth Netrapalli"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.08644.pdf",
+      "abstract": "The autoregressive nature of conventional large language models (LLMs)\ninherently limits inference speed, as tokens are generated sequentially. While\nspeculative and parallel decoding techniques attempt to mitigate this, they\nface limitations: either relying on less accurate smaller models for generation\nor failing to fully leverage the base LLM's representations.\n  We introduce a novel architecture, Tandem transformers, to address these\nissues. This architecture uniquely combines (1) a small autoregressive model\nand (2) a large model operating in block mode (processing multiple tokens\nsimultaneously). The small model's predictive accuracy is substantially\nenhanced by granting it attention to the large model's richer representations.\nOn the PaLM2 pretraining dataset, a tandem of PaLM2-Bison and PaLM2-Gecko\ndemonstrates a 3.3% improvement in next-token prediction accuracy over a\nstandalone PaLM2-Gecko, offering a 1.16x speedup compared to a PaLM2-Otter\nmodel with comparable downstream performance. We further incorporate the tandem\nmodel within the speculative decoding (SPEED) framework where the large model\nvalidates tokens from the small model. This ensures that the Tandem of\nPaLM2-Bison and PaLM2-Gecko achieves substantial speedup (around 1.14x faster\nthan using vanilla PaLM2-Gecko in SPEED) while maintaining identical downstream\ntask accuracy.",
+      "upvotes": 7
+    },
+    {
+      "title": "NeRF Analogies: Example-Based Visual Attribute Transfer for NeRFs",
+      "url": "https://huggingface.co/papers/2402.08622",
+      "authors": [
+        "Aljaz Bozic",
+        "Zhao Dong",
+        "Carl Marshall",
+        "Tobias Ritschel"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.08622.pdf",
+      "abstract": "A Neural Radiance Field (NeRF) encodes the specific relation of 3D geometry\nand appearance of a scene. We here ask the question whether we can transfer the\nappearance from a source NeRF onto a target 3D geometry in a semantically\nmeaningful way, such that the resulting new NeRF retains the target geometry\nbut has an appearance that is an analogy to the source NeRF. To this end, we\ngeneralize classic image analogies from 2D images to NeRFs. We leverage\ncorrespondence transfer along semantic affinity that is driven by semantic\nfeatures from large, pre-trained 2D image models to achieve multi-view\nconsistent appearance transfer. Our method allows exploring the mix-and-match\nproduct space of 3D geometry and appearance. We show that our method\noutperforms traditional stylization-based methods and that a large majority of\nusers prefer our method over several typical baselines.",
+      "upvotes": 3
+    }
+  ]
+}

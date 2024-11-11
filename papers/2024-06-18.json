@@ -1,0 +1,358 @@
+{
+  "date": "2024-06-18",
+  "papers": [
+    {
+      "title": "MMDU: A Multi-Turn Multi-Image Dialog Understanding Benchmark and Instruction-Tuning Dataset for LVLMs",
+      "url": "https://huggingface.co/papers/2406.11833",
+      "authors": [
+        "Tao Chu",
+        "Xiaoyi Dong",
+        "Pan Zhang",
+        "Zijian Liang",
+        "Yu Qiao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.11833.pdf",
+      "abstract": "Generating natural and meaningful responses to communicate with multi-modal\nhuman inputs is a fundamental capability of Large Vision-Language\nModels(LVLMs). While current open-source LVLMs demonstrate promising\nperformance in simplified scenarios such as single-turn single-image input,\nthey fall short in real-world conversation scenarios such as following\ninstructions in a long context history with multi-turn and multi-images.\nExisting LVLM benchmarks primarily focus on single-choice questions or\nshort-form responses, which do not adequately assess the capabilities of LVLMs\nin real-world human-AI interaction applications. Therefore, we introduce MMDU,\na comprehensive benchmark, and MMDU-45k, a large-scale instruction tuning\ndataset, designed to evaluate and improve LVLMs' abilities in multi-turn and\nmulti-image conversations. We employ the clustering algorithm to ffnd the\nrelevant images and textual descriptions from the open-source Wikipedia and\nconstruct the question-answer pairs by human annotators with the assistance of\nthe GPT-4o model. MMDU has a maximum of 18k image+text tokens, 20 images, and\n27 turns, which is at least 5x longer than previous benchmarks and poses\nchallenges to current LVLMs. Our in-depth analysis of 15 representative LVLMs\nusing MMDU reveals that open-source LVLMs lag behind closed-source counterparts\ndue to limited conversational instruction tuning data. We demonstrate that\nffne-tuning open-source LVLMs on MMDU-45k signiffcantly address this gap,\ngenerating longer and more accurate conversations, and improving scores on MMDU\nand existing benchmarks (MMStar: +1.1%, MathVista: +1.5%, ChartQA:+1.2%). Our\ncontributions pave the way for bridging the gap between current LVLM models and\nreal-world application demands. This project is available at\nhttps://github.com/Liuziyu77/MMDU.",
+      "upvotes": 61
+    },
+    {
+      "title": "DataComp-LM: In search of the next generation of training sets for language models",
+      "url": "https://huggingface.co/papers/2406.11794",
+      "authors": [
+        "Alex Fang",
+        "Georgios Smyrnis",
+        "Rui Xin",
+        "Marianna Nezhurina",
+        "Amro Abbas"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.11794.pdf",
+      "abstract": "We introduce DataComp for Language Models (DCLM), a testbed for controlled\ndataset experiments with the goal of improving language models. As part of\nDCLM, we provide a standardized corpus of 240T tokens extracted from Common\nCrawl, effective pretraining recipes based on the OpenLM framework, and a broad\nsuite of 53 downstream evaluations. Participants in the DCLM benchmark can\nexperiment with data curation strategies such as deduplication, filtering, and\ndata mixing at model scales ranging from 412M to 7B parameters. As a baseline\nfor DCLM, we conduct extensive experiments and find that model-based filtering\nis key to assembling a high-quality training set. The resulting dataset,\nDCLM-Baseline enables training a 7B parameter language model from scratch to\n64% 5-shot accuracy on MMLU with 2.6T training tokens. Compared to MAP-Neo, the\nprevious state-of-the-art in open-data language models, DCLM-Baseline\nrepresents a 6.6 percentage point improvement on MMLU while being trained with\n40% less compute. Our baseline model is also comparable to Mistral-7B-v0.3 and\nLlama 3 8B on MMLU (63% & 66%), and performs similarly on an average of 53\nnatural language understanding tasks while being trained with 6.6x less compute\nthan Llama 3 8B. Our results highlight the importance of dataset design for\ntraining language models and offer a starting point for further research on\ndata curation.",
+      "upvotes": 48
+    },
+    {
+      "title": "mDPO: Conditional Preference Optimization for Multimodal Large Language Models",
+      "url": "https://huggingface.co/papers/2406.11839",
+      "authors": [
+        "James Y. Huang",
+        "Nan Xu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.11839.pdf",
+      "abstract": "Direct preference optimization (DPO) has shown to be an effective method for\nlarge language model (LLM) alignment. Recent works have attempted to apply DPO\nto multimodal scenarios but have found it challenging to achieve consistent\nimprovement. Through a comparative experiment, we identify the unconditional\npreference problem in multimodal preference optimization, where the model\noverlooks the image condition. To address this problem, we propose mDPO, a\nmultimodal DPO objective that prevents the over-prioritization of language-only\npreferences by also optimizing image preference. Moreover, we introduce a\nreward anchor that forces the reward to be positive for chosen responses,\nthereby avoiding the decrease in their likelihood -- an intrinsic problem of\nrelative preference optimization. Experiments on two multimodal LLMs of\ndifferent sizes and three widely used benchmarks demonstrate that mDPO\neffectively addresses the unconditional preference problem in multimodal\npreference optimization and significantly improves model performance,\nparticularly in reducing hallucination.",
+      "upvotes": 37
+    },
+    {
+      "title": "THEANINE: Revisiting Memory Management in Long-term Conversations with Timeline-augmented Response Generation",
+      "url": "https://huggingface.co/papers/2406.10996",
+      "authors": [
+        "Namyoung Kim",
+        "SeongHyeon Bae",
+        "Yohan Jo"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.10996.pdf",
+      "abstract": "Large language models (LLMs) are capable of processing lengthy dialogue\nhistories during prolonged interaction with users without additional memory\nmodules; however, their responses tend to overlook or incorrectly recall\ninformation from the past. In this paper, we revisit memory-augmented response\ngeneration in the era of LLMs. While prior work focuses on getting rid of\noutdated memories, we argue that such memories can provide contextual cues that\nhelp dialogue systems understand the development of past events and, therefore,\nbenefit response generation. We present Theanine, a framework that augments\nLLMs' response generation with memory timelines -- series of memories that\ndemonstrate the development and causality of relevant past events. Along with\nTheanine, we introduce TeaFarm, a counterfactual-driven question-answering\npipeline addressing the limitation of G-Eval in long-term conversations.\nSupplementary videos of our methods and the TeaBag dataset for TeaFarm\nevaluation are in https://theanine-693b0.web.app/.",
+      "upvotes": 32
+    },
+    {
+      "title": "MeshAnything: Artist-Created Mesh Generation with Autoregressive Transformers",
+      "url": "https://huggingface.co/papers/2406.10163",
+      "authors": [
+        "Tong He",
+        "Di Huang",
+        "Xin Chen",
+        "Lei Yang",
+        "Gang Yu",
+        "Guosheng Lin"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.10163.pdf",
+      "abstract": "Recently, 3D assets created via reconstruction and generation have matched\nthe quality of manually crafted assets, highlighting their potential for\nreplacement. However, this potential is largely unrealized because these assets\nalways need to be converted to meshes for 3D industry applications, and the\nmeshes produced by current mesh extraction methods are significantly inferior\nto Artist-Created Meshes (AMs), i.e., meshes created by human artists.\nSpecifically, current mesh extraction methods rely on dense faces and ignore\ngeometric features, leading to inefficiencies, complicated post-processing, and\nlower representation quality. To address these issues, we introduce\nMeshAnything, a model that treats mesh extraction as a generation problem,\nproducing AMs aligned with specified shapes. By converting 3D assets in any 3D\nrepresentation into AMs, MeshAnything can be integrated with various 3D asset\nproduction methods, thereby enhancing their application across the 3D industry.\nThe architecture of MeshAnything comprises a VQ-VAE and a shape-conditioned\ndecoder-only transformer. We first learn a mesh vocabulary using the VQ-VAE,\nthen train the shape-conditioned decoder-only transformer on this vocabulary\nfor shape-conditioned autoregressive mesh generation. Our extensive experiments\nshow that our method generates AMs with hundreds of times fewer faces,\nsignificantly improving storage, rendering, and simulation efficiencies, while\nachieving precision comparable to previous methods.",
+      "upvotes": 32
+    },
+    {
+      "title": "How Do Large Language Models Acquire Factual Knowledge During Pretraining?",
+      "url": "https://huggingface.co/papers/2406.11813",
+      "authors": [
+        "Youngkyung Seo"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.11813.pdf",
+      "abstract": "Despite the recent observation that large language models (LLMs) can store\nsubstantial factual knowledge, there is a limited understanding of the\nmechanisms of how they acquire factual knowledge through pretraining. This work\naddresses this gap by studying how LLMs acquire factual knowledge during\npretraining. The findings reveal several important insights into the dynamics\nof factual knowledge acquisition during pretraining. First, counterintuitively,\nwe observe that pretraining on more data shows no significant improvement in\nthe model's capability to acquire and maintain factual knowledge. Next, there\nis a power-law relationship between training steps and forgetting of\nmemorization and generalization of factual knowledge, and LLMs trained with\nduplicated training data exhibit faster forgetting. Third, training LLMs with\nlarger batch sizes can enhance the models' robustness to forgetting. Overall,\nour observations suggest that factual knowledge acquisition in LLM pretraining\noccurs by progressively increasing the probability of factual knowledge\npresented in the pretraining data at each step. However, this increase is\ndiluted by subsequent forgetting. Based on this interpretation, we demonstrate\nthat we can provide plausible explanations for recently observed behaviors of\nLLMs, such as the poor performance of LLMs on long-tail knowledge and the\nbenefits of deduplicating the pretraining corpus.",
+      "upvotes": 30
+    },
+    {
+      "title": "A Simple and Effective $L_2$ Norm-Based Strategy for KV Cache Compression",
+      "url": "https://huggingface.co/papers/2406.11430",
+      "authors": [
+        "Simone Scardapane"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.11430.pdf",
+      "abstract": "The deployment of large language models (LLMs) is often hindered by the\nextensive memory requirements of the Key-Value (KV) cache, especially as\ncontext lengths increase. Existing approaches to reduce the KV cache size\ninvolve either fine-tuning the model to learn a compression strategy or\nleveraging attention scores to reduce the sequence length. We analyse the\nattention distributions in decoder-only Transformers-based models and observe\nthat attention allocation patterns stay consistent across most layers.\nSurprisingly, we find a clear correlation between the L_2 and the attention\nscores over cached KV pairs, where a low L_2 of a key embedding usually leads\nto a high attention score during decoding. This finding indicates that the\ninfluence of a KV pair is potentially determined by the key embedding itself\nbefore being queried. Based on this observation, we compress the KV cache based\non the L_2 of key embeddings. Our experimental results show that this simple\nstrategy can reduce the KV cache size by 50% on language modelling and\nneedle-in-a-haystack tasks and 90% on passkey retrieval tasks without losing\naccuracy.",
+      "upvotes": 23
+    },
+    {
+      "title": "VideoLLM-online: Online Video Large Language Model for Streaming Video",
+      "url": "https://huggingface.co/papers/2406.11816",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2406.11816.pdf",
+      "abstract": "Recent Large Language Models have been enhanced with vision capabilities,\nenabling them to comprehend images, videos, and interleaved vision-language\ncontent. However, the learning methods of these large multimodal models\ntypically treat videos as predetermined clips, making them less effective and\nefficient at handling streaming video inputs. In this paper, we propose a novel\nLearning-In-Video-Stream (LIVE) framework, which enables temporally aligned,\nlong-context, and real-time conversation within a continuous video stream. Our\nLIVE framework comprises comprehensive approaches to achieve video streaming\ndialogue, encompassing: (1) a training objective designed to perform language\nmodeling for continuous streaming inputs, (2) a data generation scheme that\nconverts offline temporal annotations into a streaming dialogue format, and (3)\nan optimized inference pipeline to speed up the model responses in real-world\nvideo streams. With our LIVE framework, we built VideoLLM-online model upon\nLlama-2/Llama-3 and demonstrate its significant advantages in processing\nstreaming videos. For instance, on average, our model can support streaming\ndialogue in a 5-minute video clip at over 10 FPS on an A100 GPU. Moreover, it\nalso showcases state-of-the-art performance on public offline video benchmarks,\nsuch as recognition, captioning, and forecasting. The code, model, data, and\ndemo have been made available at https://showlab.github.io/videollm-online.",
+      "upvotes": 21
+    },
+    {
+      "title": "Exploring the Role of Large Language Models in Prompt Encoding for Diffusion Models",
+      "url": "https://huggingface.co/papers/2406.11831",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2406.11831.pdf",
+      "abstract": "Large language models (LLMs) based on decoder-only transformers have\ndemonstrated superior text understanding capabilities compared to CLIP and\nT5-series models. However, the paradigm for utilizing current advanced LLMs in\ntext-to-image diffusion models remains to be explored. We observed an unusual\nphenomenon: directly using a large language model as the prompt encoder\nsignificantly degrades the prompt-following ability in image generation. We\nidentified two main obstacles behind this issue. One is the misalignment\nbetween the next token prediction training in LLM and the requirement for\ndiscriminative prompt features in diffusion models. The other is the intrinsic\npositional bias introduced by the decoder-only architecture. To deal with this\nissue, we propose a novel framework to fully harness the capabilities of LLMs.\nThrough the carefully designed usage guidance, we effectively enhance the text\nrepresentation capability for prompt encoding and eliminate its inherent\npositional bias. This allows us to integrate state-of-the-art LLMs into the\ntext-to-image generation model flexibly. Furthermore, we also provide an\neffective manner to fuse multiple LLMs into our framework. Considering the\nexcellent performance and scaling capabilities demonstrated by the transformer\narchitecture, we further design an LLM-Infused Diffusion Transformer (LI-DiT)\nbased on the framework. We conduct extensive experiments to validate LI-DiT\nacross model size and data size. Benefiting from the inherent ability of the\nLLMs and our innovative designs, the prompt understanding performance of LI-DiT\neasily surpasses state-of-the-art open-source models as well as mainstream\nclosed-source commercial models including Stable Diffusion 3, DALL-E 3, and\nMidjourney V6. The powerful LI-DiT-10B will be available after further\noptimization and security checks.",
+      "upvotes": 20
+    },
+    {
+      "title": "GAMA: A Large Audio-Language Model with Advanced Audio Understanding and Complex Reasoning Abilities",
+      "url": "https://huggingface.co/papers/2406.11768",
+      "authors": [
+        "Ashish Seth",
+        "Chandra Kiran Reddy Evuru",
+        "Utkarsh Tyagi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.11768.pdf",
+      "abstract": "Perceiving and understanding non-speech sounds and non-verbal speech is\nessential to making decisions that help us interact with our surroundings. In\nthis paper, we propose GAMA, a novel General-purpose Large Audio-Language Model\n(LALM) with Advanced Audio Understanding and Complex Reasoning Abilities. We\nbuild GAMA by integrating an LLM with multiple types of audio representations,\nincluding features from a custom Audio Q-Former, a multi-layer aggregator that\naggregates features from multiple layers of an audio encoder. We fine-tune GAMA\non a large-scale audio-language dataset, which augments it with audio\nunderstanding capabilities. Next, we propose CompA-R (Instruction-Tuning for\nComplex Audio Reasoning), a synthetically generated instruction-tuning (IT)\ndataset with instructions that require the model to perform complex reasoning\non the input audio. We instruction-tune GAMA with CompA-R to endow it with\ncomplex reasoning abilities, where we further add a soft prompt as input with\nhigh-level semantic evidence by leveraging event tags of the input audio.\nFinally, we also propose CompA-R-test, a human-labeled evaluation dataset for\nevaluating the capabilities of LALMs on open-ended audio question-answering\nthat requires complex reasoning. Through automated and expert human\nevaluations, we show that GAMA outperforms all other LALMs in literature on\ndiverse audio understanding tasks by margins of 1%-84%. Further, GAMA IT-ed on\nCompA-R proves to be superior in its complex reasoning and instruction\nfollowing capabilities.",
+      "upvotes": 20
+    },
+    {
+      "title": "MINT-1T: Scaling Open-Source Multimodal Data by 10x: A Multimodal Dataset with One Trillion Tokens",
+      "url": "https://huggingface.co/papers/2406.11271",
+      "authors": [
+        "Le Xue",
+        "Oscar Lo",
+        "Hannah Lee",
+        "Etash Kumar Guha",
+        "Matt Jordan",
+        "Sheng Shen",
+        "Mohamed Awadalla",
+        "Silvio Savarese",
+        "Caiming Xiong",
+        "Yejin Choi",
+        "Ludwig Schmidt"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.11271.pdf",
+      "abstract": "Multimodal interleaved datasets featuring free-form interleaved sequences of\nimages and text are crucial for training frontier large multimodal models\n(LMMs). Despite the rapid progression of open-source LMMs, there remains a\npronounced scarcity of large-scale, diverse open-source multimodal interleaved\ndatasets. In response, we introduce MINT-1T, the most extensive and diverse\nopen-source Multimodal INTerleaved dataset to date. MINT-1T comprises one\ntrillion text tokens and three billion images, a 10x scale-up from existing\nopen-source datasets. Additionally, we include previously untapped sources such\nas PDFs and ArXiv papers. As scaling multimodal interleaved datasets requires\nsubstantial engineering effort, sharing the data curation process and releasing\nthe dataset greatly benefits the community. Our experiments show that LMMs\ntrained on MINT-1T rival the performance of models trained on the previous\nleading dataset, OBELICS. Our data and code will be released at\nhttps://github.com/mlfoundations/MINT-1T.",
+      "upvotes": 18
+    },
+    {
+      "title": "LLaNA: Large Language and NeRF Assistant",
+      "url": "https://huggingface.co/papers/2406.11840",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2406.11840.pdf",
+      "abstract": "Multimodal Large Language Models (MLLMs) have demonstrated an excellent\nunderstanding of images and 3D data. However, both modalities have shortcomings\nin holistically capturing the appearance and geometry of objects. Meanwhile,\nNeural Radiance Fields (NeRFs), which encode information within the weights of\na simple Multi-Layer Perceptron (MLP), have emerged as an increasingly\nwidespread modality that simultaneously encodes the geometry and photorealistic\nappearance of objects. This paper investigates the feasibility and\neffectiveness of ingesting NeRF into MLLM. We create LLaNA, the first\ngeneral-purpose NeRF-language assistant capable of performing new tasks such as\nNeRF captioning and Q\\&A. Notably, our method directly processes the weights of\nthe NeRF's MLP to extract information about the represented objects without the\nneed to render images or materialize 3D data structures. Moreover, we build a\ndataset of NeRFs with text annotations for various NeRF-language tasks with no\nhuman intervention. Based on this dataset, we develop a benchmark to evaluate\nthe NeRF understanding capability of our method. Results show that processing\nNeRF weights performs favourably against extracting 2D or 3D representations\nfrom NeRFs.",
+      "upvotes": 17
+    },
+    {
+      "title": "From Pixels to Prose: A Large Dataset of Dense Image Captions",
+      "url": "https://huggingface.co/papers/2406.10328",
+      "authors": [
+        "Sukriti Paul",
+        "Mayuka Jayawardhana",
+        "Alireza Ganjdanesh",
+        "Heng Huang",
+        "Abhinav Bhatele",
+        "Gowthami Somepalli",
+        "Tom Goldstein"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.10328.pdf",
+      "abstract": "Training large vision-language models requires extensive, high-quality\nimage-text pairs. Existing web-scraped datasets, however, are noisy and lack\ndetailed image descriptions. To bridge this gap, we introduce PixelProse, a\ncomprehensive dataset of over 16M (million) synthetically generated captions,\nleveraging cutting-edge vision-language models for detailed and accurate\ndescriptions. To ensure data integrity, we rigorously analyze our dataset for\nproblematic content, including child sexual abuse material (CSAM), personally\nidentifiable information (PII), and toxicity. We also provide valuable metadata\nsuch as watermark presence and aesthetic scores, aiding in further dataset\nfiltering. We hope PixelProse will be a valuable resource for future\nvision-language research. PixelProse is available at\nhttps://huggingface.co/datasets/tomg-group-umd/pixelprose",
+      "upvotes": 17
+    },
+    {
+      "title": "In-Context Editing: Learning Knowledge from Self-Induced Distributions",
+      "url": "https://huggingface.co/papers/2406.11194",
+      "authors": [
+        "Jiaqi Li",
+        "Yifan Zhong",
+        "Yaodong Yang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.11194.pdf",
+      "abstract": "The existing fine-tuning paradigm for language models is brittle in knowledge\nediting scenarios, where the model must incorporate new information without\nextensive retraining. This brittleness often results in overfitting, reduced\nperformance, and unnatural language generation. To address this, we propose\nConsistent In-Context Editing (ICE), a novel approach that leverages the\nmodel's in-context learning capability to tune toward a contextual distribution\nrather than a one-hot target. ICE introduces a straightforward optimization\nframework that includes both a target and a procedure, enhancing the robustness\nand effectiveness of gradient-based tuning methods. We provide analytical\ninsights into ICE across four critical aspects of knowledge editing: accuracy,\nlocality, generalization, and linguistic quality, showing its advantages.\nExperimental results across four datasets confirm the effectiveness of ICE and\ndemonstrate its potential for continual editing, ensuring that updated\ninformation is incorporated while preserving the integrity of the model.",
+      "upvotes": 15
+    },
+    {
+      "title": "Pandora: Towards General World Model with Natural Language Actions and Video States",
+      "url": "https://huggingface.co/papers/2406.09455",
+      "authors": [
+        "Yemin Shi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.09455.pdf",
+      "abstract": "World models simulate future states of the world in response to different\nactions. They facilitate interactive content creation and provides a foundation\nfor grounded, long-horizon reasoning. Current foundation models do not fully\nmeet the capabilities of general world models: large language models (LLMs) are\nconstrained by their reliance on language modality and their limited\nunderstanding of the physical world, while video models lack interactive action\ncontrol over the world simulations. This paper makes a step towards building a\ngeneral world model by introducing Pandora, a hybrid autoregressive-diffusion\nmodel that simulates world states by generating videos and allows real-time\ncontrol with free-text actions. Pandora achieves domain generality, video\nconsistency, and controllability through large-scale pretraining and\ninstruction tuning. Crucially, Pandora bypasses the cost of\ntraining-from-scratch by integrating a pretrained LLM (7B) and a pretrained\nvideo model, requiring only additional lightweight finetuning. We illustrate\nextensive outputs by Pandora across diverse domains (indoor/outdoor,\nnatural/urban, human/robot, 2D/3D, etc.). The results indicate great potential\nof building stronger general world models with larger-scale training.",
+      "upvotes": 14
+    },
+    {
+      "title": "WPO: Enhancing RLHF with Weighted Preference Optimization",
+      "url": "https://huggingface.co/papers/2406.11827",
+      "authors": [
+        "Shujian Zhang",
+        "Sanqiang Zhao",
+        "Chenguang Zhu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.11827.pdf",
+      "abstract": "Reinforcement learning from human feedback (RLHF) is a promising solution to\nalign large language models (LLMs) more closely with human values. Off-policy\npreference optimization, where the preference data is obtained from other\nmodels, is widely adopted due to its cost efficiency and scalability. However,\noff-policy preference optimization often suffers from a distributional gap\nbetween the policy used for data collection and the target policy, leading to\nsuboptimal optimization. In this paper, we propose a novel strategy to mitigate\nthis problem by simulating on-policy learning with off-policy preference data.\nOur Weighted Preference Optimization (WPO) method adapts off-policy data to\nresemble on-policy data more closely by reweighting preference pairs according\nto their probability under the current policy. This method not only addresses\nthe distributional gap problem but also enhances the optimization process\nwithout incurring additional costs. We validate our method on instruction\nfollowing benchmarks including Alpaca Eval 2 and MT-bench. WPO not only\noutperforms Direct Preference Optimization (DPO) by up to 5.6% on Alpaca Eval 2\nbut also establishes a remarkable length-controlled winning rate against\nGPT-4-turbo of 48.6% based on Llama-3-8B-Instruct, making it the strongest 8B\nmodel on the leaderboard. We will release the code and models at\nhttps://github.com/wzhouad/WPO.",
+      "upvotes": 14
+    },
+    {
+      "title": "WildVision: Evaluating Vision-Language Models in the Wild with Human Preferences",
+      "url": "https://huggingface.co/papers/2406.11069",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2406.11069.pdf",
+      "abstract": "Recent breakthroughs in vision-language models (VLMs) emphasize the necessity\nof benchmarking human preferences in real-world multimodal interactions. To\naddress this gap, we launched WildVision-Arena (WV-Arena), an online platform\nthat collects human preferences to evaluate VLMs. We curated WV-Bench by\nselecting 500 high-quality samples from 8,000 user submissions in WV-Arena.\nWV-Bench uses GPT-4 as the judge to compare each VLM with Claude-3-Sonnet,\nachieving a Spearman correlation of 0.94 with the WV-Arena Elo. This\nsignificantly outperforms other benchmarks like MMVet, MMMU, and MMStar.\n  Our comprehensive analysis of 20K real-world interactions reveals important\ninsights into the failure cases of top-performing VLMs. For example, we find\nthat although GPT-4V surpasses many other models like Reka-Flash, Opus, and\nYi-VL-Plus in simple visual recognition and reasoning tasks, it still faces\nchallenges with subtle contextual cues, spatial reasoning, visual imagination,\nand expert domain knowledge. Additionally, current VLMs exhibit issues with\nhallucinations and safety when intentionally provoked. We are releasing our\nchat and feedback data to further advance research in the field of VLMs.",
+      "upvotes": 13
+    },
+    {
+      "title": "L4GM: Large 4D Gaussian Reconstruction Model",
+      "url": "https://huggingface.co/papers/2406.10324",
+      "authors": [
+        "Kevin Xie",
+        "Xiaohui Zeng",
+        "Karsten Kreis",
+        "Ziwei Liu",
+        "Antonio Torralba",
+        "Sanja Fidler",
+        "Seung Wook Kim",
+        "Huan Ling"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.10324.pdf",
+      "abstract": "We present L4GM, the first 4D Large Reconstruction Model that produces\nanimated objects from a single-view video input -- in a single feed-forward\npass that takes only a second. Key to our success is a novel dataset of\nmultiview videos containing curated, rendered animated objects from Objaverse.\nThis dataset depicts 44K diverse objects with 110K animations rendered in 48\nviewpoints, resulting in 12M videos with a total of 300M frames. We keep our\nL4GM simple for scalability and build directly on top of LGM, a pretrained 3D\nLarge Reconstruction Model that outputs 3D Gaussian ellipsoids from multiview\nimage input. L4GM outputs a per-frame 3D Gaussian Splatting representation from\nvideo frames sampled at a low fps and then upsamples the representation to a\nhigher fps to achieve temporal smoothness. We add temporal self-attention\nlayers to the base LGM to help it learn consistency across time, and utilize a\nper-timestep multiview rendering loss to train the model. The representation is\nupsampled to a higher framerate by training an interpolation model which\nproduces intermediate 3D Gaussian representations. We showcase that L4GM that\nis only trained on synthetic data generalizes extremely well on in-the-wild\nvideos, producing high quality animated 3D assets.",
+      "upvotes": 13
+    },
+    {
+      "title": "Unifying Multimodal Retrieval via Document Screenshot Embedding",
+      "url": "https://huggingface.co/papers/2406.11251",
+      "authors": [
+        "Sheng-Chieh Lin",
+        "Minghan Li",
+        "Wenhu Chen",
+        "Jimmy Lin"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.11251.pdf",
+      "abstract": "In the real world, documents are organized in different formats and varied\nmodalities. Traditional retrieval pipelines require tailored document parsing\ntechniques and content extraction modules to prepare input for indexing. This\nprocess is tedious, prone to errors, and has information loss. To this end, we\npropose Document Screenshot Embedding} (DSE), a novel retrieval paradigm that\nregards document screenshots as a unified input format, which does not require\nany content extraction preprocess and preserves all the information in a\ndocument (e.g., text, image and layout). DSE leverages a large vision-language\nmodel to directly encode document screenshots into dense representations for\nretrieval. To evaluate our method, we first craft the dataset of Wiki-SS, a\n1.3M Wikipedia web page screenshots as the corpus to answer the questions from\nthe Natural Questions dataset. In such a text-intensive document retrieval\nsetting, DSE shows competitive effectiveness compared to other text retrieval\nmethods relying on parsing. For example, DSE outperforms BM25 by 17 points in\ntop-1 retrieval accuracy. Additionally, in a mixed-modality task of slide\nretrieval, DSE significantly outperforms OCR text retrieval methods by over 15\npoints in nDCG@10. These experiments show that DSE is an effective document\nretrieval paradigm for diverse types of documents. Model checkpoints, code, and\nWiki-SS collection will be released.",
+      "upvotes": 9
+    },
+    {
+      "title": "Task Me Anything",
+      "url": "https://huggingface.co/papers/2406.11775",
+      "authors": [
+        "Weikai Huang",
+        "Zixian Ma",
+        "Oscar Michel",
+        "Dong He",
+        "Tanmay Gupta",
+        "Wei-Chiu Ma",
+        "Ali Farhadi",
+        "Aniruddha Kembhavi",
+        "Ranjay Krishna"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.11775.pdf",
+      "abstract": "Benchmarks for large multimodal language models (MLMs) now serve to\nsimultaneously assess the general capabilities of models instead of evaluating\nfor a specific capability. As a result, when a developer wants to identify\nwhich models to use for their application, they are overwhelmed by the number\nof benchmarks and remain uncertain about which benchmark's results are most\nreflective of their specific use case. This paper introduces Task-Me-Anything,\na benchmark generation engine which produces a benchmark tailored to a user's\nneeds. Task-Me-Anything maintains an extendable taxonomy of visual assets and\ncan programmatically generate a vast number of task instances. Additionally, it\nalgorithmically addresses user queries regarding MLM performance efficiently\nwithin a computational budget. It contains 113K images, 10K videos, 2K 3D\nobject assets, over 365 object categories, 655 attributes, and 335\nrelationships. It can generate 750M image/video question-answering pairs, which\nfocus on evaluating MLM perceptual capabilities. Task-Me-Anything reveals\ncritical insights: open-source MLMs excel in object and attribute recognition\nbut lack spatial and temporal understanding; each model exhibits unique\nstrengths and weaknesses; larger models generally perform better, though\nexceptions exist; and GPT4o demonstrates challenges in recognizing\nrotating/moving objects and distinguishing colors.",
+      "upvotes": 8
+    },
+    {
+      "title": "Vid3D: Synthesis of Dynamic 3D Scenes using 2D Video Diffusion",
+      "url": "https://huggingface.co/papers/2406.11196",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2406.11196.pdf",
+      "abstract": "A recent frontier in computer vision has been the task of 3D video\ngeneration, which consists of generating a time-varying 3D representation of a\nscene. To generate dynamic 3D scenes, current methods explicitly model 3D\ntemporal dynamics by jointly optimizing for consistency across both time and\nviews of the scene. In this paper, we instead investigate whether it is\nnecessary to explicitly enforce multiview consistency over time, as current\napproaches do, or if it is sufficient for a model to generate 3D\nrepresentations of each timestep independently. We hence propose a model,\nVid3D, that leverages 2D video diffusion to generate 3D videos by first\ngenerating a 2D \"seed\" of the video's temporal dynamics and then independently\ngenerating a 3D representation for each timestep in the seed video. We evaluate\nVid3D against two state-of-the-art 3D video generation methods and find that\nVid3D is achieves comparable results despite not explicitly modeling 3D\ntemporal dynamics. We further ablate how the quality of Vid3D depends on the\nnumber of views generated per frame. While we observe some degradation with\nfewer views, performance degradation remains minor. Our results thus suggest\nthat 3D temporal knowledge may not be necessary to generate high-quality\ndynamic 3D scenes, potentially enabling simpler generative algorithms for this\ntask.",
+      "upvotes": 8
+    },
+    {
+      "title": "Humor in AI: Massive Scale Crowd-Sourced Preferences and Benchmarks for Cartoon Captioning",
+      "url": "https://huggingface.co/papers/2406.10522",
+      "authors": [
+        "Lalit Jain",
+        "Yang Guo",
+        "Jiayi Chen",
+        "Kuan Lok Zhou",
+        "Siddharth Suresh",
+        "Andrew Wagenmaker",
+        "Scott Sievert",
+        "Timothy Rogers",
+        "Kevin Jamieson",
+        "Robert Mankoff",
+        "Robert Nowak"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.10522.pdf",
+      "abstract": "We present a novel multimodal preference dataset for creative tasks,\nconsisting of over 250 million human ratings on more than 2.2 million captions,\ncollected through crowdsourcing rating data for The New Yorker's weekly cartoon\ncaption contest over the past eight years. This unique dataset supports the\ndevelopment and evaluation of multimodal large language models and\npreference-based fine-tuning algorithms for humorous caption generation. We\npropose novel benchmarks for judging the quality of model-generated captions,\nutilizing both GPT4 and human judgments to establish ranking-based evaluation\nstrategies. Our experimental results highlight the limitations of current\nfine-tuning methods, such as RLHF and DPO, when applied to creative tasks.\nFurthermore, we demonstrate that even state-of-the-art models like GPT4 and\nClaude currently underperform top human contestants in generating humorous\ncaptions. As we conclude this extensive data collection effort, we release the\nentire preference dataset to the research community, fostering further\nadvancements in AI humor generation and evaluation.",
+      "upvotes": 7
+    },
+    {
+      "title": "Just How Flexible are Neural Networks in Practice?",
+      "url": "https://huggingface.co/papers/2406.11463",
+      "authors": [
+        "Micah Goldblum",
+        "Arpit Bansal",
+        "C. Bayan Bruss",
+        "Andrew Gordon Wilson"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.11463.pdf",
+      "abstract": "It is widely believed that a neural network can fit a training set containing\nat least as many samples as it has parameters, underpinning notions of\noverparameterized and underparameterized models. In practice, however, we only\nfind solutions accessible via our training procedure, including the optimizer\nand regularizers, limiting flexibility. Moreover, the exact parameterization of\nthe function class, built into an architecture, shapes its loss surface and\nimpacts the minima we find. In this work, we examine the ability of neural\nnetworks to fit data in practice. Our findings indicate that: (1) standard\noptimizers find minima where the model can only fit training sets with\nsignificantly fewer samples than it has parameters; (2) convolutional networks\nare more parameter-efficient than MLPs and ViTs, even on randomly labeled data;\n(3) while stochastic training is thought to have a regularizing effect, SGD\nactually finds minima that fit more training data than full-batch gradient\ndescent; (4) the difference in capacity to fit correctly labeled and\nincorrectly labeled samples can be predictive of generalization; (5) ReLU\nactivation functions result in finding minima that fit more data despite being\ndesigned to avoid vanishing and exploding gradients in deep architectures.",
+      "upvotes": 7
+    },
+    {
+      "title": "Evaluating Open Language Models Across Task Types, Application Domains, and Reasoning Types: An In-Depth Experimental Analysis",
+      "url": "https://huggingface.co/papers/2406.11402",
+      "authors": [
+        "Vinija Jain"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.11402.pdf",
+      "abstract": "The rapid rise of Language Models (LMs) has expanded their use in several\napplications. Yet, due to constraints of model size, associated cost, or\nproprietary restrictions, utilizing state-of-the-art (SOTA) LLMs is not always\nfeasible. With open, smaller LMs emerging, more applications can leverage their\ncapabilities, but selecting the right LM can be challenging. This work conducts\nan in-depth experimental analysis of the semantic correctness of outputs of 10\nsmaller, open LMs across three aspects: task types, application domains and\nreasoning types, using diverse prompt styles. We demonstrate that most\neffective models and prompt styles vary depending on the specific requirements.\nOur analysis provides a comparative assessment of LMs and prompt styles using a\nproposed three-tier schema of aspects for their strategic selection based on\nuse-case and other constraints. We also show that if utilized appropriately,\nthese LMs can compete with, and sometimes outperform, SOTA LLMs like\nDeepSeek-v2, GPT-3.5-Turbo, and GPT-4o.",
+      "upvotes": 6
+    },
+    {
+      "title": "HiddenTables & PyQTax: A Cooperative Game and Dataset For TableQA to Ensure Scale and Data Privacy Across a Myriad of Taxonomies",
+      "url": "https://huggingface.co/papers/2406.10803",
+      "authors": [
+        "William Watson",
+        "Tucker Balch",
+        "Manuela Veloso"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.10803.pdf",
+      "abstract": "A myriad of different Large Language Models (LLMs) face a common challenge in\ncontextually analyzing table question-answering tasks. These challenges are\nengendered from (1) finite context windows for large tables, (2) multi-faceted\ndiscrepancies amongst tokenization patterns against cell boundaries, and (3)\nvarious limitations stemming from data confidentiality in the process of using\nexternal models such as gpt-3.5-turbo. We propose a cooperative game dubbed\n\"HiddenTables\" as a potential resolution to this challenge. In essence,\n\"HiddenTables\" is played between the code-generating LLM \"Solver\" and the\n\"Oracle\" which evaluates the ability of the LLM agents to solve Table QA tasks.\nThis game is based on natural language schemas and importantly, ensures the\nsecurity of the underlying data. We provide evidential experiments on a diverse\nset of tables that demonstrate an LLM's collective inability to generalize and\nperform on complex queries, handle compositional dependencies, and align\nnatural language to programmatic commands when concrete table schemas are\nprovided. Unlike encoder-based models, we have pushed the boundaries of\n\"HiddenTables\" to not be limited by the number of rows - therefore we exhibit\nimproved efficiency in prompt and completion tokens. Our infrastructure has\nspawned a new dataset \"PyQTax\" that spans across 116,671 question-table-answer\ntriplets and provides additional fine-grained breakdowns & labels for varying\nquestion taxonomies. Therefore, in tandem with our academic contributions\nregarding LLMs' deficiency in TableQA tasks, \"HiddenTables\" is a tactile\nmanifestation of how LLMs can interact with massive datasets while ensuring\ndata security and minimizing generation costs.",
+      "upvotes": 4
+    },
+    {
+      "title": "CoLoR-Filter: Conditional Loss Reduction Filtering for Targeted Language Model Pre-training",
+      "url": "https://huggingface.co/papers/2406.10670",
+      "authors": [
+        "Jonathan Richard Schwarz",
+        "Sham Kakade"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.10670.pdf",
+      "abstract": "Selecting high-quality data for pre-training is crucial in shaping the\ndownstream task performance of language models. A major challenge lies in\nidentifying this optimal subset, a problem generally considered intractable,\nthus necessitating scalable and effective heuristics. In this work, we propose\na data selection method, CoLoR-Filter (Conditional Loss Reduction Filtering),\nwhich leverages an empirical Bayes-inspired approach to derive a simple and\ncomputationally efficient selection criterion based on the relative loss values\nof two auxiliary models.\n  In addition to the modeling rationale, we evaluate CoLoR-Filter empirically\non two language modeling tasks: (1) selecting data from C4 for domain\nadaptation to evaluation on Books and (2) selecting data from C4 for a suite of\ndownstream multiple-choice question answering tasks. We demonstrate favorable\nscaling both as we subselect more aggressively and using small auxiliary models\nto select data for large target models. As one headline result, CoLoR-Filter\ndata selected using a pair of 150m parameter auxiliary models can train a 1.2b\nparameter target model to match a 1.2b parameter model trained on 25b randomly\nselected tokens with 25x less data for Books and 11x less data for the\ndownstream tasks.\n  Code: https://github.com/davidbrandfonbrener/color-filter-olmo\n  Filtered data:\nhttps://huggingface.co/datasets/davidbrandfonbrener/color-filtered-c4",
+      "upvotes": 4
+    },
+    {
+      "title": "Breaking the Attention Bottleneck",
+      "url": "https://huggingface.co/papers/2406.10906",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2406.10906.pdf",
+      "abstract": "Attention-based transformers have become the standard architecture in many\ndeep learning fields, primarily due to their ability to model long-range\ndependencies and handle variable-length input sequences. However, the attention\nmechanism with its quadratic complexity is a significant bottleneck in the\ntransformer architecture. This algorithm is only uni-directional in the decoder\nand converges to a static pattern in over-parametrized decoder-only models. I\naddress this issue by developing a generative function as attention or\nactivation replacement. It still has the auto-regressive character by comparing\neach token with the previous one. In my test setting with nanoGPT this yields a\nsmaller loss while having a smaller model. The loss further drops by\nincorporating an average context vector. This concept of attention replacement\nis distributed under the GNU AGPL v3 license at\nhttps://gitlab.com/Bachstelze/causal_generation.",
+      "upvotes": 4
+    },
+    {
+      "title": "Consistency^2: Consistent and Fast 3D Painting with Latent Consistency Models",
+      "url": "https://huggingface.co/papers/2406.11202",
+      "authors": [
+        "Tianfu Wang",
+        "Konrad Schindler"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.11202.pdf",
+      "abstract": "Generative 3D Painting is among the top productivity boosters in\nhigh-resolution 3D asset management and recycling. Ever since text-to-image\nmodels became accessible for inference on consumer hardware, the performance of\n3D Painting methods has consistently improved and is currently close to\nplateauing. At the core of most such models lies denoising diffusion in the\nlatent space, an inherently time-consuming iterative process. Multiple\ntechniques have been developed recently to accelerate generation and reduce\nsampling iterations by orders of magnitude. Designed for 2D generative imaging,\nthese techniques do not come with recipes for lifting them into 3D. In this\npaper, we address this shortcoming by proposing a Latent Consistency Model\n(LCM) adaptation for the task at hand. We analyze the strengths and weaknesses\nof the proposed model and evaluate it quantitatively and qualitatively. Based\non the Objaverse dataset samples study, our 3D painting method attains strong\npreference in all evaluations. Source code is available at\nhttps://github.com/kongdai123/consistency2.",
+      "upvotes": 3
+    },
+    {
+      "title": "Deep Bayesian Active Learning for Preference Modeling in Large Language Models",
+      "url": "https://huggingface.co/papers/2406.10023",
+      "authors": [
+        "Luckeciano C. Melo",
+        "Panagiotis Tigas",
+        "Yarin Gal"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.10023.pdf",
+      "abstract": "Leveraging human preferences for steering the behavior of Large Language\nModels (LLMs) has demonstrated notable success in recent years. Nonetheless,\ndata selection and labeling are still a bottleneck for these systems,\nparticularly at large scale. Hence, selecting the most informative points for\nacquiring human feedback may considerably reduce the cost of preference\nlabeling and unleash the further development of LLMs. Bayesian Active Learning\nprovides a principled framework for addressing this challenge and has\ndemonstrated remarkable success in diverse settings. However, previous attempts\nto employ it for Preference Modeling did not meet such expectations. In this\nwork, we identify that naive epistemic uncertainty estimation leads to the\nacquisition of redundant samples. We address this by proposing the Bayesian\nActive Learner for Preference Modeling (BAL-PM), a novel stochastic acquisition\npolicy that not only targets points of high epistemic uncertainty according to\nthe preference model but also seeks to maximize the entropy of the acquired\nprompt distribution in the feature space spanned by the employed LLM. Notably,\nour experiments demonstrate that BAL-PM requires 33% to 68% fewer preference\nlabels in two popular human preference datasets and exceeds previous stochastic\nBayesian acquisition policies.",
+      "upvotes": 2
+    }
+  ]
+}

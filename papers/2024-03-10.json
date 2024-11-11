@@ -1,0 +1,143 @@
+{
+  "date": "2024-03-10",
+  "papers": [
+    {
+      "title": "Yi: Open Foundation Models by 01.AI",
+      "url": "https://huggingface.co/papers/2403.04652",
+      "authors": [
+        "01. AI",
+        "Alex Young",
+        "Bei Chen",
+        "Chao Li",
+        "Chengen Huang",
+        "Heng Li",
+        "Jiangcheng Zhu",
+        "Jing Chang",
+        "Peng Liu",
+        "Qiang Liu",
+        "Shawn Yue",
+        "Senbin Yang",
+        "Shiming Yang",
+        "Tao Yu",
+        "Xiaoyi Ren"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.04652.pdf",
+      "abstract": "We introduce the Yi model family, a series of language and multimodal models\nthat demonstrate strong multi-dimensional capabilities. The Yi model family is\nbased on 6B and 34B pretrained language models, then we extend them to chat\nmodels, 200K long context models, depth-upscaled models, and vision-language\nmodels. Our base models achieve strong performance on a wide range of\nbenchmarks like MMLU, and our finetuned chat models deliver strong human\npreference rate on major evaluation platforms like AlpacaEval and Chatbot\nArena. Building upon our scalable super-computing infrastructure and the\nclassical transformer architecture, we attribute the performance of Yi models\nprimarily to its data quality resulting from our data-engineering efforts. For\npretraining, we construct 3.1 trillion tokens of English and Chinese corpora\nusing a cascaded data deduplication and quality filtering pipeline. For\nfinetuning, we polish a small scale (less than 10K) instruction dataset over\nmultiple iterations such that every single instance has been verified directly\nby our machine learning engineers. For vision-language, we combine the chat\nlanguage model with a vision transformer encoder and train the model to align\nvisual representations to the semantic space of the language model. We further\nextend the context length to 200K through lightweight continual pretraining and\ndemonstrate strong needle-in-a-haystack retrieval performance. We show that\nextending the depth of the pretrained checkpoint through continual pretraining\nfurther improves performance. We believe that given our current results,\ncontinuing to scale up model parameters using thoroughly optimized data will\nlead to even stronger frontier models.",
+      "upvotes": 62
+    },
+    {
+      "title": "Teaching Large Language Models to Reason with Reinforcement Learning",
+      "url": "https://huggingface.co/papers/2403.04642",
+      "authors": [
+        "Jane Dwivedi-Yu",
+        "Maksym Zhuravinskyi",
+        "Eric Hambro"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.04642.pdf",
+      "abstract": "Reinforcement Learning from Human Feedback (RLHF) has emerged as a\ndominant approach for aligning LLM outputs with human preferences. Inspired by\nthe success of RLHF, we study the performance of multiple algorithms that learn\nfrom feedback (Expert Iteration, Proximal Policy Optimization (PPO),\nReturn-Conditioned RL) on improving LLM reasoning capabilities. We investigate\nboth sparse and dense rewards provided to the LLM both heuristically and via a\nlearned reward model. We additionally start from multiple model sizes and\ninitializations both with and without supervised fine-tuning (SFT)\ndata. Overall, we find all algorithms perform comparably, with Expert Iteration\nperforming best in most cases. Surprisingly, we find the sample complexity of\nExpert Iteration is similar to that of PPO, requiring at most on the order of\n10^6 samples to converge from a pretrained checkpoint. We investigate why\nthis is the case, concluding that during RL training models fail to explore\nsignificantly beyond solutions already produced by SFT models. Additionally, we\ndiscuss a trade off between maj@1 and pass@96 metric performance during SFT\ntraining and how conversely RL training improves both simultaneously. We then\nconclude by discussing the implications of our findings for RLHF and the future\nrole of RL in LLM fine-tuning.",
+      "upvotes": 46
+    },
+    {
+      "title": "PixArt-Σ: Weak-to-Strong Training of Diffusion Transformer for 4K Text-to-Image Generation",
+      "url": "https://huggingface.co/papers/2403.04692",
+      "authors": [
+        "Yue Wu",
+        "Lewei Yao",
+        "Xiaozhe Ren",
+        "Zhongdao Wang",
+        "Ping Luo",
+        "Huchuan Lu",
+        "Zhenguo Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.04692.pdf",
+      "abstract": "In this paper, we introduce PixArt-\\Sigma, a Diffusion Transformer\nmodel~(DiT) capable of directly generating images at 4K resolution.\nPixArt-\\Sigma represents a significant advancement over its predecessor,\nPixArt-\\alpha, offering images of markedly higher fidelity and improved\nalignment with text prompts. A key feature of PixArt-\\Sigma is its training\nefficiency. Leveraging the foundational pre-training of PixArt-\\alpha, it\nevolves from the `weaker' baseline to a `stronger' model via incorporating\nhigher quality data, a process we term \"weak-to-strong training\". The\nadvancements in PixArt-\\Sigma are twofold: (1) High-Quality Training Data:\nPixArt-\\Sigma incorporates superior-quality image data, paired with more\nprecise and detailed image captions. (2) Efficient Token Compression: we\npropose a novel attention module within the DiT framework that compresses both\nkeys and values, significantly improving efficiency and facilitating\nultra-high-resolution image generation. Thanks to these improvements,\nPixArt-\\Sigma achieves superior image quality and user prompt adherence\ncapabilities with significantly smaller model size (0.6B parameters) than\nexisting text-to-image diffusion models, such as SDXL (2.6B parameters) and SD\nCascade (5.1B parameters). Moreover, PixArt-\\Sigma's capability to generate 4K\nimages supports the creation of high-resolution posters and wallpapers,\nefficiently bolstering the production of high-quality visual content in\nindustries such as film and gaming.",
+      "upvotes": 40
+    },
+    {
+      "title": "Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference",
+      "url": "https://huggingface.co/papers/2403.04132",
+      "authors": [
+        "Lianmin Zheng",
+        "Ying Sheng",
+        "Hao Zhang",
+        "Michael Jordan",
+        "Ion Stoica"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.04132.pdf",
+      "abstract": "Large Language Models (LLMs) have unlocked new capabilities and applications;\nhowever, evaluating the alignment with human preferences still poses\nsignificant challenges. To address this issue, we introduce Chatbot Arena, an\nopen platform for evaluating LLMs based on human preferences. Our methodology\nemploys a pairwise comparison approach and leverages input from a diverse user\nbase through crowdsourcing. The platform has been operational for several\nmonths, amassing over 240K votes. This paper describes the platform, analyzes\nthe data we have collected so far, and explains the tried-and-true statistical\nmethods we are using for efficient and accurate evaluation and ranking of\nmodels. We confirm that the crowdsourced questions are sufficiently diverse and\ndiscriminating and that the crowdsourced human votes are in good agreement with\nthose of expert raters. These analyses collectively establish a robust\nfoundation for the credibility of Chatbot Arena. Because of its unique value\nand openness, Chatbot Arena has emerged as one of the most referenced LLM\nleaderboards, widely cited by leading LLM developers and companies. Our demo is\npublicly available at https://chat.lmsys.org.",
+      "upvotes": 38
+    },
+    {
+      "title": "StableDrag: Stable Dragging for Point-based Image Editing",
+      "url": "https://huggingface.co/papers/2403.04437",
+      "authors": [
+        "Yutao Cui",
+        "Xiaotong Zhao",
+        "Guozhen Zhang",
+        "Shengming Cao",
+        "Kai Ma",
+        "Limin Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.04437.pdf",
+      "abstract": "Point-based image editing has attracted remarkable attention since the\nemergence of DragGAN. Recently, DragDiffusion further pushes forward the\ngenerative quality via adapting this dragging technique to diffusion models.\nDespite these great success, this dragging scheme exhibits two major drawbacks,\nnamely inaccurate point tracking and incomplete motion supervision, which may\nresult in unsatisfactory dragging outcomes. To tackle these issues, we build a\nstable and precise drag-based editing framework, coined as StableDrag, by\ndesigning a discirminative point tracking method and a confidence-based latent\nenhancement strategy for motion supervision. The former allows us to precisely\nlocate the updated handle points, thereby boosting the stability of long-range\nmanipulation, while the latter is responsible for guaranteeing the optimized\nlatent as high-quality as possible across all the manipulation steps. Thanks to\nthese unique designs, we instantiate two types of image editing models\nincluding StableDrag-GAN and StableDrag-Diff, which attains more stable\ndragging performance, through extensive qualitative experiments and\nquantitative assessment on DragBench.",
+      "upvotes": 25
+    },
+    {
+      "title": "LLMs in the Imaginarium: Tool Learning through Simulated Trial and Error",
+      "url": "https://huggingface.co/papers/2403.04746",
+      "authors": [
+        "Jason Eisner",
+        "Benjamin Van Durme"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.04746.pdf",
+      "abstract": "Tools are essential for large language models (LLMs) to acquire up-to-date\ninformation and take consequential actions in external environments. Existing\nwork on tool-augmented LLMs primarily focuses on the broad coverage of tools\nand the flexibility of adding new tools. However, a critical aspect that has\nsurprisingly been understudied is simply how accurately an LLM uses tools for\nwhich it has been trained. We find that existing LLMs, including GPT-4 and\nopen-source LLMs specifically fine-tuned for tool use, only reach a correctness\nrate in the range of 30% to 60%, far from reliable use in practice. We propose\na biologically inspired method for tool-augmented LLMs, simulated trial and\nerror (STE), that orchestrates three key mechanisms for successful tool use\nbehaviors in the biological system: trial and error, imagination, and memory.\nSpecifically, STE leverages an LLM's 'imagination' to simulate plausible\nscenarios for using a tool, after which the LLM interacts with the tool to\nlearn from its execution feedback. Both short-term and long-term memory are\nemployed to improve the depth and breadth of the exploration, respectively.\nComprehensive experiments on ToolBench show that STE substantially improves\ntool learning for LLMs under both in-context learning and fine-tuning settings,\nbringing a boost of 46.7% to Mistral-Instruct-7B and enabling it to outperform\nGPT-4. We also show effective continual learning of tools via a simple\nexperience replay strategy.",
+      "upvotes": 22
+    },
+    {
+      "title": "How Far Are We from Intelligent Visual Deductive Reasoning?",
+      "url": "https://huggingface.co/papers/2403.04732",
+      "authors": [
+        "Ruixiang Zhang",
+        "Shuangfei Zhai",
+        "Josh Susskind"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.04732.pdf",
+      "abstract": "Vision-Language Models (VLMs) such as GPT-4V have recently demonstrated\nincredible strides on diverse vision language tasks. We dig into vision-based\ndeductive reasoning, a more sophisticated but less explored realm, and find\npreviously unexposed blindspots in the current SOTA VLMs. Specifically, we\nleverage Raven's Progressive Matrices (RPMs), to assess VLMs' abilities to\nperform multi-hop relational and deductive reasoning relying solely on visual\nclues. We perform comprehensive evaluations of several popular VLMs employing\nstandard strategies such as in-context learning, self-consistency, and\nChain-of-thoughts (CoT) on three diverse datasets, including the Mensa IQ test,\nIntelligenceTest, and RAVEN. The results reveal that despite the impressive\ncapabilities of LLMs in text-based reasoning, we are still far from achieving\ncomparable proficiency in visual deductive reasoning. We found that certain\nstandard strategies that are effective when applied to LLMs do not seamlessly\ntranslate to the challenges presented by visual reasoning tasks. Moreover, a\ndetailed analysis reveals that VLMs struggle to solve these tasks mainly\nbecause they are unable to perceive and comprehend multiple, confounding\nabstract patterns in RPM examples.",
+      "upvotes": 18
+    },
+    {
+      "title": "Common 7B Language Models Already Possess Strong Math Capabilities",
+      "url": "https://huggingface.co/papers/2403.04706",
+      "authors": [
+        "Weiqi Wang",
+        "Nanning Zheng",
+        "Han Hu",
+        "Zheng Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.04706.pdf",
+      "abstract": "Mathematical capabilities were previously believed to emerge in common\nlanguage models only at a very large scale or require extensive math-related\npre-training. This paper shows that the LLaMA-2 7B model with common\npre-training already exhibits strong mathematical abilities, as evidenced by\nits impressive accuracy of 97.7% and 72.0% on the GSM8K and MATH benchmarks,\nrespectively, when selecting the best response from 256 random generations. The\nprimary issue with the current base model is the difficulty in consistently\neliciting its inherent mathematical capabilities. Notably, the accuracy for the\nfirst answer drops to 49.5% and 7.9% on the GSM8K and MATH benchmarks,\nrespectively. We find that simply scaling up the SFT data can significantly\nenhance the reliability of generating correct answers. However, the potential\nfor extensive scaling is constrained by the scarcity of publicly available math\nquestions. To overcome this limitation, we employ synthetic data, which proves\nto be nearly as effective as real data and shows no clear saturation when\nscaled up to approximately one million samples. This straightforward approach\nachieves an accuracy of 82.6% on GSM8K and 40.6% on MATH using LLaMA-2 7B\nmodels, surpassing previous models by 14.2% and 20.8%, respectively. We also\nprovide insights into scaling behaviors across different reasoning complexities\nand error types.",
+      "upvotes": 16
+    },
+    {
+      "title": "Pix2Gif: Motion-Guided Diffusion for GIF Generation",
+      "url": "https://huggingface.co/papers/2403.04634",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2403.04634.pdf",
+      "abstract": "We present Pix2Gif, a motion-guided diffusion model for image-to-GIF (video)\ngeneration. We tackle this problem differently by formulating the task as an\nimage translation problem steered by text and motion magnitude prompts, as\nshown in teaser fig. To ensure that the model adheres to motion guidance, we\npropose a new motion-guided warping module to spatially transform the features\nof the source image conditioned on the two types of prompts. Furthermore, we\nintroduce a perceptual loss to ensure the transformed feature map remains\nwithin the same space as the target image, ensuring content consistency and\ncoherence. In preparation for the model training, we meticulously curated data\nby extracting coherent image frames from the TGIF video-caption dataset, which\nprovides rich information about the temporal changes of subjects. After\npretraining, we apply our model in a zero-shot manner to a number of video\ndatasets. Extensive qualitative and quantitative experiments demonstrate the\neffectiveness of our model -- it not only captures the semantic prompt from\ntext but also the spatial ones from motion guidance. We train all our models\nusing a single node of 16xV100 GPUs. Code, dataset and models are made public\nat: https://hiteshk03.github.io/Pix2Gif/.",
+      "upvotes": 14
+    },
+    {
+      "title": "Radiative Gaussian Splatting for Efficient X-ray Novel View Synthesis",
+      "url": "https://huggingface.co/papers/2403.04116",
+      "authors": [
+        "Yuanhao Cai",
+        "Jiahao Wang",
+        "Angtian Wang",
+        "Alan Yuille"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.04116.pdf",
+      "abstract": "X-ray is widely applied for transmission imaging due to its stronger\npenetration than natural light. When rendering novel view X-ray projections,\nexisting methods mainly based on NeRF suffer from long training time and slow\ninference speed. In this paper, we propose a 3D Gaussian splatting-based\nframework, namely X-Gaussian, for X-ray novel view synthesis. Firstly, we\nredesign a radiative Gaussian point cloud model inspired by the isotropic\nnature of X-ray imaging. Our model excludes the influence of view direction\nwhen learning to predict the radiation intensity of 3D points. Based on this\nmodel, we develop a Differentiable Radiative Rasterization (DRR) with CUDA\nimplementation. Secondly, we customize an Angle-pose Cuboid Uniform\nInitialization (ACUI) strategy that directly uses the parameters of the X-ray\nscanner to compute the camera information and then uniformly samples point\npositions within a cuboid enclosing the scanned object. Experiments show that\nour X-Gaussian outperforms state-of-the-art methods by 6.5 dB while enjoying\nless than 15% training time and over 73x inference speed. The application on\nsparse-view CT reconstruction also reveals the practical values of our method.\nCode and models will be publicly available at\nhttps://github.com/caiyuanhao1998/X-Gaussian . A video demo of the training\nprocess visualization is at https://www.youtube.com/watch?v=gDVf_Ngeghg .",
+      "upvotes": 3
+    }
+  ]
+}

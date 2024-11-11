@@ -1,0 +1,151 @@
+{
+  "date": "2024-02-18",
+  "papers": [
+    {
+      "title": "Chain-of-Thought Reasoning Without Prompting",
+      "url": "https://huggingface.co/papers/2402.10200",
+      "authors": [
+        "Xuezhi Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.10200.pdf",
+      "abstract": "In enhancing the reasoning capabilities of large language models (LLMs),\nprior research primarily focuses on specific prompting techniques such as\nfew-shot or zero-shot chain-of-thought (CoT) prompting. These methods, while\neffective, often involve manually intensive prompt engineering. Our study takes\na novel approach by asking: Can LLMs reason effectively without prompting? Our\nfindings reveal that, intriguingly, CoT reasoning paths can be elicited from\npre-trained LLMs by simply altering the decoding process. Rather than\nconventional greedy decoding, we investigate the top-k alternative tokens,\nuncovering that CoT paths are frequently inherent in these sequences. This\napproach not only bypasses the confounders of prompting but also allows us to\nassess the LLMs' intrinsic reasoning abilities. Moreover, we observe\nthat the presence of a CoT in the decoding path correlates with a higher\nconfidence in the model's decoded answer. This confidence metric effectively\ndifferentiates between CoT and non-CoT paths. Extensive empirical studies on\nvarious reasoning benchmarks show that the proposed CoT-decoding substantially\noutperforms the standard greedy decoding.",
+      "upvotes": 99
+    },
+    {
+      "title": "Generative Representational Instruction Tuning",
+      "url": "https://huggingface.co/papers/2402.09906",
+      "authors": [
+        "Liang Wang",
+        "Tao Yu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.09906.pdf",
+      "abstract": "All text-based language problems can be reduced to either generation or\nembedding. Current models only perform well at one or the other. We introduce\ngenerative representational instruction tuning (GRIT) whereby a large language\nmodel is trained to handle both generative and embedding tasks by\ndistinguishing between them through instructions. Compared to other open\nmodels, our resulting GritLM 7B sets a new state of the art on the Massive Text\nEmbedding Benchmark (MTEB) and outperforms all models up to its size on a range\nof generative tasks. By scaling up further, GritLM 8x7B outperforms all open\ngenerative language models that we tried while still being among the best\nembedding models. Notably, we find that GRIT matches training on only\ngenerative or embedding data, thus we can unify both at no performance loss.\nAmong other benefits, the unification via GRIT speeds up Retrieval-Augmented\nGeneration (RAG) by > 60% for long documents, by no longer requiring separate\nretrieval and generation models. Models, code, etc. are freely available at\nhttps://github.com/ContextualAI/gritlm.",
+      "upvotes": 51
+    },
+    {
+      "title": "How to Train Data-Efficient LLMs",
+      "url": "https://huggingface.co/papers/2402.09668",
+      "authors": [
+        "Benjamin Coleman",
+        "Wang-Cheng Kang",
+        "Jianmo Ni",
+        "Lichan Hong",
+        "Ed H. Chi",
+        "James Caverlee",
+        "Julian McAuley"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.09668.pdf",
+      "abstract": "The training of large language models (LLMs) is expensive. In this paper, we\nstudy data-efficient approaches for pre-training LLMs, i.e., techniques that\naim to optimize the Pareto frontier of model quality and training resource/data\nconsumption. We seek to understand the tradeoffs associated with data selection\nroutines based on (i) expensive-to-compute data-quality estimates, and (ii)\nmaximization of coverage and diversity-based measures in the feature space. Our\nfirst technique, Ask-LLM, leverages the zero-shot reasoning capabilities of\ninstruction-tuned LLMs to directly assess the quality of a training example. To\ntarget coverage, we propose Density sampling, which models the data\ndistribution to select a diverse sample. In our comparison of 19 samplers,\ninvolving hundreds of evaluation tasks and pre-training runs, we find that\nAsk-LLM and Density are the best methods in their respective categories.\nCoverage sampling can recover the performance of the full data, while models\ntrained on Ask-LLM data consistently outperform full-data training -- even when\nwe reject 90% of the original dataset, while converging up to 70% faster.",
+      "upvotes": 38
+    },
+    {
+      "title": "A Human-Inspired Reading Agent with Gist Memory of Very Long Contexts",
+      "url": "https://huggingface.co/papers/2402.09727",
+      "authors": [
+        "Kuang-Huei Lee",
+        "John Canny"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.09727.pdf",
+      "abstract": "Current Large Language Models (LLMs) are not only limited to some maximum\ncontext length, but also are not able to robustly consume long inputs. To\naddress these limitations, we propose ReadAgent, an LLM agent system that\nincreases effective context length up to 20x in our experiments. Inspired by\nhow humans interactively read long documents, we implement ReadAgent as a\nsimple prompting system that uses the advanced language capabilities of LLMs to\n(1) decide what content to store together in a memory episode, (2) compress\nthose memory episodes into short episodic memories called gist memories, and\n(3) take actions to look up passages in the original text if ReadAgent needs to\nremind itself of relevant details to complete a task. We evaluate ReadAgent\nagainst baselines using retrieval methods, using the original long contexts,\nand using the gist memories. These evaluations are performed on three\nlong-document reading comprehension tasks: QuALITY, NarrativeQA, and QMSum.\nReadAgent outperforms the baselines on all three tasks while extending the\neffective context window by 3-20x.",
+      "upvotes": 35
+    },
+    {
+      "title": "OpenMathInstruct-1: A 1.8 Million Math Instruction Tuning Dataset",
+      "url": "https://huggingface.co/papers/2402.10176",
+      "authors": [
+        "Daria Gitman",
+        "Fei Jia"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.10176.pdf",
+      "abstract": "Recent work has shown the immense potential of synthetically generated\ndatasets for training large language models (LLMs), especially for acquiring\ntargeted skills. Current large-scale math instruction tuning datasets such as\nMetaMathQA (Yu et al., 2024) and MAmmoTH (Yue et al., 2024) are constructed\nusing outputs from closed-source LLMs with commercially restrictive licenses. A\nkey reason limiting the use of open-source LLMs in these data generation\npipelines has been the wide gap between the mathematical skills of the best\nclosed-source LLMs, such as GPT-4, and the best open-source LLMs. Building on\nthe recent progress in open-source LLMs, our proposed prompting novelty, and\nsome brute-force scaling, we construct OpenMathInstruct-1, a math instruction\ntuning dataset with 1.8M problem-solution pairs. The dataset is constructed by\nsynthesizing code-interpreter solutions for GSM8K and MATH, two popular math\nreasoning benchmarks, using the recently released and permissively licensed\nMixtral model. Our best model, OpenMath-CodeLlama-70B, trained on a subset of\nOpenMathInstruct-1, achieves a score of 84.6% on GSM8K and 50.7% on MATH, which\nis competitive with the best gpt-distilled models. We release our code, models,\nand the OpenMathInstruct-1 dataset under a commercially permissive license.",
+      "upvotes": 35
+    },
+    {
+      "title": "Self-Play Fine-Tuning of Diffusion Models for Text-to-Image Generation",
+      "url": "https://huggingface.co/papers/2402.10210",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2402.10210.pdf",
+      "abstract": "Fine-tuning Diffusion Models remains an underexplored frontier in generative\nartificial intelligence (GenAI), especially when compared with the remarkable\nprogress made in fine-tuning Large Language Models (LLMs). While cutting-edge\ndiffusion models such as Stable Diffusion (SD) and SDXL rely on supervised\nfine-tuning, their performance inevitably plateaus after seeing a certain\nvolume of data. Recently, reinforcement learning (RL) has been employed to\nfine-tune diffusion models with human preference data, but it requires at least\ntwo images (\"winner\" and \"loser\" images) for each text prompt. In this paper,\nwe introduce an innovative technique called self-play fine-tuning for diffusion\nmodels (SPIN-Diffusion), where the diffusion model engages in competition with\nits earlier versions, facilitating an iterative self-improvement process. Our\napproach offers an alternative to conventional supervised fine-tuning and RL\nstrategies, significantly improving both model performance and alignment. Our\nexperiments on the Pick-a-Pic dataset reveal that SPIN-Diffusion outperforms\nthe existing supervised fine-tuning method in aspects of human preference\nalignment and visual appeal right from its first iteration. By the second\niteration, it exceeds the performance of RLHF-based methods across all metrics,\nachieving these results with less data.",
+      "upvotes": 29
+    },
+    {
+      "title": "Data Engineering for Scaling Language Models to 128K Context",
+      "url": "https://huggingface.co/papers/2402.10171",
+      "authors": [
+        "Hannaneh Hajishirzi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.10171.pdf",
+      "abstract": "We study the continual pretraining recipe for scaling language models'\ncontext lengths to 128K, with a focus on data engineering. We hypothesize that\nlong context modeling, in particular the ability to utilize information\nat arbitrary input locations, is a capability that is mostly already acquired\nthrough large-scale pretraining, and that this capability can be readily\nextended to contexts substantially longer than seen during training~(e.g., 4K\nto 128K) through lightweight continual pretraining on appropriate data mixture.\nWe investigate the quantity and quality of the data for\ncontinual pretraining: (1) for quantity, we show that 500 million to 5 billion\ntokens are enough to enable the model to retrieve information anywhere within\nthe 128K context; (2) for quality, our results equally emphasize domain\nbalance and length upsampling. Concretely, we find that naively\nupsampling longer data on certain domains like books, a common practice of\nexisting work, gives suboptimal performance, and that a balanced domain mixture\nis important. We demonstrate that continual pretraining of the full model on\n1B-5B tokens of such data is an effective and affordable strategy for scaling\nthe context length of language models to 128K. Our recipe outperforms strong\nopen-source long-context models and closes the gap to frontier models like\nGPT-4 128K.",
+      "upvotes": 21
+    },
+    {
+      "title": "Zero-Shot Unsupervised and Text-Based Audio Editing Using DDPM Inversion",
+      "url": "https://huggingface.co/papers/2402.10009",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2402.10009.pdf",
+      "abstract": "Editing signals using large pre-trained models, in a zero-shot manner, has\nrecently seen rapid advancements in the image domain. However, this wave has\nyet to reach the audio domain. In this paper, we explore two zero-shot editing\ntechniques for audio signals, which use DDPM inversion on pre-trained diffusion\nmodels. The first, adopted from the image domain, allows text-based editing.\nThe second, is a novel approach for discovering semantically meaningful editing\ndirections without supervision. When applied to music signals, this method\nexposes a range of musically interesting modifications, from controlling the\nparticipation of specific instruments to improvisations on the melody. Samples\ncan be found on our examples page in https://hilamanor.github.io/AudioEditing/\nand code can be found in https://github.com/hilamanor/AudioEditing/ .",
+      "upvotes": 18
+    },
+    {
+      "title": "BitDelta: Your Fine-Tune May Only Be Worth One Bit",
+      "url": "https://huggingface.co/papers/2402.10193",
+      "authors": [
+        "Kai Li",
+        "Jason D. Lee"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.10193.pdf",
+      "abstract": "Large Language Models (LLMs) are typically trained in two phases:\npre-training on large internet-scale datasets, and fine-tuning for downstream\ntasks. Given the higher computational demand of pre-training, it's intuitive to\nassume that fine-tuning adds less new information to the model, and is thus\nmore compressible. We explore this assumption by decomposing the weights of\nfine-tuned models into their pre-trained components and an additional delta. We\nintroduce a simple method, BitDelta, which successfully quantizes this delta\ndown to 1 bit without compromising performance. This interesting finding not\nonly highlights the potential redundancy of information added during\nfine-tuning, but also has significant implications for the multi-tenant serving\nand multi-tenant storage of fine-tuned models. By enabling the use of a single\nhigh-precision base model accompanied by multiple 1-bit deltas, BitDelta\ndramatically reduces GPU memory requirements by more than 10x, which can also\nbe translated to enhanced generation latency in multi-tenant settings. We\nvalidate BitDelta through experiments across Llama-2 and Mistral model\nfamilies, and on models up to 70B parameters, showcasing minimal performance\ndegradation over all tested settings.",
+      "upvotes": 17
+    },
+    {
+      "title": "GES: Generalized Exponential Splatting for Efficient Radiance Field Rendering",
+      "url": "https://huggingface.co/papers/2402.10128",
+      "authors": [
+        "Jinjie Mai",
+        "Bernard Ghanem",
+        "Andrea Vedaldi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.10128.pdf",
+      "abstract": "Advancements in 3D Gaussian Splatting have significantly accelerated 3D\nreconstruction and generation. However, it may require a large number of\nGaussians, which creates a substantial memory footprint. This paper introduces\nGES (Generalized Exponential Splatting), a novel representation that employs\nGeneralized Exponential Function (GEF) to model 3D scenes, requiring far fewer\nparticles to represent a scene and thus significantly outperforming Gaussian\nSplatting methods in efficiency with a plug-and-play replacement ability for\nGaussian-based utilities. GES is validated theoretically and empirically in\nboth principled 1D setup and realistic 3D scenes.\n  It is shown to represent signals with sharp edges more accurately, which are\ntypically challenging for Gaussians due to their inherent low-pass\ncharacteristics. Our empirical analysis demonstrates that GEF outperforms\nGaussians in fitting natural-occurring signals (e.g. squares, triangles, and\nparabolic signals), thereby reducing the need for extensive splitting\noperations that increase the memory footprint of Gaussian Splatting. With the\naid of a frequency-modulated loss, GES achieves competitive performance in\nnovel-view synthesis benchmarks while requiring less than half the memory\nstorage of Gaussian Splatting and increasing the rendering speed by up to 39%.\nThe code is available on the project website https://abdullahamdi.com/ges .",
+      "upvotes": 14
+    },
+    {
+      "title": "DreamMatcher: Appearance Matching Self-Attention for Semantically-Consistent Text-to-Image Personalization",
+      "url": "https://huggingface.co/papers/2402.09812",
+      "authors": [
+        "Jisu Nam",
+        "Heesu Kim",
+        "DongJae Lee",
+        "Seunggyu Chang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.09812.pdf",
+      "abstract": "The objective of text-to-image (T2I) personalization is to customize a\ndiffusion model to a user-provided reference concept, generating diverse images\nof the concept aligned with the target prompts. Conventional methods\nrepresenting the reference concepts using unique text embeddings often fail to\naccurately mimic the appearance of the reference. To address this, one solution\nmay be explicitly conditioning the reference images into the target denoising\nprocess, known as key-value replacement. However, prior works are constrained\nto local editing since they disrupt the structure path of the pre-trained T2I\nmodel. To overcome this, we propose a novel plug-in method, called\nDreamMatcher, which reformulates T2I personalization as semantic matching.\nSpecifically, DreamMatcher replaces the target values with reference values\naligned by semantic matching, while leaving the structure path unchanged to\npreserve the versatile capability of pre-trained T2I models for generating\ndiverse structures. We also introduce a semantic-consistent masking strategy to\nisolate the personalized concept from irrelevant regions introduced by the\ntarget prompts. Compatible with existing T2I models, DreamMatcher shows\nsignificant improvements in complex scenarios. Intensive analyses demonstrate\nthe effectiveness of our approach.",
+      "upvotes": 12
+    },
+    {
+      "title": "Hierarchical State Space Models for Continuous Sequence-to-Sequence Modeling",
+      "url": "https://huggingface.co/papers/2402.10211",
+      "authors": [
+        "Chenyu Wang",
+        "Carmel Majidi",
+        "Abhinav Gupta",
+        "Tess Hellebrekers"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.10211.pdf",
+      "abstract": "Reasoning from sequences of raw sensory data is a ubiquitous problem across\nfields ranging from medical devices to robotics. These problems often involve\nusing long sequences of raw sensor data (e.g. magnetometers, piezoresistors) to\npredict sequences of desirable physical quantities (e.g. force, inertial\nmeasurements). While classical approaches are powerful for locally-linear\nprediction problems, they often fall short when using real-world sensors. These\nsensors are typically non-linear, are affected by extraneous variables (e.g.\nvibration), and exhibit data-dependent drift. For many problems, the prediction\ntask is exacerbated by small labeled datasets since obtaining ground-truth\nlabels requires expensive equipment. In this work, we present Hierarchical\nState-Space Models (HiSS), a conceptually simple, new technique for continuous\nsequential prediction. HiSS stacks structured state-space models on top of each\nother to create a temporal hierarchy. Across six real-world sensor datasets,\nfrom tactile-based state prediction to accelerometer-based inertial\nmeasurement, HiSS outperforms state-of-the-art sequence models such as causal\nTransformers, LSTMs, S4, and Mamba by at least 23% on MSE. Our experiments\nfurther indicate that HiSS demonstrates efficient scaling to smaller datasets\nand is compatible with existing data-filtering techniques. Code, datasets and\nvideos can be found on https://hiss-csp.github.io.",
+      "upvotes": 10
+    },
+    {
+      "title": "Rolling Diffusion Models",
+      "url": "https://huggingface.co/papers/2402.09470",
+      "authors": [
+        "Jonathan Heek",
+        "Tim Salimans",
+        "Emiel Hoogeboom"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.09470.pdf",
+      "abstract": "Diffusion models have recently been increasingly applied to temporal data\nsuch as video, fluid mechanics simulations, or climate data. These methods\ngenerally treat subsequent frames equally regarding the amount of noise in the\ndiffusion process. This paper explores Rolling Diffusion: a new approach that\nuses a sliding window denoising process. It ensures that the diffusion process\nprogressively corrupts through time by assigning more noise to frames that\nappear later in a sequence, reflecting greater uncertainty about the future as\nthe generation process unfolds. Empirically, we show that when the temporal\ndynamics are complex, Rolling Diffusion is superior to standard diffusion. In\nparticular, this result is demonstrated in a video prediction task using the\nKinetics-600 video dataset and in a chaotic fluid dynamics forecasting\nexperiment.",
+      "upvotes": 9
+    }
+  ]
+}

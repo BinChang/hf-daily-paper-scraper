@@ -1,0 +1,136 @@
+{
+  "date": "2024-09-26",
+  "papers": [
+    {
+      "title": "Molmo and PixMo: Open Weights and Open Data for State-of-the-Art Multimodal Models",
+      "url": "https://huggingface.co/papers/2409.17146",
+      "authors": [
+        "Sangho Lee",
+        "Kyle Lo",
+        "Kiana Ehsani"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.17146.pdf",
+      "abstract": "Today's most advanced multimodal models remain proprietary. The strongest\nopen-weight models rely heavily on synthetic data from proprietary VLMs to\nachieve good performance, effectively distilling these closed models into open\nones. As a result, the community is still missing foundational knowledge about\nhow to build performant VLMs from scratch. We present Molmo, a new family of\nVLMs that are state-of-the-art in their class of openness. Our key innovation\nis a novel, highly detailed image caption dataset collected entirely from human\nannotators using speech-based descriptions. To enable a wide array of user\ninteractions, we also introduce a diverse dataset mixture for fine-tuning that\nincludes in-the-wild Q&A and innovative 2D pointing data. The success of our\napproach relies on careful choices for the model architecture details, a\nwell-tuned training pipeline, and, most critically, the quality of our newly\ncollected datasets, all of which will be released. The best-in-class 72B model\nwithin the Molmo family not only outperforms others in the class of open weight\nand data models but also compares favorably against proprietary systems like\nGPT-4o, Claude 3.5, and Gemini 1.5 on both academic benchmarks and human\nevaluation.\n  We will be releasing all of our model weights, captioning and fine-tuning\ndata, and source code in the near future. Select model weights, inference code,\nand demo are available at https://molmo.allenai.org.",
+      "upvotes": 99
+    },
+    {
+      "title": "Programming Every Example: Lifting Pre-training Data Quality like Experts at Scale",
+      "url": "https://huggingface.co/papers/2409.17115",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2409.17115.pdf",
+      "abstract": "Large language model pre-training has traditionally relied on human experts\nto craft heuristics for improving the corpora quality, resulting in numerous\nrules developed to date. However, these rules lack the flexibility to address\nthe unique characteristics of individual example effectively. Meanwhile,\napplying tailored rules to every example is impractical for human experts. In\nthis paper, we demonstrate that even small language models, with as few as 0.3B\nparameters, can exhibit substantial data refining capabilities comparable to\nthose of human experts. We introduce Programming Every Example (ProX), a novel\nframework that treats data refinement as a programming task, enabling models to\nrefine corpora by generating and executing fine-grained operations, such as\nstring normalization, for each individual example at scale. Experimental\nresults show that models pre-trained on ProX-curated data outperform either\noriginal data or data filtered by other selection methods by more than 2%\nacross various downstream benchmarks. Its effectiveness spans various model\nsizes and pre-training corpora, including C4, RedPajama-V2, and FineWeb.\nFurthermore, ProX exhibits significant potential in domain-specific continual\npre-training: without domain specific design, models trained on OpenWebMath\nrefined by ProX outperform human-crafted rule-based methods, improving average\naccuracy by 7.6% over Mistral-7B, with 14.6% for Llama-2-7B and 20.3% for\nCodeLlama-7B, all within 10B tokens to be comparable to models like Llemma-7B\ntrained on 200B tokens. Further analysis highlights that ProX significantly\nsaves training FLOPs, offering a promising path for efficient LLM\npre-training.We are open-sourcing ProX with >100B corpus, models, and sharing\nall training and implementation details for reproducible research and future\ninnovation. Code: https://github.com/GAIR-NLP/ProX",
+      "upvotes": 59
+    },
+    {
+      "title": "Boosting Healthcare LLMs Through Retrieved Context",
+      "url": "https://huggingface.co/papers/2409.15127",
+      "authors": [
+        "Ashwin Kumar Gururajan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.15127.pdf",
+      "abstract": "Large Language Models (LLMs) have demonstrated remarkable capabilities in\nnatural language processing, and yet, their factual inaccuracies and\nhallucinations limits their application, particularly in critical domains like\nhealthcare. Context retrieval methods, by introducing relevant information as\ninput, have emerged as a crucial approach for enhancing LLM factuality and\nreliability. This study explores the boundaries of context retrieval methods\nwithin the healthcare domain, optimizing their components and benchmarking\ntheir performance against open and closed alternatives. Our findings reveal how\nopen LLMs, when augmented with an optimized retrieval system, can achieve\nperformance comparable to the biggest private solutions on established\nhealthcare benchmarks (multiple-choice question answering). Recognizing the\nlack of realism of including the possible answers within the question (a setup\nonly found in medical exams), and after assessing a strong LLM performance\ndegradation in the absence of those options, we extend the context retrieval\nsystem in that direction. In particular, we propose OpenMedPrompt a pipeline\nthat improves the generation of more reliable open-ended answers, moving this\ntechnology closer to practical application.",
+      "upvotes": 19
+    },
+    {
+      "title": "DreamWaltz-G: Expressive 3D Gaussian Avatars from Skeleton-Guided 2D Diffusion",
+      "url": "https://huggingface.co/papers/2409.17145",
+      "authors": [
+        "Jianan Wang",
+        "Zheng-Jun Zha",
+        "Lei Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.17145.pdf",
+      "abstract": "Leveraging pretrained 2D diffusion models and score distillation sampling\n(SDS), recent methods have shown promising results for text-to-3D avatar\ngeneration. However, generating high-quality 3D avatars capable of expressive\nanimation remains challenging. In this work, we present DreamWaltz-G, a novel\nlearning framework for animatable 3D avatar generation from text. The core of\nthis framework lies in Skeleton-guided Score Distillation and Hybrid 3D\nGaussian Avatar representation. Specifically, the proposed skeleton-guided\nscore distillation integrates skeleton controls from 3D human templates into 2D\ndiffusion models, enhancing the consistency of SDS supervision in terms of view\nand human pose. This facilitates the generation of high-quality avatars,\nmitigating issues such as multiple faces, extra limbs, and blurring. The\nproposed hybrid 3D Gaussian avatar representation builds on the efficient 3D\nGaussians, combining neural implicit fields and parameterized 3D meshes to\nenable real-time rendering, stable SDS optimization, and expressive animation.\nExtensive experiments demonstrate that DreamWaltz-G is highly effective in\ngenerating and animating 3D avatars, outperforming existing methods in both\nvisual quality and animation expressiveness. Our framework further supports\ndiverse applications, including human video reenactment and multi-subject scene\ncomposition.",
+      "upvotes": 13
+    },
+    {
+      "title": "AIM 2024 Sparse Neural Rendering Challenge: Dataset and Benchmark",
+      "url": "https://huggingface.co/papers/2409.15041",
+      "authors": [
+        "Richard Shaw",
+        "Radu Timofte",
+        "Eduardo Pérez-Pellitero"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.15041.pdf",
+      "abstract": "Recent developments in differentiable and neural rendering have made\nimpressive breakthroughs in a variety of 2D and 3D tasks, e.g. novel view\nsynthesis, 3D reconstruction. Typically, differentiable rendering relies on a\ndense viewpoint coverage of the scene, such that the geometry can be\ndisambiguated from appearance observations alone. Several challenges arise when\nonly a few input views are available, often referred to as sparse or few-shot\nneural rendering. As this is an underconstrained problem, most existing\napproaches introduce the use of regularisation, together with a diversity of\nlearnt and hand-crafted priors. A recurring problem in sparse rendering\nliterature is the lack of an homogeneous, up-to-date, dataset and evaluation\nprotocol. While high-resolution datasets are standard in dense reconstruction\nliterature, sparse rendering methods often evaluate with low-resolution images.\nAdditionally, data splits are inconsistent across different manuscripts, and\ntesting ground-truth images are often publicly available, which may lead to\nover-fitting. In this work, we propose the Sparse Rendering (SpaRe) dataset and\nbenchmark. We introduce a new dataset that follows the setup of the DTU MVS\ndataset. The dataset is composed of 97 new scenes based on synthetic,\nhigh-quality assets. Each scene has up to 64 camera views and 7 lighting\nconfigurations, rendered at 1600x1200 resolution. We release a training split\nof 82 scenes to foster generalizable approaches, and provide an online\nevaluation platform for the validation and test sets, whose ground-truth images\nremain hidden. We propose two different sparse configurations (3 and 9 input\nimages respectively). This provides a powerful and convenient tool for\nreproducible evaluation, and enable researchers easy access to a public\nleaderboard with the state-of-the-art performance scores. Available at:\nhttps://sparebenchmark.github.io/",
+      "upvotes": 12
+    },
+    {
+      "title": "Degradation-Guided One-Step Image Super-Resolution with Diffusion Priors",
+      "url": "https://huggingface.co/papers/2409.17058",
+      "authors": [
+        "Renjing Pei"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.17058.pdf",
+      "abstract": "Diffusion-based image super-resolution (SR) methods have achieved remarkable\nsuccess by leveraging large pre-trained text-to-image diffusion models as\npriors. However, these methods still face two challenges: the requirement for\ndozens of sampling steps to achieve satisfactory results, which limits\nefficiency in real scenarios, and the neglect of degradation models, which are\ncritical auxiliary information in solving the SR problem. In this work, we\nintroduced a novel one-step SR model, which significantly addresses the\nefficiency issue of diffusion-based SR methods. Unlike existing fine-tuning\nstrategies, we designed a degradation-guided Low-Rank Adaptation (LoRA) module\nspecifically for SR, which corrects the model parameters based on the\npre-estimated degradation information from low-resolution images. This module\nnot only facilitates a powerful data-dependent or degradation-dependent SR\nmodel but also preserves the generative prior of the pre-trained diffusion\nmodel as much as possible. Furthermore, we tailor a novel training pipeline by\nintroducing an online negative sample generation strategy. Combined with the\nclassifier-free guidance strategy during inference, it largely improves the\nperceptual quality of the super-resolution results. Extensive experiments have\ndemonstrated the superior efficiency and effectiveness of the proposed model\ncompared to recent state-of-the-art methods.",
+      "upvotes": 11
+    },
+    {
+      "title": "HyperAgent: Generalist Software Engineering Agents to Solve Coding Tasks at Scale",
+      "url": "https://huggingface.co/papers/2409.16299",
+      "authors": [
+        "Huy Nhat Phan",
+        "Phong X. Nguyen",
+        "Nghi D. Q. Bui"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.16299.pdf",
+      "abstract": "Large Language Models (LLMs) have revolutionized software engineering (SE),\ndemonstrating remarkable capabilities in various coding tasks. While recent\nefforts have produced autonomous software agents based on LLMs for end-to-end\ndevelopment tasks, these systems are typically designed for specific SE tasks.\nWe introduce HyperAgent, a novel generalist multi-agent system designed to\naddress a wide spectrum of SE tasks across different programming languages by\nmimicking human developers' workflows. Comprising four specialized agents -\nPlanner, Navigator, Code Editor, and Executor. HyperAgent manages the full\nlifecycle of SE tasks, from initial conception to final verification. Through\nextensive evaluations, HyperAgent achieves state-of-the-art performance across\ndiverse SE tasks: it attains a 25.01% success rate on SWE-Bench-Lite and 31.40%\non SWE-Bench-Verified for GitHub issue resolution, surpassing existing methods.\nFurthermore, HyperAgent demonstrates SOTA performance in repository-level code\ngeneration (RepoExec), and in fault localization and program repair\n(Defects4J), often outperforming specialized systems. This work represents a\nsignificant advancement towards versatile, autonomous agents capable of\nhandling complex, multi-step SE tasks across various domains and languages,\npotentially transforming AI-assisted software development practices.",
+      "upvotes": 9
+    },
+    {
+      "title": "Synchronize Dual Hands for Physics-Based Dexterous Guitar Playing",
+      "url": "https://huggingface.co/papers/2409.16629",
+      "authors": [
+        "Pei Xu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.16629.pdf",
+      "abstract": "We present a novel approach to synthesize dexterous motions for physically\nsimulated hands in tasks that require coordination between the control of two\nhands with high temporal precision. Instead of directly learning a joint policy\nto control two hands, our approach performs bimanual control through\ncooperative learning where each hand is treated as an individual agent. The\nindividual policies for each hand are first trained separately, and then\nsynchronized through latent space manipulation in a centralized environment to\nserve as a joint policy for two-hand control. By doing so, we avoid directly\nperforming policy learning in the joint state-action space of two hands with\nhigher dimensions, greatly improving the overall training efficiency. We\ndemonstrate the effectiveness of our proposed approach in the challenging\nguitar-playing task. The virtual guitarist trained by our approach can\nsynthesize motions from unstructured reference data of general guitar-playing\npractice motions, and accurately play diverse rhythms with complex chord\npressing and string picking patterns based on the input guitar tabs that do not\nexist in the references. Along with this paper, we provide the motion capture\ndata that we collected as the reference for policy training. Code is available\nat: https://pei-xu.github.io/guitar.",
+      "upvotes": 9
+    },
+    {
+      "title": "NoTeeline: Supporting Real-Time Notetaking from Keypoints with Large Language Models",
+      "url": "https://huggingface.co/papers/2409.16493",
+      "authors": [
+        "Xiaodi Alice Tang",
+        "Jeffrey P. Bigham"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.16493.pdf",
+      "abstract": "Video has become a popular media form for information sharing and\nconsumption. However, taking notes while watching a video requires significant\ntime and effort. To address this, we propose a novel interactive system,\nNoTeeline, for taking real-time, personalized notes. NoTeeline lets users\nquickly jot down keypoints (micronotes), which are automatically expanded into\nfull-fledged notes that capture the content of the user's micronotes and are\nconsistent with the user's writing style. In a within-subjects study (N=12), we\nfound that NoTeeline helps users create high-quality notes that capture the\nessence of their micronotes with a higher factual correctness (93.2%) while\naccurately reflecting their writing style. While using NoTeeline, participants\nexperienced significantly reduced mental effort, captured satisfactory notes\nwhile writing 47% less text, and completed notetaking with 43.9% less time\ncompared to a manual notetaking baseline.",
+      "upvotes": 8
+    },
+    {
+      "title": "Game4Loc: A UAV Geo-Localization Benchmark from Game Data",
+      "url": "https://huggingface.co/papers/2409.16925",
+      "authors": [
+        "Zhuoyue Tan",
+        "Liaoni Wu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.16925.pdf",
+      "abstract": "The vision-based geo-localization technology for UAV, serving as a secondary\nsource of GPS information in addition to the global navigation satellite\nsystems (GNSS), can still operate independently in the GPS-denied environment.\nRecent deep learning based methods attribute this as the task of image matching\nand retrieval. By retrieving drone-view images in geo-tagged satellite image\ndatabase, approximate localization information can be obtained. However, due to\nhigh costs and privacy concerns, it is usually difficult to obtain large\nquantities of drone-view images from a continuous area. Existing drone-view\ndatasets are mostly composed of small-scale aerial photography with a strong\nassumption that there exists a perfect one-to-one aligned reference image for\nany query, leaving a significant gap from the practical localization scenario.\nIn this work, we construct a large-range contiguous area UAV geo-localization\ndataset named GTA-UAV, featuring multiple flight altitudes, attitudes, scenes,\nand targets using modern computer games. Based on this dataset, we introduce a\nmore practical UAV geo-localization task including partial matches of\ncross-view paired data, and expand the image-level retrieval to the actual\nlocalization in terms of distance (meters). For the construction of drone-view\nand satellite-view pairs, we adopt a weight-based contrastive learning\napproach, which allows for effective learning while avoiding additional\npost-processing matching steps. Experiments demonstrate the effectiveness of\nour data and training method for UAV geo-localization, as well as the\ngeneralization capabilities to real-world scenarios.",
+      "upvotes": 6
+    },
+    {
+      "title": "Self-Supervised Any-Point Tracking by Contrastive Random Walks",
+      "url": "https://huggingface.co/papers/2409.16288",
+      "authors": [
+        "Andrew Owens"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.16288.pdf",
+      "abstract": "We present a simple, self-supervised approach to the Tracking Any Point (TAP)\nproblem. We train a global matching transformer to find cycle consistent tracks\nthrough video via contrastive random walks, using the transformer's\nattention-based global matching to define the transition matrices for a random\nwalk on a space-time graph. The ability to perform \"all pairs\" comparisons\nbetween points allows the model to obtain high spatial precision and to obtain\na strong contrastive learning signal, while avoiding many of the complexities\nof recent approaches (such as coarse-to-fine matching). To do this, we propose\na number of design decisions that allow global matching architectures to be\ntrained through self-supervision using cycle consistency. For example, we\nidentify that transformer-based methods are sensitive to shortcut solutions,\nand propose a data augmentation scheme to address them. Our method achieves\nstrong performance on the TapVid benchmarks, outperforming previous\nself-supervised tracking methods, such as DIFT, and is competitive with several\nsupervised methods.",
+      "upvotes": 5
+    },
+    {
+      "title": "TalkinNeRF: Animatable Neural Fields for Full-Body Talking Humans",
+      "url": "https://huggingface.co/papers/2409.16666",
+      "authors": [
+        "Bindita Chaudhuri",
+        "Amit Kumar",
+        "Rakesh Ranjan",
+        "Dimitris Samaras"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.16666.pdf",
+      "abstract": "We introduce a novel framework that learns a dynamic neural radiance field\n(NeRF) for full-body talking humans from monocular videos. Prior work\nrepresents only the body pose or the face. However, humans communicate with\ntheir full body, combining body pose, hand gestures, as well as facial\nexpressions. In this work, we propose TalkinNeRF, a unified NeRF-based network\nthat represents the holistic 4D human motion. Given a monocular video of a\nsubject, we learn corresponding modules for the body, face, and hands, that are\ncombined together to generate the final result. To capture complex finger\narticulation, we learn an additional deformation field for the hands. Our\nmulti-identity representation enables simultaneous training for multiple\nsubjects, as well as robust animation under completely unseen poses. It can\nalso generalize to novel identities, given only a short video as input. We\ndemonstrate state-of-the-art performance for animating full-body talking\nhumans, with fine-grained hand articulation and facial expressions.",
+      "upvotes": 5
+    }
+  ]
+}

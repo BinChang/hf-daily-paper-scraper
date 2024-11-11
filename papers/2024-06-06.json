@@ -1,0 +1,152 @@
+{
+  "date": "2024-06-06",
+  "papers": [
+    {
+      "title": "Block Transformer: Global-to-Local Language Modeling for Fast Inference",
+      "url": "https://huggingface.co/papers/2406.02657",
+      "authors": [
+        "Hyunjik Jo",
+        "Adam Fisch",
+        "Se-Young Yun"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.02657.pdf",
+      "abstract": "This paper presents the Block Transformer architecture which adopts\nhierarchical global-to-local modeling to autoregressive transformers to\nmitigate the inference bottlenecks of self-attention. To apply self-attention,\nthe key-value (KV) cache of all previous sequences must be retrieved from\nmemory at every decoding step. Thereby, this KV cache IO becomes a significant\nbottleneck in batch inference. We notice that these costs stem from applying\nself-attention on the global context, therefore we isolate the expensive\nbottlenecks of global modeling to lower layers and apply fast local modeling in\nupper layers. To mitigate the remaining costs in the lower layers, we aggregate\ninput tokens into fixed size blocks and then apply self-attention at this\ncoarse level. Context information is aggregated into a single embedding to\nenable upper layers to decode the next block of tokens, without global\nattention. Free of global attention bottlenecks, the upper layers can fully\nutilize the compute hardware to maximize inference throughput. By leveraging\nglobal and local modules, the Block Transformer architecture demonstrates\n10-20x gains in inference throughput compared to vanilla transformers with\nequivalent perplexity. Our work introduces a new approach to optimize language\nmodel inference through novel application of global-to-local modeling. Code is\navailable at https://github.com/itsnamgyu/block-transformer.",
+      "upvotes": 36
+    },
+    {
+      "title": "Parrot: Multilingual Visual Instruction Tuning",
+      "url": "https://huggingface.co/papers/2406.02539",
+      "authors": [
+        "Chao Yi",
+        "Qing-Guo Chen",
+        "Zhao Xu",
+        "Weihua Luo",
+        "De-Chuan Zhan",
+        "Han-Jia Ye"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.02539.pdf",
+      "abstract": "The rapid development of Multimodal Large Language Models (MLLMs) like GPT-4V\nhas marked a significant step towards artificial general intelligence. Existing\nmethods mainly focus on aligning vision encoders with LLMs through supervised\nfine-tuning (SFT) to endow LLMs with multimodal abilities, making MLLMs'\ninherent ability to react to multiple languages progressively deteriorate as\nthe training process evolves. We empirically find that the imbalanced SFT\ndatasets, primarily composed of English-centric image-text pairs, lead to\nsignificantly reduced performance in non-English languages. This is due to the\nfailure of aligning the vision encoder and LLM with multilingual tokens during\nthe SFT process. In this paper, we introduce Parrot, a novel method that\nutilizes textual guidance to drive visual token alignment at the language\nlevel. Parrot makes the visual tokens condition on diverse language inputs and\nuses Mixture-of-Experts (MoE) to promote the alignment of multilingual tokens.\nSpecifically, to enhance non-English visual tokens alignment, we compute the\ncross-attention using the initial visual features and textual embeddings, the\nresult of which is then fed into the MoE router to select the most relevant\nexperts. The selected experts subsequently convert the initial visual tokens\ninto language-specific visual tokens. Moreover, considering the current lack of\nbenchmarks for evaluating multilingual capabilities within the field, we\ncollect and make available a Massive Multilingual Multimodal Benchmark which\nincludes 6 languages, 15 categories, and 12,000 questions, named as MMMB. Our\nmethod not only demonstrates state-of-the-art performance on multilingual\nMMBench and MMMB, but also excels across a broad range of multimodal tasks.\nBoth the source code and the training dataset of Parrot will be made publicly\navailable.",
+      "upvotes": 35
+    },
+    {
+      "title": "Mobile-Agent-v2: Mobile Device Operation Assistant with Effective Navigation via Multi-Agent Collaboration",
+      "url": "https://huggingface.co/papers/2406.01014",
+      "authors": [
+        "Haitao Jia",
+        "Xi Zhang",
+        "Ji Zhang",
+        "Jitao Sang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.01014.pdf",
+      "abstract": "Mobile device operation tasks are increasingly becoming a popular multi-modal\nAI application scenario. Current Multi-modal Large Language Models (MLLMs),\nconstrained by their training data, lack the capability to function effectively\nas operation assistants. Instead, MLLM-based agents, which enhance capabilities\nthrough tool invocation, are gradually being applied to this scenario. However,\nthe two major navigation challenges in mobile device operation tasks, task\nprogress navigation and focus content navigation, are significantly complicated\nunder the single-agent architecture of existing work. This is due to the overly\nlong token sequences and the interleaved text-image data format, which limit\nperformance. To address these navigation challenges effectively, we propose\nMobile-Agent-v2, a multi-agent architecture for mobile device operation\nassistance. The architecture comprises three agents: planning agent, decision\nagent, and reflection agent. The planning agent generates task progress, making\nthe navigation of history operations more efficient. To retain focus content,\nwe design a memory unit that updates with task progress. Additionally, to\ncorrect erroneous operations, the reflection agent observes the outcomes of\neach operation and handles any mistakes accordingly. Experimental results\nindicate that Mobile-Agent-v2 achieves over a 30% improvement in task\ncompletion compared to the single-agent architecture of Mobile-Agent. The code\nis open-sourced at https://github.com/X-PLUG/MobileAgent.",
+      "upvotes": 30
+    },
+    {
+      "title": "Audio Mamba: Bidirectional State Space Model for Audio Representation Learning",
+      "url": "https://huggingface.co/papers/2406.03344",
+      "authors": [
+        "Jiu Feng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.03344.pdf",
+      "abstract": "Transformers have rapidly become the preferred choice for audio\nclassification, surpassing methods based on CNNs. However, Audio Spectrogram\nTransformers (ASTs) exhibit quadratic scaling due to self-attention. The\nremoval of this quadratic self-attention cost presents an appealing direction.\nRecently, state space models (SSMs), such as Mamba, have demonstrated potential\nin language and vision tasks in this regard. In this study, we explore whether\nreliance on self-attention is necessary for audio classification tasks. By\nintroducing Audio Mamba (AuM), the first self-attention-free, purely SSM-based\nmodel for audio classification, we aim to address this question. We evaluate\nAuM on various audio datasets - comprising six different benchmarks - where it\nachieves comparable or better performance compared to well-established AST\nmodel.",
+      "upvotes": 18
+    },
+    {
+      "title": "Ouroboros3D: Image-to-3D Generation via 3D-aware Recursive Diffusion",
+      "url": "https://huggingface.co/papers/2406.03184",
+      "authors": [
+        "Yu Qiao",
+        "Lu Sheng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.03184.pdf",
+      "abstract": "Existing single image-to-3D creation methods typically involve a two-stage\nprocess, first generating multi-view images, and then using these images for 3D\nreconstruction. However, training these two stages separately leads to\nsignificant data bias in the inference phase, thus affecting the quality of\nreconstructed results. We introduce a unified 3D generation framework, named\nOuroboros3D, which integrates diffusion-based multi-view image generation and\n3D reconstruction into a recursive diffusion process. In our framework, these\ntwo modules are jointly trained through a self-conditioning mechanism, allowing\nthem to adapt to each other's characteristics for robust inference. During the\nmulti-view denoising process, the multi-view diffusion model uses the 3D-aware\nmaps rendered by the reconstruction module at the previous timestep as\nadditional conditions. The recursive diffusion framework with 3D-aware feedback\nunites the entire process and improves geometric consistency.Experiments show\nthat our framework outperforms separation of these two stages and existing\nmethods that combine them at the inference phase. Project page:\nhttps://costwen.github.io/Ouroboros3D/",
+      "upvotes": 18
+    },
+    {
+      "title": "PosterLLaVa: Constructing a Unified Multi-modal Layout Generator with LLM",
+      "url": "https://huggingface.co/papers/2406.02884",
+      "authors": [
+        "Tao Yang",
+        "Zhongang Qi",
+        "Yang Wu",
+        "Ying Shan",
+        "Chang Wen Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.02884.pdf",
+      "abstract": "Layout generation is the keystone in achieving automated graphic design,\nrequiring arranging the position and size of various multi-modal design\nelements in a visually pleasing and constraint-following manner. Previous\napproaches are either inefficient for large-scale applications or lack\nflexibility for varying design requirements. Our research introduces a unified\nframework for automated graphic layout generation, leveraging the multi-modal\nlarge language model (MLLM) to accommodate diverse design tasks. In contrast,\nour data-driven method employs structured text (JSON format) and visual\ninstruction tuning to generate layouts under specific visual and textual\nconstraints, including user-defined natural language specifications. We\nconducted extensive experiments and achieved state-of-the-art (SOTA)\nperformance on public multi-modal layout generation benchmarks, demonstrating\nthe effectiveness of our method. Moreover, recognizing existing datasets'\nlimitations in capturing the complexity of real-world graphic designs, we\npropose two new datasets for much more challenging tasks (user-constrained\ngeneration and complicated poster), further validating our model's utility in\nreal-life settings. Marking by its superior accessibility and adaptability,\nthis approach further automates large-scale graphic design tasks. The code and\ndatasets will be publicly available on\nhttps://github.com/posterllava/PosterLLaVA.",
+      "upvotes": 14
+    },
+    {
+      "title": "LiveSpeech: Low-Latency Zero-shot Text-to-Speech via Autoregressive Modeling of Audio Discrete Codes",
+      "url": "https://huggingface.co/papers/2406.02897",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2406.02897.pdf",
+      "abstract": "Prior works have demonstrated zero-shot text-to-speech by using a generative\nlanguage model on audio tokens obtained via a neural audio codec. It is still\nchallenging, however, to adapt them to low-latency scenarios. In this paper, we\npresent LiveSpeech - a fully autoregressive language model-based approach for\nzero-shot text-to-speech, enabling low-latency streaming of the output audio.\nTo allow multiple token prediction within a single decoding step, we propose\n(1) using adaptive codebook loss weights that consider codebook contribution in\neach frame and focus on hard instances, and (2) grouping codebooks and\nprocessing groups in parallel. Experiments show our proposed models achieve\ncompetitive results to state-of-the-art baselines in terms of content accuracy,\nspeaker similarity, audio quality, and inference speed while being suitable for\nlow-latency streaming applications.",
+      "upvotes": 13
+    },
+    {
+      "title": "Searching Priors Makes Text-to-Video Synthesis Better",
+      "url": "https://huggingface.co/papers/2406.03215",
+      "authors": [
+        "Hengjia Li",
+        "Xiaofei He",
+        "Boxi Wu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.03215.pdf",
+      "abstract": "Significant advancements in video diffusion models have brought substantial\nprogress to the field of text-to-video (T2V) synthesis. However, existing T2V\nsynthesis model struggle to accurately generate complex motion dynamics,\nleading to a reduction in video realism. One possible solution is to collect\nmassive data and train the model on it, but this would be extremely expensive.\nTo alleviate this problem, in this paper, we reformulate the typical T2V\ngeneration process as a search-based generation pipeline. Instead of scaling up\nthe model training, we employ existing videos as the motion prior database.\nSpecifically, we divide T2V generation process into two steps: (i) For a given\nprompt input, we search existing text-video datasets to find videos with text\nlabels that closely match the prompt motions. We propose a tailored search\nalgorithm that emphasizes object motion features. (ii) Retrieved videos are\nprocessed and distilled into motion priors to fine-tune a pre-trained base T2V\nmodel, followed by generating desired videos using input prompt. By utilizing\nthe priors gleaned from the searched videos, we enhance the realism of the\ngenerated videos' motion. All operations can be finished on a single NVIDIA RTX\n4090 GPU. We validate our method against state-of-the-art T2V models across\ndiverse prompt inputs. The code will be public.",
+      "upvotes": 11
+    },
+    {
+      "title": "Scaling Laws for Reward Model Overoptimization in Direct Alignment Algorithms",
+      "url": "https://huggingface.co/papers/2406.02900",
+      "authors": [
+        "Rafael Rafailov",
+        "Ryan Park",
+        "Joey Hejna",
+        "Bradley Knox",
+        "Chelsea Finn",
+        "Scott Niekum"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.02900.pdf",
+      "abstract": "Reinforcement Learning from Human Feedback (RLHF) has been crucial to the\nrecent success of Large Language Models (LLMs), however, it is often a complex\nand brittle process. In the classical RLHF framework, a reward model is first\ntrained to represent human preferences, which is in turn used by an online\nreinforcement learning (RL) algorithm to optimize the LLM. A prominent issue\nwith such methods is reward over-optimization or reward hacking,\nwhere performance as measured by the learned proxy reward model increases, but\ntrue quality plateaus or even deteriorates. Direct Alignment Algorithms (DDAs)\nlike Direct Preference Optimization have emerged as alternatives to the\nclassical RLHF pipeline by circumventing the reward modeling phase. However,\nalthough DAAs do not use a separate proxy reward model, they still commonly\ndeteriorate from over-optimization. While the so-called reward hacking\nphenomenon is not well-defined for DAAs, we still uncover similar trends: at\nhigher KL budgets, DAA algorithms exhibit similar degradation patterns to their\nclassic RLHF counterparts. In particular, we find that DAA methods deteriorate\nnot only across a wide range of KL budgets but also often before even a single\nepoch of the dataset is completed. Through extensive empirical experimentation,\nthis work formulates and formalizes the reward over-optimization or hacking\nproblem for DAAs and explores its consequences across objectives, training\nregimes, and model scales.",
+      "upvotes": 10
+    },
+    {
+      "title": "Item-Language Model for Conversational Recommendation",
+      "url": "https://huggingface.co/papers/2406.02844",
+      "authors": [
+        "Anushya Subbiah",
+        "Reza Mirghaderi",
+        "Vikram Aggarwal"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.02844.pdf",
+      "abstract": "Large-language Models (LLMs) have been extremely successful at tasks like\ncomplex dialogue understanding, reasoning and coding due to their emergent\nabilities. These emergent abilities have been extended with multi-modality to\ninclude image, audio, and video capabilities. Recommender systems, on the other\nhand, have been critical for information seeking and item discovery needs.\nRecently, there have been attempts to apply LLMs for recommendations. One\ndifficulty of current attempts is that the underlying LLM is usually not\ntrained on the recommender system data, which largely contains user interaction\nsignals and is often not publicly available. Another difficulty is user\ninteraction signals often have a different pattern from natural language text,\nand it is currently unclear if the LLM training setup can learn more\nnon-trivial knowledge from interaction signals compared with traditional\nrecommender system methods. Finally, it is difficult to train multiple LLMs for\ndifferent use-cases, and to retain the original language and reasoning\nabilities when learning from recommender system data. To address these three\nlimitations, we propose an Item-Language Model (ILM), which is composed of an\nitem encoder to produce text-aligned item representations that encode user\ninteraction signals, and a frozen LLM that can understand those item\nrepresentations with preserved pretrained knowledge. We conduct extensive\nexperiments which demonstrate both the importance of the language-alignment and\nof user interaction knowledge in the item encoder.",
+      "upvotes": 8
+    },
+    {
+      "title": "PLaD: Preference-based Large Language Model Distillation with Pseudo-Preference Pairs",
+      "url": "https://huggingface.co/papers/2406.02886",
+      "authors": [
+        "Feng Han",
+        "Michael Bendersky",
+        "Chao Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.02886.pdf",
+      "abstract": "Large Language Models (LLMs) have exhibited impressive capabilities in\nvarious tasks, yet their vast parameter sizes restrict their applicability in\nresource-constrained settings. Knowledge distillation (KD) offers a viable\nsolution by transferring expertise from large teacher models to compact student\nmodels. However, traditional KD techniques face specific challenges when\napplied to LLMs, including restricted access to LLM outputs, significant\nteacher-student capacity gaps, and the inherited mis-calibration issue. In this\nwork, we present PLaD, a novel preference-based LLM distillation framework.\nPLaD exploits the teacher-student capacity discrepancy to generate\npseudo-preference pairs where teacher outputs are preferred over student\noutputs. Then, PLaD leverages a ranking loss to re-calibrate student's\nestimation of sequence likelihood, which steers the student's focus towards\nunderstanding the relative quality of outputs instead of simply imitating the\nteacher. PLaD bypasses the need for access to teacher LLM's internal states,\ntackles the student's expressivity limitations, and mitigates the student\nmis-calibration issue. Through extensive experiments on two sequence generation\ntasks and with various LLMs, we demonstrate the effectiveness of our proposed\nPLaD framework.",
+      "upvotes": 7
+    },
+    {
+      "title": "Xmodel-LM Technical Report",
+      "url": "https://huggingface.co/papers/2406.02856",
+      "authors": [
+        "Yichuan Wang",
+        "Yang Liu",
+        "Yu Yan",
+        "Ling Jiang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.02856.pdf",
+      "abstract": "We introduce Xmodel-LM, a compact and efficient 1.1B language model\npre-trained on over 2 trillion tokens. Trained on our self-built dataset\n(Xdata), which balances Chinese and English corpora based on downstream task\noptimization, Xmodel-LM exhibits remarkable performance despite its smaller\nsize. It notably surpasses existing open-source language models of similar\nscale. Our model checkpoints and code are publicly accessible on GitHub at\nhttps://github.com/XiaoduoAILab/XmodelLM.",
+      "upvotes": 7
+    }
+  ]
+}

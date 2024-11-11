@@ -1,0 +1,323 @@
+{
+  "date": "2024-07-23",
+  "papers": [
+    {
+      "title": "SlowFast-LLaVA: A Strong Training-Free Baseline for Video Large Language Models",
+      "url": "https://huggingface.co/papers/2407.15841",
+      "authors": [
+        "Haiming Gang",
+        "Kai Kang",
+        "Afshin Dehghan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.15841.pdf",
+      "abstract": "We propose SlowFast-LLaVA (or SF-LLaVA for short), a training-free video\nlarge language model (LLM) that can jointly capture the detailed spatial\nsemantics and long-range temporal context without exceeding the token budget of\ncommonly used LLMs. This is realized by using a two-stream SlowFast design of\ninputs for Video LLMs to aggregate features from sampled video frames in an\neffective way. Specifically, the Slow pathway extracts features at a low frame\nrate while keeping as many spatial details as possible (e.g., with 24x24\ntokens), and the Fast pathway operates on a high frame rate but uses a larger\nspatial pooling stride (e.g., downsampling 6x) to focus on the motion cues. As\na result, this design allows us to adequately capture both spatial and temporal\nfeatures that are beneficial for understanding details along the video.\nExperimental results show that SF-LLaVA outperforms existing training-free\nmethods on a wide range of video tasks. On some benchmarks, it achieves\ncomparable or even better performance compared to state-of-the-art Video LLMs\nthat are fine-tuned on video datasets.",
+      "upvotes": 39
+    },
+    {
+      "title": "Compact Language Models via Pruning and Knowledge Distillation",
+      "url": "https://huggingface.co/papers/2407.14679",
+      "authors": [
+        "Raviraj Joshi",
+        "Marcin Chochowski",
+        "Mostofa Patwary",
+        "Mohammad Shoeybi",
+        "Bryan Catanzaro",
+        "Jan Kautz"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.14679.pdf",
+      "abstract": "Large language models (LLMs) targeting different deployment scales and sizes\nare currently produced by training each variant from scratch; this is extremely\ncompute-intensive. In this paper, we investigate if pruning an existing LLM and\nthen re-training it with a fraction (<3%) of the original training data can be\na suitable alternative to repeated, full retraining. To this end, we develop a\nset of practical and effective compression best practices for LLMs that combine\ndepth, width, attention and MLP pruning with knowledge distillation-based\nretraining; we arrive at these best practices through a detailed empirical\nexploration of pruning strategies for each axis, methods to combine axes,\ndistillation strategies, and search techniques for arriving at optimal\ncompressed architectures. We use this guide to compress the Nemotron-4 family\nof LLMs by a factor of 2-4x, and compare their performance to similarly-sized\nmodels on a variety of language modeling tasks. Deriving 8B and 4B models from\nan already pretrained 15B model using our approach requires up to 40x fewer\ntraining tokens per model compared to training from scratch; this results in\ncompute cost savings of 1.8x for training the full model family (15B, 8B, and\n4B). Minitron models exhibit up to a 16% improvement in MMLU scores compared to\ntraining from scratch, perform comparably to other community models such as\nMistral 7B, Gemma 7B and Llama-3 8B, and outperform state-of-the-art\ncompression techniques from the literature. We have open-sourced Minitron model\nweights on Huggingface, with corresponding supplementary material including\nexample code available on GitHub.",
+      "upvotes": 37
+    },
+    {
+      "title": "NNsight and NDIF: Democratizing Access to Foundation Model Internals",
+      "url": "https://huggingface.co/papers/2407.14561",
+      "authors": [
+        "Samuel Marks",
+        "Nikhil Prakash",
+        "Sumeet Multani",
+        "Carla Brodley"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.14561.pdf",
+      "abstract": "The enormous scale of state-of-the-art foundation models has limited their\naccessibility to scientists, because customized experiments at large model\nsizes require costly hardware and complex engineering that is impractical for\nmost researchers. To alleviate these problems, we introduce NNsight, an\nopen-source Python package with a simple, flexible API that can express\ninterventions on any PyTorch model by building computation graphs. We also\nintroduce NDIF, a collaborative research platform providing researchers access\nto foundation-scale LLMs via the NNsight API. Code, documentation, and\ntutorials are available at https://www.nnsight.net.",
+      "upvotes": 34
+    },
+    {
+      "title": "Knowledge Mechanisms in Large Language Models: A Survey and Perspective",
+      "url": "https://huggingface.co/papers/2407.15017",
+      "authors": [
+        "Yong Jiang",
+        "Fei Huang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.15017.pdf",
+      "abstract": "Understanding knowledge mechanisms in Large Language Models (LLMs) is crucial\nfor advancing towards trustworthy AGI. This paper reviews knowledge mechanism\nanalysis from a novel taxonomy including knowledge utilization and evolution.\nKnowledge utilization delves into the mechanism of memorization, comprehension\nand application, and creation. Knowledge evolution focuses on the dynamic\nprogression of knowledge within individual and group LLMs. Moreover, we discuss\nwhat knowledge LLMs have learned, the reasons for the fragility of parametric\nknowledge, and the potential dark knowledge (hypothesis) that will be\nchallenging to address. We hope this work can help understand knowledge in LLMs\nand provide insights for future research.",
+      "upvotes": 33
+    },
+    {
+      "title": "VideoGameBunny: Towards vision assistants for video games",
+      "url": "https://huggingface.co/papers/2407.15295",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2407.15295.pdf",
+      "abstract": "Large multimodal models (LMMs) hold substantial promise across various\ndomains, from personal assistance in daily tasks to sophisticated applications\nlike medical diagnostics. However, their capabilities have limitations in the\nvideo game domain, such as challenges with scene understanding, hallucinations,\nand inaccurate descriptions of video game content, especially in open-source\nmodels. This paper describes the development of VideoGameBunny, a LLaVA-style\nmodel based on Bunny, specifically tailored for understanding images from video\ngames. We release intermediate checkpoints, training logs, and an extensive\ndataset comprising 185,259 video game images from 413 titles, along with\n389,565 image-instruction pairs that include image captions, question-answer\npairs, and a JSON representation of 16 elements of 136,974 images. Our\nexperiments show that our high quality game-related data has the potential to\nmake a relatively small model outperform the much larger state-of-the-art model\nLLaVa-1.6-34b (which has more than 4x the number of parameters). Our study\npaves the way for future research in video game understanding on tasks such as\nplaying, commentary, and debugging. Code and data are available at\nhttps://videogamebunny.github.io/",
+      "upvotes": 21
+    },
+    {
+      "title": "POGEMA: A Benchmark Platform for Cooperative Multi-Agent Navigation",
+      "url": "https://huggingface.co/papers/2407.14931",
+      "authors": [
+        "Anton Andreychuk",
+        "Anatolii Borzilov",
+        "Alexander Chernyavskiy"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.14931.pdf",
+      "abstract": "Multi-agent reinforcement learning (MARL) has recently excelled in solving\nchallenging cooperative and competitive multi-agent problems in various\nenvironments with, mostly, few agents and full observability. Moreover, a range\nof crucial robotics-related tasks, such as multi-robot navigation and obstacle\navoidance, that have been conventionally approached with the classical\nnon-learnable methods (e.g., heuristic search) is currently suggested to be\nsolved by the learning-based or hybrid methods. Still, in this domain, it is\nhard, not to say impossible, to conduct a fair comparison between classical,\nlearning-based, and hybrid approaches due to the lack of a unified framework\nthat supports both learning and evaluation. To this end, we introduce POGEMA, a\nset of comprehensive tools that includes a fast environment for learning, a\ngenerator of problem instances, the collection of pre-defined ones, a\nvisualization toolkit, and a benchmarking tool that allows automated\nevaluation. We introduce and specify an evaluation protocol defining a range of\ndomain-related metrics computed on the basics of the primary evaluation\nindicators (such as success rate and path length), allowing a fair multi-fold\ncomparison. The results of such a comparison, which involves a variety of\nstate-of-the-art MARL, search-based, and hybrid methods, are presented.",
+      "upvotes": 20
+    },
+    {
+      "title": "LongVideoBench: A Benchmark for Long-context Interleaved Video-Language Understanding",
+      "url": "https://huggingface.co/papers/2407.15754",
+      "authors": [
+        "Bei Chen",
+        "Junnan Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.15754.pdf",
+      "abstract": "Large multimodal models (LMMs) are processing increasingly longer and richer\ninputs. Albeit the progress, few public benchmark is available to measure such\ndevelopment. To mitigate this gap, we introduce LongVideoBench, a\nquestion-answering benchmark that features video-language interleaved inputs up\nto an hour long. Our benchmark includes 3,763 varying-length web-collected\nvideos with their subtitles across diverse themes, designed to comprehensively\nevaluate LMMs on long-term multimodal understanding. To achieve this, we\ninterpret the primary challenge as to accurately retrieve and reason over\ndetailed multimodal information from long inputs. As such, we formulate a novel\nvideo question-answering task termed referring reasoning. Specifically, as part\nof the question, it contains a referring query that references related video\ncontexts, called referred context. The model is then required to reason over\nrelevant video details from the referred context. Following the paradigm of\nreferring reasoning, we curate 6,678 human-annotated multiple-choice questions\nin 17 fine-grained categories, establishing one of the most comprehensive\nbenchmarks for long-form video understanding. Evaluations suggest that the\nLongVideoBench presents significant challenges even for the most advanced\nproprietary models (e.g. GPT-4o, Gemini-1.5-Pro, GPT-4-Turbo), while their\nopen-source counterparts show an even larger performance gap. In addition, our\nresults indicate that model performance on the benchmark improves only when\nthey are capable of processing more frames, positioning LongVideoBench as a\nvaluable benchmark for evaluating future-generation long-context LMMs.",
+      "upvotes": 19
+    },
+    {
+      "title": "BOND: Aligning LLMs with Best-of-N Distillation",
+      "url": "https://huggingface.co/papers/2407.14622",
+      "authors": [
+        "Nino Vieillard",
+        "Bobak Shariari",
+        "Abe Friesen",
+        "Geoffrey Cideron",
+        "Sertan Girgin",
+        "Piotr Stanczyk",
+        "Danila Sinopalnikov",
+        "Sabela Ramos",
+        "Amélie Héliou",
+        "Aliaksei Severyn",
+        "Matt Hoffman",
+        "Nikola Momchev"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.14622.pdf",
+      "abstract": "Reinforcement learning from human feedback (RLHF) is a key driver of quality\nand safety in state-of-the-art large language models. Yet, a surprisingly\nsimple and strong inference-time strategy is Best-of-N sampling that selects\nthe best generation among N candidates. In this paper, we propose Best-of-N\nDistillation (BOND), a novel RLHF algorithm that seeks to emulate Best-of-N but\nwithout its significant computational overhead at inference time. Specifically,\nBOND is a distribution matching algorithm that forces the distribution of\ngenerations from the policy to get closer to the Best-of-N distribution. We use\nthe Jeffreys divergence (a linear combination of forward and backward KL) to\nbalance between mode-covering and mode-seeking behavior, and derive an\niterative formulation that utilizes a moving anchor for efficiency. We\ndemonstrate the effectiveness of our approach and several design choices\nthrough experiments on abstractive summarization and Gemma models. Aligning\nGemma policies with BOND outperforms other RLHF algorithms by improving results\non several benchmarks.",
+      "upvotes": 17
+    },
+    {
+      "title": "BoostMVSNeRFs: Boosting MVS-based NeRFs to Generalizable View Synthesis in Large-scale Scenes",
+      "url": "https://huggingface.co/papers/2407.15848",
+      "authors": [
+        "Chih-Yao Hu",
+        "Chin-Yang Lin"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.15848.pdf",
+      "abstract": "While Neural Radiance Fields (NeRFs) have demonstrated exceptional quality,\ntheir protracted training duration remains a limitation. Generalizable and\nMVS-based NeRFs, although capable of mitigating training time, often incur\ntradeoffs in quality. This paper presents a novel approach called BoostMVSNeRFs\nto enhance the rendering quality of MVS-based NeRFs in large-scale scenes. We\nfirst identify limitations in MVS-based NeRF methods, such as restricted\nviewport coverage and artifacts due to limited input views. Then, we address\nthese limitations by proposing a new method that selects and combines multiple\ncost volumes during volume rendering. Our method does not require training and\ncan adapt to any MVS-based NeRF methods in a feed-forward fashion to improve\nrendering quality. Furthermore, our approach is also end-to-end trainable,\nallowing fine-tuning on specific scenes. We demonstrate the effectiveness of\nour method through experiments on large-scale datasets, showing significant\nrendering quality improvements in large-scale scenes and unbounded outdoor\nscenarios. We release the source code of BoostMVSNeRFs at\nhttps://su-terry.github.io/BoostMVSNeRFs/.",
+      "upvotes": 16
+    },
+    {
+      "title": "Artist: Aesthetically Controllable Text-Driven Stylization without Training",
+      "url": "https://huggingface.co/papers/2407.15842",
+      "authors": [
+        "Changwen Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.15842.pdf",
+      "abstract": "Diffusion models entangle content and style generation during the denoising\nprocess, leading to undesired content modification when directly applied to\nstylization tasks. Existing methods struggle to effectively control the\ndiffusion model to meet the aesthetic-level requirements for stylization. In\nthis paper, we introduce Artist, a training-free approach that\naesthetically controls the content and style generation of a pretrained\ndiffusion model for text-driven stylization. Our key insight is to disentangle\nthe denoising of content and style into separate diffusion processes while\nsharing information between them. We propose simple yet effective content and\nstyle control methods that suppress style-irrelevant content generation,\nresulting in harmonious stylization results. Extensive experiments demonstrate\nthat our method excels at achieving aesthetic-level stylization requirements,\npreserving intricate details in the content image and aligning well with the\nstyle prompt. Furthermore, we showcase the highly controllability of the\nstylization strength from various perspectives. Code will be released, project\nhome page: https://DiffusionArtist.github.io",
+      "upvotes": 13
+    },
+    {
+      "title": "Discrete Flow Matching",
+      "url": "https://huggingface.co/papers/2407.15595",
+      "authors": [
+        "Neta Shaul",
+        "Ricky T. Q. Chen",
+        "Yaron Lipman"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.15595.pdf",
+      "abstract": "Despite Flow Matching and diffusion models having emerged as powerful\ngenerative paradigms for continuous variables such as images and videos, their\napplication to high-dimensional discrete data, such as language, is still\nlimited. In this work, we present Discrete Flow Matching, a novel discrete flow\nparadigm designed specifically for generating discrete data. Discrete Flow\nMatching offers several key contributions: (i) it works with a general family\nof probability paths interpolating between source and target distributions;\n(ii) it allows for a generic formula for sampling from these probability paths\nusing learned posteriors such as the probability denoiser (x-prediction) and\nnoise-prediction (epsilon-prediction); (iii) practically, focusing on\nspecific probability paths defined with different schedulers considerably\nimproves generative perplexity compared to previous discrete diffusion and flow\nmodels; and (iv) by scaling Discrete Flow Matching models up to 1.7B\nparameters, we reach 6.7% Pass@1 and 13.4% Pass@10 on HumanEval and 6.7% Pass@1\nand 20.6% Pass@10 on 1-shot MBPP coding benchmarks. Our approach is capable of\ngenerating high-quality discrete data in a non-autoregressive fashion,\nsignificantly closing the gap between autoregressive models and discrete flow\nmodels.",
+      "upvotes": 11
+    },
+    {
+      "title": "Consent in Crisis: The Rapid Decline of the AI Data Commons",
+      "url": "https://huggingface.co/papers/2407.14933",
+      "authors": [
+        "Shayne Longpre",
+        "Campbell Lund",
+        "Hamidah Oderinwale",
+        "William Brannon",
+        "Nayan Saxena",
+        "Naana Obeng-Marnu",
+        "Tobin South",
+        "Cole Hunter",
+        "Kevin Klyman",
+        "Christopher Klamm",
+        "Hailey Schoelkopf",
+        "Nikhil Singh",
+        "Manuel Cherep",
+        "An Dinh",
+        "Caroline Chitongo",
+        "Da Yin",
+        "Diganta Misra"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.14933.pdf",
+      "abstract": "General-purpose artificial intelligence (AI) systems are built on massive\nswathes of public web data, assembled into corpora such as C4, RefinedWeb, and\nDolma. To our knowledge, we conduct the first, large-scale, longitudinal audit\nof the consent protocols for the web domains underlying AI training corpora.\nOur audit of 14,000 web domains provides an expansive view of crawlable web\ndata and how consent preferences to use it are changing over time. We observe a\nproliferation of AI-specific clauses to limit use, acute differences in\nrestrictions on AI developers, as well as general inconsistencies between\nwebsites' expressed intentions in their Terms of Service and their robots.txt.\nWe diagnose these as symptoms of ineffective web protocols, not designed to\ncope with the widespread re-purposing of the internet for AI. Our longitudinal\nanalyses show that in a single year (2023-2024) there has been a rapid\ncrescendo of data restrictions from web sources, rendering ~5%+ of all tokens\nin C4, or 28%+ of the most actively maintained, critical sources in C4, fully\nrestricted from use. For Terms of Service crawling restrictions, a full 45% of\nC4 is now restricted. If respected or enforced, these restrictions are rapidly\nbiasing the diversity, freshness, and scaling laws for general-purpose AI\nsystems. We hope to illustrate the emerging crisis in data consent, foreclosing\nmuch of the open web, not only for commercial AI, but non-commercial AI and\nacademic purposes.",
+      "upvotes": 11
+    },
+    {
+      "title": "Cinemo: Consistent and Controllable Image Animation with Motion Diffusion Models",
+      "url": "https://huggingface.co/papers/2407.15642",
+      "authors": [
+        "Gengyu Jia",
+        "Cunjian Chen",
+        "Yu Qiao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.15642.pdf",
+      "abstract": "Diffusion models have achieved great progress in image animation due to\npowerful generative capabilities. However, maintaining spatio-temporal\nconsistency with detailed information from the input static image over time\n(e.g., style, background, and object of the input static image) and ensuring\nsmoothness in animated video narratives guided by textual prompts still remains\nchallenging. In this paper, we introduce Cinemo, a novel image animation\napproach towards achieving better motion controllability, as well as stronger\ntemporal consistency and smoothness. In general, we propose three effective\nstrategies at the training and inference stages of Cinemo to accomplish our\ngoal. At the training stage, Cinemo focuses on learning the distribution of\nmotion residuals, rather than directly predicting subsequent via a motion\ndiffusion model. Additionally, a structural similarity index-based strategy is\nproposed to enable Cinemo to have better controllability of motion intensity.\nAt the inference stage, a noise refinement technique based on discrete cosine\ntransformation is introduced to mitigate sudden motion changes. Such three\nstrategies enable Cinemo to produce highly consistent, smooth, and\nmotion-controllable results. Compared to previous methods, Cinemo offers\nsimpler and more precise user controllability. Extensive experiments against\nseveral state-of-the-art methods, including both commercial tools and research\napproaches, across multiple metrics, demonstrate the effectiveness and\nsuperiority of our proposed approach.",
+      "upvotes": 10
+    },
+    {
+      "title": "HoloDreamer: Holistic 3D Panoramic World Generation from Text Descriptions",
+      "url": "https://huggingface.co/papers/2407.15187",
+      "authors": [
+        "Yonghong Tian",
+        "Li Yuan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.15187.pdf",
+      "abstract": "3D scene generation is in high demand across various domains, including\nvirtual reality, gaming, and the film industry. Owing to the powerful\ngenerative capabilities of text-to-image diffusion models that provide reliable\npriors, the creation of 3D scenes using only text prompts has become viable,\nthereby significantly advancing researches in text-driven 3D scene generation.\nIn order to obtain multiple-view supervision from 2D diffusion models,\nprevailing methods typically employ the diffusion model to generate an initial\nlocal image, followed by iteratively outpainting the local image using\ndiffusion models to gradually generate scenes. Nevertheless, these\noutpainting-based approaches prone to produce global inconsistent scene\ngeneration results without high degree of completeness, restricting their\nbroader applications. To tackle these problems, we introduce HoloDreamer, a\nframework that first generates high-definition panorama as a holistic\ninitialization of the full 3D scene, then leverage 3D Gaussian Splatting\n(3D-GS) to quickly reconstruct the 3D scene, thereby facilitating the creation\nof view-consistent and fully enclosed 3D scenes. Specifically, we propose\nStylized Equirectangular Panorama Generation, a pipeline that combines multiple\ndiffusion models to enable stylized and detailed equirectangular panorama\ngeneration from complex text prompts. Subsequently, Enhanced Two-Stage Panorama\nReconstruction is introduced, conducting a two-stage optimization of 3D-GS to\ninpaint the missing region and enhance the integrity of the scene.\nComprehensive experiments demonstrated that our method outperforms prior works\nin terms of overall visual consistency and harmony as well as reconstruction\nquality and rendering robustness when generating fully enclosed scenes.",
+      "upvotes": 10
+    },
+    {
+      "title": "MIBench: Evaluating Multimodal Large Language Models over Multiple Images",
+      "url": "https://huggingface.co/papers/2407.15272",
+      "authors": [
+        "Haowei Liu",
+        "Xi Zhang",
+        "Ji Zhang",
+        "Chunfeng Yuan",
+        "Bing Li",
+        "Weiming Hu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.15272.pdf",
+      "abstract": "Built on the power of LLMs, numerous multimodal large language models (MLLMs)\nhave recently achieved remarkable performance on various vision-language tasks\nacross multiple benchmarks. However, most existing MLLMs and benchmarks\nprimarily focus on single-image input scenarios, leaving the performance of\nMLLMs when handling realistic multiple images remain underexplored. Although a\nfew benchmarks consider multiple images, their evaluation dimensions and\nsamples are very limited. Therefore, in this paper, we propose a new benchmark\nMIBench, to comprehensively evaluate fine-grained abilities of MLLMs in\nmulti-image scenarios. Specifically, MIBench categorizes the multi-image\nabilities into three scenarios: multi-image instruction (MII), multimodal\nknowledge-seeking (MKS) and multimodal in-context learning (MIC), and\nconstructs 13 tasks with a total of 13K annotated samples. During data\nconstruction, for MII and MKS, we extract correct options from manual\nannotations and create challenging distractors to obtain multiple-choice\nquestions. For MIC, to enable an in-depth evaluation, we set four sub-tasks and\ntransform the original datasets into in-context learning formats. We evaluate\nseveral open-source MLLMs and close-source MLLMs on the proposed MIBench. The\nresults reveal that although current models excel in single-image tasks, they\nexhibit significant shortcomings when faced with multi-image inputs, such as\nconfused fine-grained perception, limited multi-image reasoning, and unstable\nin-context learning. The annotated data in MIBench is available at\nhttps://huggingface.co/datasets/StarBottle/MIBench.",
+      "upvotes": 9
+    },
+    {
+      "title": "AssistantBench: Can Web Agents Solve Realistic and Time-Consuming Tasks?",
+      "url": "https://huggingface.co/papers/2407.15711",
+      "authors": [
+        "Samuel Joseph Amouyal",
+        "Ben Bogin",
+        "Ofir Press",
+        "Jonathan Berant"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.15711.pdf",
+      "abstract": "Language agents, built on top of language models (LMs), are systems that can\ninteract with complex environments, such as the open web. In this work, we\nexamine whether such agents can perform realistic and time-consuming tasks on\nthe web, e.g., monitoring real-estate markets or locating relevant nearby\nbusinesses. We introduce AssistantBench, a challenging new benchmark consisting\nof 214 realistic tasks that can be automatically evaluated, covering different\nscenarios and domains. We find that AssistantBench exposes the limitations of\ncurrent systems, including language models and retrieval-augmented language\nmodels, as no model reaches an accuracy of more than 25 points. While\nclosed-book LMs perform well, they exhibit low precision since they tend to\nhallucinate facts. State-of-the-art web agents reach a score of near zero.\nAdditionally, we introduce SeePlanAct (SPA), a new web agent that significantly\noutperforms previous agents, and an ensemble of SPA and closed-book models\nreaches the best overall performance. Moreover, we analyze failures of current\nsystems and highlight that web navigation remains a major challenge.",
+      "upvotes": 9
+    },
+    {
+      "title": "MusiConGen: Rhythm and Chord Control for Transformer-Based Text-to-Music Generation",
+      "url": "https://huggingface.co/papers/2407.15060",
+      "authors": [
+        "Wen-Yi Hsiao",
+        "Hao-Chung Cheng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.15060.pdf",
+      "abstract": "Existing text-to-music models can produce high-quality audio with great\ndiversity. However, textual prompts alone cannot precisely control temporal\nmusical features such as chords and rhythm of the generated music. To address\nthis challenge, we introduce MusiConGen, a temporally-conditioned\nTransformer-based text-to-music model that builds upon the pretrained MusicGen\nframework. Our innovation lies in an efficient finetuning mechanism, tailored\nfor consumer-grade GPUs, that integrates automatically-extracted rhythm and\nchords as the condition signal. During inference, the condition can either be\nmusical features extracted from a reference audio signal, or be user-defined\nsymbolic chord sequence, BPM, and textual prompts. Our performance evaluation\non two datasets -- one derived from extracted features and the other from\nuser-created inputs -- demonstrates that MusiConGen can generate realistic\nbacking track music that aligns well with the specified conditions. We\nopen-source the code and model checkpoints, and provide audio examples online,\nhttps://musicongen.github.io/musicongen_demo/.",
+      "upvotes": 9
+    },
+    {
+      "title": "Conditioned Language Policy: A General Framework for Steerable Multi-Objective Finetuning",
+      "url": "https://huggingface.co/papers/2407.15762",
+      "authors": [
+        "Rahul Kidambi",
+        "Ryan Sullivan",
+        "Alekh Agarwal",
+        "Christoph Dann",
+        "Marco Gelmi",
+        "Raghav Gupta",
+        "Avinava Dubey",
+        "Geoffrey Cideron",
+        "Hongkun Yu",
+        "Amr Ahmed",
+        "Aranyak Mehta"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.15762.pdf",
+      "abstract": "Reward-based finetuning is crucial for aligning language policies with\nintended behaviors (e.g., creativity and safety). A key challenge here is to\ndevelop steerable language models that trade-off multiple (conflicting)\nobjectives in a flexible and efficient manner. This paper presents Conditioned\nLanguage Policy (CLP), a general framework for finetuning language models on\nmultiple objectives. Building on techniques from multi-task training and\nparameter-efficient finetuning, CLP can learn steerable models that effectively\ntrade-off conflicting objectives at inference time. Notably, this does not\nrequire training or maintaining multiple models to achieve different trade-offs\nbetween the objectives. Through an extensive set of experiments and ablations,\nwe show that the CLP framework learns steerable models that outperform and\nPareto-dominate the current state-of-the-art approaches for multi-objective\nfinetuning.",
+      "upvotes": 9
+    },
+    {
+      "title": "CGB-DM: Content and Graphic Balance Layout Generation with Transformer-based Diffusion Model",
+      "url": "https://huggingface.co/papers/2407.15233",
+      "authors": [
+        "Yu Li",
+        "Yifan Chen",
+        "Gongye Liu",
+        "Jie Wu",
+        "Yujiu Yang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.15233.pdf",
+      "abstract": "Layout generation is the foundation task of intelligent design, which\nrequires the integration of visual aesthetics and harmonious expression of\ncontent delivery. However, existing methods still face challenges in generating\nprecise and visually appealing layouts, including blocking, overlap, or spatial\nmisalignment between layouts, which are closely related to the spatial\nstructure of graphic layouts. We find that these methods overly focus on\ncontent information and lack constraints on layout spatial structure, resulting\nin an imbalance of learning content-aware and graphic-aware features. To tackle\nthis issue, we propose Content and Graphic Balance Layout Generation with\nTransformer-based Diffusion Model (CGB-DM). Specifically, we first design a\nregulator that balances the predicted content and graphic weight, overcoming\nthe tendency of paying more attention to the content on canvas. Secondly, we\nintroduce a graphic constraint of saliency bounding box to further enhance the\nalignment of geometric features between layout representations and images. In\naddition, we adapt a transformer-based diffusion model as the backbone, whose\npowerful generation capability ensures the quality in layout generation.\nExtensive experimental results indicate that our method has achieved\nstate-of-the-art performance in both quantitative and qualitative evaluations.\nOur model framework can also be expanded to other graphic design fields.",
+      "upvotes": 6
+    },
+    {
+      "title": "Local All-Pair Correspondence for Point Tracking",
+      "url": "https://huggingface.co/papers/2407.15420",
+      "authors": [
+        "Honggyu An"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.15420.pdf",
+      "abstract": "We introduce LocoTrack, a highly accurate and efficient model designed for\nthe task of tracking any point (TAP) across video sequences. Previous\napproaches in this task often rely on local 2D correlation maps to establish\ncorrespondences from a point in the query image to a local region in the target\nimage, which often struggle with homogeneous regions or repetitive features,\nleading to matching ambiguities. LocoTrack overcomes this challenge with a\nnovel approach that utilizes all-pair correspondences across regions, i.e.,\nlocal 4D correlation, to establish precise correspondences, with bidirectional\ncorrespondence and matching smoothness significantly enhancing robustness\nagainst ambiguities. We also incorporate a lightweight correlation encoder to\nenhance computational efficiency, and a compact Transformer architecture to\nintegrate long-term temporal information. LocoTrack achieves unmatched accuracy\non all TAP-Vid benchmarks and operates at a speed almost 6 times faster than\nthe current state-of-the-art.",
+      "upvotes": 5
+    },
+    {
+      "title": "ThermalNeRF: Thermal Radiance Fields",
+      "url": "https://huggingface.co/papers/2407.15337",
+      "authors": [
+        "Yvette Y. Lin",
+        "Xin-Yi Pan",
+        "Sara Fridovich-Keil"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.15337.pdf",
+      "abstract": "Thermal imaging has a variety of applications, from agricultural monitoring\nto building inspection to imaging under poor visibility, such as in low light,\nfog, and rain. However, reconstructing thermal scenes in 3D presents several\nchallenges due to the comparatively lower resolution and limited features\npresent in long-wave infrared (LWIR) images. To overcome these challenges, we\npropose a unified framework for scene reconstruction from a set of LWIR and RGB\nimages, using a multispectral radiance field to represent a scene viewed by\nboth visible and infrared cameras, thus leveraging information across both\nspectra. We calibrate the RGB and infrared cameras with respect to each other,\nas a preprocessing step using a simple calibration target. We demonstrate our\nmethod on real-world sets of RGB and LWIR photographs captured from a handheld\nthermal camera, showing the effectiveness of our method at scene representation\nacross the visible and infrared spectra. We show that our method is capable of\nthermal super-resolution, as well as visually removing obstacles to reveal\nobjects that are occluded in either the RGB or thermal channels. Please see\nhttps://yvette256.github.io/thermalnerf for video results as well as our code\nand dataset release.",
+      "upvotes": 5
+    },
+    {
+      "title": "Temporal Residual Jacobians For Rig-free Motion Transfer",
+      "url": "https://huggingface.co/papers/2407.14958",
+      "authors": [
+        "Siddhartha Chaudhuri",
+        "Vladimir Kim",
+        "Matthew Fisher",
+        "Niloy J. Mitra"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.14958.pdf",
+      "abstract": "We introduce Temporal Residual Jacobians as a novel representation to enable\ndata-driven motion transfer. Our approach does not assume access to any rigging\nor intermediate shape keyframes, produces geometrically and temporally\nconsistent motions, and can be used to transfer long motion sequences. Central\nto our approach are two coupled neural networks that individually predict local\ngeometric and temporal changes that are subsequently integrated, spatially and\ntemporally, to produce the final animated meshes. The two networks are jointly\ntrained, complement each other in producing spatial and temporal signals, and\nare supervised directly with 3D positional information. During inference, in\nthe absence of keyframes, our method essentially solves a motion extrapolation\nproblem. We test our setup on diverse meshes (synthetic and scanned shapes) to\ndemonstrate its superiority in generating realistic and natural-looking\nanimations on unseen body shapes against SoTA alternatives. Supplemental video\nand code are available at https://temporaljacobians.github.io/ .",
+      "upvotes": 5
+    },
+    {
+      "title": "GET-Zero: Graph Embodiment Transformer for Zero-shot Embodiment Generalization",
+      "url": "https://huggingface.co/papers/2407.15002",
+      "authors": [
+        "Shuran Song"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.15002.pdf",
+      "abstract": "This paper introduces GET-Zero, a model architecture and training procedure\nfor learning an embodiment-aware control policy that can immediately adapt to\nnew hardware changes without retraining. To do so, we present Graph Embodiment\nTransformer (GET), a transformer model that leverages the embodiment graph\nconnectivity as a learned structural bias in the attention mechanism. We use\nbehavior cloning to distill demonstration data from embodiment-specific expert\npolicies into an embodiment-aware GET model that conditions on the hardware\nconfiguration of the robot to make control decisions. We conduct a case study\non a dexterous in-hand object rotation task using different configurations of a\nfour-fingered robot hand with joints removed and with link length extensions.\nUsing the GET model along with a self-modeling loss enables GET-Zero to\nzero-shot generalize to unseen variation in graph structure and link length,\nyielding a 20% improvement over baseline methods. All code and qualitative\nvideo results are on https://get-zero-paper.github.io",
+      "upvotes": 4
+    },
+    {
+      "title": "Visual Haystacks: Answering Harder Questions About Sets of Images",
+      "url": "https://huggingface.co/papers/2407.13766",
+      "authors": [
+        "Tsung-Han Wu",
+        "Giscard Biamby",
+        "Jerome Quenum",
+        "Ritwik Gupta",
+        "Joseph E. Gonzalez",
+        "Trevor Darrell"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.13766.pdf",
+      "abstract": "Recent advancements in Large Multimodal Models (LMMs) have made significant\nprogress in the field of single-image visual question answering. However, these\nmodels face substantial challenges when tasked with queries that span extensive\ncollections of images, similar to real-world scenarios like searching through\nlarge photo albums, finding specific information across the internet, or\nmonitoring environmental changes through satellite imagery. This paper explores\nthe task of Multi-Image Visual Question Answering (MIQA): given a large set of\nimages and a natural language query, the task is to generate a relevant and\ngrounded response. We propose a new public benchmark, dubbed \"Visual Haystacks\n(VHs),\" specifically designed to evaluate LMMs' capabilities in visual\nretrieval and reasoning over sets of unrelated images, where we perform\ncomprehensive evaluations demonstrating that even robust closed-source models\nstruggle significantly. Towards addressing these shortcomings, we introduce\nMIRAGE (Multi-Image Retrieval Augmented Generation), a novel retrieval/QA\nframework tailored for LMMs that confronts the challenges of MIQA with marked\nefficiency and accuracy improvements over baseline methods. Our evaluation\nshows that MIRAGE surpasses closed-source GPT-4o models by up to 11% on the VHs\nbenchmark and offers up to 3.4x improvements in efficiency over text-focused\nmulti-stage approaches.",
+      "upvotes": 2
+    }
+  ]
+}

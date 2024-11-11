@@ -1,0 +1,136 @@
+{
+  "date": "2024-03-14",
+  "papers": [
+    {
+      "title": "Simple and Scalable Strategies to Continually Pre-train Large Language Models",
+      "url": "https://huggingface.co/papers/2403.08763",
+      "authors": [
+        "Mats L. Richter",
+        "Eugene Belilovsky"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.08763.pdf",
+      "abstract": "Large language models (LLMs) are routinely pre-trained on billions of tokens,\nonly to start the process over again once new data becomes available. A much\nmore efficient solution is to continually pre-train these models, saving\nsignificant compute compared to re-training. However, the distribution shift\ninduced by new data typically results in degraded performance on previous data\nor poor adaptation to the new data. In this work, we show that a simple and\nscalable combination of learning rate (LR) re-warming, LR re-decaying, and\nreplay of previous data is sufficient to match the performance of fully\nre-training from scratch on all available data, as measured by final loss and\nlanguage model (LM) evaluation benchmarks. Specifically, we show this for a\nweak but realistic distribution shift between two commonly used LLM\npre-training datasets (EnglishrightarrowEnglish) and a stronger distribution\nshift (EnglishrightarrowGerman) at the 405M parameter model scale with\nlarge dataset sizes (hundreds of billions of tokens). Selecting the weak but\nrealistic shift for larger-scale experiments, we also find that our continual\nlearning strategies match the re-training baseline for a 10B parameter LLM. Our\nresults demonstrate that LLMs can be successfully updated via simple and\nscalable continual learning strategies, matching the re-training baseline using\nonly a fraction of the compute. Finally, inspired by previous work, we propose\nalternatives to the cosine learning rate schedule that help circumvent\nforgetting induced by LR re-warming and that are not bound to a fixed token\nbudget.",
+      "upvotes": 48
+    },
+    {
+      "title": "Gemma: Open Models Based on Gemini Research and Technology",
+      "url": "https://huggingface.co/papers/2403.08295",
+      "authors": [
+        "Gemma Team",
+        "Thomas Mesnard",
+        "Cassidy Hardin",
+        "Robert Dadashi",
+        "Shreya Pathak",
+        "Morgane Rivière",
+        "Juliette Love",
+        "Léonard Hussenot",
+        "Adam Roberts",
+        "Alex Botev",
+        "Alex Castro-Ros",
+        "Ambrose Slone",
+        "Amélie Héliou",
+        "Andrea Tacchetti",
+        "Anna Bulanova",
+        "Antonia Paterson"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.08295.pdf",
+      "abstract": "This work introduces Gemma, a family of lightweight, state-of-the art open\nmodels built from the research and technology used to create Gemini models.\nGemma models demonstrate strong performance across academic benchmarks for\nlanguage understanding, reasoning, and safety. We release two sizes of models\n(2 billion and 7 billion parameters), and provide both pretrained and\nfine-tuned checkpoints. Gemma outperforms similarly sized open models on 11 out\nof 18 text-based tasks, and we present comprehensive evaluations of safety and\nresponsibility aspects of the models, alongside a detailed description of model\ndevelopment. We believe the responsible release of LLMs is critical for\nimproving the safety of frontier models, and for enabling the next wave of LLM\ninnovations.",
+      "upvotes": 47
+    },
+    {
+      "title": "VLOGGER: Multimodal Diffusion for Embodied Avatar Synthesis",
+      "url": "https://huggingface.co/papers/2403.08764",
+      "authors": [
+        "Eduard Gabriel Bazavan",
+        "Cristian Sminchisescu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.08764.pdf",
+      "abstract": "We propose VLOGGER, a method for audio-driven human video generation from a\nsingle input image of a person, which builds on the success of recent\ngenerative diffusion models. Our method consists of 1) a stochastic\nhuman-to-3d-motion diffusion model, and 2) a novel diffusion-based architecture\nthat augments text-to-image models with both spatial and temporal controls.\nThis supports the generation of high quality video of variable length, easily\ncontrollable through high-level representations of human faces and bodies. In\ncontrast to previous work, our method does not require training for each\nperson, does not rely on face detection and cropping, generates the complete\nimage (not just the face or the lips), and considers a broad spectrum of\nscenarios (e.g. visible torso or diverse subject identities) that are critical\nto correctly synthesize humans who communicate. We also curate MENTOR, a new\nand diverse dataset with 3d pose and expression annotations, one order of\nmagnitude larger than previous ones (800,000 identities) and with dynamic\ngestures, on which we train and ablate our main technical contributions.\n  VLOGGER outperforms state-of-the-art methods in three public benchmarks,\nconsidering image quality, identity preservation and temporal consistency while\nalso generating upper-body gestures. We analyze the performance of VLOGGER with\nrespect to multiple diversity metrics, showing that our architectural choices\nand the use of MENTOR benefit training a fair and unbiased model at scale.\nFinally we show applications in video editing and personalization.",
+      "upvotes": 36
+    },
+    {
+      "title": "SOTOPIA-$π$: Interactive Learning of Socially Intelligent Language Agents",
+      "url": "https://huggingface.co/papers/2403.08715",
+      "authors": [
+        "Zhengyang Qi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.08715.pdf",
+      "abstract": "Humans learn social skills through both imitation and social interaction.\nThis social learning process is largely understudied by existing research on\nbuilding language agents. Motivated by this gap, we propose an interactive\nlearning method, SOTOPIA-pi, improving the social intelligence of language\nagents. This method leverages behavior cloning and self-reinforcement training\non filtered social interaction data according to large language model (LLM)\nratings. We show that our training method allows a 7B LLM to reach the social\ngoal completion ability of an expert model (GPT-4-based agent), while improving\nthe safety of language agents and maintaining general QA ability on the MMLU\nbenchmark. We also find that this training paradigm uncovers some difficulties\nin LLM-based evaluation of social intelligence: LLM-based evaluators\noverestimate the abilities of the language agents trained specifically for\nsocial interaction.",
+      "upvotes": 20
+    },
+    {
+      "title": "On the Societal Impact of Open Foundation Models",
+      "url": "https://huggingface.co/papers/2403.07918",
+      "authors": [
+        "Rishi Bommasani",
+        "Peter Cihon",
+        "Aspen Hopkins",
+        "Kevin Bankston",
+        "Alex Engler",
+        "Stefano Maffulli",
+        "Alondra Nelson",
+        "Joelle Pineau",
+        "Victor Storchan",
+        "Daniel Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.07918.pdf",
+      "abstract": "Foundation models are powerful technologies: how they are released publicly\ndirectly shapes their societal impact. In this position paper, we focus on open\nfoundation models, defined here as those with broadly available model weights\n(e.g. Llama 2, Stable Diffusion XL). We identify five distinctive properties\n(e.g. greater customizability, poor monitoring) of open foundation models that\nlead to both their benefits and risks. Open foundation models present\nsignificant benefits, with some caveats, that span innovation, competition, the\ndistribution of decision-making power, and transparency. To understand their\nrisks of misuse, we design a risk assessment framework for analyzing their\nmarginal risk. Across several misuse vectors (e.g. cyberattacks, bioweapons),\nwe find that current research is insufficient to effectively characterize the\nmarginal risk of open foundation models relative to pre-existing technologies.\nThe framework helps explain why the marginal risk is low in some cases,\nclarifies disagreements about misuse risks by revealing that past work has\nfocused on different subsets of the framework with different assumptions, and\narticulates a way forward for more constructive debate. Overall, our work helps\nsupport a more grounded assessment of the societal impact of open foundation\nmodels by outlining what research is needed to empirically validate their\ntheoretical benefits and risks.",
+      "upvotes": 16
+    },
+    {
+      "title": "Follow-Your-Click: Open-domain Regional Image Animation via Short Prompts",
+      "url": "https://huggingface.co/papers/2403.08268",
+      "authors": [
+        "Yue Ma",
+        "Hongfa Wang",
+        "Andong Wang",
+        "Chengfei Cai",
+        "Xiu Li",
+        "Zhifeng Li",
+        "Heung-Yeung Shum",
+        "Wei Liu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.08268.pdf",
+      "abstract": "Despite recent advances in image-to-video generation, better controllability\nand local animation are less explored. Most existing image-to-video methods are\nnot locally aware and tend to move the entire scene. However, human artists may\nneed to control the movement of different objects or regions. Additionally,\ncurrent I2V methods require users not only to describe the target motion but\nalso to provide redundant detailed descriptions of frame contents. These two\nissues hinder the practical utilization of current I2V tools. In this paper, we\npropose a practical framework, named Follow-Your-Click, to achieve image\nanimation with a simple user click (for specifying what to move) and a short\nmotion prompt (for specifying how to move). Technically, we propose the\nfirst-frame masking strategy, which significantly improves the video generation\nquality, and a motion-augmented module equipped with a short motion prompt\ndataset to improve the short prompt following abilities of our model. To\nfurther control the motion speed, we propose flow-based motion magnitude\ncontrol to control the speed of target movement more precisely. Our framework\nhas simpler yet precise user control and better generation performance than\nprevious methods. Extensive experiments compared with 7 baselines, including\nboth commercial tools and research methods on 8 metrics, suggest the\nsuperiority of our approach. Project Page: https://follow-your-click.github.io/",
+      "upvotes": 15
+    },
+    {
+      "title": "Scaling Up Dynamic Human-Scene Interaction Modeling",
+      "url": "https://huggingface.co/papers/2403.08629",
+      "authors": [
+        "Yixin Zhu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.08629.pdf",
+      "abstract": "Confronting the challenges of data scarcity and advanced motion synthesis in\nhuman-scene interaction modeling, we introduce the TRUMANS dataset alongside a\nnovel HSI motion synthesis method. TRUMANS stands as the most comprehensive\nmotion-captured HSI dataset currently available, encompassing over 15 hours of\nhuman interactions across 100 indoor scenes. It intricately captures whole-body\nhuman motions and part-level object dynamics, focusing on the realism of\ncontact. This dataset is further scaled up by transforming physical\nenvironments into exact virtual models and applying extensive augmentations to\nappearance and motion for both humans and objects while maintaining interaction\nfidelity. Utilizing TRUMANS, we devise a diffusion-based autoregressive model\nthat efficiently generates HSI sequences of any length, taking into account\nboth scene context and intended actions. In experiments, our approach shows\nremarkable zero-shot generalizability on a range of 3D scene datasets (e.g.,\nPROX, Replica, ScanNet, ScanNet++), producing motions that closely mimic\noriginal motion-captured sequences, as confirmed by quantitative experiments\nand human studies.",
+      "upvotes": 14
+    },
+    {
+      "title": "Language models scale reliably with over-training and on downstream tasks",
+      "url": "https://huggingface.co/papers/2403.08540",
+      "authors": [
+        "Georgios Smyrnis",
+        "Alex Fang",
+        "Jeffrey Li",
+        "Rui Xin",
+        "Alexandros G. Dimakis",
+        "Shuran Song"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.08540.pdf",
+      "abstract": "Scaling laws are useful guides for developing language models, but there are\nstill gaps between current scaling studies and how language models are\nultimately trained and evaluated. For instance, scaling is usually studied in\nthe compute-optimal training regime (i.e., \"Chinchilla optimal\" regime);\nhowever, in practice, models are often over-trained to reduce inference costs.\nMoreover, scaling laws mostly predict loss on next-token prediction, but\nultimately models are compared based on downstream task performance. In this\npaper, we address both shortcomings. To do so, we create a testbed of 104\nmodels with 0.011B to 6.9B parameters trained with various numbers of tokens on\nthree data distributions. First, we investigate scaling in the over-trained\nregime. We fit scaling laws that extrapolate in both the number of model\nparameters and the ratio of training tokens to parameters. This enables us to\npredict the validation loss of a 1.4B parameter, 900B token run (i.e.,\n32times over-trained) and a 6.9B parameter, 138B token\nrunx2014each from experiments that take 300times less compute.\nSecond, we relate the perplexity of a language model to its downstream task\nperformance via a power law. We use this law to predict top-1 error averaged\nover downstream tasks for the two aforementioned models using experiments that\ntake 20times less compute. Our experiments are available at\nhttps://github.com/mlfoundations/scaling.",
+      "upvotes": 14
+    },
+    {
+      "title": "GaussianImage: 1000 FPS Image Representation and Compression by 2D Gaussian Splatting",
+      "url": "https://huggingface.co/papers/2403.08551",
+      "authors": [
+        "Yan Wang",
+        "Guo Lu",
+        "Jing Geng",
+        "Jun Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.08551.pdf",
+      "abstract": "Implicit neural representations (INRs) recently achieved great success in\nimage representation and compression, offering high visual quality and fast\nrendering speeds with 10-1000 FPS, assuming sufficient GPU resources are\navailable. However, this requirement often hinders their use on low-end devices\nwith limited memory. In response, we propose a groundbreaking paradigm of image\nrepresentation and compression by 2D Gaussian Splatting, named GaussianImage.\nWe first introduce 2D Gaussian to represent the image, where each Gaussian has\n8 parameters including position, covariance and color. Subsequently, we unveil\na novel rendering algorithm based on accumulated summation. Remarkably, our\nmethod with a minimum of 3times lower GPU memory usage and 5times faster\nfitting time not only rivals INRs (e.g., WIRE, I-NGP) in representation\nperformance, but also delivers a faster rendering speed of 1500-2000 FPS\nregardless of parameter size. Furthermore, we integrate existing vector\nquantization technique to build an image codec. Experimental results\ndemonstrate that our codec attains rate-distortion performance comparable to\ncompression-based INRs such as COIN and COIN++, while facilitating decoding\nspeeds of approximately 1000 FPS. Additionally, preliminary proof of concept\nshows that our codec surpasses COIN and COIN++ in performance when using\npartial bits-back coding.",
+      "upvotes": 8
+    }
+  ]
+}

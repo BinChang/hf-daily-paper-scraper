@@ -1,0 +1,192 @@
+{
+  "date": "2024-03-06",
+  "papers": [
+    {
+      "title": "Design2Code: How Far Are We From Automating Front-End Engineering?",
+      "url": "https://huggingface.co/papers/2403.03163",
+      "authors": [
+        "Diyi Yang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.03163.pdf",
+      "abstract": "Generative AI has made rapid advancements in recent years, achieving\nunprecedented capabilities in multimodal understanding and code generation.\nThis can enable a new paradigm of front-end development, in which multimodal\nLLMs might directly convert visual designs into code implementations. In this\nwork, we formalize this as a Design2Code task and conduct comprehensive\nbenchmarking. Specifically, we manually curate a benchmark of 484 diverse\nreal-world webpages as test cases and develop a set of automatic evaluation\nmetrics to assess how well current multimodal LLMs can generate the code\nimplementations that directly render into the given reference webpages, given\nthe screenshots as input. We also complement automatic metrics with\ncomprehensive human evaluations. We develop a suite of multimodal prompting\nmethods and show their effectiveness on GPT-4V and Gemini Pro Vision. We\nfurther finetune an open-source Design2Code-18B model that successfully matches\nthe performance of Gemini Pro Vision. Both human evaluation and automatic\nmetrics show that GPT-4V performs the best on this task compared to other\nmodels. Moreover, annotators think GPT-4V generated webpages can replace the\noriginal reference webpages in 49% of cases in terms of visual appearance and\ncontent; and perhaps surprisingly, in 64% of cases GPT-4V generated webpages\nare considered better than the original reference webpages. Our fine-grained\nbreak-down metrics indicate that open-source models mostly lag in recalling\nvisual elements from the input webpages and in generating correct layout\ndesigns, while aspects like text content and coloring can be drastically\nimproved with proper finetuning.",
+      "upvotes": 93
+    },
+    {
+      "title": "Scaling Rectified Flow Transformers for High-Resolution Image Synthesis",
+      "url": "https://huggingface.co/papers/2403.03206",
+      "authors": [
+        "Zion English",
+        "Yannik Marek"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.03206.pdf",
+      "abstract": "Diffusion models create data from noise by inverting the forward paths of\ndata towards noise and have emerged as a powerful generative modeling technique\nfor high-dimensional, perceptual data such as images and videos. Rectified flow\nis a recent generative model formulation that connects data and noise in a\nstraight line. Despite its better theoretical properties and conceptual\nsimplicity, it is not yet decisively established as standard practice. In this\nwork, we improve existing noise sampling techniques for training rectified flow\nmodels by biasing them towards perceptually relevant scales. Through a\nlarge-scale study, we demonstrate the superior performance of this approach\ncompared to established diffusion formulations for high-resolution\ntext-to-image synthesis. Additionally, we present a novel transformer-based\narchitecture for text-to-image generation that uses separate weights for the\ntwo modalities and enables a bidirectional flow of information between image\nand text tokens, improving text comprehension, typography, and human preference\nratings. We demonstrate that this architecture follows predictable scaling\ntrends and correlates lower validation loss to improved text-to-image synthesis\nas measured by various metrics and human evaluations. Our largest models\noutperform state-of-the-art models, and we will make our experimental data,\ncode, and model weights publicly available.",
+      "upvotes": 57
+    },
+    {
+      "title": "NaturalSpeech 3: Zero-Shot Speech Synthesis with Factorized Codec and Diffusion Models",
+      "url": "https://huggingface.co/papers/2403.03100",
+      "authors": [
+        "Zeqian Ju",
+        "Kai Shen",
+        "Detai Xin",
+        "Dongchao Yang",
+        "Yanqing Liu",
+        "Siliang Tang",
+        "Tao Qin",
+        "Xiang-Yang Li",
+        "Wei Ye",
+        "Shikun Zhang",
+        "Lei He",
+        "Jinyu Li",
+        "Sheng Zhao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.03100.pdf",
+      "abstract": "While recent large-scale text-to-speech (TTS) models have achieved\nsignificant progress, they still fall short in speech quality, similarity, and\nprosody. Considering speech intricately encompasses various attributes (e.g.,\ncontent, prosody, timbre, and acoustic details) that pose significant\nchallenges for generation, a natural idea is to factorize speech into\nindividual subspaces representing different attributes and generate them\nindividually. Motivated by it, we propose NaturalSpeech 3, a TTS system with\nnovel factorized diffusion models to generate natural speech in a zero-shot\nway. Specifically, 1) we design a neural codec with factorized vector\nquantization (FVQ) to disentangle speech waveform into subspaces of content,\nprosody, timbre, and acoustic details; 2) we propose a factorized diffusion\nmodel to generate attributes in each subspace following its corresponding\nprompt. With this factorization design, NaturalSpeech 3 can effectively and\nefficiently model the intricate speech with disentangled subspaces in a\ndivide-and-conquer way. Experiments show that NaturalSpeech 3 outperforms the\nstate-of-the-art TTS systems on quality, similarity, prosody, and\nintelligibility. Furthermore, we achieve better performance by scaling to 1B\nparameters and 200K hours of training data.",
+      "upvotes": 34
+    },
+    {
+      "title": "Finetuned Multimodal Language Models Are High-Quality Image-Text Data Filters",
+      "url": "https://huggingface.co/papers/2403.02677",
+      "authors": [
+        "Linjie Yang",
+        "Sateesh Kumar",
+        "Yu Tian",
+        "Heng Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.02677.pdf",
+      "abstract": "We propose a novel framework for filtering image-text data by leveraging\nfine-tuned Multimodal Language Models (MLMs). Our approach outperforms\npredominant filtering methods (e.g., CLIPScore) via integrating the recent\nadvances in MLMs. We design four distinct yet complementary metrics to\nholistically measure the quality of image-text data. A new pipeline is\nestablished to construct high-quality instruction data for fine-tuning MLMs as\ndata filters. Comparing with CLIPScore, our MLM filters produce more precise\nand comprehensive scores that directly improve the quality of filtered data and\nboost the performance of pre-trained models. We achieve significant\nimprovements over CLIPScore on popular foundation models (i.e., CLIP and BLIP2)\nand various downstream tasks. Our MLM filter can generalize to different models\nand tasks, and be used as a drop-in replacement for CLIPScore. An additional\nablation study is provided to verify our design choices for the MLM filter.",
+      "upvotes": 16
+    },
+    {
+      "title": "MathScale: Scaling Instruction Tuning for Mathematical Reasoning",
+      "url": "https://huggingface.co/papers/2403.02884",
+      "authors": [
+        "Benyou Wan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.02884.pdf",
+      "abstract": "Large language models (LLMs) have demonstrated remarkable capabilities in\nproblem-solving. However, their proficiency in solving mathematical problems\nremains inadequate. We propose MathScale, a simple and scalable method to\ncreate high-quality mathematical reasoning data using frontier LLMs (e.g., {\\tt\nGPT-3.5}). Inspired by the cognitive mechanism in human mathematical learning,\nit first extracts topics and knowledge points from seed math questions and then\nbuild a concept graph, which is subsequently used to generate new math\nquestions. MathScale exhibits effective scalability along the size axis of the\nmath dataset that we generate. As a result, we create a mathematical reasoning\ndataset (MathScaleQA) containing two million math question-answer pairs. To\nevaluate mathematical reasoning abilities of LLMs comprehensively, we construct\n{\\sc MwpBench}, a benchmark of Math Word Problems, which is a collection of ten\ndatasets (including GSM8K and MATH) covering K-12, college, and competition\nlevel math problems. We apply MathScaleQA to fine-tune open-source LLMs (e.g.,\nLLaMA-2 and Mistral), resulting in significantly improved capabilities in\nmathematical reasoning. Evaluated on {\\sc MwpBench}, MathScale-7B achieves\nstate-of-the-art performance across all datasets, surpassing its best peers of\nequivalent size by 42.9\\% in micro average accuracy and 43.7\\% in macro average\naccuracy, respectively.",
+      "upvotes": 15
+    },
+    {
+      "title": "Wukong: Towards a Scaling Law for Large-Scale Recommendation",
+      "url": "https://huggingface.co/papers/2403.02545",
+      "authors": [
+        "Buyun Zhang",
+        "Yuxin Chen",
+        "Jade Nie",
+        "Xi Liu",
+        "Daifeng Guo",
+        "Yanli Zhao",
+        "Shen Li",
+        "Yuchen Hao",
+        "Yantao Yao",
+        "Guna Lakshminarayanan",
+        "Ellie Dingqiao Wen",
+        "Maxim Naumov",
+        "Wenlin Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.02545.pdf",
+      "abstract": "Scaling laws play an instrumental role in the sustainable improvement in\nmodel quality. Unfortunately, recommendation models to date do not exhibit such\nlaws similar to those observed in the domain of large language models, due to\nthe inefficiencies of their upscaling mechanisms. This limitation poses\nsignificant challenges in adapting these models to increasingly more complex\nreal-world datasets. In this paper, we propose an effective network\narchitecture based purely on stacked factorization machines, and a synergistic\nupscaling strategy, collectively dubbed Wukong, to establish a scaling law in\nthe domain of recommendation. Wukong's unique design makes it possible to\ncapture diverse, any-order of interactions simply through taller and wider\nlayers. We conducted extensive evaluations on six public datasets, and our\nresults demonstrate that Wukong consistently outperforms state-of-the-art\nmodels quality-wise. Further, we assessed Wukong's scalability on an internal,\nlarge-scale dataset. The results show that Wukong retains its superiority in\nquality over state-of-the-art models, while holding the scaling law across two\norders of magnitude in model complexity, extending beyond 100 Gflop or\nequivalently up to GPT-3/LLaMa-2 scale of total training compute, where prior\narts fall short.",
+      "upvotes": 15
+    },
+    {
+      "title": "MAGID: An Automated Pipeline for Generating Synthetic Multi-modal Datasets",
+      "url": "https://huggingface.co/papers/2403.03194",
+      "authors": [
+        "Arshit Gupta",
+        "Justin Sun",
+        "Hang Su",
+        "Igor Shalyminov",
+        "Nikolaos Pappas",
+        "Saab Mansour"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.03194.pdf",
+      "abstract": "Development of multimodal interactive systems is hindered by the lack of\nrich, multimodal (text, images) conversational data, which is needed in large\nquantities for LLMs. Previous approaches augment textual dialogues with\nretrieved images, posing privacy, diversity, and quality constraints. In this\nwork, we introduce Multimodal Augmented Generative\nImages Dialogues (MAGID), a framework to augment text-only\ndialogues with diverse and high-quality images. Subsequently, a diffusion model\nis applied to craft corresponding images, ensuring alignment with the\nidentified text. Finally, MAGID incorporates an innovative feedback loop\nbetween an image description generation module (textual LLM) and image quality\nmodules (addressing aesthetics, image-text matching, and safety), that work in\ntandem to generate high-quality and multi-modal dialogues. We compare MAGID to\nother SOTA baselines on three dialogue datasets, using automated and human\nevaluation. Our results show that MAGID is comparable to or better than\nbaselines, with significant improvements in human evaluation, especially\nagainst retrieval baselines where the image database is small.",
+      "upvotes": 12
+    },
+    {
+      "title": "EasyQuant: An Efficient Data-free Quantization Algorithm for LLMs",
+      "url": "https://huggingface.co/papers/2403.02775",
+      "authors": [
+        "Hanlin Tang",
+        "Decheng Wu",
+        "Kai Liu",
+        "Jianchen Zhu",
+        "Zhanhui Kang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.02775.pdf",
+      "abstract": "Large language models (LLMs) have proven to be very superior to conventional\nmethods in various tasks. However, their expensive computations and high memory\nrequirements are prohibitive for deployment. Model quantization is an effective\nmethod for reducing this overhead. The problem is that in most previous works,\nthe quantized model was calibrated using few samples from the training data,\nwhich might affect the generalization of the quantized LLMs to unknown cases\nand tasks. Hence in this work, we explore an important question: Can we design\na data-independent quantization method for LLMs to guarantee its generalization\nperformance? In this work, we propose EasyQuant, a training-free and\ndata-independent weight-only quantization algorithm for LLMs. Our observation\nindicates that two factors: outliers in the weight and quantization ranges, are\nessential for reducing the quantization error. Therefore, in EasyQuant, we\nleave the outliers (less than 1%) unchanged and optimize the quantization range\nto reduce the reconstruction error. With these methods, we surprisingly find\nthat EasyQuant achieves comparable performance to the original model. Since\nEasyQuant does not depend on any training data, the generalization performance\nof quantized LLMs is safely guaranteed. Moreover, EasyQuant can be implemented\nin parallel so that the quantized model could be attained in a few minutes even\nfor LLMs over 100B. To our best knowledge, we are the first work that achieves\nalmost lossless quantization performance for LLMs under a data-independent\nsetting and our algorithm runs over 10 times faster than the data-dependent\nmethods.",
+      "upvotes": 11
+    },
+    {
+      "title": "Modeling Collaborator: Enabling Subjective Vision Classification With Minimal Human Effort via LLM Tool-Use",
+      "url": "https://huggingface.co/papers/2403.02626",
+      "authors": [
+        "Wenlei Zhou",
+        "Enming Luo",
+        "Hao Xiong",
+        "Chun-Ta Lu",
+        "Ranjay Krishna",
+        "Ariel Fuxman"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.02626.pdf",
+      "abstract": "From content moderation to wildlife conservation, the number of applications\nthat require models to recognize nuanced or subjective visual concepts is\ngrowing. Traditionally, developing classifiers for such concepts requires\nsubstantial manual effort measured in hours, days, or even months to identify\nand annotate data needed for training. Even with recently proposed Agile\nModeling techniques, which enable rapid bootstrapping of image classifiers,\nusers are still required to spend 30 minutes or more of monotonous, repetitive\ndata labeling just to train a single classifier. Drawing on Fiske's Cognitive\nMiser theory, we propose a new framework that alleviates manual effort by\nreplacing human labeling with natural language interactions, reducing the total\neffort required to define a concept by an order of magnitude: from labeling\n2,000 images to only 100 plus some natural language interactions. Our framework\nleverages recent advances in foundation models, both large language models and\nvision-language models, to carve out the concept space through conversation and\nby automatically labeling training data points. Most importantly, our framework\neliminates the need for crowd-sourced annotations. Moreover, our framework\nultimately produces lightweight classification models that are deployable in\ncost-sensitive scenarios. Across 15 subjective concepts and across 2 public\nimage classification datasets, our trained models outperform traditional Agile\nModeling as well as state-of-the-art zero-shot classification models like\nALIGN, CLIP, CuPL, and large visual question-answering models like PaLI-X.",
+      "upvotes": 9
+    },
+    {
+      "title": "Feast Your Eyes: Mixture-of-Resolution Adaptation for Multimodal Large Language Models",
+      "url": "https://huggingface.co/papers/2403.03003",
+      "authors": [
+        "Gen Luo",
+        "Yiyi Zhou",
+        "Yuxin Zhang",
+        "Xiawu Zheng",
+        "Xiaoshuai Sun",
+        "Rongrong Ji"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.03003.pdf",
+      "abstract": "Despite remarkable progress, existing multimodal large language models\n(MLLMs) are still inferior in granular visual recognition. Contrary to previous\nworks, we study this problem from the perspective of image resolution, and\nreveal that a combination of low- and high-resolution visual features can\neffectively mitigate this shortcoming. Based on this observation, we propose a\nnovel and efficient method for MLLMs, termed Mixture-of-Resolution Adaptation\n(MRA). In particular, MRA adopts two visual pathways for images with different\nresolutions, where high-resolution visual information is embedded into the\nlow-resolution pathway via the novel mixture-of-resolution adapters\n(MR-Adapters). This design also greatly reduces the input sequence length of\nMLLMs. To validate MRA, we apply it to a recent MLLM called LLaVA, and term the\nnew model LLaVA-HR. We conduct extensive experiments on 11 vision-language (VL)\ntasks, which show that LLaVA-HR outperforms existing MLLMs on 8 VL tasks, e.g.,\n+9.4% on TextVQA. More importantly, both training and inference of LLaVA-HR\nremain efficient with MRA, e.g., 20 training hours and 3times inference\nspeed than LLaVA-1.5. Source codes are released at:\nhttps://github.com/luogen1996/LLaVA-HR.",
+      "upvotes": 9
+    },
+    {
+      "title": "RT-Sketch: Goal-Conditioned Imitation Learning from Hand-Drawn Sketches",
+      "url": "https://huggingface.co/papers/2403.02709",
+      "authors": [
+        "Peng Xu",
+        "Ted Xiao",
+        "Michael Stark",
+        "Ajinkya Jain",
+        "Dorsa Sadigh",
+        "Jeannette Bohg",
+        "Stefan Schaal"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.02709.pdf",
+      "abstract": "Natural language and images are commonly used as goal representations in\ngoal-conditioned imitation learning (IL). However, natural language can be\nambiguous and images can be over-specified. In this work, we propose hand-drawn\nsketches as a modality for goal specification in visual imitation learning.\nSketches are easy for users to provide on the fly like language, but similar to\nimages they can also help a downstream policy to be spatially-aware and even go\nbeyond images to disambiguate task-relevant from task-irrelevant objects. We\npresent RT-Sketch, a goal-conditioned policy for manipulation that takes a\nhand-drawn sketch of the desired scene as input, and outputs actions. We train\nRT-Sketch on a dataset of paired trajectories and corresponding synthetically\ngenerated goal sketches. We evaluate this approach on six manipulation skills\ninvolving tabletop object rearrangements on an articulated countertop.\nExperimentally we find that RT-Sketch is able to perform on a similar level to\nimage or language-conditioned agents in straightforward settings, while\nachieving greater robustness when language goals are ambiguous or visual\ndistractors are present. Additionally, we show that RT-Sketch has the capacity\nto interpret and act upon sketches with varied levels of specificity, ranging\nfrom minimal line drawings to detailed, colored drawings. For supplementary\nmaterial and videos, please refer to our website: http://rt-sketch.github.io.",
+      "upvotes": 7
+    },
+    {
+      "title": "MagicClay: Sculpting Meshes With Generative Neural Fields",
+      "url": "https://huggingface.co/papers/2403.02460",
+      "authors": [
+        "Vladimir G. Kim",
+        "Amit H. Bermano",
+        "Thibault Groueix"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.02460.pdf",
+      "abstract": "The recent developments in neural fields have brought phenomenal capabilities\nto the field of shape generation, but they lack crucial properties, such as\nincremental control - a fundamental requirement for artistic work. Triangular\nmeshes, on the other hand, are the representation of choice for most geometry\nrelated tasks, offering efficiency and intuitive control, but do not lend\nthemselves to neural optimization. To support downstream tasks, previous art\ntypically proposes a two-step approach, where first a shape is generated using\nneural fields, and then a mesh is extracted for further processing. Instead, in\nthis paper we introduce a hybrid approach that maintains both a mesh and a\nSigned Distance Field (SDF) representations consistently. Using this\nrepresentation, we introduce MagicClay - an artist friendly tool for sculpting\nregions of a mesh according to textual prompts while keeping other regions\nuntouched. Our framework carefully and efficiently balances consistency between\nthe representations and regularizations in every step of the shape\noptimization; Relying on the mesh representation, we show how to render the SDF\nat higher resolutions and faster. In addition, we employ recent work in\ndifferentiable mesh reconstruction to adaptively allocate triangles in the mesh\nwhere required, as indicated by the SDF. Using an implemented prototype, we\ndemonstrate superior generated geometry compared to the state-of-the-art, and\nnovel consistent control, allowing sequential prompt-based edits to the same\nmesh for the first time.",
+      "upvotes": 6
+    },
+    {
+      "title": "Tuning-Free Noise Rectification for High Fidelity Image-to-Video Generation",
+      "url": "https://huggingface.co/papers/2403.02827",
+      "authors": [
+        "Weijie Li",
+        "Tiezheng Ge",
+        "Bo Zheng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2403.02827.pdf",
+      "abstract": "Image-to-video (I2V) generation tasks always suffer from keeping high\nfidelity in the open domains. Traditional image animation techniques primarily\nfocus on specific domains such as faces or human poses, making them difficult\nto generalize to open domains. Several recent I2V frameworks based on diffusion\nmodels can generate dynamic content for open domain images but fail to maintain\nfidelity. We found that two main factors of low fidelity are the loss of image\ndetails and the noise prediction biases during the denoising process. To this\nend, we propose an effective method that can be applied to mainstream video\ndiffusion models. This method achieves high fidelity based on supplementing\nmore precise image information and noise rectification. Specifically, given a\nspecified image, our method first adds noise to the input image latent to keep\nmore details, then denoises the noisy latent with proper rectification to\nalleviate the noise prediction biases. Our method is tuning-free and\nplug-and-play. The experimental results demonstrate the effectiveness of our\napproach in improving the fidelity of generated videos. For more image-to-video\ngenerated results, please refer to the project website:\nhttps://noise-rectification.github.io.",
+      "upvotes": 6
+    }
+  ]
+}

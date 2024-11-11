@@ -1,0 +1,194 @@
+{
+  "date": "2024-09-20",
+  "papers": [
+    {
+      "title": "Training Language Models to Self-Correct via Reinforcement Learning",
+      "url": "https://huggingface.co/papers/2409.12917",
+      "authors": [
+        "Vincent Zhuang",
+        "Yi Su",
+        "John D Co-Reyes",
+        "Avi Singh",
+        "Kate Baumli",
+        "Shariq Iqbal",
+        "Colton Bishop",
+        "Rebecca Roelofs",
+        "Lei M Zhang",
+        "Kay McKinney",
+        "Cosmin Paduraru",
+        "George Tucker",
+        "Doina Precup"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.12917.pdf",
+      "abstract": "Self-correction is a highly desirable capability of large language models\n(LLMs), yet it has consistently been found to be largely ineffective in modern\nLLMs. Existing approaches for training self-correction either require multiple\nmodels or rely on a more capable model or other forms of supervision. To this\nend, we develop a multi-turn online reinforcement learning (RL) approach,\nSCoRe, that significantly improves an LLM's self-correction ability using\nentirely self-generated data. To build SCoRe, we first show that variants of\nsupervised fine-tuning (SFT) on offline model-generated correction traces are\ninsufficient for instilling self-correction behavior. In particular, we observe\nthat training via SFT either suffers from a distribution mismatch between the\ntraining data and the model's own responses or implicitly prefers only a\ncertain mode of correction behavior that is often not effective at test time.\nSCoRe addresses these challenges by training under the model's own distribution\nof self-generated correction traces and using appropriate regularization to\nsteer the learning process into learning a self-correction strategy that is\neffective at test time as opposed to simply fitting high-reward responses for a\ngiven prompt. This regularization prescribes running a first phase of RL on a\nbase model to generate a policy initialization that is less susceptible to\ncollapse and then using a reward bonus to amplify self-correction during\ntraining. When applied to Gemini 1.0 Pro and 1.5 Flash models, we find that\nSCoRe achieves state-of-the-art self-correction performance, improving the base\nmodels' self-correction by 15.6% and 9.1% respectively on the MATH and\nHumanEval benchmarks.",
+      "upvotes": 134
+    },
+    {
+      "title": "InfiMM-WebMath-40B: Advancing Multimodal Pre-Training for Enhanced Mathematical Reasoning",
+      "url": "https://huggingface.co/papers/2409.12568",
+      "authors": [
+        "Qihang Fan",
+        "Ran He"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.12568.pdf",
+      "abstract": "Pre-training on large-scale, high-quality datasets is crucial for enhancing\nthe reasoning capabilities of Large Language Models (LLMs), especially in\nspecialized domains such as mathematics. Despite the recognized importance, the\nMultimodal LLMs (MLLMs) field currently lacks a comprehensive open-source\npre-training dataset specifically designed for mathematical reasoning. To\naddress this gap, we introduce InfiMM-WebMath-40B, a high-quality dataset of\ninterleaved image-text documents. It comprises 24 million web pages, 85 million\nassociated image URLs, and 40 billion text tokens, all meticulously extracted\nand filtered from CommonCrawl. We provide a detailed overview of our data\ncollection and processing pipeline. To demonstrate the robustness of\nInfiMM-WebMath-40B, we conducted evaluations in both text-only and multimodal\nsettings. Our evaluations on text-only benchmarks show that, despite utilizing\nonly 40 billion tokens, our dataset significantly enhances the performance of\nour 1.3B model, delivering results comparable to DeepSeekMath-1.3B, which uses\n120 billion tokens for the same model size. Nevertheless, with the introduction\nof our multi-modal math pre-training dataset, our models set a new\nstate-of-the-art among open-source models on multi-modal math benchmarks such\nas MathVerse and We-Math. We release our data at\nhttps://huggingface.co/datasets/Infi-MM/InfiMM-WebMath-40B.",
+      "upvotes": 47
+    },
+    {
+      "title": "MMSearch: Benchmarking the Potential of Large Models as Multi-modal Search Engines",
+      "url": "https://huggingface.co/papers/2409.12959",
+      "authors": [
+        "Renrui Zhang",
+        "Yanmin Wu",
+        "Pengshuo Qiu",
+        "Peng Gao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.12959.pdf",
+      "abstract": "The advent of Large Language Models (LLMs) has paved the way for AI search\nengines, e.g., SearchGPT, showcasing a new paradigm in human-internet\ninteraction. However, most current AI search engines are limited to text-only\nsettings, neglecting the multimodal user queries and the text-image interleaved\nnature of website information. Recently, Large Multimodal Models (LMMs) have\nmade impressive strides. Yet, whether they can function as AI search engines\nremains under-explored, leaving the potential of LMMs in multimodal search an\nopen question. To this end, we first design a delicate pipeline,\nMMSearch-Engine, to empower any LMMs with multimodal search capabilities. On\ntop of this, we introduce MMSearch, a comprehensive evaluation benchmark to\nassess the multimodal search performance of LMMs. The curated dataset contains\n300 manually collected instances spanning 14 subfields, which involves no\noverlap with the current LMMs' training data, ensuring the correct answer can\nonly be obtained within searching. By using MMSearch-Engine, the LMMs are\nevaluated by performing three individual tasks (requery, rerank, and\nsummarization), and one challenging end-to-end task with a complete searching\nprocess. We conduct extensive experiments on closed-source and open-source\nLMMs. Among all tested models, GPT-4o with MMSearch-Engine achieves the best\nresults, which surpasses the commercial product, Perplexity Pro, in the\nend-to-end task, demonstrating the effectiveness of our proposed pipeline. We\nfurther present error analysis to unveil current LMMs still struggle to fully\ngrasp the multimodal search tasks, and conduct ablation study to indicate the\npotential of scaling test-time computation for AI search engine. We hope\nMMSearch may provide unique insights to guide the future development of\nmultimodal AI search engine. Project Page: https://mmsearch.github.io",
+      "upvotes": 36
+    },
+    {
+      "title": "B4: Towards Optimal Assessment of Plausible Code Solutions with Plausible Tests",
+      "url": "https://huggingface.co/papers/2409.08692",
+      "authors": [
+        "Zhongxin Liu",
+        "He Tao",
+        "Jianling Sun"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.08692.pdf",
+      "abstract": "Selecting the best code solution from multiple generated ones is an essential\ntask in code generation, which can be achieved by using some reliable\nvalidators (e.g., developer-written test cases) for assistance. Since reliable\ntest cases are not always available and can be expensive to build in practice,\nresearchers propose to automatically generate test cases to assess code\nsolutions. However, when both code solutions and test cases are plausible and\nnot reliable, selecting the best solution becomes challenging. Although some\nheuristic strategies have been proposed to tackle this problem, they lack a\nstrong theoretical guarantee and it is still an open question whether an\noptimal selection strategy exists. Our work contributes in two ways. First, we\nshow that within a Bayesian framework, the optimal selection strategy can be\ndefined based on the posterior probability of the observed passing states\nbetween solutions and tests. The problem of identifying the best solution is\nthen framed as an integer programming problem. Second, we propose an efficient\napproach for approximating this optimal (yet uncomputable) strategy, where the\napproximation error is bounded by the correctness of prior knowledge. We then\nincorporate effective prior knowledge to tailor code generation tasks. Both\ntheoretical and empirical studies confirm that existing heuristics are limited\nin selecting the best solutions with plausible test cases. Our proposed\napproximated optimal strategy B4 significantly surpasses existing heuristics in\nselecting code solutions generated by large language models (LLMs) with\nLLM-generated tests, achieving a relative performance improvement by up to 50%\nover the strongest heuristic and 246% over the random selection in the most\nchallenging scenarios. Our code is publicly available at\nhttps://github.com/ZJU-CTAG/B4.",
+      "upvotes": 25
+    },
+    {
+      "title": "Oryx MLLM: On-Demand Spatial-Temporal Understanding at Arbitrary Resolution",
+      "url": "https://huggingface.co/papers/2409.12961",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2409.12961.pdf",
+      "abstract": "Visual data comes in various forms, ranging from small icons of just a few\npixels to long videos spanning hours. Existing multi-modal LLMs usually\nstandardize these diverse visual inputs to a fixed resolution for visual\nencoders and yield similar numbers of tokens for LLMs. This approach is\nnon-optimal for multimodal understanding and inefficient for processing inputs\nwith long and short visual contents. To solve the problem, we propose Oryx, a\nunified multimodal architecture for the spatial-temporal understanding of\nimages, videos, and multi-view 3D scenes. Oryx offers an on-demand solution to\nseamlessly and efficiently process visual inputs with arbitrary spatial sizes\nand temporal lengths through two core innovations: 1) a pre-trained OryxViT\nmodel that can encode images at any resolution into LLM-friendly visual\nrepresentations; 2) a dynamic compressor module that supports 1x to 16x\ncompression on visual tokens by request. These design features enable Oryx to\naccommodate extremely long visual contexts, such as videos, with lower\nresolution and high compression while maintaining high recognition precision\nfor tasks like document understanding with native resolution and no\ncompression. Beyond the architectural improvements, enhanced data curation and\nspecialized training on long-context retrieval and spatial-aware data help Oryx\nachieve strong capabilities in image, video, and 3D multimodal understanding\nsimultaneously. Our work is open-sourced at https://github.com/Oryx-mllm/Oryx.",
+      "upvotes": 23
+    },
+    {
+      "title": "LVCD: Reference-based Lineart Video Colorization with Diffusion Models",
+      "url": "https://huggingface.co/papers/2409.12960",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2409.12960.pdf",
+      "abstract": "We propose the first video diffusion framework for reference-based lineart\nvideo colorization. Unlike previous works that rely solely on image generative\nmodels to colorize lineart frame by frame, our approach leverages a large-scale\npretrained video diffusion model to generate colorized animation videos. This\napproach leads to more temporally consistent results and is better equipped to\nhandle large motions. Firstly, we introduce Sketch-guided ControlNet which\nprovides additional control to finetune an image-to-video diffusion model for\ncontrollable video synthesis, enabling the generation of animation videos\nconditioned on lineart. We then propose Reference Attention to facilitate the\ntransfer of colors from the reference frame to other frames containing fast and\nexpansive motions. Finally, we present a novel scheme for sequential sampling,\nincorporating the Overlapped Blending Module and Prev-Reference Attention, to\nextend the video diffusion model beyond its original fixed-length limitation\nfor long video colorization. Both qualitative and quantitative results\ndemonstrate that our method significantly outperforms state-of-the-art\ntechniques in terms of frame and video quality, as well as temporal\nconsistency. Moreover, our method is capable of generating high-quality, long\ntemporal-consistent animation videos with large motions, which is not\nachievable in previous works. Our code and model are available at\nhttps://luckyhzt.github.io/lvcd.",
+      "upvotes": 22
+    },
+    {
+      "title": "Scaling Smart: Accelerating Large Language Model Pre-training with Small Model Initialization",
+      "url": "https://huggingface.co/papers/2409.12903",
+      "authors": [
+        "Keivan Alizadeh Vahid",
+        "Devang Naik"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.12903.pdf",
+      "abstract": "The pre-training phase of language models often begins with randomly\ninitialized parameters. With the current trends in scaling models, training\ntheir large number of parameters can be extremely slow and costly. In contrast,\nsmall language models are less expensive to train, but they often cannot\nachieve the accuracy of large models. In this paper, we explore an intriguing\nidea to connect these two different regimes: Can we develop a method to\ninitialize large language models using smaller pre-trained models? Will such\ninitialization bring any benefits in terms of training time and final accuracy?\nIn this paper, we introduce HyperCloning, a method that can expand the\nparameters of a pre-trained language model to those of a larger model with\nincreased hidden dimensions. Our method ensures that the larger model retains\nthe functionality of the smaller model. As a result, the larger model already\ninherits the predictive power and accuracy of the smaller model before the\ntraining starts. We demonstrate that training such an initialized model results\nin significant savings in terms of GPU hours required for pre-training large\nlanguage models.",
+      "upvotes": 21
+    },
+    {
+      "title": "3DTopia-XL: Scaling High-quality 3D Asset Generation via Primitive Diffusion",
+      "url": "https://huggingface.co/papers/2409.12957",
+      "authors": [
+        "Tong Wu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.12957.pdf",
+      "abstract": "The increasing demand for high-quality 3D assets across various industries\nnecessitates efficient and automated 3D content creation. Despite recent\nadvancements in 3D generative models, existing methods still face challenges\nwith optimization speed, geometric fidelity, and the lack of assets for\nphysically based rendering (PBR). In this paper, we introduce 3DTopia-XL, a\nscalable native 3D generative model designed to overcome these limitations.\n3DTopia-XL leverages a novel primitive-based 3D representation, PrimX, which\nencodes detailed shape, albedo, and material field into a compact tensorial\nformat, facilitating the modeling of high-resolution geometry with PBR assets.\nOn top of the novel representation, we propose a generative framework based on\nDiffusion Transformer (DiT), which comprises 1) Primitive Patch Compression, 2)\nand Latent Primitive Diffusion. 3DTopia-XL learns to generate high-quality 3D\nassets from textual or visual inputs. We conduct extensive qualitative and\nquantitative experiments to demonstrate that 3DTopia-XL significantly\noutperforms existing methods in generating high-quality 3D assets with\nfine-grained textures and materials, efficiently bridging the quality gap\nbetween generative models and real-world applications.",
+      "upvotes": 18
+    },
+    {
+      "title": "StoryMaker: Towards Holistic Consistent Characters in Text-to-image Generation",
+      "url": "https://huggingface.co/papers/2409.12576",
+      "authors": [
+        "Xu Tang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.12576.pdf",
+      "abstract": "Tuning-free personalized image generation methods have achieved significant\nsuccess in maintaining facial consistency, i.e., identities, even with multiple\ncharacters. However, the lack of holistic consistency in scenes with multiple\ncharacters hampers these methods' ability to create a cohesive narrative. In\nthis paper, we introduce StoryMaker, a personalization solution that preserves\nnot only facial consistency but also clothing, hairstyles, and body\nconsistency, thus facilitating the creation of a story through a series of\nimages. StoryMaker incorporates conditions based on face identities and cropped\ncharacter images, which include clothing, hairstyles, and bodies. Specifically,\nwe integrate the facial identity information with the cropped character images\nusing the Positional-aware Perceiver Resampler (PPR) to obtain distinct\ncharacter features. To prevent intermingling of multiple characters and the\nbackground, we separately constrain the cross-attention impact regions of\ndifferent characters and the background using MSE loss with segmentation masks.\nAdditionally, we train the generation network conditioned on poses to promote\ndecoupling from poses. A LoRA is also employed to enhance fidelity and quality.\nExperiments underscore the effectiveness of our approach. StoryMaker supports\nnumerous applications and is compatible with other societal plug-ins. Our\nsource codes and model weights are available at\nhttps://github.com/RedAIGC/StoryMaker.",
+      "upvotes": 15
+    },
+    {
+      "title": "FlexiTex: Enhancing Texture Generation with Visual Guidance",
+      "url": "https://huggingface.co/papers/2409.12431",
+      "authors": [
+        "DaDong Jiang",
+        "Xianghui Yang",
+        "Sheng Zhang",
+        "Chunchao Guo",
+        "Zhihui Ke"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.12431.pdf",
+      "abstract": "Recent texture generation methods achieve impressive results due to the\npowerful generative prior they leverage from large-scale text-to-image\ndiffusion models. However, abstract textual prompts are limited in providing\nglobal textural or shape information, which results in the texture generation\nmethods producing blurry or inconsistent patterns. To tackle this, we present\nFlexiTex, embedding rich information via visual guidance to generate a\nhigh-quality texture. The core of FlexiTex is the Visual Guidance Enhancement\nmodule, which incorporates more specific information from visual guidance to\nreduce ambiguity in the text prompt and preserve high-frequency details. To\nfurther enhance the visual guidance, we introduce a Direction-Aware Adaptation\nmodule that automatically designs direction prompts based on different camera\nposes, avoiding the Janus problem and maintaining semantically global\nconsistency. Benefiting from the visual guidance, FlexiTex produces\nquantitatively and qualitatively sound results, demonstrating its potential to\nadvance texture generation for real-world applications.",
+      "upvotes": 11
+    },
+    {
+      "title": "Language Models Learn to Mislead Humans via RLHF",
+      "url": "https://huggingface.co/papers/2409.12822",
+      "authors": [
+        "Jacob Steinhardt",
+        "Minlie Huang",
+        "Samuel R. Boman",
+        "He He",
+        "Shi Feng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.12822.pdf",
+      "abstract": "Language models (LMs) can produce errors that are hard to detect for humans,\nespecially when the task is complex. RLHF, the most popular post-training\nmethod, may exacerbate this problem: to achieve higher rewards, LMs might get\nbetter at convincing humans that they are right even when they are wrong. We\nstudy this phenomenon under a standard RLHF pipeline, calling it \"U-SOPHISTRY\"\nsince it is Unintended by model developers. Specifically, we ask\ntime-constrained (e.g., 3-10 minutes) human subjects to evaluate the\ncorrectness of model outputs and calculate humans' accuracy against gold\nlabels. On a question-answering task (QuALITY) and programming task (APPS),\nRLHF makes LMs better at convincing our subjects but not at completing the task\ncorrectly. RLHF also makes the model harder to evaluate: our subjects' false\npositive rate increases by 24.1% on QuALITY and 18.3% on APPS. Finally, we show\nthat probing, a state-of-the-art approach for detecting Intended Sophistry\n(e.g. backdoored LMs), does not generalize to U-SOPHISTRY. Our results\nhighlight an important failure mode of RLHF and call for more research in\nassisting humans to align them.",
+      "upvotes": 9
+    },
+    {
+      "title": "MURI: High-Quality Instruction Tuning Datasets for Low-Resource Languages via Reverse Instructions",
+      "url": "https://huggingface.co/papers/2409.12958",
+      "authors": [
+        "Ayyoob Imani",
+        "Hinrich Schütze"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.12958.pdf",
+      "abstract": "Instruction tuning enhances large language models (LLMs) by aligning them\nwith human preferences across diverse tasks. Traditional approaches to create\ninstruction tuning datasets face serious challenges for low-resource languages\ndue to their dependence on data annotation. This work introduces a novel\nmethod, Multilingual Reverse Instructions (MURI), which generates high-quality\ninstruction tuning datasets for low-resource languages without requiring human\nannotators or pre-existing multilingual models. Utilizing reverse instructions\nand a translation pipeline, MURI produces instruction-output pairs from\nexisting human-written texts in low-resource languages. This method ensures\ncultural relevance and diversity by sourcing texts from different native\ndomains and applying filters to eliminate inappropriate content. Our dataset,\nMURI-IT, includes more than 2 million instruction-output pairs across 200\nlanguages. Evaluation by native speakers and fine-tuning experiments with mT5\nmodels demonstrate the approach's effectiveness for both NLU and open-ended\ngeneration. We publicly release datasets and models at\nhttps://github.com/akoksal/muri.",
+      "upvotes": 7
+    },
+    {
+      "title": "3DGS-LM: Faster Gaussian-Splatting Optimization with Levenberg-Marquardt",
+      "url": "https://huggingface.co/papers/2409.12892",
+      "authors": [
+        "Aljaž Božič",
+        "Michael Zollhöfer",
+        "Matthias Nießner"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.12892.pdf",
+      "abstract": "We present 3DGS-LM, a new method that accelerates the reconstruction of 3D\nGaussian Splatting (3DGS) by replacing its ADAM optimizer with a tailored\nLevenberg-Marquardt (LM). Existing methods reduce the optimization time by\ndecreasing the number of Gaussians or by improving the implementation of the\ndifferentiable rasterizer. However, they still rely on the ADAM optimizer to\nfit Gaussian parameters of a scene in thousands of iterations, which can take\nup to an hour. To this end, we change the optimizer to LM that runs in\nconjunction with the 3DGS differentiable rasterizer. For efficient GPU\nparallization, we propose a caching data structure for intermediate gradients\nthat allows us to efficiently calculate Jacobian-vector products in custom CUDA\nkernels. In every LM iteration, we calculate update directions from multiple\nimage subsets using these kernels and combine them in a weighted mean. Overall,\nour method is 30% faster than the original 3DGS while obtaining the same\nreconstruction quality. Our optimization is also agnostic to other methods that\nacclerate 3DGS, thus enabling even faster speedups compared to vanilla 3DGS.",
+      "upvotes": 5
+    },
+    {
+      "title": "Denoising Reuse: Exploiting Inter-frame Motion Consistency for Efficient Video Latent Generation",
+      "url": "https://huggingface.co/papers/2409.12532",
+      "authors": [
+        "Chenyu Wang",
+        "Shuo Yan",
+        "Yixuan Chen",
+        "Yujiang Wang",
+        "Mingzhi Dong",
+        "Robert P. Dick",
+        "Qin Lv",
+        "Fan Yang",
+        "Tun Lu",
+        "Ning Gu",
+        "Li Shang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.12532.pdf",
+      "abstract": "Video generation using diffusion-based models is constrained by high\ncomputational costs due to the frame-wise iterative diffusion process. This\nwork presents a Diffusion Reuse MOtion (Dr. Mo) network to accelerate latent\nvideo generation. Our key discovery is that coarse-grained noises in earlier\ndenoising steps have demonstrated high motion consistency across consecutive\nvideo frames. Following this observation, Dr. Mo propagates those\ncoarse-grained noises onto the next frame by incorporating carefully designed,\nlightweight inter-frame motions, eliminating massive computational redundancy\nin frame-wise diffusion models. The more sensitive and fine-grained noises are\nstill acquired via later denoising steps, which can be essential to retain\nvisual qualities. As such, deciding which intermediate steps should switch from\nmotion-based propagations to denoising can be a crucial problem and a key\ntradeoff between efficiency and quality. Dr. Mo employs a meta-network named\nDenoising Step Selector (DSS) to dynamically determine desirable intermediate\nsteps across video frames. Extensive evaluations on video generation and\nediting tasks have shown that Dr. Mo can substantially accelerate diffusion\nmodels in video tasks with improved visual qualities.",
+      "upvotes": 5
+    },
+    {
+      "title": "CLAIR-A: Leveraging Large Language Models to Judge Audio Captions",
+      "url": "https://huggingface.co/papers/2409.12962",
+      "authors": [
+        "Tsung-Han Wu",
+        "Joseph E. Gonzalez",
+        "Trevor Darrell",
+        "David M. Chan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.12962.pdf",
+      "abstract": "The Automated Audio Captioning (AAC) task asks models to generate natural\nlanguage descriptions of an audio input. Evaluating these machine-generated\naudio captions is a complex task that requires considering diverse factors,\namong them, auditory scene understanding, sound-object inference, temporal\ncoherence, and the environmental context of the scene. While current methods\nfocus on specific aspects, they often fail to provide an overall score that\naligns well with human judgment. In this work, we propose CLAIR-A, a simple and\nflexible method that leverages the zero-shot capabilities of large language\nmodels (LLMs) to evaluate candidate audio captions by directly asking LLMs for\na semantic distance score. In our evaluations, CLAIR-A better predicts human\njudgements of quality compared to traditional metrics, with a 5.8% relative\naccuracy improvement compared to the domain-specific FENSE metric and up to 11%\nover the best general-purpose measure on the Clotho-Eval dataset. Moreover,\nCLAIR-A offers more transparency by allowing the language model to explain the\nreasoning behind its scores, with these explanations rated up to 30% better by\nhuman evaluators than those provided by baseline methods. CLAIR-A is made\npublicly available at https://github.com/DavidMChan/clair-a.",
+      "upvotes": 2
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "date": "2024-09-01",
+  "papers": [
+    {
+      "title": "Law of Vision Representation in MLLMs",
+      "url": "https://huggingface.co/papers/2408.16357",
+      "authors": [
+        "Hongxia Yang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.16357.pdf",
+      "abstract": "We present the \"Law of Vision Representation\" in multimodal large language\nmodels (MLLMs). It reveals a strong correlation between the combination of\ncross-modal alignment, correspondence in vision representation, and MLLM\nperformance. We quantify the two factors using the cross-modal Alignment and\nCorrespondence score (AC score). Through extensive experiments involving\nthirteen different vision representation settings and evaluations across eight\nbenchmarks, we find that the AC score is linearly correlated to model\nperformance. By leveraging this relationship, we are able to identify and train\nthe optimal vision representation only, which does not require finetuning the\nlanguage model every time, resulting in a 99.7% reduction in computational\ncost.",
+      "upvotes": 92
+    },
+    {
+      "title": "CogVLM2: Visual Language Models for Image and Video Understanding",
+      "url": "https://huggingface.co/papers/2408.16500",
+      "authors": [
+        "Weihan Wang",
+        "Ming Ding",
+        "Yan Wang",
+        "Junhui Ji",
+        "Zhao Xue",
+        "Lei Zhao",
+        "Xiaotao Gu",
+        "Xiaohan Zhang",
+        "Da Yin",
+        "Zihan Wang",
+        "Ji Qi",
+        "Peng Zhang",
+        "Debing Liu",
+        "Bin Xu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.16500.pdf",
+      "abstract": "Beginning with VisualGLM and CogVLM, we are continuously exploring VLMs in\npursuit of enhanced vision-language fusion, efficient higher-resolution\narchitecture, and broader modalities and applications. Here we propose the\nCogVLM2 family, a new generation of visual language models for image and video\nunderstanding including CogVLM2, CogVLM2-Video and GLM-4V. As an image\nunderstanding model, CogVLM2 inherits the visual expert architecture with\nimproved training recipes in both pre-training and post-training stages,\nsupporting input resolution up to 1344 times 1344 pixels. As a video\nunderstanding model, CogVLM2-Video integrates multi-frame input with timestamps\nand proposes automated temporal grounding data construction. Notably, CogVLM2\nfamily has achieved state-of-the-art results on benchmarks like MMBench,\nMM-Vet, TextVQA, MVBench and VCGBench. All models are open-sourced in\nhttps://github.com/THUDM/CogVLM2 and https://github.com/THUDM/GLM-4,\ncontributing to the advancement of the field.",
+      "upvotes": 56
+    },
+    {
+      "title": "WavTokenizer: an Efficient Acoustic Discrete Codec Tokenizer for Audio Language Modeling",
+      "url": "https://huggingface.co/papers/2408.16532",
+      "authors": [
+        "Yifu Chen",
+        "Qian Yang",
+        "Ruiqi Li",
+        "Ziang Zhang",
+        "Xiaoda Yang",
+        "Qian Chen",
+        "Wen Wang",
+        "Zhou Zhao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.16532.pdf",
+      "abstract": "Language models have been effectively applied to modeling natural signals,\nsuch as images, video, speech, and audio. A crucial component of these models\nis the codec tokenizer, which compresses high-dimensional natural signals into\nlower-dimensional discrete tokens. In this paper, we introduce WavTokenizer,\nwhich offers several advantages over previous SOTA acoustic codec models in the\naudio domain: 1)extreme compression. By compressing the layers of quantizers\nand the temporal dimension of the discrete codec, one-second audio of 24kHz\nsampling rate requires only a single quantizer with 40 or 75 tokens. 2)improved\nsubjective quality. Despite the reduced number of tokens, WavTokenizer achieves\nstate-of-the-art reconstruction quality with outstanding UTMOS scores and\ninherently contains richer semantic information. Specifically, we achieve these\nresults by designing a broader VQ space, extended contextual windows, and\nimproved attention networks, as well as introducing a powerful multi-scale\ndiscriminator and an inverse Fourier transform structure. We conducted\nextensive reconstruction experiments in the domains of speech, audio, and\nmusic. WavTokenizer exhibited strong performance across various objective and\nsubjective metrics compared to state-of-the-art models. We also tested semantic\ninformation, VQ utilization, and adaptability to generative models.\nComprehensive ablation studies confirm the necessity of each module in\nWavTokenizer. The related code, demos, and pre-trained models are available at\nhttps://github.com/jishengpeng/WavTokenizer.",
+      "upvotes": 47
+    },
+    {
+      "title": "ReconX: Reconstruct Any Scene from Sparse Views with Video Diffusion Model",
+      "url": "https://huggingface.co/papers/2408.16767",
+      "authors": [
+        "Hanyang Wang",
+        "Jun Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.16767.pdf",
+      "abstract": "Advancements in 3D scene reconstruction have transformed 2D images from the\nreal world into 3D models, producing realistic 3D results from hundreds of\ninput photos. Despite great success in dense-view reconstruction scenarios,\nrendering a detailed scene from insufficient captured views is still an\nill-posed optimization problem, often resulting in artifacts and distortions in\nunseen areas. In this paper, we propose ReconX, a novel 3D scene reconstruction\nparadigm that reframes the ambiguous reconstruction challenge as a temporal\ngeneration task. The key insight is to unleash the strong generative prior of\nlarge pre-trained video diffusion models for sparse-view reconstruction.\nHowever, 3D view consistency struggles to be accurately preserved in directly\ngenerated video frames from pre-trained models. To address this, given limited\ninput views, the proposed ReconX first constructs a global point cloud and\nencodes it into a contextual space as the 3D structure condition. Guided by the\ncondition, the video diffusion model then synthesizes video frames that are\nboth detail-preserved and exhibit a high degree of 3D consistency, ensuring the\ncoherence of the scene from various perspectives. Finally, we recover the 3D\nscene from the generated video through a confidence-aware 3D Gaussian Splatting\noptimization scheme. Extensive experiments on various real-world datasets show\nthe superiority of our ReconX over state-of-the-art methods in terms of quality\nand generalizability.",
+      "upvotes": 29
+    },
+    {
+      "title": "SAM2Point: Segment Any 3D as Videos in Zero-shot and Promptable Manners",
+      "url": "https://huggingface.co/papers/2408.16768",
+      "authors": [
+        "Renrui Zhang",
+        "Xiangyang Zhu",
+        "Chengzhuo Tong",
+        "Peng Gao",
+        "Pheng-Ann Heng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.16768.pdf",
+      "abstract": "We introduce SAM2Point, a preliminary exploration adapting Segment Anything\nModel 2 (SAM 2) for zero-shot and promptable 3D segmentation. SAM2Point\ninterprets any 3D data as a series of multi-directional videos, and leverages\nSAM 2 for 3D-space segmentation, without further training or 2D-3D projection.\nOur framework supports various prompt types, including 3D points, boxes, and\nmasks, and can generalize across diverse scenarios, such as 3D objects, indoor\nscenes, outdoor environments, and raw sparse LiDAR. Demonstrations on multiple\n3D datasets, e.g., Objaverse, S3DIS, ScanNet, Semantic3D, and KITTI, highlight\nthe robust generalization capabilities of SAM2Point. To our best knowledge, we\npresent the most faithful implementation of SAM in 3D, which may serve as a\nstarting point for future research in promptable 3D segmentation. Online Demo:\nhttps://huggingface.co/spaces/ZiyuG/SAM2Point . Code:\nhttps://github.com/ZiyuGuo99/SAM2Point .",
+      "upvotes": 26
+    },
+    {
+      "title": "Physics of Language Models: Part 2.2, How to Learn From Mistakes on Grade-School Math Problems",
+      "url": "https://huggingface.co/papers/2408.16293",
+      "authors": [
+        "Tian Ye",
+        "Yuanzhi Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.16293.pdf",
+      "abstract": "Language models have demonstrated remarkable performance in solving reasoning\ntasks; however, even the strongest models still occasionally make reasoning\nmistakes. Recently, there has been active research aimed at improving reasoning\naccuracy, particularly by using pretrained language models to \"self-correct\"\ntheir mistakes via multi-round prompting. In this paper, we follow this line of\nwork but focus on understanding the usefulness of incorporating\n\"error-correction\" data directly into the pretraining stage. This data consists\nof erroneous solution steps immediately followed by their corrections. Using a\nsynthetic math dataset, we show promising results: this type of pretrain data\ncan help language models achieve higher reasoning accuracy directly (i.e.,\nthrough simple auto-regression, without multi-round prompting) compared to\npretraining on the same amount of error-free data. We also delve into many\ndetails, such as (1) how this approach differs from beam search, (2) how such\ndata can be prepared, (3) whether masking is needed on the erroneous tokens,\n(4) the amount of error required, (5) whether such data can be deferred to the\nfine-tuning stage, and many others.",
+      "upvotes": 25
+    },
+    {
+      "title": "CSGO: Content-Style Composition in Text-to-Image Generation",
+      "url": "https://huggingface.co/papers/2408.16766",
+      "authors": [
+        "Xu Bai",
+        "Zechao Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.16766.pdf",
+      "abstract": "The diffusion model has shown exceptional capabilities in controlled image\ngeneration, which has further fueled interest in image style transfer. Existing\nworks mainly focus on training free-based methods (e.g., image inversion) due\nto the scarcity of specific data. In this study, we present a data construction\npipeline for content-style-stylized image triplets that generates and\nautomatically cleanses stylized data triplets. Based on this pipeline, we\nconstruct a dataset IMAGStyle, the first large-scale style transfer dataset\ncontaining 210k image triplets, available for the community to explore and\nresearch. Equipped with IMAGStyle, we propose CSGO, a style transfer model\nbased on end-to-end training, which explicitly decouples content and style\nfeatures employing independent feature injection. The unified CSGO implements\nimage-driven style transfer, text-driven stylized synthesis, and text\nediting-driven stylized synthesis. Extensive experiments demonstrate the\neffectiveness of our approach in enhancing style control capabilities in image\ngeneration. Additional visualization and access to the source code can be\nlocated on the project page: https://csgo-gen.github.io/.",
+      "upvotes": 17
+    },
+    {
+      "title": "3D Reconstruction with Spatial Memory",
+      "url": "https://huggingface.co/papers/2408.16061",
+      "authors": [
+        "Lourdes Agapito"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.16061.pdf",
+      "abstract": "We present Spann3R, a novel approach for dense 3D reconstruction from ordered\nor unordered image collections. Built on the DUSt3R paradigm, Spann3R uses a\ntransformer-based architecture to directly regress pointmaps from images\nwithout any prior knowledge of the scene or camera parameters. Unlike DUSt3R,\nwhich predicts per image-pair pointmaps each expressed in its local coordinate\nframe, Spann3R can predict per-image pointmaps expressed in a global coordinate\nsystem, thus eliminating the need for optimization-based global alignment. The\nkey idea of Spann3R is to manage an external spatial memory that learns to keep\ntrack of all previous relevant 3D information. Spann3R then queries this\nspatial memory to predict the 3D structure of the next frame in a global\ncoordinate system. Taking advantage of DUSt3R's pre-trained weights, and\nfurther fine-tuning on a subset of datasets, Spann3R shows competitive\nperformance and generalization ability on various unseen datasets and can\nprocess ordered image collections in real time. Project page:\nhttps://hengyiwang.github.io/projects/spanner",
+      "upvotes": 13
+    },
+    {
+      "title": "StyleRemix: Interpretable Authorship Obfuscation via Distillation and Perturbation of Style Elements",
+      "url": "https://huggingface.co/papers/2408.15666",
+      "authors": [
+        "Mitchell Gordon",
+        "Zaid Harchaoui"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.15666.pdf",
+      "abstract": "Authorship obfuscation, rewriting a text to intentionally obscure the\nidentity of the author, is an important but challenging task. Current methods\nusing large language models (LLMs) lack interpretability and controllability,\noften ignoring author-specific stylistic features, resulting in less robust\nperformance overall.\n  To address this, we develop StyleRemix, an adaptive and interpretable\nobfuscation method that perturbs specific, fine-grained style elements of the\noriginal input text. StyleRemix uses pre-trained Low Rank Adaptation (LoRA)\nmodules to rewrite an input specifically along various stylistic axes (e.g.,\nformality and length) while maintaining low computational cost. StyleRemix\noutperforms state-of-the-art baselines and much larger LLMs in a variety of\ndomains as assessed by both automatic and human evaluation.\n  Additionally, we release AuthorMix, a large set of 30K high-quality,\nlong-form texts from a diverse set of 14 authors and 4 domains, and DiSC, a\nparallel corpus of 1,500 texts spanning seven style axes in 16 unique\ndirections",
+      "upvotes": 9
+    },
+    {
+      "title": "Scaling Up Diffusion and Flow-based XGBoost Models",
+      "url": "https://huggingface.co/papers/2408.16046",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2408.16046.pdf",
+      "abstract": "Novel machine learning methods for tabular data generation are often\ndeveloped on small datasets which do not match the scale required for\nscientific applications. We investigate a recent proposal to use XGBoost as the\nfunction approximator in diffusion and flow-matching models on tabular data,\nwhich proved to be extremely memory intensive, even on tiny datasets. In this\nwork, we conduct a critical analysis of the existing implementation from an\nengineering perspective, and show that these limitations are not fundamental to\nthe method; with better implementation it can be scaled to datasets 370x larger\nthan previously used. Our efficient implementation also unlocks scaling models\nto much larger sizes which we show directly leads to improved performance on\nbenchmark tasks. We also propose algorithmic improvements that can further\nbenefit resource usage and model performance, including multi-output trees\nwhich are well-suited to generative modeling. Finally, we present results on\nlarge-scale scientific datasets derived from experimental particle physics as\npart of the Fast Calorimeter Simulation Challenge. Code is available at\nhttps://github.com/layer6ai-labs/calo-forest.",
+      "upvotes": 9
+    },
+    {
+      "title": "Meta Flow Matching: Integrating Vector Fields on the Wasserstein Manifold",
+      "url": "https://huggingface.co/papers/2408.14608",
+      "authors": [
+        "Xi Zhang",
+        "Brandon Amos",
+        "Mathieu Blanchette",
+        "Leo J. Lee",
+        "Yoshua Bengio",
+        "Alexander Tong"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.14608.pdf",
+      "abstract": "Numerous biological and physical processes can be modeled as systems of\ninteracting entities evolving continuously over time, e.g. the dynamics of\ncommunicating cells or physical particles. Learning the dynamics of such\nsystems is essential for predicting the temporal evolution of populations\nacross novel samples and unseen environments. Flow-based models allow for\nlearning these dynamics at the population level - they model the evolution of\nthe entire distribution of samples. However, current flow-based models are\nlimited to a single initial population and a set of predefined conditions which\ndescribe different dynamics. We argue that multiple processes in natural\nsciences have to be represented as vector fields on the Wasserstein manifold of\nprobability densities. That is, the change of the population at any moment in\ntime depends on the population itself due to the interactions between samples.\nIn particular, this is crucial for personalized medicine where the development\nof diseases and their respective treatment response depends on the\nmicroenvironment of cells specific to each patient. We propose Meta Flow\nMatching (MFM), a practical approach to integrating along these vector fields\non the Wasserstein manifold by amortizing the flow model over the initial\npopulations. Namely, we embed the population of samples using a Graph Neural\nNetwork (GNN) and use these embeddings to train a Flow Matching model. This\ngives MFM the ability to generalize over the initial distributions unlike\npreviously proposed methods. We demonstrate the ability of MFM to improve\nprediction of individual treatment responses on a large scale multi-patient\nsingle-cell drug screen dataset.",
+      "upvotes": 7
+    }
+  ]
+}

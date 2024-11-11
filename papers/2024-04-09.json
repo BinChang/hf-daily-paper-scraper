@@ -1,0 +1,261 @@
+{
+  "date": "2024-04-09",
+  "papers": [
+    {
+      "title": "Ferret-UI: Grounded Mobile UI Understanding with Multimodal LLMs",
+      "url": "https://huggingface.co/papers/2404.05719",
+      "authors": [
+        "Eldon Schoop",
+        "Amanda Swearngin",
+        "Jeffrey Nichols",
+        "Yinfei Yang",
+        "Zhe Gan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.05719.pdf",
+      "abstract": "Recent advancements in multimodal large language models (MLLMs) have been\nnoteworthy, yet, these general-domain MLLMs often fall short in their ability\nto comprehend and interact effectively with user interface (UI) screens. In\nthis paper, we present Ferret-UI, a new MLLM tailored for enhanced\nunderstanding of mobile UI screens, equipped with referring, grounding, and\nreasoning capabilities. Given that UI screens typically exhibit a more\nelongated aspect ratio and contain smaller objects of interest (e.g., icons,\ntexts) than natural images, we incorporate \"any resolution\" on top of Ferret to\nmagnify details and leverage enhanced visual features. Specifically, each\nscreen is divided into 2 sub-images based on the original aspect ratio (i.e.,\nhorizontal division for portrait screens and vertical division for landscape\nscreens). Both sub-images are encoded separately before being sent to LLMs. We\nmeticulously gather training samples from an extensive range of elementary UI\ntasks, such as icon recognition, find text, and widget listing. These samples\nare formatted for instruction-following with region annotations to facilitate\nprecise referring and grounding. To augment the model's reasoning ability, we\nfurther compile a dataset for advanced tasks, including detailed description,\nperception/interaction conversations, and function inference. After training on\nthe curated datasets, Ferret-UI exhibits outstanding comprehension of UI\nscreens and the capability to execute open-ended instructions. For model\nevaluation, we establish a comprehensive benchmark encompassing all the\naforementioned tasks. Ferret-UI excels not only beyond most open-source UI\nMLLMs, but also surpasses GPT-4V on all the elementary UI tasks.",
+      "upvotes": 80
+    },
+    {
+      "title": "MagicTime: Time-lapse Video Generation Models as Metamorphic Simulators",
+      "url": "https://huggingface.co/papers/2404.05014",
+      "authors": [
+        "Yujun Shi",
+        "Yongqi Xu",
+        "Xinhua Cheng",
+        "Li Yuan",
+        "Jiebo Luo"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.05014.pdf",
+      "abstract": "Recent advances in Text-to-Video generation (T2V) have achieved remarkable\nsuccess in synthesizing high-quality general videos from textual descriptions.\nA largely overlooked problem in T2V is that existing models have not adequately\nencoded physical knowledge of the real world, thus generated videos tend to\nhave limited motion and poor variations. In this paper, we propose\nMagicTime, a metamorphic time-lapse video generation model, which\nlearns real-world physics knowledge from time-lapse videos and implements\nmetamorphic generation. First, we design a MagicAdapter scheme to decouple\nspatial and temporal training, encode more physical knowledge from metamorphic\nvideos, and transform pre-trained T2V models to generate metamorphic videos.\nSecond, we introduce a Dynamic Frames Extraction strategy to adapt to\nmetamorphic time-lapse videos, which have a wider variation range and cover\ndramatic object metamorphic processes, thus embodying more physical knowledge\nthan general videos. Finally, we introduce a Magic Text-Encoder to improve the\nunderstanding of metamorphic video prompts. Furthermore, we create a time-lapse\nvideo-text dataset called ChronoMagic, specifically curated to unlock\nthe metamorphic video generation ability. Extensive experiments demonstrate the\nsuperiority and effectiveness of MagicTime for generating high-quality and\ndynamic metamorphic videos, suggesting time-lapse video generation is a\npromising path toward building metamorphic simulators of the physical world.",
+      "upvotes": 53
+    },
+    {
+      "title": "ByteEdit: Boost, Comply and Accelerate Generative Image Editing",
+      "url": "https://huggingface.co/papers/2404.04860",
+      "authors": [
+        "Yuxi Ren",
+        "Jie Wu",
+        "Huafeng Kuang",
+        "Xionghui Wang",
+        "Qianqian Wang",
+        "Yixing Zhu",
+        "Pan Xie",
+        "Shiyin Wang",
+        "Xuefeng Xiao",
+        "Yitong Wang",
+        "Min Zheng",
+        "Lean Fu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.04860.pdf",
+      "abstract": "Recent advancements in diffusion-based generative image editing have sparked\na profound revolution, reshaping the landscape of image outpainting and\ninpainting tasks. Despite these strides, the field grapples with inherent\nchallenges, including: i) inferior quality; ii) poor consistency; iii)\ninsufficient instrcution adherence; iv) suboptimal generation efficiency. To\naddress these obstacles, we present ByteEdit, an innovative feedback learning\nframework meticulously designed to Boost, Comply, and Accelerate Generative\nImage Editing tasks. ByteEdit seamlessly integrates image reward models\ndedicated to enhancing aesthetics and image-text alignment, while also\nintroducing a dense, pixel-level reward model tailored to foster coherence in\nthe output. Furthermore, we propose a pioneering adversarial and progressive\nfeedback learning strategy to expedite the model's inference speed. Through\nextensive large-scale user evaluations, we demonstrate that ByteEdit surpasses\nleading generative image editing products, including Adobe, Canva, and MeiTu,\nin both generation quality and consistency. ByteEdit-Outpainting exhibits a\nremarkable enhancement of 388% and 135% in quality and consistency,\nrespectively, when compared to the baseline model. Experiments also verfied\nthat our acceleration models maintains excellent performance results in terms\nof quality and consistency.",
+      "upvotes": 24
+    },
+    {
+      "title": "SwapAnything: Enabling Arbitrary Object Swapping in Personalized Visual Editing",
+      "url": "https://huggingface.co/papers/2404.05717",
+      "authors": [
+        "Jing Gu",
+        "Yilin Wang",
+        "Nanxuan Zhao",
+        "Wei Xiong",
+        "Qing Liu",
+        "Zhifei Zhang",
+        "He Zhang",
+        "Jianming Zhang",
+        "HyunJoon Jung"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.05717.pdf",
+      "abstract": "Effective editing of personal content holds a pivotal role in enabling\nindividuals to express their creativity, weaving captivating narratives within\ntheir visual stories, and elevate the overall quality and impact of their\nvisual content. Therefore, in this work, we introduce SwapAnything, a novel\nframework that can swap any objects in an image with personalized concepts\ngiven by the reference, while keeping the context unchanged. Compared with\nexisting methods for personalized subject swapping, SwapAnything has three\nunique advantages: (1) precise control of arbitrary objects and parts rather\nthan the main subject, (2) more faithful preservation of context pixels, (3)\nbetter adaptation of the personalized concept to the image. First, we propose\ntargeted variable swapping to apply region control over latent feature maps and\nswap masked variables for faithful context preservation and initial semantic\nconcept swapping. Then, we introduce appearance adaptation, to seamlessly adapt\nthe semantic concept into the original image in terms of target location,\nshape, style, and content during the image generation process. Extensive\nresults on both human and automatic evaluation demonstrate significant\nimprovements of our approach over baseline methods on personalized swapping.\nFurthermore, SwapAnything shows its precise and faithful swapping abilities\nacross single object, multiple objects, partial object, and cross-domain\nswapping tasks. SwapAnything also achieves great performance on text-based\nswapping and tasks beyond swapping such as object insertion.",
+      "upvotes": 24
+    },
+    {
+      "title": "SpatialTracker: Tracking Any 2D Pixels in 3D Space",
+      "url": "https://huggingface.co/papers/2404.04319",
+      "authors": [
+        "Yuxi Xiao",
+        "Qianqian Wang",
+        "Shangzhan Zhang",
+        "Nan Xue",
+        "Sida Peng",
+        "Yujun Shen",
+        "Xiaowei Zhou"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.04319.pdf",
+      "abstract": "Recovering dense and long-range pixel motion in videos is a challenging\nproblem. Part of the difficulty arises from the 3D-to-2D projection process,\nleading to occlusions and discontinuities in the 2D motion domain. While 2D\nmotion can be intricate, we posit that the underlying 3D motion can often be\nsimple and low-dimensional. In this work, we propose to estimate point\ntrajectories in 3D space to mitigate the issues caused by image projection. Our\nmethod, named SpatialTracker, lifts 2D pixels to 3D using monocular depth\nestimators, represents the 3D content of each frame efficiently using a\ntriplane representation, and performs iterative updates using a transformer to\nestimate 3D trajectories. Tracking in 3D allows us to leverage\nas-rigid-as-possible (ARAP) constraints while simultaneously learning a\nrigidity embedding that clusters pixels into different rigid parts. Extensive\nevaluation shows that our approach achieves state-of-the-art tracking\nperformance both qualitatively and quantitatively, particularly in challenging\nscenarios such as out-of-plane rotation.",
+      "upvotes": 23
+    },
+    {
+      "title": "UniFL: Improve Stable Diffusion via Unified Feedback Learning",
+      "url": "https://huggingface.co/papers/2404.05595",
+      "authors": [
+        "Jiacheng Zhang",
+        "Yuxi Ren",
+        "Xin Xia",
+        "Huafeng Kuang",
+        "Pan Xie",
+        "Jiashi Li",
+        "Xuefeng Xiao",
+        "Weilin Huang",
+        "Min Zheng",
+        "Lean Fu",
+        "Guanbin Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.05595.pdf",
+      "abstract": "Diffusion models have revolutionized the field of image generation, leading\nto the proliferation of high-quality models and diverse downstream\napplications. However, despite these significant advancements, the current\ncompetitive solutions still suffer from several limitations, including inferior\nvisual quality, a lack of aesthetic appeal, and inefficient inference, without\na comprehensive solution in sight. To address these challenges, we present\nUniFL, a unified framework that leverages feedback learning to enhance\ndiffusion models comprehensively. UniFL stands out as a universal, effective,\nand generalizable solution applicable to various diffusion models, such as\nSD1.5 and SDXL. Notably, UniFL incorporates three key components: perceptual\nfeedback learning, which enhances visual quality; decoupled feedback learning,\nwhich improves aesthetic appeal; and adversarial feedback learning, which\noptimizes inference speed. In-depth experiments and extensive user studies\nvalidate the superior performance of our proposed method in enhancing both the\nquality of generated models and their acceleration. For instance, UniFL\nsurpasses ImageReward by 17% user preference in terms of generation quality and\noutperforms LCM and SDXL Turbo by 57% and 20% in 4-step inference. Moreover, we\nhave verified the efficacy of our approach in downstream tasks, including Lora,\nControlNet, and AnimateDiff.",
+      "upvotes": 23
+    },
+    {
+      "title": "BeyondScene: Higher-Resolution Human-Centric Scene Generation With Pretrained Diffusion",
+      "url": "https://huggingface.co/papers/2404.04544",
+      "authors": [
+        "Hayeon Kim",
+        "Dong Un Kang",
+        "Se Young Chun"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.04544.pdf",
+      "abstract": "Generating higher-resolution human-centric scenes with details and controls\nremains a challenge for existing text-to-image diffusion models. This challenge\nstems from limited training image size, text encoder capacity (limited tokens),\nand the inherent difficulty of generating complex scenes involving multiple\nhumans. While current methods attempted to address training size limit only,\nthey often yielded human-centric scenes with severe artifacts. We propose\nBeyondScene, a novel framework that overcomes prior limitations, generating\nexquisite higher-resolution (over 8K) human-centric scenes with exceptional\ntext-image correspondence and naturalness using existing pretrained diffusion\nmodels. BeyondScene employs a staged and hierarchical approach to initially\ngenerate a detailed base image focusing on crucial elements in instance\ncreation for multiple humans and detailed descriptions beyond token limit of\ndiffusion model, and then to seamlessly convert the base image to a\nhigher-resolution output, exceeding training image size and incorporating\ndetails aware of text and instances via our novel instance-aware hierarchical\nenlargement process that consists of our proposed high-frequency injected\nforward diffusion and adaptive joint diffusion. BeyondScene surpasses existing\nmethods in terms of correspondence with detailed text descriptions and\nnaturalness, paving the way for advanced applications in higher-resolution\nhuman-centric scene creation beyond the capacity of pretrained diffusion models\nwithout costly retraining. Project page:\nhttps://janeyeon.github.io/beyond-scene.",
+      "upvotes": 20
+    },
+    {
+      "title": "MA-LMM: Memory-Augmented Large Multimodal Model for Long-Term Video Understanding",
+      "url": "https://huggingface.co/papers/2404.05726",
+      "authors": [
+        "Bo He",
+        "Hengduo Li",
+        "Young Kyun Jang",
+        "Menglin Jia",
+        "Xuefei Cao",
+        "Ashish Shah",
+        "Abhinav Shrivastava",
+        "Ser-Nam Lim"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.05726.pdf",
+      "abstract": "With the success of large language models (LLMs), integrating the vision\nmodel into LLMs to build vision-language foundation models has gained much more\ninterest recently. However, existing LLM-based large multimodal models (e.g.,\nVideo-LLaMA, VideoChat) can only take in a limited number of frames for short\nvideo understanding. In this study, we mainly focus on designing an efficient\nand effective model for long-term video understanding. Instead of trying to\nprocess more frames simultaneously like most existing work, we propose to\nprocess videos in an online manner and store past video information in a memory\nbank. This allows our model to reference historical video content for long-term\nanalysis without exceeding LLMs' context length constraints or GPU memory\nlimits. Our memory bank can be seamlessly integrated into current multimodal\nLLMs in an off-the-shelf manner. We conduct extensive experiments on various\nvideo understanding tasks, such as long-video understanding, video question\nanswering, and video captioning, and our model can achieve state-of-the-art\nperformances across multiple datasets. Code available at\nhttps://boheumd.github.io/MA-LMM/.",
+      "upvotes": 20
+    },
+    {
+      "title": "PhysAvatar: Learning the Physics of Dressed 3D Avatars from Visual Observations",
+      "url": "https://huggingface.co/papers/2404.04421",
+      "authors": [
+        "Yang Zheng",
+        "Qingqing Zhao",
+        "Wang Yifan",
+        "Donglai Xiang",
+        "Florian Dubost",
+        "Dmitry Lagun",
+        "Thabo Beeler",
+        "Federico Tombari",
+        "Leonidas Guibas",
+        "Gordon Wetzstein"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.04421.pdf",
+      "abstract": "Modeling and rendering photorealistic avatars is of crucial importance in\nmany applications. Existing methods that build a 3D avatar from visual\nobservations, however, struggle to reconstruct clothed humans. We introduce\nPhysAvatar, a novel framework that combines inverse rendering with inverse\nphysics to automatically estimate the shape and appearance of a human from\nmulti-view video data along with the physical parameters of the fabric of their\nclothes. For this purpose, we adopt a mesh-aligned 4D Gaussian technique for\nspatio-temporal mesh tracking as well as a physically based inverse renderer to\nestimate the intrinsic material properties. PhysAvatar integrates a physics\nsimulator to estimate the physical parameters of the garments using\ngradient-based optimization in a principled manner. These novel capabilities\nenable PhysAvatar to create high-quality novel-view renderings of avatars\ndressed in loose-fitting clothes under motions and lighting conditions not seen\nin the training data. This marks a significant advancement towards modeling\nphotorealistic digital humans using physically based inverse rendering with\nphysics in the loop. Our project website is at:\nhttps://qingqing-zhao.github.io/PhysAvatar",
+      "upvotes": 16
+    },
+    {
+      "title": "YaART: Yet Another ART Rendering Technology",
+      "url": "https://huggingface.co/papers/2404.05666",
+      "authors": [
+        "Sergey Kastryulin",
+        "Artem Konev",
+        "Alexander Shishenya",
+        "Eugene Lyapustin",
+        "Artem Khurshudov",
+        "Alexander Tselousov",
+        "Nikita Vinokurov",
+        "Denis Kuznedelev",
+        "Alexander Markovich",
+        "Grigoriy Livshits",
+        "Alexey Kirillov",
+        "Anastasiia Tabisheva",
+        "Liubov Chubarova",
+        "Marina Kaminskaia",
+        "Alexander Ustyuzhanin",
+        "Artemii Shvetsov",
+        "Daniil Shlenskii",
+        "Valerii Startsev",
+        "Dmitrii Kornilov",
+        "Mikhail Romanov",
+        "Artem Babenko",
+        "Sergei Ovcharenko"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.05666.pdf",
+      "abstract": "In the rapidly progressing field of generative models, the development of\nefficient and high-fidelity text-to-image diffusion systems represents a\nsignificant frontier. This study introduces YaART, a novel production-grade\ntext-to-image cascaded diffusion model aligned to human preferences using\nReinforcement Learning from Human Feedback (RLHF). During the development of\nYaART, we especially focus on the choices of the model and training dataset\nsizes, the aspects that were not systematically investigated for text-to-image\ncascaded diffusion models before. In particular, we comprehensively analyze how\nthese choices affect both the efficiency of the training process and the\nquality of the generated images, which are highly important in practice.\nFurthermore, we demonstrate that models trained on smaller datasets of\nhigher-quality images can successfully compete with those trained on larger\ndatasets, establishing a more efficient scenario of diffusion models training.\nFrom the quality perspective, YaART is consistently preferred by users over\nmany existing state-of-the-art models.",
+      "upvotes": 15
+    },
+    {
+      "title": "MoMA: Multimodal LLM Adapter for Fast Personalized Image Generation",
+      "url": "https://huggingface.co/papers/2404.05674",
+      "authors": [
+        "Kunpeng Song",
+        "Yizhe Zhu",
+        "Bingchen Liu",
+        "Qing Yan",
+        "Ahmed Elgammal"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.05674.pdf",
+      "abstract": "In this paper, we present MoMA: an open-vocabulary, training-free\npersonalized image model that boasts flexible zero-shot capabilities. As\nfoundational text-to-image models rapidly evolve, the demand for robust\nimage-to-image translation grows. Addressing this need, MoMA specializes in\nsubject-driven personalized image generation. Utilizing an open-source,\nMultimodal Large Language Model (MLLM), we train MoMA to serve a dual role as\nboth a feature extractor and a generator. This approach effectively synergizes\nreference image and text prompt information to produce valuable image features,\nfacilitating an image diffusion model. To better leverage the generated\nfeatures, we further introduce a novel self-attention shortcut method that\nefficiently transfers image features to an image diffusion model, improving the\nresemblance of the target object in generated images. Remarkably, as a\ntuning-free plug-and-play module, our model requires only a single reference\nimage and outperforms existing methods in generating images with high detail\nfidelity, enhanced identity-preservation and prompt faithfulness. Our work is\nopen-source, thereby providing universal access to these advancements.",
+      "upvotes": 13
+    },
+    {
+      "title": "Aligning Diffusion Models by Optimizing Human Utility",
+      "url": "https://huggingface.co/papers/2404.04465",
+      "authors": [
+        "Shufan Li",
+        "Konstantinos Kallidromitis",
+        "Akash Gokul",
+        "Yusuke Kato",
+        "Kazuki Kozuka"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.04465.pdf",
+      "abstract": "We present Diffusion-KTO, a novel approach for aligning text-to-image\ndiffusion models by formulating the alignment objective as the maximization of\nexpected human utility. Since this objective applies to each generation\nindependently, Diffusion-KTO does not require collecting costly pairwise\npreference data nor training a complex reward model. Instead, our objective\nrequires simple per-image binary feedback signals, e.g. likes or dislikes,\nwhich are abundantly available. After fine-tuning using Diffusion-KTO,\ntext-to-image diffusion models exhibit superior performance compared to\nexisting techniques, including supervised fine-tuning and Diffusion-DPO, both\nin terms of human judgment and automatic evaluation metrics such as PickScore\nand ImageReward. Overall, Diffusion-KTO unlocks the potential of leveraging\nreadily available per-image binary signals and broadens the applicability of\naligning text-to-image diffusion models with human preferences.",
+      "upvotes": 13
+    },
+    {
+      "title": "Diffusion-RWKV: Scaling RWKV-Like Architectures for Diffusion Models",
+      "url": "https://huggingface.co/papers/2404.04478",
+      "authors": [
+        "Zhengcong Fei",
+        "Mingyuan Fan",
+        "Changqian Yu",
+        "Debang Li",
+        "Junshi Huang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.04478.pdf",
+      "abstract": "Transformers have catalyzed advancements in computer vision and natural\nlanguage processing (NLP) fields. However, substantial computational complexity\nposes limitations for their application in long-context tasks, such as\nhigh-resolution image generation. This paper introduces a series of\narchitectures adapted from the RWKV model used in the NLP, with requisite\nmodifications tailored for diffusion model applied to image generation tasks,\nreferred to as Diffusion-RWKV. Similar to the diffusion with Transformers, our\nmodel is designed to efficiently handle patchnified inputs in a sequence with\nextra conditions, while also scaling up effectively, accommodating both\nlarge-scale parameters and extensive datasets. Its distinctive advantage\nmanifests in its reduced spatial aggregation complexity, rendering it\nexceptionally adept at processing high-resolution images, thereby eliminating\nthe necessity for windowing or group cached operations. Experimental results on\nboth condition and unconditional image generation tasks demonstrate that\nDiffison-RWKV achieves performance on par with or surpasses existing CNN or\nTransformer-based diffusion models in FID and IS metrics while significantly\nreducing total computation FLOP usage.",
+      "upvotes": 12
+    },
+    {
+      "title": "DATENeRF: Depth-Aware Text-based Editing of NeRFs",
+      "url": "https://huggingface.co/papers/2404.04526",
+      "authors": [
+        "Sara Rojas",
+        "Kai Zhang",
+        "Sai Bi",
+        "Fujun Luan",
+        "Bernard Ghanem",
+        "Kalyan Sunkavall"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.04526.pdf",
+      "abstract": "Recent advancements in diffusion models have shown remarkable proficiency in\nediting 2D images based on text prompts. However, extending these techniques to\nedit scenes in Neural Radiance Fields (NeRF) is complex, as editing individual\n2D frames can result in inconsistencies across multiple views. Our crucial\ninsight is that a NeRF scene's geometry can serve as a bridge to integrate\nthese 2D edits. Utilizing this geometry, we employ a depth-conditioned\nControlNet to enhance the coherence of each 2D image modification. Moreover, we\nintroduce an inpainting approach that leverages the depth information of NeRF\nscenes to distribute 2D edits across different images, ensuring robustness\nagainst errors and resampling challenges. Our results reveal that this\nmethodology achieves more consistent, lifelike, and detailed edits than\nexisting leading methods for text-driven NeRF scene editing.",
+      "upvotes": 9
+    },
+    {
+      "title": "Koala: Key frame-conditioned long video-LLM",
+      "url": "https://huggingface.co/papers/2404.04346",
+      "authors": [
+        "Reuben Tan",
+        "Ximeng Sun",
+        "Ping Hu",
+        "Jui-hsien Wang",
+        "Hanieh Deilamsalehy",
+        "Bryan A. Plummer",
+        "Bryan Russell",
+        "Kate Saenko"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.04346.pdf",
+      "abstract": "Long video question answering is a challenging task that involves recognizing\nshort-term activities and reasoning about their fine-grained relationships.\nState-of-the-art video Large Language Models (vLLMs) hold promise as a viable\nsolution due to their demonstrated emergent capabilities on new tasks. However,\ndespite being trained on millions of short seconds-long videos, vLLMs are\nunable to understand minutes-long videos and accurately answer questions about\nthem. To address this limitation, we propose a lightweight and self-supervised\napproach, Key frame-conditioned long video-LLM (Koala), that introduces\nlearnable spatiotemporal queries to adapt pretrained vLLMs for generalizing to\nlonger videos. Our approach introduces two new tokenizers that condition on\nvisual tokens computed from sparse video key frames for understanding short and\nlong video moments. We train our proposed approach on HowTo100M and demonstrate\nits effectiveness on zero-shot long video understanding benchmarks, where it\noutperforms state-of-the-art large models by 3 - 6% in absolute accuracy across\nall tasks. Surprisingly, we also empirically show that our approach not only\nhelps a pretrained vLLM to understand long videos but also improves its\naccuracy on short-term action recognition.",
+      "upvotes": 5
+    }
+  ]
+}

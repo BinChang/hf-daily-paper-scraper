@@ -1,0 +1,107 @@
+{
+  "date": "2024-05-17",
+  "papers": [
+    {
+      "title": "Chameleon: Mixed-Modal Early-Fusion Foundation Models",
+      "url": "https://huggingface.co/papers/2405.09818",
+      "authors": [
+        "Chameleon Team"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.09818.pdf",
+      "abstract": "We present Chameleon, a family of early-fusion token-based mixed-modal models\ncapable of understanding and generating images and text in any arbitrary\nsequence. We outline a stable training approach from inception, an alignment\nrecipe, and an architectural parameterization tailored for the early-fusion,\ntoken-based, mixed-modal setting. The models are evaluated on a comprehensive\nrange of tasks, including visual question answering, image captioning, text\ngeneration, image generation, and long-form mixed modal generation. Chameleon\ndemonstrates broad and general capabilities, including state-of-the-art\nperformance in image captioning tasks, outperforms Llama-2 in text-only tasks\nwhile being competitive with models such as Mixtral 8x7B and Gemini-Pro, and\nperforms non-trivial image generation, all in a single model. It also matches\nor exceeds the performance of much larger models, including Gemini Pro and\nGPT-4V, according to human judgments on a new long-form mixed-modal generation\nevaluation, where either the prompt or outputs contain mixed sequences of both\nimages and text. Chameleon marks a significant step forward in a unified\nmodeling of full multimodal documents.",
+      "upvotes": 126
+    },
+    {
+      "title": "LoRA Learns Less and Forgets Less",
+      "url": "https://huggingface.co/papers/2405.09673",
+      "authors": [
+        "Jose Gonzalez Ortiz",
+        "Philip Greengard",
+        "Daniel King",
+        "John P. Cunningham"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.09673.pdf",
+      "abstract": "Low-Rank Adaptation (LoRA) is a widely-used parameter-efficient finetuning\nmethod for large language models. LoRA saves memory by training only low rank\nperturbations to selected weight matrices. In this work, we compare the\nperformance of LoRA and full finetuning on two target domains, programming and\nmathematics. We consider both the instruction finetuning (approx100K\nprompt-response pairs) and continued pretraining (approx10B unstructured\ntokens) data regimes. Our results show that, in most settings, LoRA\nsubstantially underperforms full finetuning. Nevertheless, LoRA exhibits a\ndesirable form of regularization: it better maintains the base model's\nperformance on tasks outside the target domain. We show that LoRA provides\nstronger regularization compared to common techniques such as weight decay and\ndropout; it also helps maintain more diverse generations. We show that full\nfinetuning learns perturbations with a rank that is 10-100X greater than\ntypical LoRA configurations, possibly explaining some of the reported gaps. We\nconclude by proposing best practices for finetuning with LoRA.",
+      "upvotes": 87
+    },
+    {
+      "title": "CAT3D: Create Anything in 3D with Multi-View Diffusion Models",
+      "url": "https://huggingface.co/papers/2405.10314",
+      "authors": [
+        "Philipp Henzler",
+        "Ricardo Martin-Brualla",
+        "Pratul Srinivasan",
+        "Jonathan T. Barron"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.10314.pdf",
+      "abstract": "Advances in 3D reconstruction have enabled high-quality 3D capture, but\nrequire a user to collect hundreds to thousands of images to create a 3D scene.\nWe present CAT3D, a method for creating anything in 3D by simulating this\nreal-world capture process with a multi-view diffusion model. Given any number\nof input images and a set of target novel viewpoints, our model generates\nhighly consistent novel views of a scene. These generated views can be used as\ninput to robust 3D reconstruction techniques to produce 3D representations that\ncan be rendered from any viewpoint in real-time. CAT3D can create entire 3D\nscenes in as little as one minute, and outperforms existing methods for single\nimage and few-view 3D scene creation. See our project page for results and\ninteractive demos at https://cat3d.github.io .",
+      "upvotes": 43
+    },
+    {
+      "title": "Grounding DINO 1.5: Advance the \"Edge\" of Open-Set Object Detection",
+      "url": "https://huggingface.co/papers/2405.10300",
+      "authors": [
+        "Zhaoyang Zeng",
+        "Wenlong Liu",
+        "Han Gao",
+        "Xiaoke Jiang",
+        "Yihao Chen",
+        "Yuda Xiong",
+        "Hao Zhang",
+        "Feng Li",
+        "Lei Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.10300.pdf",
+      "abstract": "This paper introduces Grounding DINO 1.5, a suite of advanced open-set object\ndetection models developed by IDEA Research, which aims to advance the \"Edge\"\nof open-set object detection. The suite encompasses two models: Grounding DINO\n1.5 Pro, a high-performance model designed for stronger generalization\ncapability across a wide range of scenarios, and Grounding DINO 1.5 Edge, an\nefficient model optimized for faster speed demanded in many applications\nrequiring edge deployment. The Grounding DINO 1.5 Pro model advances its\npredecessor by scaling up the model architecture, integrating an enhanced\nvision backbone, and expanding the training dataset to over 20 million images\nwith grounding annotations, thereby achieving a richer semantic understanding.\nThe Grounding DINO 1.5 Edge model, while designed for efficiency with reduced\nfeature scales, maintains robust detection capabilities by being trained on the\nsame comprehensive dataset. Empirical results demonstrate the effectiveness of\nGrounding DINO 1.5, with the Grounding DINO 1.5 Pro model attaining a 54.3 AP\non the COCO detection benchmark and a 55.7 AP on the LVIS-minival zero-shot\ntransfer benchmark, setting new records for open-set object detection.\nFurthermore, the Grounding DINO 1.5 Edge model, when optimized with TensorRT,\nachieves a speed of 75.2 FPS while attaining a zero-shot performance of 36.2 AP\non the LVIS-minival benchmark, making it more suitable for edge computing\nscenarios. Model examples and demos with API will be released at\nhttps://github.com/IDEA-Research/Grounding-DINO-1.5-API",
+      "upvotes": 26
+    },
+    {
+      "title": "Many-Shot In-Context Learning in Multimodal Foundation Models",
+      "url": "https://huggingface.co/papers/2405.09798",
+      "authors": [
+        "Jonathan H. Chen",
+        "Andrew Y. Ng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.09798.pdf",
+      "abstract": "Large language models are well-known to be effective at few-shot in-context\nlearning (ICL). Recent advancements in multimodal foundation models have\nenabled unprecedentedly long context windows, presenting an opportunity to\nexplore their capability to perform ICL with many more demonstrating examples.\nIn this work, we evaluate the performance of multimodal foundation models\nscaling from few-shot to many-shot ICL. We benchmark GPT-4o and Gemini 1.5 Pro\nacross 10 datasets spanning multiple domains (natural imagery, medical imagery,\nremote sensing, and molecular imagery) and tasks (multi-class, multi-label, and\nfine-grained classification). We observe that many-shot ICL, including up to\nalmost 2,000 multimodal demonstrating examples, leads to substantial\nimprovements compared to few-shot (<100 examples) ICL across all of the\ndatasets. Further, Gemini 1.5 Pro performance continues to improve log-linearly\nup to the maximum number of tested examples on many datasets. Given the high\ninference costs associated with the long prompts required for many-shot ICL, we\nalso explore the impact of batching multiple queries in a single API call. We\nshow that batching up to 50 queries can lead to performance improvements under\nzero-shot and many-shot ICL, with substantial gains in the zero-shot setting on\nmultiple datasets, while drastically reducing per-query cost and latency.\nFinally, we measure ICL data efficiency of the models, or the rate at which the\nmodels learn from more demonstrating examples. We find that while GPT-4o and\nGemini 1.5 Pro achieve similar zero-shot performance across the datasets,\nGemini 1.5 Pro exhibits higher ICL data efficiency than GPT-4o on most\ndatasets. Our results suggest that many-shot ICL could enable users to\nefficiently adapt multimodal foundation models to new applications and domains.\nOur codebase is publicly available at\nhttps://github.com/stanfordmlgroup/ManyICL .",
+      "upvotes": 26
+    },
+    {
+      "title": "Toon3D: Seeing Cartoons from a New Perspective",
+      "url": "https://huggingface.co/papers/2405.10320",
+      "authors": [
+        "Rohan Mathur",
+        "Frederik Warburg",
+        "Alexei A. Efros"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.10320.pdf",
+      "abstract": "In this work, we recover the underlying 3D structure of non-geometrically\nconsistent scenes. We focus our analysis on hand-drawn images from cartoons and\nanime. Many cartoons are created by artists without a 3D rendering engine,\nwhich means that any new image of a scene is hand-drawn. The hand-drawn images\nare usually faithful representations of the world, but only in a qualitative\nsense, since it is difficult for humans to draw multiple perspectives of an\nobject or scene 3D consistently. Nevertheless, people can easily perceive 3D\nscenes from inconsistent inputs! In this work, we correct for 2D drawing\ninconsistencies to recover a plausible 3D structure such that the newly warped\ndrawings are consistent with each other. Our pipeline consists of a\nuser-friendly annotation tool, camera pose estimation, and image deformation to\nrecover a dense structure. Our method warps images to obey a perspective camera\nmodel, enabling our aligned results to be plugged into novel-view synthesis\nreconstruction methods to experience cartoons from viewpoints never drawn\nbefore. Our project page is https://toon3d.studio/.",
+      "upvotes": 19
+    },
+    {
+      "title": "Dual3D: Efficient and Consistent Text-to-3D Generation with Dual-mode Multi-view Latent Diffusion",
+      "url": "https://huggingface.co/papers/2405.09874",
+      "authors": [
+        "Zhangyu Lai",
+        "Linning Xu",
+        "Liujuan Cao",
+        "Shengchuan Zhang",
+        "Rongrong Ji"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.09874.pdf",
+      "abstract": "We present Dual3D, a novel text-to-3D generation framework that generates\nhigh-quality 3D assets from texts in only 1 minute.The key component is a\ndual-mode multi-view latent diffusion model. Given the noisy multi-view\nlatents, the 2D mode can efficiently denoise them with a single latent\ndenoising network, while the 3D mode can generate a tri-plane neural surface\nfor consistent rendering-based denoising. Most modules for both modes are tuned\nfrom a pre-trained text-to-image latent diffusion model to circumvent the\nexpensive cost of training from scratch. To overcome the high rendering cost\nduring inference, we propose the dual-mode toggling inference strategy to use\nonly 1/10 denoising steps with 3D mode, successfully generating a 3D asset in\njust 10 seconds without sacrificing quality. The texture of the 3D asset can\nbe further enhanced by our efficient texture refinement process in a short\ntime. Extensive experiments demonstrate that our method delivers\nstate-of-the-art performance while significantly reducing generation time. Our\nproject page is available at https://dual3d.github.io",
+      "upvotes": 16
+    },
+    {
+      "title": "TRANSIC: Sim-to-Real Policy Transfer by Learning from Online Correction",
+      "url": "https://huggingface.co/papers/2405.10315",
+      "authors": [
+        "Ruohan Zhang",
+        "Li Fei-Fei"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2405.10315.pdf",
+      "abstract": "Learning in simulation and transferring the learned policy to the real world\nhas the potential to enable generalist robots. The key challenge of this\napproach is to address simulation-to-reality (sim-to-real) gaps. Previous\nmethods often require domain-specific knowledge a priori. We argue that a\nstraightforward way to obtain such knowledge is by asking humans to observe and\nassist robot policy execution in the real world. The robots can then learn from\nhumans to close various sim-to-real gaps. We propose TRANSIC, a data-driven\napproach to enable successful sim-to-real transfer based on a human-in-the-loop\nframework. TRANSIC allows humans to augment simulation policies to overcome\nvarious unmodeled sim-to-real gaps holistically through intervention and online\ncorrection. Residual policies can be learned from human corrections and\nintegrated with simulation policies for autonomous execution. We show that our\napproach can achieve successful sim-to-real transfer in complex and\ncontact-rich manipulation tasks such as furniture assembly. Through synergistic\nintegration of policies learned in simulation and from humans, TRANSIC is\neffective as a holistic approach to addressing various, often coexisting\nsim-to-real gaps. It displays attractive properties such as scaling with human\neffort. Videos and code are available at https://transic-robot.github.io/",
+      "upvotes": 10
+    }
+  ]
+}

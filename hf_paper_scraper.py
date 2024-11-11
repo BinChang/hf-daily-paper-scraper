@@ -1,12 +1,13 @@
 import requests
 from bs4 import BeautifulSoup
 from typing import List, Dict, Any
-from datetime import datetime
+from datetime import datetime, timedelta
 import argparse
 import json
 import os
 from pathlib import Path
 import time
+import re
 
 def get_paper_details(paper_url: str) -> Dict[str, Any]:
     """
@@ -119,9 +120,57 @@ def scrape_hf_papers(date: str) -> List[Dict[str, str]]:
     
     return papers
 
+def clean_title(title: str) -> str:
+    """
+    Clean title to create a valid filename from the first 5 words
+    
+    Args:
+        title (str): Paper title
+    
+    Returns:
+        str: Cleaned filename
+    """
+    # Remove special characters and replace spaces with underscores
+    title = re.sub(r'[^\w\s-]', '', title)
+    # Get first 5 words
+    words = title.split()[:5]
+    # Join words and limit length
+    return '_'.join(words)[:100]
+
+def download_pdf(url: str, filepath: str) -> bool:
+    """
+    Download PDF file from URL
+    
+    Args:
+        url (str): PDF URL
+        filepath (str): Path to save the PDF
+    
+    Returns:
+        bool: True if download successful, False otherwise
+    """
+    try:
+        # Add delay to be nice to the server
+        time.sleep(0.5)
+        response = requests.get(url, stream=True)
+        if response.status_code == 200:
+            with open(filepath, 'wb') as f:
+                for chunk in response.iter_content(chunk_size=8192):
+                    if chunk:
+                        f.write(chunk)
+            return True
+        return False
+    except Exception as e:
+        print(f"Error downloading {url}: {str(e)}")
+        return False
+
 def save_papers_to_json(papers: List[Dict[str, str]], date: str) -> str:
     """
-    Save papers to a JSON file in the papers directory
+    Save papers to a JSON file and PDFs in the papers directory
+    
+    Structure:
+    papers/
+        - YYYY-MM-DD.json    # Paper information
+        - YYYY-MM-DD/        # PDF files
     
     Args:
         papers (List[Dict[str, str]]): List of paper dictionaries
@@ -130,42 +179,99 @@ def save_papers_to_json(papers: List[Dict[str, str]], date: str) -> str:
     Returns:
         str: Path to the saved JSON file
     """
-    # Create papers directory if it doesn't exist
-    papers_dir = Path("papers")
-    papers_dir.mkdir(exist_ok=True)
+    # Create base papers directory if it doesn't exist
+    base_dir = Path("papers")
+    base_dir.mkdir(exist_ok=True)
     
-    # Create filename with date
-    filename = papers_dir / f"papers_{date}.json"
+    # Create date-specific directory for PDFs
+    pdf_dir = base_dir / date
+    pdf_dir.mkdir(exist_ok=True)
     
-    # Save papers to JSON file
-    with open(filename, 'w', encoding='utf-8') as f:
+    # Save JSON file in base directory
+    json_file = base_dir / f"{date}.json"
+    with open(json_file, 'w', encoding='utf-8') as f:
         json.dump({"date": date, "papers": papers}, f, indent=2, ensure_ascii=False)
     
-    return str(filename)
+    # Download PDFs into date-specific directory
+    print(f"\nDownloading PDFs to {pdf_dir}...")
+    for i, paper in enumerate(papers, 1):
+        if paper.get('pdf_url'):
+            pdf_filename = clean_title(paper['title']) + '.pdf'
+            pdf_path = pdf_dir / pdf_filename
+            print(f"[{i}/{len(papers)}] Downloading: {pdf_filename}")
+            if download_pdf(paper['pdf_url'], pdf_path):
+                print(f"✓ Downloaded: {pdf_filename}")
+            else:
+                print(f"✗ Failed to download: {pdf_filename}")
+    
+    return str(json_file)
+
+def get_date_range(start_date: str, end_date: str) -> List[str]:
+    """
+    Get list of dates between start_date and end_date (inclusive)
+    
+    Args:
+        start_date (str): Start date in YYYY-MM-DD format
+        end_date (str): End date in YYYY-MM-DD format
+    
+    Returns:
+        List[str]: List of dates in YYYY-MM-DD format
+    """
+    start = datetime.strptime(start_date, '%Y-%m-%d')
+    end = datetime.strptime(end_date, '%Y-%m-%d')
+    
+    # Ensure start date is not after end date
+    if start > end:
+        start, end = end, start
+    
+    date_list = []
+    current = start
+    while current <= end:
+        date_list.append(current.strftime('%Y-%m-%d'))
+        current += timedelta(days=1)
+    
+    return date_list
 
 def main():
     # Set up argument parser
-    parser = argparse.ArgumentParser(description='Scrape papers from Hugging Face for a specific date')
-    parser.add_argument('--date', type=str, help='Date in YYYY-MM-DD format', default=datetime.now().strftime('%Y-%m-%d'))
+    parser = argparse.ArgumentParser(description='Scrape papers from Hugging Face for a date range')
+    parser.add_argument('--start-date', type=str, 
+                      help='Start date in YYYY-MM-DD format (default: today)',
+                      default=datetime.now().strftime('%Y-%m-%d'))
+    parser.add_argument('--end-date', type=str,
+                      help='End date in YYYY-MM-DD format (default: same as start date)',
+                      default=None)
     args = parser.parse_args()
-
+    
+    # If end date not provided, use start date
+    end_date = args.end_date if args.end_date else args.start_date
+    
     try:
-        # Scrape papers
-        papers = scrape_hf_papers(args.date)
+        # Get list of dates to process
+        dates = get_date_range(args.start_date, end_date)
+        total_dates = len(dates)
         
-        # Save to JSON file
-        json_file = save_papers_to_json(papers, args.date)
+        print(f"\nScraping papers from {dates[0]} to {dates[-1]} ({total_dates} day{'s' if total_dates > 1 else ''})")
         
-        # Print results
-        print(f"\nPapers for {args.date}:")
-        for paper in papers:
-            print(f"\nTitle: {paper['title']}")
-            print(f"URL: {paper['url']}")
-            print(f"Authors: {', '.join(paper['authors'])}")
-            print(f"PDF URL: {paper['pdf_url']}")
-            print(f"Abstract: {paper['abstract']}")
-            print(f"Upvotes: {paper['upvotes']}")
-        print(f"\nResults saved to: {json_file}")
+        # Process each date
+        for i, date in enumerate(dates, 1):
+            print(f"\n[{i}/{total_dates}] Processing {date}...")
+            
+            # Scrape papers for this date
+            papers = scrape_hf_papers(date)
+            
+            # Save to JSON file and download PDFs
+            json_file = save_papers_to_json(papers, date)
+            
+            # Print summary for this date
+            print(f"\nFound {len(papers)} papers for {date}")
+            print(f"Results saved to: {json_file}")
+            
+            # Add delay between dates
+            if i < total_dates:
+                time.sleep(1)  # 1 second delay between dates
+        
+        print(f"\nCompleted! Processed {total_dates} date{'s' if total_dates > 1 else ''}")
         
     except Exception as e:
         print(f"Error: {str(e)}")

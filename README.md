@@ -1,10 +1,10 @@
 # Hugging Face Daily Papers Scraper
 
-A Python script to scrape and collect papers from [Hugging Face's Daily Papers](https://huggingface.co/papers) page. The scraper extracts comprehensive information about each paper and saves it in JSON format.
+A Python script to scrape and collect papers from [Hugging Face's Daily Papers](https://huggingface.co/papers) page. The scraper extracts comprehensive information about each paper, downloads PDFs, and organizes them by date.
 
 ## Features
 
-- Scrape papers for any specific date
+- Scrape papers for a single date or date range
 - Extract detailed paper information:
   - Title
   - Landing page URL
@@ -12,9 +12,11 @@ A Python script to scrape and collect papers from [Hugging Face's Daily Papers](
   - PDF link (arxiv)
   - Full abstract
   - Upvote count
-- Save results in JSON format
+- Automatic PDF downloads
+- Organized file structure
+- Progress tracking for downloads
 - Rate limiting to be server-friendly
-- Command-line interface with date parameter
+- Command-line interface with date parameters
 
 ## Installation
 
@@ -31,28 +33,43 @@ pip install -r requirements.txt
 
 ## Usage
 
-### Basic Usage
+### Basic Usage (Today's Papers)
 Run the script without parameters to scrape today's papers:
 ```bash
 python hf_paper_scraper.py
 ```
 
-### Specify a Date
-Use the `--date` parameter to scrape papers from a specific date:
+### Single Date
+Use the `--start-date` parameter to scrape papers from a specific date:
 ```bash
-python hf_paper_scraper.py --date 2024-01-06
+python hf_paper_scraper.py --start-date 2024-01-06
 ```
 
-### Output
-The script will:
-1. Create a `papers` directory if it doesn't exist
-2. Save the results in `papers/papers_YYYY-MM-DD.json`
-3. Display the results in the console
+### Date Range
+Use both `--start-date` and `--end-date` to scrape papers from a range of dates:
+```bash
+python hf_paper_scraper.py --start-date 2024-01-01 --end-date 2024-01-06
+```
 
-Example JSON output structure:
+### Output Structure
+The script creates an organized directory structure:
+```
+papers/
+├── YYYY-MM-DD.json         # Paper metadata for each date
+├── YYYY-MM-DD/            # PDF files for each date
+│   ├── paper1.pdf
+│   ├── paper2.pdf
+│   └── ...
+├── next-date.json
+└── next-date/
+    └── ...
+```
+
+### JSON Format
+Each date's JSON file contains:
 ```json
 {
-  "date": "2024-01-06",
+  "date": "YYYY-MM-DD",
   "papers": [
     {
       "title": "Paper Title",
@@ -74,10 +91,15 @@ Example JSON output structure:
 
 ## Features
 
-- Date validation
+- Date validation and range support
 - Error handling for failed requests
-- Rate limiting (0.5s delay between requests)
-- Automatic JSON file organization
+- Rate limiting (0.5s between requests)
+- Progress tracking:
+  - Overall date progress
+  - Per-date PDF download progress
+  - Success/failure indicators
+- Automatic file organization
+- PDF downloads with clean filenames
 
 ## Contributing
 

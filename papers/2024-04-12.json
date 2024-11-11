@@ -1,0 +1,147 @@
+{
+  "date": "2024-04-12",
+  "papers": [
+    {
+      "title": "Rho-1: Not All Tokens Are What You Need",
+      "url": "https://huggingface.co/papers/2404.07965",
+      "authors": [
+        "Chen Lin",
+        "Jian Jiao",
+        "Nan Duan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.07965.pdf",
+      "abstract": "Previous language model pre-training methods have uniformly applied a\nnext-token prediction loss to all training tokens. Challenging this norm, we\nposit that \"Not all tokens in a corpus are equally important for language model\ntraining\". Our initial analysis delves into token-level training dynamics of\nlanguage model, revealing distinct loss patterns for different tokens.\nLeveraging these insights, we introduce a new language model called Rho-1.\nUnlike traditional LMs that learn to predict every next token in a corpus,\nRho-1 employs Selective Language Modeling (SLM), which selectively trains on\nuseful tokens that aligned with the desired distribution. This approach\ninvolves scoring pretraining tokens using a reference model, and then training\nthe language model with a focused loss on tokens with higher excess loss. When\ncontinual pretraining on 15B OpenWebMath corpus, Rho-1 yields an absolute\nimprovement in few-shot accuracy of up to 30% in 9 math tasks. After\nfine-tuning, Rho-1-1B and 7B achieved state-of-the-art results of 40.6% and\n51.8% on MATH dataset, respectively - matching DeepSeekMath with only 3% of the\npretraining tokens. Furthermore, when pretraining on 80B general tokens, Rho-1\nachieves 6.8% average enhancement across 15 diverse tasks, increasing both\nefficiency and performance of the language model pre-training.",
+      "upvotes": 84
+    },
+    {
+      "title": "ControlNet++: Improving Conditional Controls with Efficient Consistency Feedback",
+      "url": "https://huggingface.co/papers/2404.07987",
+      "authors": [
+        "Taojiannan Yang",
+        "Huafeng Kuang",
+        "Jie Wu",
+        "Zhaoning Wang",
+        "Chen Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.07987.pdf",
+      "abstract": "To enhance the controllability of text-to-image diffusion models, existing\nefforts like ControlNet incorporated image-based conditional controls. In this\npaper, we reveal that existing methods still face significant challenges in\ngenerating images that align with the image conditional controls. To this end,\nwe propose ControlNet++, a novel approach that improves controllable generation\nby explicitly optimizing pixel-level cycle consistency between generated images\nand conditional controls. Specifically, for an input conditional control, we\nuse a pre-trained discriminative reward model to extract the corresponding\ncondition of the generated images, and then optimize the consistency loss\nbetween the input conditional control and extracted condition. A\nstraightforward implementation would be generating images from random noises\nand then calculating the consistency loss, but such an approach requires\nstoring gradients for multiple sampling timesteps, leading to considerable time\nand memory costs. To address this, we introduce an efficient reward strategy\nthat deliberately disturbs the input images by adding noise, and then uses the\nsingle-step denoised images for reward fine-tuning. This avoids the extensive\ncosts associated with image sampling, allowing for more efficient reward\nfine-tuning. Extensive experiments show that ControlNet++ significantly\nimproves controllability under various conditional controls. For example, it\nachieves improvements over ControlNet by 7.9% mIoU, 13.4% SSIM, and 7.6% RMSE,\nrespectively, for segmentation mask, line-art edge, and depth conditions.",
+      "upvotes": 47
+    },
+    {
+      "title": "OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments",
+      "url": "https://huggingface.co/papers/2404.07972",
+      "authors": [
+        "Siheng Zhao",
+        "Zhoujun Cheng",
+        "Dongchan Shin",
+        "Fangyu Lei",
+        "Yitao Liu",
+        "Shuyan Zhou",
+        "Silvio Savarese",
+        "Caiming Xiong",
+        "Victor Zhong"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.07972.pdf",
+      "abstract": "Autonomous agents that accomplish complex computer tasks with minimal human\ninterventions have the potential to transform human-computer interaction,\nsignificantly enhancing accessibility and productivity. However, existing\nbenchmarks either lack an interactive environment or are limited to\nenvironments specific to certain applications or domains, failing to reflect\nthe diverse and complex nature of real-world computer use, thereby limiting the\nscope of tasks and agent scalability. To address this issue, we introduce\nOSWorld, the first-of-its-kind scalable, real computer environment for\nmultimodal agents, supporting task setup, execution-based evaluation, and\ninteractive learning across various operating systems such as Ubuntu, Windows,\nand macOS. OSWorld can serve as a unified, integrated computer environment for\nassessing open-ended computer tasks that involve arbitrary applications.\nBuilding upon OSWorld, we create a benchmark of 369 computer tasks involving\nreal web and desktop apps in open domains, OS file I/O, and workflows spanning\nmultiple applications. Each task example is derived from real-world computer\nuse cases and includes a detailed initial state setup configuration and a\ncustom execution-based evaluation script for reliable, reproducible evaluation.\nExtensive evaluation of state-of-the-art LLM/VLM-based agents on OSWorld\nreveals significant deficiencies in their ability to serve as computer\nassistants. While humans can accomplish over 72.36% of the tasks, the best\nmodel achieves only 12.24% success, primarily struggling with GUI grounding and\noperational knowledge. Comprehensive analysis using OSWorld provides valuable\ninsights for developing multimodal generalist agents that were not possible\nwith previous benchmarks. Our code, environment, baseline models, and data are\npublicly available at https://os-world.github.io.",
+      "upvotes": 46
+    },
+    {
+      "title": "RecurrentGemma: Moving Past Transformers for Efficient Open Language Models",
+      "url": "https://huggingface.co/papers/2404.07839",
+      "authors": [
+        "Samuel L Smith",
+        "Pier Giuseppe Sessa",
+        "Léonard Hussenot",
+        "Sertan Girgin",
+        "Olivier Bachem",
+        "Kathleen Kenealy",
+        "Thomas Mesnard",
+        "Cassidy Hardin",
+        "Shreya Pathak",
+        "Morgane Rivière"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.07839.pdf",
+      "abstract": "We introduce RecurrentGemma, an open language model which uses Google's novel\nGriffin architecture. Griffin combines linear recurrences with local attention\nto achieve excellent performance on language. It has a fixed-sized state, which\nreduces memory use and enables efficient inference on long sequences. We\nprovide a pre-trained model with 2B non-embedding parameters, and an\ninstruction tuned variant. Both models achieve comparable performance to\nGemma-2B despite being trained on fewer tokens.",
+      "upvotes": 42
+    },
+    {
+      "title": "Ferret-v2: An Improved Baseline for Referring and Grounding with Large Language Models",
+      "url": "https://huggingface.co/papers/2404.07973",
+      "authors": [
+        "Bowen Zhang",
+        "Chen Chen",
+        "Shih-Fu Chang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.07973.pdf",
+      "abstract": "While Ferret seamlessly integrates regional understanding into the Large\nLanguage Model (LLM) to facilitate its referring and grounding capability, it\nposes certain limitations: constrained by the pre-trained fixed visual encoder\nand failed to perform well on broader tasks. In this work, we unveil Ferret-v2,\na significant upgrade to Ferret, with three key designs. (1) Any resolution\ngrounding and referring: A flexible approach that effortlessly handles higher\nimage resolution, improving the model's ability to process and understand\nimages in greater detail. (2) Multi-granularity visual encoding: By integrating\nthe additional DINOv2 encoder, the model learns better and diverse underlying\ncontexts for global and fine-grained visual information. (3) A three-stage\ntraining paradigm: Besides image-caption alignment, an additional stage is\nproposed for high-resolution dense alignment before the final instruction\ntuning. Experiments show that Ferret-v2 provides substantial improvements over\nFerret and other state-of-the-art methods, thanks to its high-resolution\nscaling and fine-grained visual processing.",
+      "upvotes": 30
+    },
+    {
+      "title": "Best Practices and Lessons Learned on Synthetic Data for Language Models",
+      "url": "https://huggingface.co/papers/2404.07503",
+      "authors": [
+        "Steven Zheng",
+        "Daiyi Peng",
+        "Diyi Yang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.07503.pdf",
+      "abstract": "The success of AI models relies on the availability of large, diverse, and\nhigh-quality datasets, which can be challenging to obtain due to data scarcity,\nprivacy concerns, and high costs. Synthetic data has emerged as a promising\nsolution by generating artificial data that mimics real-world patterns. This\npaper provides an overview of synthetic data research, discussing its\napplications, challenges, and future directions. We present empirical evidence\nfrom prior art to demonstrate its effectiveness and highlight the importance of\nensuring its factuality, fidelity, and unbiasedness. We emphasize the need for\nresponsible use of synthetic data to build more powerful, inclusive, and\ntrustworthy language models.",
+      "upvotes": 29
+    },
+    {
+      "title": "WILBUR: Adaptive In-Context Learning for Robust and Accurate Web Agents",
+      "url": "https://huggingface.co/papers/2404.05902",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2404.05902.pdf",
+      "abstract": "In the realm of web agent research, achieving both generalization and\naccuracy remains a challenging problem. Due to high variance in website\nstructure, existing approaches often fail. Moreover, existing fine-tuning and\nin-context learning techniques fail to generalize across multiple websites. We\nintroduce Wilbur, an approach that uses a differentiable ranking model and a\nnovel instruction synthesis technique to optimally populate a black-box large\nlanguage model's prompt with task demonstrations from previous runs. To\nmaximize end-to-end success rates, we also propose an intelligent backtracking\nmechanism that learns and recovers from its mistakes. Finally, we show that our\nranking model can be trained on data from a generative auto-curriculum which\nsamples representative goals from an LLM, runs the agent, and automatically\nevaluates it, with no manual annotation. Wilbur achieves state-of-the-art\nresults on the WebVoyager benchmark, beating text-only models by 8% overall,\nand up to 36% on certain websites. On the same benchmark, Wilbur is within 5%\nof a strong multi-modal model despite only receiving textual inputs, and\nfurther analysis reveals a substantial number of failures are due to\nengineering challenges of operating the web.",
+      "upvotes": 20
+    },
+    {
+      "title": "LLoCO: Learning Long Contexts Offline",
+      "url": "https://huggingface.co/papers/2404.07979",
+      "authors": [
+        "Raluca Ada Popa"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.07979.pdf",
+      "abstract": "Processing long contexts remains a challenge for large language models (LLMs)\ndue to the quadratic computational and memory overhead of the self-attention\nmechanism and the substantial KV cache sizes during generation. We propose a\nnovel approach to address this problem by learning contexts offline through\ncontext compression and in-domain parameter-efficient finetuning. Our method\nenables an LLM to create a concise representation of the original context and\nefficiently retrieve relevant information to answer questions accurately. We\nintroduce LLoCO, a technique that combines context compression, retrieval, and\nparameter-efficient finetuning using LoRA. Our approach extends the effective\ncontext window of a 4k token LLaMA2-7B model to handle up to 128k tokens. We\nevaluate our approach on several long-context question-answering datasets,\ndemonstrating that LLoCO significantly outperforms in-context learning while\nusing 30times fewer tokens during inference. LLoCO achieves up to\n7.62times speed-up and substantially reduces the cost of long document\nquestion answering, making it a promising solution for efficient long context\nprocessing. Our code is publicly available at\nhttps://github.com/jeffreysijuntan/lloco.",
+      "upvotes": 20
+    },
+    {
+      "title": "HGRN2: Gated Linear RNNs with State Expansion",
+      "url": "https://huggingface.co/papers/2404.07904",
+      "authors": [
+        "Zhen Qin",
+        "Dong Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.07904.pdf",
+      "abstract": "Hierarchically gated linear RNN (HGRN,Qin et al. 2023) has demonstrated\ncompetitive training speed and performance in language modeling, while offering\nefficient inference. However, the recurrent state size of HGRN remains\nrelatively small, which limits its expressiveness.To address this issue,\ninspired by linear attention, we introduce a simple outer-product-based state\nexpansion mechanism so that the recurrent state size can be significantly\nenlarged without introducing any additional parameters. The linear attention\nform also allows for hardware-efficient training.Our extensive experiments\nverify the advantage of HGRN2 over HGRN1 in language modeling, image\nclassification, and Long Range Arena.Our largest 3B HGRN2 model slightly\noutperforms Mamba and LLaMa Architecture Transformer for language modeling in a\ncontrolled experiment setting; and performs competitively with many open-source\n3B models in downstream evaluation while using much fewer total training\ntokens.",
+      "upvotes": 17
+    },
+    {
+      "title": "Applying Guidance in a Limited Interval Improves Sample and Distribution Quality in Diffusion Models",
+      "url": "https://huggingface.co/papers/2404.07724",
+      "authors": [
+        "Samuli Laine",
+        "Timo Aila",
+        "Jaakko Lehtinen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.07724.pdf",
+      "abstract": "Guidance is a crucial technique for extracting the best performance out of\nimage-generating diffusion models. Traditionally, a constant guidance weight\nhas been applied throughout the sampling chain of an image. We show that\nguidance is clearly harmful toward the beginning of the chain (high noise\nlevels), largely unnecessary toward the end (low noise levels), and only\nbeneficial in the middle. We thus restrict it to a specific range of noise\nlevels, improving both the inference speed and result quality. This limited\nguidance interval improves the record FID in ImageNet-512 significantly, from\n1.81 to 1.40. We show that it is quantitatively and qualitatively beneficial\nacross different sampler parameters, network architectures, and datasets,\nincluding the large-scale setting of Stable Diffusion XL. We thus suggest\nexposing the guidance interval as a hyperparameter in all diffusion models that\nuse guidance.",
+      "upvotes": 12
+    },
+    {
+      "title": "Sparse Laneformer",
+      "url": "https://huggingface.co/papers/2404.07821",
+      "authors": [
+        "Ji Liu",
+        "Dong Li",
+        "Yile Xie",
+        "Lu Tian",
+        "Ashish Sirasao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.07821.pdf",
+      "abstract": "Lane detection is a fundamental task in autonomous driving, and has achieved\ngreat progress as deep learning emerges. Previous anchor-based methods often\ndesign dense anchors, which highly depend on the training dataset and remain\nfixed during inference. We analyze that dense anchors are not necessary for\nlane detection, and propose a transformer-based lane detection framework based\non a sparse anchor mechanism. To this end, we generate sparse anchors with\nposition-aware lane queries and angle queries instead of traditional explicit\nanchors. We adopt Horizontal Perceptual Attention (HPA) to aggregate the lane\nfeatures along the horizontal direction, and adopt Lane-Angle Cross Attention\n(LACA) to perform interactions between lane queries and angle queries. We also\npropose Lane Perceptual Attention (LPA) based on deformable cross attention to\nfurther refine the lane predictions. Our method, named Sparse Laneformer, is\neasy-to-implement and end-to-end trainable. Extensive experiments demonstrate\nthat Sparse Laneformer performs favorably against the state-of-the-art methods,\ne.g., surpassing Laneformer by 3.0% F1 score and O2SFormer by 0.7% F1 score\nwith fewer MACs on CULane with the same ResNet-34 backbone.",
+      "upvotes": 11
+    }
+  ]
+}

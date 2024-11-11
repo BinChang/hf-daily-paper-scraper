@@ -1,0 +1,234 @@
+{
+  "date": "2024-09-04",
+  "papers": [
+    {
+      "title": "General OCR Theory: Towards OCR-2.0 via a Unified End-to-end Model",
+      "url": "https://huggingface.co/papers/2409.01704",
+      "authors": [
+        "Jinyue Chen",
+        "Jia Wang",
+        "Yanming Xu",
+        "Zheng Ge",
+        "Liang Zhao",
+        "Jianjian Sun",
+        "Chunrui Han",
+        "Xiangyu Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.01704.pdf",
+      "abstract": "Traditional OCR systems (OCR-1.0) are increasingly unable to meet people's\nusage due to the growing demand for intelligent processing of man-made optical\ncharacters. In this paper, we collectively refer to all artificial optical\nsignals (e.g., plain texts, math/molecular formulas, tables, charts, sheet\nmusic, and even geometric shapes) as \"characters\" and propose the General OCR\nTheory along with an excellent model, namely GOT, to promote the arrival of\nOCR-2.0. The GOT, with 580M parameters, is a unified, elegant, and end-to-end\nmodel, consisting of a high-compression encoder and a long-contexts decoder. As\nan OCR-2.0 model, GOT can handle all the above \"characters\" under various OCR\ntasks. On the input side, the model supports commonly used scene- and\ndocument-style images in slice and whole-page styles. On the output side, GOT\ncan generate plain or formatted results (markdown/tikz/smiles/kern) via an easy\nprompt. Besides, the model enjoys interactive OCR features, i.e., region-level\nrecognition guided by coordinates or colors. Furthermore, we also adapt dynamic\nresolution and multi-page OCR technologies to GOT for better practicality. In\nexperiments, we provide sufficient results to prove the superiority of our\nmodel.",
+      "upvotes": 81
+    },
+    {
+      "title": "OLMoE: Open Mixture-of-Experts Language Models",
+      "url": "https://huggingface.co/papers/2409.02060",
+      "authors": [
+        "Kyle Lo",
+        "Pete Walsh",
+        "Noah A. Smith"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.02060.pdf",
+      "abstract": "We introduce OLMoE, a fully open, state-of-the-art language model leveraging\nsparse Mixture-of-Experts (MoE). OLMoE-1B-7B has 7 billion (B) parameters but\nuses only 1B per input token. We pretrain it on 5 trillion tokens and further\nadapt it to create OLMoE-1B-7B-Instruct. Our models outperform all available\nmodels with similar active parameters, even surpassing larger ones like\nLlama2-13B-Chat and DeepSeekMoE-16B. We present various experiments on MoE\ntraining, analyze routing in our model showing high specialization, and\nopen-source all aspects of our work: model weights, training data, code, and\nlogs.",
+      "upvotes": 77
+    },
+    {
+      "title": "Kvasir-VQA: A Text-Image Pair GI Tract Dataset",
+      "url": "https://huggingface.co/papers/2409.01437",
+      "authors": [
+        "Andrea Storås",
+        "Pål Halvorsen",
+        "Michael A. Riegler"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.01437.pdf",
+      "abstract": "We introduce Kvasir-VQA, an extended dataset derived from the HyperKvasir and\nKvasir-Instrument datasets, augmented with question-and-answer annotations to\nfacilitate advanced machine learning tasks in Gastrointestinal (GI)\ndiagnostics. This dataset comprises 6,500 annotated images spanning various GI\ntract conditions and surgical instruments, and it supports multiple question\ntypes including yes/no, choice, location, and numerical count. The dataset is\nintended for applications such as image captioning, Visual Question Answering\n(VQA), text-based generation of synthetic medical images, object detection, and\nclassification. Our experiments demonstrate the dataset's effectiveness in\ntraining models for three selected tasks, showcasing significant applications\nin medical image analysis and diagnostics. We also present evaluation metrics\nfor each task, highlighting the usability and versatility of our dataset. The\ndataset and supporting artifacts are available at\nhttps://datasets.simula.no/kvasir-vqa.",
+      "upvotes": 70
+    },
+    {
+      "title": "LongRecipe: Recipe for Efficient Long Context Generalization in Large Languge Models",
+      "url": "https://huggingface.co/papers/2409.00509",
+      "authors": [
+        "Yan Wang",
+        "Qing Gu",
+        "See-Kiong Ng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.00509.pdf",
+      "abstract": "Large language models (LLMs) face significant challenges in handling\nlong-context tasks because of their limited effective context window size\nduring pretraining, which restricts their ability to generalize over extended\nsequences. Meanwhile, extending the context window in LLMs through\npost-pretraining is highly resource-intensive. To address this, we introduce\n**LongRecipe**, an efficient training strategy for extending the context window\nof LLMs, including impactful token analysis, position index transformation, and\ntraining optimization strategies. It simulates long-sequence inputs while\nmaintaining training efficiency and significantly improves the model's\nunderstanding of long-range dependencies. Experiments on three types of LLMs\nshow that LongRecipe can utilize long sequences while requiring only 30% of the\ntarget context window size, and reduces computational training resource over\n85% compared to full sequence training. Furthermore, LongRecipe also preserves\nthe original LLM's capabilities in general tasks. Ultimately, *we can extend\nthe effective context window of open-source LLMs from 8k to 128k, achieving\nperformance close to GPT-4 with just one day of dedicated training using a\nsingle GPU with 80G memory.* Our code is released at the\n[link](https://github.com/zhiyuanhubj/LongRecipe).",
+      "upvotes": 38
+    },
+    {
+      "title": "DepthCrafter: Generating Consistent Long Depth Sequences for Open-world Videos",
+      "url": "https://huggingface.co/papers/2409.02095",
+      "authors": [
+        "Yong Zhang",
+        "Long Quan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.02095.pdf",
+      "abstract": "Despite significant advancements in monocular depth estimation for static\nimages, estimating video depth in the open world remains challenging, since\nopen-world videos are extremely diverse in content, motion, camera movement,\nand length. We present DepthCrafter, an innovative method for generating\ntemporally consistent long depth sequences with intricate details for\nopen-world videos, without requiring any supplementary information such as\ncamera poses or optical flow. DepthCrafter achieves generalization ability to\nopen-world videos by training a video-to-depth model from a pre-trained\nimage-to-video diffusion model, through our meticulously designed three-stage\ntraining strategy with the compiled paired video-depth datasets. Our training\napproach enables the model to generate depth sequences with variable lengths at\none time, up to 110 frames, and harvest both precise depth details and rich\ncontent diversity from realistic and synthetic datasets. We also propose an\ninference strategy that processes extremely long videos through segment-wise\nestimation and seamless stitching. Comprehensive evaluations on multiple\ndatasets reveal that DepthCrafter achieves state-of-the-art performance in\nopen-world video depth estimation under zero-shot settings. Furthermore,\nDepthCrafter facilitates various downstream applications, including depth-based\nvisual effects and conditional video generation.",
+      "upvotes": 35
+    },
+    {
+      "title": "FLUX that Plays Music",
+      "url": "https://huggingface.co/papers/2409.00587",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2409.00587.pdf",
+      "abstract": "This paper explores a simple extension of diffusion-based rectified flow\nTransformers for text-to-music generation, termed as FluxMusic. Generally,\nalong with design in advanced\nFluxhttps://github.com/black-forest-labs/flux model, we transfers it\ninto a latent VAE space of mel-spectrum. It involves first applying a sequence\nof independent attention to the double text-music stream, followed by a stacked\nsingle music stream for denoised patch prediction. We employ multiple\npre-trained text encoders to sufficiently capture caption semantic information\nas well as inference flexibility. In between, coarse textual information, in\nconjunction with time step embeddings, is utilized in a modulation mechanism,\nwhile fine-grained textual details are concatenated with the music patch\nsequence as inputs. Through an in-depth study, we demonstrate that rectified\nflow training with an optimized architecture significantly outperforms\nestablished diffusion methods for the text-to-music task, as evidenced by\nvarious automatic metrics and human preference evaluations. Our experimental\ndata, code, and model weights are made publicly available at:\nhttps://github.com/feizc/FluxMusic.",
+      "upvotes": 31
+    },
+    {
+      "title": "LinFusion: 1 GPU, 1 Minute, 16K Image",
+      "url": "https://huggingface.co/papers/2409.02097",
+      "authors": [
+        "Xinchao Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.02097.pdf",
+      "abstract": "Modern diffusion models, particularly those utilizing a Transformer-based\nUNet for denoising, rely heavily on self-attention operations to manage complex\nspatial relationships, thus achieving impressive generation performance.\nHowever, this existing paradigm faces significant challenges in generating\nhigh-resolution visual content due to its quadratic time and memory complexity\nwith respect to the number of spatial tokens. To address this limitation, we\naim at a novel linear attention mechanism as an alternative in this paper.\nSpecifically, we begin our exploration from recently introduced models with\nlinear complexity, e.g., Mamba, Mamba2, and Gated Linear Attention, and\nidentify two key features-attention normalization and non-causal inference-that\nenhance high-resolution visual generation performance. Building on these\ninsights, we introduce a generalized linear attention paradigm, which serves as\na low-rank approximation of a wide spectrum of popular linear token mixers. To\nsave the training cost and better leverage pre-trained models, we initialize\nour models and distill the knowledge from pre-trained StableDiffusion (SD). We\nfind that the distilled model, termed LinFusion, achieves performance on par\nwith or superior to the original SD after only modest training, while\nsignificantly reducing time and memory complexity. Extensive experiments on\nSD-v1.5, SD-v2.1, and SD-XL demonstrate that LinFusion delivers satisfactory\nzero-shot cross-resolution generation performance, generating high-resolution\nimages like 16K resolution. Moreover, it is highly compatible with pre-trained\nSD components, such as ControlNet and IP-Adapter, requiring no adaptation\nefforts. Codes are available at https://github.com/Huage001/LinFusion.",
+      "upvotes": 31
+    },
+    {
+      "title": "VideoLLaMB: Long-context Video Understanding with Recurrent Memory Bridges",
+      "url": "https://huggingface.co/papers/2409.01071",
+      "authors": [
+        "Yang Liu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.01071.pdf",
+      "abstract": "Recent advancements in large-scale video-language models have shown\nsignificant potential for real-time planning and detailed interactions.\nHowever, their high computational demands and the scarcity of annotated\ndatasets limit their practicality for academic researchers. In this work, we\nintroduce VideoLLaMB, a novel framework that utilizes temporal memory tokens\nwithin bridge layers to allow for the encoding of entire video sequences\nalongside historical visual data, effectively preserving semantic continuity\nand enhancing model performance across various tasks. This approach includes\nrecurrent memory tokens and a SceneTilling algorithm, which segments videos\ninto independent semantic units to preserve semantic integrity. Empirically,\nVideoLLaMB significantly outstrips existing video-language models,\ndemonstrating a 5.5 points improvement over its competitors across three\nVideoQA benchmarks, and 2.06 points on egocentric planning. Comprehensive\nresults on the MVBench show that VideoLLaMB-7B achieves markedly better results\nthan previous 7B models of same LLM. Remarkably, it maintains robust\nperformance as PLLaVA even as video length increases up to 8 times. Besides,\nthe frame retrieval results on our specialized Needle in a Video Haystack\n(NIAVH) benchmark, further validate VideoLLaMB's prowess in accurately\nidentifying specific frames within lengthy videos. Our SceneTilling algorithm\nalso enables the generation of streaming video captions directly, without\nnecessitating additional training. In terms of efficiency, VideoLLaMB, trained\non 16 frames, supports up to 320 frames on a single Nvidia A100 GPU with linear\nGPU memory scaling, ensuring both high performance and cost-effectiveness,\nthereby setting a new foundation for long-form video-language models in both\nacademic and practical applications.",
+      "upvotes": 26
+    },
+    {
+      "title": "Diffusion Policy Policy Optimization",
+      "url": "https://huggingface.co/papers/2409.00588",
+      "authors": [
+        "Anthony Simeonov",
+        "Anirudha Majumdar",
+        "Benjamin Burchfiel"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.00588.pdf",
+      "abstract": "We introduce Diffusion Policy Policy Optimization, DPPO, an algorithmic\nframework including best practices for fine-tuning diffusion-based policies\n(e.g. Diffusion Policy) in continuous control and robot learning tasks using\nthe policy gradient (PG) method from reinforcement learning (RL). PG methods\nare ubiquitous in training RL policies with other policy parameterizations;\nnevertheless, they had been conjectured to be less efficient for\ndiffusion-based policies. Surprisingly, we show that DPPO achieves the\nstrongest overall performance and efficiency for fine-tuning in common\nbenchmarks compared to other RL methods for diffusion-based policies and also\ncompared to PG fine-tuning of other policy parameterizations. Through\nexperimental investigation, we find that DPPO takes advantage of unique\nsynergies between RL fine-tuning and the diffusion parameterization, leading to\nstructured and on-manifold exploration, stable training, and strong policy\nrobustness. We further demonstrate the strengths of DPPO in a range of\nrealistic settings, including simulated robotic tasks with pixel observations,\nand via zero-shot deployment of simulation-trained policies on robot hardware\nin a long-horizon, multi-stage manipulation task. Website with code:\ndiffusion-ppo.github.io",
+      "upvotes": 19
+    },
+    {
+      "title": "Compositional 3D-aware Video Generation with LLM Director",
+      "url": "https://huggingface.co/papers/2409.00558",
+      "authors": [
+        "Anni Tang",
+        "Zhibo Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.00558.pdf",
+      "abstract": "Significant progress has been made in text-to-video generation through the\nuse of powerful generative models and large-scale internet data. However,\nsubstantial challenges remain in precisely controlling individual concepts\nwithin the generated video, such as the motion and appearance of specific\ncharacters and the movement of viewpoints. In this work, we propose a novel\nparadigm that generates each concept in 3D representation separately and then\ncomposes them with priors from Large Language Models (LLM) and 2D diffusion\nmodels. Specifically, given an input textual prompt, our scheme consists of\nthree stages: 1) We leverage LLM as the director to first decompose the complex\nquery into several sub-prompts that indicate individual concepts within the\nvideo~(e.g., scene, objects, motions), then we let LLM to invoke\npre-trained expert models to obtain corresponding 3D representations of\nconcepts. 2) To compose these representations, we prompt multi-modal LLM to\nproduce coarse guidance on the scales and coordinates of trajectories for the\nobjects. 3) To make the generated frames adhere to natural image distribution,\nwe further leverage 2D diffusion priors and use Score Distillation Sampling to\nrefine the composition. Extensive experiments demonstrate that our method can\ngenerate high-fidelity videos from text with diverse motion and flexible\ncontrol over each concept. Project page: https://aka.ms/c3v.",
+      "upvotes": 14
+    },
+    {
+      "title": "ContextCite: Attributing Model Generation to Context",
+      "url": "https://huggingface.co/papers/2409.00729",
+      "authors": [
+        "Aleksander Madry"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.00729.pdf",
+      "abstract": "How do language models use information provided as context when generating a\nresponse? Can we infer whether a particular generated statement is actually\ngrounded in the context, a misinterpretation, or fabricated? To help answer\nthese questions, we introduce the problem of context attribution: pinpointing\nthe parts of the context (if any) that led a model to generate a particular\nstatement. We then present ContextCite, a simple and scalable method for\ncontext attribution that can be applied on top of any existing language model.\nFinally, we showcase the utility of ContextCite through three applications: (1)\nhelping verify generated statements (2) improving response quality by pruning\nthe context and (3) detecting poisoning attacks. We provide code for\nContextCite at https://github.com/MadryLab/context-cite.",
+      "upvotes": 13
+    },
+    {
+      "title": "OD-VAE: An Omni-dimensional Video Compressor for Improving Latent Video Diffusion Model",
+      "url": "https://huggingface.co/papers/2409.01199",
+      "authors": [
+        "Liuhan Chen",
+        "Zongjian Li",
+        "Bin Lin",
+        "Bin Zhu",
+        "Qian Wang",
+        "Xing Zhou",
+        "Xinghua Cheng",
+        "Li Yuan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.01199.pdf",
+      "abstract": "Variational Autoencoder (VAE), compressing videos into latent\nrepresentations, is a crucial preceding component of Latent Video Diffusion\nModels (LVDMs). With the same reconstruction quality, the more sufficient the\nVAE's compression for videos is, the more efficient the LVDMs are. However,\nmost LVDMs utilize 2D image VAE, whose compression for videos is only in the\nspatial dimension and often ignored in the temporal dimension. How to conduct\ntemporal compression for videos in a VAE to obtain more concise latent\nrepresentations while promising accurate reconstruction is seldom explored. To\nfill this gap, we propose an omni-dimension compression VAE, named OD-VAE,\nwhich can temporally and spatially compress videos. Although OD-VAE's more\nsufficient compression brings a great challenge to video reconstruction, it can\nstill achieve high reconstructed accuracy by our fine design. To obtain a\nbetter trade-off between video reconstruction quality and compression speed,\nfour variants of OD-VAE are introduced and analyzed. In addition, a novel tail\ninitialization is designed to train OD-VAE more efficiently, and a novel\ninference strategy is proposed to enable OD-VAE to handle videos of arbitrary\nlength with limited GPU memory. Comprehensive experiments on video\nreconstruction and LVDM-based video generation demonstrate the effectiveness\nand efficiency of our proposed methods.",
+      "upvotes": 12
+    },
+    {
+      "title": "Accurate Compression of Text-to-Image Diffusion Models via Vector Quantization",
+      "url": "https://huggingface.co/papers/2409.00492",
+      "authors": [
+        "Daniil Pavlov"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.00492.pdf",
+      "abstract": "Text-to-image diffusion models have emerged as a powerful framework for\nhigh-quality image generation given textual prompts. Their success has driven\nthe rapid development of production-grade diffusion models that consistently\nincrease in size and already contain billions of parameters. As a result,\nstate-of-the-art text-to-image models are becoming less accessible in practice,\nespecially in resource-limited environments. Post-training quantization (PTQ)\ntackles this issue by compressing the pretrained model weights into lower-bit\nrepresentations. Recent diffusion quantization techniques primarily rely on\nuniform scalar quantization, providing decent performance for the models\ncompressed to 4 bits. This work demonstrates that more versatile vector\nquantization (VQ) may achieve higher compression rates for large-scale\ntext-to-image diffusion models. Specifically, we tailor vector-based PTQ\nmethods to recent billion-scale text-to-image models (SDXL and SDXL-Turbo), and\nshow that the diffusion models of 2B+ parameters compressed to around 3 bits\nusing VQ exhibit the similar image quality and textual alignment as previous\n4-bit compression techniques.",
+      "upvotes": 11
+    },
+    {
+      "title": "GenAgent: Build Collaborative AI Systems with Automated Workflow Generation -- Case Studies on ComfyUI",
+      "url": "https://huggingface.co/papers/2409.01392",
+      "authors": [
+        "Xiangyuan Xue",
+        "Di Huang",
+        "Wanli Ouyang",
+        "Lei Bai"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.01392.pdf",
+      "abstract": "Much previous AI research has focused on developing monolithic models to\nmaximize their intelligence and capability, with the primary goal of enhancing\nperformance on specific tasks. In contrast, this paper explores an alternative\napproach: collaborative AI systems that use workflows to integrate models, data\nsources, and pipelines to solve complex and diverse tasks. We introduce\nGenAgent, an LLM-based framework that automatically generates complex\nworkflows, offering greater flexibility and scalability compared to monolithic\nmodels. The core innovation of GenAgent lies in representing workflows with\ncode, alongside constructing workflows with collaborative agents in a\nstep-by-step manner. We implement GenAgent on the ComfyUI platform and propose\na new benchmark, OpenComfy. The results demonstrate that GenAgent outperforms\nbaseline approaches in both run-level and task-level evaluations, showing its\ncapability to generate complex workflows with superior effectiveness and\nstability.",
+      "upvotes": 9
+    },
+    {
+      "title": "Follow-Your-Canvas: Higher-Resolution Video Outpainting with Extensive Content Generation",
+      "url": "https://huggingface.co/papers/2409.01055",
+      "authors": [
+        "Qihua Chen",
+        "Yue Ma",
+        "Hongfa Wang",
+        "Junkun Yuan",
+        "Wenzhe Zhao",
+        "Qi Tian",
+        "Hongmei Wang",
+        "Shaobo Min",
+        "Wei Liu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.01055.pdf",
+      "abstract": "This paper explores higher-resolution video outpainting with extensive\ncontent generation. We point out common issues faced by existing methods when\nattempting to largely outpaint videos: the generation of low-quality content\nand limitations imposed by GPU memory. To address these challenges, we propose\na diffusion-based method called Follow-Your-Canvas. It builds upon two\ncore designs. First, instead of employing the common practice of \"single-shot\"\noutpainting, we distribute the task across spatial windows and seamlessly merge\nthem. It allows us to outpaint videos of any size and resolution without being\nconstrained by GPU memory. Second, the source video and its relative positional\nrelation are injected into the generation process of each window. It makes the\ngenerated spatial layout within each window harmonize with the source video.\nCoupling with these two designs enables us to generate higher-resolution\noutpainting videos with rich content while keeping spatial and temporal\nconsistency. Follow-Your-Canvas excels in large-scale video outpainting, e.g.,\nfrom 512X512 to 1152X2048 (9X), while producing high-quality and aesthetically\npleasing results. It achieves the best quantitative results across various\nresolution and scale setups. The code is released on\nhttps://github.com/mayuelala/FollowYourCanvas",
+      "upvotes": 6
+    },
+    {
+      "title": "Density Adaptive Attention-based Speech Network: Enhancing Feature Understanding for Mental Health Disorders",
+      "url": "https://huggingface.co/papers/2409.00391",
+      "authors": [
+        "Georgios Ioannides",
+        "Adrian Kieback"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.00391.pdf",
+      "abstract": "Speech-based depression detection poses significant challenges for automated\ndetection due to its unique manifestation across individuals and data scarcity.\nAddressing these challenges, we introduce DAAMAudioCNNLSTM and\nDAAMAudioTransformer, two parameter efficient and explainable models for audio\nfeature extraction and depression detection. DAAMAudioCNNLSTM features a novel\nCNN-LSTM framework with multi-head Density Adaptive Attention Mechanism (DAAM),\nfocusing dynamically on informative speech segments. DAAMAudioTransformer,\nleveraging a transformer encoder in place of the CNN-LSTM architecture,\nincorporates the same DAAM module for enhanced attention and interpretability.\nThese approaches not only enhance detection robustness and interpretability but\nalso achieve state-of-the-art performance: DAAMAudioCNNLSTM with an F1 macro\nscore of 0.702 and DAAMAudioTransformer with an F1 macro score of 0.72 on the\nDAIC-WOZ dataset, without reliance on supplementary information such as vowel\npositions and speaker information during training/validation as in previous\napproaches. Both models' significant explainability and efficiency in\nleveraging speech signals for depression detection represent a leap towards\nmore reliable, clinically useful diagnostic tools, promising advancements in\nspeech and mental health care. To foster further research in this domain, we\nmake our code publicly available.",
+      "upvotes": 4
+    },
+    {
+      "title": "Know When to Fuse: Investigating Non-English Hybrid Retrieval in the Legal Domain",
+      "url": "https://huggingface.co/papers/2409.01357",
+      "authors": [
+        "Gijs van Dijck",
+        "Gerasimos Spanakis"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.01357.pdf",
+      "abstract": "Hybrid search has emerged as an effective strategy to offset the limitations\nof different matching paradigms, especially in out-of-domain contexts where\nnotable improvements in retrieval quality have been observed. However, existing\nresearch predominantly focuses on a limited set of retrieval methods, evaluated\nin pairs on domain-general datasets exclusively in English. In this work, we\nstudy the efficacy of hybrid search across a variety of prominent retrieval\nmodels within the unexplored field of law in the French language, assessing\nboth zero-shot and in-domain scenarios. Our findings reveal that in a zero-shot\ncontext, fusing different domain-general models consistently enhances\nperformance compared to using a standalone model, regardless of the fusion\nmethod. Surprisingly, when models are trained in-domain, we find that fusion\ngenerally diminishes performance relative to using the best single system,\nunless fusing scores with carefully tuned weights. These novel insights, among\nothers, expand the applicability of prior findings across a new field and\nlanguage, and contribute to a deeper understanding of hybrid search in\nnon-English specialized domains.",
+      "upvotes": 2
+    },
+    {
+      "title": "The MERIT Dataset: Modelling and Efficiently Rendering Interpretable Transcripts",
+      "url": "https://huggingface.co/papers/2409.00447",
+      "authors": [
+        "A. Sanchez-Cuadrado",
+        "J. Boal"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.00447.pdf",
+      "abstract": "This paper introduces the MERIT Dataset, a multimodal (text + image + layout)\nfully labeled dataset within the context of school reports. Comprising over 400\nlabels and 33k samples, the MERIT Dataset is a valuable resource for training\nmodels in demanding Visually-rich Document Understanding (VrDU) tasks. By its\nnature (student grade reports), the MERIT Dataset can potentially include\nbiases in a controlled way, making it a valuable tool to benchmark biases\ninduced in Language Models (LLMs). The paper outlines the dataset's generation\npipeline and highlights its main features in the textual, visual, layout, and\nbias domains. To demonstrate the dataset's utility, we present a benchmark with\ntoken classification models, showing that the dataset poses a significant\nchallenge even for SOTA models and that these would greatly benefit from\nincluding samples from the MERIT Dataset in their pretraining phase.",
+      "upvotes": 2
+    },
+    {
+      "title": "PrivacyLens: Evaluating Privacy Norm Awareness of Language Models in Action",
+      "url": "https://huggingface.co/papers/2409.00138",
+      "authors": [
+        "Tianshi Li",
+        "Weiyan Shi",
+        "Yanchen Liu",
+        "Diyi Yang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.00138.pdf",
+      "abstract": "As language models (LMs) are widely utilized in personalized communication\nscenarios (e.g., sending emails, writing social media posts) and endowed with a\ncertain level of agency, ensuring they act in accordance with the contextual\nprivacy norms becomes increasingly critical. However, quantifying the privacy\nnorm awareness of LMs and the emerging privacy risk in LM-mediated\ncommunication is challenging due to (1) the contextual and long-tailed nature\nof privacy-sensitive cases, and (2) the lack of evaluation approaches that\ncapture realistic application scenarios. To address these challenges, we\npropose PrivacyLens, a novel framework designed to extend privacy-sensitive\nseeds into expressive vignettes and further into agent trajectories, enabling\nmulti-level evaluation of privacy leakage in LM agents' actions. We instantiate\nPrivacyLens with a collection of privacy norms grounded in privacy literature\nand crowdsourced seeds. Using this dataset, we reveal a discrepancy between LM\nperformance in answering probing questions and their actual behavior when\nexecuting user instructions in an agent setup. State-of-the-art LMs, like GPT-4\nand Llama-3-70B, leak sensitive information in 25.68% and 38.69% of cases, even\nwhen prompted with privacy-enhancing instructions. We also demonstrate the\ndynamic nature of PrivacyLens by extending each seed into multiple trajectories\nto red-team LM privacy leakage risk. Dataset and code are available at\nhttps://github.com/SALT-NLP/PrivacyLens.",
+      "upvotes": 1
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "date": "2024-09-18",
+  "papers": [
+    {
+      "title": "OmniGen: Unified Image Generation",
+      "url": "https://huggingface.co/papers/2409.11340",
+      "authors": [
+        "Tiejun Huang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.11340.pdf",
+      "abstract": "In this work, we introduce OmniGen, a new diffusion model for unified image\ngeneration. Unlike popular diffusion models (e.g., Stable Diffusion), OmniGen\nno longer requires additional modules such as ControlNet or IP-Adapter to\nprocess diverse control conditions. OmniGenis characterized by the following\nfeatures: 1) Unification: OmniGen not only demonstrates text-to-image\ngeneration capabilities but also inherently supports other downstream tasks,\nsuch as image editing, subject-driven generation, and visual-conditional\ngeneration. Additionally, OmniGen can handle classical computer vision tasks by\ntransforming them into image generation tasks, such as edge detection and human\npose recognition. 2) Simplicity: The architecture of OmniGen is highly\nsimplified, eliminating the need for additional text encoders. Moreover, it is\nmore user-friendly compared to existing diffusion models, enabling complex\ntasks to be accomplished through instructions without the need for extra\npreprocessing steps (e.g., human pose estimation), thereby significantly\nsimplifying the workflow of image generation. 3) Knowledge Transfer: Through\nlearning in a unified format, OmniGen effectively transfers knowledge across\ndifferent tasks, manages unseen tasks and domains, and exhibits novel\ncapabilities. We also explore the model's reasoning capabilities and potential\napplications of chain-of-thought mechanism. This work represents the first\nattempt at a general-purpose image generation model, and there remain several\nunresolved issues. We will open-source the related resources at\nhttps://github.com/VectorSpaceLab/OmniGen to foster advancements in this field.",
+      "upvotes": 107
+    },
+    {
+      "title": "NVLM: Open Frontier-Class Multimodal LLMs",
+      "url": "https://huggingface.co/papers/2409.11402",
+      "authors": [
+        "Wei Ping"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.11402.pdf",
+      "abstract": "We introduce NVLM 1.0, a family of frontier-class multimodal large language\nmodels (LLMs) that achieve state-of-the-art results on vision-language tasks,\nrivaling the leading proprietary models (e.g., GPT-4o) and open-access models\n(e.g., Llama 3-V 405B and InternVL 2). Remarkably, NVLM 1.0 shows improved\ntext-only performance over its LLM backbone after multimodal training. In terms\nof model design, we perform a comprehensive comparison between decoder-only\nmultimodal LLMs (e.g., LLaVA) and cross-attention-based models (e.g.,\nFlamingo). Based on the strengths and weaknesses of both approaches, we propose\na novel architecture that enhances both training efficiency and multimodal\nreasoning capabilities. Furthermore, we introduce a 1-D tile-tagging design for\ntile-based dynamic high-resolution images, which significantly boosts\nperformance on multimodal reasoning and OCR-related tasks. Regarding training\ndata, we meticulously curate and provide detailed information on our multimodal\npretraining and supervised fine-tuning datasets. Our findings indicate that\ndataset quality and task diversity are more important than scale, even during\nthe pretraining phase, across all architectures. Notably, we develop\nproduction-grade multimodality for the NVLM-1.0 models, enabling them to excel\nin vision-language tasks while maintaining and even improving text-only\nperformance compared to their LLM backbones. To achieve this, we craft and\nintegrate a high-quality text-only dataset into multimodal training, alongside\na substantial amount of multimodal math and reasoning data, leading to enhanced\nmath and coding capabilities across modalities. To advance research in the\nfield, we are releasing the model weights and will open-source the code for the\ncommunity: https://nvlm-project.github.io/.",
+      "upvotes": 71
+    },
+    {
+      "title": "Fine-Tuning Image-Conditional Diffusion Models is Easier than You Think",
+      "url": "https://huggingface.co/papers/2409.11355",
+      "authors": [
+        "Christian Schmidt",
+        "Bastian Leibe"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.11355.pdf",
+      "abstract": "Recent work showed that large diffusion models can be reused as highly\nprecise monocular depth estimators by casting depth estimation as an\nimage-conditional image generation task. While the proposed model achieved\nstate-of-the-art results, high computational demands due to multi-step\ninference limited its use in many scenarios. In this paper, we show that the\nperceived inefficiency was caused by a flaw in the inference pipeline that has\nso far gone unnoticed. The fixed model performs comparably to the best\npreviously reported configuration while being more than 200times faster. To\noptimize for downstream task performance, we perform end-to-end fine-tuning on\ntop of the single-step model with task-specific losses and get a deterministic\nmodel that outperforms all other diffusion-based depth and normal estimation\nmodels on common zero-shot benchmarks. We surprisingly find that this\nfine-tuning protocol also works directly on Stable Diffusion and achieves\ncomparable performance to current state-of-the-art diffusion-based depth and\nnormal estimation models, calling into question some of the conclusions drawn\nfrom prior works.",
+      "upvotes": 28
+    },
+    {
+      "title": "Phidias: A Generative Model for Creating 3D Content from Text, Image, and 3D Conditions with Reference-Augmented Diffusion",
+      "url": "https://huggingface.co/papers/2409.11406",
+      "authors": [
+        "Gerhard Hancke",
+        "Rynson W. H. Lau"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.11406.pdf",
+      "abstract": "In 3D modeling, designers often use an existing 3D model as a reference to\ncreate new ones. This practice has inspired the development of Phidias, a novel\ngenerative model that uses diffusion for reference-augmented 3D generation.\nGiven an image, our method leverages a retrieved or user-provided 3D reference\nmodel to guide the generation process, thereby enhancing the generation\nquality, generalization ability, and controllability. Our model integrates\nthree key components: 1) meta-ControlNet that dynamically modulates the\nconditioning strength, 2) dynamic reference routing that mitigates misalignment\nbetween the input image and 3D reference, and 3) self-reference augmentations\nthat enable self-supervised training with a progressive curriculum.\nCollectively, these designs result in a clear improvement over existing\nmethods. Phidias establishes a unified framework for 3D generation using text,\nimage, and 3D conditions with versatile applications.",
+      "upvotes": 25
+    },
+    {
+      "title": "Promptriever: Instruction-Trained Retrievers Can Be Prompted Like Language Models",
+      "url": "https://huggingface.co/papers/2409.11136",
+      "authors": [
+        "Orion Weller",
+        "Benjamin Van Durme",
+        "Dawn Lawrie",
+        "Ashwin Paranjape",
+        "Yuhao Zhang",
+        "Jack Hessel"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.11136.pdf",
+      "abstract": "Instruction-tuned language models (LM) are able to respond to imperative\ncommands, providing a more natural user interface compared to their base\ncounterparts. In this work, we present Promptriever, the first retrieval model\nable to be prompted like an LM. To train Promptriever, we curate and release a\nnew instance-level instruction training set from MS MARCO, spanning nearly 500k\ninstances. Promptriever not only achieves strong performance on standard\nretrieval tasks, but also follows instructions. We observe: (1) large gains\n(reaching SoTA) on following detailed relevance instructions (+14.3 p-MRR /\n+3.1 nDCG on FollowIR), (2) significantly increased robustness to lexical\nchoices/phrasing in the query+instruction (+12.9 Robustness@10 on InstructIR),\nand (3) the ability to perform hyperparameter search via prompting to reliably\nimprove retrieval performance (+1.4 average increase on BEIR). Promptriever\ndemonstrates that retrieval models can be controlled with prompts on a\nper-query basis, setting the stage for future work aligning LM prompting\ntechniques with information retrieval.",
+      "upvotes": 21
+    },
+    {
+      "title": "EzAudio: Enhancing Text-to-Audio Generation with Efficient Diffusion Transformer",
+      "url": "https://huggingface.co/papers/2409.10819",
+      "authors": [
+        "Yong Xu",
+        "Mounya Elhilali",
+        "Dong Yu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.10819.pdf",
+      "abstract": "Latent diffusion models have shown promising results in text-to-audio (T2A)\ngeneration tasks, yet previous models have encountered difficulties in\ngeneration quality, computational cost, diffusion sampling, and data\npreparation. In this paper, we introduce EzAudio, a transformer-based T2A\ndiffusion model, to handle these challenges. Our approach includes several key\ninnovations: (1) We build the T2A model on the latent space of a 1D waveform\nVariational Autoencoder (VAE), avoiding the complexities of handling 2D\nspectrogram representations and using an additional neural vocoder. (2) We\ndesign an optimized diffusion transformer architecture specifically tailored\nfor audio latent representations and diffusion modeling, which enhances\nconvergence speed, training stability, and memory usage, making the training\nprocess easier and more efficient. (3) To tackle data scarcity, we adopt a\ndata-efficient training strategy that leverages unlabeled data for learning\nacoustic dependencies, audio caption data annotated by audio-language models\nfor text-to-audio alignment learning, and human-labeled data for fine-tuning.\n(4) We introduce a classifier-free guidance (CFG) rescaling method that\nsimplifies EzAudio by achieving strong prompt alignment while preserving great\naudio quality when using larger CFG scores, eliminating the need to struggle\nwith finding the optimal CFG score to balance this trade-off. EzAudio surpasses\nexisting open-source models in both objective metrics and subjective\nevaluations, delivering realistic listening experiences while maintaining a\nstreamlined model structure, low training costs, and an easy-to-follow training\npipeline. Code, data, and pre-trained models are released at:\nhttps://haidog-yaqub.github.io/EzAudio-Page/.",
+      "upvotes": 17
+    },
+    {
+      "title": "A Comprehensive Evaluation of Quantized Instruction-Tuned Large Language Models: An Experimental Analysis up to 405B",
+      "url": "https://huggingface.co/papers/2409.11055",
+      "authors": [
+        "Sihyeong Park",
+        "Yongin Kwon"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.11055.pdf",
+      "abstract": "Prior research works have evaluated quantized LLMs using limited metrics such\nas perplexity or a few basic knowledge tasks and old datasets. Additionally,\nrecent large-scale models such as Llama 3.1 with up to 405B have not been\nthoroughly examined. This paper evaluates the performance of instruction-tuned\nLLMs across various quantization methods (GPTQ, AWQ, SmoothQuant, and FP8) on\nmodels ranging from 7B to 405B. Using 13 benchmarks, we assess performance\nacross six task types: commonsense Q\\&A, knowledge and language understanding,\ninstruction following, hallucination detection, mathematics, and dialogue. Our\nkey findings reveal that (1) quantizing a larger LLM to a similar size as a\nsmaller FP16 LLM generally performs better across most benchmarks, except for\nhallucination detection and instruction following; (2) performance varies\nsignificantly with different quantization methods, model size, and bit-width,\nwith weight-only methods often yielding better results in larger models; (3)\ntask difficulty does not significantly impact accuracy degradation due to\nquantization; and (4) the MT-Bench evaluation method has limited discriminatory\npower among recent high-performing LLMs.",
+      "upvotes": 16
+    },
+    {
+      "title": "OSV: One Step is Enough for High-Quality Image to Video Generation",
+      "url": "https://huggingface.co/papers/2409.11367",
+      "authors": [
+        "Xiaofeng Mao",
+        "Wenbing Zhu",
+        "Jiangning Zhang",
+        "Hao Chen",
+        "Mingmin Chi",
+        "Yabiao Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.11367.pdf",
+      "abstract": "Video diffusion models have shown great potential in generating high-quality\nvideos, making them an increasingly popular focus. However, their inherent\niterative nature leads to substantial computational and time costs. While\nefforts have been made to accelerate video diffusion by reducing inference\nsteps (through techniques like consistency distillation) and GAN training\n(these approaches often fall short in either performance or training\nstability). In this work, we introduce a two-stage training framework that\neffectively combines consistency distillation with GAN training to address\nthese challenges. Additionally, we propose a novel video discriminator design,\nwhich eliminates the need for decoding the video latents and improves the final\nperformance. Our model is capable of producing high-quality videos in merely\none-step, with the flexibility to perform multi-step refinement for further\nperformance enhancement. Our quantitative evaluation on the OpenWebVid-1M\nbenchmark shows that our model significantly outperforms existing methods.\nNotably, our 1-step performance(FVD 171.15) exceeds the 8-step performance of\nthe consistency distillation based method, AnimateLCM (FVD 184.79), and\napproaches the 25-step performance of advanced Stable Video Diffusion (FVD\n156.94).",
+      "upvotes": 13
+    },
+    {
+      "title": "On the limits of agency in agent-based models",
+      "url": "https://huggingface.co/papers/2409.10568",
+      "authors": [
+        "Shashank Kumar"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.10568.pdf",
+      "abstract": "Agent-based modeling (ABM) seeks to understand the behavior of complex\nsystems by simulating a collection of agents that act and interact within an\nenvironment. Their practical utility requires capturing realistic environment\ndynamics and adaptive agent behavior while efficiently simulating million-size\npopulations. Recent advancements in large language models (LLMs) present an\nopportunity to enhance ABMs by using LLMs as agents with further potential to\ncapture adaptive behavior. However, the computational infeasibility of using\nLLMs for large populations has hindered their widespread adoption. In this\npaper, we introduce AgentTorch -- a framework that scales ABMs to millions of\nagents while capturing high-resolution agent behavior using LLMs. We benchmark\nthe utility of LLMs as ABM agents, exploring the trade-off between simulation\nscale and individual agency. Using the COVID-19 pandemic as a case study, we\ndemonstrate how AgentTorch can simulate 8.4 million agents representing New\nYork City, capturing the impact of isolation and employment behavior on health\nand economic outcomes. We compare the performance of different agent\narchitectures based on heuristic and LLM agents in predicting disease waves and\nunemployment rates. Furthermore, we showcase AgentTorch's capabilities for\nretrospective, counterfactual, and prospective analyses, highlighting how\nadaptive agent behavior can help overcome the limitations of historical data in\npolicy design. AgentTorch is an open-source project actively being used for\npolicy-making and scientific discovery around the world. The framework is\navailable here: github.com/AgentTorch/AgentTorch.",
+      "upvotes": 12
+    },
+    {
+      "title": "Agile Continuous Jumping in Discontinuous Terrains",
+      "url": "https://huggingface.co/papers/2409.10923",
+      "authors": [
+        "Xiangyun Meng",
+        "Wenhao Yu",
+        "Tingnan Zhang",
+        "Ding Zhao",
+        "Jie Tan",
+        "Byron Boots"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.10923.pdf",
+      "abstract": "We focus on agile, continuous, and terrain-adaptive jumping of quadrupedal\nrobots in discontinuous terrains such as stairs and stepping stones. Unlike\nsingle-step jumping, continuous jumping requires accurately executing highly\ndynamic motions over long horizons, which is challenging for existing\napproaches. To accomplish this task, we design a hierarchical learning and\ncontrol framework, which consists of a learned heightmap predictor for robust\nterrain perception, a reinforcement-learning-based centroidal-level motion\npolicy for versatile and terrain-adaptive planning, and a low-level model-based\nleg controller for accurate motion tracking. In addition, we minimize the\nsim-to-real gap by accurately modeling the hardware characteristics. Our\nframework enables a Unitree Go1 robot to perform agile and continuous jumps on\nhuman-sized stairs and sparse stepping stones, for the first time to the best\nof our knowledge. In particular, the robot can cross two stair steps in each\njump and completes a 3.5m long, 2.8m high, 14-step staircase in 4.5 seconds.\nMoreover, the same policy outperforms baselines in various other parkour tasks,\nsuch as jumping over single horizontal or vertical discontinuities. Experiment\nvideos can be found at https://yxyang.github.io/jumping\\_cod/.",
+      "upvotes": 11
+    },
+    {
+      "title": "SplatFields: Neural Gaussian Splats for Sparse 3D and 4D Reconstruction",
+      "url": "https://huggingface.co/papers/2409.11211",
+      "authors": [
+        "Siyu Tang",
+        "Federica Bogo",
+        "Edmond Boyer"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.11211.pdf",
+      "abstract": "Digitizing 3D static scenes and 4D dynamic events from multi-view images has\nlong been a challenge in computer vision and graphics. Recently, 3D Gaussian\nSplatting (3DGS) has emerged as a practical and scalable reconstruction method,\ngaining popularity due to its impressive reconstruction quality, real-time\nrendering capabilities, and compatibility with widely used visualization tools.\nHowever, the method requires a substantial number of input views to achieve\nhigh-quality scene reconstruction, introducing a significant practical\nbottleneck. This challenge is especially severe in capturing dynamic scenes,\nwhere deploying an extensive camera array can be prohibitively costly. In this\nwork, we identify the lack of spatial autocorrelation of splat features as one\nof the factors contributing to the suboptimal performance of the 3DGS technique\nin sparse reconstruction settings. To address the issue, we propose an\noptimization strategy that effectively regularizes splat features by modeling\nthem as the outputs of a corresponding implicit neural field. This results in a\nconsistent enhancement of reconstruction quality across various scenarios. Our\napproach effectively handles static and dynamic cases, as demonstrated by\nextensive testing across different setups and scene complexities.",
+      "upvotes": 8
+    },
+    {
+      "title": "Human-like Affective Cognition in Foundation Models",
+      "url": "https://huggingface.co/papers/2409.11733",
+      "authors": [
+        "Zoe Lynch",
+        "Jan-Philipp Fränken",
+        "Kayla Patterson",
+        "Sharon Wambu",
+        "Tobias Gerstenberg",
+        "Desmond C. Ong",
+        "Noah D. Goodman"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.11733.pdf",
+      "abstract": "Understanding emotions is fundamental to human interaction and experience.\nHumans easily infer emotions from situations or facial expressions, situations\nfrom emotions, and do a variety of other affective cognition. How adept\nis modern AI at these inferences? We introduce an evaluation framework for\ntesting affective cognition in foundation models. Starting from psychological\ntheory, we generate 1,280 diverse scenarios exploring relationships between\nappraisals, emotions, expressions, and outcomes. We evaluate the abilities of\nfoundation models (GPT-4, Claude-3, Gemini-1.5-Pro) and humans (N = 567) across\ncarefully selected conditions. Our results show foundation models tend to agree\nwith human intuitions, matching or exceeding interparticipant agreement. In\nsome conditions, models are ``superhuman'' -- they better predict modal human\njudgements than the average human. All models benefit from chain-of-thought\nreasoning. This suggests foundation models have acquired a human-like\nunderstanding of emotions and their influence on beliefs and behavior.",
+      "upvotes": 5
+    },
+    {
+      "title": "Measuring and Enhancing Trustworthiness of LLMs in RAG through Grounded Attributions and Learning to Refuse",
+      "url": "https://huggingface.co/papers/2409.11242",
+      "authors": [
+        "Maojia Song",
+        "Shang Hong Sim",
+        "Hai Leong Chieu",
+        "Navonil Majumder",
+        "Soujanya Poria"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.11242.pdf",
+      "abstract": "LLMs are an integral part of retrieval-augmented generation (RAG) systems.\nWhile many studies focus on evaluating the quality of end-to-end RAG systems,\nthere is a lack of research on understanding the appropriateness of an LLM for\nthe RAG task. Thus, we introduce a new metric, Trust-Score, that provides a\nholistic evaluation of the trustworthiness of LLMs in an RAG framework. We show\nthat various prompting methods, such as in-context learning, fail to adapt LLMs\neffectively to the RAG task. Thus, we propose Trust-Align, a framework to align\nLLMs for higher Trust-Score. LLaMA-3-8b, aligned with our method, significantly\noutperforms open-source LLMs of comparable sizes on ASQA (up 10.7), QAMPARI (up\n29.2) and ELI5 (up 14.9). We release our code at:\nhttps://github.com/declare-lab/trust-align.",
+      "upvotes": 5
+    },
+    {
+      "title": "Implicit Neural Representations with Fourier Kolmogorov-Arnold Networks",
+      "url": "https://huggingface.co/papers/2409.09323",
+      "authors": [
+        "Parsa Mojarad Adi",
+        "Ilker Hacihaliloglu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.09323.pdf",
+      "abstract": "Implicit neural representations (INRs) use neural networks to provide\ncontinuous and resolution-independent representations of complex signals with a\nsmall number of parameters. However, existing INR models often fail to capture\nimportant frequency components specific to each task. To address this issue, in\nthis paper, we propose a Fourier Kolmogorov Arnold network (FKAN) for INRs. The\nproposed FKAN utilizes learnable activation functions modeled as Fourier series\nin the first layer to effectively control and learn the task-specific frequency\ncomponents. In addition, the activation functions with learnable Fourier\ncoefficients improve the ability of the network to capture complex patterns and\ndetails, which is beneficial for high-resolution and high-dimensional data.\nExperimental results show that our proposed FKAN model outperforms three\nstate-of-the-art baseline schemes, and improves the peak signal-to-noise ratio\n(PSNR) and structural similarity index measure (SSIM) for the image\nrepresentation task and intersection over union (IoU) for the 3D occupancy\nvolume representation task, respectively.",
+      "upvotes": 5
+    },
+    {
+      "title": "Single-Layer Learnable Activation for Implicit Neural Representation (SL$^{2}$A-INR)",
+      "url": "https://huggingface.co/papers/2409.10836",
+      "authors": [
+        "Reza Azad",
+        "Dorit Merhof",
+        "Hamid Soltanian-Zadeh",
+        "Ilker Hacihaliloglu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.10836.pdf",
+      "abstract": "Implicit Neural Representation (INR), leveraging a neural network to\ntransform coordinate input into corresponding attributes, has recently driven\nsignificant advances in several vision-related domains. However, the\nperformance of INR is heavily influenced by the choice of the nonlinear\nactivation function used in its multilayer perceptron (MLP) architecture.\nMultiple nonlinearities have been investigated; yet, current INRs face\nlimitations in capturing high-frequency components, diverse signal types, and\nhandling inverse problems. We have identified that these problems can be\ngreatly alleviated by introducing a paradigm shift in INRs. We find that an\narchitecture with learnable activations in initial layers can represent fine\ndetails in the underlying signals. Specifically, we propose SL^{2}A-INR, a\nhybrid network for INR with a single-layer learnable activation function,\nprompting the effectiveness of traditional ReLU-based MLPs. Our method performs\nsuperior across diverse tasks, including image representation, 3D shape\nreconstructions, inpainting, single image super-resolution, CT reconstruction,\nand novel view synthesis. Through comprehensive experiments, SL^{2}A-INR sets\nnew benchmarks in accuracy, quality, and convergence rates for INR.",
+      "upvotes": 4
+    },
+    {
+      "title": "PDMX: A Large-Scale Public Domain MusicXML Dataset for Symbolic Music Processing",
+      "url": "https://huggingface.co/papers/2409.10831",
+      "authors": [
+        "Julian McAuley"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.10831.pdf",
+      "abstract": "The recent explosion of generative AI-Music systems has raised numerous\nconcerns over data copyright, licensing music from musicians, and the conflict\nbetween open-source AI and large prestige companies. Such issues highlight the\nneed for publicly available, copyright-free musical data, in which there is a\nlarge shortage, particularly for symbolic music data. To alleviate this issue,\nwe present PDMX: a large-scale open-source dataset of over 250K public domain\nMusicXML scores collected from the score-sharing forum MuseScore, making it the\nlargest available copyright-free symbolic music dataset to our knowledge. PDMX\nadditionally includes a wealth of both tag and user interaction metadata,\nallowing us to efficiently analyze the dataset and filter for high quality\nuser-generated scores. Given the additional metadata afforded by our data\ncollection process, we conduct multitrack music generation experiments\nevaluating how different representative subsets of PDMX lead to different\nbehaviors in downstream models, and how user-rating statistics can be used as\nan effective measure of data quality. Examples can be found at\nhttps://pnlong.github.io/PDMX.demo/.",
+      "upvotes": 4
+    }
+  ]
+}

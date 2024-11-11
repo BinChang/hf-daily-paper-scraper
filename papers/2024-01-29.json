@@ -1,0 +1,109 @@
+{
+  "date": "2024-01-29",
+  "papers": [
+    {
+      "title": "SliceGPT: Compress Large Language Models by Deleting Rows and Columns",
+      "url": "https://huggingface.co/papers/2401.15024",
+      "authors": [
+        "Torsten Hoefler"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.15024.pdf",
+      "abstract": "Large language models have become the cornerstone of natural language\nprocessing, but their use comes with substantial costs in terms of compute and\nmemory resources. Sparsification provides a solution to alleviate these\nresource constraints, and recent works have shown that trained models can be\nsparsified post-hoc. Existing sparsification techniques face challenges as they\nneed additional data structures and offer constrained speedup with current\nhardware. In this paper we present SliceGPT, a new post-training sparsification\nscheme which replaces each weight matrix with a smaller (dense) matrix,\nreducing the embedding dimension of the network. Through extensive\nexperimentation, we show that SliceGPT can remove up to 25% of the model\nparameters (including embeddings) for LLAMA2-70B, OPT 66B and Phi-2 models\nwhile maintaining 99%, 99% and 90% zero-shot task performance of the dense\nmodel respectively. Our sliced models run on fewer GPUs and run faster without\nany additional code optimization: on 24GB consumer GPUs we reduce the total\ncompute for inference on LLAMA2-70B to 64% of that of the dense model; on 40GB\nA100 GPUs we reduce it to 66%. We offer a new insight, computational invariance\nin transformer networks, which enables SliceGPT and we hope it will inspire and\nenable future avenues to reduce memory and computation demands for pre-trained\nmodels. Code is available at:\nhttps://github.com/microsoft/TransformerCompression",
+      "upvotes": 69
+    },
+    {
+      "title": "From GPT-4 to Gemini and Beyond: Assessing the Landscape of MLLMs on Generalizability, Trustworthiness and Causality through Four Modalities",
+      "url": "https://huggingface.co/papers/2401.15071",
+      "authors": [
+        "Chaochao Lu",
+        "Chen Qian",
+        "Guodong Zheng",
+        "Hongzhi Gao",
+        "Jie Zhang",
+        "Jing Shao",
+        "Lijun Li",
+        "Limin Wang",
+        "Meiqi Chen",
+        "Qibing Ren",
+        "Sirui Chen",
+        "Tao Gui",
+        "Wanli Ouyang",
+        "Yali Wang",
+        "Yan Teng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.15071.pdf",
+      "abstract": "Multi-modal Large Language Models (MLLMs) have shown impressive abilities in\ngenerating reasonable responses with respect to multi-modal contents. However,\nthere is still a wide gap between the performance of recent MLLM-based\napplications and the expectation of the broad public, even though the most\npowerful OpenAI's GPT-4 and Google's Gemini have been deployed. This paper\nstrives to enhance understanding of the gap through the lens of a qualitative\nstudy on the generalizability, trustworthiness, and causal reasoning\ncapabilities of recent proprietary and open-source MLLMs across four\nmodalities: ie, text, code, image, and video, ultimately aiming to improve the\ntransparency of MLLMs. We believe these properties are several representative\nfactors that define the reliability of MLLMs, in supporting various downstream\napplications. To be specific, we evaluate the closed-source GPT-4 and Gemini\nand 6 open-source LLMs and MLLMs. Overall we evaluate 230 manually designed\ncases, where the qualitative results are then summarized into 12 scores (ie, 4\nmodalities times 3 properties). In total, we uncover 14 empirical findings that\nare useful to understand the capabilities and limitations of both proprietary\nand open-source MLLMs, towards more reliable downstream multi-modal\napplications.",
+      "upvotes": 35
+    },
+    {
+      "title": "Learning Universal Predictors",
+      "url": "https://huggingface.co/papers/2401.14953",
+      "authors": [
+        "Jordi Grau-Moya",
+        "Tim Genewein",
+        "Marcus Hutter",
+        "Grégoire Delétang",
+        "Elliot Catt",
+        "Li Kevin Wenliang",
+        "Christopher Mattern",
+        "Matthew Aitchison",
+        "Joel Veness"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.14953.pdf",
+      "abstract": "Meta-learning has emerged as a powerful approach to train neural networks to\nlearn new tasks quickly from limited data. Broad exposure to different tasks\nleads to versatile representations enabling general problem solving. But, what\nare the limits of meta-learning? In this work, we explore the potential of\namortizing the most powerful universal predictor, namely Solomonoff Induction\n(SI), into neural networks via leveraging meta-learning to its limits. We use\nUniversal Turing Machines (UTMs) to generate training data used to expose\nnetworks to a broad range of patterns. We provide theoretical analysis of the\nUTM data generation processes and meta-training protocols. We conduct\ncomprehensive experiments with neural architectures (e.g. LSTMs, Transformers)\nand algorithmic data generators of varying complexity and universality. Our\nresults suggest that UTM data is a valuable resource for meta-learning, and\nthat it can be used to train neural networks capable of learning universal\nprediction strategies.",
+      "upvotes": 19
+    },
+    {
+      "title": "EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty",
+      "url": "https://huggingface.co/papers/2401.15077",
+      "authors": [
+        "Yuhui Li",
+        "Fangyun Wei",
+        "Chao Zhang",
+        "Hongyang Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.15077.pdf",
+      "abstract": "Auto-regressive decoding makes the inference of Large Language Models (LLMs)\ntime-consuming. We propose a simple framework, EAGLE (Extrapolation Algorithm\nfor Greater Language-model Efficiency), for lossless acceleration. Unlike\ntraditional speculative sampling methods, EAGLE operates the drafting process\nauto-regressively at the more regular (second-top-layer) feature level and\naddresses the sampling uncertainty issues in the next-feature prediction\nproblems by integrating tokens from one time step ahead. The acceleration\nprovided by EAGLE is lossless: it involves no fine-tuning of the target LLM,\nand the generated text maintains the same distribution as that of vanilla\nauto-regressive decoding. As of the submission of this paper, EAGLE is the\nfastest known framework within the speculative sampling family. On MT-bench,\nEAGLE is 3x faster than vanilla decoding, 2x faster than Lookahead, and 1.6x\nfaster than Medusa. Using gpt-fast, EAGLE attains on average 160 tokens/s with\nLLaMA2-Chat 13B on a single RTX 3090 GPU, compared to 24 tokens/s of\nHuggingface's implementations.",
+      "upvotes": 19
+    },
+    {
+      "title": "Taiyi-Diffusion-XL: Advancing Bilingual Text-to-Image Generation with Large Vision-Language Model Support",
+      "url": "https://huggingface.co/papers/2401.14688",
+      "authors": [
+        "Dixiang Zhang",
+        "Junyu Lu",
+        "Pingjian Zhang",
+        "Yan Song"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.14688.pdf",
+      "abstract": "Recent advancements in text-to-image models have significantly enhanced image\ngeneration capabilities, yet a notable gap of open-source models persists in\nbilingual or Chinese language support. To address this need, we present\nTaiyi-Diffusion-XL, a new Chinese and English bilingual text-to-image model\nwhich is developed by extending the capabilities of CLIP and\nStable-Diffusion-XL through a process of bilingual continuous pre-training.\nThis approach includes the efficient expansion of vocabulary by integrating the\nmost frequently used Chinese characters into CLIP's tokenizer and embedding\nlayers, coupled with an absolute position encoding expansion. Additionally, we\nenrich text prompts by large vision-language model, leading to better images\ncaptions and possess higher visual quality. These enhancements are subsequently\napplied to downstream text-to-image models. Our empirical results indicate that\nthe developed CLIP model excels in bilingual image-text retrieval.Furthermore,\nthe bilingual image generation capabilities of Taiyi-Diffusion-XL surpass\nprevious models. This research leads to the development and open-sourcing of\nthe Taiyi-Diffusion-XL model, representing a notable advancement in the field\nof image generation, particularly for Chinese language applications. This\ncontribution is a step forward in addressing the need for more diverse language\nsupport in multimodal research. The model and demonstration are made publicly\navailable at\nhttps://huggingface.co/IDEA-CCNL/Taiyi-Stable-Diffusion-XL-3.5B/{this\nhttps URL}, fostering further research and collaboration in this domain.",
+      "upvotes": 13
+    },
+    {
+      "title": "TIP-Editor: An Accurate 3D Editor Following Both Text-Prompts And Image-Prompts",
+      "url": "https://huggingface.co/papers/2401.14828",
+      "authors": [
+        "Guanbin Li",
+        "Liang Lin"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.14828.pdf",
+      "abstract": "Text-driven 3D scene editing has gained significant attention owing to its\nconvenience and user-friendliness. However, existing methods still lack\naccurate control of the specified appearance and location of the editing result\ndue to the inherent limitations of the text description. To this end, we\npropose a 3D scene editing framework, TIPEditor, that accepts both text and\nimage prompts and a 3D bounding box to specify the editing region. With the\nimage prompt, users can conveniently specify the detailed appearance/style of\nthe target content in complement to the text description, enabling accurate\ncontrol of the appearance. Specifically, TIP-Editor employs a stepwise 2D\npersonalization strategy to better learn the representation of the existing\nscene and the reference image, in which a localization loss is proposed to\nencourage correct object placement as specified by the bounding box.\nAdditionally, TIPEditor utilizes explicit and flexible 3D Gaussian splatting as\nthe 3D representation to facilitate local editing while keeping the background\nunchanged. Extensive experiments have demonstrated that TIP-Editor conducts\naccurate editing following the text and image prompts in the specified bounding\nbox region, consistently outperforming the baselines in editing quality, and\nthe alignment to the prompts, qualitatively and quantitatively.",
+      "upvotes": 7
+    },
+    {
+      "title": "Generative Expressive Robot Behaviors using Large Language Models",
+      "url": "https://huggingface.co/papers/2401.14673",
+      "authors": [
+        "Karthik Mahadevan",
+        "Jonathan Chien",
+        "Noah Brown",
+        "Zhuo Xu",
+        "Leila Takayama",
+        "Dorsa Sadigh"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.14673.pdf",
+      "abstract": "People employ expressive behaviors to effectively communicate and coordinate\ntheir actions with others, such as nodding to acknowledge a person glancing at\nthem or saying \"excuse me\" to pass people in a busy corridor. We would like\nrobots to also demonstrate expressive behaviors in human-robot interaction.\nPrior work proposes rule-based methods that struggle to scale to new\ncommunication modalities or social situations, while data-driven methods\nrequire specialized datasets for each social situation the robot is used in. We\npropose to leverage the rich social context available from large language\nmodels (LLMs) and their ability to generate motion based on instructions or\nuser preferences, to generate expressive robot motion that is adaptable and\ncomposable, building upon each other. Our approach utilizes few-shot\nchain-of-thought prompting to translate human language instructions into\nparametrized control code using the robot's available and learned skills.\nThrough user studies and simulation experiments, we demonstrate that our\napproach produces behaviors that users found to be competent and easy to\nunderstand. Supplementary material can be found at\nhttps://generative-expressive-motion.github.io/.",
+      "upvotes": 5
+    }
+  ]
+}

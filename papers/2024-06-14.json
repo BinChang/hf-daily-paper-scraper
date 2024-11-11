@@ -1,0 +1,397 @@
+{
+  "date": "2024-06-14",
+  "papers": [
+    {
+      "title": "Depth Anything V2",
+      "url": "https://huggingface.co/papers/2406.09414",
+      "authors": [
+        "Zilong Huang",
+        "Zhen Zhao",
+        "Xiaogang Xu",
+        "Jiashi Feng",
+        "Hengshuang Zhao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.09414.pdf",
+      "abstract": "This work presents Depth Anything V2. Without pursuing fancy techniques, we\naim to reveal crucial findings to pave the way towards building a powerful\nmonocular depth estimation model. Notably, compared with V1, this version\nproduces much finer and more robust depth predictions through three key\npractices: 1) replacing all labeled real images with synthetic images, 2)\nscaling up the capacity of our teacher model, and 3) teaching student models\nvia the bridge of large-scale pseudo-labeled real images. Compared with the\nlatest models built on Stable Diffusion, our models are significantly more\nefficient (more than 10x faster) and more accurate. We offer models of\ndifferent scales (ranging from 25M to 1.3B params) to support extensive\nscenarios. Benefiting from their strong generalization capability, we fine-tune\nthem with metric depth labels to obtain our metric depth models. In addition to\nour models, considering the limited diversity and frequent noise in current\ntest sets, we construct a versatile evaluation benchmark with precise\nannotations and diverse scenes to facilitate future research.",
+      "upvotes": 92
+    },
+    {
+      "title": "An Image is Worth More Than 16x16 Patches: Exploring Transformers on Individual Pixels",
+      "url": "https://huggingface.co/papers/2406.09415",
+      "authors": [
+        "Duy-Kien Nguyen",
+        "Mahmoud Assran",
+        "Unnat Jain",
+        "Cees G. M. Snoek"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.09415.pdf",
+      "abstract": "This work does not introduce a new method. Instead, we present an interesting\nfinding that questions the necessity of the inductive bias -- locality in\nmodern computer vision architectures. Concretely, we find that vanilla\nTransformers can operate by directly treating each individual pixel as a token\nand achieve highly performant results. This is substantially different from the\npopular design in Vision Transformer, which maintains the inductive bias from\nConvNets towards local neighborhoods (e.g. by treating each 16x16 patch as a\ntoken). We mainly showcase the effectiveness of pixels-as-tokens across three\nwell-studied tasks in computer vision: supervised learning for object\nclassification, self-supervised learning via masked autoencoding, and image\ngeneration with diffusion models. Although directly operating on individual\npixels is less computationally practical, we believe the community must be\naware of this surprising piece of knowledge when devising the next generation\nof neural architectures for computer vision.",
+      "upvotes": 50
+    },
+    {
+      "title": "Transformers meet Neural Algorithmic Reasoners",
+      "url": "https://huggingface.co/papers/2406.09308",
+      "authors": [
+        "Borja Ibarz",
+        "Andrew Dudzik",
+        "Jessica B. Hamrick",
+        "Larisa Markeeva",
+        "Alex Vitvitskyi",
+        "Razvan Pascanu",
+        "Petar Veličković"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.09308.pdf",
+      "abstract": "Transformers have revolutionized machine learning with their simple yet\neffective architecture. Pre-training Transformers on massive text datasets from\nthe Internet has led to unmatched generalization for natural language\nunderstanding (NLU) tasks. However, such language models remain fragile when\ntasked with algorithmic forms of reasoning, where computations must be precise\nand robust. To address this limitation, we propose a novel approach that\ncombines the Transformer's language understanding with the robustness of graph\nneural network (GNN)-based neural algorithmic reasoners (NARs). Such NARs\nproved effective as generic solvers for algorithmic tasks, when specified in\ngraph form. To make their embeddings accessible to a Transformer, we propose a\nhybrid architecture with a two-phase training procedure, allowing the tokens in\nthe language model to cross-attend to the node embeddings from the NAR. We\nevaluate our resulting TransNAR model on CLRS-Text, the text-based version of\nthe CLRS-30 benchmark, and demonstrate significant gains over Transformer-only\nmodels for algorithmic reasoning, both in and out of distribution.",
+      "upvotes": 43
+    },
+    {
+      "title": "Samba: Simple Hybrid State Space Models for Efficient Unlimited Context Language Modeling",
+      "url": "https://huggingface.co/papers/2406.07522",
+      "authors": [
+        "Yang Liu",
+        "Yadong Lu",
+        "Yelong Shen",
+        "Chen Liang",
+        "Weizhu Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.07522.pdf",
+      "abstract": "Efficiently modeling sequences with infinite context length has been a\nlong-standing problem. Past works suffer from either the quadratic computation\ncomplexity or the limited extrapolation ability on length generalization. In\nthis work, we present Samba, a simple hybrid architecture that layer-wise\ncombines Mamba, a selective State Space Model (SSM), with Sliding Window\nAttention (SWA). Samba selectively compresses a given sequence into recurrent\nhidden states while still maintaining the ability to precisely recall memories\nwith the attention mechanism. We scale Samba up to 3.8B parameters with 3.2T\ntraining tokens and show that Samba substantially outperforms the\nstate-of-the-art models based on pure attention or SSMs on a wide range of\nbenchmarks. When trained on 4K length sequences, Samba can be efficiently\nextrapolated to 256K context length with perfect memory recall and show\nimproved token predictions up to 1M context length. As a linear-time sequence\nmodel, Samba enjoys a 3.73x higher throughput compared to Transformers with\ngrouped-query attention when processing user prompts of 128K length, and 3.64x\nspeedup when generating 64K tokens with unlimited streaming. A sample\nimplementation of Samba is publicly available in\nhttps://github.com/microsoft/Samba.",
+      "upvotes": 37
+    },
+    {
+      "title": "OpenVLA: An Open-Source Vision-Language-Action Model",
+      "url": "https://huggingface.co/papers/2406.09246",
+      "authors": [
+        "Ethan Foster",
+        "Grace Lam",
+        "Benjamin Burchfiel",
+        "Russ Tedrake",
+        "Dorsa Sadigh"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.09246.pdf",
+      "abstract": "Large policies pretrained on a combination of Internet-scale vision-language\ndata and diverse robot demonstrations have the potential to change how we teach\nrobots new skills: rather than training new behaviors from scratch, we can\nfine-tune such vision-language-action (VLA) models to obtain robust,\ngeneralizable policies for visuomotor control. Yet, widespread adoption of VLAs\nfor robotics has been challenging as 1) existing VLAs are largely closed and\ninaccessible to the public, and 2) prior work fails to explore methods for\nefficiently fine-tuning VLAs for new tasks, a key component for adoption.\nAddressing these challenges, we introduce OpenVLA, a 7B-parameter open-source\nVLA trained on a diverse collection of 970k real-world robot demonstrations.\nOpenVLA builds on a Llama 2 language model combined with a visual encoder that\nfuses pretrained features from DINOv2 and SigLIP. As a product of the added\ndata diversity and new model components, OpenVLA demonstrates strong results\nfor generalist manipulation, outperforming closed models such as RT-2-X (55B)\nby 16.5% in absolute task success rate across 29 tasks and multiple robot\nembodiments, with 7x fewer parameters. We further show that we can effectively\nfine-tune OpenVLA for new settings, with especially strong generalization\nresults in multi-task environments involving multiple objects and strong\nlanguage grounding abilities, and outperform expressive from-scratch imitation\nlearning methods such as Diffusion Policy by 20.4%. We also explore compute\nefficiency; as a separate contribution, we show that OpenVLA can be fine-tuned\non consumer GPUs via modern low-rank adaptation methods and served efficiently\nvia quantization without a hit to downstream success rate. Finally, we release\nmodel checkpoints, fine-tuning notebooks, and our PyTorch codebase with\nbuilt-in support for training VLAs at scale on Open X-Embodiment datasets.",
+      "upvotes": 36
+    },
+    {
+      "title": "Alleviating Distortion in Image Generation via Multi-Resolution Diffusion Models",
+      "url": "https://huggingface.co/papers/2406.09416",
+      "authors": [
+        "Liang-Chieh Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.09416.pdf",
+      "abstract": "This paper presents innovative enhancements to diffusion models by\nintegrating a novel multi-resolution network and time-dependent layer\nnormalization. Diffusion models have gained prominence for their effectiveness\nin high-fidelity image generation. While conventional approaches rely on\nconvolutional U-Net architectures, recent Transformer-based designs have\ndemonstrated superior performance and scalability. However, Transformer\narchitectures, which tokenize input data (via \"patchification\"), face a\ntrade-off between visual fidelity and computational complexity due to the\nquadratic nature of self-attention operations concerning token length. While\nlarger patch sizes enable attention computation efficiency, they struggle to\ncapture fine-grained visual details, leading to image distortions. To address\nthis challenge, we propose augmenting the Diffusion model with the\nMulti-Resolution network (DiMR), a framework that refines features across\nmultiple resolutions, progressively enhancing detail from low to high\nresolution. Additionally, we introduce Time-Dependent Layer Normalization\n(TD-LN), a parameter-efficient approach that incorporates time-dependent\nparameters into layer normalization to inject time information and achieve\nsuperior performance. Our method's efficacy is demonstrated on the\nclass-conditional ImageNet generation benchmark, where DiMR-XL variants\noutperform prior diffusion models, setting new state-of-the-art FID scores of\n1.70 on ImageNet 256 x 256 and 2.89 on ImageNet 512 x 512. Project page:\nhttps://qihao067.github.io/projects/DiMR",
+      "upvotes": 28
+    },
+    {
+      "title": "Test of Time: A Benchmark for Evaluating LLMs on Temporal Reasoning",
+      "url": "https://huggingface.co/papers/2406.09170",
+      "authors": [
+        "Karishma Malkan",
+        "Bryan Perozzi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.09170.pdf",
+      "abstract": "Large language models (LLMs) have showcased remarkable reasoning\ncapabilities, yet they remain susceptible to errors, particularly in temporal\nreasoning tasks involving complex temporal logic. Existing research has\nexplored LLM performance on temporal reasoning using diverse datasets and\nbenchmarks. However, these studies often rely on real-world data that LLMs may\nhave encountered during pre-training or employ anonymization techniques that\ncan inadvertently introduce factual inconsistencies. In this work, we address\nthese limitations by introducing novel synthetic datasets specifically designed\nto assess LLM temporal reasoning abilities in various scenarios. The diversity\nof question types across these datasets enables systematic investigation into\nthe impact of the problem structure, size, question type, fact order, and other\nfactors on LLM performance. Our findings provide valuable insights into the\nstrengths and weaknesses of current LLMs in temporal reasoning tasks. To foster\nfurther research in this area, we are open-sourcing the datasets and evaluation\nframework used in our experiments: https://huggingface.co/datasets/baharef/ToT.",
+      "upvotes": 24
+    },
+    {
+      "title": "DiTFastAttn: Attention Compression for Diffusion Transformer Models",
+      "url": "https://huggingface.co/papers/2406.08552",
+      "authors": [
+        "Pu Lu",
+        "Linfeng Zhang",
+        "Tianchen Zhao",
+        "Shengen Yan",
+        "Guohao Dai",
+        "Yu Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.08552.pdf",
+      "abstract": "Diffusion Transformers (DiT) excel at image and video generation but face\ncomputational challenges due to self-attention's quadratic complexity. We\npropose DiTFastAttn, a novel post-training compression method to alleviate\nDiT's computational bottleneck. We identify three key redundancies in the\nattention computation during DiT inference: 1. spatial redundancy, where many\nattention heads focus on local information; 2. temporal redundancy, with high\nsimilarity between neighboring steps' attention outputs; 3. conditional\nredundancy, where conditional and unconditional inferences exhibit significant\nsimilarity. To tackle these redundancies, we propose three techniques: 1.\nWindow Attention with Residual Caching to reduce spatial redundancy; 2.\nTemporal Similarity Reduction to exploit the similarity between steps; 3.\nConditional Redundancy Elimination to skip redundant computations during\nconditional generation. To demonstrate the effectiveness of DiTFastAttn, we\napply it to DiT, PixArt-Sigma for image generation tasks, and OpenSora for\nvideo generation tasks. Evaluation results show that for image generation, our\nmethod reduces up to 88\\% of the FLOPs and achieves up to 1.6x speedup at high\nresolution generation.",
+      "upvotes": 22
+    },
+    {
+      "title": "Visual Sketchpad: Sketching as a Visual Chain of Thought for Multimodal Language Models",
+      "url": "https://huggingface.co/papers/2406.09403",
+      "authors": [
+        "Mari Ostendorf",
+        "Luke Zettlemoyer",
+        "Noah A Smith"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.09403.pdf",
+      "abstract": "Humans draw to facilitate reasoning: we draw auxiliary lines when solving\ngeometry problems; we mark and circle when reasoning on maps; we use sketches\nto amplify our ideas and relieve our limited-capacity working memory. However,\nsuch actions are missing in current multimodal language models (LMs). Current\nchain-of-thought and tool-use paradigms only use text as intermediate reasoning\nsteps. In this work, we introduce Sketchpad, a framework that gives multimodal\nLMs a visual sketchpad and tools to draw on the sketchpad. The LM conducts\nplanning and reasoning according to the visual artifacts it has drawn.\nDifferent from prior work, which uses text-to-image models to enable LMs to\ndraw, Sketchpad enables LMs to draw with lines, boxes, marks, etc., which is\ncloser to human sketching and better facilitates reasoning. Sketchpad can also\nuse specialist vision models during the sketching process (e.g., draw bounding\nboxes with object detection models, draw masks with segmentation models), to\nfurther enhance visual perception and reasoning. We experiment with a wide\nrange of math tasks (including geometry, functions, graphs, and chess) and\ncomplex visual reasoning tasks. Sketchpad substantially improves performance on\nall tasks over strong base models with no sketching, yielding an average gain\nof 12.7% on math tasks, and 8.6% on vision tasks. GPT-4o with Sketchpad sets a\nnew state of the art on all tasks, including V*Bench (80.3%), BLINK spatial\nreasoning (83.9%), and visual correspondence (80.8%). All codes and data are in\nhttps://visualsketchpad.github.io/.",
+      "upvotes": 19
+    },
+    {
+      "title": "MuirBench: A Comprehensive Benchmark for Robust Multi-image Understanding",
+      "url": "https://huggingface.co/papers/2406.09411",
+      "authors": [
+        "James Y. Huang",
+        "Zekun Li",
+        "Qin Liu",
+        "Nan Xu",
+        "Tianyi Lorena Yan",
+        "Wenjie Jacky Mo",
+        "Hsiang-Hui Liu",
+        "Chaowei Xiao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.09411.pdf",
+      "abstract": "We introduce MuirBench, a comprehensive benchmark that focuses on robust\nmulti-image understanding capabilities of multimodal LLMs. MuirBench consists\nof 12 diverse multi-image tasks (e.g., scene understanding, ordering) that\ninvolve 10 categories of multi-image relations (e.g., multiview, temporal\nrelations). Comprising 11,264 images and 2,600 multiple-choice questions,\nMuirBench is created in a pairwise manner, where each standard instance is\npaired with an unanswerable variant that has minimal semantic differences, in\norder for a reliable assessment. Evaluated upon 20 recent multi-modal LLMs, our\nresults reveal that even the best-performing models like GPT-4o and Gemini Pro\nfind it challenging to solve MuirBench, achieving 68.0% and 49.3% in accuracy.\nOpen-source multimodal LLMs trained on single images can hardly generalize to\nmulti-image questions, hovering below 33.3% in accuracy. These results\nhighlight the importance of MuirBench in encouraging the community to develop\nmultimodal LLMs that can look beyond a single image, suggesting potential\npathways for future improvements.",
+      "upvotes": 18
+    },
+    {
+      "title": "Interpreting the Weight Space of Customized Diffusion Models",
+      "url": "https://huggingface.co/papers/2406.09413",
+      "authors": [
+        "Gordon Wetzstein",
+        "Alexei A. Efros",
+        "Kfir Aberman"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.09413.pdf",
+      "abstract": "We investigate the space of weights spanned by a large collection of\ncustomized diffusion models. We populate this space by creating a dataset of\nover 60,000 models, each of which is a base model fine-tuned to insert a\ndifferent person's visual identity. We model the underlying manifold of these\nweights as a subspace, which we term weights2weights. We demonstrate three\nimmediate applications of this space -- sampling, editing, and inversion.\nFirst, as each point in the space corresponds to an identity, sampling a set of\nweights from it results in a model encoding a novel identity. Next, we find\nlinear directions in this space corresponding to semantic edits of the identity\n(e.g., adding a beard). These edits persist in appearance across generated\nsamples. Finally, we show that inverting a single image into this space\nreconstructs a realistic identity, even if the input image is out of\ndistribution (e.g., a painting). Our results indicate that the weight space of\nfine-tuned diffusion models behaves as an interpretable latent space of\nidentities.",
+      "upvotes": 18
+    },
+    {
+      "title": "HelpSteer2: Open-source dataset for training top-performing reward models",
+      "url": "https://huggingface.co/papers/2406.08673",
+      "authors": [
+        "Yi Dong",
+        "Jimmy J. Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.08673.pdf",
+      "abstract": "High-quality preference datasets are essential for training reward models\nthat can effectively guide large language models (LLMs) in generating\nhigh-quality responses aligned with human preferences. As LLMs become stronger\nand better aligned, permissively licensed preference datasets, such as Open\nAssistant, HH-RLHF, and HelpSteer need to be updated to remain effective for\nreward modeling. Methods that distil preference data from proprietary LLMs such\nas GPT-4 have restrictions on commercial usage imposed by model providers. To\nimprove upon both generated responses and attribute labeling quality, we\nrelease HelpSteer2, a permissively licensed preference dataset (CC-BY-4.0).\nUsing a powerful internal base model trained on HelpSteer2, we are able to\nachieve the SOTA score (92.0%) on Reward-Bench's primary dataset, outperforming\ncurrently listed open and proprietary models, as of June 12th, 2024. Notably,\nHelpSteer2 consists of only ten thousand response pairs, an order of magnitude\nfewer than existing preference datasets (e.g., HH-RLHF), which makes it highly\nefficient for training reward models. Our extensive experiments demonstrate\nthat reward models trained with HelpSteer2 are effective in aligning LLMs. In\nparticular, we propose SteerLM 2.0, a model alignment approach that can\neffectively make use of the rich multi-attribute score predicted by our reward\nmodels. HelpSteer2 is available at\nhttps://huggingface.co/datasets/nvidia/HelpSteer2 and code is available at\nhttps://github.com/NVIDIA/NeMo-Aligner",
+      "upvotes": 16
+    },
+    {
+      "title": "mOSCAR: A Large-scale Multilingual and Multimodal Document-level Corpus",
+      "url": "https://huggingface.co/papers/2406.08707",
+      "authors": [
+        "Armel Zebaze",
+        "Cordelia Schmid"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.08707.pdf",
+      "abstract": "Multimodal Large Language Models (mLLMs) are trained on a large amount of\ntext-image data. While most mLLMs are trained on caption-like data only,\nAlayrac et al. [2022] showed that additionally training them on interleaved\nsequences of text and images can lead to the emergence of in-context learning\ncapabilities. However, the dataset they used, M3W, is not public and is only in\nEnglish. There have been attempts to reproduce their results but the released\ndatasets are English-only. In contrast, current multilingual and multimodal\ndatasets are either composed of caption-like only or medium-scale or fully\nprivate data. This limits mLLM research for the 7,000 other languages spoken in\nthe world. We therefore introduce mOSCAR, to the best of our knowledge the\nfirst large-scale multilingual and multimodal document corpus crawled from the\nweb. It covers 163 languages, 315M documents, 214B tokens and 1.2B images. We\ncarefully conduct a set of filtering and evaluation steps to make sure mOSCAR\nis sufficiently safe, diverse and of good quality. We additionally train two\ntypes of multilingual model to prove the benefits of mOSCAR: (1) a model\ntrained on a subset of mOSCAR and captioning data and (2) a model train on\ncaptioning data only. The model additionally trained on mOSCAR shows a strong\nboost in few-shot learning performance across various multilingual image-text\ntasks and benchmarks, confirming previous findings for English-only mLLMs.",
+      "upvotes": 15
+    },
+    {
+      "title": "CS-Bench: A Comprehensive Benchmark for Large Language Models towards Computer Science Mastery",
+      "url": "https://huggingface.co/papers/2406.08587",
+      "authors": [
+        "Xiaoshuai Song",
+        "Muxi Diao",
+        "Zhengyang Wang",
+        "Yujia Fu",
+        "Runqi Qiao",
+        "Zhexu Wang",
+        "Huangxuan Wu",
+        "Bin Liang",
+        "Zhuoma GongQue",
+        "Jianing Yu",
+        "Qiuna Tan",
+        "Weiran Xu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.08587.pdf",
+      "abstract": "Computer Science (CS) stands as a testament to the intricacies of human\nintelligence, profoundly advancing the development of artificial intelligence\nand modern society. However, the current community of large language models\n(LLMs) overly focuses on benchmarks for analyzing specific foundational skills\n(e.g. mathematics and code generation), neglecting an all-round evaluation of\nthe computer science field. To bridge this gap, we introduce CS-Bench, the\nfirst bilingual (Chinese-English) benchmark dedicated to evaluating the\nperformance of LLMs in computer science. CS-Bench comprises approximately 5K\nmeticulously curated test samples, covering 26 subfields across 4 key areas of\ncomputer science, encompassing various task forms and divisions of knowledge\nand reasoning. Utilizing CS-Bench, we conduct a comprehensive evaluation of\nover 30 mainstream LLMs, revealing the relationship between CS performance and\nmodel scales. We also quantitatively analyze the reasons for failures in\nexisting LLMs and highlight directions for improvements, including knowledge\nsupplementation and CS-specific reasoning. Further cross-capability experiments\nshow a high correlation between LLMs' capabilities in computer science and\ntheir abilities in mathematics and coding. Moreover, expert LLMs specialized in\nmathematics and coding also demonstrate strong performances in several CS\nsubfields. Looking ahead, we envision CS-Bench serving as a cornerstone for LLM\napplications in the CS field and paving new avenues in assessing LLMs' diverse\nreasoning capabilities. The CS-Bench data and evaluation code are available at\nhttps://github.com/csbench/csbench.",
+      "upvotes": 15
+    },
+    {
+      "title": "4M-21: An Any-to-Any Vision Model for Tens of Tasks and Modalities",
+      "url": "https://huggingface.co/papers/2406.09406",
+      "authors": [
+        "David Griffiths",
+        "Afshin Dehghan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.09406.pdf",
+      "abstract": "Current multimodal and multitask foundation models like 4M or UnifiedIO show\npromising results, but in practice their out-of-the-box abilities to accept\ndiverse inputs and perform diverse tasks are limited by the (usually rather\nsmall) number of modalities and tasks they are trained on. In this paper, we\nexpand upon the capabilities of them by training a single model on tens of\nhighly diverse modalities and by performing co-training on large-scale\nmultimodal datasets and text corpora. This includes training on several\nsemantic and geometric modalities, feature maps from recent state of the art\nmodels like DINOv2 and ImageBind, pseudo labels of specialist models like SAM\nand 4DHumans, and a range of new modalities that allow for novel ways to\ninteract with the model and steer the generation, for example image metadata or\ncolor palettes. A crucial step in this process is performing discrete\ntokenization on various modalities, whether they are image-like, neural network\nfeature maps, vectors, structured data like instance segmentation or human\nposes, or data that can be represented as text. Through this, we expand on the\nout-of-the-box capabilities of multimodal models and specifically show the\npossibility of training one model to solve at least 3x more tasks/modalities\nthan existing ones and doing so without a loss in performance. This enables\nmore fine-grained and controllable multimodal generation capabilities and\nallows us to study the distillation of models trained on diverse data and\nobjectives into a unified model. We successfully scale the training to a three\nbillion parameter model using tens of modalities and different datasets. The\nresulting models and training code are open sourced at 4m.epfl.ch.",
+      "upvotes": 13
+    },
+    {
+      "title": "EMMA: Your Text-to-Image Diffusion Model Can Secretly Accept Multi-Modal Prompts",
+      "url": "https://huggingface.co/papers/2406.09162",
+      "authors": [
+        "Pei Cheng",
+        "Bin Fu",
+        "Hanwang Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.09162.pdf",
+      "abstract": "Recent advancements in image generation have enabled the creation of\nhigh-quality images from text conditions. However, when facing multi-modal\nconditions, such as text combined with reference appearances, existing methods\nstruggle to balance multiple conditions effectively, typically showing a\npreference for one modality over others. To address this challenge, we\nintroduce EMMA, a novel image generation model accepting multi-modal prompts\nbuilt upon the state-of-the-art text-to-image (T2I) diffusion model, ELLA. EMMA\nseamlessly incorporates additional modalities alongside text to guide image\ngeneration through an innovative Multi-modal Feature Connector design, which\neffectively integrates textual and supplementary modal information using a\nspecial attention mechanism. By freezing all parameters in the original T2I\ndiffusion model and only adjusting some additional layers, we reveal an\ninteresting finding that the pre-trained T2I diffusion model can secretly\naccept multi-modal prompts. This interesting property facilitates easy\nadaptation to different existing frameworks, making EMMA a flexible and\neffective tool for producing personalized and context-aware images and even\nvideos. Additionally, we introduce a strategy to assemble learned EMMA modules\nto produce images conditioned on multiple modalities simultaneously,\neliminating the need for additional training with mixed multi-modal prompts.\nExtensive experiments demonstrate the effectiveness of EMMA in maintaining high\nfidelity and detail in generated images, showcasing its potential as a robust\nsolution for advanced multi-modal conditional image generation tasks.",
+      "upvotes": 13
+    },
+    {
+      "title": "Explore the Limits of Omni-modal Pretraining at Scale",
+      "url": "https://huggingface.co/papers/2406.09412",
+      "authors": [
+        "Handong Li",
+        "Jing Liu",
+        "Xiangyu Yue"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.09412.pdf",
+      "abstract": "We propose to build omni-modal intelligence, which is capable of\nunderstanding any modality and learning universal representations. In specific,\nwe propose a scalable pretraining paradigm, named Multimodal Context (MiCo),\nwhich can scale up the numbers of modalities and amount of data, together with\nthe model parameters, in the pretraining process. With MiCo, the pretrained\nmodels show significant emergent abilities in multimodal learning, which are\nevaluated on the following tasks: i) single-modality perception benchmarks of\n10 different modalities, ii) 25 cross-modality understanding tasks of\nretrieval, question-answering, captioning, and iii) 18 multimodal large\nlanguage model benchmarks. Our models establish 37 new records for\nstate-of-the-art performance. We hope that our research could contribute to the\ndevelopment of omni-modal intelligence. Code and Models are at\nhttps://github.com/invictus717/MiCo",
+      "upvotes": 10
+    },
+    {
+      "title": "Cognitively Inspired Energy-Based World Models",
+      "url": "https://huggingface.co/papers/2406.08862",
+      "authors": [
+        "Jundong Li",
+        "Tariq Iqbal"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.08862.pdf",
+      "abstract": "One of the predominant methods for training world models is autoregressive\nprediction in the output space of the next element of a sequence. In Natural\nLanguage Processing (NLP), this takes the form of Large Language Models (LLMs)\npredicting the next token; in Computer Vision (CV), this takes the form of\nautoregressive models predicting the next frame/token/pixel. However, this\napproach differs from human cognition in several respects. First, human\npredictions about the future actively influence internal cognitive processes.\nSecond, humans naturally evaluate the plausibility of predictions regarding\nfuture states. Based on this capability, and third, by assessing when\npredictions are sufficient, humans allocate a dynamic amount of time to make a\nprediction. This adaptive process is analogous to System 2 thinking in\npsychology. All these capabilities are fundamental to the success of humans at\nhigh-level reasoning and planning. Therefore, to address the limitations of\ntraditional autoregressive models lacking these human-like capabilities, we\nintroduce Energy-Based World Models (EBWM). EBWM involves training an\nEnergy-Based Model (EBM) to predict the compatibility of a given context and a\npredicted future state. In doing so, EBWM enables models to achieve all three\nfacets of human cognition described. Moreover, we developed a variant of the\ntraditional autoregressive transformer tailored for Energy-Based models, termed\nthe Energy-Based Transformer (EBT). Our results demonstrate that EBWM scales\nbetter with data and GPU Hours than traditional autoregressive transformers in\nCV, and that EBWM offers promising early scaling in NLP. Consequently, this\napproach offers an exciting path toward training future models capable of\nSystem 2 thinking and intelligently searching across state spaces.",
+      "upvotes": 9
+    },
+    {
+      "title": "Mistral-C2F: Coarse to Fine Actor for Analytical and Reasoning Enhancement in RLHF and Effective-Merged LLMs",
+      "url": "https://huggingface.co/papers/2406.08657",
+      "authors": [
+        "Ke Sun"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.08657.pdf",
+      "abstract": "Despite the advances in Large Language Models (LLMs), exemplified by models\nlike GPT-4 and Claude, smaller-scale LLMs such as Llama and Mistral often\nstruggle with generating in-depth and coherent dialogues. This paper presents a\nnovel two-step Coarse-to-Fine Actor model to address the inherent limitations\nin conversational and analytical capabilities of small-sized LLMs. Our approach\nbegins with the Policy-based Coarse Actor, employing a technique we term\n\"Continuous Maximization\". The Coarse Actor establishes an enhanced,\nknowledge-rich pool adept at aligning with human preference styles in analysis\nand reasoning. Through the RLHF process, it employs Continuous Maximization, a\nstrategy that dynamically and adaptively extends the output length limit,\nenabling the generation of more detailed and analytical content. Subsequently,\nthe Fine Actor refines this analytical content, addressing the generation of\nexcessively redundant information from the Coarse Actor. We introduce a\n\"Knowledge Residue Merger\" approach, refining the content from the Coarse Actor\nand merging it with an existing Instruction model to improve quality,\ncorrectness, and reduce redundancies. We applied our methodology to the popular\nMistral model, creating Mistral-C2F, which has demonstrated exceptional\nperformance across 11 general language tasks and the MT-Bench Dialogue task,\noutperforming similar-scale models and even larger models with 13B and 30B\nparameters. Our model has significantly improved conversational and analytical\nreasoning abilities.",
+      "upvotes": 9
+    },
+    {
+      "title": "Commonsense-T2I Challenge: Can Text-to-Image Generation Models Understand Commonsense?",
+      "url": "https://huggingface.co/papers/2406.07546",
+      "authors": [
+        "Muyu He"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.07546.pdf",
+      "abstract": "We present a novel task and benchmark for evaluating the ability of\ntext-to-image(T2I) generation models to produce images that fit commonsense in\nreal life, which we call Commonsense-T2I. Given two adversarial text prompts\ncontaining an identical set of action words with minor differences, such as \"a\nlightbulb without electricity\" v.s. \"a lightbulb with electricity\", we evaluate\nwhether T2I models can conduct visual-commonsense reasoning, e.g. produce\nimages that fit \"the lightbulb is unlit\" vs. \"the lightbulb is lit\"\ncorrespondingly. Commonsense-T2I presents an adversarial challenge, providing\npairwise text prompts along with expected outputs. The dataset is carefully\nhand-curated by experts and annotated with fine-grained labels, such as\ncommonsense type and likelihood of the expected outputs, to assist analyzing\nmodel behavior. We benchmark a variety of state-of-the-art (sota) T2I models\nand surprisingly find that, there is still a large gap between image synthesis\nand real life photos--even the DALL-E 3 model could only achieve 48.92% on\nCommonsense-T2I, and the stable diffusion XL model only achieves 24.92%\naccuracy. Our experiments show that GPT-enriched prompts cannot solve this\nchallenge, and we include a detailed analysis about possible reasons for such\ndeficiency. We aim for Commonsense-T2I to serve as a high-quality evaluation\nbenchmark for T2I commonsense checking, fostering advancements in real life\nimage generation.",
+      "upvotes": 8
+    },
+    {
+      "title": "TC-Bench: Benchmarking Temporal Compositionality in Text-to-Video and Image-to-Video Generation",
+      "url": "https://huggingface.co/papers/2406.08656",
+      "authors": [
+        "Tsu-jui Fu",
+        "Wenhu Chen",
+        "William Yang Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.08656.pdf",
+      "abstract": "Video generation has many unique challenges beyond those of image generation.\nThe temporal dimension introduces extensive possible variations across frames,\nover which consistency and continuity may be violated. In this study, we move\nbeyond evaluating simple actions and argue that generated videos should\nincorporate the emergence of new concepts and their relation transitions like\nin real-world videos as time progresses. To assess the Temporal\nCompositionality of video generation models, we propose TC-Bench, a benchmark\nof meticulously crafted text prompts, corresponding ground truth videos, and\nrobust evaluation metrics. The prompts articulate the initial and final states\nof scenes, effectively reducing ambiguities for frame development and\nsimplifying the assessment of transition completion. In addition, by collecting\naligned real-world videos corresponding to the prompts, we expand TC-Bench's\napplicability from text-conditional models to image-conditional ones that can\nperform generative frame interpolation. We also develop new metrics to measure\nthe completeness of component transitions in generated videos, which\ndemonstrate significantly higher correlations with human judgments than\nexisting metrics. Our comprehensive experimental results reveal that most video\ngenerators achieve less than 20% of the compositional changes, highlighting\nenormous space for future improvement. Our analysis indicates that current\nvideo generation models struggle to interpret descriptions of compositional\nchanges and synthesize various components across different time steps.",
+      "upvotes": 7
+    },
+    {
+      "title": "Estimating the Hallucination Rate of Generative AI",
+      "url": "https://huggingface.co/papers/2406.07457",
+      "authors": [
+        "Nicolas Beltran-Velez",
+        "Yarin Gal",
+        "John P. Cunningham",
+        "David Blei"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.07457.pdf",
+      "abstract": "This work is about estimating the hallucination rate for in-context learning\n(ICL) with Generative AI. In ICL, a conditional generative model (CGM) is\nprompted with a dataset and asked to make a prediction based on that dataset.\nThe Bayesian interpretation of ICL assumes that the CGM is calculating a\nposterior predictive distribution over an unknown Bayesian model of a latent\nparameter and data. With this perspective, we define a hallucination\nas a generated prediction that has low-probability under the true latent\nparameter. We develop a new method that takes an ICL problem -- that is, a CGM,\na dataset, and a prediction question -- and estimates the probability that a\nCGM will generate a hallucination. Our method only requires generating queries\nand responses from the model and evaluating its response log probability. We\nempirically evaluate our method on synthetic regression and natural language\nICL tasks using large language models.",
+      "upvotes": 6
+    },
+    {
+      "title": "Real3D: Scaling Up Large Reconstruction Models with Real-World Images",
+      "url": "https://huggingface.co/papers/2406.08479",
+      "authors": [
+        "Qixing Huang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.08479.pdf",
+      "abstract": "The default strategy for training single-view Large Reconstruction Models\n(LRMs) follows the fully supervised route using large-scale datasets of\nsynthetic 3D assets or multi-view captures. Although these resources simplify\nthe training procedure, they are hard to scale up beyond the existing datasets\nand they are not necessarily representative of the real distribution of object\nshapes. To address these limitations, in this paper, we introduce Real3D, the\nfirst LRM system that can be trained using single-view real-world images.\nReal3D introduces a novel self-training framework that can benefit from both\nthe existing synthetic data and diverse single-view real images. We propose two\nunsupervised losses that allow us to supervise LRMs at the pixel- and\nsemantic-level, even for training examples without ground-truth 3D or novel\nviews. To further improve performance and scale up the image data, we develop\nan automatic data curation approach to collect high-quality examples from\nin-the-wild images. Our experiments show that Real3D consistently outperforms\nprior work in four diverse evaluation settings that include real and synthetic\ndata, as well as both in-domain and out-of-domain shapes. Code and model can be\nfound here: https://hwjiang1510.github.io/Real3D/",
+      "upvotes": 6
+    },
+    {
+      "title": "CVQA: Culturally-diverse Multilingual Visual Question Answering Benchmark",
+      "url": "https://huggingface.co/papers/2406.05967",
+      "authors": [
+        "David Romero",
+        "Chenyang Lyu",
+        "Haryo Akbarianto Wibowo",
+        "Teresa Lynn",
+        "Injy Hamed",
+        "Aditya Nanda Kishore",
+        "Aishik Mandal",
+        "Alina Dragonetti",
+        "Artem Abzaliev",
+        "Bontu Fufa Balcha",
+        "Chenxi Whitehouse",
+        "Christian Salamea",
+        "Dan John Velasco",
+        "David Ifeoluwa Adelani",
+        "David Le Meur",
+        "Emilio Villa-Cueva",
+        "Fajri Koto",
+        "Fauzan Farooqui",
+        "Frederico Belcavello",
+        "Ganzorig Batnasan",
+        "Gisela Vallejo"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.05967.pdf",
+      "abstract": "Visual Question Answering (VQA) is an important task in multimodal AI, and it\nis often used to test the ability of vision-language models to understand and\nreason on knowledge present in both visual and textual data. However, most of\nthe current VQA models use datasets that are primarily focused on English and a\nfew major world languages, with images that are typically Western-centric.\nWhile recent efforts have tried to increase the number of languages covered on\nVQA datasets, they still lack diversity in low-resource languages. More\nimportantly, although these datasets often extend their linguistic range via\ntranslation or some other approaches, they usually keep images the same,\nresulting in narrow cultural representation. To address these limitations, we\nconstruct CVQA, a new Culturally-diverse multilingual Visual Question Answering\nbenchmark, designed to cover a rich set of languages and cultures, where we\nengage native speakers and cultural experts in the data collection process. As\na result, CVQA includes culturally-driven images and questions from across 28\ncountries on four continents, covering 26 languages with 11 scripts, providing\na total of 9k questions. We then benchmark several Multimodal Large Language\nModels (MLLMs) on CVQA, and show that the dataset is challenging for the\ncurrent state-of-the-art models. This benchmark can serve as a probing\nevaluation suite for assessing the cultural capability and bias of multimodal\nmodels and hopefully encourage more research efforts toward increasing cultural\nawareness and linguistic diversity in this field.",
+      "upvotes": 5
+    },
+    {
+      "title": "Language Model Council: Benchmarking Foundation Models on Highly Subjective Tasks by Consensus",
+      "url": "https://huggingface.co/papers/2406.08598",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2406.08598.pdf",
+      "abstract": "The rapid advancement of Large Language Models (LLMs) necessitates robust and\nchallenging benchmarks. Leaderboards like Chatbot Arena rank LLMs based on how\nwell their responses align with human preferences. However, many tasks such as\nthose related to emotional intelligence, creative writing, or persuasiveness,\nare highly subjective and often lack majoritarian human agreement. Judges may\nhave irreconcilable disagreements about what constitutes a better response. To\naddress the challenge of ranking LLMs on highly subjective tasks, we propose a\nnovel benchmarking framework, the Language Model Council (LMC). The LMC\noperates through a democratic process to: 1) formulate a test set through equal\nparticipation, 2) administer the test among council members, and 3) evaluate\nresponses as a collective jury. We deploy a council of 20 newest LLMs on an\nopen-ended emotional intelligence task: responding to interpersonal dilemmas.\nOur results show that the LMC produces rankings that are more separable,\nrobust, and less biased than those from any individual LLM judge, and is more\nconsistent with a human-established leaderboard compared to other benchmarks.",
+      "upvotes": 5
+    },
+    {
+      "title": "Understanding Hallucinations in Diffusion Models through Mode Interpolation",
+      "url": "https://huggingface.co/papers/2406.09358",
+      "authors": [
+        "Zachary C. Lipton"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.09358.pdf",
+      "abstract": "Colloquially speaking, image generation models based upon diffusion processes\nare frequently said to exhibit \"hallucinations,\" samples that could never occur\nin the training data. But where do such hallucinations come from? In this\npaper, we study a particular failure mode in diffusion models, which we term\nmode interpolation. Specifically, we find that diffusion models smoothly\n\"interpolate\" between nearby data modes in the training set, to generate\nsamples that are completely outside the support of the original training\ndistribution; this phenomenon leads diffusion models to generate artifacts that\nnever existed in real data (i.e., hallucinations). We systematically study the\nreasons for, and the manifestation of this phenomenon. Through experiments on\n1D and 2D Gaussians, we show how a discontinuous loss landscape in the\ndiffusion model's decoder leads to a region where any smooth approximation will\ncause such hallucinations. Through experiments on artificial datasets with\nvarious shapes, we show how hallucination leads to the generation of\ncombinations of shapes that never existed. Finally, we show that diffusion\nmodels in fact know when they go out of support and hallucinate. This is\ncaptured by the high variance in the trajectory of the generated sample towards\nthe final few backward sampling process. Using a simple metric to capture this\nvariance, we can remove over 95% of hallucinations at generation time while\nretaining 96% of in-support samples. We conclude our exploration by showing the\nimplications of such hallucination (and its removal) on the collapse (and\nstabilization) of recursive training on synthetic data with experiments on\nMNIST and 2D Gaussians dataset. We release our code at\nhttps://github.com/locuslab/diffusion-model-hallucination.",
+      "upvotes": 4
+    },
+    {
+      "title": "CMC-Bench: Towards a New Paradigm of Visual Signal Compression",
+      "url": "https://huggingface.co/papers/2406.09356",
+      "authors": [
+        "Chunyi Li",
+        "Xiele Wu",
+        "Guo Lu",
+        "Xiongkuo Min",
+        "Xiaohong Liu",
+        "Weisi Lin"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.09356.pdf",
+      "abstract": "Ultra-low bitrate image compression is a challenging and demanding topic.\nWith the development of Large Multimodal Models (LMMs), a Cross Modality\nCompression (CMC) paradigm of Image-Text-Image has emerged. Compared with\ntraditional codecs, this semantic-level compression can reduce image data size\nto 0.1\\% or even lower, which has strong potential applications. However, CMC\nhas certain defects in consistency with the original image and perceptual\nquality. To address this problem, we introduce CMC-Bench, a benchmark of the\ncooperative performance of Image-to-Text (I2T) and Text-to-Image (T2I) models\nfor image compression. This benchmark covers 18,000 and 40,000 images\nrespectively to verify 6 mainstream I2T and 12 T2I models, including 160,000\nsubjective preference scores annotated by human experts. At ultra-low bitrates,\nthis paper proves that the combination of some I2T and T2I models has surpassed\nthe most advanced visual signal codecs; meanwhile, it highlights where LMMs can\nbe further optimized toward the compression task. We encourage LMM developers\nto participate in this test to promote the evolution of visual signal codec\nprotocols.",
+      "upvotes": 4
+    },
+    {
+      "title": "MLKV: Multi-Layer Key-Value Heads for Memory Efficient Transformer Decoding",
+      "url": "https://huggingface.co/papers/2406.09297",
+      "authors": [
+        "Muhammad Farid Adilazuarda",
+        "Ayu Purwarianti"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.09297.pdf",
+      "abstract": "Auto-regressive inference of transformers benefit greatly from Key-Value (KV)\ncaching, but can lead to major memory bottlenecks as model size, batch size,\nand sequence length grow at scale. We introduce Multi-Layer Key-Value (MLKV)\nsharing, a novel approach extending KV sharing across transformer layers to\nreduce memory usage beyond what was possible with Multi-Query Attention (MQA)\nand Grouped-Query Attention (GQA). Evaluations on various NLP benchmarks and\ninference metrics using uptrained Pythia-160M variants demonstrate that MLKV\nsignificantly reduces memory usage with minimal performance loss, reducing KV\ncache size down to a factor of 6x compared to MQA. These results highlight\nMLKV's potential for efficient deployment of transformer models at scale. We\nprovide code at https://github.com/zaydzuhri/pythia-mlkv",
+      "upvotes": 4
+    },
+    {
+      "title": "Toffee: Efficient Million-Scale Dataset Construction for Subject-Driven Text-to-Image Generation",
+      "url": "https://huggingface.co/papers/2406.09305",
+      "authors": [
+        "Kaizhi Zheng",
+        "Nanxuan Zhao",
+        "Jiuxiang Gu",
+        "Zichao Wang",
+        "Tong Sun"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.09305.pdf",
+      "abstract": "In subject-driven text-to-image generation, recent works have achieved\nsuperior performance by training the model on synthetic datasets containing\nnumerous image pairs. Trained on these datasets, generative models can produce\ntext-aligned images for specific subject from arbitrary testing image in a\nzero-shot manner. They even outperform methods which require additional\nfine-tuning on testing images. However, the cost of creating such datasets is\nprohibitive for most researchers. To generate a single training pair, current\nmethods fine-tune a pre-trained text-to-image model on the subject image to\ncapture fine-grained details, then use the fine-tuned model to create images\nfor the same subject based on creative text prompts. Consequently, constructing\na large-scale dataset with millions of subjects can require hundreds of\nthousands of GPU hours. To tackle this problem, we propose Toffee, an efficient\nmethod to construct datasets for subject-driven editing and generation.\nSpecifically, our dataset construction does not need any subject-level\nfine-tuning. After pre-training two generative models, we are able to generate\ninfinite number of high-quality samples. We construct the first large-scale\ndataset for subject-driven image editing and generation, which contains 5\nmillion image pairs, text prompts, and masks. Our dataset is 5 times the size\nof previous largest dataset, yet our cost is tens of thousands of GPU hours\nlower. To test the proposed dataset, we also propose a model which is capable\nof both subject-driven image editing and generation. By simply training the\nmodel on our proposed dataset, it obtains competitive results, illustrating the\neffectiveness of the proposed dataset construction framework.",
+      "upvotes": 4
+    },
+    {
+      "title": "LRM-Zero: Training Large Reconstruction Models with Synthesized Data",
+      "url": "https://huggingface.co/papers/2406.09371",
+      "authors": [
+        "Arie Kaufman",
+        "Xin Sun",
+        "Hao Tan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.09371.pdf",
+      "abstract": "We present LRM-Zero, a Large Reconstruction Model (LRM) trained entirely on\nsynthesized 3D data, achieving high-quality sparse-view 3D reconstruction. The\ncore of LRM-Zero is our procedural 3D dataset, Zeroverse, which is\nautomatically synthesized from simple primitive shapes with random texturing\nand augmentations (e.g., height fields, boolean differences, and wireframes).\nUnlike previous 3D datasets (e.g., Objaverse) which are often captured or\ncrafted by humans to approximate real 3D data, Zeroverse completely ignores\nrealistic global semantics but is rich in complex geometric and texture details\nthat are locally similar to or even more intricate than real objects. We\ndemonstrate that our LRM-Zero, trained with our fully synthesized Zeroverse,\ncan achieve high visual quality in the reconstruction of real-world objects,\ncompetitive with models trained on Objaverse. We also analyze several critical\ndesign choices of Zeroverse that contribute to LRM-Zero's capability and\ntraining stability. Our work demonstrates that 3D reconstruction, one of the\ncore tasks in 3D vision, can potentially be addressed without the semantics of\nreal-world objects. The Zeroverse's procedural synthesis code and interactive\nvisualization are available at: https://desaixie.github.io/lrm-zero/.",
+      "upvotes": 4
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "date": "2024-04-17",
+  "papers": [
+    {
+      "title": "Scaling Instructable Agents Across Many Simulated Worlds",
+      "url": "https://huggingface.co/papers/2404.10179",
+      "authors": [
+        "SIMA Team",
+        "Maria Abi Raad",
+        "Arun Ahuja",
+        "Catarina Barros",
+        "Frederic Besse",
+        "Andrew Bolt",
+        "Adrian Bolton",
+        "Bethanie Brownfield",
+        "Gavin Buttimore",
+        "Max Cant",
+        "Sarah Chakera",
+        "Stephanie C. Y. Chan",
+        "Jeff Clune",
+        "Adrian Collister",
+        "Vikki Copeman",
+        "Alex Cullum",
+        "Dario de Cesare",
+        "Julia Di Trapani",
+        "Yani Donchev",
+        "Emma Dunleavy",
+        "Martin Engelcke"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.10179.pdf",
+      "abstract": "Building embodied AI systems that can follow arbitrary language instructions\nin any 3D environment is a key challenge for creating general AI. Accomplishing\nthis goal requires learning to ground language in perception and embodied\nactions, in order to accomplish complex tasks. The Scalable, Instructable,\nMultiworld Agent (SIMA) project tackles this by training agents to follow\nfree-form instructions across a diverse range of virtual 3D environments,\nincluding curated research environments as well as open-ended, commercial video\ngames. Our goal is to develop an instructable agent that can accomplish\nanything a human can do in any simulated 3D environment. Our approach focuses\non language-driven generality while imposing minimal assumptions. Our agents\ninteract with environments in real-time using a generic, human-like interface:\nthe inputs are image observations and language instructions and the outputs are\nkeyboard-and-mouse actions. This general approach is challenging, but it allows\nagents to ground language across many visually complex and semantically rich\nenvironments while also allowing us to readily run agents in new environments.\nIn this paper we describe our motivation and goal, the initial progress we have\nmade, and promising preliminary results on several diverse research\nenvironments and a variety of commercial video games.",
+      "upvotes": 26
+    },
+    {
+      "title": "Long-form music generation with latent diffusion",
+      "url": "https://huggingface.co/papers/2404.10301",
+      "authors": [
+        "Zach Evans",
+        "Zack Zukowski",
+        "Jordi Pons"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.10301.pdf",
+      "abstract": "Audio-based generative models for music have seen great strides recently, but\nso far have not managed to produce full-length music tracks with coherent\nmusical structure. We show that by training a generative model on long temporal\ncontexts it is possible to produce long-form music of up to 4m45s. Our model\nconsists of a diffusion-transformer operating on a highly downsampled\ncontinuous latent representation (latent rate of 21.5Hz). It obtains\nstate-of-the-art generations according to metrics on audio quality and prompt\nalignment, and subjective tests reveal that it produces full-length music with\ncoherent structure.",
+      "upvotes": 24
+    }
+  ]
+}

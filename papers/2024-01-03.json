@@ -1,0 +1,175 @@
+{
+  "date": "2024-01-03",
+  "papers": [
+    {
+      "title": "DocLLM: A layout-aware generative language model for multimodal document understanding",
+      "url": "https://huggingface.co/papers/2401.00908",
+      "authors": [
+        "Natraj Raman",
+        "Petr Babkin",
+        "Simerjot Kaur",
+        "Yulong Pei"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.00908.pdf",
+      "abstract": "Enterprise documents such as forms, invoices, receipts, reports, contracts,\nand other similar records, often carry rich semantics at the intersection of\ntextual and spatial modalities. The visual cues offered by their complex\nlayouts play a crucial role in comprehending these documents effectively. In\nthis paper, we present DocLLM, a lightweight extension to traditional large\nlanguage models (LLMs) for reasoning over visual documents, taking into account\nboth textual semantics and spatial layout. Our model differs from existing\nmultimodal LLMs by avoiding expensive image encoders and focuses exclusively on\nbounding box information to incorporate the spatial layout structure.\nSpecifically, the cross-alignment between text and spatial modalities is\ncaptured by decomposing the attention mechanism in classical transformers to a\nset of disentangled matrices. Furthermore, we devise a pre-training objective\nthat learns to infill text segments. This approach allows us to address\nirregular layouts and heterogeneous content frequently encountered in visual\ndocuments. The pre-trained model is fine-tuned using a large-scale instruction\ndataset, covering four core document intelligence tasks. We demonstrate that\nour solution outperforms SotA LLMs on 14 out of 16 datasets across all tasks,\nand generalizes well to 4 out of 5 previously unseen datasets.",
+      "upvotes": 181
+    },
+    {
+      "title": "Self-Play Fine-Tuning Converts Weak Language Models to Strong Language Models",
+      "url": "https://huggingface.co/papers/2401.01335",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2401.01335.pdf",
+      "abstract": "Harnessing the power of human-annotated data through Supervised Fine-Tuning\n(SFT) is pivotal for advancing Large Language Models (LLMs). In this paper, we\ndelve into the prospect of growing a strong LLM out of a weak one without the\nneed for acquiring additional human-annotated data. We propose a new\nfine-tuning method called Self-Play fIne-tuNing (SPIN), which starts from a\nsupervised fine-tuned model. At the heart of SPIN lies a self-play mechanism,\nwhere the LLM refines its capability by playing against instances of itself.\nMore specifically, the LLM generates its own training data from its previous\niterations, refining its policy by discerning these self-generated responses\nfrom those obtained from human-annotated data. Our method progressively\nelevates the LLM from a nascent model to a formidable one, unlocking the full\npotential of human-annotated demonstration data for SFT. Theoretically, we\nprove that the global optimum to the training objective function of our method\nis achieved only when the LLM policy aligns with the target data distribution.\nEmpirically, we evaluate our method on several benchmark datasets including the\nHuggingFace Open LLM Leaderboard, MT-Bench, and datasets from Big-Bench. Our\nresults show that SPIN can significantly improve the LLM's performance across a\nvariety of benchmarks and even outperform models trained through direct\npreference optimization (DPO) supplemented with extra GPT-4 preference data.\nThis sheds light on the promise of self-play, enabling the achievement of\nhuman-level performance in LLMs without the need for expert opponents.",
+      "upvotes": 64
+    },
+    {
+      "title": "LLaMA Beyond English: An Empirical Study on Language Capability Transfer",
+      "url": "https://huggingface.co/papers/2401.01055",
+      "authors": [
+        "Jun Zhao",
+        "Zhihao Zhang",
+        "Qi Zhang",
+        "Tao Gui",
+        "Xuanjing Huang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.01055.pdf",
+      "abstract": "In recent times, substantial advancements have been witnessed in large\nlanguage models (LLMs), exemplified by ChatGPT, showcasing remarkable\nproficiency across a range of complex tasks. However, many mainstream LLMs\n(e.g. LLaMA) are pretrained on English-dominant corpus, which limits their\nperformance in other non-English languages. In this paper, we focus on how to\neffectively transfer the capabilities of language generation and following\ninstructions to a non-English language. To answer this question, we conduct an\nextensive empirical investigation based on LLaMA, accumulating over 1440 GPU\nhours. We analyze the impact of key factors such as vocabulary extension,\nfurther pretraining, and instruction tuning on transfer. To accurately assess\nthe model's level of knowledge, we employ four widely used standardized testing\nbenchmarks: C-Eval, MMLU, AGI-Eval, and GAOKAO-Bench. Furthermore, a\ncomprehensive evaluation of the model's response quality is conducted,\nconsidering aspects such as accuracy, fluency, informativeness, logical\ncoherence, and harmlessness, based on LLM-Eval, a benchmarks consisting\ninstruction tasks from 17 diverse categories. Our evaluation results\ndemonstrate that comparable performance to state-of-the-art transfer models can\nbe achieved with less than 1% of the pretraining data, both in terms of\nknowledge alignment and response quality. Furthermore, the experimental\noutcomes across the thirteen low-resource languages also exhibit similar\ntrends. We anticipate that the conclusions revealed by the experiments will aid\nthe community in developing non-English LLMs.",
+      "upvotes": 54
+    },
+    {
+      "title": "LLM Maybe LongLM: Self-Extend LLM Context Window Without Tuning",
+      "url": "https://huggingface.co/papers/2401.01325",
+      "authors": [
+        "Hongye Jin",
+        "Xiaotian Han",
+        "Jingfeng Yang",
+        "Zhimeng Jiang",
+        "Zirui Liu",
+        "Chia-Yuan Chang",
+        "Huiyuan Chen",
+        "Xia Hu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.01325.pdf",
+      "abstract": "This work elicits LLMs' inherent ability to handle long contexts without\nfine-tuning. The limited length of the training sequence during training may\nlimit the application of Large Language Models (LLMs) on long input sequences\nfor inference. In this work, we argue that existing LLMs themselves have\ninherent capabilities for handling long contexts. Based on this argument, we\nsuggest extending LLMs' context window by themselves to fully utilize the\ninherent ability.We propose Self-Extend to stimulate LLMs' long context\nhandling potential. The basic idea is to construct bi-level attention\ninformation: the group level and the neighbor level. The two levels are\ncomputed by the original model's self-attention, which means the proposed does\nnot require any training. With only four lines of code modification, the\nproposed method can effortlessly extend existing LLMs' context window without\nany fine-tuning. We conduct comprehensive experiments and the results show that\nthe proposed method can effectively extend existing LLMs' context window's\nlength.",
+      "upvotes": 26
+    },
+    {
+      "title": "VideoDrafter: Content-Consistent Multi-Scene Video Generation with LLM",
+      "url": "https://huggingface.co/papers/2401.01256",
+      "authors": [
+        "Fuchen Long",
+        "Zhaofan Qiu",
+        "Ting Yao",
+        "Tao Mei"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.01256.pdf",
+      "abstract": "The recent innovations and breakthroughs in diffusion models have\nsignificantly expanded the possibilities of generating high-quality videos for\nthe given prompts. Most existing works tackle the single-scene scenario with\nonly one video event occurring in a single background. Extending to generate\nmulti-scene videos nevertheless is not trivial and necessitates to nicely\nmanage the logic in between while preserving the consistent visual appearance\nof key content across video scenes. In this paper, we propose a novel\nframework, namely VideoDrafter, for content-consistent multi-scene video\ngeneration. Technically, VideoDrafter leverages Large Language Models (LLM) to\nconvert the input prompt into comprehensive multi-scene script that benefits\nfrom the logical knowledge learnt by LLM. The script for each scene includes a\nprompt describing the event, the foreground/background entities, as well as\ncamera movement. VideoDrafter identifies the common entities throughout the\nscript and asks LLM to detail each entity. The resultant entity description is\nthen fed into a text-to-image model to generate a reference image for each\nentity. Finally, VideoDrafter outputs a multi-scene video by generating each\nscene video via a diffusion process that takes the reference images, the\ndescriptive prompt of the event and camera movement into account. The diffusion\nmodel incorporates the reference images as the condition and alignment to\nstrengthen the content consistency of multi-scene videos. Extensive experiments\ndemonstrate that VideoDrafter outperforms the SOTA video generation models in\nterms of visual quality, content consistency, and user preference.",
+      "upvotes": 19
+    },
+    {
+      "title": "Boundary Attention: Learning to Find Faint Boundaries at Any Resolution",
+      "url": "https://huggingface.co/papers/2401.00935",
+      "authors": [
+        "Mia Gaia Polansky",
+        "Charles Herrmann",
+        "Junhwa Hur",
+        "Deqing Sun",
+        "Dor Verbin",
+        "Todd Zickler"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.00935.pdf",
+      "abstract": "We present a differentiable model that explicitly models boundaries --\nincluding contours, corners and junctions -- using a new mechanism that we call\nboundary attention. We show that our model provides accurate results even when\nthe boundary signal is very weak or is swamped by noise. Compared to previous\nclassical methods for finding faint boundaries, our model has the advantages of\nbeing differentiable; being scalable to larger images; and automatically\nadapting to an appropriate level of geometric detail in each part of an image.\nCompared to previous deep methods for finding boundaries via end-to-end\ntraining, it has the advantages of providing sub-pixel precision, being more\nresilient to noise, and being able to process any image at its native\nresolution and aspect ratio.",
+      "upvotes": 17
+    },
+    {
+      "title": "A Comprehensive Study of Knowledge Editing for Large Language Models",
+      "url": "https://huggingface.co/papers/2401.01286",
+      "authors": [
+        "Yunzhi Yao",
+        "Bozhong Tian",
+        "Peng Wang",
+        "Shumin Deng",
+        "Mengru Wang",
+        "Zekun Xi",
+        "Shengyu Mao",
+        "Jintian Zhang",
+        "Siyuan Cheng",
+        "Ziwen Xu",
+        "Yong Jiang",
+        "Pengjun Xie",
+        "Fei Huang",
+        "Lei Liang",
+        "Zhiqiang Zhang",
+        "Xiaowei Zhu",
+        "Jun Zhou",
+        "Huajun Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.01286.pdf",
+      "abstract": "Large Language Models (LLMs) have shown extraordinary capabilities in\nunderstanding and generating text that closely mirrors human communication.\nHowever, a primary limitation lies in the significant computational demands\nduring training, arising from their extensive parameterization. This challenge\nis further intensified by the dynamic nature of the world, necessitating\nfrequent updates to LLMs to correct outdated information or integrate new\nknowledge, thereby ensuring their continued relevance. Note that many\napplications demand continual model adjustments post-training to address\ndeficiencies or undesirable behaviors. There is an increasing interest in\nefficient, lightweight methods for on-the-fly model modifications. To this end,\nrecent years have seen a burgeoning in the techniques of knowledge editing for\nLLMs, which aim to efficiently modify LLMs' behaviors within specific domains\nwhile preserving overall performance across various inputs. In this paper, we\nfirst define the knowledge editing problem and then provide a comprehensive\nreview of cutting-edge approaches. Drawing inspiration from educational and\ncognitive research theories, we propose a unified categorization criterion that\nclassifies knowledge editing methods into three groups: resorting to external\nknowledge, merging knowledge into the model, and editing intrinsic knowledge.\nFurthermore, we introduce a new benchmark, KnowEdit, for a comprehensive\nempirical evaluation of representative knowledge editing approaches.\nAdditionally, we provide an in-depth analysis of knowledge location, which can\nprovide a deeper understanding of the knowledge structures inherent within\nLLMs. Finally, we discuss several potential applications of knowledge editing,\noutlining its broad and impactful implications.",
+      "upvotes": 16
+    },
+    {
+      "title": "TrailBlazer: Trajectory Control for Diffusion-Based Video Generation",
+      "url": "https://huggingface.co/papers/2401.00896",
+      "authors": [
+        "Wan-Duo Kurt Ma",
+        "J. P. Lewis",
+        "W. Bastiaan Kleijn"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.00896.pdf",
+      "abstract": "Within recent approaches to text-to-video (T2V) generation, achieving\ncontrollability in the synthesized video is often a challenge. Typically, this\nissue is addressed by providing low-level per-frame guidance in the form of\nedge maps, depth maps, or an existing video to be altered. However, the process\nof obtaining such guidance can be labor-intensive. This paper focuses on\nenhancing controllability in video synthesis by employing straightforward\nbounding boxes to guide the subject in various ways, all without the need for\nneural network training, finetuning, optimization at inference time, or the use\nof pre-existing videos. Our algorithm, TrailBlazer, is constructed upon a\npre-trained (T2V) model, and easy to implement. The subject is directed by a\nbounding box through the proposed spatial and temporal attention map editing.\nMoreover, we introduce the concept of keyframing, allowing the subject\ntrajectory and overall appearance to be guided by both a moving bounding box\nand corresponding prompts, without the need to provide a detailed mask. The\nmethod is efficient, with negligible additional computation relative to the\nunderlying pre-trained model. Despite the simplicity of the bounding box\nguidance, the resulting motion is surprisingly natural, with emergent effects\nincluding perspective and movement toward the virtual camera as the box size\nincreases.",
+      "upvotes": 14
+    },
+    {
+      "title": "En3D: An Enhanced Generative Model for Sculpting 3D Humans from 2D Synthetic Data",
+      "url": "https://huggingface.co/papers/2401.01173",
+      "authors": [
+        "Yifang Men",
+        "Biwen Lei",
+        "Yuan Yao",
+        "Miaomiao Cui",
+        "Zhouhui Lian",
+        "Xuansong Xie"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.01173.pdf",
+      "abstract": "We present En3D, an enhanced generative scheme for sculpting high-quality 3D\nhuman avatars. Unlike previous works that rely on scarce 3D datasets or limited\n2D collections with imbalanced viewing angles and imprecise pose priors, our\napproach aims to develop a zero-shot 3D generative scheme capable of producing\nvisually realistic, geometrically accurate and content-wise diverse 3D humans\nwithout relying on pre-existing 3D or 2D assets. To address this challenge, we\nintroduce a meticulously crafted workflow that implements accurate physical\nmodeling to learn the enhanced 3D generative model from synthetic 2D data.\nDuring inference, we integrate optimization modules to bridge the gap between\nrealistic appearances and coarse 3D shapes. Specifically, En3D comprises three\nmodules: a 3D generator that accurately models generalizable 3D humans with\nrealistic appearance from synthesized balanced, diverse, and structured human\nimages; a geometry sculptor that enhances shape quality using multi-view normal\nconstraints for intricate human anatomy; and a texturing module that\ndisentangles explicit texture maps with fidelity and editability, leveraging\nsemantical UV partitioning and a differentiable rasterizer. Experimental\nresults show that our approach significantly outperforms prior works in terms\nof image quality, geometry accuracy and content diversity. We also showcase the\napplicability of our generated avatars for animation and editing, as well as\nthe scalability of our approach for content-style free adaptation.",
+      "upvotes": 11
+    },
+    {
+      "title": "Taming Mode Collapse in Score Distillation for Text-to-3D Generation",
+      "url": "https://huggingface.co/papers/2401.00909",
+      "authors": [
+        "Zhiwen Fan",
+        "Dilin Wang",
+        "Sreyas Mohan",
+        "Forrest Iandola",
+        "Rakesh Ranjan",
+        "Yilei Li",
+        "Qiang Liu",
+        "Zhangyang Wang",
+        "Vikas Chandra"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.00909.pdf",
+      "abstract": "Despite the remarkable performance of score distillation in text-to-3D\ngeneration, such techniques notoriously suffer from view inconsistency issues,\nalso known as \"Janus\" artifact, where the generated objects fake each view with\nmultiple front faces. Although empirically effective methods have approached\nthis problem via score debiasing or prompt engineering, a more rigorous\nperspective to explain and tackle this problem remains elusive. In this paper,\nwe reveal that the existing score distillation-based text-to-3D generation\nframeworks degenerate to maximal likelihood seeking on each view independently\nand thus suffer from the mode collapse problem, manifesting as the Janus\nartifact in practice. To tame mode collapse, we improve score distillation by\nre-establishing in entropy term in the corresponding variational objective,\nwhich is applied to the distribution of rendered images. Maximizing the entropy\nencourages diversity among different views in generated 3D assets, thereby\nmitigating the Janus problem. Based on this new objective, we derive a new\nupdate rule for 3D score distillation, dubbed Entropic Score Distillation\n(ESD). We theoretically reveal that ESD can be simplified and implemented by\njust adopting the classifier-free guidance trick upon variational score\ndistillation. Although embarrassingly straightforward, our extensive\nexperiments successfully demonstrate that ESD can be an effective treatment for\nJanus artifacts in score distillation.",
+      "upvotes": 9
+    },
+    {
+      "title": "Q-Refine: A Perceptual Quality Refiner for AI-Generated Image",
+      "url": "https://huggingface.co/papers/2401.01117",
+      "authors": [
+        "Chunyi Li",
+        "Zicheng Zhang",
+        "Hongkun Hao",
+        "Kaiwei Zhang",
+        "Lei Bai",
+        "Xiaohong Liu",
+        "Xiongkuo Min",
+        "Weisi Lin",
+        "Guangtao Zhai"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.01117.pdf",
+      "abstract": "With the rapid evolution of the Text-to-Image (T2I) model in recent years,\ntheir unsatisfactory generation result has become a challenge. However,\nuniformly refining AI-Generated Images (AIGIs) of different qualities not only\nlimited optimization capabilities for low-quality AIGIs but also brought\nnegative optimization to high-quality AIGIs. To address this issue, a\nquality-award refiner named Q-Refine is proposed. Based on the preference of\nthe Human Visual System (HVS), Q-Refine uses the Image Quality Assessment (IQA)\nmetric to guide the refining process for the first time, and modify images of\ndifferent qualities through three adaptive pipelines. Experimental shows that\nfor mainstream T2I models, Q-Refine can perform effective optimization to AIGIs\nof different qualities. It can be a general refiner to optimize AIGIs from both\nfidelity and aesthetic quality levels, thus expanding the application of the\nT2I generation models.",
+      "upvotes": 8
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "date": "2024-08-01",
+  "papers": [
+    {
+      "title": "The Llama 3 Herd of Models",
+      "url": "https://huggingface.co/papers/2407.21783",
+      "authors": [
+        "Abhinav Jauhri",
+        "Abhinav Pandey",
+        "Ahmad Al-Dahle",
+        "Aiesha Letman",
+        "Akhil Mathur",
+        "Amy Yang",
+        "Anirudh Goyal",
+        "Anthony Hartshorn",
+        "Aobo Yang",
+        "Archi Mitra",
+        "Archie Sravankumar",
+        "Artem Korenev",
+        "Arthur Hinsvark",
+        "Arun Rao",
+        "Aston Zhang",
+        "Aurelien Rodriguez",
+        "Austen Gregerson",
+        "Ava Spataru"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.21783.pdf",
+      "abstract": "Modern artificial intelligence (AI) systems are powered by foundation models.\nThis paper presents a new set of foundation models, called Llama 3. It is a\nherd of language models that natively support multilinguality, coding,\nreasoning, and tool usage. Our largest model is a dense Transformer with 405B\nparameters and a context window of up to 128K tokens. This paper presents an\nextensive empirical evaluation of Llama 3. We find that Llama 3 delivers\ncomparable quality to leading language models such as GPT-4 on a plethora of\ntasks. We publicly release Llama 3, including pre-trained and post-trained\nversions of the 405B parameter language model and our Llama Guard 3 model for\ninput and output safety. The paper also presents the results of experiments in\nwhich we integrate image, video, and speech capabilities into Llama 3 via a\ncompositional approach. We observe this approach performs competitively with\nthe state-of-the-art on image, video, and speech recognition tasks. The\nresulting models are not yet being broadly released as they are still under\ndevelopment.",
+      "upvotes": 107
+    },
+    {
+      "title": "Tora: Trajectory-oriented Diffusion Transformer for Video Generation",
+      "url": "https://huggingface.co/papers/2407.21705",
+      "authors": [
+        "Long Qin",
+        "Weizhi Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.21705.pdf",
+      "abstract": "Recent advancements in Diffusion Transformer (DiT) have demonstrated\nremarkable proficiency in producing high-quality video content. Nonetheless,\nthe potential of transformer-based diffusion models for effectively generating\nvideos with controllable motion remains an area of limited exploration. This\npaper introduces Tora, the first trajectory-oriented DiT framework that\nintegrates textual, visual, and trajectory conditions concurrently for video\ngeneration. Specifically, Tora consists of a Trajectory Extractor~(TE), a\nSpatial-Temporal DiT, and a Motion-guidance Fuser~(MGF). The TE encodes\narbitrary trajectories into hierarchical spacetime motion patches with a 3D\nvideo compression network. The MGF integrates the motion patches into the DiT\nblocks to generate consistent videos following trajectories. Our design aligns\nseamlessly with DiT's scalability, allowing precise control of video content's\ndynamics with diverse durations, aspect ratios, and resolutions. Extensive\nexperiments demonstrate Tora's excellence in achieving high motion fidelity,\nwhile also meticulously simulating the movement of the physical world. Page can\nbe found at https://ali-videoai.github.io/tora_video.",
+      "upvotes": 25
+    },
+    {
+      "title": "MoMa: Efficient Early-Fusion Pre-training with Mixture of Modality-Aware Experts",
+      "url": "https://huggingface.co/papers/2407.21770",
+      "authors": [
+        "Srinivasan Iyer",
+        "Gargi Gosh",
+        "Luke Zettlemoyer"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.21770.pdf",
+      "abstract": "We introduce MoMa, a novel modality-aware mixture-of-experts (MoE)\narchitecture designed for pre-training mixed-modal, early-fusion language\nmodels. MoMa processes images and text in arbitrary sequences by dividing\nexpert modules into modality-specific groups. These groups exclusively process\ndesignated tokens while employing learned routing within each group to maintain\nsemantically informed adaptivity. Our empirical results reveal substantial\npre-training efficiency gains through this modality-specific parameter\nallocation. Under a 1-trillion-token training budget, the MoMa 1.4B model,\nfeaturing 4 text experts and 4 image experts, achieves impressive FLOPs\nsavings: 3.7x overall, with 2.6x for text and 5.2x for image processing\ncompared to a compute-equivalent dense baseline, measured by pre-training loss.\nThis outperforms the standard expert-choice MoE with 8 mixed-modal experts,\nwhich achieves 3x overall FLOPs savings (3x for text, 2.8x for image).\nCombining MoMa with mixture-of-depths (MoD) further improves pre-training FLOPs\nsavings to 4.2x overall (text: 3.4x, image: 5.3x), although this combination\nhurts performance in causal inference due to increased sensitivity to router\naccuracy. These results demonstrate MoMa's potential to significantly advance\nthe efficiency of mixed-modal, early-fusion language model pre-training, paving\nthe way for more resource-efficient and capable multimodal AI systems.",
+      "upvotes": 22
+    },
+    {
+      "title": "Towards Achieving Human Parity on End-to-end Simultaneous Speech Translation via LLM Agent",
+      "url": "https://huggingface.co/papers/2407.21646",
+      "authors": [
+        "Tom Ko",
+        "Hang Li",
+        "Qini Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.21646.pdf",
+      "abstract": "In this paper, we present Cross Language Agent -- Simultaneous\nInterpretation, CLASI, a high-quality and human-like Simultaneous Speech\nTranslation (SiST) System. Inspired by professional human interpreters, we\nutilize a novel data-driven read-write strategy to balance the translation\nquality and latency. To address the challenge of translating in-domain\nterminologies, CLASI employs a multi-modal retrieving module to obtain relevant\ninformation to augment the translation. Supported by LLMs, our approach can\ngenerate error-tolerated translation by considering the input audio, historical\ncontext, and retrieved information. Experimental results show that our system\noutperforms other systems by significant margins. Aligned with professional\nhuman interpreters, we evaluate CLASI with a better human evaluation metric,\nvalid information proportion (VIP), which measures the amount of information\nthat can be successfully conveyed to the listeners. In the real-world\nscenarios, where the speeches are often disfluent, informal, and unclear, CLASI\nachieves VIP of 81.3% and 78.0% for Chinese-to-English and English-to-Chinese\ntranslation directions, respectively. In contrast, state-of-the-art commercial\nor open-source systems only achieve 35.4% and 41.6%. On the extremely hard\ndataset, where other systems achieve under 13% VIP, CLASI can still achieve 70%\nVIP.",
+      "upvotes": 18
+    },
+    {
+      "title": "ShieldGemma: Generative AI Content Moderation Based on Gemma",
+      "url": "https://huggingface.co/papers/2407.21772",
+      "authors": [
+        "Wenjun Zeng",
+        "Yuchi Liu",
+        "Hamza Harkous",
+        "Drew Proud",
+        "Piyush Kumar",
+        "Bhaktipriya Radharapu",
+        "Olivia Sturman",
+        "Oscar Wahltinez"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.21772.pdf",
+      "abstract": "We present ShieldGemma, a comprehensive suite of LLM-based safety content\nmoderation models built upon Gemma2. These models provide robust,\nstate-of-the-art predictions of safety risks across key harm types (sexually\nexplicit, dangerous content, harassment, hate speech) in both user input and\nLLM-generated output. By evaluating on both public and internal benchmarks, we\ndemonstrate superior performance compared to existing models, such as Llama\nGuard (+10.8\\% AU-PRC on public benchmarks) and WildCard (+4.3\\%).\nAdditionally, we present a novel LLM-based data curation pipeline, adaptable to\na variety of safety-related tasks and beyond. We have shown strong\ngeneralization performance for model trained mainly on synthetic data. By\nreleasing ShieldGemma, we provide a valuable resource to the research\ncommunity, advancing LLM safety and enabling the creation of more effective\ncontent moderation solutions for developers.",
+      "upvotes": 13
+    },
+    {
+      "title": "Data Contamination Report from the 2024 CONDA Shared Task",
+      "url": "https://huggingface.co/papers/2407.21530",
+      "authors": [
+        "Jon Ander Campos",
+        "Yoav Goldberg",
+        "Wei-Lin Chen",
+        "Melissa Dell",
+        "Suryansh Sharma",
+        "Kateryna Solonko"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.21530.pdf",
+      "abstract": "The 1st Workshop on Data Contamination (CONDA 2024) focuses on all relevant\naspects of data contamination in natural language processing, where data\ncontamination is understood as situations where evaluation data is included in\npre-training corpora used to train large scale models, compromising evaluation\nresults. The workshop fostered a shared task to collect evidence on data\ncontamination in current available datasets and models. The goal of the shared\ntask and associated database is to assist the community in understanding the\nextent of the problem and to assist researchers in avoiding reporting\nevaluation results on known contaminated resources. The shared task provides a\nstructured, centralized public database for the collection of contamination\nevidence, open to contributions from the community via GitHub pool requests.\nThis first compilation paper is based on 566 reported entries over 91\ncontaminated sources from a total of 23 contributors. The details of the\nindividual contamination events are available in the platform. The platform\ncontinues to be online, open to contributions from the community.",
+      "upvotes": 10
+    },
+    {
+      "title": "TAROT: Task-Oriented Authorship Obfuscation Using Policy Optimization Methods",
+      "url": "https://huggingface.co/papers/2407.21630",
+      "authors": [
+        "Damien Riquet",
+        "Marc Tommasi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.21630.pdf",
+      "abstract": "Authorship obfuscation aims to disguise the identity of an author within a\ntext by altering the writing style, vocabulary, syntax, and other linguistic\nfeatures associated with the text author. This alteration needs to balance\nprivacy and utility. While strong obfuscation techniques can effectively hide\nthe author's identity, they often degrade the quality and usefulness of the\ntext for its intended purpose. Conversely, maintaining high utility tends to\nprovide insufficient privacy, making it easier for an adversary to de-anonymize\nthe author. Thus, achieving an optimal trade-off between these two conflicting\nobjectives is crucial. In this paper, we propose TAROT: Task-Oriented\nAuthorship Obfuscation Using Policy Optimization, a new unsupervised authorship\nobfuscation method whose goal is to optimize the privacy-utility trade-off by\nregenerating the entire text considering its downstream utility. Our approach\nleverages policy optimization as a fine-tuning paradigm over small language\nmodels in order to rewrite texts by preserving author identity and downstream\ntask utility. We show that our approach largely reduce the accuracy of\nattackers while preserving utility. We make our code and models publicly\navailable.",
+      "upvotes": 8
+    },
+    {
+      "title": "Open-Vocabulary Audio-Visual Semantic Segmentation",
+      "url": "https://huggingface.co/papers/2407.21721",
+      "authors": [
+        "Liao Qu",
+        "Yanyu Qi",
+        "Wenzhen Yue",
+        "Ji Shi",
+        "Bowei Xing",
+        "Xianghua Ying"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.21721.pdf",
+      "abstract": "Audio-visual semantic segmentation (AVSS) aims to segment and classify\nsounding objects in videos with acoustic cues. However, most approaches operate\non the close-set assumption and only identify pre-defined categories from\ntraining data, lacking the generalization ability to detect novel categories in\npractical applications. In this paper, we introduce a new task: open-vocabulary\naudio-visual semantic segmentation, extending AVSS task to open-world scenarios\nbeyond the annotated label space. This is a more challenging task that requires\nrecognizing all categories, even those that have never been seen nor heard\nduring training. Moreover, we propose the first open-vocabulary AVSS framework,\nOV-AVSS, which mainly consists of two parts: 1) a universal sound source\nlocalization module to perform audio-visual fusion and locate all potential\nsounding objects and 2) an open-vocabulary classification module to predict\ncategories with the help of the prior knowledge from large-scale pre-trained\nvision-language models. To properly evaluate the open-vocabulary AVSS, we split\nzero-shot training and testing subsets based on the AVSBench-semantic\nbenchmark, namely AVSBench-OV. Extensive experiments demonstrate the strong\nsegmentation and zero-shot generalization ability of our model on all\ncategories. On the AVSBench-OV dataset, OV-AVSS achieves 55.43% mIoU on base\ncategories and 29.14% mIoU on novel categories, exceeding the state-of-the-art\nzero-shot method by 41.88%/20.61% and open-vocabulary method by 10.2%/11.6%.\nThe code is available at https://github.com/ruohaoguo/ovavss.",
+      "upvotes": 8
+    },
+    {
+      "title": "Berkeley Humanoid: A Research Platform for Learning-based Control",
+      "url": "https://huggingface.co/papers/2407.21781",
+      "authors": [
+        "Qiayuan Liao",
+        "Bike Zhang",
+        "Xiaoyu Huang",
+        "Zhongyu Li",
+        "Koushil Sreenath"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.21781.pdf",
+      "abstract": "We introduce Berkeley Humanoid, a reliable and low-cost mid-scale humanoid\nresearch platform for learning-based control. Our lightweight, in-house-built\nrobot is designed specifically for learning algorithms with low simulation\ncomplexity, anthropomorphic motion, and high reliability against falls. The\nrobot's narrow sim-to-real gap enables agile and robust locomotion across\nvarious terrains in outdoor environments, achieved with a simple reinforcement\nlearning controller using light domain randomization. Furthermore, we\ndemonstrate the robot traversing for hundreds of meters, walking on a steep\nunpaved trail, and hopping with single and double legs as a testimony to its\nhigh performance in dynamical walking. Capable of omnidirectional locomotion\nand withstanding large perturbations with a compact setup, our system aims for\nscalable, sim-to-real deployment of learning-based humanoid systems. Please\ncheck http://berkeley-humanoid.com for more details.",
+      "upvotes": 8
+    },
+    {
+      "title": "Improving 2D Feature Representations by 3D-Aware Fine-Tuning",
+      "url": "https://huggingface.co/papers/2407.20229",
+      "authors": [
+        "Anurag Das",
+        "Francis Engelmann",
+        "Siyu Tang",
+        "Jan Eric Lenssen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.20229.pdf",
+      "abstract": "Current visual foundation models are trained purely on unstructured 2D data,\nlimiting their understanding of 3D structure of objects and scenes. In this\nwork, we show that fine-tuning on 3D-aware data improves the quality of\nemerging semantic features. We design a method to lift semantic 2D features\ninto an efficient 3D Gaussian representation, which allows us to re-render them\nfor arbitrary views. Using the rendered 3D-aware features, we design a\nfine-tuning strategy to transfer such 3D awareness into a 2D foundation model.\nWe demonstrate that models fine-tuned in that way produce features that readily\nimprove downstream task performance in semantic segmentation and depth\nestimation through simple linear probing. Notably, though fined-tuned on a\nsingle indoor dataset, the improvement is transferable to a variety of indoor\ndatasets and out-of-domain datasets. We hope our study encourages the community\nto consider injecting 3D awareness when training 2D foundation models. Project\npage: https://ywyue.github.io/FiT3D.",
+      "upvotes": 7
+    },
+    {
+      "title": "Expressive Whole-Body 3D Gaussian Avatar",
+      "url": "https://huggingface.co/papers/2407.21686",
+      "authors": [
+        "Gyeongsik Moon",
+        "Takaaki Shiratori"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.21686.pdf",
+      "abstract": "Facial expression and hand motions are necessary to express our emotions and\ninteract with the world. Nevertheless, most of the 3D human avatars modeled\nfrom a casually captured video only support body motions without facial\nexpressions and hand motions.In this work, we present ExAvatar, an expressive\nwhole-body 3D human avatar learned from a short monocular video. We design\nExAvatar as a combination of the whole-body parametric mesh model (SMPL-X) and\n3D Gaussian Splatting (3DGS). The main challenges are 1) a limited diversity of\nfacial expressions and poses in the video and 2) the absence of 3D\nobservations, such as 3D scans and RGBD images. The limited diversity in the\nvideo makes animations with novel facial expressions and poses non-trivial. In\naddition, the absence of 3D observations could cause significant ambiguity in\nhuman parts that are not observed in the video, which can result in noticeable\nartifacts under novel motions. To address them, we introduce our hybrid\nrepresentation of the mesh and 3D Gaussians. Our hybrid representation treats\neach 3D Gaussian as a vertex on the surface with pre-defined connectivity\ninformation (i.e., triangle faces) between them following the mesh topology of\nSMPL-X. It makes our ExAvatar animatable with novel facial expressions by\ndriven by the facial expression space of SMPL-X. In addition, by using\nconnectivity-based regularizers, we significantly reduce artifacts in novel\nfacial expressions and poses.",
+      "upvotes": 7
+    },
+    {
+      "title": "Fine-gained Zero-shot Video Sampling",
+      "url": "https://huggingface.co/papers/2407.21475",
+      "authors": [
+        "Dengsheng Chen",
+        "Jie Hu",
+        "Xiaoming Wei",
+        "Enhua Wu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.21475.pdf",
+      "abstract": "Incorporating a temporal dimension into pretrained image diffusion models for\nvideo generation is a prevalent approach. However, this method is\ncomputationally demanding and necessitates large-scale video datasets. More\ncritically, the heterogeneity between image and video datasets often results in\ncatastrophic forgetting of the image expertise. Recent attempts to directly\nextract video snippets from image diffusion models have somewhat mitigated\nthese problems. Nevertheless, these methods can only generate brief video clips\nwith simple movements and fail to capture fine-grained motion or non-grid\ndeformation. In this paper, we propose a novel Zero-Shot video Sampling\nalgorithm, denoted as ZS^2, capable of directly sampling\nhigh-quality video clips from existing image synthesis methods, such as Stable\nDiffusion, without any training or optimization. Specifically, ZS^2\nutilizes the dependency noise model and temporal momentum attention to ensure\ncontent consistency and animation coherence, respectively. This ability enables\nit to excel in related tasks, such as conditional and context-specialized video\ngeneration and instruction-guided video editing. Experimental results\ndemonstrate that ZS^2 achieves state-of-the-art performance in\nzero-shot video generation, occasionally outperforming recent supervised\nmethods.\n  Homepage: https://densechen.github.io/zss/.",
+      "upvotes": 5
+    },
+    {
+      "title": "NeRF-MAE: Masked AutoEncoders for Self-Supervised 3D Representation Learning for Neural Radiance Fields",
+      "url": "https://huggingface.co/papers/2404.01300",
+      "authors": [
+        "Vitor Guizilini"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.01300.pdf",
+      "abstract": "Neural fields excel in computer vision and robotics due to their ability to\nunderstand the 3D visual world such as inferring semantics, geometry, and\ndynamics. Given the capabilities of neural fields in densely representing a 3D\nscene from 2D images, we ask the question: Can we scale their self-supervised\npretraining, specifically using masked autoencoders, to generate effective 3D\nrepresentations from posed RGB images. Owing to the astounding success of\nextending transformers to novel data modalities, we employ standard 3D Vision\nTransformers to suit the unique formulation of NeRFs. We leverage NeRF's\nvolumetric grid as a dense input to the transformer, contrasting it with other\n3D representations such as pointclouds where the information density can be\nuneven, and the representation is irregular. Due to the difficulty of applying\nmasked autoencoders to an implicit representation, such as NeRF, we opt for\nextracting an explicit representation that canonicalizes scenes across domains\nby employing the camera trajectory for sampling. Our goal is made possible by\nmasking random patches from NeRF's radiance and density grid and employing a\nstandard 3D Swin Transformer to reconstruct the masked patches. In doing so,\nthe model can learn the semantic and spatial structure of complete scenes. We\npretrain this representation at scale on our proposed curated posed-RGB data,\ntotaling over 1.8 million images. Once pretrained, the encoder is used for\neffective 3D transfer learning. Our novel self-supervised pretraining for\nNeRFs, NeRF-MAE, scales remarkably well and improves performance on various\nchallenging 3D tasks. Utilizing unlabeled posed 2D data for pretraining,\nNeRF-MAE significantly outperforms self-supervised 3D pretraining and NeRF\nscene understanding baselines on Front3D and ScanNet datasets with an absolute\nperformance improvement of over 20% AP50 and 8% AP25 for 3D object detection.",
+      "upvotes": 4
+    }
+  ]
+}

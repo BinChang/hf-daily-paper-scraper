@@ -1,0 +1,269 @@
+{
+  "date": "2024-09-25",
+  "papers": [
+    {
+      "title": "HelloBench: Evaluating Long Text Generation Capabilities of Large Language Models",
+      "url": "https://huggingface.co/papers/2409.16191",
+      "authors": [
+        "Feiyu Duan",
+        "Yutao Mou",
+        "Wenge Rong",
+        "Kai Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.16191.pdf",
+      "abstract": "In recent years, Large Language Models (LLMs) have demonstrated remarkable\ncapabilities in various tasks (e.g., long-context understanding), and many\nbenchmarks have been proposed. However, we observe that long text generation\ncapabilities are not well investigated. Therefore, we introduce the\nHierarchical Long Text Generation Benchmark (HelloBench), a comprehensive,\nin-the-wild, and open-ended benchmark to evaluate LLMs' performance in\ngenerating long text. Based on Bloom's Taxonomy, HelloBench categorizes long\ntext generation tasks into five subtasks: open-ended QA, summarization, chat,\ntext completion, and heuristic text generation. Besides, we propose\nHierarchical Long Text Evaluation (HelloEval), a human-aligned evaluation\nmethod that significantly reduces the time and effort required for human\nevaluation while maintaining a high correlation with human evaluation. We have\nconducted extensive experiments across around 30 mainstream LLMs and observed\nthat the current LLMs lack long text generation capabilities. Specifically,\nfirst, regardless of whether the instructions include explicit or implicit\nlength constraints, we observe that most LLMs cannot generate text that is\nlonger than 4000 words. Second, we observe that while some LLMs can generate\nlonger text, many issues exist (e.g., severe repetition and quality\ndegradation). Third, to demonstrate the effectiveness of HelloEval, we compare\nHelloEval with traditional metrics (e.g., ROUGE, BLEU, etc.) and LLM-as-a-Judge\nmethods, which show that HelloEval has the highest correlation with human\nevaluation. We release our code in https://github.com/Quehry/HelloBench.",
+      "upvotes": 41
+    },
+    {
+      "title": "MIMO: Controllable Character Video Synthesis with Spatial Decomposed Modeling",
+      "url": "https://huggingface.co/papers/2409.16160",
+      "authors": [
+        "Liefeng Bo"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.16160.pdf",
+      "abstract": "Character video synthesis aims to produce realistic videos of animatable\ncharacters within lifelike scenes. As a fundamental problem in the computer\nvision and graphics community, 3D works typically require multi-view captures\nfor per-case training, which severely limits their applicability of modeling\narbitrary characters in a short time. Recent 2D methods break this limitation\nvia pre-trained diffusion models, but they struggle for pose generality and\nscene interaction. To this end, we propose MIMO, a novel framework which can\nnot only synthesize character videos with controllable attributes (i.e.,\ncharacter, motion and scene) provided by simple user inputs, but also\nsimultaneously achieve advanced scalability to arbitrary characters, generality\nto novel 3D motions, and applicability to interactive real-world scenes in a\nunified framework. The core idea is to encode the 2D video to compact spatial\ncodes, considering the inherent 3D nature of video occurrence. Concretely, we\nlift the 2D frame pixels into 3D using monocular depth estimators, and\ndecompose the video clip to three spatial components (i.e., main human,\nunderlying scene, and floating occlusion) in hierarchical layers based on the\n3D depth. These components are further encoded to canonical identity code,\nstructured motion code and full scene code, which are utilized as control\nsignals of synthesis process. The design of spatial decomposed modeling enables\nflexible user control, complex motion expression, as well as 3D-aware synthesis\nfor scene interactions. Experimental results demonstrate effectiveness and\nrobustness of the proposed method.",
+      "upvotes": 32
+    },
+    {
+      "title": "Making Text Embedders Few-Shot Learners",
+      "url": "https://huggingface.co/papers/2409.15700",
+      "authors": [
+        "MingHao Qin",
+        "Shitao Xiao",
+        "Jianlyu Chen",
+        "Kun Luo",
+        "Yingxia Shao",
+        "Defu Lian",
+        "Zheng Liu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.15700.pdf",
+      "abstract": "Large language models (LLMs) with decoder-only architectures demonstrate\nremarkable in-context learning (ICL) capabilities. This feature enables them to\neffectively handle both familiar and novel tasks by utilizing examples provided\nwithin their input context. Recognizing the potential of this capability, we\npropose leveraging the ICL feature in LLMs to enhance the process of text\nembedding generation. To this end, we introduce a novel model bge-en-icl, which\nemploys few-shot examples to produce high-quality text embeddings. Our approach\nintegrates task-related examples directly into the query side, resulting in\nsignificant improvements across various tasks. Additionally, we have\ninvestigated how to effectively utilize LLMs as embedding models, including\nvarious attention mechanisms, pooling methods, etc. Our findings suggest that\nretaining the original framework often yields the best results, underscoring\nthat simplicity is best. Experimental results on the MTEB and AIR-Bench\nbenchmarks demonstrate that our approach sets new state-of-the-art (SOTA)\nperformance. Our model, code and dataset are freely available at\nhttps://github.com/FlagOpen/FlagEmbedding .",
+      "upvotes": 29
+    },
+    {
+      "title": "OmniBench: Towards The Future of Universal Omni-Language Models",
+      "url": "https://huggingface.co/papers/2409.15272",
+      "authors": [
+        "Yizhi Li",
+        "Jinjie Shi",
+        "Xinyue Zhang",
+        "Zhenzhu Yang",
+        "Xiangzhou Wang",
+        "Zachary Liu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.15272.pdf",
+      "abstract": "Recent advancements in multimodal large language models (MLLMs) have aimed to\nintegrate and interpret data across diverse modalities. However, the capacity\nof these models to concurrently process and reason about multiple modalities\nremains inadequately explored, partly due to the lack of comprehensive\nmodality-wise benchmarks. We introduce OmniBench, a novel benchmark designed to\nrigorously evaluate models' ability to recognize, interpret, and reason across\nvisual, acoustic, and textual inputs simultaneously. We define models capable\nof such tri-modal processing as omni-language models (OLMs). OmniBench is\ndistinguished by high-quality human annotations, ensuring that accurate\nresponses require integrated understanding and reasoning across all three\nmodalities. Our main findings reveal that: i) open-source OLMs exhibit critical\nlimitations in instruction-following and reasoning capabilities within\ntri-modal contexts; and ii) the baseline models perform poorly (below 50%\naccuracy) even when provided with alternative textual representations of images\nand audio. These results suggest that the ability to construct a consistent\ncontext from text, image, and audio is often overlooked in existing MLLM\ntraining paradigms. We advocate for future research to focus on developing more\nrobust tri-modal integration techniques and training strategies to enhance OLM\nperformance across diverse modalities. The codes and live leaderboard could be\nfound at https://m-a-p.ai/OmniBench.",
+      "upvotes": 25
+    },
+    {
+      "title": "EuroLLM: Multilingual Language Models for Europe",
+      "url": "https://huggingface.co/papers/2409.16235",
+      "authors": [
+        "Pedro Henrique Martins",
+        "Patrick Fernandes",
+        "Nuno M. Guerreiro",
+        "Duarte M. Alves",
+        "Amin Farajian",
+        "Pierre Colombo",
+        "Barry Haddow",
+        "Alexandra Birch",
+        "André F. T. Martins"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.16235.pdf",
+      "abstract": "The quality of open-weight LLMs has seen significant improvement, yet they\nremain predominantly focused on English. In this paper, we introduce the\nEuroLLM project, aimed at developing a suite of open-weight multilingual LLMs\ncapable of understanding and generating text in all official European Union\nlanguages, as well as several additional relevant languages. We outline the\nprogress made to date, detailing our data collection and filtering process, the\ndevelopment of scaling laws, the creation of our multilingual tokenizer, and\nthe data mix and modeling configurations. Additionally, we release our initial\nmodels: EuroLLM-1.7B and EuroLLM-1.7B-Instruct and report their performance on\nmultilingual general benchmarks and machine translation.",
+      "upvotes": 24
+    },
+    {
+      "title": "Present and Future Generalization of Synthetic Image Detectors",
+      "url": "https://huggingface.co/papers/2409.14128",
+      "authors": [
+        "Enrique Lopez-Cuena"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.14128.pdf",
+      "abstract": "The continued release of new and better image generation models increases the\ndemand for synthetic image detectors. In such a dynamic field, detectors need\nto be able to generalize widely and be robust to uncontrolled alterations. The\npresent work is motivated by this setting, when looking at the role of time,\nimage transformations and data sources, for detector generalization. In these\nexperiments, none of the evaluated detectors is found universal, but results\nindicate an ensemble could be. Experiments on data collected in the wild show\nthis task to be more challenging than the one defined by large-scale datasets,\npointing to a gap between experimentation and actual practice. Finally, we\nobserve a race equilibrium effect, where better generators lead to better\ndetectors, and vice versa. We hypothesize this pushes the field towards a\nperpetually close race between generators and detectors.",
+      "upvotes": 18
+    },
+    {
+      "title": "MonoFormer: One Transformer for Both Diffusion and Autoregression",
+      "url": "https://huggingface.co/papers/2409.16280",
+      "authors": [
+        "Chuyang Zhao",
+        "Yuxing Song",
+        "Haocheng Feng",
+        "Errui Ding",
+        "Yifan Sun",
+        "Xinyan Xiao",
+        "Jingdong Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.16280.pdf",
+      "abstract": "Most existing multimodality methods use separate backbones for\nautoregression-based discrete text generation and diffusion-based continuous\nvisual generation, or the same backbone by discretizing the visual data to use\nautoregression for both text and visual generation. In this paper, we propose\nto study a simple idea: share one transformer for both autoregression and\ndiffusion. The feasibility comes from two main aspects: (i) Transformer is\nsuccessfully applied to diffusion for visual generation, and (ii) transformer\ntraining for autoregression and diffusion is very similar, and the difference\nmerely lies in that diffusion uses bidirectional attention mask and\nautoregression uses causal attention mask. Experimental results show that our\napproach achieves comparable image generation performance to current\nstate-of-the-art methods as well as maintains the text generation capability.\nThe project is publicly available at https://monoformer.github.io/.",
+      "upvotes": 17
+    },
+    {
+      "title": "MaskBit: Embedding-free Image Generation via Bit Tokens",
+      "url": "https://huggingface.co/papers/2409.16211",
+      "authors": [
+        "Lijun Yu",
+        "Qihang Yu",
+        "Xueqing Deng",
+        "Xiaohui Shen",
+        "Daniel Cremers",
+        "Liang-Chieh Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.16211.pdf",
+      "abstract": "Masked transformer models for class-conditional image generation have become\na compelling alternative to diffusion models. Typically comprising two stages -\nan initial VQGAN model for transitioning between latent space and image space,\nand a subsequent Transformer model for image generation within latent space -\nthese frameworks offer promising avenues for image synthesis. In this study, we\npresent two primary contributions: Firstly, an empirical and systematic\nexamination of VQGANs, leading to a modernized VQGAN. Secondly, a novel\nembedding-free generation network operating directly on bit tokens - a binary\nquantized representation of tokens with rich semantics. The first contribution\nfurnishes a transparent, reproducible, and high-performing VQGAN model,\nenhancing accessibility and matching the performance of current\nstate-of-the-art methods while revealing previously undisclosed details. The\nsecond contribution demonstrates that embedding-free image generation using bit\ntokens achieves a new state-of-the-art FID of 1.52 on the ImageNet 256x256\nbenchmark, with a compact generator model of mere 305M parameters.",
+      "upvotes": 16
+    },
+    {
+      "title": "Seeing Faces in Things: A Model and Dataset for Pareidolia",
+      "url": "https://huggingface.co/papers/2409.16143",
+      "authors": [
+        "Simon Stent",
+        "Vasha DuTell",
+        "Anne Harrington",
+        "Jennifer Corbett",
+        "Ruth Rosenholtz",
+        "William T. Freeman"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.16143.pdf",
+      "abstract": "The human visual system is well-tuned to detect faces of all shapes and\nsizes. While this brings obvious survival advantages, such as a better chance\nof spotting unknown predators in the bush, it also leads to spurious face\ndetections. ``Face pareidolia'' describes the perception of face-like structure\namong otherwise random stimuli: seeing faces in coffee stains or clouds in the\nsky. In this paper, we study face pareidolia from a computer vision\nperspective. We present an image dataset of ``Faces in Things'', consisting of\nfive thousand web images with human-annotated pareidolic faces. Using this\ndataset, we examine the extent to which a state-of-the-art human face detector\nexhibits pareidolia, and find a significant behavioral gap between humans and\nmachines. We find that the evolutionary need for humans to detect animal faces,\nas well as human faces, may explain some of this gap. Finally, we propose a\nsimple statistical model of pareidolia in images. Through studies on human\nsubjects and our pareidolic face detectors we confirm a key prediction of our\nmodel regarding what image conditions are most likely to induce pareidolia.\nDataset and Website: https://aka.ms/faces-in-things",
+      "upvotes": 15
+    },
+    {
+      "title": "Time-MoE: Billion-Scale Time Series Foundation Models with Mixture of Experts",
+      "url": "https://huggingface.co/papers/2409.16040",
+      "authors": [
+        "Xiaoming Shi",
+        "Shiyu Wang",
+        "Yuqi Nie",
+        "Dianqi Li",
+        "Zhou Ye",
+        "Qingsong Wen",
+        "Ming Jin"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.16040.pdf",
+      "abstract": "Deep learning for time series forecasting has seen significant advancements\nover the past decades. However, despite the success of large-scale pre-training\nin language and vision domains, pre-trained time series models remain limited\nin scale and operate at a high cost, hindering the development of larger\ncapable forecasting models in real-world applications. In response, we\nintroduce Time-MoE, a scalable and unified architecture designed to pre-train\nlarger, more capable forecasting foundation models while reducing inference\ncosts. By leveraging a sparse mixture-of-experts (MoE) design, Time-MoE\nenhances computational efficiency by activating only a subset of networks for\neach prediction, reducing computational load while maintaining high model\ncapacity. This allows Time-MoE to scale effectively without a corresponding\nincrease in inference costs. Time-MoE comprises a family of decoder-only\ntransformer models that operate in an auto-regressive manner and support\nflexible forecasting horizons with varying input context lengths. We\npre-trained these models on our newly introduced large-scale data Time-300B,\nwhich spans over 9 domains and encompassing over 300 billion time points. For\nthe first time, we scaled a time series foundation model up to 2.4 billion\nparameters, achieving significantly improved forecasting precision. Our results\nvalidate the applicability of scaling laws for training tokens and model size\nin the context of time series forecasting. Compared to dense models with the\nsame number of activated parameters or equivalent computation budgets, our\nmodels consistently outperform them by large margin. These advancements\nposition Time-MoE as a state-of-the-art solution for tackling real-world time\nseries forecasting challenges with superior capability, efficiency, and\nflexibility.",
+      "upvotes": 13
+    },
+    {
+      "title": "Improvements to SDXL in NovelAI Diffusion V3",
+      "url": "https://huggingface.co/papers/2409.15997",
+      "authors": [
+        "Eren Doğan",
+        "Alex Birch",
+        "F. Johnson"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.15997.pdf",
+      "abstract": "In this technical report, we document the changes we made to SDXL in the\nprocess of training NovelAI Diffusion V3, our state of the art anime image\ngeneration model.",
+      "upvotes": 11
+    },
+    {
+      "title": "Attention Prompting on Image for Large Vision-Language Models",
+      "url": "https://huggingface.co/papers/2409.17143",
+      "authors": [
+        "Weihao Yu",
+        "Xinchao Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.17143.pdf",
+      "abstract": "Compared with Large Language Models (LLMs), Large Vision-Language Models\n(LVLMs) can also accept images as input, thus showcasing more interesting\nemergent capabilities and demonstrating impressive performance on various\nvision-language tasks. Motivated by text prompting in LLMs, visual prompting\nhas been explored to enhance LVLMs' capabilities of perceiving visual\ninformation. However, previous visual prompting techniques solely process\nvisual inputs without considering text queries, limiting the models' ability to\nfollow text instructions to complete tasks. To fill this gap, in this work, we\npropose a new prompting technique named Attention Prompting on Image, which\njust simply overlays a text-query-guided attention heatmap on the original\ninput image and effectively enhances LVLM on various tasks. Specifically, we\ngenerate an attention heatmap for the input image dependent on the text query\nwith an auxiliary model like CLIP. Then the heatmap simply multiplies the pixel\nvalues of the original image to obtain the actual input image for the LVLM.\nExtensive experiments on various vison-language benchmarks verify the\neffectiveness of our technique. For example, Attention Prompting on Image\nimproves LLaVA-1.5 by 3.8% and 2.9% on MM-Vet and LLaVA-Wild benchmarks,\nrespectively.",
+      "upvotes": 7
+    },
+    {
+      "title": "Gen2Act: Human Video Generation in Novel Scenarios enables Generalizable Robot Manipulation",
+      "url": "https://huggingface.co/papers/2409.16283",
+      "authors": [
+        "Homanga Bharadhwaj",
+        "Debidatta Dwibedi",
+        "Abhinav Gupta",
+        "Shubham Tulsiani",
+        "Carl Doersch",
+        "Ted Xiao",
+        "Dhruv Shah",
+        "Fei Xia",
+        "Dorsa Sadigh",
+        "Sean Kirmani"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.16283.pdf",
+      "abstract": "How can robot manipulation policies generalize to novel tasks involving\nunseen object types and new motions? In this paper, we provide a solution in\nterms of predicting motion information from web data through human video\ngeneration and conditioning a robot policy on the generated video. Instead of\nattempting to scale robot data collection which is expensive, we show how we\ncan leverage video generation models trained on easily available web data, for\nenabling generalization. Our approach Gen2Act casts language-conditioned\nmanipulation as zero-shot human video generation followed by execution with a\nsingle policy conditioned on the generated video. To train the policy, we use\nan order of magnitude less robot interaction data compared to what the video\nprediction model was trained on. Gen2Act doesn't require fine-tuning the video\nmodel at all and we directly use a pre-trained model for generating human\nvideos. Our results on diverse real-world scenarios show how Gen2Act enables\nmanipulating unseen object types and performing novel motions for tasks not\npresent in the robot data. Videos are at https://homangab.github.io/gen2act/",
+      "upvotes": 6
+    },
+    {
+      "title": "Reward-Robust RLHF in LLMs",
+      "url": "https://huggingface.co/papers/2409.15360",
+      "authors": [
+        "Yuzi Yan",
+        "Xingzhou Lou",
+        "Jialian Li",
+        "Yiping Zhang",
+        "Jian Xie",
+        "Yu Wang",
+        "Dong Yan",
+        "Yuan Shen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.15360.pdf",
+      "abstract": "As Large Language Models (LLMs) continue to progress toward more advanced\nforms of intelligence, Reinforcement Learning from Human Feedback (RLHF) is\nincreasingly seen as a key pathway toward achieving Artificial General\nIntelligence (AGI). However, the reliance on reward-model-based (RM-based)\nalignment methods introduces significant challenges due to the inherent\ninstability and imperfections of Reward Models (RMs), which can lead to\ncritical issues such as reward hacking and misalignment with human intentions.\nIn this paper, we introduce a reward-robust RLHF framework aimed at addressing\nthese fundamental challenges, paving the way for more reliable and resilient\nlearning in LLMs. Our approach introduces a novel optimization objective that\ncarefully balances performance and robustness by incorporating Bayesian Reward\nModel Ensembles (BRME) to model the uncertainty set of reward functions. This\nallows the framework to integrate both nominal performance and minimum reward\nsignals, ensuring more stable learning even with imperfect reward models.\nEmpirical results demonstrate that our framework consistently outperforms\ntraditional RLHF across diverse benchmarks, showing improved accuracy and\nlong-term stability. We also provide a theoretical analysis, demonstrating that\nreward-robust RLHF approaches the stability of constant reward settings, which\nproves to be effective in a stochastic-case analysis. Together, these\ncontributions highlight the framework potential to enhance both the performance\nand stability of LLM alignment with RLHF.",
+      "upvotes": 5
+    },
+    {
+      "title": "SLIMER-IT: Zero-Shot NER on Italian Language",
+      "url": "https://huggingface.co/papers/2409.15933",
+      "authors": [
+        "Leonardo Rigutini",
+        "Marco Maggini",
+        "Andrea Zugarini"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.15933.pdf",
+      "abstract": "Traditional approaches to Named Entity Recognition (NER) frame the task into\na BIO sequence labeling problem. Although these systems often excel in the\ndownstream task at hand, they require extensive annotated data and struggle to\ngeneralize to out-of-distribution input domains and unseen entity types. On the\ncontrary, Large Language Models (LLMs) have demonstrated strong zero-shot\ncapabilities. While several works address Zero-Shot NER in English, little has\nbeen done in other languages. In this paper, we define an evaluation framework\nfor Zero-Shot NER, applying it to the Italian language. Furthermore, we\nintroduce SLIMER-IT, the Italian version of SLIMER, an instruction-tuning\napproach for zero-shot NER leveraging prompts enriched with definition and\nguidelines. Comparisons with other state-of-the-art models, demonstrate the\nsuperiority of SLIMER-IT on never-seen-before entity tags.",
+      "upvotes": 4
+    },
+    {
+      "title": "DynaMo: In-Domain Dynamics Pretraining for Visuo-Motor Control",
+      "url": "https://huggingface.co/papers/2409.12192",
+      "authors": [
+        "Zichen Jeff Cui",
+        "Hengkai Pan",
+        "Aadhithya Iyer",
+        "Siddhant Haldar",
+        "Lerrel Pinto"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.12192.pdf",
+      "abstract": "Imitation learning has proven to be a powerful tool for training complex\nvisuomotor policies. However, current methods often require hundreds to\nthousands of expert demonstrations to handle high-dimensional visual\nobservations. A key reason for this poor data efficiency is that visual\nrepresentations are predominantly either pretrained on out-of-domain data or\ntrained directly through a behavior cloning objective. In this work, we present\nDynaMo, a new in-domain, self-supervised method for learning visual\nrepresentations. Given a set of expert demonstrations, we jointly learn a\nlatent inverse dynamics model and a forward dynamics model over a sequence of\nimage embeddings, predicting the next frame in latent space, without\naugmentations, contrastive sampling, or access to ground truth actions.\nImportantly, DynaMo does not require any out-of-domain data such as Internet\ndatasets or cross-embodied datasets. On a suite of six simulated and real\nenvironments, we show that representations learned with DynaMo significantly\nimprove downstream imitation learning performance over prior self-supervised\nlearning objectives, and pretrained representations. Gains from using DynaMo\nhold across policy classes such as Behavior Transformer, Diffusion Policy, MLP,\nand nearest neighbors. Finally, we ablate over key components of DynaMo and\nmeasure its impact on downstream policy performance. Robot videos are best\nviewed at https://dynamo-ssl.github.io",
+      "upvotes": 4
+    },
+    {
+      "title": "RRM: Robust Reward Model Training Mitigates Reward Hacking",
+      "url": "https://huggingface.co/papers/2409.13156",
+      "authors": [
+        "Wei Xiong",
+        "Jie Ren",
+        "Junru Wu",
+        "Rishabh Joshi",
+        "Yang Gao",
+        "Jiaming Shen",
+        "Zhen Qin",
+        "Tianhe Yu",
+        "Daniel Sohn",
+        "Anastasiia Makarova",
+        "Jeremiah Liu",
+        "Yuan Liu",
+        "Bilal Piot",
+        "Abe Ittycheriah",
+        "Aviral Kumar",
+        "Mohammad Saleh"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.13156.pdf",
+      "abstract": "Reward models (RMs) play a pivotal role in aligning large language models\n(LLMs) with human preferences. However, traditional RM training, which relies\non response pairs tied to specific prompts, struggles to disentangle\nprompt-driven preferences from prompt-independent artifacts, such as response\nlength and format. In this work, we expose a fundamental limitation of current\nRM training methods, where RMs fail to effectively distinguish between\ncontextual signals and irrelevant artifacts when determining preferences. To\naddress this, we introduce a causal framework that learns preferences\nindependent of these artifacts and propose a novel data augmentation technique\ndesigned to eliminate them. Extensive experiments show that our approach\nsuccessfully filters out undesirable artifacts, yielding a more robust reward\nmodel (RRM). Our RRM improves the performance of a pairwise reward model\ntrained on Gemma-2-9b-it, on RewardBench, increasing accuracy from 80.61% to\n84.15%. Additionally, we train two DPO policies using both the RM and RRM,\ndemonstrating that the RRM significantly enhances DPO-aligned policies,\nimproving MT-Bench scores from 7.27 to 8.31 and length-controlled win-rates in\nAlpacaEval-2 from 33.46% to 52.49%.",
+      "upvotes": 3
+    },
+    {
+      "title": "Tabular Data Generation using Binary Diffusion",
+      "url": "https://huggingface.co/papers/2409.13882",
+      "authors": [
+        "Slava Voloshynovskiy"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.13882.pdf",
+      "abstract": "Generating synthetic tabular data is critical in machine learning, especially\nwhen real data is limited or sensitive. Traditional generative models often\nface challenges due to the unique characteristics of tabular data, such as\nmixed data types and varied distributions, and require complex preprocessing or\nlarge pretrained models. In this paper, we introduce a novel, lossless binary\ntransformation method that converts any tabular data into fixed-size binary\nrepresentations, and a corresponding new generative model called Binary\nDiffusion, specifically designed for binary data. Binary Diffusion leverages\nthe simplicity of XOR operations for noise addition and removal and employs\nbinary cross-entropy loss for training. Our approach eliminates the need for\nextensive preprocessing, complex noise parameter tuning, and pretraining on\nlarge datasets. We evaluate our model on several popular tabular benchmark\ndatasets, demonstrating that Binary Diffusion outperforms existing\nstate-of-the-art models on Travel, Adult Income, and Diabetes datasets while\nbeing significantly smaller in size.",
+      "upvotes": 3
+    }
+  ]
+}

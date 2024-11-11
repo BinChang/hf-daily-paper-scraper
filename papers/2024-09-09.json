@@ -1,0 +1,80 @@
+{
+  "date": "2024-09-09",
+  "papers": [
+    {
+      "title": "How Do Your Code LLMs Perform? Empowering Code Instruction Tuning with High-Quality Data",
+      "url": "https://huggingface.co/papers/2409.03810",
+      "authors": [
+        "Zhuoma Gongque",
+        "Heyang Xu",
+        "Yanxu Chen",
+        "Zhexu Wang",
+        "Yujia Fu",
+        "Muxi Diao",
+        "Xunliang Cai",
+        "Weiran Xu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.03810.pdf",
+      "abstract": "Recently, there has been a growing interest in studying how to construct\nbetter code instruction tuning data. However, we observe Code models trained\nwith these datasets exhibit high performance on HumanEval but perform worse on\nother benchmarks such as LiveCodeBench. Upon further investigation, we find\nthat many datasets suffer from severe data leakage. After cleaning up most of\nthe leaked data, some well-known high-quality datasets perform poorly. This\ndiscovery reveals a new challenge: identifying which dataset genuinely qualify\nas high-quality code instruction data. To address this, we propose an efficient\ncode data pruning strategy for selecting good samples. Our approach is based on\nthree dimensions: instruction complexity, response quality, and instruction\ndiversity. Based on our selected data, we present XCoder, a family of models\nfinetuned from LLaMA3. Our experiments show XCoder achieves new\nstate-of-the-art performance using fewer training data, which verify the\neffectiveness of our data strategy. Moreover, we perform a comprehensive\nanalysis on the data composition and find existing code datasets have different\ncharacteristics according to their construction methods, which provide new\ninsights for future code LLMs. Our models and dataset are released in\nhttps://github.com/banksy23/XCoder",
+      "upvotes": 30
+    },
+    {
+      "title": "Configurable Foundation Models: Building LLMs from a Modular Perspective",
+      "url": "https://huggingface.co/papers/2409.02877",
+      "authors": [
+        "Xu Han",
+        "Shuo Wang",
+        "Yufei Huang",
+        "Khai Hao Moo",
+        "Chenyang Zhao",
+        "Huimin Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.02877.pdf",
+      "abstract": "Advancements in LLMs have recently unveiled challenges tied to computational\nefficiency and continual scalability due to their requirements of huge\nparameters, making the applications and evolution of these models on devices\nwith limited computation resources and scenarios requiring various abilities\nincreasingly cumbersome. Inspired by modularity within the human brain, there\nis a growing tendency to decompose LLMs into numerous functional modules,\nallowing for inference with part of modules and dynamic assembly of modules to\ntackle complex tasks, such as mixture-of-experts. To highlight the inherent\nefficiency and composability of the modular approach, we coin the term brick to\nrepresent each functional module, designating the modularized structure as\nconfigurable foundation models. In this paper, we offer a comprehensive\noverview and investigation of the construction, utilization, and limitation of\nconfigurable foundation models. We first formalize modules into emergent bricks\n- functional neuron partitions that emerge during the pre-training phase, and\ncustomized bricks - bricks constructed via additional post-training to improve\nthe capabilities and knowledge of LLMs. Based on diverse functional bricks, we\nfurther present four brick-oriented operations: retrieval and routing, merging,\nupdating, and growing. These operations allow for dynamic configuration of LLMs\nbased on instructions to handle complex tasks. To verify our perspective, we\nconduct an empirical analysis on widely-used LLMs. We find that the FFN layers\nfollow modular patterns with functional specialization of neurons and\nfunctional neuron partitions. Finally, we highlight several open issues and\ndirections for future research. Overall, this paper aims to offer a fresh\nmodular perspective on existing LLM research and inspire the future creation of\nmore efficient and scalable foundational models.",
+      "upvotes": 27
+    },
+    {
+      "title": "Open-MAGVIT2: An Open-Source Project Toward Democratizing Auto-regressive Visual Generation",
+      "url": "https://huggingface.co/papers/2409.04410",
+      "authors": [
+        "Yujiu Yang",
+        "Limin Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.04410.pdf",
+      "abstract": "We present Open-MAGVIT2, a family of auto-regressive image generation models\nranging from 300M to 1.5B. The Open-MAGVIT2 project produces an open-source\nreplication of Google's MAGVIT-v2 tokenizer, a tokenizer with a super-large\ncodebook (i.e., 2^{18} codes), and achieves the state-of-the-art\nreconstruction performance (1.17 rFID) on ImageNet 256 times 256.\nFurthermore, we explore its application in plain auto-regressive models and\nvalidate scalability properties. To assist auto-regressive models in predicting\nwith a super-large vocabulary, we factorize it into two sub-vocabulary of\ndifferent sizes by asymmetric token factorization, and further introduce \"next\nsub-token prediction\" to enhance sub-token interaction for better generation\nquality. We release all models and codes to foster innovation and creativity in\nthe field of auto-regressive visual generation.",
+      "upvotes": 23
+    },
+    {
+      "title": "Qihoo-T2X: An Efficiency-Focused Diffusion Transformer via Proxy Tokens for Text-to-Any-Task",
+      "url": "https://huggingface.co/papers/2409.04005",
+      "authors": [
+        "Jing Wang",
+        "Yuhui Yin",
+        "Xiaodan Liang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.04005.pdf",
+      "abstract": "The global self-attention mechanism in diffusion transformers involves\nredundant computation due to the sparse and redundant nature of visual\ninformation, and the attention map of tokens within a spatial window shows\nsignificant similarity. To address this redundancy, we propose the Proxy Token\nDiffusion Transformer (PT-DiT), which employs sparse representative token\nattention (where the number of representative tokens is much smaller than the\ntotal number of tokens) to model global visual information efficiently.\nSpecifically, in each transformer block, we randomly sample one token from each\nspatial-temporal window to serve as a proxy token for that region. The global\nsemantics are captured through the self-attention of these proxy tokens and\nthen injected into all latent tokens via cross-attention. Simultaneously, we\nintroduce window and shift window attention to address the limitations in\ndetail modeling caused by the sparse attention mechanism. Building on the\nwell-designed PT-DiT, we further develop the Qihoo-T2X family, which includes a\nvariety of models for T2I, T2V, and T2MV tasks. Experimental results show that\nPT-DiT achieves competitive performance while reducing the computational\ncomplexity in both image and video generation tasks (e.g., a 48% reduction\ncompared to DiT and a 35% reduction compared to Pixart-alpha). Our source code\nis available at https://github.com/360CVGroup/Qihoo-T2X.",
+      "upvotes": 16
+    },
+    {
+      "title": "GST: Precise 3D Human Body from a Single Image with Gaussian Splatting Transformers",
+      "url": "https://huggingface.co/papers/2409.04196",
+      "authors": [
+        "Christian Rupprecht"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.04196.pdf",
+      "abstract": "Reconstructing realistic 3D human models from monocular images has\nsignificant applications in creative industries, human-computer interfaces, and\nhealthcare. We base our work on 3D Gaussian Splatting (3DGS), a scene\nrepresentation composed of a mixture of Gaussians. Predicting such mixtures for\na human from a single input image is challenging, as it is a non-uniform\ndensity (with a many-to-one relationship with input pixels) with strict\nphysical constraints. At the same time, it needs to be flexible to accommodate\na variety of clothes and poses. Our key observation is that the vertices of\nstandardized human meshes (such as SMPL) can provide an adequate density and\napproximate initial position for Gaussians. We can then train a transformer\nmodel to jointly predict comparatively small adjustments to these positions, as\nwell as the other Gaussians' attributes and the SMPL parameters. We show\nempirically that this combination (using only multi-view supervision) can\nachieve fast inference of 3D human models from a single image without test-time\noptimization, expensive diffusion models, or 3D points supervision. We also\nshow that it can improve 3D pose estimation by better fitting human models that\naccount for clothes and other variations. The code is available on the project\nwebsite https://abdullahamdi.com/gst/ .",
+      "upvotes": 11
+    },
+    {
+      "title": "Spinning the Golden Thread: Benchmarking Long-Form Generation in Language Models",
+      "url": "https://huggingface.co/papers/2409.02076",
+      "authors": [
+        "Ming Shan Hee"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.02076.pdf",
+      "abstract": "The abilities of long-context language models (LMs) are often evaluated using\nthe \"Needle-in-a-Haystack\" (NIAH) test, which comprises tasks designed to\nassess a model's ability to identify specific information (\"needle\") within\nlarge text sequences (\"haystack\"). While these benchmarks measure how well\nmodels understand long-context input sequences, they do not effectively gauge\nthe quality of long-form text generation--a critical aspect for applications\nsuch as design proposals and creative writing. To address this gap, we have\nintroduced a new long-form text evaluation benchmark, Spinning the Golden\nThread (SGT), which tests models' ability to identify specific events within\ngenerated long text sequences. In this benchmark, we prompt long-context LMs to\ncreate long-form text that must include particular events or constraints and\nevaluate their ability to incorporate these elements. We evaluated ten\nlong-context LMs across four distinct scenarios, three types of prompt\ninstructions, and two different generation-length settings (16K and 32K).\nAlthough these models perform well on NIAH benchmarks, none demonstrated\nsatisfactory performance on the Spinning the Golden Thread, raising concerns\nabout their ability to generate coherent long-form text that follows\ninstructions. Additionally, as the length of the generated text increases, all\nmodels exhibit a significant drop in performance.",
+      "upvotes": 9
+    }
+  ]
+}

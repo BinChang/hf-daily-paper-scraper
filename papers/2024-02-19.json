@@ -1,0 +1,142 @@
+{
+  "date": "2024-02-19",
+  "papers": [
+    {
+      "title": "Linear Transformers with Learnable Kernel Functions are Better In-Context Models",
+      "url": "https://huggingface.co/papers/2402.10644",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2402.10644.pdf",
+      "abstract": "Advancing the frontier of subquadratic architectures for Language Models\n(LMs) is crucial in the rapidly evolving field of natural language processing.\nCurrent innovations, including State Space Models, were initially celebrated\nfor surpassing Transformer performance on language modeling tasks. However,\nthese models have revealed deficiencies in essential In-Context Learning\ncapabilities - a domain where the Transformer traditionally shines. The Based\nmodel emerged as a hybrid solution, blending a Linear Transformer with a kernel\ninspired by the Taylor expansion of exponential functions, augmented by\nconvolutional networks. Mirroring the Transformer's in-context adeptness, it\nbecame a strong contender in the field. In our work, we present a singular,\nelegant alteration to the Based kernel that amplifies its In-Context Learning\nabilities evaluated with the Multi-Query Associative Recall task and overall\nlanguage modeling process, as demonstrated on the Pile dataset.",
+      "upvotes": 78
+    },
+    {
+      "title": "In Search of Needles in a 10M Haystack: Recurrent Memory Finds What LLMs Miss",
+      "url": "https://huggingface.co/papers/2402.10790",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2402.10790.pdf",
+      "abstract": "This paper addresses the challenge of processing long documents using\ngenerative transformer models. To evaluate different approaches, we introduce\nBABILong, a new benchmark designed to assess model capabilities in extracting\nand processing distributed facts within extensive texts. Our evaluation, which\nincludes benchmarks for GPT-4 and RAG, reveals that common methods are\neffective only for sequences up to 10^4 elements. In contrast, fine-tuning\nGPT-2 with recurrent memory augmentations enables it to handle tasks involving\nup to 10^7 elements. This achievement marks a substantial leap, as it is by\nfar the longest input processed by any open neural network model to date,\ndemonstrating a significant improvement in the processing capabilities for long\nsequences.",
+      "upvotes": 40
+    },
+    {
+      "title": "SPAR: Personalized Content-Based Recommendation via Long Engagement Attention",
+      "url": "https://huggingface.co/papers/2402.10555",
+      "authors": [
+        "Rong Jin",
+        "Sem Park",
+        "Ning Yao",
+        "Bo Long"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.10555.pdf",
+      "abstract": "Leveraging users' long engagement histories is essential for personalized\ncontent recommendations. The success of pretrained language models (PLMs) in\nNLP has led to their use in encoding user histories and candidate items,\nframing content recommendations as textual semantic matching tasks. However,\nexisting works still struggle with processing very long user historical text\nand insufficient user-item interaction. In this paper, we introduce a\ncontent-based recommendation framework, SPAR, which effectively tackles the\nchallenges of holistic user interest extraction from the long user engagement\nhistory. It achieves so by leveraging PLM, poly-attention layers and attention\nsparsity mechanisms to encode user's history in a session-based manner. The\nuser and item side features are sufficiently fused for engagement prediction\nwhile maintaining standalone representations for both sides, which is efficient\nfor practical model deployment. Moreover, we enhance user profiling by\nexploiting large language model (LLM) to extract global interests from user\nengagement history. Extensive experiments on two benchmark datasets demonstrate\nthat our framework outperforms existing state-of-the-art (SoTA) methods.",
+      "upvotes": 32
+    },
+    {
+      "title": "DataDreamer: A Tool for Synthetic Data Generation and Reproducible LLM Workflows",
+      "url": "https://huggingface.co/papers/2402.10379",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2402.10379.pdf",
+      "abstract": "Large language models (LLMs) have become a dominant and important tool for\nNLP researchers in a wide range of tasks. Today, many researchers use LLMs in\nsynthetic data generation, task evaluation, fine-tuning, distillation, and\nother model-in-the-loop research workflows. However, challenges arise when\nusing these models that stem from their scale, their closed source nature, and\nthe lack of standardized tooling for these new and emerging workflows. The\nrapid rise to prominence of these models and these unique challenges has had\nimmediate adverse impacts on open science and on the reproducibility of work\nthat uses them. In this paper, we introduce DataDreamer, an open source Python\nlibrary that allows researchers to write simple code to implement powerful LLM\nworkflows. DataDreamer also helps researchers adhere to best practices that we\npropose to encourage open science and reproducibility. The library and\ndocumentation are available at https://github.com/datadreamer-dev/DataDreamer .",
+      "upvotes": 29
+    },
+    {
+      "title": "LAVE: LLM-Powered Agent Assistance and Language Augmentation for Video Editing",
+      "url": "https://huggingface.co/papers/2402.10294",
+      "authors": [
+        "Yuliang Li",
+        "Haijun Xia",
+        "Yan Xu",
+        "Raj Sodhi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.10294.pdf",
+      "abstract": "Video creation has become increasingly popular, yet the expertise and effort\nrequired for editing often pose barriers to beginners. In this paper, we\nexplore the integration of large language models (LLMs) into the video editing\nworkflow to reduce these barriers. Our design vision is embodied in LAVE, a\nnovel system that provides LLM-powered agent assistance and language-augmented\nediting features. LAVE automatically generates language descriptions for the\nuser's footage, serving as the foundation for enabling the LLM to process\nvideos and assist in editing tasks. When the user provides editing objectives,\nthe agent plans and executes relevant actions to fulfill them. Moreover, LAVE\nallows users to edit videos through either the agent or direct UI manipulation,\nproviding flexibility and enabling manual refinement of agent actions. Our user\nstudy, which included eight participants ranging from novices to proficient\neditors, demonstrated LAVE's effectiveness. The results also shed light on user\nperceptions of the proposed LLM-assisted editing paradigm and its impact on\nusers' creativity and sense of co-creation. Based on these findings, we propose\ndesign implications to inform the future development of agent-assisted content\nediting.",
+      "upvotes": 22
+    },
+    {
+      "title": "LLM Comparator: Visual Analytics for Side-by-Side Evaluation of Large Language Models",
+      "url": "https://huggingface.co/papers/2402.10524",
+      "authors": [
+        "Mahima Pushkarna",
+        "Krystal Kallarackal"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.10524.pdf",
+      "abstract": "Automatic side-by-side evaluation has emerged as a promising approach to\nevaluating the quality of responses from large language models (LLMs). However,\nanalyzing the results from this evaluation approach raises scalability and\ninterpretability challenges. In this paper, we present LLM Comparator, a novel\nvisual analytics tool for interactively analyzing results from automatic\nside-by-side evaluation. The tool supports interactive workflows for users to\nunderstand when and why a model performs better or worse than a baseline model,\nand how the responses from two models are qualitatively different. We\niteratively designed and developed the tool by closely working with researchers\nand engineers at a large technology company. This paper details the user\nchallenges we identified, the design and development of the tool, and an\nobservational study with participants who regularly evaluate their models.",
+      "upvotes": 21
+    },
+    {
+      "title": "Large Language Models as Zero-shot Dialogue State Tracker through Function Calling",
+      "url": "https://huggingface.co/papers/2402.10466",
+      "authors": [
+        "Mike Ross",
+        "Patrick Huber",
+        "Xin Luna Dong"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.10466.pdf",
+      "abstract": "Large language models (LLMs) are increasingly prevalent in conversational\nsystems due to their advanced understanding and generative capabilities in\ngeneral contexts. However, their effectiveness in task-oriented dialogues\n(TOD), which requires not only response generation but also effective dialogue\nstate tracking (DST) within specific tasks and domains, remains less\nsatisfying. In this work, we propose a novel approach FnCTOD for solving DST\nwith LLMs through function calling. This method improves zero-shot DST,\nallowing adaptation to diverse domains without extensive data collection or\nmodel tuning. Our experimental results demonstrate that our approach achieves\nexceptional performance with both modestly sized open-source and also\nproprietary LLMs: with in-context prompting it enables various 7B or 13B\nparameter models to surpass the previous state-of-the-art (SOTA) achieved by\nChatGPT, and improves ChatGPT's performance beating the SOTA by 5.6% Avg. JGA.\nIndividual model results for GPT-3.5 and GPT-4 are boosted by 4.8% and 14%,\nrespectively. We also show that by fine-tuning on a small collection of diverse\ntask-oriented dialogues, we can equip modestly sized models, specifically a 13B\nparameter LLaMA2-Chat model, with function-calling capabilities and DST\nperformance comparable to ChatGPT while maintaining their chat capabilities. We\nplan to open-source experimental code and model.",
+      "upvotes": 16
+    },
+    {
+      "title": "Make a Cheap Scaling: A Self-Cascade Diffusion Model for Higher-Resolution Adaptation",
+      "url": "https://huggingface.co/papers/2402.10491",
+      "authors": [
+        "Lanqing Guo",
+        "Yong Zhang",
+        "Bihan Wen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.10491.pdf",
+      "abstract": "Diffusion models have proven to be highly effective in image and video\ngeneration; however, they still face composition challenges when generating\nimages of varying sizes due to single-scale training data. Adapting large\npre-trained diffusion models for higher resolution demands substantial\ncomputational and optimization resources, yet achieving a generation capability\ncomparable to low-resolution models remains elusive. This paper proposes a\nnovel self-cascade diffusion model that leverages the rich knowledge gained\nfrom a well-trained low-resolution model for rapid adaptation to\nhigher-resolution image and video generation, employing either tuning-free or\ncheap upsampler tuning paradigms. Integrating a sequence of multi-scale\nupsampler modules, the self-cascade diffusion model can efficiently adapt to a\nhigher resolution, preserving the original composition and generation\ncapabilities. We further propose a pivot-guided noise re-schedule strategy to\nspeed up the inference process and improve local structural details. Compared\nto full fine-tuning, our approach achieves a 5X training speed-up and requires\nonly an additional 0.002M tuning parameters. Extensive experiments demonstrate\nthat our approach can quickly adapt to higher resolution image and video\nsynthesis by fine-tuning for just 10k steps, with virtually no additional\ninference time.",
+      "upvotes": 16
+    },
+    {
+      "title": "PaLM2-VAdapter: Progressively Aligned Language Model Makes a Strong Vision-language Adapter",
+      "url": "https://huggingface.co/papers/2402.10896",
+      "authors": [
+        "Zheng Xu",
+        "Alan Yuille",
+        "Shen Yan",
+        "Boyu Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.10896.pdf",
+      "abstract": "This paper demonstrates that a progressively aligned language model can\neffectively bridge frozen vision encoders and large language models (LLMs).\nWhile the fundamental architecture and pre-training methods of vision encoders\nand LLMs have been extensively studied, the architecture and training strategy\nof vision-language adapters vary significantly across recent works. Our\nresearch undertakes a thorough exploration of the state-of-the-art perceiver\nresampler architecture and builds a strong baseline. However, we observe that\nthe vision-language alignment with perceiver resampler exhibits slow\nconvergence and limited scalability with a lack of direct supervision. To\naddress this issue, we propose PaLM2-VAdapter, employing a progressively\naligned language model as the vision-language adapter. Compared to the strong\nbaseline with perceiver resampler, our method empirically shows faster\nconvergence, higher performance, and stronger scalability. Extensive\nexperiments across various Visual Question Answering (VQA) and captioning tasks\non both images and videos demonstrate that our model exhibits state-of-the-art\nvisual understanding and multi-modal reasoning capabilities. Notably, our\nmethod achieves these advancements with 30~70% fewer parameters than the\nstate-of-the-art large vision-language models, marking a significant efficiency\nimprovement.",
+      "upvotes": 14
+    },
+    {
+      "title": "Universal Manipulation Interface: In-The-Wild Robot Teaching Without In-The-Wild Robots",
+      "url": "https://huggingface.co/papers/2402.10329",
+      "authors": [
+        "Zhenjia Xu",
+        "Benjamin Burchfiel",
+        "Siyuan Feng",
+        "Russ Tedrake",
+        "Shuran Song"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.10329.pdf",
+      "abstract": "We present Universal Manipulation Interface (UMI) -- a data collection and\npolicy learning framework that allows direct skill transfer from in-the-wild\nhuman demonstrations to deployable robot policies. UMI employs hand-held\ngrippers coupled with careful interface design to enable portable, low-cost,\nand information-rich data collection for challenging bimanual and dynamic\nmanipulation demonstrations. To facilitate deployable policy learning, UMI\nincorporates a carefully designed policy interface with inference-time latency\nmatching and a relative-trajectory action representation. The resulting learned\npolicies are hardware-agnostic and deployable across multiple robot platforms.\nEquipped with these features, UMI framework unlocks new robot manipulation\ncapabilities, allowing zero-shot generalizable dynamic, bimanual, precise, and\nlong-horizon behaviors, by only changing the training data for each task. We\ndemonstrate UMI's versatility and efficacy with comprehensive real-world\nexperiments, where policies learned via UMI zero-shot generalize to novel\nenvironments and objects when trained on diverse human demonstrations. UMI's\nhardware and software system is open-sourced at https://umi-gripper.github.io.",
+      "upvotes": 13
+    },
+    {
+      "title": "GaussianObject: Just Taking Four Images to Get A High-Quality 3D Object with Gaussian Splatting",
+      "url": "https://huggingface.co/papers/2402.10259",
+      "authors": [
+        "Ruofan Liang",
+        "Lingxi Xie",
+        "Wei Shen",
+        "Qi Tian"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.10259.pdf",
+      "abstract": "Reconstructing and rendering 3D objects from highly sparse views is of\ncritical importance for promoting applications of 3D vision techniques and\nimproving user experience. However, images from sparse views only contain very\nlimited 3D information, leading to two significant challenges: 1) Difficulty in\nbuilding multi-view consistency as images for matching are too few; 2)\nPartially omitted or highly compressed object information as view coverage is\ninsufficient. To tackle these challenges, we propose GaussianObject, a\nframework to represent and render the 3D object with Gaussian splatting, that\nachieves high rendering quality with only 4 input images. We first introduce\ntechniques of visual hull and floater elimination which explicitly inject\nstructure priors into the initial optimization process for helping build\nmulti-view consistency, yielding a coarse 3D Gaussian representation. Then we\nconstruct a Gaussian repair model based on diffusion models to supplement the\nomitted object information, where Gaussians are further refined. We design a\nself-generating strategy to obtain image pairs for training the repair model.\nOur GaussianObject is evaluated on several challenging datasets, including\nMipNeRF360, OmniObject3D, and OpenIllumination, achieving strong reconstruction\nresults from only 4 views and significantly outperforming previous\nstate-of-the-art methods.",
+      "upvotes": 13
+    },
+    {
+      "title": "RLVF: Learning from Verbal Feedback without Overgeneralization",
+      "url": "https://huggingface.co/papers/2402.10893",
+      "authors": [
+        "Alexander Khazatsky",
+        "Sheryl Hsu",
+        "Archit Sharma"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.10893.pdf",
+      "abstract": "The diversity of contexts in which large language models (LLMs) are deployed\nrequires the ability to modify or customize default model behaviors to\nincorporate nuanced requirements and preferences. A convenient interface to\nspecify such model adjustments is high-level verbal feedback, such as \"Don't\nuse emojis when drafting emails to my boss.\" However, while writing high-level\nfeedback is far simpler than collecting annotations for reinforcement learning\nfrom human feedback (RLHF), we find that simply prompting a model with such\nfeedback leads to overgeneralization of the feedback to contexts where it is\nnot relevant. We study the problem of incorporating verbal feedback without\nsuch overgeneralization, inspiring a new method Contextualized Critiques with\nConstrained Preference Optimization (C3PO). C3PO uses a piece of high-level\nfeedback to generate a small synthetic preference dataset specifying how the\nfeedback should (and should not) be applied. It then fine-tunes the model in\naccordance with the synthetic preference data while minimizing the divergence\nfrom the original model for prompts where the feedback does not apply. Our\nexperimental results indicate that our approach effectively applies verbal\nfeedback to relevant scenarios while preserving existing behaviors for other\ncontexts. For both human- and GPT-4-generated high-level feedback, C3PO\neffectively adheres to the given feedback comparably to in-context baselines\nwhile reducing overgeneralization by 30%.",
+      "upvotes": 10
+    }
+  ]
+}

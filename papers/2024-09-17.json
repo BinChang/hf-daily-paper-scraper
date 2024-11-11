@@ -1,0 +1,179 @@
+{
+  "date": "2024-09-17",
+  "papers": [
+    {
+      "title": "Seed-Music: A Unified Framework for High Quality and Controlled Music Generation",
+      "url": "https://huggingface.co/papers/2409.09214",
+      "authors": [
+        "Ye Bai",
+        "Haonan Chen",
+        "Jitong Chen",
+        "Zhuo Chen",
+        "Yi Deng",
+        "Xiaohong Dong",
+        "Lamtharn Hantrakul",
+        "Qingqing Huang",
+        "Dongya Jia",
+        "Feihu La",
+        "Bochen Li",
+        "Hui Li",
+        "Wei-Tsung Lu",
+        "Yiqing Lu",
+        "Andrew Shaw",
+        "Janne Spijkervet"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.09214.pdf",
+      "abstract": "We introduce Seed-Music, a suite of music generation systems capable of\nproducing high-quality music with fine-grained style control. Our unified\nframework leverages both auto-regressive language modeling and diffusion\napproaches to support two key music creation workflows: controlled\nmusic generation and post-production editing. For controlled music\ngeneration, our system enables vocal music generation with performance controls\nfrom multi-modal inputs, including style descriptions, audio references,\nmusical scores, and voice prompts. For post-production editing, it offers\ninteractive tools for editing lyrics and vocal melodies directly in the\ngenerated audio.\n  We encourage readers to listen to demo audio examples at\nhttps://team.doubao.com/seed-music .",
+      "upvotes": 46
+    },
+    {
+      "title": "Kolmogorov-Arnold Transformer",
+      "url": "https://huggingface.co/papers/2409.10594",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2409.10594.pdf",
+      "abstract": "Transformers stand as the cornerstone of mordern deep learning.\nTraditionally, these models rely on multi-layer perceptron (MLP) layers to mix\nthe information between channels. In this paper, we introduce the\nKolmogorov-Arnold Transformer (KAT), a novel architecture that replaces MLP\nlayers with Kolmogorov-Arnold Network (KAN) layers to enhance the\nexpressiveness and performance of the model. Integrating KANs into\ntransformers, however, is no easy feat, especially when scaled up.\nSpecifically, we identify three key challenges: (C1) Base function. The\nstandard B-spline function used in KANs is not optimized for parallel computing\non modern hardware, resulting in slower inference speeds. (C2) Parameter and\nComputation Inefficiency. KAN requires a unique function for each input-output\npair, making the computation extremely large. (C3) Weight initialization. The\ninitialization of weights in KANs is particularly challenging due to their\nlearnable activation functions, which are critical for achieving convergence in\ndeep neural networks. To overcome the aforementioned challenges, we propose\nthree key solutions: (S1) Rational basis. We replace B-spline functions with\nrational functions to improve compatibility with modern GPUs. By implementing\nthis in CUDA, we achieve faster computations. (S2) Group KAN. We share the\nactivation weights through a group of neurons, to reduce the computational load\nwithout sacrificing performance. (S3) Variance-preserving initialization. We\ncarefully initialize the activation weights to make sure that the activation\nvariance is maintained across layers. With these designs, KAT scales\neffectively and readily outperforms traditional MLP-based transformers.",
+      "upvotes": 38
+    },
+    {
+      "title": "RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval",
+      "url": "https://huggingface.co/papers/2409.10516",
+      "authors": [
+        "Di Liu",
+        "Qi Chen",
+        "Bailu Ding",
+        "Kai Zhang",
+        "Chen Chen",
+        "Fan Yang",
+        "Yuqing Yang",
+        "Lili Qiu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.10516.pdf",
+      "abstract": "Transformer-based large Language Models (LLMs) become increasingly important\nin various domains. However, the quadratic time complexity of attention\noperation poses a significant challenge for scaling to longer contexts due to\nthe extremely high inference latency and GPU memory consumption for caching\nkey-value (KV) vectors. This paper proposes RetrievalAttention, a training-free\napproach to accelerate attention computation. To leverage the dynamic sparse\nproperty of attention, RetrievalAttention builds approximate nearest neighbor\nsearch (ANNS) indexes upon KV vectors in CPU memory and retrieves the most\nrelevant ones via vector search during generation. Due to the\nout-of-distribution (OOD) between query vectors and key vectors, off-the-shelf\nANNS indexes still need to scan O(N) (usually 30% of all keys) data for\naccurate retrieval, which fails to exploit the high sparsity.\nRetrievalAttention first identifies the OOD challenge of ANNS-based attention,\nand addresses it via an attention-aware vector search algorithm that can adapt\nto queries and only access 1--3% of data, thus achieving a sub-linear time\ncomplexity. RetrievalAttention greatly reduces the inference cost of\nlong-context LLM with much lower GPU memory requirements while maintaining the\nmodel accuracy. Especially, RetrievalAttention only needs 16GB GPU memory for\nserving 128K tokens in LLMs with 8B parameters, which is capable of generating\none token in 0.188 seconds on a single NVIDIA RTX4090 (24GB).",
+      "upvotes": 37
+    },
+    {
+      "title": "jina-embeddings-v3: Multilingual Embeddings With Task LoRA",
+      "url": "https://huggingface.co/papers/2409.10173",
+      "authors": [
+        "Feng Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.10173.pdf",
+      "abstract": "We introduce jina-embeddings-v3, a novel text embedding model with 570\nmillion parameters, achieves state-of-the-art performance on multilingual data\nand long-context retrieval tasks, supporting context lengths of up to 8192\ntokens. The model includes a set of task-specific Low-Rank Adaptation (LoRA)\nadapters to generate high-quality embeddings for query-document retrieval,\nclustering, classification, and text matching. Additionally, Matryoshka\nRepresentation Learning is integrated into the training process, allowing\nflexible truncation of embedding dimensions without compromising performance.\nEvaluation on the MTEB benchmark shows that jina-embeddings-v3 outperforms the\nlatest proprietary embeddings from OpenAI and Cohere on English tasks, while\nachieving superior performance compared to multilingual-e5-large-instruct\nacross all multilingual tasks.",
+      "upvotes": 23
+    },
+    {
+      "title": "One missing piece in Vision and Language: A Survey on Comics Understanding",
+      "url": "https://huggingface.co/papers/2409.09502",
+      "authors": [
+        "Andrey Barsky",
+        "Dimosthenis Karatzas"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.09502.pdf",
+      "abstract": "Vision-language models have recently evolved into versatile systems capable\nof high performance across a range of tasks, such as document understanding,\nvisual question answering, and grounding, often in zero-shot settings. Comics\nUnderstanding, a complex and multifaceted field, stands to greatly benefit from\nthese advances. Comics, as a medium, combine rich visual and textual\nnarratives, challenging AI models with tasks that span image classification,\nobject detection, instance segmentation, and deeper narrative comprehension\nthrough sequential panels. However, the unique structure of comics --\ncharacterized by creative variations in style, reading order, and non-linear\nstorytelling -- presents a set of challenges distinct from those in other\nvisual-language domains. In this survey, we present a comprehensive review of\nComics Understanding from both dataset and task perspectives. Our contributions\nare fivefold: (1) We analyze the structure of the comics medium, detailing its\ndistinctive compositional elements; (2) We survey the widely used datasets and\ntasks in comics research, emphasizing their role in advancing the field; (3) We\nintroduce the Layer of Comics Understanding (LoCU) framework, a novel taxonomy\nthat redefines vision-language tasks within comics and lays the foundation for\nfuture work; (4) We provide a detailed review and categorization of existing\nmethods following the LoCU framework; (5) Finally, we highlight current\nresearch challenges and propose directions for future exploration, particularly\nin the context of vision-language models applied to comics. This survey is the\nfirst to propose a task-oriented framework for comics intelligence and aims to\nguide future research by addressing critical gaps in data availability and task\ndefinition. A project associated with this survey is available at\nhttps://github.com/emanuelevivoli/awesome-comics-understanding.",
+      "upvotes": 23
+    },
+    {
+      "title": "Ferret: Federated Full-Parameter Tuning at Scale for Large Language Models",
+      "url": "https://huggingface.co/papers/2409.06277",
+      "authors": [
+        "Wenyang Hu",
+        "See-Kiong Ng",
+        "Bryan Kian Hsiang Low",
+        "Fei Richard Yu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.06277.pdf",
+      "abstract": "Large Language Models (LLMs) have become indispensable in numerous real-world\napplications. Unfortunately, fine-tuning these models at scale, especially in\nfederated settings where data privacy and communication efficiency are\ncritical, presents significant challenges. Existing methods often resort to\nparameter-efficient fine-tuning (PEFT) to mitigate communication overhead, but\nthis typically comes at the cost of model accuracy. To address these\nlimitations, we propose federated full-parameter tuning at scale for LLMs\n(Ferret), the first first-order method with shared randomness to enable\nscalable full-parameter tuning of LLMs across decentralized data sources while\nmaintaining competitive model accuracy. Ferret accomplishes this through three\naspects: (1) it employs widely applied first-order methods for efficient local\nupdates; (2) it projects these updates into a low-dimensional space to\nconsiderably reduce communication overhead; and (3) it reconstructs local\nupdates from this low-dimensional space with shared randomness to facilitate\neffective full-parameter global aggregation, ensuring fast convergence and\ncompetitive final performance. Our rigorous theoretical analyses and insights\nalong with extensive experiments, show that Ferret significantly enhances the\nscalability of existing federated full-parameter tuning approaches by achieving\nhigh computational efficiency, reduced communication overhead, and fast\nconvergence, all while maintaining competitive model accuracy. Our\nimplementation is available at https://github.com/allen4747/Ferret.",
+      "upvotes": 14
+    },
+    {
+      "title": "On the Diagram of Thought",
+      "url": "https://huggingface.co/papers/2409.10038",
+      "authors": [
+        "Yang Yuan",
+        "Andrew Chi-Chih Yao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.10038.pdf",
+      "abstract": "We introduce Diagram of Thought (DoT), a framework that models iterative\nreasoning in large language models (LLMs) as the construction of a directed\nacyclic graph (DAG) within a single model. Unlike traditional approaches that\nrepresent reasoning as linear chains or trees, DoT organizes propositions,\ncritiques, refinements, and verifications into a cohesive DAG structure,\nallowing the model to explore complex reasoning pathways while maintaining\nlogical consistency. Each node in the diagram corresponds to a proposition that\nhas been proposed, critiqued, refined, or verified, enabling the LLM to\niteratively improve its reasoning through natural language feedback. By\nleveraging auto-regressive next-token prediction with role-specific tokens, DoT\nfacilitates seamless transitions between proposing ideas and critically\nevaluating them, providing richer feedback than binary signals. Furthermore, we\nformalize the DoT framework using Topos Theory, providing a mathematical\nfoundation that ensures logical consistency and soundness in the reasoning\nprocess. This approach enhances both the training and inference processes\nwithin a single LLM, eliminating the need for multiple models or external\ncontrol mechanisms. DoT offers a conceptual framework for designing\nnext-generation reasoning-specialized models, emphasizing training efficiency,\nrobust reasoning capabilities, and theoretical grounding. The code is available\nat https://github.com/diagram-of-thought/diagram-of-thought.",
+      "upvotes": 11
+    },
+    {
+      "title": "ReCLAP: Improving Zero Shot Audio Classification by Describing Sounds",
+      "url": "https://huggingface.co/papers/2409.09213",
+      "authors": [
+        "Chandra Kiran Reddy Evuru"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.09213.pdf",
+      "abstract": "Open-vocabulary audio-language models, like CLAP, offer a promising approach\nfor zero-shot audio classification (ZSAC) by enabling classification with any\narbitrary set of categories specified with natural language prompts. In this\npaper, we propose a simple but effective method to improve ZSAC with CLAP.\nSpecifically, we shift from the conventional method of using prompts with\nabstract category labels (e.g., Sound of an organ) to prompts that describe\nsounds using their inherent descriptive features in a diverse context (e.g.,The\norgan's deep and resonant tones filled the cathedral.). To achieve this, we\nfirst propose ReCLAP, a CLAP model trained with rewritten audio captions for\nimproved understanding of sounds in the wild. These rewritten captions describe\neach sound event in the original caption using their unique discriminative\ncharacteristics. ReCLAP outperforms all baselines on both multi-modal\naudio-text retrieval and ZSAC. Next, to improve zero-shot audio classification\nwith ReCLAP, we propose prompt augmentation. In contrast to the traditional\nmethod of employing hand-written template prompts, we generate custom prompts\nfor each unique label in the dataset. These custom prompts first describe the\nsound event in the label and then employ them in diverse scenes. Our proposed\nmethod improves ReCLAP's performance on ZSAC by 1%-18% and outperforms all\nbaselines by 1% - 55%.",
+      "upvotes": 11
+    },
+    {
+      "title": "Guiding Vision-Language Model Selection for Visual Question-Answering Across Tasks, Domains, and Knowledge Types",
+      "url": "https://huggingface.co/papers/2409.09269",
+      "authors": [
+        "Vinija Jain"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.09269.pdf",
+      "abstract": "Visual Question-Answering (VQA) has become a key use-case in several\napplications to aid user experience, particularly after Vision-Language Models\n(VLMs) achieving good results in zero-shot inference. But evaluating different\nVLMs for an application requirement using a standardized framework in practical\nsettings is still challenging. This paper introduces a comprehensive framework\nfor evaluating VLMs tailored to VQA tasks in practical settings. We present a\nnovel dataset derived from established VQA benchmarks, annotated with task\ntypes, application domains, and knowledge types, three key practical aspects on\nwhich tasks can vary. We also introduce GoEval, a multimodal evaluation metric\ndeveloped using GPT-4o, achieving a correlation factor of 56.71% with human\njudgments. Our experiments with ten state-of-the-art VLMs reveals that no\nsingle model excelling universally, making appropriate selection a key design\ndecision. Proprietary models such as Gemini-1.5-Pro and GPT-4o-mini generally\noutperform others, though open-source models like InternVL-2-8B and\nCogVLM-2-Llama-3-19B demonstrate competitive strengths in specific contexts,\nwhile providing additional advantages. This study guides the selection of VLMs\nbased on specific task requirements and resource constraints, and can also be\nextended to other vision-language tasks.",
+      "upvotes": 7
+    },
+    {
+      "title": "Policy Filtration in RLHF to Fine-Tune LLM for Code Generation",
+      "url": "https://huggingface.co/papers/2409.06957",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2409.06957.pdf",
+      "abstract": "Reinforcement learning from human feedback (RLHF) is one of the key\ntechniques that helps large language models (LLMs) to follow instructions and\nprovide helpful and harmless responses. While direct policy optimization\nmethods exist, state-of-the-art LLMs adopt RL-based methods (usually PPO) in\nRLHF to train the policy to generate good responses guided by a reward model\nlearned from preference data. The main challenge of these methods is the\ninaccuracy of the intermediate reward model, especially in code generation\ntasks that require long and complex reasoning to score a response. We find that\nthe reliability of the reward model varies across responses assigned with\ndifferent rewards. This motivates us to filter the samples whose rewards may be\nunreliable to improve signal-to-noise ratio during policy learning, resulting\nin Policy Filtration for Proximal Policy Optimization (PF-PPO). To choose a\nproper policy filtration strategy for a given reward model, the coefficient of\ndetermination (R^2) between rewards and actual scores on filtered samples\nserves as a good metrics and helps us find several promising strategies. We\nprovide extensive experiments to validate the effectiveness of PF-PPO in code\ngeneration tasks, and find that some variants of PF-PPO are highly effective\nand achieve new state-of-the-art performance across 7-billion-parameter models\non HumanEval, MBPP, and a new and more challenging LeetCode Contest benchmark.",
+      "upvotes": 5
+    },
+    {
+      "title": "Breaking reCAPTCHAv2",
+      "url": "https://huggingface.co/papers/2409.08831",
+      "authors": [
+        "Tobias Vontobel"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.08831.pdf",
+      "abstract": "Our work examines the efficacy of employing advanced machine learning methods\nto solve captchas from Google's reCAPTCHAv2 system. We evaluate the\neffectiveness of automated systems in solving captchas by utilizing advanced\nYOLO models for image segmentation and classification. Our main result is that\nwe can solve 100% of the captchas, while previous work only solved 68-71%.\nFurthermore, our findings suggest that there is no significant difference in\nthe number of challenges humans and bots must solve to pass the captchas in\nreCAPTCHAv2. This implies that current AI technologies can exploit advanced\nimage-based captchas. We also look under the hood of reCAPTCHAv2, and find\nevidence that reCAPTCHAv2 is heavily based on cookie and browser history data\nwhen evaluating whether a user is human or not. The code is provided alongside\nthis paper.",
+      "upvotes": 4
+    },
+    {
+      "title": "AudioBERT: Audio Knowledge Augmented Language Model",
+      "url": "https://huggingface.co/papers/2409.08199",
+      "authors": [
+        "Jaeho Lee"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.08199.pdf",
+      "abstract": "Recent studies have identified that language models, pretrained on text-only\ndatasets, often lack elementary visual knowledge, e.g., colors of\neveryday objects. Motivated by this observation, we ask whether a similar\nshortcoming exists in terms of the auditory knowledge. To answer this\nquestion, we construct a new dataset called AuditoryBench, which consists of\ntwo novel tasks for evaluating auditory knowledge. Based on our analysis using\nthe benchmark, we find that language models also suffer from a severe lack of\nauditory knowledge. To address this limitation, we propose AudioBERT, a novel\nmethod to augment the auditory knowledge of BERT through a retrieval-based\napproach. First, we detect auditory knowledge spans in prompts to query our\nretrieval model efficiently. Then, we inject audio knowledge into BERT and\nswitch on low-rank adaptation for effective adaptation when audio knowledge is\nrequired. Our experiments demonstrate that AudioBERT is quite effective,\nachieving superior performance on the AuditoryBench. The dataset and code are\navailable at https://github.com/HJ-Ok/AudioBERT.",
+      "upvotes": 4
+    },
+    {
+      "title": "LLM-Powered Grapheme-to-Phoneme Conversion: Benchmark and Case Study",
+      "url": "https://huggingface.co/papers/2409.08554",
+      "authors": [
+        "Zahra Dehghanian",
+        "Hamid R. Rabiee"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.08554.pdf",
+      "abstract": "Grapheme-to-phoneme (G2P) conversion is critical in speech processing,\nparticularly for applications like speech synthesis. G2P systems must possess\nlinguistic understanding and contextual awareness of languages with polyphone\nwords and context-dependent phonemes. Large language models (LLMs) have\nrecently demonstrated significant potential in various language tasks,\nsuggesting that their phonetic knowledge could be leveraged for G2P. In this\npaper, we evaluate the performance of LLMs in G2P conversion and introduce\nprompting and post-processing methods that enhance LLM outputs without\nadditional training or labeled data. We also present a benchmarking dataset\ndesigned to assess G2P performance on sentence-level phonetic challenges of the\nPersian language. Our results show that by applying the proposed methods, LLMs\ncan outperform traditional G2P tools, even in an underrepresented language like\nPersian, highlighting the potential of developing LLM-aided G2P systems.",
+      "upvotes": 3
+    },
+    {
+      "title": "Towards Predicting Temporal Changes in a Patient's Chest X-ray Images based on Electronic Health Records",
+      "url": "https://huggingface.co/papers/2409.07012",
+      "authors": [
+        "Tackeun Kim"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.07012.pdf",
+      "abstract": "Chest X-ray imaging (CXR) is an important diagnostic tool used in hospitals\nto assess patient conditions and monitor changes over time. Generative models,\nspecifically diffusion-based models, have shown promise in generating realistic\nsynthetic X-rays. However, these models mainly focus on conditional generation\nusing single-time-point data, i.e., typically CXRs taken at a specific time\nwith their corresponding reports, limiting their clinical utility, particularly\nfor capturing temporal changes. To address this limitation, we propose a novel\nframework, EHRXDiff, which predicts future CXR images by integrating previous\nCXRs with subsequent medical events, e.g., prescriptions, lab measures, etc.\nOur framework dynamically tracks and predicts disease progression based on a\nlatent diffusion model, conditioned on the previous CXR image and a history of\nmedical events. We comprehensively evaluate the performance of our framework\nacross three key aspects, including clinical consistency, demographic\nconsistency, and visual realism. We demonstrate that our framework generates\nhigh-quality, realistic future images that capture potential temporal changes,\nsuggesting its potential for further development as a clinical simulation tool.\nThis could offer valuable insights for patient monitoring and treatment\nplanning in the medical field.",
+      "upvotes": 3
+    },
+    {
+      "title": "beeFormer: Bridging the Gap Between Semantic and Interaction Similarity in Recommender Systems",
+      "url": "https://huggingface.co/papers/2409.10309",
+      "authors": [
+        "Pavel Kordík"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.10309.pdf",
+      "abstract": "Recommender systems often use text-side information to improve their\npredictions, especially in cold-start or zero-shot recommendation scenarios,\nwhere traditional collaborative filtering approaches cannot be used. Many\napproaches to text-mining side information for recommender systems have been\nproposed over recent years, with sentence Transformers being the most prominent\none. However, these models are trained to predict semantic similarity without\nutilizing interaction data with hidden patterns specific to recommender\nsystems. In this paper, we propose beeFormer, a framework for training sentence\nTransformer models with interaction data. We demonstrate that our models\ntrained with beeFormer can transfer knowledge between datasets while\noutperforming not only semantic similarity sentence Transformers but also\ntraditional collaborative filtering methods. We also show that training on\nmultiple datasets from different domains accumulates knowledge in a single\nmodel, unlocking the possibility of training universal, domain-agnostic\nsentence Transformer models to mine text representations for recommender\nsystems. We release the source code, trained models, and additional details\nallowing replication of our experiments at\nhttps://github.com/recombee/beeformer.",
+      "upvotes": 2
+    }
+  ]
+}

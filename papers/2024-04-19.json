@@ -1,0 +1,107 @@
+{
+  "date": "2024-04-19",
+  "papers": [
+    {
+      "title": "Toward Self-Improvement of LLMs via Imagination, Searching, and Criticizing",
+      "url": "https://huggingface.co/papers/2404.12253",
+      "authors": [
+        "Lifeng Jin",
+        "Dong Yu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.12253.pdf",
+      "abstract": "Despite the impressive capabilities of Large Language Models (LLMs) on\nvarious tasks, they still struggle with scenarios that involves complex\nreasoning and planning. Recent work proposed advanced prompting techniques and\nthe necessity of fine-tuning with high-quality data to augment LLMs' reasoning\nabilities. However, these approaches are inherently constrained by data\navailability and quality. In light of this, self-correction and self-learning\nemerge as viable solutions, employing strategies that allow LLMs to refine\ntheir outputs and learn from self-assessed rewards. Yet, the efficacy of LLMs\nin self-refining its response, particularly in complex reasoning and planning\ntask, remains dubious. In this paper, we introduce AlphaLLM for the\nself-improvements of LLMs, which integrates Monte Carlo Tree Search (MCTS) with\nLLMs to establish a self-improving loop, thereby enhancing the capabilities of\nLLMs without additional annotations. Drawing inspiration from the success of\nAlphaGo, AlphaLLM addresses the unique challenges of combining MCTS with LLM\nfor self-improvement, including data scarcity, the vastness search spaces of\nlanguage tasks, and the subjective nature of feedback in language tasks.\nAlphaLLM is comprised of prompt synthesis component, an efficient MCTS approach\ntailored for language tasks, and a trio of critic models for precise feedback.\nOur experimental results in mathematical reasoning tasks demonstrate that\nAlphaLLM significantly enhances the performance of LLMs without additional\nannotations, showing the potential for self-improvement in LLMs.",
+      "upvotes": 53
+    },
+    {
+      "title": "Dynamic Typography: Bringing Words to Life",
+      "url": "https://huggingface.co/papers/2404.11614",
+      "authors": [
+        "Hao Ouyang",
+        "Huamin Qu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.11614.pdf",
+      "abstract": "Text animation serves as an expressive medium, transforming static\ncommunication into dynamic experiences by infusing words with motion to evoke\nemotions, emphasize meanings, and construct compelling narratives. Crafting\nanimations that are semantically aware poses significant challenges, demanding\nexpertise in graphic design and animation. We present an automated text\nanimation scheme, termed \"Dynamic Typography\", which combines two challenging\ntasks. It deforms letters to convey semantic meaning and infuses them with\nvibrant movements based on user prompts. Our technique harnesses vector\ngraphics representations and an end-to-end optimization-based framework. This\nframework employs neural displacement fields to convert letters into base\nshapes and applies per-frame motion, encouraging coherence with the intended\ntextual concept. Shape preservation techniques and perceptual loss\nregularization are employed to maintain legibility and structural integrity\nthroughout the animation process. We demonstrate the generalizability of our\napproach across various text-to-video models and highlight the superiority of\nour end-to-end methodology over baseline methods, which might comprise separate\ntasks. Through quantitative and qualitative evaluations, we demonstrate the\neffectiveness of our framework in generating coherent text animations that\nfaithfully interpret user prompts while maintaining readability. Our code is\navailable at: https://animate-your-word.github.io/demo/.",
+      "upvotes": 43
+    },
+    {
+      "title": "MeshLRM: Large Reconstruction Model for High-Quality Mesh",
+      "url": "https://huggingface.co/papers/2404.12385",
+      "authors": [
+        "Kai Zhang",
+        "Sai Bi",
+        "Hao Tan",
+        "Fujun Luan",
+        "Kalyan Sunkavalli",
+        "Hao Su"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.12385.pdf",
+      "abstract": "We propose MeshLRM, a novel LRM-based approach that can reconstruct a\nhigh-quality mesh from merely four input images in less than one second.\nDifferent from previous large reconstruction models (LRMs) that focus on\nNeRF-based reconstruction, MeshLRM incorporates differentiable mesh extraction\nand rendering within the LRM framework. This allows for end-to-end mesh\nreconstruction by fine-tuning a pre-trained NeRF LRM with mesh rendering.\nMoreover, we improve the LRM architecture by simplifying several complex\ndesigns in previous LRMs. MeshLRM's NeRF initialization is sequentially trained\nwith low- and high-resolution images; this new LRM training strategy enables\nsignificantly faster convergence and thereby leads to better quality with less\ncompute. Our approach achieves state-of-the-art mesh reconstruction from\nsparse-view inputs and also allows for many downstream applications, including\ntext-to-3D and single-image-to-3D generation. Project page:\nhttps://sarahweiii.github.io/meshlrm/",
+      "upvotes": 26
+    },
+    {
+      "title": "EdgeFusion: On-Device Text-to-Image Generation",
+      "url": "https://huggingface.co/papers/2404.11925",
+      "authors": [
+        "Hanyoung Yim",
+        "Changgwun Lee"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.11925.pdf",
+      "abstract": "The intensive computational burden of Stable Diffusion (SD) for text-to-image\ngeneration poses a significant hurdle for its practical application. To tackle\nthis challenge, recent research focuses on methods to reduce sampling steps,\nsuch as Latent Consistency Model (LCM), and on employing architectural\noptimizations, including pruning and knowledge distillation. Diverging from\nexisting approaches, we uniquely start with a compact SD variant, BK-SDM. We\nobserve that directly applying LCM to BK-SDM with commonly used crawled\ndatasets yields unsatisfactory results. It leads us to develop two strategies:\n(1) leveraging high-quality image-text pairs from leading generative models and\n(2) designing an advanced distillation process tailored for LCM. Through our\nthorough exploration of quantization, profiling, and on-device deployment, we\nachieve rapid generation of photo-realistic, text-aligned images in just two\nsteps, with latency under one second on resource-limited edge devices.",
+      "upvotes": 21
+    },
+    {
+      "title": "TriForce: Lossless Acceleration of Long Sequence Generation with Hierarchical Speculative Decoding",
+      "url": "https://huggingface.co/papers/2404.11912",
+      "authors": [
+        "Zhuoming Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.11912.pdf",
+      "abstract": "With large language models (LLMs) widely deployed in long content generation\nrecently, there has emerged an increasing demand for efficient long-sequence\ninference support. However, key-value (KV) cache, which is stored to avoid\nre-computation, has emerged as a critical bottleneck by growing linearly in\nsize with the sequence length. Due to the auto-regressive nature of LLMs, the\nentire KV cache will be loaded for every generated token, resulting in low\nutilization of computational cores and high latency. While various compression\nmethods for KV cache have been proposed to alleviate this issue, they suffer\nfrom degradation in generation quality. We introduce TriForce, a hierarchical\nspeculative decoding system that is scalable to long sequence generation. This\napproach leverages the original model weights and dynamic sparse KV cache via\nretrieval as a draft model, which serves as an intermediate layer in the\nhierarchy and is further speculated by a smaller model to reduce its drafting\nlatency. TriForce not only facilitates impressive speedups for Llama2-7B-128K,\nachieving up to 2.31times on an A100 GPU but also showcases scalability in\nhandling even longer contexts. For the offloading setting on two RTX 4090 GPUs,\nTriForce achieves 0.108s/tokenx2014only half as slow as the\nauto-regressive baseline on an A100, which attains 7.78times on our\noptimized offloading system. Additionally, TriForce performs 4.86times than\nDeepSpeed-Zero-Inference on a single RTX 4090 GPU. TriForce's robustness is\nhighlighted by its consistently outstanding performance across various\ntemperatures. The code is available at\nhttps://github.com/Infini-AI-Lab/TriForce.",
+      "upvotes": 16
+    },
+    {
+      "title": "Reuse Your Rewards: Reward Model Transfer for Zero-Shot Cross-Lingual Alignment",
+      "url": "https://huggingface.co/papers/2404.12318",
+      "authors": [
+        "Ananth Balashankar",
+        "Yoon Kim",
+        "Jacob Eisenstein"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.12318.pdf",
+      "abstract": "Aligning language models (LMs) based on human-annotated preference data is a\ncrucial step in obtaining practical and performant LM-based systems. However,\nmultilingual human preference data are difficult to obtain at scale, making it\nchallenging to extend this framework to diverse languages. In this work, we\nevaluate a simple approach for zero-shot cross-lingual alignment, where a\nreward model is trained on preference data in one source language and directly\napplied to other target languages. On summarization and open-ended dialog\ngeneration, we show that this method is consistently successful under\ncomprehensive evaluation settings, including human evaluation: cross-lingually\naligned models are preferred by humans over unaligned models on up to >70% of\nevaluation instances. We moreover find that a different-language reward model\nsometimes yields better aligned models than a same-language reward model. We\nalso identify best practices when there is no language-specific data for even\nsupervised finetuning, another component in alignment.",
+      "upvotes": 14
+    },
+    {
+      "title": "MoA: Mixture-of-Attention for Subject-Context Disentanglement in Personalized Image Generation",
+      "url": "https://huggingface.co/papers/2404.11565",
+      "authors": [
+        "Wang",
+        "Sergey Tulyakov"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.11565.pdf",
+      "abstract": "We introduce a new architecture for personalization of text-to-image\ndiffusion models, coined Mixture-of-Attention (MoA). Inspired by the\nMixture-of-Experts mechanism utilized in large language models (LLMs), MoA\ndistributes the generation workload between two attention pathways: a\npersonalized branch and a non-personalized prior branch. MoA is designed to\nretain the original model's prior by fixing its attention layers in the prior\nbranch, while minimally intervening in the generation process with the\npersonalized branch that learns to embed subjects in the layout and context\ngenerated by the prior branch. A novel routing mechanism manages the\ndistribution of pixels in each layer across these branches to optimize the\nblend of personalized and generic content creation. Once trained, MoA\nfacilitates the creation of high-quality, personalized images featuring\nmultiple subjects with compositions and interactions as diverse as those\ngenerated by the original model. Crucially, MoA enhances the distinction\nbetween the model's pre-existing capability and the newly augmented\npersonalized intervention, thereby offering a more disentangled subject-context\ncontrol that was previously unattainable. Project page:\nhttps://snap-research.github.io/mixture-of-attention",
+      "upvotes": 14
+    },
+    {
+      "title": "Introducing v0.5 of the AI Safety Benchmark from MLCommons",
+      "url": "https://huggingface.co/papers/2404.12241",
+      "authors": [
+        "Bertie Vidgen",
+        "Adarsh Agrawal",
+        "Ahmed M. Ahmed",
+        "Namir Al-Nuaimi",
+        "Najla Alfaraj",
+        "Elie Alhajjar",
+        "Trupti Bavalatti",
+        "Rishi Bomassani",
+        "Marisa Ferrara Boston",
+        "Cody Coleman",
+        "Zacharie Delpierre Coudert",
+        "James Ezick"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.12241.pdf",
+      "abstract": "This paper introduces v0.5 of the AI Safety Benchmark, which has been created\nby the MLCommons AI Safety Working Group. The AI Safety Benchmark has been\ndesigned to assess the safety risks of AI systems that use chat-tuned language\nmodels. We introduce a principled approach to specifying and constructing the\nbenchmark, which for v0.5 covers only a single use case (an adult chatting to a\ngeneral-purpose assistant in English), and a limited set of personas (i.e.,\ntypical users, malicious users, and vulnerable users). We created a new\ntaxonomy of 13 hazard categories, of which 7 have tests in the v0.5 benchmark.\nWe plan to release version 1.0 of the AI Safety Benchmark by the end of 2024.\nThe v1.0 benchmark will provide meaningful insights into the safety of AI\nsystems. However, the v0.5 benchmark should not be used to assess the safety of\nAI systems. We have sought to fully document the limitations, flaws, and\nchallenges of v0.5. This release of v0.5 of the AI Safety Benchmark includes\n(1) a principled approach to specifying and constructing the benchmark, which\ncomprises use cases, types of systems under test (SUTs), language and context,\npersonas, tests, and test items; (2) a taxonomy of 13 hazard categories with\ndefinitions and subcategories; (3) tests for seven of the hazard categories,\neach comprising a unique set of test items, i.e., prompts. There are 43,090\ntest items in total, which we created with templates; (4) a grading system for\nAI systems against the benchmark; (5) an openly available platform, and\ndownloadable tool, called ModelBench that can be used to evaluate the safety of\nAI systems on the benchmark; (6) an example evaluation report which benchmarks\nthe performance of over a dozen openly available chat-tuned language models;\n(7) a test specification for the benchmark.",
+      "upvotes": 10
+    }
+  ]
+}

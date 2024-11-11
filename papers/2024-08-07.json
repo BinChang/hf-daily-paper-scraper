@@ -1,0 +1,155 @@
+{
+  "date": "2024-08-07",
+  "papers": [
+    {
+      "title": "MMIU: Multimodal Multi-image Understanding for Evaluating Large Vision-Language Models",
+      "url": "https://huggingface.co/papers/2408.02718",
+      "authors": [
+        "Jin Wang",
+        "Hao Tian",
+        "Yu Qiao",
+        "Ping Luo"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.02718.pdf",
+      "abstract": "The capability to process multiple images is crucial for Large\nVision-Language Models (LVLMs) to develop a more thorough and nuanced\nunderstanding of a scene. Recent multi-image LVLMs have begun to address this\nneed. However, their evaluation has not kept pace with their development. To\nfill this gap, we introduce the Multimodal Multi-image Understanding (MMIU)\nbenchmark, a comprehensive evaluation suite designed to assess LVLMs across a\nwide range of multi-image tasks. MMIU encompasses 7 types of multi-image\nrelationships, 52 tasks, 77K images, and 11K meticulously curated\nmultiple-choice questions, making it the most extensive benchmark of its kind.\nOur evaluation of 24 popular LVLMs, including both open-source and proprietary\nmodels, reveals significant challenges in multi-image comprehension,\nparticularly in tasks involving spatial understanding. Even the most advanced\nmodels, such as GPT-4o, achieve only 55.7% accuracy on MMIU. Through\nmulti-faceted analytical experiments, we identify key performance gaps and\nlimitations, providing valuable insights for future model and data\nimprovements. We aim for MMIU to advance the frontier of LVLM research and\ndevelopment, moving us toward achieving sophisticated multimodal multi-image\nuser interactions.",
+      "upvotes": 60
+    },
+    {
+      "title": "LLaVA-OneVision: Easy Visual Task Transfer",
+      "url": "https://huggingface.co/papers/2408.03326",
+      "authors": [
+        "Dong Guo",
+        "Renrui Zhang",
+        "Feng Li",
+        "Hao Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.03326.pdf",
+      "abstract": "We present LLaVA-OneVision, a family of open large multimodal models (LMMs)\ndeveloped by consolidating our insights into data, models, and visual\nrepresentations in the LLaVA-NeXT blog series. Our experimental results\ndemonstrate that LLaVA-OneVision is the first single model that can\nsimultaneously push the performance boundaries of open LMMs in three important\ncomputer vision scenarios: single-image, multi-image, and video scenarios.\nImportantly, the design of LLaVA-OneVision allows strong transfer learning\nacross different modalities/scenarios, yielding new emerging capabilities. In\nparticular, strong video understanding and cross-scenario capabilities are\ndemonstrated through task transfer from images to videos.",
+      "upvotes": 59
+    },
+    {
+      "title": "An Object is Worth 64x64 Pixels: Generating 3D Object via Image Diffusion",
+      "url": "https://huggingface.co/papers/2408.03178",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2408.03178.pdf",
+      "abstract": "We introduce a new approach for generating realistic 3D models with UV maps\nthrough a representation termed \"Object Images.\" This approach encapsulates\nsurface geometry, appearance, and patch structures within a 64x64 pixel image,\neffectively converting complex 3D shapes into a more manageable 2D format. By\ndoing so, we address the challenges of both geometric and semantic irregularity\ninherent in polygonal meshes. This method allows us to use image generation\nmodels, such as Diffusion Transformers, directly for 3D shape generation.\nEvaluated on the ABO dataset, our generated shapes with patch structures\nachieve point cloud FID comparable to recent 3D generative models, while\nnaturally supporting PBR material generation.",
+      "upvotes": 36
+    },
+    {
+      "title": "Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters",
+      "url": "https://huggingface.co/papers/2408.03314",
+      "authors": [
+        "Jaehoon Lee",
+        "Kelvin Xu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.03314.pdf",
+      "abstract": "Enabling LLMs to improve their outputs by using more test-time computation is\na critical step towards building generally self-improving agents that can\noperate on open-ended natural language. In this paper, we study the scaling of\ninference-time computation in LLMs, with a focus on answering the question: if\nan LLM is allowed to use a fixed but non-trivial amount of inference-time\ncompute, how much can it improve its performance on a challenging prompt?\nAnswering this question has implications not only on the achievable performance\nof LLMs, but also on the future of LLM pretraining and how one should tradeoff\ninference-time and pre-training compute. Despite its importance, little\nresearch attempted to understand the scaling behaviors of various test-time\ninference methods. Moreover, current work largely provides negative results for\na number of these strategies. In this work, we analyze two primary mechanisms\nto scale test-time computation: (1) searching against dense, process-based\nverifier reward models; and (2) updating the model's distribution over a\nresponse adaptively, given the prompt at test time. We find that in both cases,\nthe effectiveness of different approaches to scaling test-time compute\ncritically varies depending on the difficulty of the prompt. This observation\nmotivates applying a \"compute-optimal\" scaling strategy, which acts to most\neffectively allocate test-time compute adaptively per prompt. Using this\ncompute-optimal strategy, we can improve the efficiency of test-time compute\nscaling by more than 4x compared to a best-of-N baseline. Additionally, in a\nFLOPs-matched evaluation, we find that on problems where a smaller base model\nattains somewhat non-trivial success rates, test-time compute can be used to\noutperform a 14x larger model.",
+      "upvotes": 33
+    },
+    {
+      "title": "MedTrinity-25M: A Large-scale Multimodal Dataset with Multigranular Annotations for Medicine",
+      "url": "https://huggingface.co/papers/2408.02900",
+      "authors": [
+        "Ce Zhou",
+        "Lang Gao",
+        "Lei Xing",
+        "Yuyin Zhou"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.02900.pdf",
+      "abstract": "This paper introduces MedTrinity-25M, a comprehensive, large-scale multimodal\ndataset for medicine, covering over 25 million images across 10 modalities,\nwith multigranular annotations for more than 65 diseases. These enriched\nannotations encompass both global textual information, such as disease/lesion\ntype, modality, region-specific descriptions, and inter-regional relationships,\nas well as detailed local annotations for regions of interest (ROIs), including\nbounding boxes, segmentation masks. Unlike existing approach which is limited\nby the availability of image-text pairs, we have developed the first automated\npipeline that scales up multimodal data by generating multigranular visual and\ntexual annotations (in the form of image-ROI-description triplets) without the\nneed for any paired text descriptions. Specifically, data from over 90\ndifferent sources have been collected, preprocessed, and grounded using\ndomain-specific expert models to identify ROIs related to abnormal regions. We\nthen build a comprehensive knowledge base and prompt multimodal large language\nmodels to perform retrieval-augmented generation with the identified ROIs as\nguidance, resulting in multigranular texual descriptions. Compared to existing\ndatasets, MedTrinity-25M provides the most enriched annotations, supporting a\ncomprehensive range of multimodal tasks such as captioning and report\ngeneration, as well as vision-centric tasks like classification and\nsegmentation. Pretraining on MedTrinity-25M, our model achieves\nstate-of-the-art performance on VQA-RAD and PathVQA, surpassing both multimodal\nlarge language models and other representative SoTA approaches. This dataset\ncan also be utilized to support large-scale pre-training of multimodal medical\nAI models, contributing to the development of future foundation models in the\nmedical domain.",
+      "upvotes": 25
+    },
+    {
+      "title": "IPAdapter-Instruct: Resolving Ambiguity in Image-based Conditioning using Instruct Prompts",
+      "url": "https://huggingface.co/papers/2408.03209",
+      "authors": [
+        "Dante De Nigris"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.03209.pdf",
+      "abstract": "Diffusion models continuously push the boundary of state-of-the-art image\ngeneration, but the process is hard to control with any nuance: practice proves\nthat textual prompts are inadequate for accurately describing image style or\nfine structural details (such as faces). ControlNet and IPAdapter address this\nshortcoming by conditioning the generative process on imagery instead, but each\nindividual instance is limited to modeling a single conditional posterior: for\npractical use-cases, where multiple different posteriors are desired within the\nsame workflow, training and using multiple adapters is cumbersome. We propose\nIPAdapter-Instruct, which combines natural-image conditioning with ``Instruct''\nprompts to swap between interpretations for the same conditioning image: style\ntransfer, object extraction, both, or something else still? IPAdapterInstruct\nefficiently learns multiple tasks with minimal loss in quality compared to\ndedicated per-task models.",
+      "upvotes": 21
+    },
+    {
+      "title": "CoverBench: A Challenging Benchmark for Complex Claim Verification",
+      "url": "https://huggingface.co/papers/2408.03325",
+      "authors": [
+        "Moran Ambar",
+        "Dror Marcus"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.03325.pdf",
+      "abstract": "There is a growing line of research on verifying the correctness of language\nmodels' outputs. At the same time, LMs are being used to tackle complex queries\nthat require reasoning. We introduce CoverBench, a challenging benchmark\nfocused on verifying LM outputs in complex reasoning settings. Datasets that\ncan be used for this purpose are often designed for other complex reasoning\ntasks (e.g., QA) targeting specific use-cases (e.g., financial tables),\nrequiring transformations, negative sampling and selection of hard examples to\ncollect such a benchmark. CoverBench provides a diversified evaluation for\ncomplex claim verification in a variety of domains, types of reasoning,\nrelatively long inputs, and a variety of standardizations, such as multiple\nrepresentations for tables where available, and a consistent schema. We\nmanually vet the data for quality to ensure low levels of label noise. Finally,\nwe report a variety of competitive baseline results to show CoverBench is\nchallenging and has very significant headroom. The data is available at\nhttps://huggingface.co/datasets/google/coverbench .",
+      "upvotes": 14
+    },
+    {
+      "title": "Diffusion Models as Data Mining Tools",
+      "url": "https://huggingface.co/papers/2408.02752",
+      "authors": [
+        "Ioannis Siglidis",
+        "Alexei A. Efros",
+        "Mathieu Aubry",
+        "Shiry Ginosar"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.02752.pdf",
+      "abstract": "This paper demonstrates how to use generative models trained for image\nsynthesis as tools for visual data mining. Our insight is that since\ncontemporary generative models learn an accurate representation of their\ntraining data, we can use them to summarize the data by mining for visual\npatterns. Concretely, we show that after finetuning conditional diffusion\nmodels to synthesize images from a specific dataset, we can use these models to\ndefine a typicality measure on that dataset. This measure assesses how typical\nvisual elements are for different data labels, such as geographic location,\ntime stamps, semantic labels, or even the presence of a disease. This\nanalysis-by-synthesis approach to data mining has two key advantages. First, it\nscales much better than traditional correspondence-based approaches since it\ndoes not require explicitly comparing all pairs of visual elements. Second,\nwhile most previous works on visual data mining focus on a single dataset, our\napproach works on diverse datasets in terms of content and scale, including a\nhistorical car dataset, a historical face dataset, a large worldwide\nstreet-view dataset, and an even larger scene dataset. Furthermore, our\napproach allows for translating visual elements across class labels and\nanalyzing consistent changes.",
+      "upvotes": 13
+    },
+    {
+      "title": "Synthesizing Text-to-SQL Data from Weak and Strong LLMs",
+      "url": "https://huggingface.co/papers/2408.03256",
+      "authors": [
+        "Jiaxi Yang",
+        "Min Yang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.03256.pdf",
+      "abstract": "The capability gap between open-source and closed-source large language\nmodels (LLMs) remains a challenge in text-to-SQL tasks. In this paper, we\nintroduce a synthetic data approach that combines data produced by larger, more\npowerful models (strong models) with error information data generated by\nsmaller, not well-aligned models (weak models). The method not only enhances\nthe domain generalization of text-to-SQL models but also explores the potential\nof error data supervision through preference learning. Furthermore, we employ\nthe synthetic data approach for instruction tuning on open-source LLMs,\nresulting SENSE, a specialized text-to-SQL model. The effectiveness of SENSE is\ndemonstrated through state-of-the-art results on the SPIDER and BIRD\nbenchmarks, bridging the performance gap between open-source models and methods\nprompted by closed-source models.",
+      "upvotes": 10
+    },
+    {
+      "title": "ReSyncer: Rewiring Style-based Generator for Unified Audio-Visually Synced Facial Performer",
+      "url": "https://huggingface.co/papers/2408.03284",
+      "authors": [
+        "Zhiliang Xu",
+        "Hang Zhou",
+        "Kaisiyuan Wang",
+        "Shengyi He",
+        "Zhanwang Zhang",
+        "Borong Liang",
+        "Haocheng Feng",
+        "Errui Ding",
+        "Jingtuo Liu",
+        "Jingdong Wang",
+        "Youjian Zhao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.03284.pdf",
+      "abstract": "Lip-syncing videos with given audio is the foundation for various\napplications including the creation of virtual presenters or performers. While\nrecent studies explore high-fidelity lip-sync with different techniques, their\ntask-orientated models either require long-term videos for clip-specific\ntraining or retain visible artifacts. In this paper, we propose a unified and\neffective framework ReSyncer, that synchronizes generalized audio-visual facial\ninformation. The key design is revisiting and rewiring the Style-based\ngenerator to efficiently adopt 3D facial dynamics predicted by a principled\nstyle-injected Transformer. By simply re-configuring the information insertion\nmechanisms within the noise and style space, our framework fuses motion and\nappearance with unified training. Extensive experiments demonstrate that\nReSyncer not only produces high-fidelity lip-synced videos according to audio,\nbut also supports multiple appealing properties that are suitable for creating\nvirtual presenters and performers, including fast personalized fine-tuning,\nvideo-driven lip-syncing, the transfer of speaking styles, and even face\nswapping. Resources can be found at\nhttps://guanjz20.github.io/projects/ReSyncer.",
+      "upvotes": 10
+    },
+    {
+      "title": "StructEval: Deepen and Broaden Large Language Model Assessment via Structured Evaluation",
+      "url": "https://huggingface.co/papers/2408.03281",
+      "authors": [
+        "Mengjie Ren",
+        "Feng Zhang",
+        "Junfeng Zhan",
+        "Le Sun"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.03281.pdf",
+      "abstract": "Evaluation is the baton for the development of large language models. Current\nevaluations typically employ a single-item assessment paradigm for each atomic\ntest objective, which struggles to discern whether a model genuinely possesses\nthe required capabilities or merely memorizes/guesses the answers to specific\nquestions. To this end, we propose a novel evaluation framework referred to as\nStructEval. Starting from an atomic test objective, StructEval deepens and\nbroadens the evaluation by conducting a structured assessment across multiple\ncognitive levels and critical concepts, and therefore offers a comprehensive,\nrobust and consistent evaluation for LLMs. Experiments on three widely-used\nbenchmarks demonstrate that StructEval serves as a reliable tool for resisting\nthe risk of data contamination and reducing the interference of potential\nbiases, thereby providing more reliable and consistent conclusions regarding\nmodel capabilities. Our framework also sheds light on the design of future\nprincipled and trustworthy LLM evaluation protocols.",
+      "upvotes": 9
+    },
+    {
+      "title": "AVESFormer: Efficient Transformer Design for Real-Time Audio-Visual Segmentation",
+      "url": "https://huggingface.co/papers/2408.01708",
+      "authors": [
+        "Linsu Shi",
+        "Jiazhong Yu",
+        "Qinghua Liang",
+        "Fei Li",
+        "Shiming Xiang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.01708.pdf",
+      "abstract": "Recently, transformer-based models have demonstrated remarkable performance\non audio-visual segmentation (AVS) tasks. However, their expensive\ncomputational cost makes real-time inference impractical. By characterizing\nattention maps of the network, we identify two key obstacles in AVS models: 1)\nattention dissipation, corresponding to the over-concentrated attention weights\nby Softmax within restricted frames, and 2) inefficient, burdensome transformer\ndecoder, caused by narrow focus patterns in early stages. In this paper, we\nintroduce AVESFormer, the first real-time Audio-Visual Efficient Segmentation\ntransformer that achieves fast, efficient and light-weight simultaneously. Our\nmodel leverages an efficient prompt query generator to correct the behaviour of\ncross-attention. Additionally, we propose ELF decoder to bring greater\nefficiency by facilitating convolutions suitable for local features to reduce\ncomputational burdens. Extensive experiments demonstrate that our AVESFormer\nsignificantly enhances model performance, achieving 79.9% on S4, 57.9% on MS3\nand 31.2% on AVSS, outperforming previous state-of-the-art and achieving an\nexcellent trade-off between performance and speed. Code can be found at\nhttps://github.com/MarkXCloud/AVESFormer.git.",
+      "upvotes": 3
+    }
+  ]
+}

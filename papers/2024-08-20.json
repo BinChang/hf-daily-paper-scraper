@@ -1,0 +1,189 @@
+{
+  "date": "2024-08-20",
+  "papers": [
+    {
+      "title": "LongVILA: Scaling Long-Context Visual Language Models for Long Videos",
+      "url": "https://huggingface.co/papers/2408.10188",
+      "authors": [
+        "Yukang Chen",
+        "Dacheng Li",
+        "Ligeng Zhu",
+        "Xiuyu Li",
+        "Yunhao Fang",
+        "Haotian Tang",
+        "Shang Yang",
+        "Zhijian Liu",
+        "Hongxu Yin",
+        "Jan Kautz",
+        "Linxi Fan",
+        "Yuke Zhu",
+        "Yao Lu",
+        "Song Han"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.10188.pdf",
+      "abstract": "Long-context capability is critical for multi-modal foundation models. We\nintroduce LongVILA, a full-stack solution for long-context vision-language\nmodels, including system, model training, and dataset development. On the\nsystem side, we introduce the first Multi-Modal Sequence Parallelism (MM-SP)\nsystem that enables long-context training and inference, enabling 2M context\nlength training on 256 GPUs. MM-SP is also efficient, being 2.1x - 5.7x faster\nthan Ring-Style Sequence Parallelism and 1.1x - 1.4x faster than Megatron-LM in\ntext-only settings. Moreover, it seamlessly integrates with Hugging Face\nTransformers. For model training, we propose a five-stage pipeline comprising\nalignment, pre-training, context extension, and long-short joint supervised\nfine-tuning. Regarding datasets, we meticulously construct large-scale visual\nlanguage pre-training datasets and long video instruction-following datasets to\nsupport our multi-stage training process. The full-stack solution extends the\nfeasible frame number of VILA by a factor of 128 (from 8 to 1024 frames) and\nimproves long video captioning score from 2.00 to 3.26 (1.6x), achieving 99.5%\naccuracy in 1400-frames video (274k context length) needle in a haystack.\nLongVILA-8B also demonstrates a consistent improvement in performance on long\nvideos within the VideoMME benchmark as the video frames increase.",
+      "upvotes": 51
+    },
+    {
+      "title": "MeshFormer: High-Quality Mesh Generation with 3D-Guided Reconstruction Model",
+      "url": "https://huggingface.co/papers/2408.10198",
+      "authors": [
+        "Minghua Liu",
+        "Xinyue Wei",
+        "Ruoxi Shi",
+        "Linghao Chen",
+        "Mengqi Zhang",
+        "Zhaoning Wang",
+        "Xiaoshuai Zhang",
+        "Isabella Liu",
+        "Hongzhi Wu",
+        "Hao Su"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.10198.pdf",
+      "abstract": "Open-world 3D reconstruction models have recently garnered significant\nattention. However, without sufficient 3D inductive bias, existing methods\ntypically entail expensive training costs and struggle to extract high-quality\n3D meshes. In this work, we introduce MeshFormer, a sparse-view reconstruction\nmodel that explicitly leverages 3D native structure, input guidance, and\ntraining supervision. Specifically, instead of using a triplane representation,\nwe store features in 3D sparse voxels and combine transformers with 3D\nconvolutions to leverage an explicit 3D structure and projective bias. In\naddition to sparse-view RGB input, we require the network to take input and\ngenerate corresponding normal maps. The input normal maps can be predicted by\n2D diffusion models, significantly aiding in the guidance and refinement of the\ngeometry's learning. Moreover, by combining Signed Distance Function (SDF)\nsupervision with surface rendering, we directly learn to generate high-quality\nmeshes without the need for complex multi-stage training processes. By\nincorporating these explicit 3D biases, MeshFormer can be trained efficiently\nand deliver high-quality textured meshes with fine-grained geometric details.\nIt can also be integrated with 2D diffusion models to enable fast\nsingle-image-to-3D and text-to-3D tasks. Project page:\nhttps://meshformer3d.github.io",
+      "upvotes": 32
+    },
+    {
+      "title": "Segment Anything with Multiple Modalities",
+      "url": "https://huggingface.co/papers/2408.09085",
+      "authors": [
+        "Aoran Xiao",
+        "Naoto Yokoya",
+        "Shijian Lu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.09085.pdf",
+      "abstract": "Robust and accurate segmentation of scenes has become one core functionality\nin various visual recognition and navigation tasks. This has inspired the\nrecent development of Segment Anything Model (SAM), a foundation model for\ngeneral mask segmentation. However, SAM is largely tailored for single-modal\nRGB images, limiting its applicability to multi-modal data captured with\nwidely-adopted sensor suites, such as LiDAR plus RGB, depth plus RGB, thermal\nplus RGB, etc. We develop MM-SAM, an extension and expansion of SAM that\nsupports cross-modal and multi-modal processing for robust and enhanced\nsegmentation with different sensor suites. MM-SAM features two key designs,\nnamely, unsupervised cross-modal transfer and weakly-supervised multi-modal\nfusion, enabling label-efficient and parameter-efficient adaptation toward\nvarious sensor modalities. It addresses three main challenges: 1) adaptation\ntoward diverse non-RGB sensors for single-modal processing, 2) synergistic\nprocessing of multi-modal data via sensor fusion, and 3) mask-free training for\ndifferent downstream tasks. Extensive experiments show that MM-SAM consistently\noutperforms SAM by large margins, demonstrating its effectiveness and\nrobustness across various sensors and data modalities.",
+      "upvotes": 21
+    },
+    {
+      "title": "ShortCircuit: AlphaZero-Driven Circuit Design",
+      "url": "https://huggingface.co/papers/2408.09858",
+      "authors": [
+        "Dimitrios Tsaras",
+        "Antoine Grosnit",
+        "Lei Chen",
+        "Zhiyao Xie",
+        "Mingxuan Yuan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.09858.pdf",
+      "abstract": "Chip design relies heavily on generating Boolean circuits, such as\nAND-Inverter Graphs (AIGs), from functional descriptions like truth tables.\nWhile recent advances in deep learning have aimed to accelerate circuit design,\nthese efforts have mostly focused on tasks other than synthesis, and\ntraditional heuristic methods have plateaued. In this paper, we introduce\nShortCircuit, a novel transformer-based architecture that leverages the\nstructural properties of AIGs and performs efficient space exploration.\nContrary to prior approaches attempting end-to-end generation of logic circuits\nusing deep networks, ShortCircuit employs a two-phase process combining\nsupervised with reinforcement learning to enhance generalization to unseen\ntruth tables. We also propose an AlphaZero variant to handle the double\nexponentially large state space and the sparsity of the rewards, enabling the\ndiscovery of near-optimal designs. To evaluate the generative performance of\nour trained model , we extract 500 truth tables from a benchmark set of 20\nreal-world circuits. ShortCircuit successfully generates AIGs for 84.6% of the\n8-input test truth tables, and outperforms the state-of-the-art logic synthesis\ntool, ABC, by 14.61% in terms of circuits size.",
+      "upvotes": 16
+    },
+    {
+      "title": "Factorized-Dreamer: Training A High-Quality Video Generator with Limited and Low-Quality Data",
+      "url": "https://huggingface.co/papers/2408.10119",
+      "authors": [
+        "Tao Yang",
+        "Yangming Shi",
+        "Yunwen Huang",
+        "Feng Chen",
+        "Yin Zheng",
+        "Lei Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.10119.pdf",
+      "abstract": "Text-to-video (T2V) generation has gained significant attention due to its\nwide applications to video generation, editing, enhancement and translation,\n\\etc. However, high-quality (HQ) video synthesis is extremely challenging\nbecause of the diverse and complex motions existed in real world. Most existing\nworks struggle to address this problem by collecting large-scale HQ videos,\nwhich are inaccessible to the community. In this work, we show that publicly\navailable limited and low-quality (LQ) data are sufficient to train a HQ video\ngenerator without recaptioning or finetuning. We factorize the whole T2V\ngeneration process into two steps: generating an image conditioned on a highly\ndescriptive caption, and synthesizing the video conditioned on the generated\nimage and a concise caption of motion details. Specifically, we present\nFactorized-Dreamer, a factorized spatiotemporal framework with several\ncritical designs for T2V generation, including an adapter to combine text and\nimage embeddings, a pixel-aware cross attention module to capture pixel-level\nimage information, a T5 text encoder to better understand motion description,\nand a PredictNet to supervise optical flows. We further present a noise\nschedule, which plays a key role in ensuring the quality and stability of video\ngeneration. Our model lowers the requirements in detailed captions and HQ\nvideos, and can be directly trained on limited LQ datasets with noisy and brief\ncaptions such as WebVid-10M, largely alleviating the cost to collect\nlarge-scale HQ video-text pairs. Extensive experiments in a variety of T2V and\nimage-to-video generation tasks demonstrate the effectiveness of our proposed\nFactorized-Dreamer. Our source codes are available at\nhttps://github.com/yangxy/Factorized-Dreamer/.",
+      "upvotes": 15
+    },
+    {
+      "title": "SpaRP: Fast 3D Object Reconstruction and Pose Estimation from Sparse Views",
+      "url": "https://huggingface.co/papers/2408.10195",
+      "authors": [
+        "Ang Li",
+        "Linghao Chen",
+        "Ruoxi Shi",
+        "Hao Su",
+        "Minghua Liu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.10195.pdf",
+      "abstract": "Open-world 3D generation has recently attracted considerable attention. While\nmany single-image-to-3D methods have yielded visually appealing outcomes, they\noften lack sufficient controllability and tend to produce hallucinated regions\nthat may not align with users' expectations. In this paper, we explore an\nimportant scenario in which the input consists of one or a few unposed 2D\nimages of a single object, with little or no overlap. We propose a novel\nmethod, SpaRP, to reconstruct a 3D textured mesh and estimate the relative\ncamera poses for these sparse-view images. SpaRP distills knowledge from 2D\ndiffusion models and finetunes them to implicitly deduce the 3D spatial\nrelationships between the sparse views. The diffusion model is trained to\njointly predict surrogate representations for camera poses and multi-view\nimages of the object under known poses, integrating all information from the\ninput sparse views. These predictions are then leveraged to accomplish 3D\nreconstruction and pose estimation, and the reconstructed 3D model can be used\nto further refine the camera poses of input views. Through extensive\nexperiments on three datasets, we demonstrate that our method not only\nsignificantly outperforms baseline methods in terms of 3D reconstruction\nquality and pose prediction accuracy but also exhibits strong efficiency. It\nrequires only about 20 seconds to produce a textured mesh and camera poses for\nthe input views. Project page: https://chaoxu.xyz/sparp.",
+      "upvotes": 12
+    },
+    {
+      "title": "NeuFlow v2: High-Efficiency Optical Flow Estimation on Edge Devices",
+      "url": "https://huggingface.co/papers/2408.10161",
+      "authors": [
+        "Zhiyong Zhang",
+        "Aniket Gupta",
+        "Huaizu Jiang",
+        "Hanumant Singh"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.10161.pdf",
+      "abstract": "Real-time high-accuracy optical flow estimation is crucial for various\nreal-world applications. While recent learning-based optical flow methods have\nachieved high accuracy, they often come with significant computational costs.\nIn this paper, we propose a highly efficient optical flow method that balances\nhigh accuracy with reduced computational demands. Building upon NeuFlow v1, we\nintroduce new components including a much more light-weight backbone and a fast\nrefinement module. Both these modules help in keeping the computational demands\nlight while providing close to state of the art accuracy. Compares to other\nstate of the art methods, our model achieves a 10x-70x speedup while\nmaintaining comparable performance on both synthetic and real-world data. It is\ncapable of running at over 20 FPS on 512x384 resolution images on a Jetson Orin\nNano. The full training and evaluation code is available at\nhttps://github.com/neufieldrobotics/NeuFlow_v2.",
+      "upvotes": 11
+    },
+    {
+      "title": "Authorship Attribution in the Era of LLMs: Problems, Methodologies, and Challenges",
+      "url": "https://huggingface.co/papers/2408.08946",
+      "authors": [
+        "Kai Shu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.08946.pdf",
+      "abstract": "Accurate attribution of authorship is crucial for maintaining the integrity\nof digital content, improving forensic investigations, and mitigating the risks\nof misinformation and plagiarism. Addressing the imperative need for proper\nauthorship attribution is essential to uphold the credibility and\naccountability of authentic authorship. The rapid advancements of Large\nLanguage Models (LLMs) have blurred the lines between human and machine\nauthorship, posing significant challenges for traditional methods. We presents\na comprehensive literature review that examines the latest research on\nauthorship attribution in the era of LLMs. This survey systematically explores\nthe landscape of this field by categorizing four representative problems: (1)\nHuman-written Text Attribution; (2) LLM-generated Text Detection; (3)\nLLM-generated Text Attribution; and (4) Human-LLM Co-authored Text Attribution.\nWe also discuss the challenges related to ensuring the generalization and\nexplainability of authorship attribution methods. Generalization requires the\nability to generalize across various domains, while explainability emphasizes\nproviding transparent and understandable insights into the decisions made by\nthese models. By evaluating the strengths and limitations of existing methods\nand benchmarks, we identify key open problems and future research directions in\nthis field. This literature review serves a roadmap for researchers and\npractitioners interested in understanding the state of the art in this rapidly\nevolving field. Additional resources and a curated list of papers are available\nand regularly updated at https://llm-authorship.github.io",
+      "upvotes": 10
+    },
+    {
+      "title": "Photorealistic Object Insertion with Diffusion-Guided Inverse Rendering",
+      "url": "https://huggingface.co/papers/2408.09702",
+      "authors": [
+        "Ruofan Liang",
+        "Zan Gojcic",
+        "Merlin Nimier-David",
+        "David Acuna",
+        "Nandita Vijaykumar",
+        "Sanja Fidler",
+        "Zian Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.09702.pdf",
+      "abstract": "The correct insertion of virtual objects in images of real-world scenes\nrequires a deep understanding of the scene's lighting, geometry and materials,\nas well as the image formation process. While recent large-scale diffusion\nmodels have shown strong generative and inpainting capabilities, we find that\ncurrent models do not sufficiently \"understand\" the scene shown in a single\npicture to generate consistent lighting effects (shadows, bright reflections,\netc.) while preserving the identity and details of the composited object. We\npropose using a personalized large diffusion model as guidance to a physically\nbased inverse rendering process. Our method recovers scene lighting and\ntone-mapping parameters, allowing the photorealistic composition of arbitrary\nvirtual objects in single frames or videos of indoor or outdoor scenes. Our\nphysically based pipeline further enables automatic materials and tone-mapping\nrefinement.",
+      "upvotes": 9
+    },
+    {
+      "title": "TraDiffusion: Trajectory-Based Training-Free Image Generation",
+      "url": "https://huggingface.co/papers/2408.09739",
+      "authors": [
+        "Mingrui Wu",
+        "Oucheng Huang",
+        "Jiayi Ji",
+        "Jiale Li",
+        "Xinyue Cai",
+        "Huafeng Kuang",
+        "Jianzhuang Liu",
+        "Xiaoshuai Sun",
+        "Rongrong Ji"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.09739.pdf",
+      "abstract": "In this work, we propose a training-free, trajectory-based controllable T2I\napproach, termed TraDiffusion. This novel method allows users to effortlessly\nguide image generation via mouse trajectories. To achieve precise control, we\ndesign a distance awareness energy function to effectively guide latent\nvariables, ensuring that the focus of generation is within the areas defined by\nthe trajectory. The energy function encompasses a control function to draw the\ngeneration closer to the specified trajectory and a movement function to\ndiminish activity in areas distant from the trajectory. Through extensive\nexperiments and qualitative assessments on the COCO dataset, the results reveal\nthat TraDiffusion facilitates simpler, more natural image control. Moreover, it\nshowcases the ability to manipulate salient regions, attributes, and\nrelationships within the generated images, alongside visual input based on\narbitrary or enhanced trajectories.",
+      "upvotes": 7
+    },
+    {
+      "title": "Cybench: A Framework for Evaluating Cybersecurity Capabilities and Risk of Language Models",
+      "url": "https://huggingface.co/papers/2408.08926",
+      "authors": [
+        "Andy K. Zhang",
+        "Neil Perry",
+        "Riya Dulepet",
+        "Justin W. Lin",
+        "Joey Ji",
+        "Celeste Menders",
+        "Gashon Hussein",
+        "Samantha Liu",
+        "Donovan Jasper",
+        "Pura Peetathawatchai",
+        "Ari Glenn",
+        "Vikram Sivashankar",
+        "Daniel Zamoshchin",
+        "Leo Glikbarg",
+        "Derek Askaryar",
+        "Mike Yang",
+        "Teddy Zhang",
+        "Rishi Alluri",
+        "Nathan Tran",
+        "Rinnara Sangpisit",
+        "Polycarpos Yiorkadjis"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.08926.pdf",
+      "abstract": "Language Model (LM) agents for cybersecurity that are capable of autonomously\nidentifying vulnerabilities and executing exploits have the potential to cause\nreal-world impact. Policymakers, model providers, and other researchers in the\nAI and cybersecurity communities are interested in quantifying the capabilities\nof such agents to help mitigate cyberrisk and investigate opportunities for\npenetration testing. Toward that end, we introduce Cybench, a framework for\nspecifying cybersecurity tasks and evaluating agents on those tasks. We include\n40 professional-level Capture the Flag (CTF) tasks from 4 distinct CTF\ncompetitions, chosen to be recent, meaningful, and spanning a wide range of\ndifficulties. Each task includes its own description, starter files, and is\ninitialized in an environment where an agent can execute bash commands and\nobserve outputs. Since many tasks are beyond the capabilities of existing LM\nagents, we introduce subtasks, which break down a task into intermediary steps\nfor more gradated evaluation; we add subtasks for 17 of the 40 tasks. To\nevaluate agent capabilities, we construct a cybersecurity agent and evaluate 7\nmodels: GPT-4o, Claude 3 Opus, Claude 3.5 Sonnet, Mixtral 8x22b Instruct,\nGemini 1.5 Pro, Llama 3 70B Chat, and Llama 3.1 405B Instruct. Without\nguidance, we find that agents are able to solve only the easiest complete tasks\nthat took human teams up to 11 minutes to solve, with Claude 3.5 Sonnet and\nGPT-4o having the highest success rates. Finally, subtasks provide more signal\nfor measuring performance compared to unguided runs, with models achieving a\n3.2\\% higher success rate on complete tasks with subtask-guidance than without\nsubtask-guidance. All code and data are publicly available at\nhttps://cybench.github.io",
+      "upvotes": 4
+    }
+  ]
+}

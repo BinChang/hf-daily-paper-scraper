@@ -1,0 +1,186 @@
+{
+  "date": "2024-10-07",
+  "papers": [
+    {
+      "title": "Addition is All You Need for Energy-efficient Language Models",
+      "url": "https://huggingface.co/papers/2410.00907",
+      "authors": [
+        "Wei Sun"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.00907.pdf",
+      "abstract": "Large neural networks spend most computation on floating point tensor\nmultiplications. In this work, we find that a floating point multiplier can be\napproximated by one integer adder with high precision. We propose the\nlinear-complexity multiplication L-Mul algorithm that approximates floating\npoint number multiplication with integer addition operations. The new algorithm\ncosts significantly less computation resource than 8-bit floating point\nmultiplication but achieves higher precision. Compared to 8-bit floating point\nmultiplications, the proposed method achieves higher precision but consumes\nsignificantly less bit-level computation. Since multiplying floating point\nnumbers requires substantially higher energy compared to integer addition\noperations, applying the L-Mul operation in tensor processing hardware can\npotentially reduce 95% energy cost by element-wise floating point tensor\nmultiplications and 80% energy cost of dot products. We calculated the\ntheoretical error expectation of L-Mul, and evaluated the algorithm on a wide\nrange of textual, visual, and symbolic tasks, including natural language\nunderstanding, structural reasoning, mathematics, and commonsense question\nanswering. Our numerical analysis experiments agree with the theoretical error\nestimation, which indicates that L-Mul with 4-bit mantissa achieves comparable\nprecision as float8_e4m3 multiplications, and L-Mul with 3-bit mantissa\noutperforms float8_e5m2. Evaluation results on popular benchmarks show that\ndirectly applying L-Mul to the attention mechanism is almost lossless. We\nfurther show that replacing all floating point multiplications with 3-bit\nmantissa L-Mul in a transformer model achieves equivalent precision as using\nfloat8_e4m3 as accumulation precision in both fine-tuning and inference.",
+      "upvotes": 143
+    },
+    {
+      "title": "MLP-KAN: Unifying Deep Representation and Function Learning",
+      "url": "https://huggingface.co/papers/2410.03027",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2410.03027.pdf",
+      "abstract": "Recent advancements in both representation learning and function learning\nhave demonstrated substantial promise across diverse domains of artificial\nintelligence. However, the effective integration of these paradigms poses a\nsignificant challenge, particularly in cases where users must manually decide\nwhether to apply a representation learning or function learning model based on\ndataset characteristics. To address this issue, we introduce MLP-KAN, a unified\nmethod designed to eliminate the need for manual model selection. By\nintegrating Multi-Layer Perceptrons (MLPs) for representation learning and\nKolmogorov-Arnold Networks (KANs) for function learning within a\nMixture-of-Experts (MoE) architecture, MLP-KAN dynamically adapts to the\nspecific characteristics of the task at hand, ensuring optimal performance.\nEmbedded within a transformer-based framework, our work achieves remarkable\nresults on four widely-used datasets across diverse domains. Extensive\nexperimental evaluation demonstrates its superior versatility, delivering\ncompetitive performance across both deep representation and function learning\ntasks. These findings highlight the potential of MLP-KAN to simplify the model\nselection process, offering a comprehensive, adaptable solution across various\ndomains. Our code and weights are available at\nhttps://github.com/DLYuanGod/MLP-KAN.",
+      "upvotes": 28
+    },
+    {
+      "title": "Tutor CoPilot: A Human-AI Approach for Scaling Real-Time Expertise",
+      "url": "https://huggingface.co/papers/2410.03017",
+      "authors": [
+        "Susanna Loeb"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.03017.pdf",
+      "abstract": "Generative AI, particularly Language Models (LMs), has the potential to\ntransform real-world domains with societal impact, particularly where access to\nexperts is limited. For example, in education, training novice educators with\nexpert guidance is important for effectiveness but expensive, creating\nsignificant barriers to improving education quality at scale. This challenge\ndisproportionately harms students from under-served communities, who stand to\ngain the most from high-quality education. We introduce Tutor CoPilot, a novel\nHuman-AI approach that leverages a model of expert thinking to provide\nexpert-like guidance to tutors as they tutor. This study is the first\nrandomized controlled trial of a Human-AI system in live tutoring, involving\n900 tutors and 1,800 K-12 students from historically under-served communities.\nFollowing a preregistered analysis plan, we find that students working with\ntutors that have access to Tutor CoPilot are 4 percentage points (p.p.) more\nlikely to master topics (p<0.01). Notably, students of lower-rated tutors\nexperienced the greatest benefit, improving mastery by 9 p.p. We find that\nTutor CoPilot costs only $20 per-tutor annually. We analyze 550,000+ messages\nusing classifiers to identify pedagogical strategies, and find that tutors with\naccess to Tutor CoPilot are more likely to use high-quality strategies to\nfoster student understanding (e.g., asking guiding questions) and less likely\nto give away the answer to the student. Tutor interviews highlight how Tutor\nCoPilot's guidance helps tutors to respond to student needs, though they flag\nissues in Tutor CoPilot, such as generating suggestions that are not\ngrade-level appropriate. Altogether, our study of Tutor CoPilot demonstrates\nhow Human-AI systems can scale expertise in real-world domains, bridge gaps in\nskills and create a future where high-quality education is accessible to all\nstudents.",
+      "upvotes": 25
+    },
+    {
+      "title": "Selective Attention Improves Transformer",
+      "url": "https://huggingface.co/papers/2410.02703",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2410.02703.pdf",
+      "abstract": "Unneeded elements in the attention's context degrade performance. We\nintroduce Selective Attention, a simple parameter-free change to the standard\nattention mechanism which reduces attention to unneeded elements. Selective\nattention improves language modeling performance in a variety of model sizes\nand context lengths. For example, a range of transformers trained with the\nlanguage modeling objective on C4 with selective attention perform equivalently\nto standard transformers with ~2X more heads and parameters in their attention\nmodules. Selective attention also allows decreasing the size of the attention's\ncontext buffer, leading to meaningful reductions in the memory and compute\nrequirements during inference. For example, transformers with 100M parameters\ntrained on C4 with context sizes of 512, 1,024, and 2,048 need 16X, 25X, and\n47X less memory for their attention module, respectively, when equipped with\nselective attention, as those without selective attention, with the same\nvalidation perplexity.",
+      "upvotes": 23
+    },
+    {
+      "title": "NL-Eye: Abductive NLI for Images",
+      "url": "https://huggingface.co/papers/2410.02613",
+      "authors": [
+        "Zorik Gekhman",
+        "Roi Reichart"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.02613.pdf",
+      "abstract": "Will a Visual Language Model (VLM)-based bot warn us about slipping if it\ndetects a wet floor? Recent VLMs have demonstrated impressive capabilities, yet\ntheir ability to infer outcomes and causes remains underexplored. To address\nthis, we introduce NL-Eye, a benchmark designed to assess VLMs' visual\nabductive reasoning skills. NL-Eye adapts the abductive Natural Language\nInference (NLI) task to the visual domain, requiring models to evaluate the\nplausibility of hypothesis images based on a premise image and explain their\ndecisions. NL-Eye consists of 350 carefully curated triplet examples (1,050\nimages) spanning diverse reasoning categories: physical, functional, logical,\nemotional, cultural, and social. The data curation process involved two steps -\nwriting textual descriptions and generating images using text-to-image models,\nboth requiring substantial human involvement to ensure high-quality and\nchallenging scenes. Our experiments show that VLMs struggle significantly on\nNL-Eye, often performing at random baseline levels, while humans excel in both\nplausibility prediction and explanation quality. This demonstrates a deficiency\nin the abductive reasoning capabilities of modern VLMs. NL-Eye represents a\ncrucial step toward developing VLMs capable of robust multimodal reasoning for\nreal-world applications, including accident-prevention bots and generated video\nverification.",
+      "upvotes": 22
+    },
+    {
+      "title": "Accelerating Auto-regressive Text-to-Image Generation with Training-free Speculative Jacobi Decoding",
+      "url": "https://huggingface.co/papers/2410.01699",
+      "authors": [
+        "Xuefei Ning",
+        "Guohao Dai",
+        "Yu Wang",
+        "Zhenguo Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.01699.pdf",
+      "abstract": "The current large auto-regressive models can generate high-quality,\nhigh-resolution images, but these models require hundreds or even thousands of\nsteps of next-token prediction during inference, resulting in substantial time\nconsumption. In existing studies, Jacobi decoding, an iterative parallel\ndecoding algorithm, has been used to accelerate the auto-regressive generation\nand can be executed without training. However, the Jacobi decoding relies on a\ndeterministic criterion to determine the convergence of iterations. Thus, it\nworks for greedy decoding but is incompatible with sampling-based decoding\nwhich is crucial for visual quality and diversity in the current\nauto-regressive text-to-image generation. In this paper, we propose a\ntraining-free probabilistic parallel decoding algorithm, Speculative Jacobi\nDecoding (SJD), to accelerate auto-regressive text-to-image generation. By\nintroducing a probabilistic convergence criterion, our SJD accelerates the\ninference of auto-regressive text-to-image generation while maintaining the\nrandomness in sampling-based token decoding and allowing the model to generate\ndiverse images. Specifically, SJD facilitates the model to predict multiple\ntokens at each step and accepts tokens based on the probabilistic criterion,\nenabling the model to generate images with fewer steps than the conventional\nnext-token-prediction paradigm. We also investigate the token initialization\nstrategies that leverage the spatial locality of visual data to further improve\nthe acceleration ratio under specific scenarios. We conduct experiments for our\nproposed SJD on multiple auto-regressive text-to-image generation models,\nshowing the effectiveness of model acceleration without sacrificing the visual\nquality.",
+      "upvotes": 17
+    },
+    {
+      "title": "RoCoTex: A Robust Method for Consistent Texture Synthesis with Diffusion Models",
+      "url": "https://huggingface.co/papers/2409.19989",
+      "authors": [
+        "Junyoung Choi",
+        "Jeonga Wi",
+        "Junho Gwon",
+        "Dumim Yoon",
+        "Junghyun Han"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.19989.pdf",
+      "abstract": "Text-to-texture generation has recently attracted increasing attention, but\nexisting methods often suffer from the problems of view inconsistencies,\napparent seams, and misalignment between textures and the underlying mesh. In\nthis paper, we propose a robust text-to-texture method for generating\nconsistent and seamless textures that are well aligned with the mesh. Our\nmethod leverages state-of-the-art 2D diffusion models, including SDXL and\nmultiple ControlNets, to capture structural features and intricate details in\nthe generated textures. The method also employs a symmetrical view synthesis\nstrategy combined with regional prompts for enhancing view consistency.\nAdditionally, it introduces novel texture blending and soft-inpainting\ntechniques, which significantly reduce the seam regions. Extensive experiments\ndemonstrate that our method outperforms existing state-of-the-art methods.",
+      "upvotes": 17
+    },
+    {
+      "title": "A Comprehensive Survey of Mamba Architectures for Medical Image Analysis: Classification, Segmentation, Restoration and Beyond",
+      "url": "https://huggingface.co/papers/2410.02362",
+      "authors": [
+        "Sreekanth Madisetty",
+        "Mohammad Zia Ur Rehman",
+        "Chandravardhan Singh Raghaw"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.02362.pdf",
+      "abstract": "Mamba, a special case of the State Space Model, is gaining popularity as an\nalternative to template-based deep learning approaches in medical image\nanalysis. While transformers are powerful architectures, they have drawbacks,\nincluding quadratic computational complexity and an inability to address\nlong-range dependencies efficiently. This limitation affects the analysis of\nlarge and complex datasets in medical imaging, where there are many spatial and\ntemporal relationships. In contrast, Mamba offers benefits that make it\nwell-suited for medical image analysis. It has linear time complexity, which is\na significant improvement over transformers. Mamba processes longer sequences\nwithout attention mechanisms, enabling faster inference and requiring less\nmemory. Mamba also demonstrates strong performance in merging multimodal data,\nimproving diagnosis accuracy and patient outcomes. The organization of this\npaper allows readers to appreciate the capabilities of Mamba in medical imaging\nstep by step. We begin by defining core concepts of SSMs and models, including\nS4, S5, and S6, followed by an exploration of Mamba architectures such as pure\nMamba, U-Net variants, and hybrid models with convolutional neural networks,\ntransformers, and Graph Neural Networks. We also cover Mamba optimizations,\ntechniques and adaptations, scanning, datasets, applications, experimental\nresults, and conclude with its challenges and future directions in medical\nimaging. This review aims to demonstrate the transformative potential of Mamba\nin overcoming existing barriers within medical imaging while paving the way for\ninnovative advancements in the field. A comprehensive list of Mamba\narchitectures applied in the medical field, reviewed in this work, is available\nat Github.",
+      "upvotes": 16
+    },
+    {
+      "title": "Erasing Conceptual Knowledge from Language Models",
+      "url": "https://huggingface.co/papers/2410.02760",
+      "authors": [
+        "Samuel Marks",
+        "David Bau"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.02760.pdf",
+      "abstract": "Concept erasure in language models has traditionally lacked a comprehensive\nevaluation framework, leading to incomplete assessments of effectiveness of\nerasure methods. We propose an evaluation paradigm centered on three critical\ncriteria: innocence (complete knowledge removal), seamlessness (maintaining\nconditional fluent generation), and specificity (preserving unrelated task\nperformance). Our evaluation metrics naturally motivate the development of\nErasure of Language Memory (ELM), a new method designed to address all three\ndimensions. ELM employs targeted low-rank updates to alter output distributions\nfor erased concepts while preserving overall model capabilities including\nfluency when prompted for an erased concept. We demonstrate ELM's efficacy on\nbiosecurity, cybersecurity, and literary domain erasure tasks. Comparative\nanalysis shows that ELM achieves superior performance across our proposed\nmetrics, including near-random scores on erased topic assessments, generation\nfluency, maintained accuracy on unrelated benchmarks, and robustness under\nadversarial attacks. Our code, data, and trained models are available at\nhttps://elm.baulab.info",
+      "upvotes": 12
+    },
+    {
+      "title": "CodeMMLU: A Multi-Task Benchmark for Assessing Code Understanding Capabilities of CodeLLMs",
+      "url": "https://huggingface.co/papers/2410.01999",
+      "authors": [
+        "Thang Phan Chau",
+        "Quang Pham",
+        "Nghi D. Q. Bui"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.01999.pdf",
+      "abstract": "Recent advancements in Code Large Language Models (CodeLLMs) have\npredominantly focused on open-ended code generation tasks, often neglecting the\ncritical aspect of code understanding and comprehension. To bridge this gap, we\npresent CodeMMLU, a comprehensive multiple-choice question-answer benchmark\ndesigned to evaluate the depth of software and code understanding in LLMs.\nCodeMMLU includes over 10,000 questions sourced from diverse domains,\nencompassing tasks such as code analysis, defect detection, and software\nengineering principles across multiple programming languages. Unlike\ntraditional benchmarks, CodeMMLU assesses models's ability to reason about code\nrather than merely generate it, providing deeper insights into their grasp of\ncomplex software concepts and systems. Our extensive evaluation reveals that\neven state-of-the-art models face significant challenges with CodeMMLU,\nhighlighting deficiencies in comprehension beyond code generation. By\nunderscoring the crucial relationship between code understanding and effective\ngeneration, CodeMMLU serves as a vital resource for advancing AI-assisted\nsoftware development, ultimately aiming to create more reliable and capable\ncoding assistants.",
+      "upvotes": 10
+    },
+    {
+      "title": "CANVAS: Commonsense-Aware Navigation System for Intuitive Human-Robot Interaction",
+      "url": "https://huggingface.co/papers/2410.01273",
+      "authors": [
+        "Minchan Kim",
+        "Myunchul Joe",
+        "Sungjae Lee"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.01273.pdf",
+      "abstract": "Real-life robot navigation involves more than just reaching a destination; it\nrequires optimizing movements while addressing scenario-specific goals. An\nintuitive way for humans to express these goals is through abstract cues like\nverbal commands or rough sketches. Such human guidance may lack details or be\nnoisy. Nonetheless, we expect robots to navigate as intended. For robots to\ninterpret and execute these abstract instructions in line with human\nexpectations, they must share a common understanding of basic navigation\nconcepts with humans. To this end, we introduce CANVAS, a novel framework that\ncombines visual and linguistic instructions for commonsense-aware navigation.\nIts success is driven by imitation learning, enabling the robot to learn from\nhuman navigation behavior. We present COMMAND, a comprehensive dataset with\nhuman-annotated navigation results, spanning over 48 hours and 219 km, designed\nto train commonsense-aware navigation systems in simulated environments. Our\nexperiments show that CANVAS outperforms the strong rule-based system ROS\nNavStack across all environments, demonstrating superior performance with noisy\ninstructions. Notably, in the orchard environment, where ROS NavStack records a\n0% total success rate, CANVAS achieves a total success rate of 67%. CANVAS also\nclosely aligns with human demonstrations and commonsense constraints, even in\nunseen environments. Furthermore, real-world deployment of CANVAS showcases\nimpressive Sim2Real transfer with a total success rate of 69%, highlighting the\npotential of learning from human demonstrations in simulated environments for\nreal-world applications.",
+      "upvotes": 8
+    },
+    {
+      "title": "Horizon-Length Prediction: Advancing Fill-in-the-Middle Capabilities for Code Generation with Lookahead Planning",
+      "url": "https://huggingface.co/papers/2410.03103",
+      "authors": [
+        "Shiqi Wang",
+        "Qing Sun",
+        "Varun Kumar",
+        "Zijian Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.03103.pdf",
+      "abstract": "Fill-in-the-Middle (FIM) has become integral to code language models,\nenabling generation of missing code given both left and right contexts.\nHowever, the current FIM training paradigm, which reorders original training\nsequences and then performs regular next-token prediction (NTP), often leads to\nmodels struggling to generate content that aligns smoothly with the surrounding\ncontext. Crucially, while existing works rely on rule-based post-processing to\ncircumvent this weakness, such methods are not practically usable in\nopen-domain code completion tasks as they depend on restrictive,\ndataset-specific assumptions (e.g., generating the same number of lines as in\nthe ground truth). Moreover, model performance on FIM tasks deteriorates\nsignificantly without these unrealistic assumptions.\n  We hypothesize that NTP alone is insufficient for models to learn effective\nplanning conditioned on the distant right context, a critical factor for\nsuccessful code infilling. To overcome this, we propose Horizon-Length\nPrediction (HLP), a novel training objective that teaches models to predict the\nnumber of remaining middle tokens (i.e., horizon length) at each step. HLP\nadvances FIM with lookahead planning, enabling models to inherently learn\ninfilling boundaries for arbitrary left and right contexts without relying on\ndataset-specific post-processing. Our evaluation across different models and\nsizes shows that HLP significantly improves FIM performance by up to 24%\nrelatively on diverse benchmarks, across file-level and repository-level, and\nwithout resorting to unrealistic post-processing methods. Furthermore, the\nenhanced planning capability gained through HLP boosts model performance on\ncode reasoning. Importantly, HLP only incurs negligible training overhead and\nno additional inference cost, ensuring its practicality for real-world\nscenarios.",
+      "upvotes": 6
+    },
+    {
+      "title": "NRGBoost: Energy-Based Generative Boosted Trees",
+      "url": "https://huggingface.co/papers/2410.03535",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2410.03535.pdf",
+      "abstract": "Despite the rise to dominance of deep learning in unstructured data domains,\ntree-based methods such as Random Forests (RF) and Gradient Boosted Decision\nTrees (GBDT) are still the workhorses for handling discriminative tasks on\ntabular data. We explore generative extensions of these popular algorithms with\na focus on explicitly modeling the data density (up to a normalization\nconstant), thus enabling other applications besides sampling. As our main\ncontribution we propose an energy-based generative boosting algorithm that is\nanalogous to the second order boosting implemented in popular packages like\nXGBoost. We show that, despite producing a generative model capable of handling\ninference tasks over any input variable, our proposed algorithm can achieve\nsimilar discriminative performance to GBDT on a number of real world tabular\ndatasets, outperforming alternative generative approaches. At the same time, we\nshow that it is also competitive with neural network based models for sampling.",
+      "upvotes": 6
+    },
+    {
+      "title": "MIGA: Mixture-of-Experts with Group Aggregation for Stock Market Prediction",
+      "url": "https://huggingface.co/papers/2410.02241",
+      "authors": [
+        "Genesis Wang",
+        "Heming Weng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.02241.pdf",
+      "abstract": "Stock market prediction has remained an extremely challenging problem for\nmany decades owing to its inherent high volatility and low information noisy\nratio. Existing solutions based on machine learning or deep learning\ndemonstrate superior performance by employing a single model trained on the\nentire stock dataset to generate predictions across all types of stocks.\nHowever, due to the significant variations in stock styles and market trends, a\nsingle end-to-end model struggles to fully capture the differences in these\nstylized stock features, leading to relatively inaccurate predictions for all\ntypes of stocks. In this paper, we present MIGA, a novel Mixture of Expert with\nGroup Aggregation framework designed to generate specialized predictions for\nstocks with different styles by dynamically switching between distinct style\nexperts. To promote collaboration among different experts in MIGA, we propose a\nnovel inner group attention architecture, enabling experts within the same\ngroup to share information and thereby enhancing the overall performance of all\nexperts. As a result, MIGA significantly outperforms other end-to-end models on\nthree Chinese Stock Index benchmarks including CSI300, CSI500, and CSI1000.\nNotably, MIGA-Conv reaches 24 % excess annual return on CSI300 benchmark,\nsurpassing the previous state-of-the-art model by 8% absolute. Furthermore, we\nconduct a comprehensive analysis of mixture of experts for stock market\nprediction, providing valuable insights for future research.",
+      "upvotes": 6
+    },
+    {
+      "title": "AuroraCap: Efficient, Performant Video Detailed Captioning and a New Benchmark",
+      "url": "https://huggingface.co/papers/2410.03051",
+      "authors": [
+        "Enxin Song",
+        "Yilun Du",
+        "Chenlin Meng",
+        "Vashisht Madhavan",
+        "Omer Bar-Tal",
+        "Jeng-Neng Hwang",
+        "Saining Xie",
+        "Christopher D. Manning"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.03051.pdf",
+      "abstract": "Video detailed captioning is a key task which aims to generate comprehensive\nand coherent textual descriptions of video content, benefiting both video\nunderstanding and generation. In this paper, we propose AuroraCap, a video\ncaptioner based on a large multimodal model. We follow the simplest\narchitecture design without additional parameters for temporal modeling. To\naddress the overhead caused by lengthy video sequences, we implement the token\nmerging strategy, reducing the number of input visual tokens. Surprisingly, we\nfound that this strategy results in little performance loss. AuroraCap shows\nsuperior performance on various video and image captioning benchmarks, for\nexample, obtaining a CIDEr of 88.9 on Flickr30k, beating GPT-4V (55.3) and\nGemini-1.5 Pro (82.2). However, existing video caption benchmarks only include\nsimple descriptions, consisting of a few dozen words, which limits research in\nthis field. Therefore, we develop VDC, a video detailed captioning benchmark\nwith over one thousand carefully annotated structured captions. In addition, we\npropose a new LLM-assisted metric VDCscore for bettering evaluation, which\nadopts a divide-and-conquer strategy to transform long caption evaluation into\nmultiple short question-answer pairs. With the help of human Elo ranking, our\nexperiments show that this benchmark better correlates with human judgments of\nvideo detailed captioning quality.",
+      "upvotes": 3
+    },
+    {
+      "title": "GenSim2: Scaling Robot Data Generation with Multi-modal and Reasoning LLMs",
+      "url": "https://huggingface.co/papers/2410.03645",
+      "authors": [
+        "Yunfeng Lin",
+        "Weinan Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.03645.pdf",
+      "abstract": "Robotic simulation today remains challenging to scale up due to the human\nefforts required to create diverse simulation tasks and scenes.\nSimulation-trained policies also face scalability issues as many sim-to-real\nmethods focus on a single task. To address these challenges, this work proposes\nGenSim2, a scalable framework that leverages coding LLMs with multi-modal and\nreasoning capabilities for complex and realistic simulation task creation,\nincluding long-horizon tasks with articulated objects. To automatically\ngenerate demonstration data for these tasks at scale, we propose planning and\nRL solvers that generalize within object categories. The pipeline can generate\ndata for up to 100 articulated tasks with 200 objects and reduce the required\nhuman efforts. To utilize such data, we propose an effective multi-task\nlanguage-conditioned policy architecture, dubbed proprioceptive point-cloud\ntransformer (PPT), that learns from the generated demonstrations and exhibits\nstrong sim-to-real zero-shot transfer. Combining the proposed pipeline and the\npolicy architecture, we show a promising usage of GenSim2 that the generated\ndata can be used for zero-shot transfer or co-train with real-world collected\ndata, which enhances the policy performance by 20% compared with training\nexclusively on limited real data.",
+      "upvotes": 2
+    }
+  ]
+}

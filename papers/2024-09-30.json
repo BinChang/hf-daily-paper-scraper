@@ -1,0 +1,137 @@
+{
+  "date": "2024-09-30",
+  "papers": [
+    {
+      "title": "Emu3: Next-Token Prediction is All You Need",
+      "url": "https://huggingface.co/papers/2409.18869",
+      "authors": [
+        "Zhengxiong Luo",
+        "Yingli Zhao",
+        "Xuebin Min",
+        "Tao Li",
+        "Xi Yang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.18869.pdf",
+      "abstract": "While next-token prediction is considered a promising path towards artificial\ngeneral intelligence, it has struggled to excel in multimodal tasks, which are\nstill dominated by diffusion models (e.g., Stable Diffusion) and compositional\napproaches (e.g., CLIP combined with LLMs). In this paper, we introduce Emu3, a\nnew suite of state-of-the-art multimodal models trained solely with next-token\nprediction. By tokenizing images, text, and videos into a discrete space, we\ntrain a single transformer from scratch on a mixture of multimodal sequences.\nEmu3 outperforms several well-established task-specific models in both\ngeneration and perception tasks, surpassing flagship models such as SDXL and\nLLaVA-1.6, while eliminating the need for diffusion or compositional\narchitectures. Emu3 is also capable of generating high-fidelity video via\npredicting the next token in a video sequence. We simplify complex multimodal\nmodel designs by converging on a singular focus: tokens, unlocking great\npotential for scaling both during training and inference. Our results\ndemonstrate that next-token prediction is a promising path towards building\ngeneral multimodal intelligence beyond language. We open-source key techniques\nand models to support further research in this direction.",
+      "upvotes": 90
+    },
+    {
+      "title": "MIO: A Foundation Model on Multimodal Tokens",
+      "url": "https://huggingface.co/papers/2409.17692",
+      "authors": [
+        "Yibo Zhang",
+        "Jiashuo Wang",
+        "Siyu Li",
+        "Yizhi Li",
+        "Haoran Que",
+        "Ke Xu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.17692.pdf",
+      "abstract": "In this paper, we introduce MIO, a novel foundation model built on multimodal\ntokens, capable of understanding and generating speech, text, images, and\nvideos in an end-to-end, autoregressive manner. While the emergence of large\nlanguage models (LLMs) and multimodal large language models (MM-LLMs) propels\nadvancements in artificial general intelligence through their versatile\ncapabilities, they still lack true any-to-any understanding and generation.\nRecently, the release of GPT-4o has showcased the remarkable potential of\nany-to-any LLMs for complex real-world tasks, enabling omnidirectional input\nand output across images, speech, and text. However, it is closed-source and\ndoes not support the generation of multimodal interleaved sequences. To address\nthis gap, we present MIO, which is trained on a mixture of discrete tokens\nacross four modalities using causal multimodal modeling. MIO undergoes a\nfour-stage training process: (1) alignment pre-training, (2) interleaved\npre-training, (3) speech-enhanced pre-training, and (4) comprehensive\nsupervised fine-tuning on diverse textual, visual, and speech tasks. Our\nexperimental results indicate that MIO exhibits competitive, and in some cases\nsuperior, performance compared to previous dual-modal baselines, any-to-any\nmodel baselines, and even modality-specific baselines. Moreover, MIO\ndemonstrates advanced capabilities inherent to its any-to-any feature, such as\ninterleaved video-text generation, chain-of-visual-thought reasoning, visual\nguideline generation, instructional image editing, etc.",
+      "upvotes": 49
+    },
+    {
+      "title": "A Survey on the Honesty of Large Language Models",
+      "url": "https://huggingface.co/papers/2409.18786",
+      "authors": [
+        "Taiqiang Wu",
+        "Chufan Shi",
+        "Yuji Zhang",
+        "Deng Cai",
+        "Mo Yu",
+        "Lemao Liu",
+        "Jie Zhou",
+        "Yujiu Yang",
+        "Ngai Wong",
+        "Xixin Wu",
+        "Wai Lam"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.18786.pdf",
+      "abstract": "Honesty is a fundamental principle for aligning large language models (LLMs)\nwith human values, requiring these models to recognize what they know and don't\nknow and be able to faithfully express their knowledge. Despite promising,\ncurrent LLMs still exhibit significant dishonest behaviors, such as confidently\npresenting wrong answers or failing to express what they know. In addition,\nresearch on the honesty of LLMs also faces challenges, including varying\ndefinitions of honesty, difficulties in distinguishing between known and\nunknown knowledge, and a lack of comprehensive understanding of related\nresearch. To address these issues, we provide a survey on the honesty of LLMs,\ncovering its clarification, evaluation approaches, and strategies for\nimprovement. Moreover, we offer insights for future research, aiming to inspire\nfurther exploration in this important area.",
+      "upvotes": 29
+    },
+    {
+      "title": "VPTQ: Extreme Low-bit Vector Post-Training Quantization for Large Language Models",
+      "url": "https://huggingface.co/papers/2409.17066",
+      "authors": [
+        "Cheng Li",
+        "Mao Yang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.17066.pdf",
+      "abstract": "Scaling model size significantly challenges the deployment and inference of\nLarge Language Models (LLMs). Due to the redundancy in LLM weights, recent\nresearch has focused on pushing weight-only quantization to extremely low-bit\n(even down to 2 bits). It reduces memory requirements, optimizes storage costs,\nand decreases memory bandwidth needs during inference. However, due to\nnumerical representation limitations, traditional scalar-based weight\nquantization struggles to achieve such extreme low-bit. Recent research on\nVector Quantization (VQ) for LLMs has demonstrated the potential for extremely\nlow-bit model quantization by compressing vectors into indices using lookup\ntables.\n  In this paper, we introduce Vector Post-Training Quantization (VPTQ) for\nextremely low-bit quantization of LLMs. We use Second-Order Optimization to\nformulate the LLM VQ problem and guide our quantization algorithm design by\nsolving the optimization. We further refine the weights using\nChannel-Independent Second-Order Optimization for a granular VQ. In addition,\nby decomposing the optimization problem, we propose a brief and effective\ncodebook initialization algorithm. We also extend VPTQ to support residual and\noutlier quantization, which enhances model accuracy and further compresses the\nmodel. Our experimental results show that VPTQ reduces model quantization\nperplexity by 0.01-0.34 on LLaMA-2, 0.38-0.68 on Mistral-7B,\n4.41-7.34 on LLaMA-3 over SOTA at 2-bit, with an average accuracy\nimprovement of 0.79-1.5% on LLaMA-2, 1% on Mistral-7B, 11-22% on\nLLaMA-3 on QA tasks on average. We only utilize 10.4-18.6% of the\nquantization algorithm execution time, resulting in a 1.6-1.8times\nincrease in inference throughput compared to SOTA.",
+      "upvotes": 27
+    },
+    {
+      "title": "MinerU: An Open-Source Solution for Precise Document Content Extraction",
+      "url": "https://huggingface.co/papers/2409.18839",
+      "authors": [
+        "Chao Xu",
+        "Linke Ouyang",
+        "Fan Wu",
+        "Zhiyuan Zhao",
+        "Rui Xu",
+        "Kaiwen Liu",
+        "Yuan Qu",
+        "Fukai Shang",
+        "Bo Zhang",
+        "Liqun Wei",
+        "Zhihao Sui",
+        "Wei Li",
+        "Botian Shi",
+        "Yu Qiao",
+        "Dahua Lin"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.18839.pdf",
+      "abstract": "Document content analysis has been a crucial research area in computer\nvision. Despite significant advancements in methods such as OCR, layout\ndetection, and formula recognition, existing open-source solutions struggle to\nconsistently deliver high-quality content extraction due to the diversity in\ndocument types and content. To address these challenges, we present MinerU, an\nopen-source solution for high-precision document content extraction. MinerU\nleverages the sophisticated PDF-Extract-Kit models to extract content from\ndiverse documents effectively and employs finely-tuned preprocessing and\npostprocessing rules to ensure the accuracy of the final results. Experimental\nresults demonstrate that MinerU consistently achieves high performance across\nvarious document types, significantly enhancing the quality and consistency of\ncontent extraction. The MinerU open-source project is available at\nhttps://github.com/opendatalab/MinerU.",
+      "upvotes": 25
+    },
+    {
+      "title": "PhysGen: Rigid-Body Physics-Grounded Image-to-Video Generation",
+      "url": "https://huggingface.co/papers/2409.18964",
+      "authors": [
+        "Saurabh Gupta"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.18964.pdf",
+      "abstract": "We present PhysGen, a novel image-to-video generation method that converts a\nsingle image and an input condition (e.g., force and torque applied to an\nobject in the image) to produce a realistic, physically plausible, and\ntemporally consistent video. Our key insight is to integrate model-based\nphysical simulation with a data-driven video generation process, enabling\nplausible image-space dynamics. At the heart of our system are three core\ncomponents: (i) an image understanding module that effectively captures the\ngeometry, materials, and physical parameters of the image; (ii) an image-space\ndynamics simulation model that utilizes rigid-body physics and inferred\nparameters to simulate realistic behaviors; and (iii) an image-based rendering\nand refinement module that leverages generative video diffusion to produce\nrealistic video footage featuring the simulated motion. The resulting videos\nare realistic in both physics and appearance and are even precisely\ncontrollable, showcasing superior results over existing data-driven\nimage-to-video generation works through quantitative comparison and\ncomprehensive user study. PhysGen's resulting videos can be used for various\ndownstream applications, such as turning an image into a realistic animation or\nallowing users to interact with the image and create various dynamics. Project\npage: https://stevenlsw.github.io/physgen/",
+      "upvotes": 25
+    },
+    {
+      "title": "Modulated Intervention Preference Optimization (MIPO): Keep the Easy, Refine the Difficult",
+      "url": "https://huggingface.co/papers/2409.17545",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2409.17545.pdf",
+      "abstract": "Preference optimization methods typically begin training with a well-trained\nSFT model as a reference model. In RLHF and DPO, a regularization term is used\nduring the preference optimization process to prevent the policy model from\ndeviating too far from the reference model's distribution, thereby avoiding the\ngeneration of anomalous responses. When the reference model is already\nwell-aligned with the given data or only requires slight adjustments, this\napproach can produce a well-aligned model. However, if the reference model is\nnot aligned with the given data and requires significant deviation from its\ncurrent state, a regularization term may actually hinder the model alignment.\nIn this study, we propose Modulated Intervention Preference\nOptimization (MIPO) to address this issue. MIPO modulates the degree of\nintervention from the reference model based on how well the given data is\naligned with it. If the data is well-aligned, the intervention is increased to\nprevent the policy model from diverging significantly from reference model.\nConversely, if the alignment is poor, the interference is reduced to facilitate\nmore extensive training. We compare the performance of MIPO and DPO using\nMistral-7B and Llama3-8B in Alpaca Eval 2.0 and MT-Bench. The experimental\nresults demonstrate that MIPO consistently outperforms DPO across various\nevaluation scenarios.",
+      "upvotes": 18
+    },
+    {
+      "title": "LML: Language Model Learning a Dataset for Data-Augmented Prediction",
+      "url": "https://huggingface.co/papers/2409.18957",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2409.18957.pdf",
+      "abstract": "This paper introduces a new approach to using Large Language Models (LLMs)\nfor classification tasks, which are typically handled using Machine Learning\n(ML) models. Unlike ML models that rely heavily on data cleaning and feature\nengineering, this method streamlines the process using LLMs. This paper\nproposes a new concept called \"Language Model Learning (LML)\" powered by a new\nmethod called \"Data-Augmented Prediction (DAP)\". The classification is\nperformed by LLMs using a method similar to humans manually exploring and\nunderstanding the data and deciding classifications using data as a reference.\nTraining data is summarized and evaluated to determine the features that lead\nto the classification of each label the most. In the process of DAP, the system\nuses the data summary to automatically create a query, which is used to\nretrieve relevant rows from the dataset. A classification is generated by the\nLLM using data summary and relevant rows, ensuring satisfactory accuracy even\nwith complex data. Usage of data summary and similar data in DAP ensures\ncontext-aware decision-making. The proposed method uses the words \"Act as an\nExplainable Machine Learning Model\" in the prompt to enhance the\ninterpretability of the predictions by allowing users to review the logic\nbehind each prediction. In some test cases, the system scored an accuracy above\n90%, proving the effectiveness of the system and its potential to outperform\nconventional ML models in various scenarios. The code is available at\nhttps://github.com/Pro-GenAI/LML-DAP",
+      "upvotes": 9
+    },
+    {
+      "title": "HDFlow: Enhancing LLM Complex Problem-Solving with Hybrid Thinking and Dynamic Workflows",
+      "url": "https://huggingface.co/papers/2409.17433",
+      "authors": [
+        "Dong Yu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.17433.pdf",
+      "abstract": "Despite recent advancements in large language models (LLMs), their\nperformance on complex reasoning problems requiring multi-step thinking and\ncombining various skills is still limited. To address this, we propose a novel\nframework HDFlow for complex reasoning with LLMs that combines fast and slow\nthinking modes in an adaptive manner. Our approach consists of two key\ncomponents: 1) a new approach for slow, deliberate reasoning called Dynamic\nWorkflow, which automatically decomposes complex problems into more manageable\nsub-tasks and dynamically designs a workflow to assemble specialized LLM or\nsymbolic reasoning tools to solve sub-tasks; 2) Hybrid Thinking, a general\nframework that dynamically combines fast and slow thinking based on problem\ncomplexity. Finally, we propose an easy-to-scale method for automatically\nsynthesizing a large-scale dataset of 27K challenging reasoning problems for\ncomplex reasoning and a hybrid thinking tuning method that trains smaller LLMs\non this dataset to internalize the fast/slow hybrid reasoning strategies.\nExperiments on four reasoning benchmark datasets demonstrate that our slow\nthinking with dynamic workflows significantly outperforms Chain-of-Thought, and\nhybrid thinking achieves the highest accuracy while providing an effective\nbalance between computational efficiency and performance. Fine-tuning using our\nhybrid thinking approach also significantly boosts the complex reasoning\ncapabilities of open-source language models. The results showcase the promise\nof slow thinking, dynamic workflows, and hybrid thinking in expanding the\nfrontier of complex problem-solving with LLMsCode and data will be\nreleased at \\url{https://github.com/wenlinyao/HDFlow.}.",
+      "upvotes": 8
+    },
+    {
+      "title": "MSI-Agent: Incorporating Multi-Scale Insight into Embodied Agents for Superior Planning and Decision-Making",
+      "url": "https://huggingface.co/papers/2409.16686",
+      "authors": [
+        "Biqing Qi",
+        "Yihuai Gao",
+        "Bowen Zhou"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.16686.pdf",
+      "abstract": "Long-term memory is significant for agents, in which insights play a crucial\nrole. However, the emergence of irrelevant insight and the lack of general\ninsight can greatly undermine the effectiveness of insight. To solve this\nproblem, in this paper, we introduce Multi-Scale Insight Agent (MSI-Agent), an\nembodied agent designed to improve LLMs' planning and decision-making ability\nby summarizing and utilizing insight effectively across different scales. MSI\nachieves this through the experience selector, insight generator, and insight\nselector. Leveraging a three-part pipeline, MSI can generate task-specific and\nhigh-level insight, store it in a database, and then use relevant insight from\nit to aid in decision-making. Our experiments show that MSI outperforms another\ninsight strategy when planning by GPT3.5. Moreover, We delve into the\nstrategies for selecting seed experience and insight, aiming to provide LLM\nwith more useful and relevant insight for better decision-making. Our\nobservations also indicate that MSI exhibits better robustness when facing\ndomain-shifting scenarios.",
+      "upvotes": 8
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "date": "2024-08-14",
+  "papers": [
+    {
+      "title": "LongWriter: Unleashing 10,000+ Word Generation from Long Context LLMs",
+      "url": "https://huggingface.co/papers/2408.07055",
+      "authors": [
+        "Lei Hou"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.07055.pdf",
+      "abstract": "Current long context large language models (LLMs) can process inputs up to\n100,000 tokens, yet struggle to generate outputs exceeding even a modest length\nof 2,000 words. Through controlled experiments, we find that the model's\neffective generation length is inherently bounded by the sample it has seen\nduring supervised fine-tuning (SFT). In other words, their output limitation is\ndue to the scarcity of long-output examples in existing SFT datasets. To\naddress this, we introduce AgentWrite, an agent-based pipeline that decomposes\nultra-long generation tasks into subtasks, enabling off-the-shelf LLMs to\ngenerate coherent outputs exceeding 20,000 words. Leveraging AgentWrite, we\nconstruct LongWriter-6k, a dataset containing 6,000 SFT data with output\nlengths ranging from 2k to 32k words. By incorporating this dataset into model\ntraining, we successfully scale the output length of existing models to over\n10,000 words while maintaining output quality. We also develop LongBench-Write,\na comprehensive benchmark for evaluating ultra-long generation capabilities.\nOur 9B parameter model, further improved through DPO, achieves state-of-the-art\nperformance on this benchmark, surpassing even much larger proprietary models.\nIn general, our work demonstrates that existing long context LLM already\npossesses the potential for a larger output window--all you need is data with\nextended output during model alignment to unlock this capability. Our code &\nmodels are at: https://github.com/THUDM/LongWriter.",
+      "upvotes": 65
+    },
+    {
+      "title": "Imagen 3",
+      "url": "https://huggingface.co/papers/2408.07009",
+      "authors": [
+        "Imagen-Team-Google",
+        "Jakob Bauer",
+        "Mukul Bhutani",
+        "Nicole Brichtova",
+        "Andrew Bunner",
+        "Sander Dieleman",
+        "Nando de Freitas",
+        "Yilin Gao",
+        "Evgeny Gladchenko",
+        "Sergio Gómez Colmenarejo",
+        "Mandy Guo",
+        "Will Hawkins",
+        "Huilian Huang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.07009.pdf",
+      "abstract": "We introduce Imagen 3, a latent diffusion model that generates high quality\nimages from text prompts. We describe our quality and responsibility\nevaluations. Imagen 3 is preferred over other state-of-the-art (SOTA) models at\nthe time of evaluation. In addition, we discuss issues around safety and\nrepresentation, as well as methods we used to minimize the potential harm of\nour models.",
+      "upvotes": 61
+    },
+    {
+      "title": "Diversity Empowers Intelligence: Integrating Expertise of Software Engineering Agents",
+      "url": "https://huggingface.co/papers/2408.07060",
+      "authors": [
+        "Yihao Feng",
+        "Zhiwei Liu",
+        "Tian Lan",
+        "Lei Li",
+        "Renze Lou",
+        "Jiacheng Xu",
+        "Bo Pang",
+        "Yingbo Zhou",
+        "Shelby Heinecke",
+        "Silvio Savarese",
+        "Huan Wang",
+        "Caiming Xiong"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.07060.pdf",
+      "abstract": "Large language model (LLM) agents have shown great potential in solving\nreal-world software engineering (SWE) problems. The most advanced open-source\nSWE agent can resolve over 27% of real GitHub issues in SWE-Bench Lite.\nHowever, these sophisticated agent frameworks exhibit varying strengths,\nexcelling in certain tasks while underperforming in others. To fully harness\nthe diversity of these agents, we propose DEI (Diversity Empowered\nIntelligence), a framework that leverages their unique expertise. DEI functions\nas a meta-module atop existing SWE agent frameworks, managing agent collectives\nfor enhanced problem-solving. Experimental results show that a DEI-guided\ncommittee of agents is able to surpass the best individual agent's performance\nby a large margin. For instance, a group of open-source SWE agents, with a\nmaximum individual resolve rate of 27.3% on SWE-Bench Lite, can achieve a 34.3%\nresolve rate with DEI, making a 25% improvement and beating most closed-source\nsolutions. Our best-performing group excels with a 55% resolve rate, securing\nthe highest ranking on SWE-Bench Lite. Our findings contribute to the growing\nbody of research on collaborative AI systems and their potential to solve\ncomplex software engineering challenges.",
+      "upvotes": 40
+    },
+    {
+      "title": "Layerwise Recurrent Router for Mixture-of-Experts",
+      "url": "https://huggingface.co/papers/2408.06793",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2408.06793.pdf",
+      "abstract": "The scaling of large language models (LLMs) has revolutionized their\ncapabilities in various tasks, yet this growth must be matched with efficient\ncomputational strategies. The Mixture-of-Experts (MoE) architecture stands out\nfor its ability to scale model size without significantly increasing training\ncosts. Despite their advantages, current MoE models often display parameter\ninefficiency. For instance, a pre-trained MoE-based LLM with 52 billion\nparameters might perform comparably to a standard model with 6.7 billion\nparameters. Being a crucial part of MoE, current routers in different layers\nindependently assign tokens without leveraging historical routing information,\npotentially leading to suboptimal token-expert combinations and the parameter\ninefficiency problem. To alleviate this issue, we introduce the Layerwise\nRecurrent Router for Mixture-of-Experts (RMoE). RMoE leverages a Gated\nRecurrent Unit (GRU) to establish dependencies between routing decisions across\nconsecutive layers. Such layerwise recurrence can be efficiently parallelly\ncomputed for input tokens and introduces negotiable costs. Our extensive\nempirical evaluations demonstrate that RMoE-based language models consistently\noutperform a spectrum of baseline models. Furthermore, RMoE integrates a novel\ncomputation stage orthogonal to existing methods, allowing seamless\ncompatibility with other MoE architectures. Our analyses attribute RMoE's gains\nto its effective cross-layer information sharing, which also improves expert\nselection and diversity. Our code is at https://github.com/qiuzh20/RMoE",
+      "upvotes": 30
+    },
+    {
+      "title": "OpenResearcher: Unleashing AI for Accelerated Scientific Research",
+      "url": "https://huggingface.co/papers/2408.06941",
+      "authors": [
+        "Yuxiang Zheng",
+        "Lin Qiu",
+        "Yun Luo",
+        "Renjie Pan",
+        "Yang Xu",
+        "Qingkai Min",
+        "Zizhao Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.06941.pdf",
+      "abstract": "The rapid growth of scientific literature imposes significant challenges for\nresearchers endeavoring to stay updated with the latest advancements in their\nfields and delve into new areas. We introduce OpenResearcher, an innovative\nplatform that leverages Artificial Intelligence (AI) techniques to accelerate\nthe research process by answering diverse questions from researchers.\nOpenResearcher is built based on Retrieval-Augmented Generation (RAG) to\nintegrate Large Language Models (LLMs) with up-to-date, domain-specific\nknowledge. Moreover, we develop various tools for OpenResearcher to understand\nresearchers' queries, search from the scientific literature, filter retrieved\ninformation, provide accurate and comprehensive answers, and self-refine these\nanswers. OpenResearcher can flexibly use these tools to balance efficiency and\neffectiveness. As a result, OpenResearcher enables researchers to save time and\nincrease their potential to discover new insights and drive scientific\nbreakthroughs. Demo, video, and code are available at:\nhttps://github.com/GAIR-NLP/OpenResearcher.",
+      "upvotes": 30
+    },
+    {
+      "title": "Amuro & Char: Analyzing the Relationship between Pre-Training and Fine-Tuning of Large Language Models",
+      "url": "https://huggingface.co/papers/2408.06663",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2408.06663.pdf",
+      "abstract": "The development of large language models leads to the formation of a\npre-train-then-align paradigm, in which the model is typically pre-trained on a\nlarge text corpus and undergoes a tuning stage to align the model with human\npreference or downstream tasks. In this work, we investigate the relationship\nbetween pre-training and fine-tuning by fine-tuning multiple intermediate\npre-trained model checkpoints. Our results on 18 datasets suggest that i)\ncontinual pre-training improves the model in a latent way that unveils after\nfine-tuning; ii) with extra fine-tuning, the datasets that the model does not\ndemonstrate capability gain much more than those that the model performs well\nduring the pre-training stage; iii) although model benefits significantly\nthrough supervised fine-tuning, it may forget previously known domain knowledge\nand the tasks that are not seen during fine-tuning; iv) the model resembles\nhigh sensitivity to evaluation prompts after supervised fine-tuning, but this\nsensitivity can be alleviated by more pre-training.",
+      "upvotes": 15
+    },
+    {
+      "title": "SlotLifter: Slot-guided Feature Lifting for Learning Object-centric Radiance Fields",
+      "url": "https://huggingface.co/papers/2408.06697",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2408.06697.pdf",
+      "abstract": "The ability to distill object-centric abstractions from intricate visual\nscenes underpins human-level generalization. Despite the significant progress\nin object-centric learning methods, learning object-centric representations in\nthe 3D physical world remains a crucial challenge. In this work, we propose\nSlotLifter, a novel object-centric radiance model addressing scene\nreconstruction and decomposition jointly via slot-guided feature lifting. Such\na design unites object-centric learning representations and image-based\nrendering methods, offering state-of-the-art performance in scene decomposition\nand novel-view synthesis on four challenging synthetic and four complex\nreal-world datasets, outperforming existing 3D object-centric learning methods\nby a large margin. Through extensive ablative studies, we showcase the efficacy\nof designs in SlotLifter, revealing key insights for potential future\ndirections.",
+      "upvotes": 14
+    },
+    {
+      "title": "DC3DO: Diffusion Classifier for 3D Objects",
+      "url": "https://huggingface.co/papers/2408.06693",
+      "authors": [
+        "Shicheng Xu",
+        "Andrew Rodriguez"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.06693.pdf",
+      "abstract": "Inspired by Geoffrey Hinton emphasis on generative modeling, To recognize\nshapes, first learn to generate them, we explore the use of 3D diffusion models\nfor object classification. Leveraging the density estimates from these models,\nour approach, the Diffusion Classifier for 3D Objects (DC3DO), enables\nzero-shot classification of 3D shapes without additional training. On average,\nour method achieves a 12.5 percent improvement compared to its multiview\ncounterparts, demonstrating superior multimodal reasoning over discriminative\napproaches. DC3DO employs a class-conditional diffusion model trained on\nShapeNet, and we run inferences on point clouds of chairs and cars. This work\nhighlights the potential of generative models in 3D object classification.",
+      "upvotes": 10
+    },
+    {
+      "title": "FuxiTranyu: A Multilingual Large Language Model Trained with Balanced Data",
+      "url": "https://huggingface.co/papers/2408.06273",
+      "authors": [
+        "Renren Jin",
+        "Shaoyang Xu",
+        "Leiyu Pan",
+        "Supryadi",
+        "Menglong Cui",
+        "Jiangcun Du",
+        "Yikun Lei",
+        "Lei Yang",
+        "Ling Shi",
+        "Juesi Xiao",
+        "Shaolin Zhu",
+        "Deyi Xiong"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.06273.pdf",
+      "abstract": "Large language models (LLMs) have demonstrated prowess in a wide range of\ntasks. However, many LLMs exhibit significant performance discrepancies between\nhigh- and low-resource languages. To mitigate this challenge, we present\nFuxiTranyu, an open-source multilingual LLM, which is designed to satisfy the\nneed of the research community for balanced and high-performing multilingual\ncapabilities. FuxiTranyu-8B, the base model with 8 billion parameters, is\ntrained from scratch on a meticulously balanced multilingual data repository\nthat contains 600 billion tokens covering 43 natural languages and 16\nprogramming languages. In addition to the base model, we also develop two\ninstruction-tuned models: FuxiTranyu-8B-SFT that is fine-tuned on a diverse\nmultilingual instruction dataset, and FuxiTranyu-8B-DPO that is further refined\nwith DPO on a preference dataset for enhanced alignment ability. Extensive\nexperiments on a wide range of multilingual benchmarks demonstrate the\ncompetitive performance of FuxiTranyu against existing multilingual LLMs, e.g.,\nBLOOM-7B, PolyLM-13B, Llama-2-Chat-7B and Mistral-7B-Instruct. Interpretability\nanalyses at both the neuron and representation level suggest that FuxiTranyu is\nable to learn consistent multilingual representations across different\nlanguages. To promote further research into multilingual LLMs and their working\nmechanisms, we release both the base and instruction-tuned FuxiTranyu models\ntogether with 58 pretraining checkpoints at HuggingFace and Github.",
+      "upvotes": 9
+    },
+    {
+      "title": "MovieSum: An Abstractive Summarization Dataset for Movie Screenplays",
+      "url": "https://huggingface.co/papers/2408.06281",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2408.06281.pdf",
+      "abstract": "Movie screenplay summarization is challenging, as it requires an\nunderstanding of long input contexts and various elements unique to movies.\nLarge language models have shown significant advancements in document\nsummarization, but they often struggle with processing long input contexts.\nFurthermore, while television transcripts have received attention in recent\nstudies, movie screenplay summarization remains underexplored. To stimulate\nresearch in this area, we present a new dataset, MovieSum, for abstractive\nsummarization of movie screenplays. This dataset comprises 2200 movie\nscreenplays accompanied by their Wikipedia plot summaries. We manually\nformatted the movie screenplays to represent their structural elements.\nCompared to existing datasets, MovieSum possesses several distinctive features:\n(1) It includes movie screenplays, which are longer than scripts of TV\nepisodes. (2) It is twice the size of previous movie screenplay datasets. (3)\nIt provides metadata with IMDb IDs to facilitate access to additional external\nknowledge. We also show the results of recently released large language models\napplied to summarization on our dataset to provide a detailed baseline.",
+      "upvotes": 9
+    },
+    {
+      "title": "UniT: Unified Tactile Representation for Robot Learning",
+      "url": "https://huggingface.co/papers/2408.06481",
+      "authors": [
+        "Cael Fitch",
+        "Philip Glen Crandall",
+        "Wan Shou",
+        "Yu She"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.06481.pdf",
+      "abstract": "UniT is a novel approach to tactile representation learning, using VQVAE to\nlearn a compact latent space and serve as the tactile representation. It uses\ntactile images obtained from a single simple object to train the representation\nwith transferability and generalizability. This tactile representation can be\nzero-shot transferred to various downstream tasks, including perception tasks\nand manipulation policy learning. Our benchmarking on an in-hand 3D pose\nestimation task shows that UniT outperforms existing visual and tactile\nrepresentation learning methods. Additionally, UniT's effectiveness in policy\nlearning is demonstrated across three real-world tasks involving diverse\nmanipulated objects and complex robot-object-environment interactions. Through\nextensive experimentation, UniT is shown to be a simple-to-train,\nplug-and-play, yet widely effective method for tactile representation learning.\nFor more details, please refer to our open-source repository\nhttps://github.com/ZhengtongXu/UniT and the project website\nhttps://zhengtongxu.github.io/unifiedtactile.github.io/.",
+      "upvotes": 9
+    },
+    {
+      "title": "Design Proteins Using Large Language Models: Enhancements and Comparative Analyses",
+      "url": "https://huggingface.co/papers/2408.06396",
+      "authors": [
+        "Monica Bianchini"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.06396.pdf",
+      "abstract": "Pre-trained LLMs have demonstrated substantial capabilities across a range of\nconventional natural language processing (NLP) tasks, such as summarization and\nentity recognition. In this paper, we explore the application of LLMs in the\ngeneration of high-quality protein sequences. Specifically, we adopt a suite of\npre-trained LLMs, including Mistral-7B1, Llama-2-7B2, Llama-3-8B3, and\ngemma-7B4, to produce valid protein sequences. All of these models are publicly\navailable.5 Unlike previous work in this field, our approach utilizes a\nrelatively small dataset comprising 42,000 distinct human protein sequences. We\nretrain these models to process protein-related data, ensuring the generation\nof biologically feasible protein structures. Our findings demonstrate that even\nwith limited data, the adapted models exhibit efficiency comparable to\nestablished protein-focused models such as ProGen varieties, ProtGPT2, and\nProLLaMA, which were trained on millions of protein sequences. To validate and\nquantify the performance of our models, we conduct comparative analyses\nemploying standard metrics such as pLDDT, RMSD, TM-score, and REU. Furthermore,\nwe commit to making the trained versions of all four models publicly available,\nfostering greater transparency and collaboration in the field of computational\nbiology.",
+      "upvotes": 8
+    },
+    {
+      "title": "ZePo: Zero-Shot Portrait Stylization with Faster Sampling",
+      "url": "https://huggingface.co/papers/2408.05492",
+      "authors": [
+        "Jie Cao",
+        "Ran He"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.05492.pdf",
+      "abstract": "Diffusion-based text-to-image generation models have significantly advanced\nthe field of art content synthesis. However, current portrait stylization\nmethods generally require either model fine-tuning based on examples or the\nemployment of DDIM Inversion to revert images to noise space, both of which\nsubstantially decelerate the image generation process. To overcome these\nlimitations, this paper presents an inversion-free portrait stylization\nframework based on diffusion models that accomplishes content and style feature\nfusion in merely four sampling steps. We observed that Latent Consistency\nModels employing consistency distillation can effectively extract\nrepresentative Consistency Features from noisy images. To blend the Consistency\nFeatures extracted from both content and style images, we introduce a Style\nEnhancement Attention Control technique that meticulously merges content and\nstyle features within the attention space of the target image. Moreover, we\npropose a feature merging strategy to amalgamate redundant features in\nConsistency Features, thereby reducing the computational load of attention\ncontrol. Extensive experiments have validated the effectiveness of our proposed\nframework in enhancing stylization efficiency and fidelity. The code is\navailable at https://github.com/liujin112/ZePo.",
+      "upvotes": 7
+    },
+    {
+      "title": "TacSL: A Library for Visuotactile Sensor Simulation and Learning",
+      "url": "https://huggingface.co/papers/2408.06506",
+      "authors": [
+        "Iretiayo Akinola",
+        "Jan Carius",
+        "Dieter Fox",
+        "Yashraj Narang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.06506.pdf",
+      "abstract": "For both humans and robots, the sense of touch, known as tactile sensing, is\ncritical for performing contact-rich manipulation tasks. Three key challenges\nin robotic tactile sensing are 1) interpreting sensor signals, 2) generating\nsensor signals in novel scenarios, and 3) learning sensor-based policies. For\nvisuotactile sensors, interpretation has been facilitated by their close\nrelationship with vision sensors (e.g., RGB cameras). However, generation is\nstill difficult, as visuotactile sensors typically involve contact,\ndeformation, illumination, and imaging, all of which are expensive to simulate;\nin turn, policy learning has been challenging, as simulation cannot be\nleveraged for large-scale data collection. We present TacSL\n(taxel), a library for GPU-based visuotactile sensor simulation and\nlearning. TacSL can be used to simulate visuotactile images and\nextract contact-force distributions over 200times faster than the prior\nstate-of-the-art, all within the widely-used Isaac Gym simulator. Furthermore,\nTacSL provides a learning toolkit containing multiple sensor models,\ncontact-intensive training environments, and online/offline algorithms that can\nfacilitate policy learning for sim-to-real applications. On the algorithmic\nside, we introduce a novel online reinforcement-learning algorithm called\nasymmetric actor-critic distillation (\\sysName), designed to effectively and\nefficiently learn tactile-based policies in simulation that can transfer to the\nreal world. Finally, we demonstrate the utility of our library and algorithms\nby evaluating the benefits of distillation and multimodal sensing for\ncontact-rich manip ulation tasks, and most critically, performing sim-to-real\ntransfer. Supplementary videos and results are at\nhttps://iakinola23.github.io/tacsl/.",
+      "upvotes": 7
+    },
+    {
+      "title": "Adapting General Disentanglement-Based Speaker Anonymization for Enhanced Emotion Preservation",
+      "url": "https://huggingface.co/papers/2408.05928",
+      "authors": [
+        "Xiaoxiao Miao",
+        "Yuxiang Zhang",
+        "Xin Wang",
+        "Donny Cheng Lock Soh",
+        "Ian Mcloughlin"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.05928.pdf",
+      "abstract": "A general disentanglement-based speaker anonymization system typically\nseparates speech into content, speaker, and prosody features using individual\nencoders. This paper explores how to adapt such a system when a new speech\nattribute, for example, emotion, needs to be preserved to a greater extent.\nWhile existing systems are good at anonymizing speaker embeddings, they are not\ndesigned to preserve emotion. Two strategies for this are examined. First, we\nshow that integrating emotion embeddings from a pre-trained emotion encoder can\nhelp preserve emotional cues, even though this approach slightly compromises\nprivacy protection. Alternatively, we propose an emotion compensation strategy\nas a post-processing step applied to anonymized speaker embeddings. This\nconceals the original speaker's identity and reintroduces the emotional traits\nlost during speaker embedding anonymization. Specifically, we model the emotion\nattribute using support vector machines to learn separate boundaries for each\nemotion. During inference, the original speaker embedding is processed in two\nways: one, by an emotion indicator to predict emotion and select the\nemotion-matched SVM accurately; and two, by a speaker anonymizer to conceal\nspeaker characteristics. The anonymized speaker embedding is then modified\nalong the corresponding SVM boundary towards an enhanced emotional direction to\nsave the emotional cues. The proposed strategies are also expected to be useful\nfor adapting a general disentanglement-based speaker anonymization system to\npreserve other target paralinguistic attributes, with potential for a range of\ndownstream tasks.",
+      "upvotes": 6
+    }
+  ]
+}

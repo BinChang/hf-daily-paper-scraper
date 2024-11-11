@@ -1,0 +1,128 @@
+{
+  "date": "2024-02-15",
+  "papers": [
+    {
+      "title": "Magic-Me: Identity-Specific Video Customized Diffusion",
+      "url": "https://huggingface.co/papers/2402.09368",
+      "authors": [
+        "Ze Ma",
+        "Xue-She Wang",
+        "Huanrui Yang",
+        "Jiashi Feng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.09368.pdf",
+      "abstract": "Creating content for a specific identity (ID) has shown significant interest\nin the field of generative models. In the field of text-to-image generation\n(T2I), subject-driven content generation has achieved great progress with the\nID in the images controllable. However, extending it to video generation is not\nwell explored. In this work, we propose a simple yet effective subject identity\ncontrollable video generation framework, termed Video Custom Diffusion (VCD).\nWith a specified subject ID defined by a few images, VCD reinforces the\nidentity information extraction and injects frame-wise correlation at the\ninitialization stage for stable video outputs with identity preserved to a\nlarge extent. To achieve this, we propose three novel components that are\nessential for high-quality ID preservation: 1) an ID module trained with the\ncropped identity by prompt-to-segmentation to disentangle the ID information\nand the background noise for more accurate ID token learning; 2) a\ntext-to-video (T2V) VCD module with 3D Gaussian Noise Prior for better\ninter-frame consistency and 3) video-to-video (V2V) Face VCD and Tiled VCD\nmodules to deblur the face and upscale the video for higher resolution.\n  Despite its simplicity, we conducted extensive experiments to verify that VCD\nis able to generate stable and high-quality videos with better ID over the\nselected strong baselines. Besides, due to the transferability of the ID\nmodule, VCD is also working well with finetuned text-to-image models available\npublically, further improving its usability. The codes are available at\nhttps://github.com/Zhen-Dong/Magic-Me.",
+      "upvotes": 26
+    },
+    {
+      "title": "Premise Order Matters in Reasoning with Large Language Models",
+      "url": "https://huggingface.co/papers/2402.08939",
+      "authors": [
+        "Xuezhi Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.08939.pdf",
+      "abstract": "Large language models (LLMs) have accomplished remarkable reasoning\nperformance in various domains. However, in the domain of reasoning tasks, we\ndiscover a frailty: LLMs are surprisingly brittle to the ordering of the\npremises, despite the fact that such ordering does not alter the underlying\ntask. In particular, we observe that LLMs achieve the best performance when the\npremise order aligns with the context required in intermediate reasoning steps.\nFor example, in deductive reasoning tasks, presenting the premises in the same\norder as the ground truth proof in the prompt (as opposed to random ordering)\ndrastically increases the model's accuracy. We first examine the effect of\npremise ordering on deductive reasoning on a variety of LLMs, and our\nevaluation shows that permuting the premise order can cause a performance drop\nof over 30%. In addition, we release the benchmark R-GSM, based on GSM8K, to\nexamine the ordering effect for mathematical problem-solving, and we again\nobserve a significant drop in accuracy, relative to the original GSM8K\nbenchmark.",
+      "upvotes": 25
+    },
+    {
+      "title": "L3GO: Language Agents with Chain-of-3D-Thoughts for Generating Unconventional Objects",
+      "url": "https://huggingface.co/papers/2402.09052",
+      "authors": [
+        "Ilker Yildirim"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.09052.pdf",
+      "abstract": "Diffusion-based image generation models such as DALL-E 3 and Stable\nDiffusion-XL demonstrate remarkable capabilities in generating images with\nrealistic and unique compositions. Yet, these models are not robust in\nprecisely reasoning about physical and spatial configurations of objects,\nespecially when instructed with unconventional, thereby out-of-distribution\ndescriptions, such as \"a chair with five legs\". In this paper, we propose a\nlanguage agent with chain-of-3D-thoughts (L3GO), an inference-time approach\nthat can reason about part-based 3D mesh generation of unconventional objects\nthat current data-driven diffusion models struggle with. More concretely, we\nuse large language models as agents to compose a desired object via\ntrial-and-error within the 3D simulation environment. To facilitate our\ninvestigation, we develop a new benchmark, Unconventionally Feasible Objects\n(UFO), as well as SimpleBlenv, a wrapper environment built on top of Blender\nwhere language agents can build and compose atomic building blocks via API\ncalls. Human and automatic GPT-4V evaluations show that our approach surpasses\nthe standard GPT-4 and other language agents (e.g., ReAct and Reflexion) for 3D\nmesh generation on ShapeNet. Moreover, when tested on our UFO benchmark, our\napproach outperforms other state-of-the-art text-to-2D image and text-to-3D\nmodels based on human evaluation.",
+      "upvotes": 16
+    },
+    {
+      "title": "Transformers Can Achieve Length Generalization But Not Robustly",
+      "url": "https://huggingface.co/papers/2402.09371",
+      "authors": [
+        "Xuezhi Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.09371.pdf",
+      "abstract": "Length generalization, defined as the ability to extrapolate from shorter\ntraining sequences to longer test ones, is a significant challenge for language\nmodels. This issue persists even with large-scale Transformers handling\nrelatively straightforward tasks. In this paper, we test the Transformer's\nability of length generalization using the task of addition of two integers. We\nshow that the success of length generalization is intricately linked to the\ndata format and the type of position encoding. Using the right combination of\ndata format and position encodings, we show for the first time that standard\nTransformers can extrapolate to a sequence length that is 2.5x the input\nlength. Nevertheless, unlike in-distribution generalization, length\ngeneralization remains fragile, significantly influenced by factors like random\nweight initialization and training data order, leading to large variances\nacross different random seeds.",
+      "upvotes": 12
+    },
+    {
+      "title": "Computing Power and the Governance of Artificial Intelligence",
+      "url": "https://huggingface.co/papers/2402.08797",
+      "authors": [
+        "Girish Sastry",
+        "Lennart Heim",
+        "Haydn Belfield",
+        "Markus Anderljung",
+        "Miles Brundage",
+        "Julian Hazell",
+        "Cullen O'Keefe",
+        "Gillian K. Hadfield",
+        "Richard Ngo",
+        "Konstantin Pilz",
+        "George Gor",
+        "Emma Bluemke",
+        "Sarah Shoker",
+        "Janet Egan",
+        "Robert F. Trager",
+        "Shahar Avin",
+        "Adrian Weller",
+        "Yoshua Bengio",
+        "Diane Coyle"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.08797.pdf",
+      "abstract": "Computing power, or \"compute,\" is crucial for the development and deployment\nof artificial intelligence (AI) capabilities. As a result, governments and\ncompanies have started to leverage compute as a means to govern AI. For\nexample, governments are investing in domestic compute capacity, controlling\nthe flow of compute to competing countries, and subsidizing compute access to\ncertain sectors. However, these efforts only scratch the surface of how compute\ncan be used to govern AI development and deployment. Relative to other key\ninputs to AI (data and algorithms), AI-relevant compute is a particularly\neffective point of intervention: it is detectable, excludable, and\nquantifiable, and is produced via an extremely concentrated supply chain. These\ncharacteristics, alongside the singular importance of compute for cutting-edge\nAI models, suggest that governing compute can contribute to achieving common\npolicy objectives, such as ensuring the safety and beneficial use of AI. More\nprecisely, policymakers could use compute to facilitate regulatory visibility\nof AI, allocate resources to promote beneficial outcomes, and enforce\nrestrictions against irresponsible or malicious AI development and usage.\nHowever, while compute-based policies and technologies have the potential to\nassist in these areas, there is significant variation in their readiness for\nimplementation. Some ideas are currently being piloted, while others are\nhindered by the need for fundamental research. Furthermore, naive or poorly\nscoped approaches to compute governance carry significant risks in areas like\nprivacy, economic impacts, and centralization of power. We end by suggesting\nguardrails to minimize these risks from compute governance.",
+      "upvotes": 11
+    },
+    {
+      "title": "MPIrigen: MPI Code Generation through Domain-Specific Language Models",
+      "url": "https://huggingface.co/papers/2402.09126",
+      "authors": [
+        "Tal Kadosh",
+        "Mihai Capotă",
+        "Abdul Wasay",
+        "Guy Tamir",
+        "Timothy Mattson"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.09126.pdf",
+      "abstract": "The imperative need to scale computation across numerous nodes highlights the\nsignificance of efficient parallel computing, particularly in the realm of\nMessage Passing Interface (MPI) integration. The challenging parallel\nprogramming task of generating MPI-based parallel programs has remained\nunexplored. This study first investigates the performance of state-of-the-art\nlanguage models in generating MPI-based parallel programs. Findings reveal that\nwidely used models such as GPT-3.5 and PolyCoder (specialized multi-lingual\ncode models) exhibit notable performance degradation, when generating MPI-based\nprograms compared to general-purpose programs. In contrast, domain-specific\nmodels such as MonoCoder, which are pretrained on MPI-related programming\nlanguages of C and C++, outperform larger models. Subsequently, we introduce a\ndedicated downstream task of MPI-based program generation by fine-tuning\nMonoCoder on HPCorpusMPI. We call the resulting model as MPIrigen. We propose\nan innovative preprocessing for completion only after observing the whole code,\nthus enabling better completion with a wider context. Comparative analysis\nagainst GPT-3.5 zero-shot performance, using a novel HPC-oriented evaluation\nmethod, demonstrates that MPIrigen excels in generating accurate MPI functions\nup to 0.8 accuracy in location and function predictions, and with more than 0.9\naccuracy for argument predictions. The success of this tailored solution\nunderscores the importance of domain-specific fine-tuning in optimizing\nlanguage models for parallel computing code generation, paving the way for a\nnew generation of automatic parallelization tools. The sources of this work are\navailable at our GitHub MPIrigen repository:\nhttps://github.com/Scientific-Computing-Lab-NRCN/MPI-rigen",
+      "upvotes": 11
+    },
+    {
+      "title": "PRDP: Proximal Reward Difference Prediction for Large-Scale Reward Finetuning of Diffusion Models",
+      "url": "https://huggingface.co/papers/2402.08714",
+      "authors": [
+        "Fei Deng",
+        "Qifei Wang",
+        "Wei Wei"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.08714.pdf",
+      "abstract": "Reward finetuning has emerged as a promising approach to aligning foundation\nmodels with downstream objectives. Remarkable success has been achieved in the\nlanguage domain by using reinforcement learning (RL) to maximize rewards that\nreflect human preference. However, in the vision domain, existing RL-based\nreward finetuning methods are limited by their instability in large-scale\ntraining, rendering them incapable of generalizing to complex, unseen prompts.\nIn this paper, we propose Proximal Reward Difference Prediction (PRDP),\nenabling stable black-box reward finetuning for diffusion models for the first\ntime on large-scale prompt datasets with over 100K prompts. Our key innovation\nis the Reward Difference Prediction (RDP) objective that has the same optimal\nsolution as the RL objective while enjoying better training stability.\nSpecifically, the RDP objective is a supervised regression objective that tasks\nthe diffusion model with predicting the reward difference of generated image\npairs from their denoising trajectories. We theoretically prove that the\ndiffusion model that obtains perfect reward difference prediction is exactly\nthe maximizer of the RL objective. We further develop an online algorithm with\nproximal updates to stably optimize the RDP objective. In experiments, we\ndemonstrate that PRDP can match the reward maximization ability of\nwell-established RL-based methods in small-scale training. Furthermore, through\nlarge-scale training on text prompts from the Human Preference Dataset v2 and\nthe Pick-a-Pic v1 dataset, PRDP achieves superior generation quality on a\ndiverse set of complex, unseen prompts whereas RL-based methods completely\nfail.",
+      "upvotes": 10
+    },
+    {
+      "title": "GhostWriter: Augmenting Collaborative Human-AI Writing Experiences Through Personalization and Agency",
+      "url": "https://huggingface.co/papers/2402.08855",
+      "authors": [
+        "Rachel Ng",
+        "Andy Huntington",
+        "Richard Banks"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.08855.pdf",
+      "abstract": "Large language models (LLMs) are becoming more prevalent and have found a\nubiquitous use in providing different forms of writing assistance. However,\nLLM-powered writing systems can frustrate users due to their limited\npersonalization and control, which can be exacerbated when users lack\nexperience with prompt engineering. We see design as one way to address these\nchallenges and introduce GhostWriter, an AI-enhanced writing design probe where\nusers can exercise enhanced agency and personalization. GhostWriter leverages\nLLMs to learn the user's intended writing style implicitly as they write, while\nallowing explicit teaching moments through manual style edits and annotations.\nWe study 18 participants who use GhostWriter on two different writing tasks,\nobserving that it helps users craft personalized text generations and empowers\nthem by providing multiple ways to control the system's writing style. From\nthis study, we present insights regarding people's relationship with\nAI-assisted writing and offer design recommendations for future work.",
+      "upvotes": 9
+    },
+    {
+      "title": "Towards Next-Level Post-Training Quantization of Hyper-Scale Transformers",
+      "url": "https://huggingface.co/papers/2402.08958",
+      "authors": [
+        "Kyungphil Park",
+        "Chungman Lee",
+        "Ho-young Kim",
+        "Joonyoung Kim",
+        "Yongkweon Jeon"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.08958.pdf",
+      "abstract": "With the increasing complexity of generative AI models, post-training\nquantization (PTQ) has emerged as a promising solution for deploying\nhyper-scale models on edge devices such as mobile devices and TVs. Existing PTQ\nschemes, however, consume considerable time and resources, which could be a\nbottleneck in real situations where frequent model updates and multiple\nhyper-parameter tunings are required. As a cost-effective alternative, one-shot\nPTQ schemes have been proposed. Still, the performance is somewhat limited\nbecause they cannot consider the inter-layer dependency within the attention\nmodule, which is a very important feature of Transformers. In this paper, we\nthus propose a novel PTQ algorithm that balances accuracy and efficiency. The\nkey idea of the proposed algorithm called aespa is to perform quantization\nlayer-wise for efficiency while considering cross-layer dependency to preserve\nthe attention score. Through extensive experiments on various language models\nand complexity analysis, we demonstrate that aespa is accurate and efficient in\nquantizing Transformer models.",
+      "upvotes": 3
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "date": "2024-09-02",
+  "papers": [
+    {
+      "title": "SciLitLLM: How to Adapt LLMs for Scientific Literature Understanding",
+      "url": "https://huggingface.co/papers/2408.15545",
+      "authors": [
+        "Jin Huang",
+        "Linfeng Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.15545.pdf",
+      "abstract": "Scientific literature understanding is crucial for extracting targeted\ninformation and garnering insights, thereby significantly advancing scientific\ndiscovery. Despite the remarkable success of Large Language Models (LLMs), they\nface challenges in scientific literature understanding, primarily due to (1) a\nlack of scientific knowledge and (2) unfamiliarity with specialized scientific\ntasks.\n  To develop an LLM specialized in scientific literature understanding, we\npropose a hybrid strategy that integrates continual pre-training (CPT) and\nsupervised fine-tuning (SFT), to simultaneously infuse scientific domain\nknowledge and enhance instruction-following capabilities for domain-specific\ntasks.cIn this process, we identify two key challenges: (1) constructing\nhigh-quality CPT corpora, and (2) generating diverse SFT instructions. We\naddress these challenges through a meticulous pipeline, including PDF text\nextraction, parsing content error correction, quality filtering, and synthetic\ninstruction creation. Applying this strategy, we present a suite of LLMs:\nSciLitLLM, specialized in scientific literature understanding. These models\ndemonstrate promising performance on scientific literature understanding\nbenchmarks.\n  Our contributions are threefold: (1) We present an effective framework that\nintegrates CPT and SFT to adapt LLMs to scientific literature understanding,\nwhich can also be easily adapted to other domains. (2) We propose an LLM-based\nsynthesis method to generate diverse and high-quality scientific instructions,\nresulting in a new instruction set -- SciLitIns -- for supervised fine-tuning\nin less-represented scientific domains. (3) SciLitLLM achieves promising\nperformance improvements on scientific literature understanding benchmarks.",
+      "upvotes": 34
+    },
+    {
+      "title": "UrBench: A Comprehensive Benchmark for Evaluating Large Multimodal Models in Multi-View Urban Scenarios",
+      "url": "https://huggingface.co/papers/2408.17267",
+      "authors": [
+        "Dairong Chen",
+        "Junyan Ye",
+        "Jinhua Yu",
+        "Dahua Lin",
+        "Conghui He"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.17267.pdf",
+      "abstract": "Recent evaluations of Large Multimodal Models (LMMs) have explored their\ncapabilities in various domains, with only few benchmarks specifically focusing\non urban environments. Moreover, existing urban benchmarks have been limited to\nevaluating LMMs with basic region-level urban tasks under singular views,\nleading to incomplete evaluations of LMMs' abilities in urban environments. To\naddress these issues, we present UrBench, a comprehensive benchmark designed\nfor evaluating LMMs in complex multi-view urban scenarios. UrBench contains\n11.6K meticulously curated questions at both region-level and role-level that\ncover 4 task dimensions: Geo-Localization, Scene Reasoning, Scene\nUnderstanding, and Object Understanding, totaling 14 task types. In\nconstructing UrBench, we utilize data from existing datasets and additionally\ncollect data from 11 cities, creating new annotations using a cross-view\ndetection-matching method. With these images and annotations, we then integrate\nLMM-based, rule-based, and human-based methods to construct large-scale\nhigh-quality questions. Our evaluations on 21 LMMs show that current LMMs\nstruggle in the urban environments in several aspects. Even the best performing\nGPT-4o lags behind humans in most tasks, ranging from simple tasks such as\ncounting to complex tasks such as orientation, localization and object\nattribute recognition, with an average performance gap of 17.4%. Our benchmark\nalso reveals that LMMs exhibit inconsistent behaviors with different urban\nviews, especially with respect to understanding cross-view relations. UrBench\ndatasets and benchmark results will be publicly available at\nhttps://opendatalab.github.io/UrBench/.",
+      "upvotes": 23
+    },
+    {
+      "title": "CoRe: Context-Regularized Text Embedding Learning for Text-to-Image Personalization",
+      "url": "https://huggingface.co/papers/2408.15914",
+      "authors": [
+        "Jian Yin",
+        "Baoquan Zhao",
+        "Qing Li",
+        "Xudong Mao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.15914.pdf",
+      "abstract": "Recent advances in text-to-image personalization have enabled high-quality\nand controllable image synthesis for user-provided concepts. However, existing\nmethods still struggle to balance identity preservation with text alignment.\nOur approach is based on the fact that generating prompt-aligned images\nrequires a precise semantic understanding of the prompt, which involves\naccurately processing the interactions between the new concept and its\nsurrounding context tokens within the CLIP text encoder. To address this, we\naim to embed the new concept properly into the input embedding space of the\ntext encoder, allowing for seamless integration with existing tokens. We\nintroduce Context Regularization (CoRe), which enhances the learning of the new\nconcept's text embedding by regularizing its context tokens in the prompt. This\nis based on the insight that appropriate output vectors of the text encoder for\nthe context tokens can only be achieved if the new concept's text embedding is\ncorrectly learned. CoRe can be applied to arbitrary prompts without requiring\nthe generation of corresponding images, thus improving the generalization of\nthe learned text embedding. Additionally, CoRe can serve as a test-time\noptimization technique to further enhance the generations for specific prompts.\nComprehensive experiments demonstrate that our method outperforms several\nbaseline methods in both identity preservation and text alignment. Code will be\nmade publicly available.",
+      "upvotes": 21
+    },
+    {
+      "title": "CrossViewDiff: A Cross-View Diffusion Model for Satellite-to-Street View Synthesis",
+      "url": "https://huggingface.co/papers/2408.14765",
+      "authors": [
+        "Huaping Zhong",
+        "Zhimeng Zheng",
+        "Zilong Huang",
+        "Dahua Lin",
+        "Conghui He"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.14765.pdf",
+      "abstract": "Satellite-to-street view synthesis aims at generating a realistic street-view\nimage from its corresponding satellite-view image. Although stable diffusion\nmodels have exhibit remarkable performance in a variety of image generation\napplications, their reliance on similar-view inputs to control the generated\nstructure or texture restricts their application to the challenging cross-view\nsynthesis task. In this work, we propose CrossViewDiff, a cross-view diffusion\nmodel for satellite-to-street view synthesis. To address the challenges posed\nby the large discrepancy across views, we design the satellite scene structure\nestimation and cross-view texture mapping modules to construct the structural\nand textural controls for street-view image synthesis. We further design a\ncross-view control guided denoising process that incorporates the above\ncontrols via an enhanced cross-view attention module. To achieve a more\ncomprehensive evaluation of the synthesis results, we additionally design a\nGPT-based scoring method as a supplement to standard evaluation metrics. We\nalso explore the effect of different data sources (e.g., text, maps, building\nheights, and multi-temporal satellite imagery) on this task. Results on three\npublic cross-view datasets show that CrossViewDiff outperforms current\nstate-of-the-art on both standard and GPT-based evaluation metrics, generating\nhigh-quality street-view panoramas with more realistic structures and textures\nacross rural, suburban, and urban scenes. The code and models of this work will\nbe released at https://opendatalab.github.io/CrossViewDiff/.",
+      "upvotes": 14
+    },
+    {
+      "title": "InkubaLM: A small language model for low-resource African languages",
+      "url": "https://huggingface.co/papers/2408.17024",
+      "authors": [
+        "Fadel Thior",
+        "Benjamin Rosman"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.17024.pdf",
+      "abstract": "High-resource language models often fall short in the African context, where\nthere is a critical need for models that are efficient, accessible, and locally\nrelevant, even amidst significant computing and data constraints. This paper\nintroduces InkubaLM, a small language model with 0.4 billion parameters, which\nachieves performance comparable to models with significantly larger parameter\ncounts and more extensive training data on tasks such as machine translation,\nquestion-answering, AfriMMLU, and the AfriXnli task. Notably, InkubaLM\noutperforms many larger models in sentiment analysis and demonstrates\nremarkable consistency across multiple languages. This work represents a\npivotal advancement in challenging the conventional paradigm that effective\nlanguage models must rely on substantial resources. Our model and datasets are\npublicly available \\url{https://huggingface.co/lelapa} to encourage\nresearch and development on low-resource languages.",
+      "upvotes": 12
+    },
+    {
+      "title": "VQ4DiT: Efficient Post-Training Vector Quantization for Diffusion Transformers",
+      "url": "https://huggingface.co/papers/2408.17131",
+      "authors": [
+        "Juncan Deng",
+        "Shuaiting Li",
+        "Zeyu Wang",
+        "Hong Gu",
+        "Kedong Xu",
+        "Kejie Huang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.17131.pdf",
+      "abstract": "The Diffusion Transformers Models (DiTs) have transitioned the network\narchitecture from traditional UNets to transformers, demonstrating exceptional\ncapabilities in image generation. Although DiTs have been widely applied to\nhigh-definition video generation tasks, their large parameter size hinders\ninference on edge devices. Vector quantization (VQ) can decompose model weight\ninto a codebook and assignments, allowing extreme weight quantization and\nsignificantly reducing memory usage. In this paper, we propose VQ4DiT, a fast\npost-training vector quantization method for DiTs. We found that traditional VQ\nmethods calibrate only the codebook without calibrating the assignments. This\nleads to weight sub-vectors being incorrectly assigned to the same assignment,\nproviding inconsistent gradients to the codebook and resulting in a suboptimal\nresult. To address this challenge, VQ4DiT calculates the candidate assignment\nset for each weight sub-vector based on Euclidean distance and reconstructs the\nsub-vector based on the weighted average. Then, using the zero-data and\nblock-wise calibration method, the optimal assignment from the set is\nefficiently selected while calibrating the codebook. VQ4DiT quantizes a DiT\nXL/2 model on a single NVIDIA A100 GPU within 20 minutes to 5 hours depending\non the different quantization settings. Experiments show that VQ4DiT\nestablishes a new state-of-the-art in model size and performance trade-offs,\nquantizing weights to 2-bit precision while retaining acceptable image\ngeneration quality.",
+      "upvotes": 11
+    },
+    {
+      "title": "SurveySum: A Dataset for Summarizing Multiple Scientific Articles into a Survey Section",
+      "url": "https://huggingface.co/papers/2408.16444",
+      "authors": [
+        "Thales Sales Almeida",
+        "Rodrigo Nogueira",
+        "Jayr Pereira"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.16444.pdf",
+      "abstract": "Document summarization is a task to shorten texts into concise and\ninformative summaries. This paper introduces a novel dataset designed for\nsummarizing multiple scientific articles into a section of a survey. Our\ncontributions are: (1) SurveySum, a new dataset addressing the gap in\ndomain-specific summarization tools; (2) two specific pipelines to summarize\nscientific articles into a section of a survey; and (3) the evaluation of these\npipelines using multiple metrics to compare their performance. Our results\nhighlight the importance of high-quality retrieval stages and the impact of\ndifferent configurations on the quality of generated summaries.",
+      "upvotes": 8
+    },
+    {
+      "title": "The VoxCeleb Speaker Recognition Challenge: A Retrospective",
+      "url": "https://huggingface.co/papers/2408.14886",
+      "authors": [
+        "Andrew Brown",
+        "Andrew Zisserman"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.14886.pdf",
+      "abstract": "The VoxCeleb Speaker Recognition Challenges (VoxSRC) were a series of\nchallenges and workshops that ran annually from 2019 to 2023. The challenges\nprimarily evaluated the tasks of speaker recognition and diarisation under\nvarious settings including: closed and open training data; as well as\nsupervised, self-supervised, and semi-supervised training for domain\nadaptation. The challenges also provided publicly available training and\nevaluation datasets for each task and setting, with new test sets released each\nyear. In this paper, we provide a review of these challenges that covers: what\nthey explored; the methods developed by the challenge participants and how\nthese evolved; and also the current state of the field for speaker verification\nand diarisation. We chart the progress in performance over the five\ninstallments of the challenge on a common evaluation dataset and provide a\ndetailed analysis of how each year's special focus affected participants'\nperformance. This paper is aimed both at researchers who want an overview of\nthe speaker recognition and diarisation field, and also at challenge organisers\nwho want to benefit from the successes and avoid the mistakes of the VoxSRC\nchallenges. We end with a discussion of the current strengths of the field and\nopen challenges. Project page :\nhttps://mm.kaist.ac.kr/datasets/voxceleb/voxsrc/workshop.html",
+      "upvotes": 8
+    },
+    {
+      "title": "VLM4Bio: A Benchmark Dataset to Evaluate Pretrained Vision-Language Models for Trait Discovery from Biological Images",
+      "url": "https://huggingface.co/papers/2408.16176",
+      "authors": [
+        "Yasin Bakis",
+        "Bahadir Altintas",
+        "Matthew J. Thompson",
+        "Henry L. Bart",
+        "Paula M. Mabee",
+        "Tanya Berger-Wolf",
+        "Anuj Karpatne"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.16176.pdf",
+      "abstract": "Images are increasingly becoming the currency for documenting biodiversity on\nthe planet, providing novel opportunities for accelerating scientific\ndiscoveries in the field of organismal biology, especially with the advent of\nlarge vision-language models (VLMs). We ask if pre-trained VLMs can aid\nscientists in answering a range of biologically relevant questions without any\nadditional fine-tuning. In this paper, we evaluate the effectiveness of 12\nstate-of-the-art (SOTA) VLMs in the field of organismal biology using a novel\ndataset, VLM4Bio, consisting of 469K question-answer pairs involving 30K images\nfrom three groups of organisms: fishes, birds, and butterflies, covering five\nbiologically relevant tasks. We also explore the effects of applying prompting\ntechniques and tests for reasoning hallucination on the performance of VLMs,\nshedding new light on the capabilities of current SOTA VLMs in answering\nbiologically relevant questions using images. The code and datasets for running\nall the analyses reported in this paper can be found at\nhttps://github.com/sammarfy/VLM4Bio.",
+      "upvotes": 7
+    },
+    {
+      "title": "ClimDetect: A Benchmark Dataset for Climate Change Detection and Attribution",
+      "url": "https://huggingface.co/papers/2408.15993",
+      "authors": [
+        "Brian L. White",
+        "Tung Nguyen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.15993.pdf",
+      "abstract": "Detecting and attributing temperature increases due to climate change is\ncrucial for understanding global warming and guiding adaptation strategies. The\ncomplexity of distinguishing human-induced climate signals from natural\nvariability has challenged traditional detection and attribution (D&A)\napproaches, which seek to identify specific \"fingerprints\" in climate response\nvariables. Deep learning offers potential for discerning these complex patterns\nin expansive spatial datasets. However, lack of standard protocols has hindered\nconsistent comparisons across studies. We introduce ClimDetect, a standardized\ndataset of over 816k daily climate snapshots, designed to enhance model\naccuracy in identifying climate change signals. ClimDetect integrates various\ninput and target variables used in past research, ensuring comparability and\nconsistency. We also explore the application of vision transformers (ViT) to\nclimate data, a novel and modernizing approach in this context. Our open-access\ndata and code serve as a benchmark for advancing climate science through\nimproved model evaluations. ClimDetect is publicly accessible via Huggingface\ndataet respository at: https://huggingface.co/datasets/ClimDetect/ClimDetect.",
+      "upvotes": 7
+    },
+    {
+      "title": "CURLoRA: Stable LLM Continual Fine-Tuning and Catastrophic Forgetting Mitigation",
+      "url": "https://huggingface.co/papers/2408.14572",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2408.14572.pdf",
+      "abstract": "This paper introduces CURLoRA, a novel approach to fine-tuning large language\nmodels (LLMs) that leverages CUR matrix decomposition in the context of\nLow-Rank Adaptation (LoRA). Our method addresses two critical challenges in LLM\nfine-tuning: mitigating catastrophic forgetting during continual learning and\nreducing the number of trainable parameters. We propose a unique modification\nto the CUR decomposition process, utilizing inverted probabilities for column\nand row selection which acts as an implicit regularization, and initializing\nthe U matrix as a zero matrix, and only fine-tuning it. We demonstrate\nthrough experiments on multiple datasets that CURLoRA outperforms standard LoRA\nin mitigating catastrophic forgetting. It maintains model stability and\nperformance across tasks while significantly reducing the number of trainable\nparameters. Our results show that CURLoRA achieves very good and stable task\naccuracy while maintaining base model's perplexity scores fixed compared to\nLoRA upon continual fine-tuning, particularly in scenarios with limited data.",
+      "upvotes": 7
+    },
+    {
+      "title": "Jina-ColBERT-v2: A General-Purpose Multilingual Late Interaction Retriever",
+      "url": "https://huggingface.co/papers/2408.16672",
+      "authors": [
+        "Rohan Jha"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.16672.pdf",
+      "abstract": "Multi-vector dense models, such as ColBERT, have proven highly effective in\ninformation retrieval. ColBERT's late interaction scoring approximates the\njoint query-document attention seen in cross-encoders while maintaining\ninference efficiency closer to traditional dense retrieval models, thanks to\nits bi-encoder architecture and recent optimizations in indexing and search. In\nthis paper, we introduce several improvements to the ColBERT model architecture\nand training pipeline, leveraging techniques successful in the more established\nsingle-vector embedding model paradigm, particularly those suited for\nheterogeneous multilingual data. Our new model, Jina-ColBERT-v2, demonstrates\nstrong performance across a range of English and multilingual retrieval tasks,\nwhile also cutting storage requirements by up to 50% compared to previous\nmodels.",
+      "upvotes": 6
+    },
+    {
+      "title": "Automatic Differential Diagnosis using Transformer-Based Multi-Label Sequence Classification",
+      "url": "https://huggingface.co/papers/2408.15827",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2408.15827.pdf",
+      "abstract": "As the field of artificial intelligence progresses, assistive technologies\nare becoming more widely used across all industries. The healthcare industry is\nno different, with numerous studies being done to develop assistive tools for\nhealthcare professionals. Automatic diagnostic systems are one such beneficial\ntool that can assist with a variety of tasks, including collecting patient\ninformation, analyzing test results, and diagnosing patients. However, the idea\nof developing systems that can provide a differential diagnosis has been\nlargely overlooked in most of these research studies. In this study, we propose\na transformer-based approach for providing differential diagnoses based on a\npatient's age, sex, medical history, and symptoms. We use the DDXPlus dataset,\nwhich provides differential diagnosis information for patients based on 49\ndisease types. Firstly, we propose a method to process the tabular patient data\nfrom the dataset and engineer them into patient reports to make them suitable\nfor our research. In addition, we introduce two data modification modules to\ndiversify the training data and consequently improve the robustness of the\nmodels. We approach the task as a multi-label classification problem and\nconduct extensive experiments using four transformer models. All the models\ndisplayed promising results by achieving over 97% F1 score on the held-out test\nset. Moreover, we design additional behavioral tests to get a broader\nunderstanding of the models. In particular, for one of our test cases, we\nprepared a custom test set of 100 samples with the assistance of a doctor. The\nresults on the custom set showed that our proposed data modification modules\nimproved the model's generalization capabilities. We hope our findings will\nprovide future researchers with valuable insights and inspire them to develop\nreliable systems for automatic differential diagnosis.",
+      "upvotes": 6
+    },
+    {
+      "title": "Large-Scale Multi-omic Biosequence Transformers for Modeling Peptide-Nucleotide Interactions",
+      "url": "https://huggingface.co/papers/2408.16245",
+      "authors": [
+        "Robert J. Steele",
+        "Shivanand P. Lad",
+        "Eric Oermann"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.16245.pdf",
+      "abstract": "The transformer architecture has revolutionized bioinformatics and driven\nprogress in the understanding and prediction of the properties of biomolecules.\nAlmost all research on large-scale biosequence transformers has focused on one\ndomain at a time (single-omic), usually nucleotides or peptides. These models\nhave seen incredible success in downstream tasks in each domain and have\nachieved particularly noteworthy breakthroughs in sequences of peptides and\nstructural modeling. However, these single-omic models are naturally incapable\nof modeling multi-omic tasks, one of the most biologically critical being\nnucleotide-peptide interactions.\n  We present our work training the first multi-omic nucleotide-peptide\nfoundation models. We show that these multi-omic models (MOMs) can learn joint\nrepresentations between various single-omic distributions that are emergently\nconsistent with the Central Dogma of molecular biology, despite only being\ntrained on unlabeled biosequences. We further demonstrate that MOMs can be\nfine-tuned to achieve state-of-the-art results on peptide-nucleotide\ninteraction tasks, namely predicting the change in Gibbs free energy\n({\\Delta}G) of the binding interaction between a given oligonucleotide and\npeptide, as well as the effect on this binding interaction due to mutations in\nthe oligonucleotide sequence ({\\Delta}{\\Delta}G).\n  Remarkably, we show that multi-omic biosequence transformers emergently learn\nuseful structural information without any prior structural training, allowing\nus to predict which peptide residues are most involved in the\npeptide-nucleotide binding interaction. Lastly, we provide evidence that\nmulti-omic biosequence models are non-inferior to foundation models trained on\nsingle-omics distributions, suggesting a more generalized or foundational\napproach to building these models.",
+      "upvotes": 4
+    },
+    {
+      "title": "GIFT-SW: Gaussian noise Injected Fine-Tuning of Salient Weights for LLMs",
+      "url": "https://huggingface.co/papers/2408.15300",
+      "authors": [
+        "Maxim Zhelnin",
+        "Viktor Moskvoretskii",
+        "Egor Venediktov",
+        "Mariya Krylova",
+        "Aleksandr Zuev",
+        "Evgeny Burnaev"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.15300.pdf",
+      "abstract": "Parameter Efficient Fine-Tuning (PEFT) methods have gained popularity and\ndemocratized the usage of Large Language Models (LLMs). Recent studies have\nshown that a small subset of weights significantly impacts performance. Based\non this observation, we introduce a novel PEFT method, called Gaussian noise\nInjected Fine Tuning of Salient Weights (GIFT-SW). Our method updates only\nsalient columns, while injecting Gaussian noise into non-salient ones. To\nidentify these columns, we developeda generalized sensitivity metric that\nextends and unifies metrics from previous studies. Experiments with LLaMA\nmodels demonstrate that GIFT-SW outperforms full fine-tuning and modern PEFT\nmethods under the same computational budget. Moreover, GIFT-SW offers practical\nadvantages to recover performance of models subjected to mixed-precision\nquantization with keeping salient weights in full precision.",
+      "upvotes": 3
+    },
+    {
+      "title": "Iterative Graph Alignment",
+      "url": "https://huggingface.co/papers/2408.16667",
+      "authors": [
+        "Hardeep Singh Arora",
+        "Matt Johnson"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.16667.pdf",
+      "abstract": "By compressing diverse narratives, LLMs go beyond memorization, achieving\nintelligence by capturing generalizable causal relationships. However, they\nsuffer from local 'representation gaps' due to insufficient training data\ndiversity, limiting their real-world utility, especially in tasks requiring\nstrict alignment to rules. Traditional alignment methods relying on heavy human\nannotations are inefficient and unscalable. Recent self-alignment techniques\nalso fall short, as they often depend on self-selection based prompting and\nmemorization-based learning. To address these issues, we introduce Iterative\nGraph Alignment (IGA), an annotation-free rule-based alignment algorithm. A\nteacher model (VLM) employs Iterative Graph Prompting (IGP) to create logical\ngraphs and reference answers. The student model (LLM) identifies local\nknowledge gaps by attempting to align its responses with these references,\ncollaborating with helper models to generate diverse answers. These aligned\nresponses are then used for iterative supervised fine-tuning (SFT). Our\nevaluations across five rule-based scenarios demonstrate IGP's effectiveness,\nwith a 73.12\\% alignment improvement in Claude Sonnet 3.5, and\nLlama3-8B-Instruct achieving an 86.20\\% improvement, outperforming Claude\nSonnet 3.5 in rule-based alignment.",
+      "upvotes": 2
+    }
+  ]
+}

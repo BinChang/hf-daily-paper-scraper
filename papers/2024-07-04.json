@@ -1,0 +1,118 @@
+{
+  "date": "2024-07-04",
+  "papers": [
+    {
+      "title": "InternLM-XComposer-2.5: A Versatile Large Vision Language Model Supporting Long-Contextual Input and Output",
+      "url": "https://huggingface.co/papers/2407.03320",
+      "authors": [
+        "Pan Zhang",
+        "Xiaoyi Dong",
+        "Bin Wang",
+        "Linke Ouyang",
+        "Yining Li",
+        "Yang Gao",
+        "Peng Sun",
+        "Xinyue Zhang",
+        "Wei Li",
+        "Hang Yan",
+        "Xingcheng Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.03320.pdf",
+      "abstract": "We present InternLM-XComposer-2.5 (IXC-2.5), a versatile large-vision\nlanguage model that supports long-contextual input and output. IXC-2.5 excels\nin various text-image comprehension and composition applications, achieving\nGPT-4V level capabilities with merely 7B LLM backend. Trained with 24K\ninterleaved image-text contexts, it can seamlessly extend to 96K long contexts\nvia RoPE extrapolation. This long-context capability allows IXC-2.5 to excel in\ntasks requiring extensive input and output contexts. Compared to its previous\n2.0 version, InternLM-XComposer-2.5 features three major upgrades in\nvision-language comprehension: (1) Ultra-High Resolution Understanding, (2)\nFine-Grained Video Understanding, and (3) Multi-Turn Multi-Image Dialogue. In\naddition to comprehension, IXC-2.5 extends to two compelling applications using\nextra LoRA parameters for text-image composition: (1) Crafting Webpages and (2)\nComposing High-Quality Text-Image Articles. IXC-2.5 has been evaluated on 28\nbenchmarks, outperforming existing open-source state-of-the-art models on 16\nbenchmarks. It also surpasses or competes closely with GPT-4V and Gemini Pro on\n16 key tasks. The InternLM-XComposer-2.5 is publicly available at\nhttps://github.com/InternLM/InternLM-XComposer.",
+      "upvotes": 92
+    },
+    {
+      "title": "TabReD: A Benchmark of Tabular Machine Learning in-the-Wild",
+      "url": "https://huggingface.co/papers/2406.19380",
+      "authors": [
+        "Nikolay Kartashev",
+        "Artem Babenko"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.19380.pdf",
+      "abstract": "Benchmarks that closely reflect downstream application scenarios are\nessential for the streamlined adoption of new research in tabular machine\nlearning (ML). In this work, we examine existing tabular benchmarks and find\ntwo common characteristics of industry-grade tabular data that are\nunderrepresented in the datasets available to the academic community. First,\ntabular data often changes over time in real-world deployment scenarios. This\nimpacts model performance and requires time-based train and test splits for\ncorrect model evaluation. Yet, existing academic tabular datasets often lack\ntimestamp metadata to enable such evaluation. Second, a considerable portion of\ndatasets in production settings stem from extensive data acquisition and\nfeature engineering pipelines. For each specific dataset, this can have a\ndifferent impact on the absolute and relative number of predictive,\nuninformative, and correlated features, which in turn can affect model\nselection. To fill the aforementioned gaps in academic benchmarks, we introduce\nTabReD -- a collection of eight industry-grade tabular datasets covering a wide\nrange of domains from finance to food delivery services. We assess a large\nnumber of tabular ML models in the feature-rich, temporally-evolving data\nsetting facilitated by TabReD. We demonstrate that evaluation on time-based\ndata splits leads to different methods ranking, compared to evaluation on\nrandom splits more common in academic benchmarks. Furthermore, on the TabReD\ndatasets, MLP-like architectures and GBDT show the best results, while more\nsophisticated DL models are yet to prove their effectiveness.",
+      "upvotes": 47
+    },
+    {
+      "title": "No Training, No Problem: Rethinking Classifier-Free Guidance for Diffusion Models",
+      "url": "https://huggingface.co/papers/2407.02687",
+      "authors": [
+        "Otmar Hilliges"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.02687.pdf",
+      "abstract": "Classifier-free guidance (CFG) has become the standard method for enhancing\nthe quality of conditional diffusion models. However, employing CFG requires\neither training an unconditional model alongside the main diffusion model or\nmodifying the training procedure by periodically inserting a null condition.\nThere is also no clear extension of CFG to unconditional models. In this paper,\nwe revisit the core principles of CFG and introduce a new method, independent\ncondition guidance (ICG), which provides the benefits of CFG without the need\nfor any special training procedures. Our approach streamlines the training\nprocess of conditional diffusion models and can also be applied during\ninference on any pre-trained conditional model. Additionally, by leveraging the\ntime-step information encoded in all diffusion networks, we propose an\nextension of CFG, called time-step guidance (TSG), which can be applied to any\ndiffusion model, including unconditional ones. Our guidance techniques are easy\nto implement and have the same sampling cost as CFG. Through extensive\nexperiments, we demonstrate that ICG matches the performance of standard CFG\nacross various conditional diffusion models. Moreover, we show that TSG\nimproves generation quality in a manner similar to CFG, without relying on any\nconditional information.",
+      "upvotes": 22
+    },
+    {
+      "title": "TokenPacker: Efficient Visual Projector for Multimodal LLM",
+      "url": "https://huggingface.co/papers/2407.02392",
+      "authors": [
+        "Jian Liu",
+        "Song Wang",
+        "Jianke Zhu",
+        "Lei Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.02392.pdf",
+      "abstract": "The visual projector serves as an essential bridge between the visual encoder\nand the Large Language Model (LLM) in a Multimodal LLM (MLLM). Typically, MLLMs\nadopt a simple MLP to preserve all visual contexts via one-to-one\ntransformation. However, the visual tokens are redundant and can be\nconsiderably increased when dealing with high-resolution images, impairing the\nefficiency of MLLMs significantly. Some recent works have introduced resampler\nor abstractor to reduce the number of resulting visual tokens. Unfortunately,\nthey fail to capture finer details and undermine the visual reasoning\ncapabilities of MLLMs. In this work, we propose a novel visual projector, which\nadopts a coarse-to-fine scheme to inject the enriched characteristics to\ngenerate the condensed visual tokens. In specific, we first interpolate the\nvisual features as a low-resolution point query, providing the overall visual\nrepresentation as the foundation. Then, we introduce a region-to-point\ninjection module that utilizes high-resolution, multi-level region-based cues\nas fine-grained reference keys and values, allowing them to be fully absorbed\nwithin the corresponding local context region. This step effectively updates\nthe coarse point query, transforming it into an enriched one for the subsequent\nLLM reasoning. Extensive experiments demonstrate that our approach compresses\nthe visual tokens by 75%~89%, while achieves comparable or even better\nperformance across diverse benchmarks with significantly higher efficiency. The\nsource codes can be found at https://github.com/CircleRadon/TokenPacker.",
+      "upvotes": 21
+    },
+    {
+      "title": "PicoAudio: Enabling Precise Timestamp and Frequency Controllability of Audio Events in Text-to-audio Generation",
+      "url": "https://huggingface.co/papers/2407.02869",
+      "authors": [
+        "Mengyue Wu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.02869.pdf",
+      "abstract": "Recently, audio generation tasks have attracted considerable research\ninterests. Precise temporal controllability is essential to integrate audio\ngeneration with real applications. In this work, we propose a temporal\ncontrolled audio generation framework, PicoAudio. PicoAudio integrates temporal\ninformation to guide audio generation through tailored model design. It\nleverages data crawling, segmentation, filtering, and simulation of\nfine-grained temporally-aligned audio-text data. Both subjective and objective\nevaluations demonstrate that PicoAudio dramantically surpasses current\nstate-of-the-art generation models in terms of timestamp and occurrence\nfrequency controllability. The generated samples are available on the demo\nwebsite https://PicoAudio.github.io.",
+      "upvotes": 18
+    },
+    {
+      "title": "DisCo-Diff: Enhancing Continuous Diffusion Models with Discrete Latents",
+      "url": "https://huggingface.co/papers/2407.03300",
+      "authors": [
+        "Tommi Jaakkola",
+        "Karsten Kreis"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.03300.pdf",
+      "abstract": "Diffusion models (DMs) have revolutionized generative learning. They utilize\na diffusion process to encode data into a simple Gaussian distribution.\nHowever, encoding a complex, potentially multimodal data distribution into a\nsingle continuous Gaussian distribution arguably represents an unnecessarily\nchallenging learning problem. We propose Discrete-Continuous Latent Variable\nDiffusion Models (DisCo-Diff) to simplify this task by introducing\ncomplementary discrete latent variables. We augment DMs with learnable discrete\nlatents, inferred with an encoder, and train DM and encoder end-to-end.\nDisCo-Diff does not rely on pre-trained networks, making the framework\nuniversally applicable. The discrete latents significantly simplify learning\nthe DM's complex noise-to-data mapping by reducing the curvature of the DM's\ngenerative ODE. An additional autoregressive transformer models the\ndistribution of the discrete latents, a simple step because DisCo-Diff requires\nonly few discrete variables with small codebooks. We validate DisCo-Diff on toy\ndata, several image synthesis tasks as well as molecular docking, and find that\nintroducing discrete latents consistently improves model performance. For\nexample, DisCo-Diff achieves state-of-the-art FID scores on class-conditioned\nImageNet-64/128 datasets with ODE sampler.",
+      "upvotes": 11
+    },
+    {
+      "title": "Investigating Decoder-only Large Language Models for Speech-to-text Translation",
+      "url": "https://huggingface.co/papers/2407.03169",
+      "authors": [
+        "Hirofumi Inaguma"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.03169.pdf",
+      "abstract": "Large language models (LLMs), known for their exceptional reasoning\ncapabilities, generalizability, and fluency across diverse domains, present a\npromising avenue for enhancing speech-related tasks. In this paper, we focus on\nintegrating decoder-only LLMs to the task of speech-to-text translation (S2TT).\nWe propose a decoder-only architecture that enables the LLM to directly consume\nthe encoded speech representation and generate the text translation.\nAdditionally, we investigate the effects of different parameter-efficient\nfine-tuning techniques and task formulation. Our model achieves\nstate-of-the-art performance on CoVoST 2 and FLEURS among models trained\nwithout proprietary data. We also conduct analyses to validate the design\nchoices of our proposed model and bring insights to the integration of LLMs to\nS2TT.",
+      "upvotes": 9
+    },
+    {
+      "title": "A False Sense of Safety: Unsafe Information Leakage in 'Safe' AI Responses",
+      "url": "https://huggingface.co/papers/2407.02551",
+      "authors": [
+        "Ilia Shumailov",
+        "Nicolas Papernot"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.02551.pdf",
+      "abstract": "Large Language Models (LLMs) are vulnerable to\njailbreaksx2013methods to elicit harmful or generally impermissible\noutputs. Safety measures are developed and assessed on their effectiveness at\ndefending against jailbreak attacks, indicating a belief that safety is\nequivalent to robustness. We assert that current defense mechanisms, such as\noutput filters and alignment fine-tuning, are, and will remain, fundamentally\ninsufficient for ensuring model safety. These defenses fail to address risks\narising from dual-intent queries and the ability to composite innocuous outputs\nto achieve harmful goals. To address this critical gap, we introduce an\ninformation-theoretic threat model called inferential adversaries who exploit\nimpermissible information leakage from model outputs to achieve malicious\ngoals. We distinguish these from commonly studied security adversaries who only\nseek to force victim models to generate specific impermissible outputs. We\ndemonstrate the feasibility of automating inferential adversaries through\nquestion decomposition and response aggregation. To provide safety guarantees,\nwe define an information censorship criterion for censorship mechanisms,\nbounding the leakage of impermissible information. We propose a defense\nmechanism which ensures this bound and reveal an intrinsic safety-utility\ntrade-off. Our work provides the first theoretically grounded understanding of\nthe requirements for releasing safe LLMs and the utility costs involved.",
+      "upvotes": 7
+    },
+    {
+      "title": "Eliminating Position Bias of Language Models: A Mechanistic Approach",
+      "url": "https://huggingface.co/papers/2407.01100",
+      "authors": [
+        "Hanlin Zhang",
+        "Xiner Li",
+        "Kuan-Hao Huang",
+        "Chi Han",
+        "Shuiwang Ji",
+        "Sham M. Kakade",
+        "Hao Peng",
+        "Heng Ji"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.01100.pdf",
+      "abstract": "Position bias has proven to be a prevalent issue of modern language models\n(LMs), where the models prioritize content based on its position within the\ngiven context. This bias often leads to unexpected model failures and hurts\nperformance, robustness, and reliability across various applications. Our\nmechanistic analysis attributes the position bias to two components employed in\nnearly all state-of-the-art LMs: causal attention and relative positional\nencodings. Specifically, we find that causal attention generally causes models\nto favor distant content, while relative positional encodings like RoPE prefer\nnearby ones based on the analysis of retrieval-augmented question answering\n(QA). Further, our empirical study on object detection reveals that position\nbias is also present in vision-language models (VLMs).\n  Based on the above analyses, we propose to ELIMINATE position bias caused by\ndifferent input segment orders (e.g., options in LM-as-a-judge, retrieved\ndocuments in QA) in a TRAINING-FREE ZERO-SHOT manner. Our method changes the\ncausal attention to bidirectional attention between segments and utilizes model\nattention values to decide the relative orders of segments instead of using the\norder provided in input prompts, therefore enabling Position-INvariant\ninferencE (PINE) at the segment level. By eliminating position bias, models\nachieve better performance and reliability in downstream tasks where position\nbias widely exists, such as LM-as-a-judge and retrieval-augmented QA.\n  Notably, PINE is especially useful when adapting LMs for evaluating reasoning\npairs: it consistently provides 8 to 10 percentage points performance gains in\nmost cases, and makes Llama-3-70B-Instruct perform even better than\nGPT-4-0125-preview on the RewardBench reasoning subset.",
+      "upvotes": 6
+    }
+  ]
+}

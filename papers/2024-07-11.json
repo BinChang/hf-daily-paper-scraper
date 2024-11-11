@@ -1,0 +1,193 @@
+{
+  "date": "2024-07-11",
+  "papers": [
+    {
+      "title": "PaliGemma: A versatile 3B VLM for transfer",
+      "url": "https://huggingface.co/papers/2407.07726",
+      "authors": [
+        "Andreas Steiner",
+        "André Susano Pinto",
+        "Alexander Kolesnikov",
+        "Xiao Wang",
+        "Daniel Salz",
+        "Thomas Unterthiner",
+        "Adam Grycner",
+        "Manoj Kumar",
+        "Keran Rong",
+        "Rishabh Kabra",
+        "Matthias Bauer"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.07726.pdf",
+      "abstract": "PaliGemma is an open Vision-Language Model (VLM) that is based on the\nSigLIP-So400m vision encoder and the Gemma-2B language model. It is trained to\nbe a versatile and broadly knowledgeable base model that is effective to\ntransfer. It achieves strong performance on a wide variety of open-world tasks.\nWe evaluate PaliGemma on almost 40 diverse tasks including standard VLM\nbenchmarks, but also more specialized tasks such as remote-sensing and\nsegmentation.",
+      "upvotes": 67
+    },
+    {
+      "title": "Inference Performance Optimization for Large Language Models on CPUs",
+      "url": "https://huggingface.co/papers/2407.07304",
+      "authors": [
+        "Yi Xie"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.07304.pdf",
+      "abstract": "Large language models (LLMs) have shown exceptional performance and vast\npotential across diverse tasks. However, the deployment of LLMs with high\nperformance in low-resource environments has garnered significant attention in\nthe industry. When GPU hardware resources are limited, we can explore\nalternative options on CPUs. To mitigate the financial burden and alleviate\nconstraints imposed by hardware resources, optimizing inference performance is\nnecessary. In this paper, we introduce an easily deployable inference\nperformance optimization solution aimed at accelerating LLMs on CPUs. In this\nsolution, we implement an effective way to reduce the KV cache size while\nensuring precision. We propose a distributed inference optimization approach\nand implement it based on oneAPI Collective Communications Library.\nFurthermore, we propose optimization approaches for LLMs on CPU, and conduct\ntailored optimizations for the most commonly used models. The code is\nopen-sourced at https://github.com/intel/xFasterTransformer.",
+      "upvotes": 52
+    },
+    {
+      "title": "LLaVA-NeXT-Interleave: Tackling Multi-image, Video, and 3D in Large Multimodal Models",
+      "url": "https://huggingface.co/papers/2407.07895",
+      "authors": [
+        "Feng Li",
+        "Wei Li",
+        "Zejun Ma"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.07895.pdf",
+      "abstract": "Visual instruction tuning has made considerable strides in enhancing the\ncapabilities of Large Multimodal Models (LMMs). However, existing open LMMs\nlargely focus on single-image tasks, their applications to multi-image\nscenarios remains less explored. Additionally, prior LMM research separately\ntackles different scenarios, leaving it impossible to generalize cross\nscenarios with new emerging capabilities. To this end, we introduce\nLLaVA-NeXT-Interleave, which simultaneously tackles Multi-image, Multi-frame\n(video), Multi-view (3D), and Multi-patch (single-image) scenarios in LMMs. To\nenable these capabilities, we regard the interleaved data format as a general\ntemplate and compile the M4-Instruct dataset with 1,177.6k samples, spanning 4\nprimary domains with 14 tasks and 41 datasets. We also curate the\nLLaVA-Interleave Bench to comprehensively evaluate the multi-image performance\nof LMMs. Through extensive experiments, LLaVA-NeXT-Interleave achieves leading\nresults in multi-image, video, and 3D benchmarks, while maintaining the\nperformance of single-image tasks. Besides, our model also exhibits several\nemerging capabilities, e.g., transferring tasks across different settings and\nmodalities. Code is available at https://github.com/LLaVA-VL/LLaVA-NeXT",
+      "upvotes": 40
+    },
+    {
+      "title": "Controlling Space and Time with Diffusion Models",
+      "url": "https://huggingface.co/papers/2407.07860",
+      "authors": [
+        "Daniel Watson",
+        "Lala Li",
+        "Andrea Tagliasacchi",
+        "David J. Fleet"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.07860.pdf",
+      "abstract": "We present 4DiM, a cascaded diffusion model for 4D novel view synthesis\n(NVS), conditioned on one or more images of a general scene, and a set of\ncamera poses and timestamps. To overcome challenges due to limited availability\nof 4D training data, we advocate joint training on 3D (with camera pose), 4D\n(pose+time) and video (time but no pose) data and propose a new architecture\nthat enables the same. We further advocate the calibration of SfM posed data\nusing monocular metric depth estimators for metric scale camera control. For\nmodel evaluation, we introduce new metrics to enrich and overcome shortcomings\nof current evaluation schemes, demonstrating state-of-the-art results in both\nfidelity and pose control compared to existing diffusion models for 3D NVS,\nwhile at the same time adding the ability to handle temporal dynamics. 4DiM is\nalso used for improved panorama stitching, pose-conditioned video to video\ntranslation, and several other tasks. For an overview see\nhttps://4d-diffusion.github.io",
+      "upvotes": 16
+    },
+    {
+      "title": "Video-to-Audio Generation with Hidden Alignment",
+      "url": "https://huggingface.co/papers/2407.07464",
+      "authors": [
+        "Yong Ren",
+        "Rilin Chen",
+        "Yu Gu",
+        "Wei Liang",
+        "Dong Yu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.07464.pdf",
+      "abstract": "Generating semantically and temporally aligned audio content in accordance\nwith video input has become a focal point for researchers, particularly\nfollowing the remarkable breakthrough in text-to-video generation. In this\nwork, we aim to offer insights into the video-to-audio generation paradigm,\nfocusing on three crucial aspects: vision encoders, auxiliary embeddings, and\ndata augmentation techniques. Beginning with a foundational model VTA-LDM built\non a simple yet surprisingly effective intuition, we explore various vision\nencoders and auxiliary embeddings through ablation studies. Employing a\ncomprehensive evaluation pipeline that emphasizes generation quality and\nvideo-audio synchronization alignment, we demonstrate that our model exhibits\nstate-of-the-art video-to-audio generation capabilities. Furthermore, we\nprovide critical insights into the impact of different data augmentation\nmethods on enhancing the generation framework's overall capacity. We showcase\npossibilities to advance the challenge of generating synchronized audio from\nsemantic and temporal perspectives. We hope these insights will serve as a\nstepping stone toward developing more realistic and accurate audio-visual\ngeneration models.",
+      "upvotes": 16
+    },
+    {
+      "title": "VEnhancer: Generative Space-Time Enhancement for Video Generation",
+      "url": "https://huggingface.co/papers/2407.07667",
+      "authors": [
+        "Tianfan Xue",
+        "Peng Gao",
+        "Yu Qiao",
+        "Wanli Ouyang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.07667.pdf",
+      "abstract": "We present VEnhancer, a generative space-time enhancement framework that\nimproves the existing text-to-video results by adding more details in spatial\ndomain and synthetic detailed motion in temporal domain. Given a generated\nlow-quality video, our approach can increase its spatial and temporal\nresolution simultaneously with arbitrary up-sampling space and time scales\nthrough a unified video diffusion model. Furthermore, VEnhancer effectively\nremoves generated spatial artifacts and temporal flickering of generated\nvideos. To achieve this, basing on a pretrained video diffusion model, we train\na video ControlNet and inject it to the diffusion model as a condition on low\nframe-rate and low-resolution videos. To effectively train this video\nControlNet, we design space-time data augmentation as well as video-aware\nconditioning. Benefiting from the above designs, VEnhancer yields to be stable\nduring training and shares an elegant end-to-end training manner. Extensive\nexperiments show that VEnhancer surpasses existing state-of-the-art video\nsuper-resolution and space-time super-resolution methods in enhancing\nAI-generated videos. Moreover, with VEnhancer, exisiting open-source\nstate-of-the-art text-to-video method, VideoCrafter-2, reaches the top one in\nvideo generation benchmark -- VBench.",
+      "upvotes": 13
+    },
+    {
+      "title": "Still-Moving: Customized Video Generation without Customized Video Data",
+      "url": "https://huggingface.co/papers/2407.08674",
+      "authors": [
+        "Shiran Zada",
+        "Roni Paiss",
+        "Ariel Ephrat",
+        "Omer Tov",
+        "Michael Rubinstein",
+        "Lior Wolf",
+        "Tali Dekel",
+        "Tomer Michaeli",
+        "Inbar Mosseri"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.08674.pdf",
+      "abstract": "Customizing text-to-image (T2I) models has seen tremendous progress recently,\nparticularly in areas such as personalization, stylization, and conditional\ngeneration. However, expanding this progress to video generation is still in\nits infancy, primarily due to the lack of customized video data. In this work,\nwe introduce Still-Moving, a novel generic framework for customizing a\ntext-to-video (T2V) model, without requiring any customized video data. The\nframework applies to the prominent T2V design where the video model is built\nover a text-to-image (T2I) model (e.g., via inflation). We assume access to a\ncustomized version of the T2I model, trained only on still image data (e.g.,\nusing DreamBooth or StyleDrop). Naively plugging in the weights of the\ncustomized T2I model into the T2V model often leads to significant artifacts or\ninsufficient adherence to the customization data. To overcome this issue, we\ntrain lightweight Spatial Adapters that adjust the features produced\nby the injected T2I layers. Importantly, our adapters are trained on\n\"frozen videos\" (i.e., repeated images), constructed from image\nsamples generated by the customized T2I model. This training is facilitated by\na novel Motion Adapter module, which allows us to train on such\nstatic videos while preserving the motion prior of the video model. At test\ntime, we remove the Motion Adapter modules and leave in only the trained\nSpatial Adapters. This restores the motion prior of the T2V model while\nadhering to the spatial prior of the customized T2I model. We demonstrate the\neffectiveness of our approach on diverse tasks including personalized,\nstylized, and conditional generation. In all evaluated scenarios, our method\nseamlessly integrates the spatial prior of the customized T2I model with a\nmotion prior supplied by the T2V model.",
+      "upvotes": 12
+    },
+    {
+      "title": "Do Vision and Language Models Share Concepts? A Vector Space Alignment Study",
+      "url": "https://huggingface.co/papers/2302.06555",
+      "authors": [
+        "Yova Kementchedjhieva",
+        "Constanza Fierro",
+        "Anders Søgaard"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2302.06555.pdf",
+      "abstract": "Large-scale pretrained language models (LMs) are said to ``lack the ability\nto connect utterances to the world'' (Bender and Koller, 2020), because they do\nnot have ``mental models of the world' '(Mitchell and Krakauer, 2023). If so,\none would expect LM representations to be unrelated to representations induced\nby vision models. We present an empirical evaluation across four families of\nLMs (BERT, GPT-2, OPT and LLaMA-2) and three vision model architectures\n(ResNet, SegFormer, and MAE). Our experiments show that LMs partially converge\ntowards representations isomorphic to those of vision models, subject to\ndispersion, polysemy and frequency. This has important implications for both\nmulti-modal processing and the LM understanding debate (Mitchell and Krakauer,\n2023).",
+      "upvotes": 9
+    },
+    {
+      "title": "CosmoCLIP: Generalizing Large Vision-Language Models for Astronomical Imaging",
+      "url": "https://huggingface.co/papers/2407.07315",
+      "authors": [
+        "Umaima Rahman",
+        "Mohsen Guizani",
+        "Fakhri Karray"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.07315.pdf",
+      "abstract": "Existing vision-text contrastive learning models enhance representation\ntransferability and support zero-shot prediction by matching paired image and\ncaption embeddings while pushing unrelated pairs apart. However, astronomical\nimage-label datasets are significantly smaller compared to general image and\nlabel datasets available from the internet. We introduce CosmoCLIP, an\nastronomical image-text contrastive learning framework precisely fine-tuned on\nthe pre-trained CLIP model using SpaceNet and BLIP-based captions. SpaceNet,\nattained via FLARE, constitutes ~13k optimally distributed images, while BLIP\nacts as a rich knowledge extractor. The rich semantics derived from this\nSpaceNet and BLIP descriptions, when learned contrastively, enable CosmoCLIP to\nachieve superior generalization across various in-domain and out-of-domain\ntasks. Our results demonstrate that CosmoCLIP is a straightforward yet powerful\nframework, significantly outperforming CLIP in zero-shot classification and\nimage-text retrieval tasks.",
+      "upvotes": 6
+    },
+    {
+      "title": "On Leakage of Code Generation Evaluation Datasets",
+      "url": "https://huggingface.co/papers/2407.07565",
+      "authors": [
+        "Raymond Ma",
+        "Maxime Voisin",
+        "Ellen Gilsenan-McMahon"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.07565.pdf",
+      "abstract": "In this paper we consider contamination by code generation test sets, in\nparticular in their use in modern large language models. We discuss three\npossible sources of such contamination and show findings supporting each of\nthem: (i) direct data leakage, (ii) indirect data leakage through the use of\nsynthetic data and (iii) overfitting to evaluation sets during model selection.\n  Key to our findings is a new dataset of 161 prompts with their associated\npython solutions, dataset which is released at\nhttps://huggingface.co/datasets/CohereForAI/lbpp .",
+      "upvotes": 5
+    },
+    {
+      "title": "This&That: Language-Gesture Controlled Video Generation for Robot Planning",
+      "url": "https://huggingface.co/papers/2407.05530",
+      "authors": [
+        "Nikhil Sridhar",
+        "Chao Feng",
+        "Mark Van der Merwe",
+        "Nima Fazeli"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.05530.pdf",
+      "abstract": "We propose a robot learning method for communicating, planning, and executing\na wide range of tasks, dubbed This&That. We achieve robot planning for general\ntasks by leveraging the power of video generative models trained on\ninternet-scale data containing rich physical and semantic context. In this\nwork, we tackle three fundamental challenges in video-based planning: 1)\nunambiguous task communication with simple human instructions, 2) controllable\nvideo generation that respects user intents, and 3) translating visual planning\ninto robot actions. We propose language-gesture conditioning to generate\nvideos, which is both simpler and clearer than existing language-only methods,\nespecially in complex and uncertain environments. We then suggest a behavioral\ncloning design that seamlessly incorporates the video plans. This&That\ndemonstrates state-of-the-art effectiveness in addressing the above three\nchallenges, and justifies the use of video generation as an intermediate\nrepresentation for generalizable task planning and execution. Project website:\nhttps://cfeng16.github.io/this-and-that/.",
+      "upvotes": 3
+    },
+    {
+      "title": "An accurate detection is not all you need to combat label noise in web-noisy datasets",
+      "url": "https://huggingface.co/papers/2407.05528",
+      "authors": [
+        "Eric Arazo",
+        "Tarun Krishna",
+        "Noel E. O'Connor",
+        "Kevin McGuinness"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.05528.pdf",
+      "abstract": "Training a classifier on web-crawled data demands learning algorithms that\nare robust to annotation errors and irrelevant examples. This paper builds upon\nthe recent empirical observation that applying unsupervised contrastive\nlearning to noisy, web-crawled datasets yields a feature representation under\nwhich the in-distribution (ID) and out-of-distribution (OOD) samples are\nlinearly separable. We show that direct estimation of the separating hyperplane\ncan indeed offer an accurate detection of OOD samples, and yet, surprisingly,\nthis detection does not translate into gains in classification accuracy.\nDigging deeper into this phenomenon, we discover that the near-perfect\ndetection misses a type of clean examples that are valuable for supervised\nlearning. These examples often represent visually simple images, which are\nrelatively easy to identify as clean examples using standard loss- or\ndistance-based methods despite being poorly separated from the OOD distribution\nusing unsupervised learning. Because we further observe a low correlation with\nSOTA metrics, this urges us to propose a hybrid solution that alternates\nbetween noise detection using linear separation and a state-of-the-art (SOTA)\nsmall-loss approach. When combined with the SOTA algorithm PLS, we\nsubstantially improve SOTA results for real-world image classification in the\npresence of web noise github.com/PaulAlbert31/LSA",
+      "upvotes": 3
+    },
+    {
+      "title": "CrowdMoGen: Zero-Shot Text-Driven Collective Motion Generation",
+      "url": "https://huggingface.co/papers/2407.06188",
+      "authors": [
+        "Mingyuan Zhang",
+        "Chenyang Gu",
+        "Ziwei Liu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.06188.pdf",
+      "abstract": "Crowd Motion Generation is essential in entertainment industries such as\nanimation and games as well as in strategic fields like urban simulation and\nplanning. This new task requires an intricate integration of control and\ngeneration to realistically synthesize crowd dynamics under specific spatial\nand semantic constraints, whose challenges are yet to be fully explored. On the\none hand, existing human motion generation models typically focus on individual\nbehaviors, neglecting the complexities of collective behaviors. On the other\nhand, recent methods for multi-person motion generation depend heavily on\npre-defined scenarios and are limited to a fixed, small number of inter-person\ninteractions, thus hampering their practicality. To overcome these challenges,\nwe introduce CrowdMoGen, a zero-shot text-driven framework that harnesses the\npower of Large Language Model (LLM) to incorporate the collective intelligence\ninto the motion generation framework as guidance, thereby enabling\ngeneralizable planning and generation of crowd motions without paired training\ndata. Our framework consists of two key components: 1) Crowd Scene Planner that\nlearns to coordinate motions and dynamics according to specific scene contexts\nor introduced perturbations, and 2) Collective Motion Generator that\nefficiently synthesizes the required collective motions based on the holistic\nplans. Extensive quantitative and qualitative experiments have validated the\neffectiveness of our framework, which not only fills a critical gap by\nproviding scalable and generalizable solutions for Crowd Motion Generation task\nbut also achieves high levels of realism and flexibility.",
+      "upvotes": 1
+    },
+    {
+      "title": "BiGym: A Demo-Driven Mobile Bi-Manual Manipulation Benchmark",
+      "url": "https://huggingface.co/papers/2407.07788",
+      "authors": [
+        "Nikita Chernyadev",
+        "Nicholas Backshall",
+        "Xiao Ma",
+        "Younggyo Seo",
+        "Stephen James"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.07788.pdf",
+      "abstract": "We introduce BiGym, a new benchmark and learning environment for mobile\nbi-manual demo-driven robotic manipulation. BiGym features 40 diverse tasks set\nin home environments, ranging from simple target reaching to complex kitchen\ncleaning. To capture the real-world performance accurately, we provide\nhuman-collected demonstrations for each task, reflecting the diverse modalities\nfound in real-world robot trajectories. BiGym supports a variety of\nobservations, including proprioceptive data and visual inputs such as RGB, and\ndepth from 3 camera views. To validate the usability of BiGym, we thoroughly\nbenchmark the state-of-the-art imitation learning algorithms and demo-driven\nreinforcement learning algorithms within the environment and discuss the future\nopportunities.",
+      "upvotes": 1
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "date": "2024-07-01",
+  "papers": [
+    {
+      "title": "Scaling Synthetic Data Creation with 1,000,000,000 Personas",
+      "url": "https://huggingface.co/papers/2406.20094",
+      "authors": [
+        "Xin Chan",
+        "Dong Yu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.20094.pdf",
+      "abstract": "We propose a novel persona-driven data synthesis methodology that leverages\nvarious perspectives within a large language model (LLM) to create diverse\nsynthetic data. To fully exploit this methodology at scale, we introduce\nPersona Hub -- a collection of 1 billion diverse personas automatically curated\nfrom web data. These 1 billion personas (~13% of the world's total population),\nacting as distributed carriers of world knowledge, can tap into almost every\nperspective encapsulated within the LLM, thereby facilitating the creation of\ndiverse synthetic data at scale for various scenarios. By showcasing Persona\nHub's use cases in synthesizing high-quality mathematical and logical reasoning\nproblems, instructions (i.e., user prompts), knowledge-rich texts, game NPCs\nand tools (functions) at scale, we demonstrate persona-driven data synthesis is\nversatile, scalable, flexible, and easy to use, potentially driving a paradigm\nshift in synthetic data creation and applications in practice, which may have a\nprofound impact on LLM research and development.",
+      "upvotes": 94
+    },
+    {
+      "title": "HuatuoGPT-Vision, Towards Injecting Medical Visual Knowledge into Multimodal LLMs at Scale",
+      "url": "https://huggingface.co/papers/2406.19280",
+      "authors": [
+        "Guiming Hardy Chen",
+        "Guangjun Yu",
+        "Xiang Wan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.19280.pdf",
+      "abstract": "The rapid development of multimodal large language models (MLLMs), such as\nGPT-4V, has led to significant advancements. However, these models still face\nchallenges in medical multimodal capabilities due to limitations in the\nquantity and quality of medical vision-text data, stemming from data privacy\nconcerns and high annotation costs. While pioneering approaches utilize\nPubMed's large-scale, de-identified medical image-text pairs to address these\nlimitations, they still fall short due to inherent data noise. To tackle this,\nwe refined medical image-text pairs from PubMed and employed MLLMs (GPT-4V) in\nan 'unblinded' capacity to denoise and reformat the data, resulting in the\ncreation of the PubMedVision dataset with 1.3 million medical VQA samples. Our\nvalidation demonstrates that: (1) PubMedVision can significantly enhance the\nmedical multimodal capabilities of current MLLMs, showing significant\nimprovement in benchmarks including the MMMU Health & Medicine track; (2)\nmanual checks by medical experts and empirical results validate the superior\ndata quality of our dataset compared to other data construction methods. Using\nPubMedVision, we train a 34B medical MLLM HuatuoGPT-Vision, which shows\nsuperior performance in medical multimodal scenarios among open-source MLLMs.",
+      "upvotes": 60
+    },
+    {
+      "title": "Direct Preference Knowledge Distillation for Large Language Models",
+      "url": "https://huggingface.co/papers/2406.19774",
+      "authors": [
+        "Yixing Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.19774.pdf",
+      "abstract": "In the field of large language models (LLMs), Knowledge Distillation (KD) is\na critical technique for transferring capabilities from teacher models to\nstudent models. However, existing KD methods face limitations and challenges in\ndistillation of LLMs, including efficiency and insufficient measurement\ncapabilities of traditional KL divergence. It is shown that LLMs can serve as\nan implicit reward function, which we define as a supplement to KL divergence.\nIn this work, we propose Direct Preference Knowledge Distillation (DPKD) for\nLLMs. DPKD utilizes distribution divergence to represent the preference loss\nand implicit reward function. We re-formulate KD of LLMs into two stages: first\noptimizing and objective consisting of implicit reward and reverse KL\ndivergence and then improving the preference probability of teacher outputs\nover student outputs. We conducted experiments and analysis on various datasets\nwith LLM parameters ranging from 120M to 13B and demonstrate the broad\napplicability and effectiveness of our DPKD approach. Meanwhile, we prove the\nvalue and effectiveness of the introduced implicit reward and output preference\nin KD through experiments and theoretical analysis. The DPKD method outperforms\nthe baseline method in both output response precision and exact match\npercentage. Code and data are available at https://aka.ms/dpkd.",
+      "upvotes": 21
+    },
+    {
+      "title": "LLaRA: Supercharging Robot Learning Data for Vision-Language Policy",
+      "url": "https://huggingface.co/papers/2406.20095",
+      "authors": [
+        "Michael S. Ryoo"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.20095.pdf",
+      "abstract": "Large Language Models (LLMs) equipped with extensive world knowledge and\nstrong reasoning skills can tackle diverse tasks across domains, often by\nposing them as conversation-style instruction-response pairs. In this paper, we\npropose LLaRA: Large Language and Robotics Assistant, a framework which\nformulates robot action policy as conversations, and provides improved\nresponses when trained with auxiliary data that complements policy learning.\nLLMs with visual inputs, i.e., Vision Language Models (VLMs), have the capacity\nto process state information as visual-textual prompts and generate optimal\npolicy decisions in text. To train such action policy VLMs, we first introduce\nan automated pipeline to generate diverse high-quality robotics instruction\ndata from existing behavior cloning data. A VLM finetuned with the resulting\ncollection of datasets based on a conversation-style formulation tailored for\nrobotics tasks, can generate meaningful robot action policy decisions. Our\nexperiments across multiple simulated and real-world environments demonstrate\nthe state-of-the-art performance of the proposed LLaRA framework. The code,\ndatasets, and pretrained models are available at\nhttps://github.com/LostXine/LLaRA.",
+      "upvotes": 17
+    },
+    {
+      "title": "GaussianDreamerPro: Text to Manipulable 3D Gaussians with Highly Enhanced Quality",
+      "url": "https://huggingface.co/papers/2406.18462",
+      "authors": [
+        "Junjie Wang",
+        "Lingxi Xie",
+        "Wenyu Liu",
+        "Qi Tian"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.18462.pdf",
+      "abstract": "Recently, 3D Gaussian splatting (3D-GS) has achieved great success in\nreconstructing and rendering real-world scenes. To transfer the high rendering\nquality to generation tasks, a series of research works attempt to generate\n3D-Gaussian assets from text. However, the generated assets have not achieved\nthe same quality as those in reconstruction tasks. We observe that Gaussians\ntend to grow without control as the generation process may cause indeterminacy.\nAiming at highly enhancing the generation quality, we propose a novel framework\nnamed GaussianDreamerPro. The main idea is to bind Gaussians to reasonable\ngeometry, which evolves over the whole generation process. Along different\nstages of our framework, both the geometry and appearance can be enriched\nprogressively. The final output asset is constructed with 3D Gaussians bound to\nmesh, which shows significantly enhanced details and quality compared with\nprevious methods. Notably, the generated asset can also be seamlessly\nintegrated into downstream manipulation pipelines, e.g. animation, composition,\nand simulation etc., greatly promoting its potential in wide applications.\nDemos are available at https://taoranyi.com/gaussiandreamerpro/.",
+      "upvotes": 11
+    },
+    {
+      "title": "EVF-SAM: Early Vision-Language Fusion for Text-Prompted Segment Anything Model",
+      "url": "https://huggingface.co/papers/2406.20076",
+      "authors": [
+        "ei Liu",
+        "Heng Liu",
+        "Longjin Ran",
+        "Wenyu Liu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.20076.pdf",
+      "abstract": "Segment Anything Model (SAM) has attracted widespread attention for its\nsuperior interactive segmentation capabilities with visual prompts while\nlacking further exploration of text prompts. In this paper, we empirically\ninvestigate what text prompt encoders (e.g., CLIP or LLM) are good for adapting\nSAM for referring expression segmentation and introduce the Early\nVision-language Fusion-based SAM (EVF-SAM). EVF-SAM is a simple yet effective\nreferring segmentation method which exploits multimodal prompts (i.e., image\nand text) and comprises a pre-trained vision-language model to generate\nreferring prompts and a SAM model for segmentation. Surprisingly, we observe\nthat: (1) multimodal prompts and (2) vision-language models with early fusion\n(e.g., BEIT-3) are beneficial for prompting SAM for accurate referring\nsegmentation. Our experiments show that the proposed EVF-SAM based on BEIT-3\ncan obtain state-of-the-art performance on RefCOCO/+/g for referring expression\nsegmentation and demonstrate the superiority of prompting SAM with early\nvision-language fusion. In addition, the proposed EVF-SAM with 1.32B parameters\nachieves remarkably higher performance while reducing nearly 82% of parameters\ncompared to previous SAM methods based on large multimodal models.",
+      "upvotes": 8
+    },
+    {
+      "title": "AutoRAG-HP: Automatic Online Hyper-Parameter Tuning for Retrieval-Augmented Generation",
+      "url": "https://huggingface.co/papers/2406.19251",
+      "authors": [
+        "Jia Fu",
+        "Fangkai Yang",
+        "Lu Wang",
+        "Qingwei Lin",
+        "Dongmei Zhang",
+        "Saravan Rajmohan",
+        "Qi Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.19251.pdf",
+      "abstract": "Recent advancements in Large Language Models have transformed ML/AI\ndevelopment, necessitating a reevaluation of AutoML principles for the\nRetrieval-Augmented Generation (RAG) systems. To address the challenges of\nhyper-parameter optimization and online adaptation in RAG, we propose the\nAutoRAG-HP framework, which formulates the hyper-parameter tuning as an online\nmulti-armed bandit (MAB) problem and introduces a novel two-level Hierarchical\nMAB (Hier-MAB) method for efficient exploration of large search spaces. We\nconduct extensive experiments on tuning hyper-parameters, such as top-k\nretrieved documents, prompt compression ratio, and embedding methods, using the\nALCE-ASQA and Natural Questions datasets. Our evaluation from jointly\noptimization all three hyper-parameters demonstrate that MAB-based online\nlearning methods can achieve Recall@5 approx 0.8 for scenarios with\nprominent gradients in search space, using only sim20% of the LLM API calls\nrequired by the Grid Search approach. Additionally, the proposed Hier-MAB\napproach outperforms other baselines in more challenging optimization\nscenarios. The code will be made available at https://aka.ms/autorag.",
+      "upvotes": 8
+    },
+    {
+      "title": "Iterative Nash Policy Optimization: Aligning LLMs with General Preferences via No-Regret Learning",
+      "url": "https://huggingface.co/papers/2407.00617",
+      "authors": [
+        "Baolin Peng",
+        "Linfeng Song",
+        "Mingyue Huo",
+        "Nan Jiang",
+        "Haitao Mi",
+        "Dong Yu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2407.00617.pdf",
+      "abstract": "Reinforcement Learning with Human Feedback (RLHF) has achieved great success\nin aligning large language models (LLMs) with human preferences. Prevalent RLHF\napproaches are reward-based, following the Bradley-Terry (BT) model assumption,\nwhich may not fully capture the complexity of human preferences. In this paper,\nwe explore RLHF under a general preference framework and approach it from a\ngame-theoretic perspective. Specifically, we formulate the problem as a\ntwo-player game and propose a novel algorithm, iterative Nash policy\noptimization (INPO). The key idea is to let the policy play against itself via\nno-regret learning, thereby approximating the Nash policy. Unlike previous\nmethods, INPO bypasses the need for estimating the expected win rate for\nindividual responses, which typically incurs high computational or annotation\ncosts. Instead, we introduce a new loss objective that is directly minimized\nover a preference dataset. We provide theoretical analysis for our approach and\ndemonstrate its effectiveness through experiments on various representative\nbenchmarks. With an LLaMA-3-8B-based SFT model, INPO achieves a 41.5%\nlength-controlled win rate on AlpacaEval 2.0 and a 38.3% win rate on\nArena-Hard, showing substantial improvement over the state-of-the-art iterative\nalgorithm [Dong et al., 2024] under the BT model assumption. Additionally, our\nablation study highlights the benefits of incorporating KL regularization for\nresponse length control.",
+      "upvotes": 7
+    },
+    {
+      "title": "Arboretum: A Large Multimodal Dataset Enabling AI for Biodiversity",
+      "url": "https://huggingface.co/papers/2406.17720",
+      "authors": [
+        "Chih-Hsuan Yang",
+        "Zaki Jubery",
+        "Zi K. Deng",
+        "Andre Nakkab",
+        "Md Zahid Hasan",
+        "Shivani Chiranjeevi",
+        "Kelly Marshall",
+        "Nirmal Baishnab",
+        "Asheesh K Singh",
+        "Arti Singh",
+        "Soumik Sarkar",
+        "Nirav Merchant"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.17720.pdf",
+      "abstract": "We introduce Arboretum, the largest publicly accessible dataset designed to\nadvance AI for biodiversity applications. This dataset, curated from the\niNaturalist community science platform and vetted by domain experts to ensure\naccuracy, includes 134.6 million images, surpassing existing datasets in scale\nby an order of magnitude. The dataset encompasses image-language paired data\nfor a diverse set of species from birds (Aves), spiders/ticks/mites\n(Arachnida), insects (Insecta), plants (Plantae), fungus/mushrooms (Fungi),\nsnails (Mollusca), and snakes/lizards (Reptilia), making it a valuable resource\nfor multimodal vision-language AI models for biodiversity assessment and\nagriculture research. Each image is annotated with scientific names, taxonomic\ndetails, and common names, enhancing the robustness of AI model training.\n  We showcase the value of Arboretum by releasing a suite of CLIP models\ntrained using a subset of 40 million captioned images. We introduce several new\nbenchmarks for rigorous assessment, report accuracy for zero-shot learning, and\nevaluations across life stages, rare species, confounding species, and various\nlevels of the taxonomic hierarchy.\n  We anticipate that Arboretum will spur the development of AI models that can\nenable a variety of digital tools ranging from pest control strategies, crop\nmonitoring, and worldwide biodiversity assessment and environmental\nconservation. These advancements are critical for ensuring food security,\npreserving ecosystems, and mitigating the impacts of climate change. Arboretum\nis publicly available, easily accessible, and ready for immediate use.\n  Please see the https://baskargroup.github.io/Arboretum/{project\nwebsite} for links to our data, models, and code.",
+      "upvotes": 7
+    },
+    {
+      "title": "Efficient World Models with Context-Aware Tokenization",
+      "url": "https://huggingface.co/papers/2406.19320",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2406.19320.pdf",
+      "abstract": "Scaling up deep Reinforcement Learning (RL) methods presents a significant\nchallenge. Following developments in generative modelling, model-based RL\npositions itself as a strong contender. Recent advances in sequence modelling\nhave led to effective transformer-based world models, albeit at the price of\nheavy computations due to the long sequences of tokens required to accurately\nsimulate environments. In this work, we propose Delta-IRIS, a new agent with\na world model architecture composed of a discrete autoencoder that encodes\nstochastic deltas between time steps and an autoregressive transformer that\npredicts future deltas by summarizing the current state of the world with\ncontinuous tokens. In the Crafter benchmark, Delta-IRIS sets a new state of\nthe art at multiple frame budgets, while being an order of magnitude faster to\ntrain than previous attention-based approaches. We release our code and models\nat https://github.com/vmicheli/delta-iris.",
+      "upvotes": 7
+    },
+    {
+      "title": "RaTEScore: A Metric for Radiology Report Generation",
+      "url": "https://huggingface.co/papers/2406.16845",
+      "authors": [
+        "Ya Zhang",
+        "Yanfeng Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.16845.pdf",
+      "abstract": "This paper introduces a novel, entity-aware metric, termed as Radiological\nReport (Text) Evaluation (RaTEScore), to assess the quality of medical reports\ngenerated by AI models. RaTEScore emphasizes crucial medical entities such as\ndiagnostic outcomes and anatomical details, and is robust against complex\nmedical synonyms and sensitive to negation expressions. Technically, we\ndeveloped a comprehensive medical NER dataset, RaTE-NER, and trained an NER\nmodel specifically for this purpose. This model enables the decomposition of\ncomplex radiological reports into constituent medical entities. The metric\nitself is derived by comparing the similarity of entity embeddings, obtained\nfrom a language model, based on their types and relevance to clinical\nsignificance. Our evaluations demonstrate that RaTEScore aligns more closely\nwith human preference than existing metrics, validated both on established\npublic benchmarks and our newly proposed RaTE-Eval benchmark.",
+      "upvotes": 4
+    }
+  ]
+}

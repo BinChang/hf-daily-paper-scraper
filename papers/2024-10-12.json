@@ -1,0 +1,323 @@
+{
+  "date": "2024-10-12",
+  "papers": [
+    {
+      "title": "WALL-E: World Alignment by Rule Learning Improves World Model-based LLM Agents",
+      "url": "https://huggingface.co/papers/2410.07484",
+      "authors": [
+        "Guodong Long",
+        "Deheng Ye",
+        "Jing Jiang",
+        "Chengqi Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.07484.pdf",
+      "abstract": "Can large language models (LLMs) directly serve as powerful world models for\nmodel-based agents? While the gaps between the prior knowledge of LLMs and the\nspecified environment's dynamics do exist, our study reveals that the gaps can\nbe bridged by aligning an LLM with its deployed environment and such \"world\nalignment\" can be efficiently achieved by rule learning on LLMs. Given the rich\nprior knowledge of LLMs, only a few additional rules suffice to align LLM\npredictions with the specified environment dynamics. To this end, we propose a\nneurosymbolic approach to learn these rules gradient-free through LLMs, by\ninducing, updating, and pruning rules based on comparisons of agent-explored\ntrajectories and world model predictions. The resulting world model is composed\nof the LLM and the learned rules. Our embodied LLM agent \"WALL-E\" is built upon\nmodel-predictive control (MPC). By optimizing look-ahead actions based on the\nprecise world model, MPC significantly improves exploration and learning\nefficiency. Compared to existing LLM agents, WALL-E's reasoning only requires a\nfew principal rules rather than verbose buffered trajectories being included in\nthe LLM input. On open-world challenges in Minecraft and ALFWorld, WALL-E\nachieves higher success rates than existing methods, with lower costs on\nreplanning time and the number of tokens used for reasoning. In Minecraft,\nWALL-E exceeds baselines by 15-30% in success rate while costing 8-20 fewer\nreplanning rounds and only 60-80% of tokens. In ALFWorld, its success rate\nsurges to a new record high of 95% only after 6 iterations.",
+      "upvotes": 48
+    },
+    {
+      "title": "MathCoder2: Better Math Reasoning from Continued Pretraining on Model-translated Mathematical Code",
+      "url": "https://huggingface.co/papers/2410.08196",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2410.08196.pdf",
+      "abstract": "Code has been shown to be effective in enhancing the mathematical reasoning\nabilities of large language models due to its precision and accuracy. Previous\nworks involving continued mathematical pretraining often include code that\nutilizes math-related packages, which are primarily designed for fields such as\nengineering, machine learning, signal processing, or module testing, rather\nthan being directly focused on mathematical reasoning. In this paper, we\nintroduce a novel method for generating mathematical code accompanied with\ncorresponding reasoning steps for continued pretraining. Our approach begins\nwith the construction of a high-quality mathematical continued pretraining\ndataset by incorporating math-related web data, code using mathematical\npackages, math textbooks, and synthetic data. Next, we construct reasoning\nsteps by extracting LaTeX expressions, the conditions needed for the\nexpressions, and the results of the expressions from the previously collected\ndataset. Based on this extracted information, we generate corresponding code to\naccurately capture the mathematical reasoning process. Appending the generated\ncode to each reasoning step results in data consisting of paired natural\nlanguage reasoning steps and their corresponding code. Combining this data with\nthe original dataset results in a 19.2B-token high-performing mathematical\npretraining corpus, which we name MathCode-Pile. Training several popular base\nmodels with this corpus significantly improves their mathematical abilities,\nleading to the creation of the MathCoder2 family of models. All of our data\nprocessing and training code is open-sourced, ensuring full transparency and\neasy reproducibility of the entire data collection and training pipeline. The\ncode is released at https://github.com/mathllm/MathCoder2 .",
+      "upvotes": 44
+    },
+    {
+      "title": "MLLM as Retriever: Interactively Learning Multimodal Retrieval for Embodied Agents",
+      "url": "https://huggingface.co/papers/2410.03450",
+      "authors": [
+        "Xinru Xu",
+        "Zongqing Lu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.03450.pdf",
+      "abstract": "MLLM agents demonstrate potential for complex embodied tasks by retrieving\nmultimodal task-relevant trajectory data. However, current retrieval methods\nprimarily focus on surface-level similarities of textual or visual cues in\ntrajectories, neglecting their effectiveness for the specific task at hand. To\naddress this issue, we propose a novel method, MLLM as ReTriever (MART), which\nenhances the performance of embodied agents by utilizing interaction data to\nfine-tune an MLLM retriever based on preference learning, such that the\nretriever fully considers the effectiveness of trajectories and prioritize them\nfor unseen tasks. We also introduce Trajectory Abstraction, a mechanism that\nleverages MLLMs' summarization capabilities to represent trajectories with\nfewer tokens while preserving key information, enabling agents to better\ncomprehend milestones in the trajectory. Experimental results across various\nenvironments demonstrate our method significantly improves task success rates\nin unseen scenes compared to baseline methods. This work presents a new\nparadigm for multimodal retrieval in embodied agents, by fine-tuning a\ngeneral-purpose MLLM as the retriever to assess trajectory effectiveness. All\nbenchmark task sets and simulator code modifications for action and observation\nspaces will be released.",
+      "upvotes": 35
+    },
+    {
+      "title": "PrefixQuant: Static Quantization Beats Dynamic through Prefixed Outliers in LLMs",
+      "url": "https://huggingface.co/papers/2410.05265",
+      "authors": [
+        "Jiahao Wang",
+        "Yi Bin",
+        "Ping Luo"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.05265.pdf",
+      "abstract": "Quantization is essential for deploying Large Language Models (LLMs) by\nenhancing memory efficiency and inference speed. Existing methods for\nactivation quantization mainly address channel-wise outliers, often neglecting\ntoken-wise outliers, leading to reliance on costly per-token dynamic\nquantization. To address this, we introduce PrefixQuant, a novel technique that\nisolates outlier tokens offline without re-training. Specifically, PrefixQuant\nidentifies high-frequency outlier tokens and prefixes them in the KV cache,\npreventing the generation of outlier tokens during inference and simplifying\nquantization. To our knowledge, PrefixQuant is the first to enable efficient\nper-tensor static quantization to outperform expensive per-token dynamic\nquantization. For instance, in W4A4KV4 (4- bit weight, 4-bit activation, and\n4-bit KV cache) Llama-3-8B, PrefixQuant with per-tensor static quantization\nachieves a 7.43 WikiText2 perplexity and 71.08% average accuracy on 5\ncommon-sense reasoning tasks, outperforming previous per-token dynamic\nquantization methods like QuaRot with 0.98 perplexity improvement and +5.98\npoints accuracy. Additionally, the inference speed of W4A4 quantized models\nusing PrefixQuant is 1.60x to 2.81x faster than FP16 models and exceeds QuaRot\nmodels by 1.2x to 1.3x. Our code is available at\nhttps://github.com/ChenMnZ/PrefixQuant.",
+      "upvotes": 29
+    },
+    {
+      "title": "Benchmarking Agentic Workflow Generation",
+      "url": "https://huggingface.co/papers/2410.07869",
+      "authors": [
+        "Yong Jiang",
+        "Fei Huang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.07869.pdf",
+      "abstract": "Large Language Models (LLMs), with their exceptional ability to handle a wide\nrange of tasks, have driven significant advancements in tackling reasoning and\nplanning tasks, wherein decomposing complex problems into executable workflows\nis a crucial step in this process. Existing workflow evaluation frameworks\neither focus solely on holistic performance or suffer from limitations such as\nrestricted scenario coverage, simplistic workflow structures, and lax\nevaluation standards. To this end, we introduce WorFBench, a unified workflow\ngeneration benchmark with multi-faceted scenarios and intricate graph workflow\nstructures. Additionally, we present WorFEval, a systemic evaluation protocol\nutilizing subsequence and subgraph matching algorithms to accurately quantify\nthe LLM agent's workflow generation capabilities. Through comprehensive\nevaluations across different types of LLMs, we discover distinct gaps between\nthe sequence planning capabilities and graph planning capabilities of LLM\nagents, with even GPT-4 exhibiting a gap of around 15%. We also train two\nopen-source models and evaluate their generalization abilities on held-out\ntasks. Furthermore, we observe that the generated workflows can enhance\ndownstream tasks, enabling them to achieve superior performance with less time\nduring inference. Code and dataset will be available at\nhttps://github.com/zjunlp/WorFBench.",
+      "upvotes": 25
+    },
+    {
+      "title": "Agent S: An Open Agentic Framework that Uses Computers Like a Human",
+      "url": "https://huggingface.co/papers/2410.08164",
+      "authors": [
+        "Saaket Agashe",
+        "Shuyu Gan",
+        "Ang Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.08164.pdf",
+      "abstract": "We present Agent S, an open agentic framework that enables autonomous\ninteraction with computers through a Graphical User Interface (GUI), aimed at\ntransforming human-computer interaction by automating complex, multi-step\ntasks. Agent S aims to address three key challenges in automating computer\ntasks: acquiring domain-specific knowledge, planning over long task horizons,\nand handling dynamic, non-uniform interfaces. To this end, Agent S introduces\nexperience-augmented hierarchical planning, which learns from external\nknowledge search and internal experience retrieval at multiple levels,\nfacilitating efficient task planning and subtask execution. In addition, it\nemploys an Agent-Computer Interface (ACI) to better elicit the reasoning and\ncontrol capabilities of GUI agents based on Multimodal Large Language Models\n(MLLMs). Evaluation on the OSWorld benchmark shows that Agent S outperforms the\nbaseline by 9.37% on success rate (an 83.6% relative improvement) and achieves\na new state-of-the-art. Comprehensive analysis highlights the effectiveness of\nindividual components and provides insights for future improvements.\nFurthermore, Agent S demonstrates broad generalizability to different operating\nsystems on a newly-released WindowsAgentArena benchmark. Code available at\nhttps://github.com/simular-ai/Agent-S.",
+      "upvotes": 24
+    },
+    {
+      "title": "DART: Denoising Autoregressive Transformer for Scalable Text-to-Image Generation",
+      "url": "https://huggingface.co/papers/2410.08159",
+      "authors": [
+        "Jiatao Gu",
+        "Yuyang Wang",
+        "Yizhe Zhang",
+        "Navdeep Jaitly",
+        "Josh Susskind",
+        "Shuangfei Zhai"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.08159.pdf",
+      "abstract": "Diffusion models have become the dominant approach for visual generation.\nThey are trained by denoising a Markovian process that gradually adds noise to\nthe input. We argue that the Markovian property limits the models ability to\nfully utilize the generation trajectory, leading to inefficiencies during\ntraining and inference. In this paper, we propose DART, a transformer-based\nmodel that unifies autoregressive (AR) and diffusion within a non-Markovian\nframework. DART iteratively denoises image patches spatially and spectrally\nusing an AR model with the same architecture as standard language models. DART\ndoes not rely on image quantization, enabling more effective image modeling\nwhile maintaining flexibility. Furthermore, DART seamlessly trains with both\ntext and image data in a unified model. Our approach demonstrates competitive\nperformance on class-conditioned and text-to-image generation tasks, offering a\nscalable, efficient alternative to traditional diffusion models. Through this\nunified framework, DART sets a new benchmark for scalable, high-quality image\nsynthesis.",
+      "upvotes": 23
+    },
+    {
+      "title": "DICE: Discrete Inversion Enabling Controllable Editing for Multinomial Diffusion and Masked Generative Models",
+      "url": "https://huggingface.co/papers/2410.08207",
+      "authors": [
+        "Song Wen",
+        "Minhao Bai",
+        "Di Liu",
+        "Han Zhang",
+        "Martin Renqiang Min",
+        "Chaowei Tan",
+        "Bo Liu",
+        "Kang Li",
+        "Hongdong Li",
+        "Junzhou Huang",
+        "Faez Ahmed",
+        "Dimitris Metaxas"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.08207.pdf",
+      "abstract": "Discrete diffusion models have achieved success in tasks like image\ngeneration and masked language modeling but face limitations in controlled\ncontent editing. We introduce DICE (Discrete Inversion for Controllable\nEditing), the first approach to enable precise inversion for discrete diffusion\nmodels, including multinomial diffusion and masked generative models. By\nrecording noise sequences and masking patterns during the reverse diffusion\nprocess, DICE enables accurate reconstruction and flexible editing of discrete\ndata without the need for predefined masks or attention manipulation. We\ndemonstrate the effectiveness of DICE across both image and text domains,\nevaluating it on models such as VQ-Diffusion, Paella, and RoBERTa. Our results\nshow that DICE preserves high data fidelity while enhancing editing\ncapabilities, offering new opportunities for fine-grained content manipulation\nin discrete spaces. For project webpage, see\nhttps://hexiaoxiao-cs.github.io/DICE/.",
+      "upvotes": 18
+    },
+    {
+      "title": "GLOV: Guided Large Language Models as Implicit Optimizers for Vision Language Models",
+      "url": "https://huggingface.co/papers/2410.06154",
+      "authors": [
+        "Mengjie Zhao",
+        "Saurav Jha",
+        "Horst Possegger"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.06154.pdf",
+      "abstract": "In this work, we propose a novel method (GLOV) enabling Large Language Models\n(LLMs) to act as implicit Optimizers for Vision-Langugage Models (VLMs) to\nenhance downstream vision tasks. Our GLOV meta-prompts an LLM with the\ndownstream task description, querying it for suitable VLM prompts (e.g., for\nzero-shot classification with CLIP). These prompts are ranked according to a\npurity measure obtained through a fitness function. In each respective\noptimization step, the ranked prompts are fed as in-context examples (with\ntheir accuracies) to equip the LLM with the knowledge of the type of text\nprompts preferred by the downstream VLM. Furthermore, we also explicitly steer\nthe LLM generation process in each optimization step by specifically adding an\noffset difference vector of the embeddings from the positive and negative\nsolutions found by the LLM, in previous optimization steps, to the intermediate\nlayer of the network for the next generation step. This offset vector steers\nthe LLM generation toward the type of language preferred by the downstream VLM,\nresulting in enhanced performance on the downstream vision tasks. We\ncomprehensively evaluate our GLOV on 16 diverse datasets using two families of\nVLMs, i.e., dual-encoder (e.g., CLIP) and encoder-decoder (e.g., LLaVa) models\n-- showing that the discovered solutions can enhance the recognition\nperformance by up to 15.0% and 57.5% (3.8% and 21.6% on average) for these\nmodels.",
+      "upvotes": 16
+    },
+    {
+      "title": "Intriguing Properties of Large Language and Vision Models",
+      "url": "https://huggingface.co/papers/2410.04751",
+      "authors": [
+        "Ho-Jin Choi"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.04751.pdf",
+      "abstract": "Recently, large language and vision models (LLVMs) have received significant\nattention and development efforts due to their remarkable generalization\nperformance across a wide range of tasks requiring perception and cognitive\nabilities. A key factor behind their success is their simple architecture,\nwhich consists of a vision encoder, a projector, and a large language model\n(LLM). Despite their achievements in advanced reasoning tasks, their\nperformance on fundamental perception-related tasks (e.g., MMVP) remains\nsurprisingly low. This discrepancy raises the question of how LLVMs truly\nperceive images and exploit the advantages of the vision encoder. To address\nthis, we systematically investigate this question regarding several aspects:\npermutation invariance, robustness, math reasoning, alignment preserving and\nimportance, by evaluating the most common LLVM's families (i.e., LLaVA) across\n10 evaluation benchmarks. Our extensive experiments reveal several intriguing\nproperties of current LLVMs: (1) they internally process the image in a global\nmanner, even when the order of visual patch sequences is randomly permuted; (2)\nthey are sometimes able to solve math problems without fully perceiving\ndetailed numerical information; (3) the cross-modal alignment is overfitted to\ncomplex reasoning tasks, thereby, causing them to lose some of the original\nperceptual capabilities of their vision encoder; (4) the representation space\nin the lower layers (<25%) plays a crucial role in determining performance and\nenhancing visual understanding. Lastly, based on the above observations, we\nsuggest potential future directions for building better LLVMs and constructing\nmore challenging evaluation benchmarks.",
+      "upvotes": 16
+    },
+    {
+      "title": "Rectified Diffusion: Straightness Is Not Your Need in Rectified Flow",
+      "url": "https://huggingface.co/papers/2410.07303",
+      "authors": [
+        "Ling Yang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.07303.pdf",
+      "abstract": "Diffusion models have greatly improved visual generation but are hindered by\nslow generation speed due to the computationally intensive nature of solving\ngenerative ODEs. Rectified flow, a widely recognized solution, improves\ngeneration speed by straightening the ODE path. Its key components include: 1)\nusing the diffusion form of flow-matching, 2) employing boldsymbol\nv-prediction, and 3) performing rectification (a.k.a. reflow). In this paper,\nwe argue that the success of rectification primarily lies in using a pretrained\ndiffusion model to obtain matched pairs of noise and samples, followed by\nretraining with these matched noise-sample pairs. Based on this, components 1)\nand 2) are unnecessary. Furthermore, we highlight that straightness is not an\nessential training target for rectification; rather, it is a specific case of\nflow-matching models. The more critical training target is to achieve a\nfirst-order approximate ODE path, which is inherently curved for models like\nDDPM and Sub-VP. Building on this insight, we propose Rectified Diffusion,\nwhich generalizes the design space and application scope of rectification to\nencompass the broader category of diffusion models, rather than being\nrestricted to flow-matching models. We validate our method on Stable Diffusion\nv1-5 and Stable Diffusion XL. Our method not only greatly simplifies the\ntraining procedure of rectified flow-based previous works (e.g., InstaFlow) but\nalso achieves superior performance with even lower training cost. Our code is\navailable at https://github.com/G-U-N/Rectified-Diffusion.",
+      "upvotes": 16
+    },
+    {
+      "title": "Progressive Autoregressive Video Diffusion Models",
+      "url": "https://huggingface.co/papers/2410.08151",
+      "authors": [
+        "Zhan Xu",
+        "Hao Tan",
+        "Feng Liu",
+        "Arie Kaufman",
+        "Yang Zhou"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.08151.pdf",
+      "abstract": "Current frontier video diffusion models have demonstrated remarkable results\nat generating high-quality videos. However, they can only generate short video\nclips, normally around 10 seconds or 240 frames, due to computation limitations\nduring training. In this work, we show that existing models can be naturally\nextended to autoregressive video diffusion models without changing the\narchitectures. Our key idea is to assign the latent frames with progressively\nincreasing noise levels rather than a single noise level, which allows for\nfine-grained condition among the latents and large overlaps between the\nattention windows. Such progressive video denoising allows our models to\nautoregressively generate video frames without quality degradation or abrupt\nscene changes. We present state-of-the-art results on long video generation at\n1 minute (1440 frames at 24 FPS). Videos from this paper are available at\nhttps://desaixie.github.io/pa-vdm/.",
+      "upvotes": 15
+    },
+    {
+      "title": "Everything Everywhere All at Once: LLMs can In-Context Learn Multiple Tasks in Superposition",
+      "url": "https://huggingface.co/papers/2410.05603",
+      "authors": [
+        "Ziyang Cai",
+        "John Cooper",
+        "Albert Ge",
+        "Zack Sifakis",
+        "Angeliki Giannou",
+        "Ziqian Lin",
+        "Liu Yang",
+        "Saurabh Agarwal",
+        "Grigorios G Chrysos",
+        "Samet Oymak",
+        "Kangwook Lee"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.05603.pdf",
+      "abstract": "Large Language Models (LLMs) have demonstrated remarkable in-context learning\n(ICL) capabilities. In this study, we explore a surprising phenomenon related\nto ICL: LLMs can perform multiple, computationally distinct ICL tasks\nsimultaneously, during a single inference call, a capability we term \"task\nsuperposition\". We provide empirical evidence of this phenomenon across various\nLLM families and scales and show that this phenomenon emerges even if we train\nthe model to in-context learn one task at a time. We offer theoretical\nexplanations that this capability is well within the expressive power of\ntransformers. We also explore how LLMs internally compose task vectors during\nsuperposition. Furthermore, we show that larger models can solve more ICL tasks\nin parallel, and better calibrate their output distribution. Our findings offer\ninsights into the latent capabilities of LLMs, further substantiate the\nperspective of \"LLMs as superposition of simulators\", and raise questions about\nthe mechanisms enabling simultaneous task execution.",
+      "upvotes": 11
+    },
+    {
+      "title": "Preserving Multi-Modal Capabilities of Pre-trained VLMs for Improving Vision-Linguistic Compositionality",
+      "url": "https://huggingface.co/papers/2410.05210",
+      "authors": [
+        "Jae Won Cho",
+        "Dong-Jin Kim",
+        "In So Kweon",
+        "Junmo Kim"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.05210.pdf",
+      "abstract": "In this paper, we propose a new method to enhance compositional understanding\nin pre-trained vision and language models (VLMs) without sacrificing\nperformance in zero-shot multi-modal tasks. Traditional fine-tuning approaches\noften improve compositional reasoning at the cost of degrading multi-modal\ncapabilities, primarily due to the use of global hard negative (HN) loss, which\ncontrasts global representations of images and texts. This global HN loss\npushes HN texts that are highly similar to the original ones, damaging the\nmodel's multi-modal representations. To overcome this limitation, we propose\nFine-grained Selective Calibrated CLIP (FSC-CLIP), which integrates local hard\nnegative loss and selective calibrated regularization. These innovations\nprovide fine-grained negative supervision while preserving the model's\nrepresentational integrity. Our extensive evaluations across diverse benchmarks\nfor both compositionality and multi-modal tasks show that FSC-CLIP not only\nachieves compositionality on par with state-of-the-art models but also retains\nstrong multi-modal capabilities. Code is available at:\nhttps://github.com/ytaek-oh/fsc-clip.",
+      "upvotes": 10
+    },
+    {
+      "title": "Towards Self-Improvement of LLMs via MCTS: Leveraging Stepwise Knowledge with Curriculum Preference Learning",
+      "url": "https://huggingface.co/papers/2410.06508",
+      "authors": [
+        "Baolin Peng",
+        "Furong Huang",
+        "Dong Yu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.06508.pdf",
+      "abstract": "Monte Carlo Tree Search (MCTS) has recently emerged as a powerful technique\nfor enhancing the reasoning capabilities of LLMs. Techniques such as SFT or DPO\nhave enabled LLMs to distill high-quality behaviors from MCTS, improving their\nreasoning performance. However, existing distillation methods underutilize the\nrich trajectory information generated by MCTS, limiting the potential for\nimprovements in LLM reasoning. In this paper, we propose AlphaLLM-CPL, a novel\npairwise training framework that enables LLMs to self-improve through MCTS\nbehavior distillation. AlphaLLM-CPL efficiently leverages MCTS trajectories via\ntwo key innovations: (1) AlphaLLM-CPL constructs stepwise trajectory pairs from\nchild nodes sharing the same parent in the search tree, providing step-level\ninformation for more effective MCTS behavior distillation. (2) AlphaLLM-CPL\nintroduces curriculum preference learning, dynamically adjusting the training\nsequence of trajectory pairs in each offline training epoch to prioritize\ncritical learning steps and mitigate overfitting. Experimental results on\nmathematical reasoning tasks demonstrate that AlphaLLM-CPL significantly\noutperforms previous MCTS behavior distillation methods, substantially boosting\nthe reasoning capabilities of LLMs.",
+      "upvotes": 9
+    },
+    {
+      "title": "SFTMix: Elevating Language Model Instruction Tuning with Mixup Recipe",
+      "url": "https://huggingface.co/papers/2410.05248",
+      "authors": [
+        "Marzyeh Ghassemi",
+        "Sanqiang Zhao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.05248.pdf",
+      "abstract": "To induce desired behaviors in large language models (LLMs) for\ninteraction-driven tasks, the instruction-tuning stage typically trains LLMs on\ninstruction-response pairs using the next-token prediction (NTP) loss. Previous\nwork aiming to improve instruction-tuning performance often emphasizes the need\nfor higher-quality supervised fine-tuning (SFT) datasets, which typically\ninvolves expensive data filtering with proprietary LLMs or labor-intensive data\ngeneration by human annotators. However, these approaches do not fully leverage\nthe datasets' intrinsic properties, resulting in high computational and labor\ncosts, thereby limiting scalability and performance gains. In this paper, we\npropose SFTMix, a novel recipe that elevates instruction-tuning performance\nbeyond the conventional NTP paradigm, without the need for well-curated\ndatasets. Observing that LLMs exhibit uneven confidence across the semantic\nrepresentation space, we argue that examples with different confidence levels\nshould play distinct roles during the instruction-tuning process. Based on this\ninsight, SFTMix leverages training dynamics to identify examples with varying\nconfidence levels, then applies a Mixup-based regularization to mitigate\noverfitting on confident examples while propagating supervision signals to\nimprove learning on relatively unconfident ones. This approach enables SFTMix\nto significantly outperform NTP across a wide range of instruction-following\nand healthcare domain-specific SFT tasks, demonstrating its adaptability to\ndiverse LLM families and scalability to datasets of any size. Comprehensive\nablation studies further verify the robustness of SFTMix's design choices,\nunderscoring its versatility in consistently enhancing performance across\ndifferent LLMs and datasets in broader natural language processing\napplications.",
+      "upvotes": 8
+    },
+    {
+      "title": "Scaling Up Your Kernels: Large Kernel Design in ConvNets towards Universal Representations",
+      "url": "https://huggingface.co/papers/2410.08049",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2410.08049.pdf",
+      "abstract": "This paper proposes the paradigm of large convolutional kernels in designing\nmodern Convolutional Neural Networks (ConvNets). We establish that employing a\nfew large kernels, instead of stacking multiple smaller ones, can be a superior\ndesign strategy. Our work introduces a set of architecture design guidelines\nfor large-kernel ConvNets that optimize their efficiency and performance. We\npropose the UniRepLKNet architecture, which offers systematical architecture\ndesign principles specifically crafted for large-kernel ConvNets, emphasizing\ntheir unique ability to capture extensive spatial information without deep\nlayer stacking. This results in a model that not only surpasses its\npredecessors with an ImageNet accuracy of 88.0%, an ADE20K mIoU of 55.6%, and a\nCOCO box AP of 56.4% but also demonstrates impressive scalability and\nperformance on various modalities such as time-series forecasting, audio, point\ncloud, and video recognition. These results indicate the universal modeling\nabilities of large-kernel ConvNets with faster inference speed compared with\nvision transformers. Our findings reveal that large-kernel ConvNets possess\nlarger effective receptive fields and a higher shape bias, moving away from the\ntexture bias typical of smaller-kernel CNNs. All codes and models are publicly\navailable at https://github.com/AILab-CVC/UniRepLKNet promoting further\nresearch and development in the community.",
+      "upvotes": 8
+    },
+    {
+      "title": "Emergent properties with repeated examples",
+      "url": "https://huggingface.co/papers/2410.07041",
+      "authors": [
+        "François Charton"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.07041.pdf",
+      "abstract": "We study the performance of transformers as a function of the number of\nrepetitions of training examples with algorithmically generated datasets. On\nthree problems of mathematics: the greatest common divisor, modular\nmultiplication, and matrix eigenvalues, we show that for a fixed number of\ntraining steps, models trained on smaller sets of repeated examples outperform\nmodels trained on larger sets of single-use examples. We also demonstrate that\ntwo-set training - repeated use of a small random subset of examples, along\nnormal sampling on the rest of the training set - provides for faster learning\nand better performance. This highlights that the benefits of repetition can\noutweigh those of data diversity. These datasets and problems provide a\ncontrolled setting to shed light on the still poorly understood interplay\nbetween generalization and memorization in deep learning.",
+      "upvotes": 8
+    },
+    {
+      "title": "Optima: Optimizing Effectiveness and Efficiency for LLM-Based Multi-Agent System",
+      "url": "https://huggingface.co/papers/2410.08115",
+      "authors": [
+        "Jiarui Yuan",
+        "Chen Qian",
+        "Cheng Yang",
+        "Maosong Sun"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.08115.pdf",
+      "abstract": "Large Language Model (LLM) based multi-agent systems (MAS) show remarkable\npotential in collaborative problem-solving, yet they still face critical\nchallenges: low communication efficiency, poor scalability, and a lack of\neffective parameter-updating optimization methods. We present Optima, a novel\nframework that addresses these issues by significantly enhancing both\ncommunication efficiency and task effectiveness in LLM-based MAS through LLM\ntraining. Optima employs an iterative generate, rank, select, and train\nparadigm with a reward function balancing task performance, token efficiency,\nand communication readability. We explore various RL algorithms, including\nSupervised Fine-Tuning, Direct Preference Optimization, and their hybrid\napproaches, providing insights into their effectiveness-efficiency trade-offs.\nWe integrate Monte Carlo Tree Search-inspired techniques for DPO data\ngeneration, treating conversation turns as tree nodes to explore diverse\ninteraction paths. Evaluated on common multi-agent tasks, including\ninformation-asymmetric question answering and complex reasoning, Optima shows\nconsistent and substantial improvements over single-agent baselines and vanilla\nMAS based on Llama 3 8B, achieving up to 2.8x performance gain with less than\n10\\% tokens on tasks requiring heavy information exchange. Moreover, Optima's\nefficiency gains open new possibilities for leveraging inference-compute more\neffectively, leading to improved inference-time scaling laws. By addressing\nfundamental challenges in LLM-based MAS, Optima shows the potential towards\nscalable, efficient, and effective MAS\n(https://chenweize1998.github.io/optima-project-page).",
+      "upvotes": 7
+    },
+    {
+      "title": "Cheating Automatic LLM Benchmarks: Null Models Achieve High Win Rates",
+      "url": "https://huggingface.co/papers/2410.07137",
+      "authors": [
+        "Tianyu Pang",
+        "Chao Du",
+        "Jing Jiang",
+        "Min Lin"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.07137.pdf",
+      "abstract": "Automatic LLM benchmarks, such as AlpacaEval 2.0, Arena-Hard-Auto, and\nMT-Bench, have become popular for evaluating language models due to their\ncost-effectiveness and scalability compared to human evaluation. Achieving high\nwin rates on these benchmarks can significantly boost the promotional impact of\nnewly released language models. This promotional benefit may motivate tricks,\nsuch as manipulating model output length or style to game win rates, even\nthough several mechanisms have been developed to control length and disentangle\nstyle to reduce gameability. Nonetheless, we show that even a \"null model\" that\nalways outputs a constant response (irrelevant to input instructions) can cheat\nautomatic benchmarks and achieve top-ranked win rates: an 86.5% LC win rate on\nAlpacaEval 2.0; an 83.0 score on Arena-Hard-Auto; and a 9.55 score on MT-Bench.\nMoreover, the crafted cheating outputs are transferable because we assume that\nthe instructions of these benchmarks (e.g., 805 samples of AlpacaEval 2.0) are\nprivate and cannot be accessed. While our experiments are primarily\nproof-of-concept, an adversary could use LLMs to generate more imperceptible\ncheating responses, unethically benefiting from high win rates and promotional\nimpact. Our findings call for the development of anti-cheating mechanisms for\nreliable automatic benchmarks. The code is available at\nhttps://github.com/sail-sg/Cheating-LLM-Benchmarks.",
+      "upvotes": 6
+    },
+    {
+      "title": "Accelerated Preference Optimization for Large Language Model Alignment",
+      "url": "https://huggingface.co/papers/2410.06293",
+      "authors": [
+        "Huizhuo Yuan",
+        "Quanquan Gu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.06293.pdf",
+      "abstract": "Reinforcement Learning from Human Feedback (RLHF) has emerged as a pivotal\ntool for aligning large language models (LLMs) with human preferences. Direct\nPreference Optimization (DPO), one of the most popular approaches, formulates\nRLHF as a policy optimization problem without explicitly estimating the reward\nfunction. It overcomes the stability and efficiency issues of two-step\napproaches, which typically involve first estimating the reward function and\nthen optimizing the policy via proximal policy optimization (PPO). Since RLHF\nis essentially an optimization problem, and it is well-known that momentum\ntechniques can accelerate optimization both theoretically and empirically, a\nnatural question arises: Can RLHF be accelerated by momentum? This paper\nanswers this question in the affirmative. In detail, we first show that the\niterative preference optimization method can be viewed as a proximal point\nmethod. Based on this observation, we propose a general Accelerated Preference\nOptimization (APO) framework, which unifies many existing preference\noptimization algorithms and employs Nesterov's momentum technique to speed up\nthe alignment of LLMs. Theoretically, we demonstrate that APO can achieve a\nfaster convergence rate than the standard iterative preference optimization\nmethods, including DPO and Self-Play Preference Optimization (SPPO).\nEmpirically, we show the superiority of APO over DPO, iterative DPO, and other\nstrong baselines for RLHF on the AlpacaEval 2.0 benchmark.",
+      "upvotes": 4
+    },
+    {
+      "title": "Data Advisor: Dynamic Data Curation for Safety Alignment of Large Language Models",
+      "url": "https://huggingface.co/papers/2410.05269",
+      "authors": [
+        "Rahul Gupta",
+        "Aram Galstyan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.05269.pdf",
+      "abstract": "Data is a crucial element in large language model (LLM) alignment. Recent\nstudies have explored using LLMs for efficient data collection. However,\nLLM-generated data often suffers from quality issues, with underrepresented or\nabsent aspects and low-quality datapoints. To address these problems, we\npropose Data Advisor, an enhanced LLM-based method for generating data that\ntakes into account the characteristics of the desired dataset. Starting from a\nset of pre-defined principles in hand, Data Advisor monitors the status of the\ngenerated data, identifies weaknesses in the current dataset, and advises the\nnext iteration of data generation accordingly. Data Advisor can be easily\nintegrated into existing data generation methods to enhance data quality and\ncoverage. Experiments on safety alignment of three representative LLMs (i.e.,\nMistral, Llama2, and Falcon) demonstrate the effectiveness of Data Advisor in\nenhancing model safety against various fine-grained safety issues without\nsacrificing model utility.",
+      "upvotes": 3
+    },
+    {
+      "title": "Vector-ICL: In-context Learning with Continuous Vector Representations",
+      "url": "https://huggingface.co/papers/2410.05629",
+      "authors": [
+        "Chandan Singh",
+        "Liyuan Liu",
+        "Jingbo Shang",
+        "Jianfeng Gao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.05629.pdf",
+      "abstract": "Large language models (LLMs) have shown remarkable in-context learning (ICL)\ncapabilities on textual data. We explore whether these capabilities can be\nextended to continuous vectors from diverse domains, obtained from black-box\npretrained encoders. By aligning input data with an LLM's embedding space\nthrough lightweight projectors, we observe that LLMs can effectively process\nand learn from these projected vectors, which we term Vector-ICL. In\nparticular, we find that pretraining projectors with general language modeling\nobjectives enables Vector-ICL, while task-specific finetuning further enhances\nperformance. In our experiments across various tasks and modalities, including\ntext reconstruction, numerical function regression, text classification,\nsummarization, molecule captioning, time-series classification, graph\nclassification, and fMRI decoding, Vector-ICL often surpasses both few-shot ICL\nand domain-specific model or tuning. We further conduct analyses and case\nstudies, indicating the potential of LLMs to process vector representations\nbeyond traditional token-based paradigms.",
+      "upvotes": 3
+    },
+    {
+      "title": "MotionGS: Exploring Explicit Motion Guidance for Deformable 3D Gaussian Splatting",
+      "url": "https://huggingface.co/papers/2410.07707",
+      "authors": [
+        "Hanzhi Chang",
+        "Wenfei Yang",
+        "Yongdong Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.07707.pdf",
+      "abstract": "Dynamic scene reconstruction is a long-term challenge in the field of 3D\nvision. Recently, the emergence of 3D Gaussian Splatting has provided new\ninsights into this problem. Although subsequent efforts rapidly extend static\n3D Gaussian to dynamic scenes, they often lack explicit constraints on object\nmotion, leading to optimization difficulties and performance degradation. To\naddress the above issues, we propose a novel deformable 3D Gaussian splatting\nframework called MotionGS, which explores explicit motion priors to guide the\ndeformation of 3D Gaussians. Specifically, we first introduce an optical flow\ndecoupling module that decouples optical flow into camera flow and motion flow,\ncorresponding to camera movement and object motion respectively. Then the\nmotion flow can effectively constrain the deformation of 3D Gaussians, thus\nsimulating the motion of dynamic objects. Additionally, a camera pose\nrefinement module is proposed to alternately optimize 3D Gaussians and camera\nposes, mitigating the impact of inaccurate camera poses. Extensive experiments\nin the monocular dynamic scenes validate that MotionGS surpasses\nstate-of-the-art methods and exhibits significant superiority in both\nqualitative and quantitative results. Project page:\nhttps://ruijiezhu94.github.io/MotionGS_page",
+      "upvotes": 3
+    },
+    {
+      "title": "Zebra: In-Context and Generative Pretraining for Solving Parametric PDEs",
+      "url": "https://huggingface.co/papers/2410.03437",
+      "authors": [
+        "Armand Kassaï Koupaï",
+        "Thomas X Wang",
+        "Patrick Gallinari"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.03437.pdf",
+      "abstract": "Solving time-dependent parametric partial differential equations (PDEs) is\nchallenging, as models must adapt to variations in parameters such as\ncoefficients, forcing terms, and boundary conditions. Data-driven neural\nsolvers either train on data sampled from the PDE parameters distribution in\nthe hope that the model generalizes to new instances or rely on gradient-based\nadaptation and meta-learning to implicitly encode the dynamics from\nobservations. This often comes with increased inference complexity. Inspired by\nthe in-context learning capabilities of large language models (LLMs), we\nintroduce Zebra, a novel generative auto-regressive transformer designed to\nsolve parametric PDEs without requiring gradient adaptation at inference. By\nleveraging in-context information during both pre-training and inference, Zebra\ndynamically adapts to new tasks by conditioning on input sequences that\nincorporate context trajectories or preceding states. This approach enables\nZebra to flexibly handle arbitrarily sized context inputs and supports\nuncertainty quantification through the sampling of multiple solution\ntrajectories. We evaluate Zebra across a variety of challenging PDE scenarios,\ndemonstrating its adaptability, robustness, and superior performance compared\nto existing approaches.",
+      "upvotes": 2
+    },
+    {
+      "title": "LPZero: Language Model Zero-cost Proxy Search from Zero",
+      "url": "https://huggingface.co/papers/2410.04808",
+      "authors": [
+        "Peijie Dong"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.04808.pdf",
+      "abstract": "In spite of the outstanding performance, Neural Architecture Search (NAS) is\ncriticized for massive computation. Recently, Zero-shot NAS has emerged as a\npromising approach by exploiting Zero-cost (ZC) proxies, which markedly reduce\ncomputational demands. Despite this, existing ZC proxies heavily rely on expert\nknowledge and incur significant trial-and-error costs. Particularly in NLP\ntasks, most existing ZC proxies fail to surpass the performance of the naive\nbaseline. To address these challenges, we introduce a novel framework,\nLPZero, which is the first to automatically design ZC proxies for\nvarious tasks, achieving higher ranking consistency than human-designed\nproxies. Specifically, we model the ZC proxy as a symbolic equation and\nincorporate a unified proxy search space that encompasses existing ZC proxies,\nwhich are composed of a predefined set of mathematical symbols. To\nheuristically search for the best ZC proxy, LPZero incorporates genetic\nprogramming to find the optimal symbolic composition. We propose a\nRule-based Pruning Strategy (RPS), which preemptively eliminates\nunpromising proxies, thereby mitigating the risk of proxy degradation.\nExtensive experiments on FlexiBERT, GPT-2, and LLaMA-7B demonstrate LPZero's\nsuperior ranking ability and performance on downstream tasks compared to\ncurrent approaches.",
+      "upvotes": 2
+    }
+  ]
+}

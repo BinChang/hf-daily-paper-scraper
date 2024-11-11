@@ -1,0 +1,24 @@
+{
+  "date": "2024-09-03",
+  "papers": [
+    {
+      "title": "Mini-Omni: Language Models Can Hear, Talk While Thinking in Streaming",
+      "url": "https://huggingface.co/papers/2408.16725",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2408.16725.pdf",
+      "abstract": "Recent advances in language models have achieved significant progress.\nGPT-4o, as a new milestone, has enabled real-time conversations with humans,\ndemonstrating near-human natural fluency. Such human-computer interaction\nnecessitates models with the capability to perform reasoning directly with the\naudio modality and generate output in streaming. However, this remains beyond\nthe reach of current academic models, as they typically depend on extra TTS\nsystems for speech synthesis, resulting in undesirable latency. This paper\nintroduces the Mini-Omni, an audio-based end-to-end conversational model,\ncapable of real-time speech interaction. To achieve this capability, we propose\na text-instructed speech generation method, along with batch-parallel\nstrategies during inference to further boost the performance. Our method also\nhelps to retain the original model's language capabilities with minimal\ndegradation, enabling other works to establish real-time interaction\ncapabilities. We call this training method \"Any Model Can Talk\". We also\nintroduce the VoiceAssistant-400K dataset to fine-tune models optimized for\nspeech output. To our best knowledge, Mini-Omni is the first fully end-to-end,\nopen-source model for real-time speech interaction, offering valuable potential\nfor future research.",
+      "upvotes": 52
+    },
+    {
+      "title": "VisionTS: Visual Masked Autoencoders Are Free-Lunch Zero-Shot Time Series Forecasters",
+      "url": "https://huggingface.co/papers/2408.17253",
+      "authors": [
+        "Xiaoyun Joy Wang",
+        "Jianling Sun"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2408.17253.pdf",
+      "abstract": "Foundation models have emerged as a promising approach in time series\nforecasting (TSF). Existing approaches either fine-tune large language models\n(LLMs) or build large-scale time-series datasets to develop TSF foundation\nmodels. However, these methods face challenges due to the severe cross-domain\ngap or in-domain heterogeneity. In this paper, we explore a new road to\nbuilding a TSF foundation model from rich and high-quality natural images,\nbased on the intrinsic similarities between images and time series. To bridge\nthe gap between the two domains, we reformulate the TSF task as an image\nreconstruction task, which is further processed by a visual masked autoencoder\n(MAE) self-supervised pre-trained on the ImageNet dataset. Surprisingly,\nwithout further adaptation in the time-series domain, the proposed VisionTS\ncould achieve superior zero-shot forecasting performance compared to existing\nTSF foundation models. With minimal fine-tuning, VisionTS could further improve\nthe forecasting and achieve state-of-the-art performance in most cases. These\nfindings suggest that visual models could be a free lunch for TSF and highlight\nthe potential for future cross-domain research between computer vision and TSF.\nOur code is publicly available at https://github.com/Keytoyze/VisionTS.",
+      "upvotes": 35
+    }
+  ]
+}

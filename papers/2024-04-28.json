@@ -1,0 +1,28 @@
+{
+  "date": "2024-04-28",
+  "papers": [
+    {
+      "title": "PLLaVA : Parameter-free LLaVA Extension from Images to Videos for Video Dense Captioning",
+      "url": "https://huggingface.co/papers/2404.16994",
+      "authors": [
+        "Lin Xu",
+        "See Kiong Ng",
+        "Jiashi Feng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.16994.pdf",
+      "abstract": "Vision-language pre-training has significantly elevated performance across a\nwide range of image-language applications. Yet, the pre-training process for\nvideo-related tasks demands exceptionally large computational and data\nresources, which hinders the progress of video-language models. This paper\ninvestigates a straightforward, highly efficient, and resource-light approach\nto adapting an existing image-language pre-trained model for dense video\nunderstanding. Our preliminary experiments reveal that directly fine-tuning\npre-trained image-language models with multiple frames as inputs on video\ndatasets leads to performance saturation or even a drop. Our further\ninvestigation reveals that it is largely attributed to the bias of learned\nhigh-norm visual features. Motivated by this finding, we propose a simple but\neffective pooling strategy to smooth the feature distribution along the\ntemporal dimension and thus reduce the dominant impacts from the extreme\nfeatures. The new model is termed Pooling LLaVA, or  in short.\n achieves new state-of-the-art performance on modern benchmark\ndatasets for both video question-answer and captioning tasks. Notably, on the\nrecent popular Video ChatGPT benchmark, PLLaVA achieves a score of 3.48 out of\n5 on average of five evaluated dimensions, exceeding the previous SOTA results\nfrom GPT4V (IG-VLM) by 9\\%. On the latest multi-choice benchmark MVBench,\nPLLaVA achieves 58.1\\% accuracy on average across 20 sub-tasks, 14.5\\% higher\nthan GPT4V (IG-VLM). Code is available at\nhttps://github.com/magic-research/PLLaVA.",
+      "upvotes": 35
+    },
+    {
+      "title": "HaLo-NeRF: Learning Geometry-Guided Semantics for Exploring Unconstrained Photo Collections",
+      "url": "https://huggingface.co/papers/2404.16845",
+      "authors": [
+        "Hana Bezalel",
+        "Hadar Averbuch-Elor"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.16845.pdf",
+      "abstract": "Internet image collections containing photos captured by crowds of\nphotographers show promise for enabling digital exploration of large-scale\ntourist landmarks. However, prior works focus primarily on geometric\nreconstruction and visualization, neglecting the key role of language in\nproviding a semantic interface for navigation and fine-grained understanding.\nIn constrained 3D domains, recent methods have leveraged vision-and-language\nmodels as a strong prior of 2D visual semantics. While these models display an\nexcellent understanding of broad visual semantics, they struggle with\nunconstrained photo collections depicting such tourist landmarks, as they lack\nexpert knowledge of the architectural domain. In this work, we present a\nlocalization system that connects neural representations of scenes depicting\nlarge-scale landmarks with text describing a semantic region within the scene,\nby harnessing the power of SOTA vision-and-language models with adaptations for\nunderstanding landmark scene semantics. To bolster such models with\nfine-grained knowledge, we leverage large-scale Internet data containing images\nof similar landmarks along with weakly-related textual information. Our\napproach is built upon the premise that images physically grounded in space can\nprovide a powerful supervision signal for localizing new concepts, whose\nsemantics may be unlocked from Internet textual metadata with large language\nmodels. We use correspondences between views of scenes to bootstrap spatial\nunderstanding of these semantics, providing guidance for 3D-compatible\nsegmentation that ultimately lifts to a volumetric scene representation. Our\nresults show that HaLo-NeRF can accurately localize a variety of semantic\nconcepts related to architectural landmarks, surpassing the results of other 3D\nmodels as well as strong 2D segmentation baselines. Our project page is at\nhttps://tau-vailab.github.io/HaLo-NeRF/.",
+      "upvotes": 6
+    }
+  ]
+}

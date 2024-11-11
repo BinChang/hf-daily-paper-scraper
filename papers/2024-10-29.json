@@ -1,0 +1,341 @@
+{
+  "date": "2024-10-29",
+  "papers": [
+    {
+      "title": "GPT-4o System Card",
+      "url": "https://huggingface.co/papers/2410.21276",
+      "authors": [
+        "OpenAI",
+        "Aaron Hurst",
+        "Adam Lerer",
+        "Adam P. Goucher",
+        "Adam Perelman",
+        "Aditya Ramesh",
+        "Aidan Clark",
+        "AJ Ostrow",
+        "Akila Welihinda",
+        "Alan Hayes",
+        "Alec Radford",
+        "Aleksander Mądry",
+        "Alex Baker-Whitcomb",
+        "Alex Beutel",
+        "Alex Borzunov",
+        "Alex Carney",
+        "Alex Chow",
+        "Alex Kirillov",
+        "Alex Nichol",
+        "Alex Paino",
+        "Alex Renzin",
+        "Alex Tachard Passos"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.21276.pdf",
+      "abstract": "GPT-4o is an autoregressive omni model that accepts as input any combination\nof text, audio, image, and video, and generates any combination of text, audio,\nand image outputs. It's trained end-to-end across text, vision, and audio,\nmeaning all inputs and outputs are processed by the same neural network. GPT-4o\ncan respond to audio inputs in as little as 232 milliseconds, with an average\nof 320 milliseconds, which is similar to human response time in conversation.\nIt matches GPT-4 Turbo performance on text in English and code, with\nsignificant improvement on text in non-English languages, while also being much\nfaster and 50\\% cheaper in the API. GPT-4o is especially better at vision and\naudio understanding compared to existing models. In line with our commitment to\nbuilding AI safely and consistent with our voluntary commitments to the White\nHouse, we are sharing the GPT-4o System Card, which includes our Preparedness\nFramework evaluations. In this System Card, we provide a detailed look at\nGPT-4o's capabilities, limitations, and safety evaluations across multiple\ncategories, focusing on speech-to-speech while also evaluating text and image\ncapabilities, and measures we've implemented to ensure the model is safe and\naligned. We also include third-party assessments on dangerous capabilities, as\nwell as discussion of potential societal impacts of GPT-4o's text and vision\ncapabilities.",
+      "upvotes": 77
+    },
+    {
+      "title": "Bielik 7B v0.1: A Polish Language Model -- Development, Insights, and Evaluation",
+      "url": "https://huggingface.co/papers/2410.18565",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2410.18565.pdf",
+      "abstract": "We introduce Bielik 7B v0.1, a 7-billion-parameter generative text model for\nPolish language processing. Trained on curated Polish corpora, this model\naddresses key challenges in language model development through innovative\ntechniques. These include Weighted Instruction Cross-Entropy Loss, which\nbalances the learning of different instruction types, and Adaptive Learning\nRate, which dynamically adjusts the learning rate based on training progress.\nTo evaluate performance, we created the Open PL LLM Leaderboard and Polish\nMT-Bench, novel frameworks assessing various NLP tasks and conversational\nabilities. Bielik 7B v0.1 demonstrates significant improvements, achieving a 9\npercentage point increase in average score compared to Mistral-7B-v0.1 on the\nRAG Reader task. It also excels in the Polish MT-Bench, particularly in\nReasoning (6.15/10) and Role-playing (7.83/10) categories. This model\nrepresents a substantial advancement in Polish language AI, offering a powerful\ntool for diverse linguistic applications and setting new benchmarks in the\nfield.",
+      "upvotes": 42
+    },
+    {
+      "title": "A Survey of Small Language Models",
+      "url": "https://huggingface.co/papers/2410.20011",
+      "authors": [
+        "Xuan Shen",
+        "Ryan Aponte",
+        "Yu Xia",
+        "Zhengmian Hu",
+        "Jian Chen",
+        "Mihir Parmar",
+        "Sasidhar Kunapuli",
+        "Joe Barrow",
+        "Junda Wu",
+        "Ashish Singh",
+        "Yu Wang",
+        "Jiuxiang Gu",
+        "Nesreen K. Ahmed",
+        "Nedim Lipka",
+        "Ruiyi Zhang",
+        "Xiang Chen",
+        "Tong Yu",
+        "Sungchul Kim",
+        "Hanieh Deilamsalehy"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.20011.pdf",
+      "abstract": "Small Language Models (SLMs) have become increasingly important due to their\nefficiency and performance to perform various language tasks with minimal\ncomputational resources, making them ideal for various settings including\non-device, mobile, edge devices, among many others. In this article, we present\na comprehensive survey on SLMs, focusing on their architectures, training\ntechniques, and model compression techniques. We propose a novel taxonomy for\ncategorizing the methods used to optimize SLMs, including model compression,\npruning, and quantization techniques. We summarize the benchmark datasets that\nare useful for benchmarking SLMs along with the evaluation metrics commonly\nused. Additionally, we highlight key open challenges that remain to be\naddressed. Our survey aims to serve as a valuable resource for researchers and\npractitioners interested in developing and deploying small yet efficient\nlanguage models.",
+      "upvotes": 36
+    },
+    {
+      "title": "AgentStore: Scalable Integration of Heterogeneous Agents As Specialized Generalist Computer Assistant",
+      "url": "https://huggingface.co/papers/2410.18603",
+      "authors": [
+        "Chengyou Jia",
+        "Minnan Luo",
+        "Zhuohang Dang",
+        "Fangzhi Xu",
+        "Junlin Hu",
+        "Tianbao Xie",
+        "Zhiyong Wu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.18603.pdf",
+      "abstract": "Digital agents capable of automating complex computer tasks have attracted\nconsiderable attention due to their immense potential to enhance human-computer\ninteraction. However, existing agent methods exhibit deficiencies in their\ngeneralization and specialization capabilities, especially in handling\nopen-ended computer tasks in real-world environments. Inspired by the rich\nfunctionality of the App store, we present AgentStore, a scalable platform\ndesigned to dynamically integrate heterogeneous agents for automating computer\ntasks. AgentStore empowers users to integrate third-party agents, allowing the\nsystem to continuously enrich its capabilities and adapt to rapidly evolving\noperating systems. Additionally, we propose a novel core MetaAgent\nwith the AgentToken strategy to efficiently manage diverse agents and\nutilize their specialized and generalist abilities for both domain-specific and\nsystem-wide tasks. Extensive experiments on three challenging benchmarks\ndemonstrate that AgentStore surpasses the limitations of previous systems with\nnarrow capabilities, particularly achieving a significant improvement from\n11.21\\% to 23.85\\% on the OSWorld benchmark, more than doubling the previous\nresults. Comprehensive quantitative and qualitative results further demonstrate\nAgentStore's ability to enhance agent systems in both generalization and\nspecialization, underscoring its potential for developing the specialized\ngeneralist computer assistant. All our codes will be made publicly available in\nhttps://chengyou-jia.github.io/AgentStore-Home.",
+      "upvotes": 30
+    },
+    {
+      "title": "Document Parsing Unveiled: Techniques, Challenges, and Prospects for Structured Information Extraction",
+      "url": "https://huggingface.co/papers/2410.21169",
+      "authors": [
+        "Junyuan Zhang",
+        "Zhengren Wang",
+        "Hao Liang",
+        "Shawn Wang",
+        "Matthieu Lin",
+        "Wentao Zhang",
+        "Conghui He"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.21169.pdf",
+      "abstract": "Document parsing is essential for converting unstructured and semi-structured\ndocuments-such as contracts, academic papers, and invoices-into structured,\nmachine-readable data. Document parsing extract reliable structured data from\nunstructured inputs, providing huge convenience for numerous applications.\nEspecially with recent achievements in Large Language Models, document parsing\nplays an indispensable role in both knowledge base construction and training\ndata generation. This survey presents a comprehensive review of the current\nstate of document parsing, covering key methodologies, from modular pipeline\nsystems to end-to-end models driven by large vision-language models. Core\ncomponents such as layout detection, content extraction (including text,\ntables, and mathematical expressions), and multi-modal data integration are\nexamined in detail. Additionally, this paper discusses the challenges faced by\nmodular document parsing systems and vision-language models in handling complex\nlayouts, integrating multiple modules, and recognizing high-density text. It\nemphasizes the importance of developing larger and more diverse datasets and\noutlines future research directions.",
+      "upvotes": 29
+    },
+    {
+      "title": "MarDini: Masked Autoregressive Diffusion for Video Generation at Scale",
+      "url": "https://huggingface.co/papers/2410.20280",
+      "authors": [
+        "Haozhe Liu",
+        "Shikun Liu",
+        "Mengmeng Xu",
+        "Yanping Xie",
+        "Xiao Han",
+        "Juan C. Pérez",
+        "Ding Liu",
+        "Menglin Jia",
+        "Jui-Chieh Wu",
+        "Sen He",
+        "Tao Xiang",
+        "Jürgen Schmidhuber"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.20280.pdf",
+      "abstract": "We introduce MarDini, a new family of video diffusion models that integrate\nthe advantages of masked auto-regression (MAR) into a unified diffusion model\n(DM) framework. Here, MAR handles temporal planning, while DM focuses on\nspatial generation in an asymmetric network design: i) a MAR-based planning\nmodel containing most of the parameters generates planning signals for each\nmasked frame using low-resolution input; ii) a lightweight generation model\nuses these signals to produce high-resolution frames via diffusion de-noising.\nMarDini's MAR enables video generation conditioned on any number of masked\nframes at any frame positions: a single model can handle video interpolation\n(e.g., masking middle frames), image-to-video generation (e.g., masking from\nthe second frame onward), and video expansion (e.g., masking half the frames).\nThe efficient design allocates most of the computational resources to the\nlow-resolution planning model, making computationally expensive but important\nspatio-temporal attention feasible at scale. MarDini sets a new\nstate-of-the-art for video interpolation; meanwhile, within few inference\nsteps, it efficiently generates videos on par with those of much more expensive\nadvanced image-to-video models.",
+      "upvotes": 21
+    },
+    {
+      "title": "COAT: Compressing Optimizer states and Activation for Memory-Efficient FP8 Training",
+      "url": "https://huggingface.co/papers/2410.19313",
+      "authors": [
+        "Haocheng Xi",
+        "Ligeng Zhu",
+        "Yao Lu",
+        "Kurt Keutzer",
+        "Jianfei Chen",
+        "Song Han"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.19313.pdf",
+      "abstract": "FP8 training has emerged as a promising method for improving training\nefficiency. Existing frameworks accelerate training by applying FP8 computation\nto linear layers while leaving optimizer states and activations in higher\nprecision, which fails to fully optimize memory usage. This paper introduces\nCOAT (Compressing Optimizer States and Activations for FP8 Training), a novel\nFP8 training framework designed to significantly reduce memory footprint when\ntraining large models. COAT addresses current limitations through two key\ninnovations: (1) Dynamic Range Expansion, which aligns optimizer state\ndistributions more closely with the FP8 representation range, thereby reducing\nquantization error, and (2) Mixed-Granularity Activation Quantization, which\noptimizes activation memory using a combination of per-tensor and per-group\nquantization strategies. Experiments demonstrate that COAT effectively reduces\nend-to-end training memory footprint by 1.54x compared to BF16 while achieving\nnearly lossless performance across various tasks, such as Large Language Model\npretraining and fine-tuning and Vision Language Model training. COAT also\nachieves a 1.43x end-to-end training speedup compared to BF16, performing on\npar with or surpassing TransformerEngine's speedup. COAT enables efficient\nfull-parameter training of large models on fewer GPUs, and facilitates doubling\nthe batch size in distributed training settings, providing a practical solution\nfor scaling large-scale model training. The code is available at\nhttps://github.com/NVlabs/COAT.",
+      "upvotes": 18
+    },
+    {
+      "title": "DreamClear: High-Capacity Real-World Image Restoration with Privacy-Safe Dataset Curation",
+      "url": "https://huggingface.co/papers/2410.18666",
+      "authors": [
+        "Xiaoqiang Zhou",
+        "Huaibo Huang",
+        "Zhengyu Chen",
+        "Hongxia Yang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.18666.pdf",
+      "abstract": "Image restoration (IR) in real-world scenarios presents significant\nchallenges due to the lack of high-capacity models and comprehensive datasets.\nTo tackle these issues, we present a dual strategy: GenIR, an innovative data\ncuration pipeline, and DreamClear, a cutting-edge Diffusion Transformer\n(DiT)-based image restoration model. GenIR, our pioneering contribution, is a\ndual-prompt learning pipeline that overcomes the limitations of existing\ndatasets, which typically comprise only a few thousand images and thus offer\nlimited generalizability for larger models. GenIR streamlines the process into\nthree stages: image-text pair construction, dual-prompt based fine-tuning, and\ndata generation & filtering. This approach circumvents the laborious data\ncrawling process, ensuring copyright compliance and providing a cost-effective,\nprivacy-safe solution for IR dataset construction. The result is a large-scale\ndataset of one million high-quality images. Our second contribution,\nDreamClear, is a DiT-based image restoration model. It utilizes the generative\npriors of text-to-image (T2I) diffusion models and the robust perceptual\ncapabilities of multi-modal large language models (MLLMs) to achieve\nphotorealistic restoration. To boost the model's adaptability to diverse\nreal-world degradations, we introduce the Mixture of Adaptive Modulator (MoAM).\nIt employs token-wise degradation priors to dynamically integrate various\nrestoration experts, thereby expanding the range of degradations the model can\naddress. Our exhaustive experiments confirm DreamClear's superior performance,\nunderlining the efficacy of our dual strategy for real-world image restoration.\nCode and pre-trained models will be available at:\nhttps://github.com/shallowdream204/DreamClear.",
+      "upvotes": 17
+    },
+    {
+      "title": "LongReward: Improving Long-context Large Language Models with AI Feedback",
+      "url": "https://huggingface.co/papers/2410.21252",
+      "authors": [
+        "Jiajie Zhang",
+        "Zhongni Hou",
+        "Xin Lv",
+        "Shulin Cao",
+        "Zhenyu Hou",
+        "Yilin Niu",
+        "Lei Hou",
+        "Yuxiao Dong",
+        "Ling Feng",
+        "Juanzi Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.21252.pdf",
+      "abstract": "Though significant advancements have been achieved in developing long-context\nlarge language models (LLMs), the compromised quality of LLM-synthesized data\nfor supervised fine-tuning (SFT) often affects the long-context performance of\nSFT models and leads to inherent limitations. In principle, reinforcement\nlearning (RL) with appropriate reward signals can further enhance models'\ncapacities. However, how to obtain reliable rewards in long-context scenarios\nremains unexplored. To this end, we propose LongReward, a novel method that\nutilizes an off-the-shelf LLM to provide rewards for long-context model\nresponses from four human-valued dimensions: helpfulness, logicality,\nfaithfulness, and completeness, each with a carefully designed assessment\npipeline. By combining LongReward and offline RL algorithm DPO, we are able to\neffectively improve long-context SFT models. Our experiments indicate that\nLongReward not only significantly improves models' long-context performance but\nalso enhances their ability to follow short instructions. We also find that\nlong-context DPO with LongReward and conventional short-context DPO can be used\ntogether without hurting either one's performance.",
+      "upvotes": 16
+    },
+    {
+      "title": "GrounDiT: Grounding Diffusion Transformers via Noisy Patch Transplantation",
+      "url": "https://huggingface.co/papers/2410.20474",
+      "authors": [
+        "Taehoon Yoon",
+        "Minhyuk Sung"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.20474.pdf",
+      "abstract": "We introduce a novel training-free spatial grounding technique for\ntext-to-image generation using Diffusion Transformers (DiT). Spatial grounding\nwith bounding boxes has gained attention for its simplicity and versatility,\nallowing for enhanced user control in image generation. However, prior\ntraining-free approaches often rely on updating the noisy image during the\nreverse diffusion process via backpropagation from custom loss functions, which\nfrequently struggle to provide precise control over individual bounding boxes.\nIn this work, we leverage the flexibility of the Transformer architecture,\ndemonstrating that DiT can generate noisy patches corresponding to each\nbounding box, fully encoding the target object and allowing for fine-grained\ncontrol over each region. Our approach builds on an intriguing property of DiT,\nwhich we refer to as semantic sharing. Due to semantic sharing, when a smaller\npatch is jointly denoised alongside a generatable-size image, the two become\n\"semantic clones\". Each patch is denoised in its own branch of the generation\nprocess and then transplanted into the corresponding region of the original\nnoisy image at each timestep, resulting in robust spatial grounding for each\nbounding box. In our experiments on the HRS and DrawBench benchmarks, we\nachieve state-of-the-art performance compared to previous training-free spatial\ngrounding approaches.",
+      "upvotes": 13
+    },
+    {
+      "title": "Fast Best-of-N Decoding via Speculative Rejection",
+      "url": "https://huggingface.co/papers/2410.20290",
+      "authors": [
+        "Momin Haider",
+        "Ruiqi Zhang",
+        "Huitao Yang",
+        "Jiahao Qiu",
+        "Ming Yin",
+        "Mengdi Wang",
+        "Peter Bartlett",
+        "Andrea Zanette"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.20290.pdf",
+      "abstract": "The safe and effective deployment of Large Language Models (LLMs) involves a\ncritical step called alignment, which ensures that the model's responses are in\naccordance with human preferences. Prevalent alignment techniques, such as DPO,\nPPO and their variants, align LLMs by changing the pre-trained model weights\nduring a phase called post-training. While predominant, these post-training\nmethods add substantial complexity before LLMs can be deployed. Inference-time\nalignment methods avoid the complex post-training step and instead bias the\ngeneration towards responses that are aligned with human preferences. The\nbest-known inference-time alignment method, called Best-of-N, is as effective\nas the state-of-the-art post-training procedures. Unfortunately, Best-of-N\nrequires vastly more resources at inference time than standard decoding\nstrategies, which makes it computationally not viable. In this work, we\nintroduce Speculative Rejection, a computationally-viable inference-time\nalignment algorithm. It generates high-scoring responses according to a given\nreward model, like Best-of-N does, while being between 16 to 32 times more\ncomputationally efficient.",
+      "upvotes": 8
+    },
+    {
+      "title": "Vision Search Assistant: Empower Vision-Language Models as Multimodal Search Engines",
+      "url": "https://huggingface.co/papers/2410.21220",
+      "authors": [
+        "Zhixin Zhang",
+        "Yiyuan Zhang",
+        "Xiaohan Ding",
+        "Xiangyu Yue"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.21220.pdf",
+      "abstract": "Search engines enable the retrieval of unknown information with texts.\nHowever, traditional methods fall short when it comes to understanding\nunfamiliar visual content, such as identifying an object that the model has\nnever seen before. This challenge is particularly pronounced for large\nvision-language models (VLMs): if the model has not been exposed to the object\ndepicted in an image, it struggles to generate reliable answers to the user's\nquestion regarding that image. Moreover, as new objects and events continuously\nemerge, frequently updating VLMs is impractical due to heavy computational\nburdens. To address this limitation, we propose Vision Search Assistant, a\nnovel framework that facilitates collaboration between VLMs and web agents.\nThis approach leverages VLMs' visual understanding capabilities and web agents'\nreal-time information access to perform open-world Retrieval-Augmented\nGeneration via the web. By integrating visual and textual representations\nthrough this collaboration, the model can provide informed responses even when\nthe image is novel to the system. Extensive experiments conducted on both\nopen-set and closed-set QA benchmarks demonstrate that the Vision Search\nAssistant significantly outperforms the other models and can be widely applied\nto existing VLMs.",
+      "upvotes": 8
+    },
+    {
+      "title": "LARP: Tokenizing Videos with a Learned Autoregressive Generative Prior",
+      "url": "https://huggingface.co/papers/2410.21264",
+      "authors": [
+        "Saksham Suri",
+        "Yixuan Ren",
+        "Hao Chen",
+        "Abhinav Shrivastava"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.21264.pdf",
+      "abstract": "We present LARP, a novel video tokenizer designed to overcome limitations in\ncurrent video tokenization methods for autoregressive (AR) generative models.\nUnlike traditional patchwise tokenizers that directly encode local visual\npatches into discrete tokens, LARP introduces a holistic tokenization scheme\nthat gathers information from the visual content using a set of learned\nholistic queries. This design allows LARP to capture more global and semantic\nrepresentations, rather than being limited to local patch-level information.\nFurthermore, it offers flexibility by supporting an arbitrary number of\ndiscrete tokens, enabling adaptive and efficient tokenization based on the\nspecific requirements of the task. To align the discrete token space with\ndownstream AR generation tasks, LARP integrates a lightweight AR transformer as\na training-time prior model that predicts the next token on its discrete latent\nspace. By incorporating the prior model during training, LARP learns a latent\nspace that is not only optimized for video reconstruction but is also\nstructured in a way that is more conducive to autoregressive generation.\nMoreover, this process defines a sequential order for the discrete tokens,\nprogressively pushing them toward an optimal configuration during training,\nensuring smoother and more accurate AR generation at inference time.\nComprehensive experiments demonstrate LARP's strong performance, achieving\nstate-of-the-art FVD on the UCF101 class-conditional video generation\nbenchmark. LARP enhances the compatibility of AR models with videos and opens\nup the potential to build unified high-fidelity multimodal large language\nmodels (MLLMs).",
+      "upvotes": 8
+    },
+    {
+      "title": "EoRA: Training-free Compensation for Compressed LLM with Eigenspace Low-Rank Approximation",
+      "url": "https://huggingface.co/papers/2410.21271",
+      "authors": [
+        "Huck Yang",
+        "Chein-Yi Wang",
+        "Nai Chit Fung",
+        "Hongxu Yin",
+        "Charbel Sakr",
+        "Saurav Muralidharan",
+        "Kwang-Ting Cheng",
+        "Jan Kautz",
+        "Yu-Chiang Frank Wang",
+        "Pavlo Molchanov"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.21271.pdf",
+      "abstract": "In this work, we re-formulate the model compression problem into the\ncustomized compensation problem: Given a compressed model, we aim to introduce\nresidual low-rank paths to compensate for compression errors under customized\nrequirements from users (e.g., tasks, compression ratios), resulting in greater\nflexibility in adjusting overall capacity without being constrained by specific\ncompression formats. However, naively applying SVD to derive residual paths\ncauses suboptimal utilization of the low-rank representation capacity. Instead,\nwe propose Training-free Eigenspace Low-Rank Approximation (EoRA), a method\nthat directly minimizes compression-induced errors without requiring\ngradient-based training, achieving fast optimization in minutes using a small\namount of calibration data. EoRA projects compression errors into the\neigenspace of input activations, leveraging eigenvalues to effectively\nprioritize the reconstruction of high-importance error components. Moreover,\nEoRA can be seamlessly integrated with fine-tuning and quantization to further\nimprove effectiveness and efficiency. EoRA consistently outperforms previous\nmethods in compensating errors for compressed LLaMA2/3 models on various tasks,\nsuch as language generation, commonsense reasoning, and math reasoning tasks\n(e.g., 31.31%/12.88% and 9.69% improvements on ARC-Easy/ARC-Challenge and\nMathQA when compensating LLaMA3-8B that is quantized to 4-bit and pruned to 2:4\nsparsity). EoRA offers a scalable, training-free solution to compensate for\ncompression errors, making it a powerful tool to deploy LLMs in various\ncapacity and efficiency requirements.",
+      "upvotes": 6
+    },
+    {
+      "title": "VideoWebArena: Evaluating Long Context Multimodal Agents with Video Understanding Web Tasks",
+      "url": "https://huggingface.co/papers/2410.19100",
+      "authors": [
+        "Lawrence Jang",
+        "Yinheng Li",
+        "Charles Ding",
+        "Justin Lin",
+        "Paul Pu Liang",
+        "Dan Zhao",
+        "Rogerio Bonatti",
+        "Kazuhito Koishida"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.19100.pdf",
+      "abstract": "Videos are often used to learn or extract the necessary information to\ncomplete tasks in ways different than what text and static imagery alone can\nprovide. However, many existing agent benchmarks neglect long-context video\nunderstanding, instead focusing on text or static image inputs. To bridge this\ngap, we introduce VideoWebArena (VideoWA), a benchmark for evaluating the\ncapabilities of long-context multimodal agents for video understanding. VideoWA\nconsists of 2,021 web agent tasks based on manually crafted video tutorials,\nwhich total almost four hours of content. For our benchmark, we define a\ntaxonomy of long-context video-based agent tasks with two main areas of focus:\nskill retention and factual retention. While skill retention tasks evaluate\nwhether an agent can use a given human demonstration to complete a task\nefficiently, the factual retention task evaluates whether an agent can retrieve\ninstruction-relevant information from a video to complete a task. We find that\nthe best model achieves 13.3% success on factual retention tasks and 45.8% on\nfactual retention QA pairs, far below human performance at 73.9% and 79.3%,\nrespectively. On skill retention tasks, long-context models perform worse with\ntutorials than without, exhibiting a 5% performance decrease in WebArena tasks\nand a 10.3% decrease in VisualWebArena tasks. Our work highlights the need to\nimprove the agentic abilities of long-context multimodal models and provides a\ntestbed for future development with long-context video agents.",
+      "upvotes": 6
+    },
+    {
+      "title": "Relaxed Recursive Transformers: Effective Parameter Sharing with Layer-wise LoRA",
+      "url": "https://huggingface.co/papers/2410.20672",
+      "authors": [
+        "Sangmin Bae",
+        "Adam Fisch",
+        "Hrayr Harutyunyan",
+        "Ziwei Ji",
+        "Seungyeon Kim",
+        "Tal Schuster"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.20672.pdf",
+      "abstract": "Large language models (LLMs) are expensive to deploy. Parameter sharing\noffers a possible path towards reducing their size and cost, but its\neffectiveness in modern LLMs remains fairly limited. In this work, we revisit\n\"layer tying\" as form of parameter sharing in Transformers, and introduce novel\nmethods for converting existing LLMs into smaller \"Recursive Transformers\" that\nshare parameters across layers, with minimal loss of performance. Here, our\nRecursive Transformers are efficiently initialized from standard pretrained\nTransformers, but only use a single block of unique layers that is then\nrepeated multiple times in a loop. We further improve performance by\nintroducing Relaxed Recursive Transformers that add flexibility to the layer\ntying constraint via depth-wise low-rank adaptation (LoRA) modules, yet still\npreserve the compactness of the overall model. We show that our recursive\nmodels (e.g., recursive Gemma 1B) outperform both similar-sized vanilla\npretrained models (such as TinyLlama 1.1B and Pythia 1B) and knowledge\ndistillation baselines -- and can even recover most of the performance of the\noriginal \"full-size\" model (e.g., Gemma 2B with no shared parameters). Finally,\nwe propose Continuous Depth-wise Batching, a promising new inference paradigm\nenabled by the Recursive Transformer when paired with early exiting. In a\ntheoretical analysis, we show that this has the potential to lead to\nsignificant (2-3x) gains in inference throughput.",
+      "upvotes": 5
+    },
+    {
+      "title": "Dialog2Flow: Pre-training Soft-Contrastive Action-Driven Sentence Embeddings for Automatic Dialog Flow Extraction",
+      "url": "https://huggingface.co/papers/2410.18481",
+      "authors": [
+        "Srikanth Madikeri",
+        "Petr Motlicek"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.18481.pdf",
+      "abstract": "Efficiently deriving structured workflows from unannotated dialogs remains an\nunderexplored and formidable challenge in computational linguistics. Automating\nthis process could significantly accelerate the manual design of workflows in\nnew domains and enable the grounding of large language models in\ndomain-specific flowcharts, enhancing transparency and controllability. In this\npaper, we introduce Dialog2Flow (D2F) embeddings, which differ from\nconventional sentence embeddings by mapping utterances to a latent space where\nthey are grouped according to their communicative and informative functions\n(i.e., the actions they represent). D2F allows for modeling dialogs as\ncontinuous trajectories in a latent space with distinct action-related regions.\nBy clustering D2F embeddings, the latent space is quantized, and dialogs can be\nconverted into sequences of region/action IDs, facilitating the extraction of\nthe underlying workflow. To pre-train D2F, we build a comprehensive dataset by\nunifying twenty task-oriented dialog datasets with normalized per-turn action\nannotations. We also introduce a novel soft contrastive loss that leverages the\nsemantic information of these actions to guide the representation learning\nprocess, showing superior performance compared to standard supervised\ncontrastive loss. Evaluation against various sentence embeddings, including\ndialog-specific ones, demonstrates that D2F yields superior qualitative and\nquantitative results across diverse domains.",
+      "upvotes": 5
+    },
+    {
+      "title": "Neural Fields in Robotics: A Survey",
+      "url": "https://huggingface.co/papers/2410.20220",
+      "authors": [
+        "Muhammad Zubair Irshad",
+        "Mauro Comi",
+        "Yen-Chen Lin",
+        "Nick Heppert",
+        "Abhinav Valada",
+        "Rares Ambrus",
+        "Zsolt Kira",
+        "Jonathan Tremblay"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.20220.pdf",
+      "abstract": "Neural Fields have emerged as a transformative approach for 3D scene\nrepresentation in computer vision and robotics, enabling accurate inference of\ngeometry, 3D semantics, and dynamics from posed 2D data. Leveraging\ndifferentiable rendering, Neural Fields encompass both continuous implicit and\nexplicit neural representations enabling high-fidelity 3D reconstruction,\nintegration of multi-modal sensor data, and generation of novel viewpoints.\nThis survey explores their applications in robotics, emphasizing their\npotential to enhance perception, planning, and control. Their compactness,\nmemory efficiency, and differentiability, along with seamless integration with\nfoundation and generative models, make them ideal for real-time applications,\nimproving robot adaptability and decision-making. This paper provides a\nthorough review of Neural Fields in robotics, categorizing applications across\nvarious domains and evaluating their strengths and limitations, based on over\n200 papers. First, we present four key Neural Fields frameworks: Occupancy\nNetworks, Signed Distance Fields, Neural Radiance Fields, and Gaussian\nSplatting. Second, we detail Neural Fields' applications in five major robotics\ndomains: pose estimation, manipulation, navigation, physics, and autonomous\ndriving, highlighting key works and discussing takeaways and open challenges.\nFinally, we outline the current limitations of Neural Fields in robotics and\npropose promising directions for future research. Project page:\nhttps://robonerf.github.io",
+      "upvotes": 4
+    },
+    {
+      "title": "Leveraging Locality to Boost Sample Efficiency in Robotic Manipulation",
+      "url": "https://huggingface.co/papers/2406.10615",
+      "authors": [
+        "Tong Zhang",
+        "Yingdong Hu",
+        "Jiacheng You",
+        "Yang Gao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2406.10615.pdf",
+      "abstract": "Given the high cost of collecting robotic data in the real world, sample\nefficiency is a consistently compelling pursuit in robotics. In this paper, we\nintroduce SGRv2, an imitation learning framework that enhances sample\nefficiency through improved visual and action representations. Central to the\ndesign of SGRv2 is the incorporation of a critical inductive bias-action\nlocality, which posits that robot's actions are predominantly influenced by the\ntarget object and its interactions with the local environment. Extensive\nexperiments in both simulated and real-world settings demonstrate that action\nlocality is essential for boosting sample efficiency. SGRv2 excels in RLBench\ntasks with keyframe control using merely 5 demonstrations and surpasses the RVT\nbaseline in 23 of 26 tasks. Furthermore, when evaluated on ManiSkill2 and\nMimicGen using dense control, SGRv2's success rate is 2.54 times that of SGR.\nIn real-world environments, with only eight demonstrations, SGRv2 can perform a\nvariety of tasks at a markedly higher success rate compared to baseline models.\nProject website: http://sgrv2-robot.github.io",
+      "upvotes": 2
+    },
+    {
+      "title": "Language Models And A Second Opinion Use Case: The Pocket Professional",
+      "url": "https://huggingface.co/papers/2410.20636",
+      "authors": [
+        "David Noever"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.20636.pdf",
+      "abstract": "This research tests the role of Large Language Models (LLMs) as formal second\nopinion tools in professional decision-making, particularly focusing on complex\nmedical cases where even experienced physicians seek peer consultation. The\nwork analyzed 183 challenging medical cases from Medscape over a 20-month\nperiod, testing multiple LLMs' performance against crowd-sourced physician\nresponses. A key finding was the high overall score possible in the latest\nfoundational models (>80% accuracy compared to consensus opinion), which\nexceeds most human metrics reported on the same clinical cases (450 pages of\npatient profiles, test results). The study rates the LLMs' performance\ndisparity between straightforward cases (>81% accuracy) and complex scenarios\n(43% accuracy), particularly in these cases generating substantial debate among\nhuman physicians. The research demonstrates that LLMs may be valuable as\ngenerators of comprehensive differential diagnoses rather than as primary\ndiagnostic tools, potentially helping to counter cognitive biases in clinical\ndecision-making, reduce cognitive loads, and thus remove some sources of\nmedical error. The inclusion of a second comparative legal dataset (Supreme\nCourt cases, N=21) provides added empirical context to the AI use to foster\nsecond opinions, though these legal challenges proved considerably easier for\nLLMs to analyze. In addition to the original contributions of empirical\nevidence for LLM accuracy, the research aggregated a novel benchmark for others\nto score highly contested question and answer reliability between both LLMs and\ndisagreeing human practitioners. These results suggest that the optimal\ndeployment of LLMs in professional settings may differ substantially from\ncurrent approaches that emphasize automation of routine tasks.",
+      "upvotes": 2
+    },
+    {
+      "title": "Bi-Level Motion Imitation for Humanoid Robots",
+      "url": "https://huggingface.co/papers/2410.01968",
+      "authors": [
+        "Wenshuai Zhao",
+        "Yi Zhao",
+        "Joni Pajarinen",
+        "Michael Muehlebach"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2410.01968.pdf",
+      "abstract": "Imitation learning from human motion capture (MoCap) data provides a\npromising way to train humanoid robots. However, due to differences in\nmorphology, such as varying degrees of joint freedom and force limits, exact\nreplication of human behaviors may not be feasible for humanoid robots.\nConsequently, incorporating physically infeasible MoCap data in training\ndatasets can adversely affect the performance of the robot policy. To address\nthis issue, we propose a bi-level optimization-based imitation learning\nframework that alternates between optimizing both the robot policy and the\ntarget MoCap data. Specifically, we first develop a generative latent dynamics\nmodel using a novel self-consistent auto-encoder, which learns sparse and\nstructured motion representations while capturing desired motion patterns in\nthe dataset. The dynamics model is then utilized to generate reference motions\nwhile the latent representation regularizes the bi-level motion imitation\nprocess. Simulations conducted with a realistic model of a humanoid robot\ndemonstrate that our method enhances the robot policy by modifying reference\nmotions to be physically consistent.",
+      "upvotes": 1
+    }
+  ]
+}

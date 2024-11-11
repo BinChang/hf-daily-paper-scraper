@@ -1,0 +1,168 @@
+{
+  "date": "2024-09-06",
+  "papers": [
+    {
+      "title": "Guide-and-Rescale: Self-Guidance Mechanism for Effective Tuning-Free Real Image Editing",
+      "url": "https://huggingface.co/papers/2409.01322",
+      "authors": [
+        "Madina Khalmatova",
+        "Dmitry Vetrov"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.01322.pdf",
+      "abstract": "Despite recent advances in large-scale text-to-image generative models,\nmanipulating real images with these models remains a challenging problem. The\nmain limitations of existing editing methods are that they either fail to\nperform with consistent quality on a wide range of image edits or require\ntime-consuming hyperparameter tuning or fine-tuning of the diffusion model to\npreserve the image-specific appearance of the input image. We propose a novel\napproach that is built upon a modified diffusion sampling process via the\nguidance mechanism. In this work, we explore the self-guidance technique to\npreserve the overall structure of the input image and its local regions\nappearance that should not be edited. In particular, we explicitly introduce\nlayout-preserving energy functions that are aimed to save local and global\nstructures of the source image. Additionally, we propose a noise rescaling\nmechanism that allows to preserve noise distribution by balancing the norms of\nclassifier-free guidance and our proposed guiders during generation. Such a\nguiding approach does not require fine-tuning the diffusion model and exact\ninversion process. As a result, the proposed method provides a fast and\nhigh-quality editing mechanism. In our experiments, we show through human\nevaluation and quantitative analysis that the proposed method allows to produce\ndesired editing which is more preferable by humans and also achieves a better\ntrade-off between editing quality and preservation of the original image. Our\ncode is available at https://github.com/FusionBrainLab/Guide-and-Rescale.",
+      "upvotes": 94
+    },
+    {
+      "title": "Attention Heads of Large Language Models: A Survey",
+      "url": "https://huggingface.co/papers/2409.03752",
+      "authors": [
+        "Bo Tang",
+        "Feiyu Xiong"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.03752.pdf",
+      "abstract": "Since the advent of ChatGPT, Large Language Models (LLMs) have excelled in\nvarious tasks but remain largely as black-box systems. Consequently, their\ndevelopment relies heavily on data-driven approaches, limiting performance\nenhancement through changes in internal architecture and reasoning pathways. As\na result, many researchers have begun exploring the potential internal\nmechanisms of LLMs, aiming to identify the essence of their reasoning\nbottlenecks, with most studies focusing on attention heads. Our survey aims to\nshed light on the internal reasoning processes of LLMs by concentrating on the\ninterpretability and underlying mechanisms of attention heads. We first distill\nthe human thought process into a four-stage framework: Knowledge Recalling,\nIn-Context Identification, Latent Reasoning, and Expression Preparation. Using\nthis framework, we systematically review existing research to identify and\ncategorize the functions of specific attention heads. Furthermore, we summarize\nthe experimental methodologies used to discover these special heads, dividing\nthem into two categories: Modeling-Free methods and Modeling-Required methods.\nAlso, we outline relevant evaluation methods and benchmarks. Finally, we\ndiscuss the limitations of current research and propose several potential\nfuture directions. Our reference list is open-sourced at\nhttps://github.com/IAAR-Shanghai/Awesome-Attention-Heads.",
+      "upvotes": 87
+    },
+    {
+      "title": "FuzzCoder: Byte-level Fuzzing Test via Large Language Model",
+      "url": "https://huggingface.co/papers/2409.01944",
+      "authors": [
+        "Liqun Yang",
+        "Wanxu Xia",
+        "Shun Zhang",
+        "Jiaxin Ma",
+        "Liang Sun",
+        "Zhoujun Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.01944.pdf",
+      "abstract": "Fuzzing is an important dynamic program analysis technique designed for\nfinding vulnerabilities in complex software. Fuzzing involves presenting a\ntarget program with crafted malicious input to cause crashes, buffer overflows,\nmemory errors, and exceptions. Crafting malicious inputs in an efficient manner\nis a difficult open problem and the best approaches often apply uniform random\nmutations to pre-existing valid inputs. In this work, we propose to adopt\nfine-tuned large language models (FuzzCoder) to learn patterns in the input\nfiles from successful attacks to guide future fuzzing explorations.\nSpecifically, we develop a framework to leverage the code LLMs to guide the\nmutation process of inputs in fuzzing. The mutation process is formulated as\nthe sequence-to-sequence modeling, where LLM receives a sequence of bytes and\nthen outputs the mutated byte sequence. FuzzCoder is fine-tuned on the created\ninstruction dataset (Fuzz-Instruct), where the successful fuzzing history is\ncollected from the heuristic fuzzing tool. FuzzCoder can predict mutation\nlocations and strategies locations in input files to trigger abnormal behaviors\nof the program. Experimental results show that FuzzCoder based on AFL (American\nFuzzy Lop) gain significant improvements in terms of effective proportion of\nmutation (EPM) and number of crashes (NC) for various input formats including\nELF, JPG, MP3, and XML.",
+      "upvotes": 44
+    },
+    {
+      "title": "From MOOC to MAIC: Reshaping Online Teaching and Learning through LLM-driven Agents",
+      "url": "https://huggingface.co/papers/2409.03512",
+      "authors": [
+        "Zheyuan Zhang",
+        "Daniel Zhang-li",
+        "Rui Miao Li",
+        "Haoxuan Li",
+        "Yuanchun Wang",
+        "Hanming Li",
+        "Linlu Gong",
+        "Jinchang Zhou",
+        "Fei Qin",
+        "Haohua Wang",
+        "Jianxiao Jiang",
+        "Lijun Deng",
+        "Yisi Zhan",
+        "Xusheng Dai",
+        "Xuan Yan",
+        "Nianyi Lin"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.03512.pdf",
+      "abstract": "Since the first instances of online education, where courses were uploaded to\naccessible and shared online platforms, this form of scaling the dissemination\nof human knowledge to reach a broader audience has sparked extensive discussion\nand widespread adoption. Recognizing that personalized learning still holds\nsignificant potential for improvement, new AI technologies have been\ncontinuously integrated into this learning format, resulting in a variety of\neducational AI applications such as educational recommendation and intelligent\ntutoring. The emergence of intelligence in large language models (LLMs) has\nallowed for these educational enhancements to be built upon a unified\nfoundational model, enabling deeper integration. In this context, we propose\nMAIC (Massive AI-empowered Course), a new form of online education that\nleverages LLM-driven multi-agent systems to construct an AI-augmented\nclassroom, balancing scalability with adaptivity. Beyond exploring the\nconceptual framework and technical innovations, we conduct preliminary\nexperiments at Tsinghua University, one of China's leading universities.\nDrawing from over 100,000 learning records of more than 500 students, we obtain\na series of valuable observations and initial analyses. This project will\ncontinue to evolve, ultimately aiming to establish a comprehensive open\nplatform that supports and unifies research, technology, and applications in\nexploring the possibilities of online education in the era of large model AI.\nWe envision this platform as a collaborative hub, bringing together educators,\nresearchers, and innovators to collectively explore the future of AI-driven\nonline education.",
+      "upvotes": 26
+    },
+    {
+      "title": "Geometry Image Diffusion: Fast and Data-Efficient Text-to-3D with Image-Based Surface Representation",
+      "url": "https://huggingface.co/papers/2409.03718",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2409.03718.pdf",
+      "abstract": "Generating high-quality 3D objects from textual descriptions remains a\nchallenging problem due to computational cost, the scarcity of 3D data, and\ncomplex 3D representations. We introduce Geometry Image Diffusion\n(GIMDiffusion), a novel Text-to-3D model that utilizes geometry images to\nefficiently represent 3D shapes using 2D images, thereby avoiding the need for\ncomplex 3D-aware architectures. By integrating a Collaborative Control\nmechanism, we exploit the rich 2D priors of existing Text-to-Image models such\nas Stable Diffusion. This enables strong generalization even with limited 3D\ntraining data (allowing us to use only high-quality training data) as well as\nretaining compatibility with guidance techniques such as IPAdapter. In short,\nGIMDiffusion enables the generation of 3D assets at speeds comparable to\ncurrent Text-to-Image models. The generated objects consist of semantically\nmeaningful, separate parts and include internal structures, enhancing both\nusability and versatility.",
+      "upvotes": 25
+    },
+    {
+      "title": "mPLUG-DocOwl2: High-resolution Compressing for OCR-free Multi-page Document Understanding",
+      "url": "https://huggingface.co/papers/2409.03420",
+      "authors": [
+        "Liang Zhang",
+        "Jiabo Ye",
+        "Ming Yan",
+        "Ji Zhang",
+        "Qin Jin"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.03420.pdf",
+      "abstract": "Multimodel Large Language Models(MLLMs) have achieved promising OCR-free\nDocument Understanding performance by increasing the supported resolution of\ndocument images. However, this comes at the cost of generating thousands of\nvisual tokens for a single document image, leading to excessive GPU memory and\nslower inference times, particularly in multi-page document comprehension. In\nthis work, to address these challenges, we propose a High-resolution\nDocCompressor module to compress each high-resolution document image into 324\ntokens, guided by low-resolution global visual features. With this compression\nmodule, to strengthen multi-page document comprehension ability and balance\nboth token efficiency and question-answering performance, we develop the\nDocOwl2 under a three-stage training framework: Single-image Pretraining,\nMulti-image Continue-pretraining, and Multi-task Finetuning. DocOwl2 sets a new\nstate-of-the-art across multi-page document understanding benchmarks and\nreduces first token latency by more than 50%, demonstrating advanced\ncapabilities in multi-page questioning answering, explanation with evidence\npages, and cross-page structure understanding. Additionally, compared to\nsingle-image MLLMs trained on similar data, our DocOwl2 achieves comparable\nsingle-page understanding performance with less than 20% of the visual tokens.\nOur codes, models, and data are publicly available at\nhttps://github.com/X-PLUG/mPLUG-DocOwl/tree/main/DocOwl2.",
+      "upvotes": 23
+    },
+    {
+      "title": "CDM: A Reliable Metric for Fair and Accurate Formula Recognition Evaluation",
+      "url": "https://huggingface.co/papers/2409.03643",
+      "authors": [
+        "Fan Wu",
+        "Zhuangcheng Gu",
+        "Rui Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.03643.pdf",
+      "abstract": "Formula recognition presents significant challenges due to the complicated\nstructure and varied notation of mathematical expressions. Despite continuous\nadvancements in formula recognition models, the evaluation metrics employed by\nthese models, such as BLEU and Edit Distance, still exhibit notable\nlimitations. They overlook the fact that the same formula has diverse\nrepresentations and is highly sensitive to the distribution of training data,\nthereby causing the unfairness in formula recognition evaluation. To this end,\nwe propose a Character Detection Matching (CDM) metric, ensuring the evaluation\nobjectivity by designing a image-level rather than LaTex-level metric score.\nSpecifically, CDM renders both the model-predicted LaTeX and the ground-truth\nLaTeX formulas into image-formatted formulas, then employs visual feature\nextraction and localization techniques for precise character-level matching,\nincorporating spatial position information. Such a spatially-aware and\ncharacter-matching method offers a more accurate and equitable evaluation\ncompared with previous BLEU and Edit Distance metrics that rely solely on\ntext-based character matching. Experimentally, we evaluated various formula\nrecognition models using CDM, BLEU, and ExpRate metrics. Their results\ndemonstrate that the CDM aligns more closely with human evaluation standards\nand provides a fairer comparison across different models by eliminating\ndiscrepancies caused by diverse formula representations.",
+      "upvotes": 18
+    },
+    {
+      "title": "WildVis: Open Source Visualizer for Million-Scale Chat Logs in the Wild",
+      "url": "https://huggingface.co/papers/2409.03753",
+      "authors": [
+        "Xiang Ren",
+        "Claire Cardie"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.03753.pdf",
+      "abstract": "The increasing availability of real-world conversation data offers exciting\nopportunities for researchers to study user-chatbot interactions. However, the\nsheer volume of this data makes manually examining individual conversations\nimpractical. To overcome this challenge, we introduce WildVis, an interactive\ntool that enables fast, versatile, and large-scale conversation analysis.\nWildVis provides search and visualization capabilities in the text and\nembedding spaces based on a list of criteria. To manage million-scale datasets,\nwe implemented optimizations including search index construction, embedding\nprecomputation and compression, and caching to ensure responsive user\ninteractions within seconds. We demonstrate WildVis's utility through three\ncase studies: facilitating chatbot misuse research, visualizing and comparing\ntopic distributions across datasets, and characterizing user-specific\nconversation patterns. WildVis is open-source and designed to be extendable,\nsupporting additional datasets and customized search and visualization\nfunctionalities.",
+      "upvotes": 18
+    },
+    {
+      "title": "Building Math Agents with Multi-Turn Iterative Preference Learning",
+      "url": "https://huggingface.co/papers/2409.02392",
+      "authors": [
+        "Wei Xiong",
+        "Chengshuai Shi",
+        "Jiaming Shen",
+        "Aviv Rosenberg",
+        "Zhen Qin",
+        "Daniele Calandriello",
+        "Misha Khalman",
+        "Rishabh Joshi",
+        "Bilal Piot",
+        "Mohammad Saleh",
+        "Chi Jin",
+        "Tong Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.02392.pdf",
+      "abstract": "Recent studies have shown that large language models' (LLMs) mathematical\nproblem-solving capabilities can be enhanced by integrating external tools,\nsuch as code interpreters, and employing multi-turn Chain-of-Thought (CoT)\nreasoning. While current methods focus on synthetic data generation and\nSupervised Fine-Tuning (SFT), this paper studies the complementary direct\npreference learning approach to further improve model performance. However,\nexisting direct preference learning algorithms are originally designed for the\nsingle-turn chat task, and do not fully address the complexities of multi-turn\nreasoning and external tool integration required for tool-integrated\nmathematical reasoning tasks. To fill in this gap, we introduce a multi-turn\ndirect preference learning framework, tailored for this context, that leverages\nfeedback from code interpreters and optimizes trajectory-level preferences.\nThis framework includes multi-turn DPO and multi-turn KTO as specific\nimplementations. The effectiveness of our framework is validated through\ntraining of various language models using an augmented prompt set from the\nGSM8K and MATH datasets. Our results demonstrate substantial improvements: a\nsupervised fine-tuned Gemma-1.1-it-7B model's performance increased from 77.5%\nto 83.9% on GSM8K and from 46.1% to 51.2% on MATH. Similarly, a Gemma-2-it-9B\nmodel improved from 84.1% to 86.3% on GSM8K and from 51.0% to 54.5% on MATH.",
+      "upvotes": 14
+    },
+    {
+      "title": "FrozenSeg: Harmonizing Frozen Foundation Models for Open-Vocabulary Segmentation",
+      "url": "https://huggingface.co/papers/2409.03525",
+      "authors": [
+        "Xi Chen",
+        "Hongxun Yao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.03525.pdf",
+      "abstract": "Open-vocabulary segmentation poses significant challenges, as it requires\nsegmenting and recognizing objects across an open set of categories in\nunconstrained environments. Building on the success of powerful vision-language\n(ViL) foundation models, such as CLIP, recent efforts sought to harness their\nzero-short capabilities to recognize unseen categories. Despite notable\nperformance improvements, these models still encounter the critical issue of\ngenerating precise mask proposals for unseen categories and scenarios,\nresulting in inferior segmentation performance eventually. To address this\nchallenge, we introduce a novel approach, FrozenSeg, designed to integrate\nspatial knowledge from a localization foundation model (e.g., SAM) and semantic\nknowledge extracted from a ViL model (e.g., CLIP), in a synergistic framework.\nTaking the ViL model's visual encoder as the feature backbone, we inject the\nspace-aware feature into the learnable queries and CLIP features within the\ntransformer decoder. In addition, we devise a mask proposal ensemble strategy\nfor further improving the recall rate and mask quality. To fully exploit\npre-trained knowledge while minimizing training overhead, we freeze both\nfoundation models, focusing optimization efforts solely on a lightweight\ntransformer decoder for mask proposal generation-the performance bottleneck.\nExtensive experiments demonstrate that FrozenSeg advances state-of-the-art\nresults across various segmentation benchmarks, trained exclusively on COCO\npanoptic data, and tested in a zero-shot manner. Code is available at\nhttps://github.com/chenxi52/FrozenSeg.",
+      "upvotes": 11
+    },
+    {
+      "title": "Report Cards: Qualitative Evaluation of Language Models Using Natural Language Summaries",
+      "url": "https://huggingface.co/papers/2409.00844",
+      "authors": [
+        "Keiran Paster",
+        "Jimmy Ba",
+        "Michael R. Zhang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.00844.pdf",
+      "abstract": "The rapid development and dynamic nature of large language models (LLMs) make\nit difficult for conventional quantitative benchmarks to accurately assess\ntheir capabilities. We propose report cards, which are human-interpretable,\nnatural language summaries of model behavior for specific skills or topics. We\ndevelop a framework to evaluate report cards based on three criteria:\nspecificity (ability to distinguish between models), faithfulness (accurate\nrepresentation of model capabilities), and interpretability (clarity and\nrelevance to humans). We also propose an iterative algorithm for generating\nreport cards without human supervision and explore its efficacy by ablating\nvarious design choices. Through experimentation with popular LLMs, we\ndemonstrate that report cards provide insights beyond traditional benchmarks\nand can help address the need for a more interpretable and holistic evaluation\nof LLMs.",
+      "upvotes": 11
+    },
+    {
+      "title": "Statically Contextualizing Large Language Models with Typed Holes",
+      "url": "https://huggingface.co/papers/2409.00921",
+      "authors": [
+        "Xiang Li",
+        "June Hyung Kim",
+        "Cyrus Omar"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2409.00921.pdf",
+      "abstract": "Large language models (LLMs) have reshaped the landscape of program\nsynthesis. However, contemporary LLM-based code completion systems often\nhallucinate broken code because they lack appropriate context, particularly\nwhen working with definitions not in the training data nor near the cursor.\nThis paper demonstrates that tight integration with the type and binding\nstructure of a language, as exposed by its language server, can address this\ncontextualization problem in a token-efficient manner. In short, we contend\nthat AIs need IDEs, too! In particular, we integrate LLM code generation into\nthe Hazel live program sketching environment. The Hazel Language Server\nidentifies the type and typing context of the hole being filled, even in the\npresence of errors, ensuring that a meaningful program sketch is always\navailable. This allows prompting with codebase-wide contextual information not\nlexically local to the cursor, nor necessarily in the same file, but that is\nlikely to be semantically local to the developer's goal. Completions\nsynthesized by the LLM are then iteratively refined via further dialog with the\nlanguage server. To evaluate these techniques, we introduce MVUBench, a dataset\nof model-view-update (MVU) web applications. These applications serve as\nchallenge problems due to their reliance on application-specific data\nstructures. We find that contextualization with type definitions is\nparticularly impactful. After introducing our ideas in the context of Hazel we\nduplicate our techniques and port MVUBench to TypeScript in order to validate\nthe applicability of these methods to higher-resource languages. Finally, we\noutline ChatLSP, a conservative extension to the Language Server Protocol (LSP)\nthat language servers can implement to expose capabilities that AI code\ncompletion systems of various designs can use to incorporate static context\nwhen generating prompts for an LLM.",
+      "upvotes": 3
+    }
+  ]
+}

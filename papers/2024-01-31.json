@@ -1,0 +1,183 @@
+{
+  "date": "2024-01-31",
+  "papers": [
+    {
+      "title": "Weaver: Foundation Models for Creative Writing",
+      "url": "https://huggingface.co/papers/2401.17268",
+      "authors": [
+        "Jiamin Chen",
+        "Ruoyu Fang",
+        "Huilin Wang",
+        "Zhaowei Gao",
+        "Chunzhao Xie",
+        "Chuou Xu",
+        "Jihong Dai",
+        "Shengwei Ding",
+        "Xinle Deng",
+        "Teng Yu",
+        "Gangan Ma",
+        "Han Xiao",
+        "Zixin Chen",
+        "Danjun Xiang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.17268.pdf",
+      "abstract": "This work introduces Weaver, our first family of large language models (LLMs)\ndedicated to content creation. Weaver is pre-trained on a carefully selected\ncorpus that focuses on improving the writing capabilities of large language\nmodels. We then fine-tune Weaver for creative and professional writing purposes\nand align it to the preference of professional writers using a suit of novel\nmethods for instruction data synthesis and LLM alignment, making it able to\nproduce more human-like texts and follow more diverse instructions for content\ncreation. The Weaver family consists of models of Weaver Mini (1.8B), Weaver\nBase (6B), Weaver Pro (14B), and Weaver Ultra (34B) sizes, suitable for\ndifferent applications and can be dynamically dispatched by a routing agent\naccording to query complexity to balance response quality and computation cost.\nEvaluation on a carefully curated benchmark for assessing the writing\ncapabilities of LLMs shows Weaver models of all sizes outperform generalist\nLLMs several times larger than them. Notably, our most-capable Weaver Ultra\nmodel surpasses GPT-4, a state-of-the-art generalist LLM, on various writing\nscenarios, demonstrating the advantage of training specialized LLMs for writing\npurposes. Moreover, Weaver natively supports retrieval-augmented generation\n(RAG) and function calling (tool usage). We present various use cases of these\nabilities for improving AI-assisted writing systems, including integration of\nexternal knowledge bases, tools, or APIs, and providing personalized writing\nassistance. Furthermore, we discuss and summarize a guideline and best\npractices for pre-training and fine-tuning domain-specific LLMs.",
+      "upvotes": 43
+    },
+    {
+      "title": "YOLO-World: Real-Time Open-Vocabulary Object Detection",
+      "url": "https://huggingface.co/papers/2401.17270",
+      "authors": [
+        "Lin Song",
+        "Wenyu Liu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.17270.pdf",
+      "abstract": "The You Only Look Once (YOLO) series of detectors have established themselves\nas efficient and practical tools. However, their reliance on predefined and\ntrained object categories limits their applicability in open scenarios.\nAddressing this limitation, we introduce YOLO-World, an innovative approach\nthat enhances YOLO with open-vocabulary detection capabilities through\nvision-language modeling and pre-training on large-scale datasets.\nSpecifically, we propose a new Re-parameterizable Vision-Language Path\nAggregation Network (RepVL-PAN) and region-text contrastive loss to facilitate\nthe interaction between visual and linguistic information. Our method excels in\ndetecting a wide range of objects in a zero-shot manner with high efficiency.\nOn the challenging LVIS dataset, YOLO-World achieves 35.4 AP with 52.0 FPS on\nV100, which outperforms many state-of-the-art methods in terms of both accuracy\nand speed. Furthermore, the fine-tuned YOLO-World achieves remarkable\nperformance on several downstream tasks, including object detection and\nopen-vocabulary instance segmentation.",
+      "upvotes": 33
+    },
+    {
+      "title": "BlockFusion: Expandable 3D Scene Generation using Latent Tri-plane Extrapolation",
+      "url": "https://huggingface.co/papers/2401.17053",
+      "authors": [
+        "Yang Li",
+        "Han Yan",
+        "Taizhang Shang",
+        "Senbo Wang",
+        "Ruikai Cui",
+        "Weizhe Liu",
+        "Hiroyuki Sato",
+        "Hongdong Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.17053.pdf",
+      "abstract": "We present BlockFusion, a diffusion-based model that generates 3D scenes as\nunit blocks and seamlessly incorporates new blocks to extend the scene.\nBlockFusion is trained using datasets of 3D blocks that are randomly cropped\nfrom complete 3D scene meshes. Through per-block fitting, all training blocks\nare converted into the hybrid neural fields: with a tri-plane containing the\ngeometry features, followed by a Multi-layer Perceptron (MLP) for decoding the\nsigned distance values. A variational auto-encoder is employed to compress the\ntri-planes into the latent tri-plane space, on which the denoising diffusion\nprocess is performed. Diffusion applied to the latent representations allows\nfor high-quality and diverse 3D scene generation. To expand a scene during\ngeneration, one needs only to append empty blocks to overlap with the current\nscene and extrapolate existing latent tri-planes to populate new blocks. The\nextrapolation is done by conditioning the generation process with the feature\nsamples from the overlapping tri-planes during the denoising iterations. Latent\ntri-plane extrapolation produces semantically and geometrically meaningful\ntransitions that harmoniously blend with the existing scene. A 2D layout\nconditioning mechanism is used to control the placement and arrangement of\nscene elements. Experimental results indicate that BlockFusion is capable of\ngenerating diverse, geometrically consistent and unbounded large 3D scenes with\nunprecedented high-quality shapes in both indoor and outdoor scenarios.",
+      "upvotes": 31
+    },
+    {
+      "title": "StrokeNUWA: Tokenizing Strokes for Vector Graphic Synthesis",
+      "url": "https://huggingface.co/papers/2401.17093",
+      "authors": [
+        "Zekai Zhang",
+        "Mingheng Ni",
+        "Shengming Yin",
+        "Yu Liu",
+        "Nan Duan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.17093.pdf",
+      "abstract": "To leverage LLMs for visual synthesis, traditional methods convert raster\nimage information into discrete grid tokens through specialized visual modules,\nwhile disrupting the model's ability to capture the true semantic\nrepresentation of visual scenes. This paper posits that an alternative\nrepresentation of images, vector graphics, can effectively surmount this\nlimitation by enabling a more natural and semantically coherent segmentation of\nthe image information. Thus, we introduce StrokeNUWA, a pioneering work\nexploring a better visual representation ''stroke tokens'' on vector graphics,\nwhich is inherently visual semantics rich, naturally compatible with LLMs, and\nhighly compressed. Equipped with stroke tokens, StrokeNUWA can significantly\nsurpass traditional LLM-based and optimization-based methods across various\nmetrics in the vector graphic generation task. Besides, StrokeNUWA achieves up\nto a 94x speedup in inference over the speed of prior methods with an\nexceptional SVG code compression ratio of 6.9%.",
+      "upvotes": 19
+    },
+    {
+      "title": "Proactive Detection of Voice Cloning with Localized Watermarking",
+      "url": "https://huggingface.co/papers/2401.17264",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2401.17264.pdf",
+      "abstract": "In the rapidly evolving field of speech generative models, there is a\npressing need to ensure audio authenticity against the risks of voice cloning.\nWe present AudioSeal, the first audio watermarking technique designed\nspecifically for localized detection of AI-generated speech. AudioSeal employs\na generator/detector architecture trained jointly with a localization loss to\nenable localized watermark detection up to the sample level, and a novel\nperceptual loss inspired by auditory masking, that enables AudioSeal to achieve\nbetter imperceptibility. AudioSeal achieves state-of-the-art performance in\nterms of robustness to real life audio manipulations and imperceptibility based\non automatic and human evaluation metrics. Additionally, AudioSeal is designed\nwith a fast, single-pass detector, that significantly surpasses existing models\nin speed - achieving detection up to two orders of magnitude faster, making it\nideal for large-scale and real-time applications.",
+      "upvotes": 17
+    },
+    {
+      "title": "H2O-Danube-1.8B Technical Report",
+      "url": "https://huggingface.co/papers/2401.16818",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2401.16818.pdf",
+      "abstract": "We present H2O-Danube-1.8B, a 1.8B language model trained on 1T tokens\nfollowing the core principles of LLama 2 and Mistral. We leverage and refine\nvarious techniques for pre-training large language models. Although our model\nis trained on significantly fewer total tokens compared to reference models of\nsimilar size, it exhibits highly competitive metrics across a multitude of\nbenchmarks. We additionally release a chat model trained with supervised\nfine-tuning followed by direct preference optimization. We make H2O-Danube-1.8B\nopenly available under Apache 2.0 license further democratizing LLMs to a wider\naudience economically.",
+      "upvotes": 17
+    },
+    {
+      "title": "Weak-to-Strong Jailbreaking on Large Language Models",
+      "url": "https://huggingface.co/papers/2401.17256",
+      "authors": [
+        "Lei Li",
+        "Yu-Xiang Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.17256.pdf",
+      "abstract": "Although significant efforts have been dedicated to aligning large language\nmodels (LLMs), red-teaming reports suggest that these carefully aligned LLMs\ncould still be jailbroken through adversarial prompts, tuning, or decoding.\nUpon examining the jailbreaking vulnerability of aligned LLMs, we observe that\nthe decoding distributions of jailbroken and aligned models differ only in the\ninitial generations. This observation motivates us to propose the\nweak-to-strong jailbreaking attack, where adversaries can utilize smaller\nunsafe/aligned LLMs (e.g., 7B) to guide jailbreaking against significantly\nlarger aligned LLMs (e.g., 70B). To jailbreak, one only needs to additionally\ndecode two smaller LLMs once, which involves minimal computation and latency\ncompared to decoding the larger LLMs. The efficacy of this attack is\ndemonstrated through experiments conducted on five models from three different\norganizations. Our study reveals a previously unnoticed yet efficient way of\njailbreaking, exposing an urgent safety issue that needs to be considered when\naligning LLMs. As an initial attempt, we propose a defense strategy to protect\nagainst such attacks, but creating more advanced defenses remains challenging.\nThe code for replicating the method is available at\nhttps://github.com/XuandongZhao/weak-to-strong",
+      "upvotes": 15
+    },
+    {
+      "title": "Transfer Learning for Text Diffusion Models",
+      "url": "https://huggingface.co/papers/2401.17181",
+      "authors": [
+        "Kehang Han",
+        "Kathleen Kenealy",
+        "Noah Constant"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.17181.pdf",
+      "abstract": "In this report, we explore the potential for text diffusion to replace\nautoregressive (AR) decoding for the training and deployment of large language\nmodels (LLMs). We are particularly interested to see whether pretrained AR\nmodels can be transformed into text diffusion models through a lightweight\nadaptation procedure we call ``AR2Diff''. We begin by establishing a strong\nbaseline setup for training text diffusion models. Comparing across multiple\narchitectures and pretraining objectives, we find that training a decoder-only\nmodel with a prefix LM objective is best or near-best across several tasks.\nBuilding on this finding, we test various transfer learning setups for text\ndiffusion models. On machine translation, we find that text diffusion\nunderperforms the standard AR approach. However, on code synthesis and\nextractive QA, we find diffusion models trained from scratch outperform AR\nmodels in many cases. We also observe quality gains from AR2Diff -- adapting AR\nmodels to use diffusion decoding. These results are promising given that text\ndiffusion is relatively underexplored and can be significantly faster than AR\ndecoding for long text generation.",
+      "upvotes": 15
+    },
+    {
+      "title": "OWSM v3.1: Better and Faster Open Whisper-Style Speech Models based on E-Branchformer",
+      "url": "https://huggingface.co/papers/2401.16658",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2401.16658.pdf",
+      "abstract": "Recent studies have advocated for fully open foundation models to promote\ntransparency and open science. As an initial step, the Open Whisper-style\nSpeech Model (OWSM) reproduced OpenAI's Whisper using publicly available data\nand open-source toolkits. With the aim of reproducing Whisper, the previous\nOWSM v1 through v3 models were still based on Transformer, which might lead to\ninferior performance compared to other state-of-the-art speech encoders. In\nthis work, we aim to improve the performance and efficiency of OWSM without\nextra training data. We present E-Branchformer based OWSM v3.1 models at two\nscales, i.e., 100M and 1B. The 1B model is the largest E-Branchformer based\nspeech model that has been made publicly available. It outperforms the previous\nOWSM v3 in a vast majority of evaluation benchmarks, while demonstrating up to\n25% faster inference speed. We publicly release the data preparation scripts,\npre-trained models and training logs.",
+      "upvotes": 13
+    },
+    {
+      "title": "Repositioning the Subject within Image",
+      "url": "https://huggingface.co/papers/2401.16861",
+      "authors": [
+        "Yifan Li",
+        "Yanwei Fu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.16861.pdf",
+      "abstract": "Current image manipulation primarily centers on static manipulation, such as\nreplacing specific regions within an image or altering its overall style. In\nthis paper, we introduce an innovative dynamic manipulation task, subject\nrepositioning. This task involves relocating a user-specified subject to a\ndesired position while preserving the image's fidelity. Our research reveals\nthat the fundamental sub-tasks of subject repositioning, which include filling\nthe void left by the repositioned subject, reconstructing obscured portions of\nthe subject and blending the subject to be consistent with surrounding areas,\ncan be effectively reformulated as a unified, prompt-guided inpainting task.\nConsequently, we can employ a single diffusion generative model to address\nthese sub-tasks using various task prompts learned through our proposed task\ninversion technique. Additionally, we integrate pre-processing and\npost-processing techniques to further enhance the quality of subject\nrepositioning. These elements together form our SEgment-gEnerate-and-bLEnd\n(SEELE) framework. To assess SEELE's effectiveness in subject repositioning, we\nassemble a real-world subject repositioning dataset called ReS. Our results on\nReS demonstrate the quality of repositioned image generation.",
+      "upvotes": 13
+    },
+    {
+      "title": "High-Quality Image Restoration Following Human Instructions",
+      "url": "https://huggingface.co/papers/2401.16468",
+      "authors": [
+        "Radu Timofte"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.16468.pdf",
+      "abstract": "Image restoration is a fundamental problem that involves recovering a\nhigh-quality clean image from its degraded observation. All-In-One image\nrestoration models can effectively restore images from various types and levels\nof degradation using degradation-specific information as prompts to guide the\nrestoration model. In this work, we present the first approach that uses\nhuman-written instructions to guide the image restoration model. Given natural\nlanguage prompts, our model can recover high-quality images from their degraded\ncounterparts, considering multiple degradation types. Our method, InstructIR,\nachieves state-of-the-art results on several restoration tasks including image\ndenoising, deraining, deblurring, dehazing, and (low-light) image enhancement.\nInstructIR improves +1dB over previous all-in-one restoration methods.\nMoreover, our dataset and results represent a novel benchmark for new research\non text-guided image restoration and enhancement. Our code, datasets and models\nare available at: https://github.com/mv-lab/InstructIR",
+      "upvotes": 12
+    },
+    {
+      "title": "ReGAL: Refactoring Programs to Discover Generalizable Abstractions",
+      "url": "https://huggingface.co/papers/2401.16467",
+      "authors": [
+        "Mohit Bansal"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.16467.pdf",
+      "abstract": "While large language models (LLMs) are increasingly being used for program\nsynthesis, they lack the global view needed to develop useful abstractions;\nthey generally predict programs one at a time, often repeating the same\nfunctionality. Generating redundant code from scratch is both inefficient and\nerror-prone. To address this, we propose Refactoring for Generalizable\nAbstraction Learning (ReGAL), a gradient-free method for learning a library of\nreusable functions via code refactorization, i.e. restructuring code without\nchanging its execution output. ReGAL learns from a small set of existing\nprograms, iteratively verifying and refining its abstractions via execution. We\nfind that the shared function libraries discovered by ReGAL make programs\neasier to predict across diverse domains. On three datasets (LOGO graphics\ngeneration, Date reasoning, and TextCraft, a Minecraft-based text game), both\nopen-source and proprietary LLMs improve in accuracy when predicting programs\nwith ReGAL functions. For CodeLlama-13B, ReGAL results in absolute accuracy\nincreases of 11.5% on graphics, 26.1% on date understanding, and 8.1% on\nTextCraft, outperforming GPT-3.5 in two of three domains. Our analysis reveals\nReGAL's abstractions encapsulate frequently-used subroutines as well as\nenvironment dynamics.",
+      "upvotes": 9
+    },
+    {
+      "title": "MouSi: Poly-Visual-Expert Vision-Language Models",
+      "url": "https://huggingface.co/papers/2401.17221",
+      "authors": [
+        "Tao Ji",
+        "Sirui Song",
+        "Lu Chen",
+        "Guodong Zheng",
+        "Ming Zhang",
+        "Caishuang Huang",
+        "Rui Zheng",
+        "Junjie Ye",
+        "Hang Yan",
+        "Tao Gui",
+        "Qi Zhang",
+        "Xuanjing Huang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.17221.pdf",
+      "abstract": "Current large vision-language models (VLMs) often encounter challenges such\nas insufficient capabilities of a single visual component and excessively long\nvisual tokens. These issues can limit the model's effectiveness in accurately\ninterpreting complex visual information and over-lengthy contextual\ninformation. Addressing these challenges is crucial for enhancing the\nperformance and applicability of VLMs. This paper proposes the use of ensemble\nexperts technique to synergizes the capabilities of individual visual encoders,\nincluding those skilled in image-text matching, OCR, image segmentation, etc.\nThis technique introduces a fusion network to unify the processing of outputs\nfrom different visual experts, while bridging the gap between image encoders\nand pre-trained LLMs. In addition, we explore different positional encoding\nschemes to alleviate the waste of positional encoding caused by lengthy image\nfeature sequences, effectively addressing the issue of position overflow and\nlength limitations. For instance, in our implementation, this technique\nsignificantly reduces the positional occupancy in models like SAM, from a\nsubstantial 4096 to a more efficient and manageable 64 or even down to 1.\nExperimental results demonstrate that VLMs with multiple experts exhibit\nconsistently superior performance over isolated visual encoders and mark a\nsignificant performance boost as more experts are integrated. We have\nopen-sourced the training code used in this report. All of these resources can\nbe found on our project website.",
+      "upvotes": 8
+    },
+    {
+      "title": "T3: Transparent Tracking & Triggering for Fine-grained Overlap of Compute & Collectives",
+      "url": "https://huggingface.co/papers/2401.16677",
+      "authors": [
+        "Suchita Pati",
+        "Shaizeen Aga",
+        "Mahzabeen Islam",
+        "Nuwan Jayasena",
+        "Matthew D. Sinclair"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.16677.pdf",
+      "abstract": "Large Language Models increasingly rely on distributed techniques for their\ntraining and inference. These techniques require communication across devices\nwhich can reduce scaling efficiency as the number of devices increases. While\nsome distributed techniques can overlap, and thus, hide this communication with\nindependent computations, techniques such as Tensor Parallelism (TP) inherently\nserialize communication with model execution. One approach to hide this\nserialized communication is to interleave it with the producer operation (of\nthe communicated data) in a fine-grained manner. However, this fine-grained\ninterleaving of communication and computation in software can be difficult.\nFurthermore, as with any concurrent execution, it requires compute and memory\nresources to be shared between computation and communication, causing resource\ncontention that reduces overlapping efficacy.\n  To overcome these challenges, we propose T3 which applies hardware-software\nco-design to transparently overlap serialized communication while minimizing\nresource contention with compute. T3 transparently fuses producer operations\nwith the subsequent communication via a simple configuration of the producer's\noutput address space and requires minor software changes. At the hardware\nlevel, T3 adds a lightweight track and trigger mechanism to orchestrate the\nproducer's compute, and communication. It further uses compute-enhanced\nmemories for communication's attendant compute. As a result, T3 reduces\nresource contention, and efficiently overlaps serialized communication with\ncomputation. For important Transformer models like T-NLG, T3 speeds up\ncommunication-heavy sublayers by 30% geomean (max 47%) and reduces data\nmovement by 22% geomean (max 36%). Furthermore, T3's benefits persist as models\nscale: geomean 29% for sublayers in sim500-billion parameter models, PALM\nand MT-NLG.",
+      "upvotes": 4
+    }
+  ]
+}

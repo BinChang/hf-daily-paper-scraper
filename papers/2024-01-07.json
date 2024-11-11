@@ -1,0 +1,228 @@
+{
+  "date": "2024-01-07",
+  "papers": [
+    {
+      "title": "TinyLlama: An Open-Source Small Language Model",
+      "url": "https://huggingface.co/papers/2401.02385",
+      "authors": [
+        "Wei Lu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.02385.pdf",
+      "abstract": "We present TinyLlama, a compact 1.1B language model pretrained on around 1\ntrillion tokens for approximately 3 epochs. Building on the architecture and\ntokenizer of Llama 2, TinyLlama leverages various advances contributed by the\nopen-source community (e.g., FlashAttention), achieving better computational\nefficiency. Despite its relatively small size, TinyLlama demonstrates\nremarkable performance in a series of downstream tasks. It significantly\noutperforms existing open-source language models with comparable sizes. Our\nmodel checkpoints and code are publicly available on GitHub at\nhttps://github.com/jzhang38/TinyLlama.",
+      "upvotes": 89
+    },
+    {
+      "title": "Understanding LLMs: A Comprehensive Overview from Training to Inference",
+      "url": "https://huggingface.co/papers/2401.02038",
+      "authors": [
+        "Yiheng Liu",
+        "Hao He",
+        "Tianle Han",
+        "Xu Zhang",
+        "Mengyuan Liu",
+        "Jiaming Tian",
+        "Yutong Zhang",
+        "Jiaqi Wang",
+        "Xiaohui Gao",
+        "Tianyang Zhong",
+        "Yi Pan",
+        "Shaochen Xu",
+        "Zihao Wu",
+        "Zhengliang Liu",
+        "Xin Zhang",
+        "Shu Zhang",
+        "Xintao Hu",
+        "Tuo Zhang",
+        "Ning Qiang",
+        "Tianming Liu",
+        "Bao Ge"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.02038.pdf",
+      "abstract": "The introduction of ChatGPT has led to a significant increase in the\nutilization of Large Language Models (LLMs) for addressing downstream tasks.\nThere's an increasing focus on cost-efficient training and deployment within\nthis context. Low-cost training and deployment of LLMs represent the future\ndevelopment trend. This paper reviews the evolution of large language model\ntraining techniques and inference deployment technologies aligned with this\nemerging trend. The discussion on training includes various aspects, including\ndata preprocessing, training architecture, pre-training tasks, parallel\ntraining, and relevant content related to model fine-tuning. On the inference\nside, the paper covers topics such as model compression, parallel computation,\nmemory scheduling, and structural optimization. It also explores LLMs'\nutilization and provides insights into their future development.",
+      "upvotes": 61
+    },
+    {
+      "title": "LLaMA Pro: Progressive LLaMA with Block Expansion",
+      "url": "https://huggingface.co/papers/2401.02415",
+      "authors": [
+        "Chengyue Wu",
+        "Yukang Gan",
+        "Yixiao Ge",
+        "Ye Feng",
+        "Ping Luo",
+        "Ying Shan"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.02415.pdf",
+      "abstract": "Humans generally acquire new skills without compromising the old; however,\nthe opposite holds for Large Language Models (LLMs), e.g., from LLaMA to\nCodeLLaMA. To this end, we propose a new post-pretraining method for LLMs with\nan expansion of Transformer blocks. We tune the expanded blocks using only new\ncorpus, efficiently and effectively improving the model's knowledge without\ncatastrophic forgetting. In this paper, we experiment on the corpus of code and\nmath, yielding LLaMA Pro-8.3B, a versatile foundation model initialized from\nLLaMA2-7B, excelling in general tasks, programming, and mathematics. LLaMA Pro\nand its instruction-following counterpart (LLaMA Pro-Instruct) achieve advanced\nperformance among various benchmarks, demonstrating superiority over existing\nopen models in the LLaMA family and the immense potential of reasoning and\naddressing diverse tasks as an intelligent agent. Our findings provide valuable\ninsights into integrating natural and programming languages, laying a solid\nfoundation for developing advanced language agents that operate effectively in\nvarious environments.",
+      "upvotes": 53
+    },
+    {
+      "title": "LLM Augmented LLMs: Expanding Capabilities through Composition",
+      "url": "https://huggingface.co/papers/2401.02412",
+      "authors": [
+        "Rachit Bansal",
+        "Bidisha Samanta",
+        "Siddharth Dalmia",
+        "Nitish Gupta",
+        "Shikhar Vashishth",
+        "Sriram Ganapathy",
+        "Abhishek Bapna",
+        "Prateek Jain",
+        "Partha Talukdar"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.02412.pdf",
+      "abstract": "Foundational models with billions of parameters which have been trained on\nlarge corpora of data have demonstrated non-trivial skills in a variety of\ndomains. However, due to their monolithic structure, it is challenging and\nexpensive to augment them or impart new skills. On the other hand, due to their\nadaptation abilities, several new instances of these models are being trained\ntowards new domains and tasks. In this work, we study the problem of efficient\nand practical composition of existing foundation models with more specific\nmodels to enable newer capabilities. To this end, we propose CALM --\nComposition to Augment Language Models -- which introduces cross-attention\nbetween models to compose their representations and enable new capabilities.\nSalient features of CALM are: (i) Scales up LLMs on new tasks by 're-using'\nexisting LLMs along with a few additional parameters and data, (ii) Existing\nmodel weights are kept intact, and hence preserves existing capabilities, and\n(iii) Applies to diverse domains and settings. We illustrate that augmenting\nPaLM2-S with a smaller model trained on low-resource languages results in an\nabsolute improvement of up to 13\\% on tasks like translation into English and\narithmetic reasoning for low-resource languages. Similarly, when PaLM2-S is\naugmented with a code-specific model, we see a relative improvement of 40\\%\nover the base model for code generation and explanation tasks -- on-par with\nfully fine-tuned counterparts.",
+      "upvotes": 36
+    },
+    {
+      "title": "Mobile ALOHA: Learning Bimanual Mobile Manipulation with Low-Cost Whole-Body Teleoperation",
+      "url": "https://huggingface.co/papers/2401.02117",
+      "authors": [
+        "Zipeng Fu",
+        "Tony Z. Zhao",
+        "Chelsea Finn"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.02117.pdf",
+      "abstract": "Imitation learning from human demonstrations has shown impressive performance\nin robotics. However, most results focus on table-top manipulation, lacking the\nmobility and dexterity necessary for generally useful tasks. In this work, we\ndevelop a system for imitating mobile manipulation tasks that are bimanual and\nrequire whole-body control. We first present Mobile ALOHA, a low-cost and\nwhole-body teleoperation system for data collection. It augments the ALOHA\nsystem with a mobile base, and a whole-body teleoperation interface. Using data\ncollected with Mobile ALOHA, we then perform supervised behavior cloning and\nfind that co-training with existing static ALOHA datasets boosts performance on\nmobile manipulation tasks. With 50 demonstrations for each task, co-training\ncan increase success rates by up to 90%, allowing Mobile ALOHA to autonomously\ncomplete complex mobile manipulation tasks such as sauteing and serving a piece\nof shrimp, opening a two-door wall cabinet to store heavy cooking pots, calling\nand entering an elevator, and lightly rinsing a used pan using a kitchen\nfaucet. Project website: https://mobile-aloha.github.io",
+      "upvotes": 30
+    },
+    {
+      "title": "Instruct-Imagen: Image Generation with Multi-modal Instruction",
+      "url": "https://huggingface.co/papers/2401.01952",
+      "authors": [
+        "Kelvin C. K. Chan",
+        "Yu-Chuan Su",
+        "Wenhu Chen",
+        "Yandong Li",
+        "Kihyuk Sohn",
+        "Xue Ben",
+        "Boqing Gong",
+        "William Cohen",
+        "Ming-Wei Chang",
+        "Xuhui Jia"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.01952.pdf",
+      "abstract": "This paper presents instruct-imagen, a model that tackles heterogeneous image\ngeneration tasks and generalizes across unseen tasks. We introduce *multi-modal\ninstruction* for image generation, a task representation articulating a range\nof generation intents with precision. It uses natural language to amalgamate\ndisparate modalities (e.g., text, edge, style, subject, etc.), such that\nabundant generation intents can be standardized in a uniform format.\n  We then build instruct-imagen by fine-tuning a pre-trained text-to-image\ndiffusion model with a two-stage framework. First, we adapt the model using the\nretrieval-augmented training, to enhance model's capabilities to ground its\ngeneration on external multimodal context. Subsequently, we fine-tune the\nadapted model on diverse image generation tasks that requires vision-language\nunderstanding (e.g., subject-driven generation, etc.), each paired with a\nmulti-modal instruction encapsulating the task's essence. Human evaluation on\nvarious image generation datasets reveals that instruct-imagen matches or\nsurpasses prior task-specific models in-domain and demonstrates promising\ngeneralization to unseen and more complex tasks.",
+      "upvotes": 30
+    },
+    {
+      "title": "LLaVA-$φ$: Efficient Multi-Modal Assistant with Small Language Model",
+      "url": "https://huggingface.co/papers/2401.02330",
+      "authors": [
+        "Yichen Zhu",
+        "Minjie Zhu",
+        "Ning Liu",
+        "Zhicai Ou",
+        "Xiaofeng Mou",
+        "Jian Tang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.02330.pdf",
+      "abstract": "In this paper, we introduce LLaVA-phi (LLaVA-Phi), an efficient\nmulti-modal assistant that harnesses the power of the recently advanced small\nlanguage model, Phi-2, to facilitate multi-modal dialogues. LLaVA-Phi marks a\nnotable advancement in the realm of compact multi-modal models. It demonstrates\nthat even smaller language models, with as few as 2.7B parameters, can\neffectively engage in intricate dialogues that integrate both textual and\nvisual elements, provided they are trained with high-quality corpora. Our model\ndelivers commendable performance on publicly available benchmarks that\nencompass visual comprehension, reasoning, and knowledge-based perception.\nBeyond its remarkable performance in multi-modal dialogue tasks, our model\nopens new avenues for applications in time-sensitive environments and systems\nthat require real-time interaction, such as embodied agents. It highlights the\npotential of smaller language models to achieve sophisticated levels of\nunderstanding and interaction, while maintaining greater resource\nefficiency.The project is available at {https://github.com/zhuyiche/llava-phi}.",
+      "upvotes": 14
+    },
+    {
+      "title": "What You See is What You GAN: Rendering Every Pixel for High-Fidelity Geometry in 3D GANs",
+      "url": "https://huggingface.co/papers/2401.02411",
+      "authors": [
+        "Alex Trevithick",
+        "Matthew Chan",
+        "Towaki Takikawa",
+        "Umar Iqbal",
+        "Shalini De Mello",
+        "Manmohan Chandraker",
+        "Ravi Ramamoorthi",
+        "Koki Nagano"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.02411.pdf",
+      "abstract": "3D-aware Generative Adversarial Networks (GANs) have shown remarkable\nprogress in learning to generate multi-view-consistent images and 3D geometries\nof scenes from collections of 2D images via neural volume rendering. Yet, the\nsignificant memory and computational costs of dense sampling in volume\nrendering have forced 3D GANs to adopt patch-based training or employ\nlow-resolution rendering with post-processing 2D super resolution, which\nsacrifices multiview consistency and the quality of resolved geometry.\nConsequently, 3D GANs have not yet been able to fully resolve the rich 3D\ngeometry present in 2D images. In this work, we propose techniques to scale\nneural volume rendering to the much higher resolution of native 2D images,\nthereby resolving fine-grained 3D geometry with unprecedented detail. Our\napproach employs learning-based samplers for accelerating neural rendering for\n3D GAN training using up to 5 times fewer depth samples. This enables us to\nexplicitly \"render every pixel\" of the full-resolution image during training\nand inference without post-processing superresolution in 2D. Together with our\nstrategy to learn high-quality surface geometry, our method synthesizes\nhigh-resolution 3D geometry and strictly view-consistent images while\nmaintaining image quality on par with baselines relying on post-processing\nsuper resolution. We demonstrate state-of-the-art 3D gemetric quality on FFHQ\nand AFHQ, setting a new standard for unsupervised learning of 3D shapes in 3D\nGANs.",
+      "upvotes": 12
+    },
+    {
+      "title": "ODIN: A Single Model for 2D and 3D Perception",
+      "url": "https://huggingface.co/papers/2401.02416",
+      "authors": [
+        "Pushkal Katara",
+        "Nikolaos Gkanatsios",
+        "Adam W. Harley",
+        "Kriti Aggarwal",
+        "Vishrav Chaudhary",
+        "Katerina Fragkiadaki"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.02416.pdf",
+      "abstract": "State-of-the-art models on contemporary 3D perception benchmarks like ScanNet\nconsume and label dataset-provided 3D point clouds, obtained through post\nprocessing of sensed multiview RGB-D images. They are typically trained\nin-domain, forego large-scale 2D pre-training and outperform alternatives that\nfeaturize the posed RGB-D multiview images instead. The gap in performance\nbetween methods that consume posed images versus post-processed 3D point clouds\nhas fueled the belief that 2D and 3D perception require distinct model\narchitectures. In this paper, we challenge this view and propose ODIN\n(Omni-Dimensional INstance segmentation), a model that can segment and label\nboth 2D RGB images and 3D point clouds, using a transformer architecture that\nalternates between 2D within-view and 3D cross-view information fusion. Our\nmodel differentiates 2D and 3D feature operations through the positional\nencodings of the tokens involved, which capture pixel coordinates for 2D patch\ntokens and 3D coordinates for 3D feature tokens. ODIN achieves state-of-the-art\nperformance on ScanNet200, Matterport3D and AI2THOR 3D instance segmentation\nbenchmarks, and competitive performance on ScanNet, S3DIS and COCO. It\noutperforms all previous works by a wide margin when the sensed 3D point cloud\nis used in place of the point cloud sampled from 3D mesh. When used as the 3D\nperception engine in an instructable embodied agent architecture, it sets a new\nstate-of-the-art on the TEACh action-from-dialogue benchmark. Our code and\ncheckpoints can be found at the project website: https://odin-seg.github.io.",
+      "upvotes": 11
+    },
+    {
+      "title": "Learning the 3D Fauna of the Web",
+      "url": "https://huggingface.co/papers/2401.02400",
+      "authors": [
+        "Zizhang Li",
+        "Dor Litvak",
+        "Tomas Jakab",
+        "Christian Rupprecht",
+        "Shangzhe Wu",
+        "Andrea Vedaldi",
+        "Jiajun Wu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.02400.pdf",
+      "abstract": "Learning 3D models of all animals on the Earth requires massively scaling up\nexisting solutions. With this ultimate goal in mind, we develop 3D-Fauna, an\napproach that learns a pan-category deformable 3D animal model for more than\n100 animal species jointly. One crucial bottleneck of modeling animals is the\nlimited availability of training data, which we overcome by simply learning\nfrom 2D Internet images. We show that prior category-specific attempts fail to\ngeneralize to rare species with limited training images. We address this\nchallenge by introducing the Semantic Bank of Skinned Models (SBSM), which\nautomatically discovers a small set of base animal shapes by combining\ngeometric inductive priors with semantic knowledge implicitly captured by an\noff-the-shelf self-supervised feature extractor. To train such a model, we also\ncontribute a new large-scale dataset of diverse animal species. At inference\ntime, given a single image of any quadruped animal, our model reconstructs an\narticulated 3D mesh in a feed-forward fashion within seconds.",
+      "upvotes": 9
+    },
+    {
+      "title": "ICE-GRT: Instruction Context Enhancement by Generative Reinforcement based Transformers",
+      "url": "https://huggingface.co/papers/2401.02072",
+      "authors": [
+        "Ke Sun",
+        "Da Tang",
+        "Yukun Ma",
+        "Yuyu Zhang",
+        "Chenguang Xi",
+        "Xun Zhou"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.02072.pdf",
+      "abstract": "The emergence of Large Language Models (LLMs) such as ChatGPT and LLaMA\nencounter limitations in domain-specific tasks, with these models often lacking\ndepth and accuracy in specialized areas, and exhibiting a decrease in general\ncapabilities when fine-tuned, particularly analysis ability in small sized\nmodels. To address these gaps, we introduce ICE-GRT, utilizing Reinforcement\nLearning from Human Feedback (RLHF) grounded in Proximal Policy Optimization\n(PPO), demonstrating remarkable ability in in-domain scenarios without\ncompromising general task performance. Our exploration of ICE-GRT highlights\nits understanding and reasoning ability to not only generate robust answers but\nalso to provide detailed analyses of the reasons behind the answer. This\ncapability marks a significant progression beyond the scope of Supervised\nFine-Tuning models. The success of ICE-GRT is dependent on several crucial\nfactors, including Appropriate Data, Reward Size Scaling, KL-Control, Advantage\nNormalization, etc. The ICE-GRT model exhibits state-of-the-art performance in\ndomain-specific tasks and across 12 general Language tasks against equivalent\nsize and even larger size LLMs, highlighting the effectiveness of our approach.\nWe provide a comprehensive analysis of the ICE-GRT, underscoring the\nsignificant advancements it brings to the field of LLM.",
+      "upvotes": 9
+    },
+    {
+      "title": "Improving Diffusion-Based Image Synthesis with Context Prediction",
+      "url": "https://huggingface.co/papers/2401.02015",
+      "authors": [
+        "Jingwei Liu",
+        "Shenda Hong",
+        "Zhilong Zhang",
+        "Zhilin Huang",
+        "Zheming Cai",
+        "Wentao Zhang",
+        "Bin Cui"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.02015.pdf",
+      "abstract": "Diffusion models are a new class of generative models, and have dramatically\npromoted image generation with unprecedented quality and diversity. Existing\ndiffusion models mainly try to reconstruct input image from a corrupted one\nwith a pixel-wise or feature-wise constraint along spatial axes. However, such\npoint-based reconstruction may fail to make each predicted pixel/feature fully\npreserve its neighborhood context, impairing diffusion-based image synthesis.\nAs a powerful source of automatic supervisory signal, context has been well\nstudied for learning representations. Inspired by this, we for the first time\npropose ConPreDiff to improve diffusion-based image synthesis with context\nprediction. We explicitly reinforce each point to predict its neighborhood\ncontext (i.e., multi-stride features/tokens/pixels) with a context decoder at\nthe end of diffusion denoising blocks in training stage, and remove the decoder\nfor inference. In this way, each point can better reconstruct itself by\npreserving its semantic connections with neighborhood context. This new\nparadigm of ConPreDiff can generalize to arbitrary discrete and continuous\ndiffusion backbones without introducing extra parameters in sampling procedure.\nExtensive experiments are conducted on unconditional image generation,\ntext-to-image generation and image inpainting tasks. Our ConPreDiff\nconsistently outperforms previous methods and achieves a new SOTA text-to-image\ngeneration results on MS-COCO, with a zero-shot FID score of 6.21.",
+      "upvotes": 6
+    },
+    {
+      "title": "FMGS: Foundation Model Embedded 3D Gaussian Splatting for Holistic 3D Scene Understanding",
+      "url": "https://huggingface.co/papers/2401.01970",
+      "authors": [
+        "Xingxing Zuo",
+        "Yunwen Zhou",
+        "Yan Di",
+        "Mingyang Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.01970.pdf",
+      "abstract": "Precisely perceiving the geometric and semantic properties of real-world 3D\nobjects is crucial for the continued evolution of augmented reality and robotic\napplications. To this end, we present  (), which\nincorporates vision-language embeddings of foundation models into 3D Gaussian\nSplatting (GS). The key contribution of this work is an efficient method to\nreconstruct and represent 3D vision-language models. This is achieved by\ndistilling feature maps generated from image-based foundation models into those\nrendered from our 3D model. To ensure high-quality rendering and fast training,\nwe introduce a novel scene representation by integrating strengths from both GS\nand multi-resolution hash encodings (MHE). Our effective training procedure\nalso introduces a pixel alignment loss that makes the rendered feature distance\nof same semantic entities close, following the pixel-level semantic boundaries.\nOur results demonstrate remarkable multi-view semantic consistency,\nfacilitating diverse downstream tasks, beating state-of-the-art methods by\n10.2 percent on open-vocabulary language-based object detection,\ndespite that we are 851times faster for inference. This research\nexplores the intersection of vision, language, and 3D scene representation,\npaving the way for enhanced scene understanding in uncontrolled real-world\nenvironments. We plan to release the code upon paper acceptance.",
+      "upvotes": 6
+    },
+    {
+      "title": "Towards Truly Zero-shot Compositional Visual Reasoning with LLMs as Programmers",
+      "url": "https://huggingface.co/papers/2401.01974",
+      "authors": [
+        "Aleksandar Stanić",
+        "Sergi Caelles",
+        "Michael Tschannen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.01974.pdf",
+      "abstract": "Visual reasoning is dominated by end-to-end neural networks scaled to\nbillions of model parameters and training examples. However, even the largest\nmodels struggle with compositional reasoning, generalization, fine-grained\nspatial and temporal reasoning, and counting. Visual reasoning with large\nlanguage models (LLMs) as controllers can, in principle, address these\nlimitations by decomposing the task and solving subtasks by orchestrating a set\nof (visual) tools. Recently, these models achieved great performance on tasks\nsuch as compositional visual question answering, visual grounding, and video\ntemporal reasoning. Nevertheless, in their current form, these models heavily\nrely on human engineering of in-context examples in the prompt, which are often\ndataset- and task-specific and require significant labor by highly skilled\nprogrammers. In this work, we present a framework that mitigates these issues\nby introducing spatially and temporally abstract routines and by leveraging a\nsmall number of labeled examples to automatically generate in-context examples,\nthereby avoiding human-created in-context examples. On a number of visual\nreasoning tasks, we show that our framework leads to consistent gains in\nperformance, makes LLMs as controllers setup more robust, and removes the need\nfor human engineering of in-context examples.",
+      "upvotes": 5
+    }
+  ]
+}

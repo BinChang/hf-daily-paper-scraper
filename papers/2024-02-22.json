@@ -1,0 +1,180 @@
+{
+  "date": "2024-02-22",
+  "papers": [
+    {
+      "title": "LongRoPE: Extending LLM Context Window Beyond 2 Million Tokens",
+      "url": "https://huggingface.co/papers/2402.13753",
+      "authors": [
+        "Yiran Ding",
+        "Chengruidong Zhang",
+        "Ning Shang",
+        "Fan Yang",
+        "Mao Yang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.13753.pdf",
+      "abstract": "Large context window is a desirable feature in large language models (LLMs).\nHowever, due to high fine-tuning costs, scarcity of long texts, and\ncatastrophic values introduced by new token positions, current extended context\nwindows are limited to around 128k tokens. This paper introduces LongRoPE that,\nfor the first time, extends the context window of pre-trained LLMs to an\nimpressive 2048k tokens, with up to only 1k fine-tuning steps at within 256k\ntraining lengths, while maintaining performance at the original short context\nwindow. This is achieved by three key innovations: (i) we identify and exploit\ntwo forms of non-uniformities in positional interpolation through an efficient\nsearch, providing a better initialization for fine-tuning and enabling an 8x\nextension in non-fine-tuning scenarios; (ii) we introduce a progressive\nextension strategy that first fine-tunes a 256k length LLM and then conducts a\nsecond positional interpolation on the fine-tuned extended LLM to achieve a\n2048k context window; (iii) we readjust LongRoPE on 8k length to recover the\nshort context window performance. Extensive experiments on LLaMA2 and Mistral\nacross various tasks demonstrate the effectiveness of our method. Models\nextended via LongRoPE retain the original architecture with minor modifications\nto the positional embedding, and can reuse most pre-existing optimizations.",
+      "upvotes": 111
+    },
+    {
+      "title": "YOLOv9: Learning What You Want to Learn Using Programmable Gradient Information",
+      "url": "https://huggingface.co/papers/2402.13616",
+      "authors": [
+        "Chien-Yao Wang",
+        "I-Hau Yeh",
+        "Hong-Yuan Mark Liao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.13616.pdf",
+      "abstract": "Today's deep learning methods focus on how to design the most appropriate\nobjective functions so that the prediction results of the model can be closest\nto the ground truth. Meanwhile, an appropriate architecture that can facilitate\nacquisition of enough information for prediction has to be designed. Existing\nmethods ignore a fact that when input data undergoes layer-by-layer feature\nextraction and spatial transformation, large amount of information will be\nlost. This paper will delve into the important issues of data loss when data is\ntransmitted through deep networks, namely information bottleneck and reversible\nfunctions. We proposed the concept of programmable gradient information (PGI)\nto cope with the various changes required by deep networks to achieve multiple\nobjectives. PGI can provide complete input information for the target task to\ncalculate objective function, so that reliable gradient information can be\nobtained to update network weights. In addition, a new lightweight network\narchitecture -- Generalized Efficient Layer Aggregation Network (GELAN), based\non gradient path planning is designed. GELAN's architecture confirms that PGI\nhas gained superior results on lightweight models. We verified the proposed\nGELAN and PGI on MS COCO dataset based object detection. The results show that\nGELAN only uses conventional convolution operators to achieve better parameter\nutilization than the state-of-the-art methods developed based on depth-wise\nconvolution. PGI can be used for variety of models from lightweight to large.\nIt can be used to obtain complete information, so that train-from-scratch\nmodels can achieve better results than state-of-the-art models pre-trained\nusing large datasets, the comparison results are shown in Figure 1. The source\ncodes are at: https://github.com/WongKinYiu/yolov9.",
+      "upvotes": 45
+    },
+    {
+      "title": "Aria Everyday Activities Dataset",
+      "url": "https://huggingface.co/papers/2402.13349",
+      "authors": [
+        "Zhaoyang Lv",
+        "Nickolas Charron",
+        "Pierre Moulon",
+        "Alexander Gamino",
+        "Cheng Peng",
+        "Chris Sweeney",
+        "Edward Miller",
+        "Huixuan Tang",
+        "Jeff Meissner",
+        "Jing Dong",
+        "Kiran Somasundaram",
+        "Luis Pesqueira",
+        "Mark Schwesinger",
+        "Omkar Parkhi",
+        "Renzo De Nardi",
+        "Shangyi Cheng",
+        "Steve Saarinen",
+        "Vijay Baiyya",
+        "Yuyang Zou",
+        "Richard Newcombe",
+        "Jakob Julian Engel"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.13349.pdf",
+      "abstract": "We present Aria Everyday Activities (AEA) Dataset, an egocentric multimodal\nopen dataset recorded using Project Aria glasses. AEA contains 143 daily\nactivity sequences recorded by multiple wearers in five geographically diverse\nindoor locations. Each of the recording contains multimodal sensor data\nrecorded through the Project Aria glasses. In addition, AEA provides machine\nperception data including high frequency globally aligned 3D trajectories,\nscene point cloud, per-frame 3D eye gaze vector and time aligned speech\ntranscription. In this paper, we demonstrate a few exemplar research\napplications enabled by this dataset, including neural scene reconstruction and\nprompted segmentation. AEA is an open source dataset that can be downloaded\nfrom projectaria.com. We are also providing open-source implementations and\nexamples of how to use the dataset in Project Aria Tools.",
+      "upvotes": 29
+    },
+    {
+      "title": "SDXL-Lightning: Progressive Adversarial Diffusion Distillation",
+      "url": "https://huggingface.co/papers/2402.13929",
+      "authors": [
+        "Anran Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.13929.pdf",
+      "abstract": "We propose a diffusion distillation method that achieves new state-of-the-art\nin one-step/few-step 1024px text-to-image generation based on SDXL. Our method\ncombines progressive and adversarial distillation to achieve a balance between\nquality and mode coverage. In this paper, we discuss the theoretical analysis,\ndiscriminator design, model formulation, and training techniques. We\nopen-source our distilled SDXL-Lightning models both as LoRA and full UNet\nweights.",
+      "upvotes": 27
+    },
+    {
+      "title": "User-LLM: Efficient LLM Contextualization with User Embeddings",
+      "url": "https://huggingface.co/papers/2402.13598",
+      "authors": [
+        "Lin Ning",
+        "Jiaxing Wu",
+        "Neo Wu",
+        "Devora Berlowitz",
+        "Sushant Prakash",
+        "Bradley Green",
+        "Shawn O'Banion",
+        "Jun Xie"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.13598.pdf",
+      "abstract": "Large language models (LLMs) have revolutionized natural language processing.\nHowever, effectively incorporating complex and potentially noisy user\ninteraction data remains a challenge. To address this, we propose User-LLM, a\nnovel framework that leverages user embeddings to contextualize LLMs. These\nembeddings, distilled from diverse user interactions using self-supervised\npretraining, capture latent user preferences and their evolution over time. We\nintegrate these user embeddings with LLMs through cross-attention and\nsoft-prompting, enabling LLMs to dynamically adapt to user context. Our\ncomprehensive experiments on MovieLens, Amazon Review, and Google Local Review\ndatasets demonstrate significant performance gains across various tasks.\nNotably, our approach outperforms text-prompt-based contextualization on long\nsequence tasks and tasks that require deep user understanding while being\ncomputationally efficient. We further incorporate Perceiver layers to\nstreamline the integration between user encoders and LLMs, reducing\ncomputational demands.",
+      "upvotes": 18
+    },
+    {
+      "title": "In deep reinforcement learning, a pruned network is a good network",
+      "url": "https://huggingface.co/papers/2402.12479",
+      "authors": [
+        "Aaron Courville",
+        "Pablo Samuel Castro"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.12479.pdf",
+      "abstract": "Recent work has shown that deep reinforcement learning agents have difficulty\nin effectively using their network parameters. We leverage prior insights into\nthe advantages of sparse training techniques and demonstrate that gradual\nmagnitude pruning enables agents to maximize parameter effectiveness. This\nresults in networks that yield dramatic performance improvements over\ntraditional networks and exhibit a type of \"scaling law\", using only a small\nfraction of the full network parameters.",
+      "upvotes": 17
+    },
+    {
+      "title": "Coercing LLMs to do and reveal (almost) anything",
+      "url": "https://huggingface.co/papers/2402.14020",
+      "authors": [
+        "Khalid Saifullah",
+        "Yuxin Wen",
+        "Tom Goldstein"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.14020.pdf",
+      "abstract": "It has recently been shown that adversarial attacks on large language models\n(LLMs) can \"jailbreak\" the model into making harmful statements. In this work,\nwe argue that the spectrum of adversarial attacks on LLMs is much larger than\nmerely jailbreaking. We provide a broad overview of possible attack surfaces\nand attack goals. Based on a series of concrete examples, we discuss,\ncategorize and systematize attacks that coerce varied unintended behaviors,\nsuch as misdirection, model control, denial-of-service, or data extraction.\n  We analyze these attacks in controlled experiments, and find that many of\nthem stem from the practice of pre-training LLMs with coding capabilities, as\nwell as the continued existence of strange \"glitch\" tokens in common LLM\nvocabularies that should be removed for security reasons.",
+      "upvotes": 12
+    },
+    {
+      "title": "Music Style Transfer with Time-Varying Inversion of Diffusion Models",
+      "url": "https://huggingface.co/papers/2402.13763",
+      "authors": [
+        "Sifei Li",
+        "Yuxin Zhang",
+        "Fan Tang",
+        "Chongyang Ma",
+        "Weiming dong",
+        "Changsheng Xu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.13763.pdf",
+      "abstract": "With the development of diffusion models, text-guided image style transfer\nhas demonstrated high-quality controllable synthesis results. However, the\nutilization of text for diverse music style transfer poses significant\nchallenges, primarily due to the limited availability of matched audio-text\ndatasets. Music, being an abstract and complex art form, exhibits variations\nand intricacies even within the same genre, thereby making accurate textual\ndescriptions challenging. This paper presents a music style transfer approach\nthat effectively captures musical attributes using minimal data. We introduce a\nnovel time-varying textual inversion module to precisely capture\nmel-spectrogram features at different levels. During inference, we propose a\nbias-reduced stylization technique to obtain stable results. Experimental\nresults demonstrate that our method can transfer the style of specific\ninstruments, as well as incorporate natural sounds to compose melodies. Samples\nand source code are available at https://lsfhuihuiff.github.io/MusicTI/.",
+      "upvotes": 9
+    },
+    {
+      "title": "ToDo: Token Downsampling for Efficient Generation of High-Resolution Images",
+      "url": "https://huggingface.co/papers/2402.13573",
+      "authors": [
+        "Ethan Smith",
+        "Aninda Saha"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.13573.pdf",
+      "abstract": "Attention mechanism has been crucial for image diffusion models, however,\ntheir quadratic computational complexity limits the sizes of images we can\nprocess within reasonable time and memory constraints. This paper investigates\nthe importance of dense attention in generative image models, which often\ncontain redundant features, making them suitable for sparser attention\nmechanisms. We propose a novel training-free method ToDo that relies on token\ndownsampling of key and value tokens to accelerate Stable Diffusion inference\nby up to 2x for common sizes and up to 4.5x or more for high resolutions like\n2048x2048. We demonstrate that our approach outperforms previous methods in\nbalancing efficient throughput and fidelity.",
+      "upvotes": 8
+    },
+    {
+      "title": "BBA: Bi-Modal Behavioral Alignment for Reasoning with Large Vision-Language Models",
+      "url": "https://huggingface.co/papers/2402.13577",
+      "authors": [
+        "Xueliang Zhao",
+        "Tingchen Fu",
+        "Qintong Li",
+        "Lemao Liu",
+        "Wei Bi",
+        "Lingpeng Kong"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.13577.pdf",
+      "abstract": "Multimodal reasoning stands as a pivotal capability for large vision-language\nmodels (LVLMs). The integration with Domain-Specific Languages (DSL), offering\nprecise visual representations, equips these models with the opportunity to\nexecute more accurate reasoning in complex and professional domains. However,\nthe vanilla Chain-of-Thought (CoT) prompting method faces challenges in\neffectively leveraging the unique strengths of visual and DSL representations,\nprimarily due to their differing reasoning mechanisms. Additionally, it often\nfalls short in addressing critical steps in multi-step reasoning tasks. To\nmitigate these challenges, we introduce the Bi-Modal\nBehavioral Alignment (BBA) prompting method, designed\nto maximize the potential of DSL in augmenting complex multi-modal reasoning\ntasks. This method initiates by guiding LVLMs to create separate reasoning\nchains for visual and DSL representations. Subsequently, it aligns these chains\nby addressing any inconsistencies, thus achieving a cohesive integration of\nbehaviors from different modalities. Our experiments demonstrate that BBA\nsubstantially improves the performance of GPT-4V(ision) on geometry problem\nsolving (28.34% to 34.22%), chess positional advantage prediction\n(42.08% to 46.99%) and molecular property prediction (77.47% to\n83.52%).",
+      "upvotes": 7
+    },
+    {
+      "title": "D-Flow: Differentiating through Flows for Controlled Generation",
+      "url": "https://huggingface.co/papers/2402.14017",
+      "authors": [
+        "Heli Ben-Hamu",
+        "Omri Puny",
+        "Brian Karrer",
+        "Uriel Singer",
+        "Yaron Lipman"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.14017.pdf",
+      "abstract": "Taming the generation outcome of state of the art Diffusion and Flow-Matching\n(FM) models without having to re-train a task-specific model unlocks a powerful\ntool for solving inverse problems, conditional generation, and controlled\ngeneration in general. In this work we introduce D-Flow, a simple framework for\ncontrolling the generation process by differentiating through the flow,\noptimizing for the source (noise) point. We motivate this framework by our key\nobservation stating that for Diffusion/FM models trained with Gaussian\nprobability paths, differentiating through the generation process projects\ngradient on the data manifold, implicitly injecting the prior into the\noptimization process. We validate our framework on linear and non-linear\ncontrolled generation problems including: image and audio inverse problems and\nconditional molecule generation reaching state of the art performance across\nall.",
+      "upvotes": 6
+    },
+    {
+      "title": "Ouroboros: Speculative Decoding with Large Model Enhanced Drafting",
+      "url": "https://huggingface.co/papers/2402.13720",
+      "authors": [
+        "Weilin Zhao",
+        "Yuxiang Huang",
+        "Xu Han",
+        "Zhiyuan Liu",
+        "Maosong Sun"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2402.13720.pdf",
+      "abstract": "Drafting-then-verifying decoding methods such as speculative decoding are\nwidely adopted training-free methods to accelerate the inference of large\nlanguage models (LLMs). Instead of employing an autoregressive process to\ndecode tokens sequentially, speculative decoding initially creates drafts with\nan efficient small model. Then LLMs are required to conduct verification and\ncorrection in a non-autoregressive fashion to minimize time overhead.\nGenerating longer drafts can lead to even more significant speedups once\nverified, but also incurs substantial trial and error costs if it fails.\nSuffering from the high verification failure probability, existing decoding\nmethods cannot draft too much content for verification at one time, achieving\nsub-optimal inference acceleration. In this paper, we introduce Ouroboros,\nwhich constructs a phrase candidate pool from the verification process of LLMs\nto provide candidates for draft generation of the small model. Thereby,\nOuroboros can further improve the efficiency and effectiveness of the initial\ndrafts. The experimental results on typical text generation tasks show that\nOuroboros achieves speedups of up to 1.9x and 2.8x compared to lookahead\ndecoding and speculative decoding, respectively. The source code of Ouroboros\nis available at https://github.com/thunlp/Ouroboros.",
+      "upvotes": 5
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "date": "2024-01-18",
+  "papers": [
+    {
+      "title": "Vision Mamba: Efficient Visual Representation Learning with Bidirectional State Space Model",
+      "url": "https://huggingface.co/papers/2401.09417",
+      "authors": [
+        "Bencheng Liao",
+        "Qian Zhang",
+        "Wenyu Liu"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.09417.pdf",
+      "abstract": "Recently the state space models (SSMs) with efficient hardware-aware designs,\ni.e., Mamba, have shown great potential for long sequence modeling. Building\nefficient and generic vision backbones purely upon SSMs is an appealing\ndirection. However, representing visual data is challenging for SSMs due to the\nposition-sensitivity of visual data and the requirement of global context for\nvisual understanding. In this paper, we show that the reliance of visual\nrepresentation learning on self-attention is not necessary and propose a new\ngeneric vision backbone with bidirectional Mamba blocks (Vim), which marks the\nimage sequences with position embeddings and compresses the visual\nrepresentation with bidirectional state space models. On ImageNet\nclassification, COCO object detection, and ADE20k semantic segmentation tasks,\nVim achieves higher performance compared to well-established vision\ntransformers like DeiT, while also demonstrating significantly improved\ncomputation & memory efficiency. For example, Vim is 2.8times faster than\nDeiT and saves 86.8% GPU memory when performing batch inference to extract\nfeatures on images with a resolution of 1248times1248. The results\ndemonstrate that Vim is capable of overcoming the computation & memory\nconstraints on performing Transformer-style understanding for high-resolution\nimages and it has great potential to become the next-generation backbone for\nvision foundation models. Code is available at https://github.com/hustvl/Vim.",
+      "upvotes": 59
+    },
+    {
+      "title": "ReFT: Reasoning with Reinforced Fine-Tuning",
+      "url": "https://huggingface.co/papers/2401.08967",
+      "authors": [
+        "Xinbo Zhang",
+        "Peng Sun",
+        "Xiaoran Jin",
+        "Hang Li"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.08967.pdf",
+      "abstract": "One way to enhance the reasoning capability of Large Language Models (LLMs)\nis to conduct Supervised Fine-Tuning (SFT) using Chain-of-Thought (CoT)\nannotations. This approach does not show sufficiently strong generalization\nability, however, because the training only relies on the given CoT data. In\nmath problem-solving, for example, there is usually only one annotated\nreasoning path for each question in the training data. Intuitively, it would be\nbetter for the algorithm to learn from multiple annotated reasoning paths given\na question. To address this issue, we propose a simple yet effective approach\ncalled Reinforced Fine-Tuning (ReFT) to enhance the generalizability of\nlearning LLMs for reasoning, with math problem-solving as an example. ReFT\nfirst warmups the model with SFT, and then employs on-line reinforcement\nlearning, specifically the PPO algorithm in this paper, to further fine-tune\nthe model, where an abundance of reasoning paths are automatically sampled\ngiven the question and the rewards are naturally derived from the ground-truth\nanswers. Extensive experiments on GSM8K, MathQA, and SVAMP datasets show that\nReFT significantly outperforms SFT, and the performance can be potentially\nfurther boosted by combining inference-time strategies such as majority voting\nand re-ranking. Note that ReFT obtains the improvement by learning from the\nsame training questions as SFT, without relying on extra or augmented training\nquestions. This indicates a superior generalization ability for ReFT.",
+      "upvotes": 28
+    },
+    {
+      "title": "SceneVerse: Scaling 3D Vision-Language Learning for Grounded Scene Understanding",
+      "url": "https://huggingface.co/papers/2401.09340",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2401.09340.pdf",
+      "abstract": "3D vision-language grounding, which focuses on aligning language with the 3D\nphysical environment, stands as a cornerstone in the development of embodied\nagents. In comparison to recent advancements in the 2D domain, grounding\nlanguage in 3D scenes faces several significant challenges: (i) the inherent\ncomplexity of 3D scenes due to the diverse object configurations, their rich\nattributes, and intricate relationships; (ii) the scarcity of paired 3D\nvision-language data to support grounded learning; and (iii) the absence of a\nunified learning framework to distill knowledge from grounded 3D data. In this\nwork, we aim to address these three major challenges in 3D vision-language by\nexamining the potential of systematically upscaling 3D vision-language learning\nin indoor environments. We introduce the first million-scale 3D vision-language\ndataset, SceneVerse, encompassing about 68K 3D indoor scenes and comprising\n2.5M vision-language pairs derived from both human annotations and our scalable\nscene-graph-based generation approach. We demonstrate that this scaling allows\nfor a unified pre-training framework, Grounded Pre-training for Scenes (GPS),\nfor 3D vision-language learning. Through extensive experiments, we showcase the\neffectiveness of GPS by achieving state-of-the-art performance on all existing\n3D visual grounding benchmarks. The vast potential of SceneVerse and GPS is\nunveiled through zero-shot transfer experiments in the challenging 3D\nvision-language tasks. Project website: https://scene-verse.github.io .",
+      "upvotes": 19
+    },
+    {
+      "title": "GARField: Group Anything with Radiance Fields",
+      "url": "https://huggingface.co/papers/2401.09419",
+      "authors": [
+        "Mingxuan Wu",
+        "Ken Goldberg",
+        "Matthew Tancik"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.09419.pdf",
+      "abstract": "Grouping is inherently ambiguous due to the multiple levels of granularity in\nwhich one can decompose a scene -- should the wheels of an excavator be\nconsidered separate or part of the whole? We present Group Anything with\nRadiance Fields (GARField), an approach for decomposing 3D scenes into a\nhierarchy of semantically meaningful groups from posed image inputs. To do this\nwe embrace group ambiguity through physical scale: by optimizing a\nscale-conditioned 3D affinity feature field, a point in the world can belong to\ndifferent groups of different sizes. We optimize this field from a set of 2D\nmasks provided by Segment Anything (SAM) in a way that respects coarse-to-fine\nhierarchy, using scale to consistently fuse conflicting masks from different\nviewpoints. From this field we can derive a hierarchy of possible groupings via\nautomatic tree construction or user interaction. We evaluate GARField on a\nvariety of in-the-wild scenes and find it effectively extracts groups at many\nlevels: clusters of objects, objects, and various subparts. GARField inherently\nrepresents multi-view consistent groupings and produces higher fidelity groups\nthan the input SAM masks. GARField's hierarchical grouping could have exciting\ndownstream applications such as 3D asset extraction or dynamic scene\nunderstanding. See the project website at https://www.garfield.studio/",
+      "upvotes": 18
+    },
+    {
+      "title": "UniVG: Towards UNIfied-modal Video Generation",
+      "url": "https://huggingface.co/papers/2401.09084",
+      "authors": [
+        "Lei Tian",
+        "Chuanwei Huang",
+        "Xu Zhang",
+        "Xinyan Xiao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.09084.pdf",
+      "abstract": "Diffusion based video generation has received extensive attention and\nachieved considerable success within both the academic and industrial\ncommunities. However, current efforts are mainly concentrated on\nsingle-objective or single-task video generation, such as generation driven by\ntext, by image, or by a combination of text and image. This cannot fully meet\nthe needs of real-world application scenarios, as users are likely to input\nimages and text conditions in a flexible manner, either individually or in\ncombination. To address this, we propose a Unified-modal Video Genearation\nsystem that is capable of handling multiple video generation tasks across text\nand image modalities. To this end, we revisit the various video generation\ntasks within our system from the perspective of generative freedom, and\nclassify them into high-freedom and low-freedom video generation categories.\nFor high-freedom video generation, we employ Multi-condition Cross Attention to\ngenerate videos that align with the semantics of the input images or text. For\nlow-freedom video generation, we introduce Biased Gaussian Noise to replace the\npure random Gaussian Noise, which helps to better preserve the content of the\ninput conditions. Our method achieves the lowest Fr\\'echet Video Distance (FVD)\non the public academic benchmark MSR-VTT, surpasses the current open-source\nmethods in human evaluations, and is on par with the current close-source\nmethod Gen2. For more samples, visit https://univg-baidu.github.io.",
+      "upvotes": 16
+    },
+    {
+      "title": "DeepSpeed-FastGen: High-throughput Text Generation for LLMs via MII and DeepSpeed-Inference",
+      "url": "https://huggingface.co/papers/2401.08671",
+      "authors": [
+        "Reza Yazdani Aminabadi",
+        "Yuxiong He"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.08671.pdf",
+      "abstract": "The deployment and scaling of large language models (LLMs) have become\ncritical as they permeate various applications, demanding high-throughput and\nlow-latency serving systems. Existing frameworks struggle to balance these\nrequirements, especially for workloads with long prompts. This paper introduces\nDeepSpeed-FastGen, a system that employs Dynamic SplitFuse, a novel prompt and\ngeneration composition strategy, to deliver up to 2.3x higher effective\nthroughput, 2x lower latency on average, and up to 3.7x lower (token-level)\ntail latency, compared to state-of-the-art systems like vLLM. We leverage a\nsynergistic combination of DeepSpeed-MII and DeepSpeed-Inference to provide an\nefficient and easy-to-use serving system for LLMs. DeepSpeed-FastGen's advanced\nimplementation supports a range of models and offers both non-persistent and\npersistent deployment options, catering to diverse user scenarios from\ninteractive sessions to long-running applications. We present a detailed\nbenchmarking methodology, analyze the performance through latency-throughput\ncurves, and investigate scalability via load balancing. Our evaluations\ndemonstrate substantial improvements in throughput and latency across various\nmodels and hardware configurations. We discuss our roadmap for future\nenhancements, including broader model support and new hardware backends. The\nDeepSpeed-FastGen code is readily available for community engagement and\ncontribution.",
+      "upvotes": 14
+    },
+    {
+      "title": "VideoCrafter2: Overcoming Data Limitations for High-Quality Video Diffusion Models",
+      "url": "https://huggingface.co/papers/2401.09047",
+      "authors": [
+        "Yong Zhang",
+        "Chao Weng"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.09047.pdf",
+      "abstract": "Text-to-video generation aims to produce a video based on a given prompt.\nRecently, several commercial video models have been able to generate plausible\nvideos with minimal noise, excellent details, and high aesthetic scores.\nHowever, these models rely on large-scale, well-filtered, high-quality videos\nthat are not accessible to the community. Many existing research works, which\ntrain models using the low-quality WebVid-10M dataset, struggle to generate\nhigh-quality videos because the models are optimized to fit WebVid-10M. In this\nwork, we explore the training scheme of video models extended from Stable\nDiffusion and investigate the feasibility of leveraging low-quality videos and\nsynthesized high-quality images to obtain a high-quality video model. We first\nanalyze the connection between the spatial and temporal modules of video models\nand the distribution shift to low-quality videos. We observe that full training\nof all modules results in a stronger coupling between spatial and temporal\nmodules than only training temporal modules. Based on this stronger coupling,\nwe shift the distribution to higher quality without motion degradation by\nfinetuning spatial modules with high-quality images, resulting in a generic\nhigh-quality video model. Evaluations are conducted to demonstrate the\nsuperiority of the proposed method, particularly in picture quality, motion,\nand concept composition.",
+      "upvotes": 13
+    },
+    {
+      "title": "SiT: Exploring Flow and Diffusion-based Generative Models with Scalable Interpolant Transformers",
+      "url": "https://huggingface.co/papers/2401.08740",
+      "authors": [
+        "Nanye Ma",
+        "Eric Vanden-Eijnden"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.08740.pdf",
+      "abstract": "We present Scalable Interpolant Transformers (SiT), a family of generative\nmodels built on the backbone of Diffusion Transformers (DiT). The interpolant\nframework, which allows for connecting two distributions in a more flexible way\nthan standard diffusion models, makes possible a modular study of various\ndesign choices impacting generative models built on dynamical transport: using\ndiscrete vs. continuous time learning, deciding the objective for the model to\nlearn, choosing the interpolant connecting the distributions, and deploying a\ndeterministic or stochastic sampler. By carefully introducing the above\ningredients, SiT surpasses DiT uniformly across model sizes on the conditional\nImageNet 256x256 benchmark using the exact same backbone, number of parameters,\nand GFLOPs. By exploring various diffusion coefficients, which can be tuned\nseparately from learning, SiT achieves an FID-50K score of 2.06.",
+      "upvotes": 12
+    },
+    {
+      "title": "TextureDreamer: Image-guided Texture Synthesis through Geometry-aware Diffusion",
+      "url": "https://huggingface.co/papers/2401.09416",
+      "authors": [
+        "Yu-Ying Yeh",
+        "Changil Kim",
+        "Lei Xiao",
+        "Numair Khan",
+        "Cheng Zhang",
+        "Manmohan Chandraker",
+        "Carl S Marshall"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.09416.pdf",
+      "abstract": "We present TextureDreamer, a novel image-guided texture synthesis method to\ntransfer relightable textures from a small number of input images (3 to 5) to\ntarget 3D shapes across arbitrary categories. Texture creation is a pivotal\nchallenge in vision and graphics. Industrial companies hire experienced artists\nto manually craft textures for 3D assets. Classical methods require densely\nsampled views and accurately aligned geometry, while learning-based methods are\nconfined to category-specific shapes within the dataset. In contrast,\nTextureDreamer can transfer highly detailed, intricate textures from real-world\nenvironments to arbitrary objects with only a few casually captured images,\npotentially significantly democratizing texture creation. Our core idea,\npersonalized geometry-aware score distillation (PGSD), draws inspiration from\nrecent advancements in diffuse models, including personalized modeling for\ntexture information extraction, variational score distillation for detailed\nappearance synthesis, and explicit geometry guidance with ControlNet. Our\nintegration and several essential modifications substantially improve the\ntexture quality. Experiments on real images spanning different categories show\nthat TextureDreamer can successfully transfer highly realistic, semantic\nmeaningful texture to arbitrary objects, surpassing the visual quality of\nprevious state-of-the-art.",
+      "upvotes": 10
+    },
+    {
+      "title": "Asynchronous Local-SGD Training for Language Modeling",
+      "url": "https://huggingface.co/papers/2401.09135",
+      "authors": [
+        "Bo Liu",
+        "Rachita Chhaparia",
+        "Satyen Kale",
+        "Andrei A. Rusu",
+        "Jiajun Shen",
+        "Arthur Szlam",
+        "Marc'Aurelio Ranzato"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.09135.pdf",
+      "abstract": "Local stochastic gradient descent (Local-SGD), also referred to as federated\naveraging, is an approach to distributed optimization where each device\nperforms more than one SGD update per communication. This work presents an\nempirical study of {\\it asynchronous} Local-SGD for training language models;\nthat is, each worker updates the global parameters as soon as it has finished\nits SGD steps. We conduct a comprehensive investigation by examining how worker\nhardware heterogeneity, model size, number of workers, and optimizer could\nimpact the learning performance. We find that with naive implementations,\nasynchronous Local-SGD takes more iterations to converge than its synchronous\ncounterpart despite updating the (global) model parameters more frequently. We\nidentify momentum acceleration on the global parameters when worker gradients\nare stale as a key challenge. We propose a novel method that utilizes a delayed\nNesterov momentum update and adjusts the workers' local training steps based on\ntheir computation speed. This approach, evaluated with models up to 150M\nparameters on the C4 dataset, matches the performance of synchronous Local-SGD\nin terms of perplexity per update step, and significantly surpasses it in terms\nof wall clock time.",
+      "upvotes": 10
+    },
+    {
+      "title": "Compose and Conquer: Diffusion-Based 3D Depth Aware Composable Image Synthesis",
+      "url": "https://huggingface.co/papers/2401.09048",
+      "authors": [
+        "Seoung Bum Kim",
+        "Yonghyun Jeong"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.09048.pdf",
+      "abstract": "Addressing the limitations of text as a source of accurate layout\nrepresentation in text-conditional diffusion models, many works incorporate\nadditional signals to condition certain attributes within a generated image.\nAlthough successful, previous works do not account for the specific\nlocalization of said attributes extended into the three dimensional plane. In\nthis context, we present a conditional diffusion model that integrates control\nover three-dimensional object placement with disentangled representations of\nglobal stylistic semantics from multiple exemplar images. Specifically, we\nfirst introduce depth disentanglement training to leverage the\nrelative depth of objects as an estimator, allowing the model to identify the\nabsolute positions of unseen objects through the use of synthetic image\ntriplets. We also introduce soft guidance, a method for imposing\nglobal semantics onto targeted regions without the use of any additional\nlocalization cues. Our integrated framework, Compose and Conquer\n(CnC), unifies these techniques to localize multiple conditions in a\ndisentangled manner. We demonstrate that our approach allows perception of\nobjects at varying depths while offering a versatile framework for composing\nlocalized objects with different global semantics. Code:\nhttps://github.com/tomtom1103/compose-and-conquer/",
+      "upvotes": 9
+    },
+    {
+      "title": "ICON: Incremental CONfidence for Joint Pose and Radiance Field Optimization",
+      "url": "https://huggingface.co/papers/2401.08937",
+      "authors": [
+        "Hao Tang",
+        "Xingyu Chen"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2401.08937.pdf",
+      "abstract": "Neural Radiance Fields (NeRF) exhibit remarkable performance for Novel View\nSynthesis (NVS) given a set of 2D images. However, NeRF training requires\naccurate camera pose for each input view, typically obtained by\nStructure-from-Motion (SfM) pipelines. Recent works have attempted to relax\nthis constraint, but they still often rely on decent initial poses which they\ncan refine. Here we aim at removing the requirement for pose initialization. We\npresent Incremental CONfidence (ICON), an optimization procedure for training\nNeRFs from 2D video frames. ICON only assumes smooth camera motion to estimate\ninitial guess for poses. Further, ICON introduces ``confidence\": an adaptive\nmeasure of model quality used to dynamically reweight gradients. ICON relies on\nhigh-confidence poses to learn NeRF, and high-confidence 3D structure (as\nencoded by NeRF) to learn poses. We show that ICON, without prior pose\ninitialization, achieves superior performance in both CO3D and HO3D versus\nmethods which use SfM pose.",
+      "upvotes": 6
+    }
+  ]
+}

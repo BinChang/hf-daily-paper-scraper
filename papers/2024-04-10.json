@@ -1,0 +1,227 @@
+{
+  "date": "2024-04-10",
+  "papers": [
+    {
+      "title": "OmniFusion Technical Report",
+      "url": "https://huggingface.co/papers/2404.06212",
+      "authors": [],
+      "pdf_url": "https://arxiv.org/pdf/2404.06212.pdf",
+      "abstract": "Last year, multimodal architectures served up a revolution in AI-based\napproaches and solutions, extending the capabilities of large language models\n(LLM). We propose an OmniFusion model based on a pretrained LLM and\nadapters for visual modality. We evaluated and compared several architecture\ndesign principles for better text and visual data coupling: MLP and transformer\nadapters, various CLIP ViT-based encoders (SigLIP, InternVIT, etc.), and their\nfusing approach, image encoding method (whole image or tiles encoding) and two\n7B LLMs (the proprietary one and open-source Mistral). Experiments on 8\nvisual-language benchmarks show the top score for the best OmniFusion setup in\nterms of different VQA tasks in comparison with open-source LLaVA-like\nsolutions: VizWiz, Pope, MM-Vet, ScienceQA, MMBench, TextVQA, VQAv2, MMMU. We\nalso propose a variety of situations, where OmniFusion provides highly-detailed\nanswers in different domains: housekeeping, sightseeing, culture, medicine,\nhandwritten and scanned equations recognition, etc. Mistral-based OmniFusion\nmodel is an open-source solution with weights, training and inference scripts\navailable at https://github.com/AIRI-Institute/OmniFusion.",
+      "upvotes": 74
+    },
+    {
+      "title": "LLM2Vec: Large Language Models Are Secretly Powerful Text Encoders",
+      "url": "https://huggingface.co/papers/2404.05961",
+      "authors": [
+        "Dzmitry Bahdanau"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.05961.pdf",
+      "abstract": "Large decoder-only language models (LLMs) are the state-of-the-art models on\nmost of today's NLP tasks and benchmarks. Yet, the community is only slowly\nadopting these models for text embedding tasks, which require rich\ncontextualized representations. In this work, we introduce LLM2Vec, a simple\nunsupervised approach that can transform any decoder-only LLM into a strong\ntext encoder. LLM2Vec consists of three simple steps: 1) enabling bidirectional\nattention, 2) masked next token prediction, and 3) unsupervised contrastive\nlearning. We demonstrate the effectiveness of LLM2Vec by applying it to 3\npopular LLMs ranging from 1.3B to 7B parameters and evaluate the transformed\nmodels on English word- and sequence-level tasks. We outperform encoder-only\nmodels by a large margin on word-level tasks and reach a new unsupervised\nstate-of-the-art performance on the Massive Text Embeddings Benchmark (MTEB).\nMoreover, when combining LLM2Vec with supervised contrastive learning, we\nachieve state-of-the-art performance on MTEB among models that train only on\npublicly available data. Our strong empirical results and extensive analysis\ndemonstrate that LLMs can be effectively transformed into universal text\nencoders in a parameter-efficient manner without the need for expensive\nadaptation or synthetic GPT-4 generated data.",
+      "upvotes": 64
+    },
+    {
+      "title": "Eagle and Finch: RWKV with Matrix-Valued States and Dynamic Recurrence",
+      "url": "https://huggingface.co/papers/2404.05892",
+      "authors": [
+        "Bo Peng",
+        "Daniel Goldstein",
+        "Stella Biderman",
+        "Eugene Cheah",
+        "Teddy Ferdinan",
+        "Haowen Hou",
+        "Przemysław Kazienko",
+        "Kranthi Kiran GV",
+        "Jan Kocoń",
+        "Bartłomiej Koptyra",
+        "Ronald McClelland Jr.",
+        "Niklas Muennighoff",
+        "Guangyu Song",
+        "Stanisław Woźniak"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.05892.pdf",
+      "abstract": "We present Eagle (RWKV-5) and Finch (RWKV-6), sequence models improving upon\nthe RWKV (RWKV-4) architecture. Our architectural design advancements include\nmulti-headed matrix-valued states and a dynamic recurrence mechanism that\nimprove expressivity while maintaining the inference efficiency characteristics\nof RNNs. We introduce a new multilingual corpus with 1.12 trillion tokens and a\nfast tokenizer based on greedy matching for enhanced multilinguality. We\ntrained four Eagle models, ranging from 0.46 to 7.5 billion parameters, and two\nFinch models with 1.6 and 3.1 billion parameters and find that they achieve\ncompetitive performance across a wide variety of benchmarks. We release all our\nmodels on HuggingFace under the Apache 2.0 license. Models at:\nhttps://huggingface.co/RWKV Training code at: https://github.com/RWKV/RWKV-LM\nInference code at: https://github.com/RWKV/ChatRWKV Time-parallel training code\nat: https://github.com/RWKV/RWKV-infctx-trainer",
+      "upvotes": 31
+    },
+    {
+      "title": "InternLM-XComposer2-4KHD: A Pioneering Large Vision-Language Model Handling Resolutions from 336 Pixels to 4K HD",
+      "url": "https://huggingface.co/papers/2404.06512",
+      "authors": [
+        "Xiaoyi Dong",
+        "Pan Zhang",
+        "Linke Ouyang",
+        "Yining Li",
+        "Hang Yan",
+        "Yang Gao",
+        "Zhe Chen",
+        "Xinyue Zhang",
+        "Wei Li",
+        "Wenhai Wang",
+        "Kai Chen",
+        "Conghui He",
+        "Xingcheng Zhang",
+        "Jifeng Dai",
+        "Yu Qiao"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.06512.pdf",
+      "abstract": "The Large Vision-Language Model (LVLM) field has seen significant\nadvancements, yet its progression has been hindered by challenges in\ncomprehending fine-grained visual content due to limited resolution. Recent\nefforts have aimed to enhance the high-resolution understanding capabilities of\nLVLMs, yet they remain capped at approximately 1500 x 1500 pixels and\nconstrained to a relatively narrow resolution range. This paper represents\nInternLM-XComposer2-4KHD, a groundbreaking exploration into elevating LVLM\nresolution capabilities up to 4K HD (3840 x 1600) and beyond. Concurrently,\nconsidering the ultra-high resolution may not be necessary in all scenarios, it\nsupports a wide range of diverse resolutions from 336 pixels to 4K standard,\nsignificantly broadening its scope of applicability. Specifically, this\nresearch advances the patch division paradigm by introducing a novel extension:\ndynamic resolution with automatic patch configuration. It maintains the\ntraining image aspect ratios while automatically varying patch counts and\nconfiguring layouts based on a pre-trained Vision Transformer (ViT) (336 x\n336), leading to dynamic training resolution from 336 pixels to 4K standard.\nOur research demonstrates that scaling training resolution up to 4K HD leads to\nconsistent performance enhancements without hitting the ceiling of potential\nimprovements. InternLM-XComposer2-4KHD shows superb capability that matches or\neven surpasses GPT-4V and Gemini Pro in 10 of the 16 benchmarks. The\nInternLM-XComposer2-4KHD model series with 7B parameters are publicly available\nat https://github.com/InternLM/InternLM-XComposer.",
+      "upvotes": 29
+    },
+    {
+      "title": "MiniCPM: Unveiling the Potential of Small Language Models with Scalable Training Strategies",
+      "url": "https://huggingface.co/papers/2404.06395",
+      "authors": [
+        "Xu Han",
+        "Chaoqun He",
+        "Xiang Long",
+        "Yewei Fang",
+        "Yuxiang Huang",
+        "Zheng Leng Thai",
+        "Kaihuo Zhang",
+        "Chongyi Wang",
+        "Yuan Yao",
+        "Chenyang Zhao",
+        "Jie Zhou",
+        "Jie Cai",
+        "Zhongwu Zhai",
+        "Chao Jia"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.06395.pdf",
+      "abstract": "The burgeoning interest in developing Large Language Models (LLMs) with up to\ntrillion parameters has been met with concerns regarding resource efficiency\nand practical expense, particularly given the immense cost of experimentation.\nThis scenario underscores the importance of exploring the potential of Small\nLanguage Models (SLMs) as a resource-efficient alternative. In this context, we\nintroduce MiniCPM, specifically the 1.2B and 2.4B non-embedding parameter\nvariants, not only excel in their respective categories but also demonstrate\ncapabilities on par with 7B-13B LLMs. While focusing on SLMs, our approach\nexhibits scalability in both model and data dimensions for future LLM research.\nRegarding model scaling, we employ extensive model wind tunnel experiments for\nstable and optimal scaling. For data scaling, we introduce a\nWarmup-Stable-Decay (WSD) learning rate scheduler (LRS), conducive to\ncontinuous training and domain adaptation. We present an in-depth analysis of\nthe intriguing training dynamics that occurred in the WSD LRS. With WSD LRS, we\nare now able to efficiently study data-model scaling law without extensive\nretraining experiments on both axes of model and data, from which we derive the\nmuch higher compute optimal data-model ratio than Chinchilla Optimal.\nAdditionally, we introduce MiniCPM family, including MiniCPM-DPO, MiniCPM-MoE\nand MiniCPM-128K, whose excellent performance further cementing MiniCPM's\nfoundation in diverse SLM applications. MiniCPM models are available publicly\nat https://github.com/OpenBMB/MiniCPM .",
+      "upvotes": 21
+    },
+    {
+      "title": "CodecLM: Aligning Language Models with Tailored Synthetic Data",
+      "url": "https://huggingface.co/papers/2404.05875",
+      "authors": [
+        "Chun-Liang Li",
+        "Long T. Le",
+        "Jin Miao",
+        "Zizhao Zhang",
+        "Tomas Pfister"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.05875.pdf",
+      "abstract": "Instruction tuning has emerged as the key in aligning large language models\n(LLMs) with specific task instructions, thereby mitigating the discrepancy\nbetween the next-token prediction objective and users' actual goals. To reduce\nthe labor and time cost to collect or annotate data by humans, researchers\nstart to explore the use of LLMs to generate instruction-aligned synthetic\ndata. Recent works focus on generating diverse instructions and applying LLM to\nincrease instruction complexity, often neglecting downstream use cases. It\nremains unclear how to tailor high-quality data to elicit better\ninstruction-following abilities in different target instruction distributions\nand LLMs. To this end, we introduce CodecLM, a general framework for adaptively\ngenerating high-quality synthetic data for LLM alignment with different\ndownstream instruction distributions and LLMs. Drawing on the Encode-Decode\nprinciples, we use LLMs as codecs to guide the data generation process. We\nfirst encode seed instructions into metadata, which are concise keywords\ngenerated on-the-fly to capture the target instruction distribution, and then\ndecode metadata to create tailored instructions. We also introduce Self-Rubrics\nand Contrastive Filtering during decoding to tailor data-efficient samples.\nExtensive experiments on four open-domain instruction following benchmarks\nvalidate the effectiveness of CodecLM over the current state-of-the-arts.",
+      "upvotes": 16
+    },
+    {
+      "title": "MuPT: A Generative Symbolic Music Pretrained Transformer",
+      "url": "https://huggingface.co/papers/2404.06393",
+      "authors": [
+        "Xingwei Qu",
+        "Yuelin Bai",
+        "Yinghao Ma",
+        "Ziya Zhou",
+        "Jiaheng Liu",
+        "Ruibin Yuan",
+        "Lejun Min",
+        "Xueling Liu",
+        "Tianyu Zhang",
+        "Shuyue Guo",
+        "Yiming Liang",
+        "Shangda Wu",
+        "Junting Zhou",
+        "Ziyang Ma",
+        "Gus Xia"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.06393.pdf",
+      "abstract": "In this paper, we explore the application of Large Language Models (LLMs) to\nthe pre-training of music. While the prevalent use of MIDI in music modeling is\nwell-established, our findings suggest that LLMs are inherently more compatible\nwith ABC Notation, which aligns more closely with their design and strengths,\nthereby enhancing the model's performance in musical composition. To address\nthe challenges associated with misaligned measures from different tracks during\ngeneration, we propose the development of a Synchronized\nMulti-Track ABC Notation (SMT-ABC Notation),\nwhich aims to preserve coherence across multiple musical tracks. Our\ncontributions include a series of models capable of handling up to 8192 tokens,\ncovering 90\\% of the symbolic music data in our training set. Furthermore, we\nexplore the implications of the Symbolic Music\nScaling Law (SMS Law) on model performance. The results\nindicate a promising direction for future research in music generation,\noffering extensive resources for community-led research through our open-source\ncontributions.",
+      "upvotes": 14
+    },
+    {
+      "title": "Hash3D: Training-free Acceleration for 3D Generation",
+      "url": "https://huggingface.co/papers/2404.06091",
+      "authors": [
+        "Xinchao Wang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.06091.pdf",
+      "abstract": "The evolution of 3D generative modeling has been notably propelled by the\nadoption of 2D diffusion models. Despite this progress, the cumbersome\noptimization process per se presents a critical hurdle to efficiency. In this\npaper, we introduce Hash3D, a universal acceleration for 3D generation without\nmodel training. Central to Hash3D is the insight that feature-map redundancy is\nprevalent in images rendered from camera positions and diffusion time-steps in\nclose proximity. By effectively hashing and reusing these feature maps across\nneighboring timesteps and camera angles, Hash3D substantially prevents\nredundant calculations, thus accelerating the diffusion model's inference in 3D\ngeneration tasks. We achieve this through an adaptive grid-based hashing.\nSurprisingly, this feature-sharing mechanism not only speed up the generation\nbut also enhances the smoothness and view consistency of the synthesized 3D\nobjects. Our experiments covering 5 text-to-3D and 3 image-to-3D models,\ndemonstrate Hash3D's versatility to speed up optimization, enhancing efficiency\nby 1.3 to 4 times. Additionally, Hash3D's integration with 3D Gaussian\nsplatting largely speeds up 3D model creation, reducing text-to-3D processing\nto about 10 minutes and image-to-3D conversion to roughly 30 seconds. The\nproject page is at https://adamdad.github.io/hash3D/.",
+      "upvotes": 12
+    },
+    {
+      "title": "SambaLingo: Teaching Large Language Models New Languages",
+      "url": "https://huggingface.co/papers/2404.05829",
+      "authors": [
+        "Bo Li",
+        "Jonathan Li",
+        "Qiantong Xu",
+        "Pian Pawakapan",
+        "Leon Zhang",
+        "Yun Du",
+        "Hengyu Zhao",
+        "Changran Hu",
+        "Urmish Thakker"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.05829.pdf",
+      "abstract": "Despite the widespread availability of LLMs, there remains a substantial gap\nin their capabilities and availability across diverse languages. One approach\nto address these issues has been to take an existing pre-trained LLM and\ncontinue to train it on new languages. While prior works have experimented with\nlanguage adaptation, many questions around best practices and methodology have\nnot been covered. In this paper, we present a comprehensive investigation into\nthe adaptation of LLMs to new languages. Our study covers the key components in\nthis process, including vocabulary extension, direct preference optimization\nand the data scarcity problem for human alignment in low-resource languages. We\nscale these experiments across 9 languages and 2 parameter scales (7B and 70B).\nWe compare our models against Llama 2, Aya-101, XGLM, BLOOM and existing\nlanguage experts, outperforming all prior published baselines. Additionally,\nall evaluation code and checkpoints are made public to facilitate future\nresearch.",
+      "upvotes": 12
+    },
+    {
+      "title": "Urban Architect: Steerable 3D Urban Scene Generation with Layout Prior",
+      "url": "https://huggingface.co/papers/2404.06780",
+      "authors": [
+        "Yan Xu",
+        "Guang Chen",
+        "Changjun Jiang"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.06780.pdf",
+      "abstract": "Text-to-3D generation has achieved remarkable success via large-scale\ntext-to-image diffusion models. Nevertheless, there is no paradigm for scaling\nup the methodology to urban scale. Urban scenes, characterized by numerous\nelements, intricate arrangement relationships, and vast scale, present a\nformidable barrier to the interpretability of ambiguous textual descriptions\nfor effective model optimization. In this work, we surmount the limitations by\nintroducing a compositional 3D layout representation into text-to-3D paradigm,\nserving as an additional prior. It comprises a set of semantic primitives with\nsimple geometric structures and explicit arrangement relationships,\ncomplementing textual descriptions and enabling steerable generation. Upon\nthis, we propose two modifications -- (1) We introduce Layout-Guided\nVariational Score Distillation to address model optimization inadequacies. It\nconditions the score distillation sampling process with geometric and semantic\nconstraints of 3D layouts. (2) To handle the unbounded nature of urban scenes,\nwe represent 3D scene with a Scalable Hash Grid structure, incrementally\nadapting to the growing scale of urban scenes. Extensive experiments\nsubstantiate the capability of our framework to scale text-to-3D generation to\nlarge-scale urban scenes that cover over 1000m driving distance for the first\ntime. We also present various scene editing demonstrations, showing the powers\nof steerable urban scene generation. Website: https://urbanarchitect.github.io.",
+      "upvotes": 9
+    },
+    {
+      "title": "Revising Densification in Gaussian Splatting",
+      "url": "https://huggingface.co/papers/2404.06109",
+      "authors": [
+        "Samuel Rota Bulò",
+        "Lorenzo Porzi",
+        "Peter Kontschieder"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.06109.pdf",
+      "abstract": "In this paper, we address the limitations of Adaptive Density Control (ADC)\nin 3D Gaussian Splatting (3DGS), a scene representation method achieving\nhigh-quality, photorealistic results for novel view synthesis. ADC has been\nintroduced for automatic 3D point primitive management, controlling\ndensification and pruning, however, with certain limitations in the\ndensification logic. Our main contribution is a more principled, pixel-error\ndriven formulation for density control in 3DGS, leveraging an auxiliary,\nper-pixel error function as the criterion for densification. We further\nintroduce a mechanism to control the total number of primitives generated per\nscene and correct a bias in the current opacity handling strategy of ADC during\ncloning operations. Our approach leads to consistent quality improvements\nacross a variety of benchmark scenes, without sacrificing the method's\nefficiency.",
+      "upvotes": 8
+    },
+    {
+      "title": "Magic-Boost: Boost 3D Generation with Mutli-View Conditioned Diffusion",
+      "url": "https://huggingface.co/papers/2404.06429",
+      "authors": [
+        "Fan Yang",
+        "Jianfeng Zhang",
+        "Yichun Shi",
+        "Bowen Chen",
+        "Chenxu Zhang",
+        "Huichao Zhang",
+        "Xiaofeng Yang",
+        "Jiashi Feng",
+        "Guosheng Lin"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.06429.pdf",
+      "abstract": "Benefiting from the rapid development of 2D diffusion models, 3D content\ncreation has made significant progress recently. One promising solution\ninvolves the fine-tuning of pre-trained 2D diffusion models to harness their\ncapacity for producing multi-view images, which are then lifted into accurate\n3D models via methods like fast-NeRFs or large reconstruction models. However,\nas inconsistency still exists and limited generated resolution, the generation\nresults of such methods still lack intricate textures and complex geometries.\nTo solve this problem, we propose Magic-Boost, a multi-view conditioned\ndiffusion model that significantly refines coarse generative results through a\nbrief period of SDS optimization (sim15min). Compared to the previous text\nor single image based diffusion models, Magic-Boost exhibits a robust\ncapability to generate images with high consistency from pseudo synthesized\nmulti-view images. It provides precise SDS guidance that well aligns with the\nidentity of the input images, enriching the local detail in both geometry and\ntexture of the initial generative results. Extensive experiments show\nMagic-Boost greatly enhances the coarse inputs and generates high-quality 3D\nassets with rich geometric and textural details. (Project Page:\nhttps://magic-research.github.io/magic-boost/)",
+      "upvotes": 6
+    },
+    {
+      "title": "Reconstructing Hand-Held Objects in 3D",
+      "url": "https://huggingface.co/papers/2404.06507",
+      "authors": [
+        "Georgios Pavlakos",
+        "Georgia Gkioxari",
+        "Jitendra Malik"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.06507.pdf",
+      "abstract": "Objects manipulated by the hand (i.e., manipulanda) are particularly\nchallenging to reconstruct from in-the-wild RGB images or videos. Not only does\nthe hand occlude much of the object, but also the object is often only visible\nin a small number of image pixels. At the same time, two strong anchors emerge\nin this setting: (1) estimated 3D hands help disambiguate the location and\nscale of the object, and (2) the set of manipulanda is small relative to all\npossible objects. With these insights in mind, we present a scalable paradigm\nfor handheld object reconstruction that builds on recent breakthroughs in large\nlanguage/vision models and 3D object datasets. Our model, MCC-Hand-Object\n(MCC-HO), jointly reconstructs hand and object geometry given a single RGB\nimage and inferred 3D hand as inputs. Subsequently, we use GPT-4(V) to retrieve\na 3D object model that matches the object in the image and rigidly align the\nmodel to the network-inferred geometry; we call this alignment\nRetrieval-Augmented Reconstruction (RAR). Experiments demonstrate that MCC-HO\nachieves state-of-the-art performance on lab and Internet datasets, and we show\nhow RAR can be used to automatically obtain 3D labels for in-the-wild images of\nhand-object interactions.",
+      "upvotes": 5
+    },
+    {
+      "title": "Elephants Never Forget: Memorization and Learning of Tabular Data in Large Language Models",
+      "url": "https://huggingface.co/papers/2404.06209",
+      "authors": [
+        "Sebastian Bordt",
+        "Harsha Nori",
+        "Vanessa Rodrigues",
+        "Besmira Nushi",
+        "Rich Caruana"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2404.06209.pdf",
+      "abstract": "While many have shown how Large Language Models (LLMs) can be applied to a\ndiverse set of tasks, the critical issues of data contamination and\nmemorization are often glossed over. In this work, we address this concern for\ntabular data. Specifically, we introduce a variety of different techniques to\nassess whether a language model has seen a tabular dataset during training.\nThis investigation reveals that LLMs have memorized many popular tabular\ndatasets verbatim. We then compare the few-shot learning performance of LLMs on\ndatasets that were seen during training to the performance on datasets released\nafter training. We find that LLMs perform better on datasets seen during\ntraining, indicating that memorization leads to overfitting. At the same time,\nLLMs show non-trivial performance on novel datasets and are surprisingly robust\nto data transformations. We then investigate the in-context statistical\nlearning abilities of LLMs. Without fine-tuning, we find them to be limited.\nThis suggests that much of the few-shot performance on novel datasets is due to\nthe LLM's world knowledge. Overall, our results highlight the importance of\ntesting whether an LLM has seen an evaluation dataset during pre-training. We\nmake the exposure tests we developed available as the tabmemcheck Python\npackage at https://github.com/interpretml/LLM-Tabular-Memorization-Checker",
+      "upvotes": 4
+    }
+  ]
+}
